@@ -37,6 +37,7 @@ const CoursePage = lazy(() => import('@/pages/CoursePage'))
 const LessonPage = lazy(() => import('@/pages/LessonPage'))
 const LibraryPage = lazy(() => import('@/pages/LibraryPage'))
 const ResourcesPage = lazy(() => import('@/pages/ResourcesPage'))
+const NotesPage = lazy(() => import('@/pages/NotesPage'))
 
 /** Screens rendered inside the authenticated application shell. */
 const shellRoutes: { path: string; element: ReactNode }[] = [
@@ -45,6 +46,7 @@ const shellRoutes: { path: string; element: ReactNode }[] = [
   { path: 'courses/:courseSlug/lessons/:lessonSlug', element: <LessonPage /> },
   { path: 'library', element: <LibraryPage /> },
   { path: 'resources', element: <ResourcesPage /> },
+  { path: 'notes', element: <NotesPage /> },
   { path: 'settings', element: <SettingsPage /> },
 ]
 
