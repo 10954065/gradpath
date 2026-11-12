@@ -12,6 +12,7 @@ const checkOnly = args.includes('--check')
 const courseFlag = args.indexOf('--course')
 const course = courseFlag >= 0 ? args[courseFlag + 1] : undefined
 const quiet = args.includes('--quiet')
+const partial = args.includes('--partial')
 
 function summarise(c: LoadedCourse): string {
   const lessons = c.modules.flatMap((m) => m.lessons)
@@ -34,11 +35,16 @@ async function main(): Promise<void> {
   for (const c of courses) console.log(summarise(c))
   console.log(`\n${errors.length} error(s), ${warnings.length} warning(s)`)
 
-  if (errors.length) process.exit(1)
+  // --partial seeds whatever validates (invalid files are skipped, never seeded as placeholders).
+  if (errors.length && !(partial && !checkOnly)) process.exit(1)
   if (checkOnly) return
 
+  const { writeSeed, loadLinkVerification } = await import('./content/writeSeed')
   const { writeCurriculumStatus } = await import('./content/writeCurriculumStatus')
-  writeCurriculumStatus(courses)
+  writeSeed(courses)
+  const links = loadLinkVerification()
+  const verified = new Set(Object.entries(links).filter(([, v]) => v.status === 'verified').map(([url]) => url))
+  writeCurriculumStatus(courses, Object.keys(links).length ? verified : undefined)
 }
 
 main().catch((e: unknown) => {

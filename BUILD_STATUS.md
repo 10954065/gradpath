@@ -16,7 +16,7 @@ _Last updated: 2026-11-12_
 | Phase | Status | Notes |
 |---|---|---|
 | 1. Audit and foundation | Done | Toolchain, configs, content spec + validator, docs |
-| 2. Database and security | Pending | |
+| 2. Database and security | Done | 5 migrations, RLS on every table, server-side scoring, seed generator, 25 integration tests passing |
 | 3. Design system | Pending | |
 | 4. Curriculum engine | Pending | Content authoring in progress (see CURRICULUM_STATUS.md) |
 | 5. Learning progress | Pending | |
@@ -33,6 +33,9 @@ _Last updated: 2026-11-12_
 | Date | Command | Result |
 |---|---|---|
 | 2026-11-12 | `npm run content:validate` | Validator runs; 0 errors, outline loads for 7 courses / 159 lessons |
+| 2026-11-12 | `npm run typecheck`, `npm run lint`, `npm test`, `npm run build` | Pass (6 unit tests) |
+| 2026-11-12 | `npx supabase db reset` (5 migrations + generated seed) | Applies cleanly; seed loaded 7 courses, 56 modules, 112 lessons, 613 questions, 121 quizzes, 516 flashcards |
+| 2026-11-12 | `npm run test:integration` (local Supabase, two student accounts + admin) | 25/25 pass: private-table isolation, read-only content, hidden drafts and answer keys, no self-admin, no forged attempts, storage isolation, scoring/mastery/revision queue, completion rules, duplicate-occurrence prevention |
 
 ## Errors encountered
 
