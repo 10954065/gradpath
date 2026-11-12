@@ -3,6 +3,7 @@ import { CheckCircle2, ChevronDown, Circle, CircleDot, ClipboardCheck, CloudDown
 import { useState } from 'react'
 import { Link, useParams, useSearchParams } from 'react-router'
 import { toast } from 'sonner'
+import { CourseMaterials } from '@/components/courses/CourseMaterials'
 import { CourseStatusBadge, SourceBadge, VerificationBadge, accentClass } from '@/components/courses/badges'
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 import { Badge } from '@/components/ui/badge'
@@ -187,6 +188,7 @@ export default function CoursePage() {
               </ul>
             </CardContent>
           </Card>
+          <CourseMaterials courseId={c.id} />
           {mock ? (
             <Card>
               <CardHeader>

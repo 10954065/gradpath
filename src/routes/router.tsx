@@ -53,6 +53,7 @@ const DashboardPage = lazy(() => import('@/pages/DashboardPage'))
 const ProgressPage = lazy(() => import('@/pages/ProgressPage'))
 const AnnouncementsPage = lazy(() => import('@/pages/AnnouncementsPage'))
 const SearchPage = lazy(() => import('@/pages/SearchPage'))
+const AdminPage = lazy(() => import('@/pages/AdminPage'))
 
 /** Screens rendered inside the authenticated application shell. */
 const shellRoutes: { path: string; element: ReactNode }[] = [
@@ -105,7 +106,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <Navigate to="/dashboard" replace /> },
       ...shellRoutes.map((r) => ({ path: r.path, element: <ErrorBoundary>{r.element}</ErrorBoundary> })),
-      { path: 'admin', element: <AdminRoute />, children: [] },
+      { path: 'admin', element: <AdminRoute />, children: [{ index: true, element: <ErrorBoundary><AdminPage /></ErrorBoundary> }] },
       { path: '*', element: <NotFoundPage /> },
     ],
   },

@@ -1,7 +1,7 @@
 import { AppError, ensureOk } from '@/lib/errors'
 import { supabase } from '@/lib/supabase'
 import { withOfflineCache } from '@/services/offline/cache'
-import type { Course, CourseEnrolment, CourseModule, Lesson, LessonResource, LessonSummary } from '@/types/database'
+import type { Course, CourseEnrolment, CourseModule, Lesson, LessonResource, LessonSummary, UploadedMaterial } from '@/types/database'
 
 const LESSON_SUMMARY_COLUMNS =
   'id, module_id, slug, title, summary, topics, estimated_minutes, difficulty, source, word_count, min_reading_percent, requires_quiz_pass, sort_order, is_published'
@@ -123,4 +123,37 @@ export async function saveCourseForOffline(courseSlug: string, onProgress?: (don
     onProgress?.(done, lessons.length)
   }
   return lessons.length
+}
+
+/** Published lecturer/institutional materials for a course (RLS hides unpublished ones from students). */
+export async function listCourseMaterials(courseId: string): Promise<UploadedMaterial[]> {
+  const result = await supabase
+    .from('uploaded_course_materials')
+    .select('*')
+    .eq('course_id', courseId)
+    .eq('is_published', true)
+    .order('created_at', { ascending: false })
+  return ensureOk(result, 'We could not load course materials.') as UploadedMaterial[]
+}
+
+/** Short-lived signed link to a private course material file. */
+export async function materialUrl(path: string): Promise<string | null> {
+  const { data } = await supabase.storage.from('course-materials').createSignedUrl(path, 300)
+  return data?.signedUrl ?? null
+}
+
+/**
+ * Open a private material in a new tab. The tab is opened synchronously (inside the click) so pop-up blockers
+ * allow it, then pointed at a short-lived signed link once that has been created.
+ */
+export async function openMaterial(material: Pick<UploadedMaterial, 'storage_path'>): Promise<void> {
+  const tab = window.open('', '_blank')
+  if (tab) tab.opener = null
+  const url = await materialUrl(material.storage_path)
+  if (!url) {
+    tab?.close()
+    throw new AppError('The file link could not be created. Please try again.')
+  }
+  if (tab) tab.location.href = url
+  else window.location.assign(url)
 }

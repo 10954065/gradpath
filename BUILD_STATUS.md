@@ -23,7 +23,7 @@ _Last updated: 2026-11-12_
 | 6. Assessments | Done | Assessments hub (module assessments, lesson quizzes, history), mock exams, quiz intro, timed runner (navigation, drafts, auto-submit, confirmation), results with breakdowns, explanations, rubrics, model answers and self-assessment; browser-verified end to end |
 | 7. Productivity | Done | Study planner (week view from timetable, complete with actual minutes, skip, reschedule, one-off sessions, weekly/monthly totals vs target), timetable (recurring + one-off, provisional plan replace/restore), assignments (filters, sorting, attachments), revision centre (SM-2 spaced repetition, due/overdue/upcoming/mastered/weak/history), flashcards (curriculum + own, add to queue), notifications page |
 | 8. Analytics | Done | Personalised dashboard (progress, weekly hours vs target, streak, revision due, recommendations, course progress, weekly study + course performance charts, next session, deadlines, results, weak topics, announcements), Academic Progress centre, rule-based explainable recommendations, announcements, global search; browser-verified with real data |
-| 9. Administration | Pending | |
+| 9. Administration | Done | Admin console (overview, content publish/edit/Markdown import, assessment settings + question-bank import, resources CRUD + server-side link check, announcements, private course-material uploads, platform settings); `/api/verify-link` Netlify Function (admin-only, SSRF-guarded, rate-limited); published materials shown on course pages via signed URLs |
 | 10. PWA | Pending | |
 | 11. QA | Pending | |
 | 12. Deployment preparation | Pending | |
@@ -37,6 +37,9 @@ _Last updated: 2026-11-12_
 | 2026-11-12 | `npx supabase db reset` (5 migrations + generated seed) | Applies cleanly; seed loaded 7 courses, 56 modules, 112 lessons, 613 questions, 121 quizzes, 516 flashcards |
 | 2026-11-12 | Browser check (Playwright MCP, dev server + local Supabase) | Registration → automatic sign-in → onboarding; courses load from the seeded database |
 | 2026-11-12 | `npm run test:integration` (local Supabase, two student accounts + admin) | 25/25 pass: private-table isolation, read-only content, hidden drafts and answer keys, no self-admin, no forged attempts, storage isolation, scoring/mastery/revision queue, completion rules, duplicate-occurrence prevention |
+| 2026-11-12 | `npm run typecheck`, `npm test`, `npm run build` (Phase 9) | Pass (40 unit tests); admin console builds as its own lazy chunk |
+| 2026-11-12 | `npm run test:integration` (Phase 9, adds `admin.test.ts`) | 34/34 pass: is_admin, no self-grant, students cannot change lessons/quizzes/settings or post announcements, hidden lessons invisible to students, announcement fan-out notifies once, students cannot upload materials, unpublished files unreadable until published |
+| 2026-11-12 | Browser check of admin console (Playwright MCP, local stack) | Overview counts; announcement create → publish; settings save; assessment edit; TXT material upload → publish → student opens it from the course page via signed URL; two-step delete; non-admin sees “Administrators only”. Test data removed afterwards |
 
 ## Errors encountered
 
