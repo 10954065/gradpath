@@ -49,9 +49,17 @@ const AssignmentsPage = lazy(() => import('@/pages/AssignmentsPage'))
 const RevisionPage = lazy(() => import('@/pages/RevisionPage'))
 const FlashcardsPage = lazy(() => import('@/pages/FlashcardsPage'))
 const NotificationsPage = lazy(() => import('@/pages/NotificationsPage'))
+const DashboardPage = lazy(() => import('@/pages/DashboardPage'))
+const ProgressPage = lazy(() => import('@/pages/ProgressPage'))
+const AnnouncementsPage = lazy(() => import('@/pages/AnnouncementsPage'))
+const SearchPage = lazy(() => import('@/pages/SearchPage'))
 
 /** Screens rendered inside the authenticated application shell. */
 const shellRoutes: { path: string; element: ReactNode }[] = [
+  { path: 'dashboard', element: <DashboardPage /> },
+  { path: 'progress', element: <ProgressPage /> },
+  { path: 'announcements', element: <AnnouncementsPage /> },
+  { path: 'search', element: <SearchPage /> },
   { path: 'courses', element: <CoursesPage /> },
   { path: 'courses/:courseSlug', element: <CoursePage /> },
   { path: 'courses/:courseSlug/lessons/:lessonSlug', element: <LessonPage /> },

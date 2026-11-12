@@ -22,7 +22,7 @@ _Last updated: 2026-11-12_
 | 5. Learning progress | Done | Reading progress (scroll + visible time), explicit server-enforced completion, lesson and resource bookmarks, private notebook (search, link to course/lesson, tags, pin, export), offline outbox tests |
 | 6. Assessments | Done | Assessments hub (module assessments, lesson quizzes, history), mock exams, quiz intro, timed runner (navigation, drafts, auto-submit, confirmation), results with breakdowns, explanations, rubrics, model answers and self-assessment; browser-verified end to end |
 | 7. Productivity | Done | Study planner (week view from timetable, complete with actual minutes, skip, reschedule, one-off sessions, weekly/monthly totals vs target), timetable (recurring + one-off, provisional plan replace/restore), assignments (filters, sorting, attachments), revision centre (SM-2 spaced repetition, due/overdue/upcoming/mastered/weak/history), flashcards (curriculum + own, add to queue), notifications page |
-| 8. Analytics | Pending | |
+| 8. Analytics | Done | Personalised dashboard (progress, weekly hours vs target, streak, revision due, recommendations, course progress, weekly study + course performance charts, next session, deadlines, results, weak topics, announcements), Academic Progress centre, rule-based explainable recommendations, announcements, global search; browser-verified with real data |
 | 9. Administration | Pending | |
 | 10. PWA | Pending | |
 | 11. QA | Pending | |
