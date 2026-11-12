@@ -21,7 +21,7 @@ _Last updated: 2026-11-12_
 | 4. Curriculum engine | Done | All 7 courses authored: 159/159 lessons (~430k words), 1,161 practice questions, 919 flashcards, 76 resources; 225 URLs checked (196 reachable, 26 blocked automated checks, 3 unreachable). Course catalogue, course overview, lesson reader (TOC, progress, text size, dark reading, Mermaid), library, resources |
 | 5. Learning progress | Done | Reading progress (scroll + visible time), explicit server-enforced completion, lesson and resource bookmarks, private notebook (search, link to course/lesson, tags, pin, export), offline outbox tests |
 | 6. Assessments | Done | Assessments hub (module assessments, lesson quizzes, history), mock exams, quiz intro, timed runner (navigation, drafts, auto-submit, confirmation), results with breakdowns, explanations, rubrics, model answers and self-assessment; browser-verified end to end |
-| 7. Productivity | Pending | |
+| 7. Productivity | Done | Study planner (week view from timetable, complete with actual minutes, skip, reschedule, one-off sessions, weekly/monthly totals vs target), timetable (recurring + one-off, provisional plan replace/restore), assignments (filters, sorting, attachments), revision centre (SM-2 spaced repetition, due/overdue/upcoming/mastered/weak/history), flashcards (curriculum + own, add to queue), notifications page |
 | 8. Analytics | Pending | |
 | 9. Administration | Pending | |
 | 10. PWA | Pending | |
