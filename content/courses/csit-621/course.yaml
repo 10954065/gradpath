@@ -1,0 +1,120 @@
+code: CSIT 621
+slug: csit-621
+title: Emerging Technologies for Business I
+status: listed
+statusNote: Part of the GradPath initial curriculum. Confirm the course's status against your official registration.
+accent: teal
+description: >
+  A critical survey of emerging technologies and how businesses evaluate and adopt them: cloud and edge computing,
+  IoT, blockchain, immersive technologies, quantum and high-performance computing, robotics, 5G, smart cities and
+  sustainable technology, ending with structured frameworks for technology evaluation and strategy.
+outcomes:
+  - Explain how emerging technologies arise, diffuse and disrupt industries.
+  - Compare cloud service and deployment models and evaluate edge and hybrid architectures.
+  - Describe IoT architectures and their security and business implications.
+  - Assess blockchain, immersive technologies, quantum computing and other advanced technologies for business use.
+  - Evaluate the environmental impact of technology and approaches to sustainable IT.
+  - Apply cost-benefit, risk and readiness frameworks to recommend technology adoption decisions.
+modules:
+  - slug: emerging-technology-foundations
+    title: Emerging Technology Foundations
+    description: How new technologies emerge, spread and disrupt.
+    lessons:
+      - slug: emerging-technology-and-innovation
+        title: Emerging Technology and Technology Innovation
+        topics: [Emerging technology, Technology innovation, Hype cycles]
+      - slug: forecasting-adoption-and-disruption
+        title: Technology Forecasting, Adoption and Business Disruption
+        topics: [Technology forecasting, Technology adoption, Business disruption, Disruptive innovation]
+  - slug: cloud-and-edge-computing
+    title: Cloud and Edge Computing
+    description: Computing as a service, at the centre and at the edge.
+    lessons:
+      - slug: cloud-models
+        title: Cloud Computing and Cloud Deployment Models
+        topics: [Cloud models, Public, Private, Community, NIST definition]
+      - slug: iaas-paas-and-saas
+        title: IaaS, PaaS and SaaS
+        topics: [Infrastructure as a service, Platform as a service, Software as a service]
+      - slug: edge-and-hybrid-cloud
+        title: Edge Computing and Hybrid Cloud
+        topics: [Edge computing, Hybrid cloud, Latency and data sovereignty]
+  - slug: internet-of-things
+    title: Internet of Things
+    description: Connecting the physical world to information systems.
+    lessons:
+      - slug: iot-architecture-sensors-and-connectivity
+        title: IoT Architecture, Sensors and Connectivity
+        topics: [IoT architecture, Sensors, Connectivity, LPWAN]
+      - slug: iot-security
+        title: IoT Security
+        topics: [IoT security, Device lifecycle security]
+      - slug: industrial-iot-and-smart-systems
+        title: Industrial IoT and Smart Systems
+        topics: [Industrial IoT, Smart systems, Predictive maintenance]
+  - slug: blockchain-and-distributed-technology
+    title: Blockchain and Distributed Technology
+    description: Shared ledgers and their business uses.
+    lessons:
+      - slug: distributed-ledgers-and-consensus
+        title: Distributed Ledgers and Consensus
+        topics: [Distributed ledgers, Consensus, Proof of work, Proof of stake]
+      - slug: smart-contracts-and-enterprise-blockchain
+        title: Smart Contracts, Enterprise Blockchain and Business Applications
+        topics: [Smart contracts, Enterprise blockchain, Business applications]
+  - slug: immersive-technologies
+    title: Immersive Technologies
+    description: Blending digital and physical experience.
+    lessons:
+      - slug: ar-vr-mr-and-xr
+        title: Augmented, Virtual, Mixed and Extended Reality
+        topics: [Augmented reality, Virtual reality, Mixed reality, Extended reality]
+      - slug: digital-twins
+        title: Digital Twins
+        topics: [Digital twins]
+  - slug: advanced-computing
+    title: Advanced Computing
+    description: New computing paradigms and large-scale processing.
+    lessons:
+      - slug: quantum-computing-fundamentals
+        title: Quantum Computing Fundamentals
+        topics: [Quantum computing fundamentals, Qubits, Post-quantum cryptography]
+      - slug: hpc-and-advanced-data-processing
+        title: High-Performance Computing and Advanced Data Processing
+        topics: [High-performance computing, Advanced data processing, Stream processing]
+  - slug: future-technologies
+    title: Future Technologies
+    description: Automation, connectivity and intelligence shaping the next decade.
+    lessons:
+      - slug: robotics-automation-and-autonomous-systems
+        title: Robotics, Automation and Autonomous Systems
+        topics: [Robotics, Automation, Autonomous systems]
+      - slug: 5g-and-future-connectivity
+        title: 5G and Future Connectivity
+        topics: [5G and future connectivity]
+      - slug: advanced-ai-and-smart-cities
+        title: Advanced AI and Smart Cities
+        topics: [Advanced AI, Smart cities]
+  - slug: sustainable-technology
+    title: Sustainable Technology
+    description: Technology's environmental footprint and its potential to reduce it.
+    lessons:
+      - slug: green-computing-and-energy-efficiency
+        title: Green Computing and Energy Efficiency
+        topics: [Green computing, Energy efficiency, PUE, E-waste]
+      - slug: sustainable-innovation-and-environmental-impact
+        title: Sustainable Innovation and Technology's Environmental Impact
+        topics: [Sustainable innovation, Technology and environmental impact]
+  - slug: business-adoption
+    title: Business Adoption
+    description: Deciding whether, when and how to adopt an emerging technology.
+    lessons:
+      - slug: technology-evaluation-and-cost-benefit
+        title: Emerging Technology Evaluation and Cost-Benefit Analysis
+        topics: [Emerging technology evaluation, Cost-benefit analysis, NPV, Payback]
+      - slug: adoption-risks-and-organisational-readiness
+        title: Adoption Risks and Organisational Readiness
+        topics: [Adoption risks, Organisational readiness, TOE framework]
+      - slug: innovation-management-and-technology-strategy
+        title: Innovation Management and Technology Strategy
+        topics: [Innovation management, Technology strategy, Technology roadmaps]

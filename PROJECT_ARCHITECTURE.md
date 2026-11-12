@@ -1,0 +1,145 @@
+# GradPath — Project Architecture
+
+GradPath is a single-page React application backed by Supabase (PostgreSQL, Auth, Storage, Row Level
+Security) and hosted on Netlify, with an offline-capable PWA shell. There is no custom application
+server: every privileged rule is enforced inside PostgreSQL (RLS policies, `SECURITY DEFINER` functions
+and triggers), so the browser only ever holds the public anon key.
+
+```mermaid
+flowchart LR
+  subgraph Browser["Browser / installed PWA"]
+    UI["React UI (routes, components)"]
+    Q["TanStack Query cache"]
+    IDB[("IndexedDB: per-user offline store + outbox")]
+    SW["Service worker (app shell only)"]
+  end
+  subgraph Supabase
+    AUTH["Auth (GoTrue)"]
+    REST["PostgREST + RPC"]
+    PG[("PostgreSQL: RLS + definer functions")]
+    ST["Storage (private buckets)"]
+  end
+  NF["Netlify Functions (link verification)"]
+  UI --> Q --> REST --> PG
+  UI --> AUTH
+  UI --> ST
+  Q <--> IDB
+  SW -. caches static assets .-> UI
+  UI --> NF --> REST
+```
+
+## Technology
+
+| Layer | Choice | Notes |
+|---|---|---|
+| UI | React 19, TypeScript (strict), Vite 7 | Route-level code splitting with `React.lazy` |
+| Styling | Tailwind CSS 4, shadcn-style components on Radix primitives, Lucide icons | Design tokens in `src/styles/index.css`; light and dark themes |
+| Motion | Framer Motion | Used sparingly; honours `prefers-reduced-motion` |
+| Routing | React Router 7 (library mode) | Protected and admin-only route guards |
+| Server state | TanStack Query 5 | Query keys per domain; optimistic updates for notes/planner |
+| Forms | React Hook Form + Zod | Same Zod schemas validate service inputs |
+| Backend | Supabase Postgres, Auth, Storage | Migrations in `supabase/migrations`, seed in `supabase/seed.sql` |
+| Serverless | Netlify Functions | Only for work a browser cannot do (cross-origin link checks) |
+| PWA | vite-plugin-pwa (Workbox), IndexedDB via `idb` | Prompt-to-update service worker |
+| Tests | Vitest + Testing Library (unit), Vitest + supabase-js against local Supabase (integration/RLS), Playwright (E2E) | |
+
+## Source layout
+
+```
+src/
+  app/            App bootstrap: providers, router, error boundary
+  routes/         Route table and guards (ProtectedRoute, AdminRoute)
+  pages/          One file per screen, thin: compose hooks + components
+  components/
+    ui/           Design-system primitives (Button, Card, Dialog, …)
+    layout/       App shell, sidebar, mobile navigation, breadcrumbs
+    <feature>/    Feature components (dashboard, courses, lessons, assessments, …)
+  hooks/          Reusable React hooks (useAuth, useOnlineStatus, …)
+  contexts/       React contexts (auth session, theme)
+  services/       Data access per domain — the only code that talks to Supabase
+  lib/            Pure, framework-free logic (scheduling, scoring, recommendations, content parsing)
+  types/          Database and domain types
+  utils/          Small helpers (dates, formatting)
+  styles/         Tailwind entry and design tokens
+content/          Curriculum source files (Markdown + YAML) — see docs/CONTENT_AUTHORING.md
+scripts/          Content compiler, link verifier, icon generator
+supabase/         config.toml, migrations, generated seed.sql
+netlify/functions Serverless functions
+tests/            unit / integration / e2e
+```
+
+Rules: pages never import the Supabase client directly; they call `services/*`. `lib/*` has no React
+or network dependencies so it is fully unit-testable.
+
+## Content model and provenance
+
+Course content is authored as text files in `content/`, validated, and compiled into idempotent SQL
+upserts with deterministic UUIDs (`scripts/build-content.ts`). Administrators can also create and edit
+content in the admin console; both paths write the same tables.
+
+Every content item carries a `source` that the UI displays:
+
+| `source` | Meaning |
+|---|---|
+| `lecturer` | Material provided by a lecturer (uploaded by an administrator) |
+| `institutional` | Verified institutional resource |
+| `supplementary` | GradPath's original supplementary explanation (default for seeded lessons) |
+| `ai_practice` | Generated practice questions (all seeded questions) |
+| `student` | Created by the student (notes, own flashcards) |
+
+## Data and security model
+
+* **Shared content** (`courses`, `course_modules`, `lessons`, `lesson_resources`, `quizzes`,
+  `quiz_questions`, `mock_exams`, `announcements`, curriculum `flashcards`): readable by authenticated
+  users when published; writable only by administrators.
+* **Answer keys** live in `question_keys`, which has RLS enabled and **no student policy**. Students
+  receive questions through `start_attempt()` and keys only through `submit_attempt()` results, so
+  answers cannot be read during a timed assessment.
+* **Private records** (progress, attempts, notes, bookmarks, assignments, sessions, timetable,
+  flashcards, revision items/reviews, notifications, preferences) are owned by `user_id` and protected
+  by `user_id = auth.uid()` policies. Administrators have **no** policy granting access to other
+  students' notes or private records.
+* **Roles**: `user_roles` holds `student`/`admin`. `is_admin()` is a `SECURITY DEFINER` function that
+  checks the table; it is used in policies and storage rules. Users cannot insert or modify roles;
+  the first administrator is provisioned from the SQL editor (`select public.grant_admin('email')`),
+  which is not executable by `anon`/`authenticated`.
+* **Integrity rules in the database**: lesson completion is rejected unless the lesson's reading
+  requirement (and quiz requirement, if configured) is met; attempts are scored server-side; attempts
+  past their time limit are flagged; study-session occurrences are unique per timetable event and date.
+
+## Assessment engine
+
+`start_attempt(quiz_id)` selects questions (fixed set or random sample from a bank scope), records them
+on the attempt and returns them without keys. `submit_attempt(attempt_id, answers)` scores objective
+questions (MCQ/scenario by option, true/false, normalised short answers, matching with partial credit),
+stores per-question results, computes per-learning-objective performance, records mastery against the
+configurable threshold (default 80 %), queues weak lessons for revision, writes a notification and
+returns feedback with explanations. Essay and case-analysis questions are self-assessed against rubrics
+and are never presented as official marks.
+
+## Revision scheduling
+
+`src/lib/scheduler.ts` implements an SM-2-style spaced-repetition scheduler (Again/Difficult/Good/Easy).
+Revision items exist for lessons/topics and for flashcards; each review is stored in `revision_reviews`.
+
+## Offline and sync
+
+* The service worker precaches the application shell and static assets only.
+* Published course content the student opens (or downloads for offline) is stored in IndexedDB, in a
+  database namespaced by user id; it is deleted on sign-out so shared devices do not leak data.
+* Writes made offline (notes, study sessions, assignments, flashcard reviews, lesson progress) are
+  queued in an IndexedDB outbox with client-generated UUIDs and replayed as idempotent upserts on
+  reconnection, so retries cannot create duplicates. Updates carry the `updated_at` they were based on;
+  if the server copy is newer the server wins and the local version is kept in a conflict list for the
+  student to review.
+* Authentication, assessments (server-scored), external resources and videos require connectivity.
+
+## Recommendations
+
+`src/lib/recommendations.ts` is a deterministic rule engine over the student's own data (attempt scores
+by objective, lesson progress, revision due dates, upcoming deadlines, study activity). Every
+recommendation carries the reason it was generated. An optional AI assistant can be attached later
+through `services/assistant` without changing the core flow.
+
+See also [docs/CONTENT_AUTHORING.md](docs/CONTENT_AUTHORING.md), [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md)
+and [BUILD_STATUS.md](BUILD_STATUS.md).

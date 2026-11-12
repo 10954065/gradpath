@@ -1,0 +1,109 @@
+code: CSIT 613
+slug: csit-613
+title: E-Business Platforms & FinTech
+status: recommended_elective
+statusNote: Recommended elective — pending confirmation of your official course registration.
+accent: emerald
+description: >
+  How digital platforms and financial technology create and capture value, with particular attention to Ghana's
+  mobile money ecosystem and SME digital commerce. Covers e-business models, e-commerce technology, digital finance,
+  payment security, blockchain and practical solution design. Content is educational and is not financial,
+  investment or regulatory advice.
+outcomes:
+  - Explain e-business, e-commerce and digital value creation.
+  - Compare e-commerce and platform business models.
+  - Describe the technology components of an e-commerce operation.
+  - Explain FinTech, digital banking, mobile money, wallets and payment gateways.
+  - Evaluate payment security, fraud prevention and reconciliation controls.
+  - Explain blockchain fundamentals and assess their relevance to digital finance.
+  - Analyse Ghana's digital payments ecosystem and design a digital commerce or payment solution for an SME.
+modules:
+  - slug: e-business-foundations
+    title: E-Business Foundations
+    description: The concepts that underpin doing business digitally.
+    lessons:
+      - slug: e-business-and-e-commerce
+        title: Electronic Business, E-Commerce and Digital Transformation
+        topics: [Electronic business, E-commerce, Digital transformation]
+      - slug: online-business-models-and-digital-value
+        title: Online Business Models and Digital Value Creation
+        topics: [Online business models, Digital value creation, Business Model Canvas]
+  - slug: e-commerce-models
+    title: E-Commerce Models
+    description: Who sells to whom, and how platforms orchestrate markets.
+    lessons:
+      - slug: b2b-b2c-c2c-and-c2b
+        title: B2B, B2C, C2C and C2B E-Commerce
+        topics: [B2B, B2C, C2C, C2B]
+      - slug: marketplaces-and-platform-business-models
+        title: Marketplaces and Platform Business Models
+        topics: [Marketplaces, Platform business models, Network effects]
+  - slug: e-commerce-technology
+    title: E-Commerce Technology
+    description: The systems that make an online business work.
+    lessons:
+      - slug: storefronts-catalogues-and-carts
+        title: Online Storefronts, Product Catalogues and Shopping Carts
+        topics: [Online storefronts, Product catalogues, Shopping carts]
+      - slug: order-and-customer-management
+        title: Order Management and Customer Management
+        topics: [Order management, Customer management]
+      - slug: digital-marketing-and-analytics
+        title: Digital Marketing and E-Commerce Analytics
+        topics: [Digital marketing, Analytics, Conversion funnels]
+  - slug: digital-finance
+    title: Digital Finance
+    description: How money moves digitally.
+    lessons:
+      - slug: fintech-and-digital-banking
+        title: FinTech and Digital Banking
+        topics: [FinTech, Digital banking]
+      - slug: mobile-money-and-digital-wallets
+        title: Mobile Money and Digital Wallets
+        topics: [Mobile money, Digital wallets, Interoperability]
+      - slug: payment-gateways-and-electronic-transactions
+        title: Payment Gateways and Electronic Transactions
+        topics: [Payment gateways, Electronic transactions, Transaction lifecycle]
+  - slug: payment-security
+    title: Payment Security
+    description: Keeping digital payments trustworthy.
+    lessons:
+      - slug: payment-authentication-and-transaction-security
+        title: Payment Authentication and Transaction Security
+        topics: [Payment authentication, Transaction security, Tokenisation, PCI DSS overview]
+      - slug: fraud-prevention-risk-and-reconciliation
+        title: Fraud Prevention, Risk Management and Payment Reconciliation
+        topics: [Fraud prevention, Risk management, Payment reconciliation]
+  - slug: blockchain-and-digital-finance
+    title: Blockchain and Digital Finance
+    description: Distributed ledgers and their uses and limits in finance.
+    lessons:
+      - slug: blockchain-and-distributed-ledgers
+        title: Blockchain Fundamentals and Distributed Ledgers
+        topics: [Blockchain fundamentals, Distributed ledgers]
+      - slug: cryptocurrency-smart-contracts-and-digital-identity
+        title: Cryptocurrency Concepts, Smart Contracts and Digital Identity
+        topics: [Cryptocurrency concepts, Smart contracts, Digital identity, CBDCs]
+  - slug: e-business-in-ghana
+    title: E-Business in Ghana
+    description: Ghana's digital commerce and payments landscape.
+    lessons:
+      - slug: ghana-mobile-money-ecosystem
+        title: The Ghanaian Mobile Money Ecosystem
+        topics: [Ghanaian mobile money ecosystem, Regulation overview, Agents]
+      - slug: digital-payment-adoption-and-online-retail
+        title: Digital Payment Adoption and Online Retail in Ghana
+        topics: [Digital payment adoption, Online retail]
+      - slug: sme-commerce-psps-and-financial-inclusion
+        title: SME Digital Commerce, Payment Service Providers and Financial Inclusion
+        topics: [SME digital commerce, Payment service providers, Financial inclusion]
+  - slug: practical-projects
+    title: Practical Projects
+    description: Designing e-business and payment solutions.
+    lessons:
+      - slug: business-model-and-payment-process-projects
+        title: "Projects: E-Commerce Business Model and Online Payment Process"
+        topics: [E-commerce business model, Online payment process]
+      - slug: ecosystem-strategy-and-solution-design-projects
+        title: "Projects: Mobile Money Ecosystem Analysis, SME Strategy and Payment Solution Design"
+        topics: [Mobile money ecosystem analysis, SME digital commerce strategy, Digital payment solution design]

@@ -1,0 +1,123 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * GradPath design tokens.
+ * Palette: deep navy ink, clean white surfaces on a soft neutral ground, refined indigo accent.
+ * Semantic tokens are defined once per theme; components only use the semantic names.
+ */
+@theme {
+  --font-sans: 'Inter Variable', 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Source Serif 4 Variable', 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+
+  --color-ink-950: #070d1c;
+  --color-ink-900: #0b1530;
+  --color-ink-800: #122042;
+  --color-ink-700: #1c2d57;
+
+  --color-background: var(--gp-background);
+  --color-surface: var(--gp-surface);
+  --color-surface-2: var(--gp-surface-2);
+  --color-foreground: var(--gp-foreground);
+  --color-muted: var(--gp-muted);
+  --color-muted-foreground: var(--gp-muted-foreground);
+  --color-border: var(--gp-border);
+  --color-ring: var(--gp-ring);
+  --color-primary: var(--gp-primary);
+  --color-primary-foreground: var(--gp-primary-foreground);
+  --color-accent: var(--gp-accent);
+  --color-accent-foreground: var(--gp-accent-foreground);
+  --color-success: var(--gp-success);
+  --color-warning: var(--gp-warning);
+  --color-danger: var(--gp-danger);
+  --color-sidebar: var(--gp-sidebar);
+  --color-sidebar-foreground: var(--gp-sidebar-foreground);
+  --color-sidebar-muted: var(--gp-sidebar-muted);
+  --color-sidebar-active: var(--gp-sidebar-active);
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+
+  --shadow-card: 0 1px 2px rgb(15 23 42 / 0.04), 0 1px 3px rgb(15 23 42 / 0.06);
+  --shadow-raised: 0 4px 16px -4px rgb(15 23 42 / 0.12), 0 2px 4px rgb(15 23 42 / 0.04);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root {
+  --gp-background: #f5f6f9;
+  --gp-surface: #ffffff;
+  --gp-surface-2: #f0f2f7;
+  --gp-foreground: #0d1630;
+  --gp-muted: #e8ebf2;
+  --gp-muted-foreground: #586380;
+  --gp-border: #dfe3ec;
+  --gp-ring: #4f5bd5;
+  --gp-primary: #4350c8;
+  --gp-primary-foreground: #ffffff;
+  --gp-accent: #eef0ff;
+  --gp-accent-foreground: #2f3aa3;
+  --gp-success: #13795b;
+  --gp-warning: #a15c07;
+  --gp-danger: #c0392b;
+  --gp-sidebar: #0b1530;
+  --gp-sidebar-foreground: #e6e9f5;
+  --gp-sidebar-muted: #8f9bc0;
+  --gp-sidebar-active: #1c2d57;
+  --reader-scale: 1;
+  color-scheme: light;
+}
+
+.dark {
+  --gp-background: #070d1c;
+  --gp-surface: #0e1730;
+  --gp-surface-2: #131e3b;
+  --gp-foreground: #e7eaf5;
+  --gp-muted: #18244a;
+  --gp-muted-foreground: #9aa5c7;
+  --gp-border: #1f2c52;
+  --gp-ring: #8b95ff;
+  --gp-primary: #7c86f5;
+  --gp-primary-foreground: #070d1c;
+  --gp-accent: #19224a;
+  --gp-accent-foreground: #c3c8ff;
+  --gp-success: #3ccf9b;
+  --gp-warning: #f0b45b;
+  --gp-danger: #f07a6e;
+  --gp-sidebar: #050a17;
+  --gp-sidebar-foreground: #e6e9f5;
+  --gp-sidebar-muted: #7f8bb0;
+  --gp-sidebar-active: #131e3b;
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+code: CSIT 607
+slug: csit-607
+title: AI for Business Systems
+status: listed
+statusNote: Part of the GradPath initial curriculum. Confirm the course's status against your official registration.
+accent: violet
+description: >
+  The concepts, techniques and engineering practices behind artificial intelligence, and how organisations use AI
+  to create value responsibly. The course spans machine learning, deep learning and generative AI, business and
+  sector applications, AI engineering, responsible AI, and practical business AI projects.
+outcomes:
+  - Explain key AI concepts, history and terminology.
+  - Distinguish learning paradigms and select suitable machine learning techniques for business problems.
+  - Explain neural networks, computer vision, NLP, generative AI and large language models at a conceptual level.
+  - Evaluate AI applications in business functions and sectors.
+  - Describe the AI engineering lifecycle from data quality to deployment, pipelines and agents.
+  - Apply responsible AI principles to identify and mitigate bias, privacy and governance risks.
+  - Design a practical, evaluable business AI project.
+modules:
+  - slug: ai-foundations
+    title: AI Foundations
+    description: What AI is, where it came from and the language used to discuss it.
+    lessons:
+      - slug: defining-ai-and-its-history
+        title: Defining Artificial Intelligence and Its History
+        topics: [AI definitions, AI history, AI terminology]
+      - slug: intelligent-systems-and-applications
+        title: Intelligent Systems and AI Applications
+        topics: [Intelligent systems, AI applications, Agents and environments]
+  - slug: machine-learning
+    title: Machine Learning
+    description: How machines learn patterns from data, and how we know whether they have learned well.
+    lessons:
+      - slug: learning-paradigms
+        title: Supervised, Unsupervised and Reinforcement Learning
+        topics: [Supervised learning, Unsupervised learning, Reinforcement learning]
+      - slug: classification-and-regression
+        title: Classification and Regression
+        topics: [Classification, Regression, Decision trees, Logistic regression]
+      - slug: clustering
+        title: Clustering
+        topics: [Clustering, k-means, Customer segmentation]
+      - slug: training-and-evaluation
+        title: Model Training and Model Evaluation
+        topics: [Model training, Overfitting, Train/validation/test splits, Model evaluation metrics]
+  - slug: advanced-ai
+    title: Advanced AI
+    description: Neural approaches that power modern perception, language and generation.
+    lessons:
+      - slug: neural-networks-and-deep-learning
+        title: Neural Networks and Deep Learning
+        topics: [Neural networks, Deep learning, Backpropagation]
+      - slug: computer-vision-and-nlp
+        title: Computer Vision and Natural Language Processing
+        topics: [Computer vision, Natural language processing]
+      - slug: generative-ai-and-llms
+        title: Generative AI and Large Language Models
+        topics: [Generative AI, Large language models, Transformers, Hallucination]
+  - slug: ai-in-business
+    title: AI in Business
+    description: How AI supports insight, prediction and automation across business functions.
+    lessons:
+      - slug: bi-predictive-analytics-and-forecasting
+        title: Business Intelligence, Predictive Analytics and Demand Forecasting
+        topics: [Business intelligence, Predictive analytics, Demand forecasting]
+      - slug: customer-analytics-and-fraud-detection
+        title: Customer Analytics and Fraud Detection
+        topics: [Customer analytics, Fraud detection]
+      - slug: support-automation-and-decision-support
+        title: Customer Support Automation and Decision Support Systems
+        topics: [Customer support automation, Decision support systems]
+  - slug: applied-ai
+    title: Applied AI
+    description: AI across key sectors of the Ghanaian and global economy.
+    lessons:
+      - slug: ai-in-finance-healthcare-and-education
+        title: AI in Finance, Healthcare and Education
+        topics: [AI in finance, AI in healthcare, AI in education]
+      - slug: ai-in-retail-logistics-and-manufacturing
+        title: AI in Retail, Logistics and Manufacturing
+        topics: [AI in retail, AI in logistics, AI in manufacturing]
+  - slug: ai-engineering
+    title: AI Engineering Concepts
+    description: The engineering discipline required to move AI from experiment to dependable service.
+    lessons:
+      - slug: data-quality-training-and-inference
+        title: Data Quality, Training and Inference
+        topics: [Data quality, Model evaluation, Training and inference]
+      - slug: deployment-and-pipelines
+        title: Model Deployment and AI Pipelines
+        topics: [Model deployment, AI pipelines, MLOps, Monitoring and drift]
+      - slug: agents-prompting-and-workflow-automation
+        title: AI Agents, Prompt Engineering and AI Workflow Automation
+        topics: [AI agents, Prompt engineering, AI workflow automation]
+  - slug: responsible-ai
+    title: Responsible AI
+    description: Ensuring AI systems are fair, explainable, private, secure and well governed.
+    lessons:
+      - slug: bias-fairness-and-explainability
+        title: Algorithmic Bias, Fairness and Explainability
+        topics: [Algorithmic bias, Fairness, Explainability]
+      - slug: privacy-security-governance-and-deployment
+        title: Privacy, Security, Governance and Responsible Deployment
+        topics: [Privacy, Security, Governance, Responsible deployment]
+  - slug: business-ai-projects
+    title: Practical Business AI Projects
+    description: End-to-end project designs that connect AI techniques to measurable business outcomes.
+    lessons:
+      - slug: demand-forecasting-and-churn-projects
+        title: "Projects: Supermarket Demand Forecasting and Customer Churn Prediction"
+        topics: [Supermarket demand forecasting, Customer churn prediction]
+      - slug: support-and-document-automation-projects
+        title: "Projects: AI Customer Support and Business Document Automation"
+        topics: [AI customer support, Business document automation]
+      - slug: fraud-detection-and-ai-reporting-projects
+        title: "Projects: Fraud Detection and AI-Powered Business Reporting"
+        topics: [Fraud detection, AI-powered business reporting]

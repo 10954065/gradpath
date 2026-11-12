@@ -1,0 +1,149 @@
+code: CSIT 601
+slug: csit-601
+title: Research Methods
+status: listed
+statusNote: Part of the GradPath initial curriculum. Confirm the course's status against your official registration.
+accent: indigo
+description: >
+  A postgraduate grounding in how business and information technology research is conceived, designed,
+  conducted, analysed, written up and defended. The course moves from research philosophy to a complete,
+  defensible research proposal, using Ghanaian business and technology contexts throughout.
+outcomes:
+  - Explain the philosophical foundations of research and justify a paradigm for a given study.
+  - Formulate researchable problems, objectives, questions and hypotheses.
+  - Conduct, evaluate and synthesise a scholarly literature review and build a conceptual framework.
+  - Select and justify appropriate research designs, sampling strategies and data collection methods.
+  - Apply fundamental quantitative and qualitative analysis techniques and interpret findings responsibly.
+  - Evaluate research quality and apply ethical principles, including data protection.
+  - Write and defend a structured research proposal using APA 7 referencing.
+modules:
+  - slug: foundations-of-research
+    title: Foundations of Research
+    description: What research is, why it matters, and the philosophical positions that shape how it is done.
+    lessons:
+      - slug: meaning-purpose-and-characteristics
+        title: The Meaning, Purpose and Characteristics of Research
+        topics: [Meaning and purpose of research, Research characteristics, Research methodology versus research methods]
+      - slug: research-paradigms
+        title: "Research Paradigms: Positivism, Interpretivism and Pragmatism"
+        topics: [Research paradigms, Positivism, Interpretivism, Pragmatism]
+      - slug: ontology-and-epistemology
+        title: Ontology and Epistemology
+        topics: [Ontology, Epistemology, Axiology, Linking philosophy to design]
+  - slug: research-problem-development
+    title: Research Problem Development
+    description: Turning a topic of interest into a focused, researchable problem with clear aims.
+    lessons:
+      - slug: identifying-problems-and-background
+        title: Identifying Research Problems and Writing the Background
+        topics: [Identifying research problems, Research background, Sources of research problems]
+      - slug: problem-statements-and-scope
+        title: Problem Statements, Scope and Limitations
+        topics: [Problem statements, Scope, Delimitations, Limitations]
+      - slug: objectives-questions-and-hypotheses
+        title: Research Objectives, Questions and Hypotheses
+        topics: [Research objectives, Research questions, Research hypotheses, Alignment of aims]
+  - slug: literature-review
+    title: Literature Review
+    description: Finding, evaluating and synthesising scholarship, and building theoretical and conceptual frameworks.
+    lessons:
+      - slug: purpose-and-searching
+        title: The Purpose of a Literature Review and Searching for Literature
+        topics: [Purpose of literature reviews, Finding scholarly literature, Academic databases, Search strategies]
+      - slug: evaluating-sources-and-gaps
+        title: Evaluating Sources and Identifying Research Gaps
+        topics: [Evaluating academic sources, Identifying research gaps]
+      - slug: synthesising-literature
+        title: Synthesising Literature
+        topics: [Synthesising literature, Synthesis matrices, Critical writing]
+      - slug: theoretical-and-conceptual-frameworks
+        title: Theoretical and Conceptual Frameworks
+        topics: [Theoretical frameworks, Conceptual frameworks, TAM, UTAUT, Diffusion of Innovations]
+  - slug: research-design
+    title: Research Design
+    description: Choosing the overall plan that connects research questions to evidence.
+    lessons:
+      - slug: quantitative-qualitative-and-mixed
+        title: Quantitative, Qualitative and Mixed-Methods Research
+        topics: [Quantitative research, Qualitative research, Mixed-method research]
+      - slug: exploratory-descriptive-explanatory
+        title: Exploratory, Descriptive and Explanatory Research
+        topics: [Exploratory research, Descriptive research, Explanatory research]
+      - slug: experimental-case-study-and-time-horizons
+        title: Experimental Designs, Case Studies and Time Horizons
+        topics: [Experimental research, Case study design, Cross-sectional research, Longitudinal research]
+  - slug: sampling-and-data-collection
+    title: Sampling and Data Collection
+    description: Deciding who or what to study and how to gather trustworthy data.
+    lessons:
+      - slug: populations-frames-and-sampling-methods
+        title: Populations, Sampling Frames and Sampling Methods
+        topics: [Target populations, Sampling frames, Probability sampling, Non-probability sampling]
+      - slug: sample-size
+        title: Sample Size Considerations
+        topics: [Sample size considerations, Margin of error, Saturation in qualitative research]
+      - slug: questionnaires
+        title: Designing Questionnaires
+        topics: [Questionnaires, Measurement scales, Pilot testing]
+      - slug: interviews-focus-groups-observation-documents
+        title: Interviews, Focus Groups, Observation and Document Analysis
+        topics: [Interviews, Focus groups, Observation, Document analysis]
+  - slug: data-analysis
+    title: Data Analysis
+    description: Preparing, analysing, visualising and interpreting quantitative and qualitative data.
+    lessons:
+      - slug: data-preparation-and-descriptive-statistics
+        title: Data Preparation and Descriptive Statistics
+        topics: [Data preparation, Coding and cleaning, Descriptive statistics]
+      - slug: inferential-statistics
+        title: Fundamentals of Inferential Statistics
+        topics: [Inferential statistics fundamentals, Hypothesis testing, p-values, Confidence intervals]
+      - slug: correlation-and-regression
+        title: Correlation and Regression Fundamentals
+        topics: [Correlation, Regression fundamentals]
+      - slug: qualitative-coding-and-thematic-analysis
+        title: Qualitative Coding and Thematic Analysis
+        topics: [Qualitative coding, Thematic analysis]
+      - slug: visualising-and-interpreting-findings
+        title: Data Visualisation and Interpreting Findings
+        topics: [Data visualisation, Interpreting findings]
+  - slug: research-quality-and-ethics
+    title: Research Quality and Ethics
+    description: Judging the quality of research and conducting it ethically and lawfully.
+    lessons:
+      - slug: validity-reliability-and-trustworthiness
+        title: Validity, Reliability and Trustworthiness
+        topics: [Validity, Reliability, Trustworthiness]
+      - slug: research-bias
+        title: Recognising and Reducing Research Bias
+        topics: [Research bias, Sampling bias, Response bias, Researcher bias]
+      - slug: ethics-consent-confidentiality-and-approval
+        title: Research Ethics, Consent, Confidentiality and Ethical Approval
+        topics: [Research ethics, Informed consent, Confidentiality, Data protection, Ethical approval]
+  - slug: academic-writing-and-proposals
+    title: Academic Writing and Research Proposals
+    description: Writing, referencing, planning and defending postgraduate research.
+    lessons:
+      - slug: academic-writing-and-abstracts
+        title: Academic Writing and Abstract Writing
+        topics: [Academic writing, Abstract writing]
+      - slug: proposal-structure-introduction-and-literature
+        title: Proposal Structure, the Introduction and the Literature Review Chapter
+        topics: [Proposal structure, Introduction, Literature review writing]
+      - slug: methodology-results-discussion-and-conclusions
+        title: Writing the Methodology, Results, Discussion and Conclusions
+        topics: [Methodology writing, Results and discussion, Conclusion and recommendations]
+      - slug: apa7-referencing-and-plagiarism
+        title: APA 7 Referencing, Citation Management and Avoiding Plagiarism
+        topics: [APA 7 referencing, Citation management, Zotero, Avoiding plagiarism]
+      - slug: dissertation-planning-and-defence
+        title: Dissertation Planning, Presentation and Defence
+        topics: [Dissertation planning, Research presentation and defence]
+      - slug: worked-proposal-examples
+        title: Worked Research Proposal Examples from Ghanaian Contexts
+        topics:
+          - AI adoption and SME operational efficiency in Ghana
+          - Digital payment adoption among Ghanaian retailers
+          - Cybersecurity awareness among university students
+          - E-commerce adoption among Ghanaian small businesses
+          - Technology adoption in Ghanaian healthcare institutions

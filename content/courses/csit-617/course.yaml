@@ -1,0 +1,111 @@
+code: CSIT 617
+slug: csit-617
+title: Professional & Ethical Issues in IT
+status: listed
+statusNote: Part of the GradPath initial curriculum. Confirm the course's status against your official registration.
+accent: amber
+description: >
+  The professional responsibilities of IT practitioners and the ethical, social and legal questions raised by
+  information technology. Students learn ethical theories, apply structured ethical reasoning and produce defensible
+  recommendations on privacy, intellectual property, AI, workplace conduct and cybercrime. Legal content is
+  educational and is not legal advice.
+outcomes:
+  - Explain the meaning of professionalism, accountability and competence in IT.
+  - Apply major ethical theories and a structured decision-making process to IT dilemmas.
+  - Analyse the social implications of technology, including digital inclusion and digital rights.
+  - Evaluate privacy, data protection and intellectual property issues in organisational contexts.
+  - Critically assess the ethics of AI systems and recommend safeguards.
+  - Construct well-reasoned, defensible recommendations for realistic ethical case studies.
+modules:
+  - slug: it-professionalism
+    title: IT Professionalism
+    description: What it means to be a professional in information technology.
+    lessons:
+      - slug: professional-identity-and-responsibility
+        title: Professional Identity, Responsibility and Accountability
+        topics: [Professional identity, Professional responsibility, Accountability]
+      - slug: codes-of-conduct-and-competence
+        title: Codes of Conduct and Professional Competence
+        topics: [Codes of conduct, ACM Code of Ethics, IEEE Code of Ethics, Professional competence]
+  - slug: ethical-foundations
+    title: Ethical Foundations
+    description: The theories and methods used to reason about right and wrong.
+    lessons:
+      - slug: ethics-morality-and-relativism
+        title: Ethics, Morality and Ethical Relativism
+        topics: [Ethics, Morality, Ethical relativism]
+      - slug: utilitarianism-deontology-and-virtue-ethics
+        title: Utilitarianism, Deontology and Virtue Ethics
+        topics: [Utilitarianism, Deontology, Virtue ethics]
+      - slug: ethical-decision-making
+        title: Structured Ethical Decision-Making
+        topics: [Ethical decision-making, Stakeholder analysis, Building an ethical argument]
+  - slug: technology-and-society
+    title: Technology and Society
+    description: How technology shapes, includes and excludes people.
+    lessons:
+      - slug: digital-inclusion-and-access
+        title: Digital Inclusion and Technology Access
+        topics: [Digital inclusion, Technology access, Social implications]
+      - slug: digital-rights-and-workplace-technology
+        title: Digital Rights and Workplace Technology
+        topics: [Digital rights, Workplace technology]
+  - slug: data-and-privacy
+    title: Data and Privacy
+    description: The ethics and law of collecting, using and protecting personal data.
+    lessons:
+      - slug: privacy-consent-and-data-protection
+        title: Privacy, Consent and Data Protection
+        topics: [Privacy, Data protection, Consent, Ghana Data Protection Act 2012 (Act 843)]
+      - slug: data-ownership-surveillance-and-confidentiality
+        title: Data Ownership, Surveillance and Confidentiality
+        topics: [Data ownership, Surveillance, Confidentiality]
+  - slug: intellectual-property
+    title: Intellectual Property
+    description: Protecting and respecting creative and technical work.
+    lessons:
+      - slug: copyright-patents-and-trademarks
+        title: Copyright, Patents and Trademarks
+        topics: [Copyright, Patents, Trademarks]
+      - slug: software-licensing-and-open-source
+        title: Software Licensing and Open-Source Software
+        topics: [Software licensing, Open-source software, Copyleft]
+      - slug: plagiarism-and-academic-integrity
+        title: Plagiarism and Academic Integrity
+        topics: [Plagiarism, Academic integrity, Generative AI and authorship]
+  - slug: ai-ethics
+    title: AI and Emerging Ethical Issues
+    description: The distinctive ethical challenges posed by AI systems.
+    lessons:
+      - slug: ai-ethics-bias-and-discrimination
+        title: AI Ethics, Bias and Algorithmic Discrimination
+        topics: [AI ethics, Algorithmic discrimination, Bias]
+      - slug: transparency-accountability-and-oversight
+        title: Transparency, Accountability, Human Oversight and Responsible AI
+        topics: [Transparency, Accountability, Human oversight, Responsible AI, UNESCO Recommendation on the Ethics of AI]
+  - slug: professional-practice
+    title: Professional Practice
+    description: Ethical conduct in day-to-day IT work and the legal consequences of misconduct.
+    lessons:
+      - slug: workplace-ethics-and-conflicts-of-interest
+        title: Workplace Ethics and Conflicts of Interest
+        topics: [Workplace ethics, Conflicts of interest]
+      - slug: whistleblowing-and-professional-negligence
+        title: Whistleblowing and Professional Negligence
+        topics: [Whistleblowing, Professional negligence]
+      - slug: cybercrime-and-misuse-of-information-systems
+        title: Cybercrime and the Misuse of Information Systems
+        topics: [Cybercrime, Misuse of information systems, Ghana Cybersecurity Act 2020 (Act 1038), Electronic Transactions Act 2008 (Act 772)]
+  - slug: ethical-case-studies
+    title: Ethical Case Studies
+    description: Applying structured ethical reasoning to realistic dilemmas.
+    lessons:
+      - slug: ai-recruitment-and-employee-monitoring
+        title: "Case Studies: AI Recruitment Bias and Employee Monitoring"
+        topics: [AI recruitment bias, Employee monitoring]
+      - slug: data-misuse-and-breaches
+        title: "Case Studies: Customer Data Misuse and Data Breaches"
+        topics: [Customer data misuse, Data breaches]
+      - slug: piracy-unauthorised-ai-and-exclusion
+        title: "Case Studies: Software Piracy, Unauthorised AI Use and Digital Exclusion"
+        topics: [Software piracy, Unauthorised AI use, Digital exclusion]

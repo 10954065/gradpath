@@ -1,0 +1,120 @@
+code: CSIT 605
+slug: csit-605
+title: Computer & Cybersecurity
+status: listed
+statusNote: Part of the GradPath initial curriculum. Confirm the course's status against your official registration.
+accent: rose
+description: >
+  The principles, technologies and management practices used to protect information systems. The course covers
+  threats and attacks, network and system defences, cryptography, application and cloud security, governance and
+  risk (including the NIST Cybersecurity Framework 2.0), and hands-on defensive practice. All practical exercises
+  must be performed only on systems you own or are explicitly authorised to test.
+outcomes:
+  - Explain core security principles including the CIA triad and the relationship between threats, vulnerabilities and risk.
+  - Analyse common attack techniques and recommend proportionate defences.
+  - Apply network, system, application and database security controls.
+  - Explain and correctly apply cryptographic primitives, certificates and key management.
+  - Evaluate cloud and infrastructure security, backup and disaster recovery arrangements.
+  - Apply governance, risk assessment and incident response frameworks, including NIST CSF 2.0.
+modules:
+  - slug: security-fundamentals
+    title: Security Fundamentals
+    description: The vocabulary and principles on which all security decisions rest.
+    lessons:
+      - slug: principles-and-cia-triad
+        title: Cybersecurity Principles and the CIA Triad
+        topics: [Cybersecurity principles, Confidentiality, Integrity, Availability, Security objectives]
+      - slug: threats-vulnerabilities-and-risk
+        title: Threats, Vulnerabilities and Risk
+        topics: [Threats, Vulnerabilities, Risks, Risk equation]
+  - slug: threats-and-attacks
+    title: Threats and Attacks
+    description: How attackers operate and why their techniques succeed.
+    lessons:
+      - slug: malware-and-ransomware
+        title: Malware and Ransomware
+        topics: [Malware, Ransomware]
+      - slug: phishing-social-engineering-and-insiders
+        title: Phishing, Social Engineering and Insider Threats
+        topics: [Phishing, Social engineering, Insider threats]
+      - slug: denial-of-service-and-credential-attacks
+        title: Denial of Service and Credential Attacks
+        topics: [Denial of service, Credential attacks, Password spraying, Credential stuffing]
+  - slug: network-and-system-security
+    title: Network and System Security
+    description: Defending networks, operating systems and endpoints.
+    lessons:
+      - slug: network-security-and-firewalls
+        title: Network Security and Firewalls
+        topics: [Network security, Firewalls, Segmentation]
+      - slug: secure-protocols
+        title: Secure Protocols
+        topics: [Secure protocols, TLS, SSH, VPNs, DNSSEC]
+      - slug: os-endpoint-and-access-control
+        title: Operating System Security, Endpoint Protection and Access Control
+        topics: [Operating system security, Endpoint protection, Access control, Least privilege]
+  - slug: cryptography
+    title: Cryptography
+    description: The mathematics-backed tools that protect data at rest and in transit.
+    lessons:
+      - slug: symmetric-and-asymmetric-encryption
+        title: Symmetric and Asymmetric Encryption
+        topics: [Encryption, Symmetric encryption, Asymmetric encryption]
+      - slug: hashing-and-digital-signatures
+        title: Hashing and Digital Signatures
+        topics: [Hashing, Digital signatures, Password hashing]
+      - slug: certificates-and-key-management
+        title: Certificates, PKI and Key Management
+        topics: [Certificates, PKI, Key management]
+  - slug: application-and-database-security
+    title: Application and Database Security
+    description: Building and operating software that resists attack.
+    lessons:
+      - slug: web-application-security-sqli-and-xss
+        title: Web Application Security, SQL Injection and Cross-Site Scripting
+        topics: [Web application security, OWASP Top 10, SQL injection, Cross-site scripting]
+      - slug: authentication-and-authorisation
+        title: Authentication and Authorisation
+        topics: [Authentication, MFA, Authorisation, Session management]
+      - slug: secure-development-and-database-protection
+        title: Secure Software Development and Database Protection
+        topics: [Secure software development, Secure SDLC, Database protection]
+  - slug: cloud-and-infrastructure-security
+    title: Cloud and Infrastructure Security
+    description: Protecting cloud services, identities, configurations and data, and recovering from failure.
+    lessons:
+      - slug: cloud-security-and-identity-management
+        title: Cloud Security and Identity Management
+        topics: [Cloud security, Shared responsibility model, Identity management]
+      - slug: configuration-security-and-data-protection
+        title: Configuration Security and Data Protection
+        topics: [Configuration security, Data protection, Data classification]
+      - slug: backup-and-disaster-recovery
+        title: Backup Strategies and Disaster Recovery
+        topics: [Backup strategies, 3-2-1 rule, Disaster recovery, RPO and RTO]
+  - slug: governance-and-risk
+    title: Governance and Risk
+    description: Managing security as an organisational responsibility.
+    lessons:
+      - slug: security-governance-and-policies
+        title: Security Governance and Security Policies
+        topics: [Security governance, Security policies]
+      - slug: risk-assessment-and-nist-csf
+        title: Risk Assessment and the NIST Cybersecurity Framework 2.0
+        topics: [Risk assessment, NIST Cybersecurity Framework 2.0]
+      - slug: incident-response-continuity-and-audit
+        title: Incident Response, Business Continuity and Security Audits
+        topics: [Incident response, Business continuity, Security audits]
+  - slug: practical-security
+    title: Practical Security
+    description: Applying defensive techniques to realistic, authorised scenarios.
+    lessons:
+      - slug: threat-modelling
+        title: Threat Modelling with STRIDE
+        topics: [Threat modelling, STRIDE, Data flow diagrams]
+      - slug: security-assessment-and-vulnerability-management
+        title: Security Assessment and Vulnerability Management
+        topics: [Security assessment, Vulnerability management, CVSS]
+      - slug: awareness-scenarios-and-secure-architecture
+        title: Security Awareness, Incident Scenarios and Secure Architecture Design
+        topics: [Security awareness, Incident response scenarios, Secure architecture design]

@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dev-dist/
+*.tsbuildinfo
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+.netlify/
+
+# Supabase local state
+supabase/.temp/
+supabase/.branches/
+supabase/signing_keys.json
+
+# Testing
+coverage/
+playwright-report/
+test-results/
+blob-report/
+playwright/.cache/
+
+# Editor and OS
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# AI assistant files (never committed)
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+.serena/

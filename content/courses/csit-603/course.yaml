@@ -1,0 +1,112 @@
+code: CSIT 603
+slug: csit-603
+title: Enterprise Systems & Business Process Re-engineering
+status: listed
+statusNote: Part of the GradPath initial curriculum. Confirm the course's status against your official registration.
+accent: sky
+description: >
+  How organisations use integrated enterprise systems to run, coordinate and improve their operations, and how
+  business processes are analysed, modelled in BPMN, re-engineered and supported by technology. Practical work uses
+  realistic Ghanaian pharmacy, hospital, retail, hospitality and logistics scenarios.
+outcomes:
+  - Explain the role of enterprise systems, enterprise architecture and integration in organisations.
+  - Compare ERP, CRM, SCM and HRIS applications and the data and analytics that support them.
+  - Identify, map, model (BPMN 2.0) and document business processes.
+  - Apply business process re-engineering principles to diagnose inefficiencies and design improved processes.
+  - Plan an enterprise system implementation from requirements gathering to post-implementation evaluation.
+  - Evaluate enterprise technologies such as workflow automation, cloud ERP and business intelligence.
+modules:
+  - slug: enterprise-systems-foundations
+    title: Enterprise Systems Foundations
+    description: Why organisations integrate their information systems and how enterprise architecture guides that integration.
+    lessons:
+      - slug: enterprise-and-business-information-systems
+        title: Enterprise Systems and Business Information Systems
+        topics: [Enterprise systems, Business information systems, Functional silos]
+      - slug: organisational-information-flows
+        title: Organisational Information Flows
+        topics: [Organisational information flows, Transaction processing, Management reporting]
+      - slug: enterprise-architecture-and-integration
+        title: Enterprise Architecture and Enterprise Integration
+        topics: [Enterprise architecture, TOGAF overview, Enterprise integration, APIs and middleware]
+  - slug: enterprise-applications
+    title: Enterprise Applications
+    description: The major families of enterprise application and the data that connects them.
+    lessons:
+      - slug: erp-systems
+        title: Enterprise Resource Planning (ERP) Systems
+        topics: [ERP, ERP modules, Best-practice processes]
+      - slug: crm-scm-and-hris
+        title: CRM, SCM and HRIS
+        topics: [CRM, SCM, HRIS]
+      - slug: enterprise-databases-and-analytics
+        title: Enterprise Databases and Enterprise Analytics
+        topics: [Enterprise databases, Master data, Enterprise analytics]
+  - slug: business-process-management
+    title: Business Process Management
+    description: Seeing the organisation as a set of processes, and capturing them precisely.
+    lessons:
+      - slug: business-processes-and-identification
+        title: Business Processes and Process Identification
+        topics: [Business processes, Process identification, Process architecture]
+      - slug: process-mapping-and-documentation
+        title: Process Mapping and Process Documentation
+        topics: [Process mapping, Process documentation, SIPOC, Swimlanes]
+      - slug: bpmn-modelling
+        title: Process Modelling with BPMN 2.0
+        topics: [Process modelling, BPMN, Camunda Modeler, Bizagi Modeler]
+  - slug: business-process-reengineering
+    title: Business Process Re-engineering
+    description: Radically rethinking processes to achieve dramatic improvements, and managing the human side of change.
+    lessons:
+      - slug: bpr-principles
+        title: Principles of Business Process Re-engineering
+        topics: [BPR principles, BPR versus continuous improvement]
+      - slug: process-analysis-and-inefficiencies
+        title: Process Analysis and Identifying Inefficiencies
+        topics: [Process analysis, Identifying inefficiencies, Value-added analysis, Bottlenecks]
+      - slug: redesign-optimisation-and-change-management
+        title: Process Redesign, Optimisation and Change Management
+        topics: [Process redesign, Process optimisation, Change management, Kotter, ADKAR]
+  - slug: enterprise-implementation
+    title: Enterprise Implementation
+    description: Delivering an enterprise system successfully, from requirements to evaluation.
+    lessons:
+      - slug: implementation-strategies-and-requirements
+        title: ERP Implementation Strategies and Requirements Gathering
+        topics: [ERP implementation strategies, Big bang, Phased, Parallel, Requirements gathering]
+      - slug: vendor-selection
+        title: Vendor Selection
+        topics: [Vendor selection, Total cost of ownership, Weighted scoring]
+      - slug: data-migration-and-integration
+        title: Data Migration and System Integration
+        topics: [Data migration, System integration]
+      - slug: training-testing-deployment-and-evaluation
+        title: User Training, Testing, Deployment and Post-Implementation Evaluation
+        topics: [User training, Testing, Deployment, Post-implementation evaluation]
+  - slug: enterprise-technology
+    title: Enterprise Technology
+    description: Contemporary technologies that extend and transform enterprise systems.
+    lessons:
+      - slug: workflow-automation-and-cloud-erp
+        title: Workflow Automation and Cloud ERP
+        topics: [Workflow automation, RPA, Cloud ERP]
+      - slug: enterprise-security
+        title: Enterprise Security
+        topics: [Enterprise security, Segregation of duties, Role-based access]
+      - slug: bi-reporting-and-digital-transformation
+        title: Business Intelligence, Enterprise Reporting and Digital Transformation
+        topics: [Business intelligence, Enterprise reporting, Digital transformation]
+  - slug: enterprise-case-studies
+    title: Practical Enterprise Case Studies
+    description: Applying process analysis and enterprise systems thinking to realistic sector scenarios.
+    lessons:
+      - slug: pharmacy-and-hospital-systems
+        title: Pharmacy ERP and Hospital Management Systems
+        topics: [Pharmacy ERP, Hospital management systems]
+      - slug: grocery-pos-and-restaurant-systems
+        title: Grocery Inventory and POS, and Restaurant Ordering Systems
+        topics: [Grocery inventory and POS, Restaurant ordering and kitchen management]
+      - slug: logistics-and-distribution-systems
+        title: Logistics and Distribution Systems
+        topics: [Logistics and distribution systems, Warehouse management, Route planning]
