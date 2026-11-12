@@ -38,6 +38,11 @@ const LessonPage = lazy(() => import('@/pages/LessonPage'))
 const LibraryPage = lazy(() => import('@/pages/LibraryPage'))
 const ResourcesPage = lazy(() => import('@/pages/ResourcesPage'))
 const NotesPage = lazy(() => import('@/pages/NotesPage'))
+const AssessmentsPage = lazy(() => import('@/pages/AssessmentsPage'))
+const MockExamsPage = lazy(() => import('@/pages/MockExamsPage'))
+const QuizPage = lazy(() => import('@/pages/QuizPage'))
+const AttemptPage = lazy(() => import('@/pages/AttemptPage'))
+const AttemptResultPage = lazy(() => import('@/pages/AttemptResultPage'))
 
 /** Screens rendered inside the authenticated application shell. */
 const shellRoutes: { path: string; element: ReactNode }[] = [
@@ -47,6 +52,11 @@ const shellRoutes: { path: string; element: ReactNode }[] = [
   { path: 'library', element: <LibraryPage /> },
   { path: 'resources', element: <ResourcesPage /> },
   { path: 'notes', element: <NotesPage /> },
+  { path: 'assessments', element: <AssessmentsPage /> },
+  { path: 'assessments/:quizId', element: <QuizPage /> },
+  { path: 'assessments/attempts/:attemptId', element: <AttemptResultPage /> },
+  { path: 'assessments/attempts/:attemptId/take', element: <AttemptPage /> },
+  { path: 'mock-exams', element: <MockExamsPage /> },
   { path: 'settings', element: <SettingsPage /> },
 ]
 

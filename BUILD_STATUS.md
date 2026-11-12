@@ -20,7 +20,7 @@ _Last updated: 2026-11-12_
 | 3. Design system | Done | Tokens, light/dark themes, UI primitives, sidebar + mobile drawer + bottom nav, auth screens, onboarding, settings, PWA icons |
 | 4. Curriculum engine | Done | All 7 courses authored: 159/159 lessons (~430k words), 1,161 practice questions, 919 flashcards, 76 resources; 225 URLs checked (196 reachable, 26 blocked automated checks, 3 unreachable). Course catalogue, course overview, lesson reader (TOC, progress, text size, dark reading, Mermaid), library, resources |
 | 5. Learning progress | Done | Reading progress (scroll + visible time), explicit server-enforced completion, lesson and resource bookmarks, private notebook (search, link to course/lesson, tags, pin, export), offline outbox tests |
-| 6. Assessments | Pending | |
+| 6. Assessments | Done | Assessments hub (module assessments, lesson quizzes, history), mock exams, quiz intro, timed runner (navigation, drafts, auto-submit, confirmation), results with breakdowns, explanations, rubrics, model answers and self-assessment; browser-verified end to end |
 | 7. Productivity | Pending | |
 | 8. Analytics | Pending | |
 | 9. Administration | Pending | |
