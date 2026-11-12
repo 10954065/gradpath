@@ -1,0 +1,452 @@
+module: enterprise-technology
+questions:
+  # workflow-automation-and-cloud-erp
+  - id: q01
+    lesson: workflow-automation-and-cloud-erp
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Define robotic process automation
+    prompt: Which description best defines robotic process automation (RPA)?
+    options:
+      - Physical robots that move stock in a warehouse
+      - Software bots that perform rule-based tasks by operating applications through their user interfaces
+      - A database technique for storing historical data
+      - A cloud model in which the vendor runs the application
+    answer: 1
+    explanation: >-
+      RPA bots mimic a person using screens, keyboards and files. Warehouse robots are physical automation, historical
+      storage describes a data warehouse, and vendor-run applications describe SaaS.
+
+  - id: q02
+    lesson: workflow-automation-and-cloud-erp
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish workflow automation, RPA and API integration
+    prompt: Match each automation approach to what it primarily automates.
+    pairs:
+      - left: Workflow automation
+        right: Coordination of tasks and decisions between people
+      - left: RPA
+        right: Repetitive keyboard-and-screen work on existing applications
+      - left: API integration
+        right: Direct system-to-system data exchange
+    explanation: >-
+      The three approaches solve different problems. Workflow routes and tracks human work, RPA replaces manual screen
+      operation where no better interface exists, and APIs remove the need for any human or bot to move the data.
+
+  - id: q03
+    lesson: workflow-automation-and-cloud-erp
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Select the appropriate automation technology
+    scenario: |
+      Illustrative scenario. A distributor's staff copy order details from emailed spreadsheets into the ERP. The
+      customer, a large retailer, has just launched a documented, versioned ordering API for its suppliers.
+    prompt: What is the most robust long-term solution?
+    options:
+      - Deploy an RPA bot to copy the spreadsheets into the ERP
+      - Integrate the ERP with the retailer's ordering API
+      - Hire more data-entry clerks
+      - Build an approval workflow for each spreadsheet
+    answer: 1
+    explanation: >-
+      Where a stable, versioned API exists, direct integration is more robust than screen-level automation, which breaks
+      when layouts change. RPA might be a tactical stopgap; more clerks scale cost with volume; and an approval workflow
+      does not address the re-keying problem.
+
+  - id: q04
+    lesson: workflow-automation-and-cloud-erp
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Calculate hours of manual effort
+    prompt: A task is performed 1,800 times a month and takes 4 minutes each time. How many hours of effort is this per month? (Number only.)
+    answers: ["120"]
+    explanation: >-
+      1,800 × 4 = 7,200 minutes, and 7,200 ÷ 60 = 120 hours. Baseline effort is the starting point for any automation
+      business case, before deducting exception handling.
+
+  - id: q05
+    lesson: workflow-automation-and-cloud-erp
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain shared responsibility in cloud ERP
+    prompt: In a multi-tenant cloud ERP, the vendor is fully responsible for which users can access which data.
+    answer: false
+    explanation: >-
+      False. Security is shared: the vendor secures the platform and infrastructure, but the customer remains
+      responsible for user provisioning, roles, segregation of duties and data governance.
+
+  - id: q06
+    lesson: workflow-automation-and-cloud-erp
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the sensitivity of an RPA business case
+    prompt: In an RPA business case, which change would most directly delay payback?
+    options:
+      - A higher straight-through processing rate
+      - Staff time saved being redeployed to arrears collection
+      - Frequent changes to the screens the bot uses, requiring rework
+      - A lower hourly staff cost being replaced by a higher one
+    answer: 2
+    explanation: >-
+      Screen changes break bots and add maintenance cost, reducing net benefit and pushing payback later. Higher
+      straight-through processing and redeployment increase realised benefit, and a higher staff cost increases the
+      value of time saved.
+
+  - id: q07
+    lesson: workflow-automation-and-cloud-erp
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate cloud ERP deployment models
+    prompt: A group with a large ERP at head office wants simple, fast-to-deploy systems for small subsidiaries, consolidated monthly. Which approach is most appropriate?
+    options:
+      - Two-tier ERP with multi-tenant cloud ERP at subsidiaries integrated with the corporate system
+      - Copy the full head office ERP to every subsidiary on local servers
+      - Let each subsidiary choose any spreadsheet system it likes
+      - Abandon consolidation and report each subsidiary separately
+    answer: 0
+    explanation: >-
+      Two-tier ERP balances standardisation and speed: lightweight cloud ERP meets subsidiary needs while integration
+      supports consolidation. Replicating the full ERP is costly and heavy for small units; uncontrolled spreadsheets
+      undermine data quality; and abandoning consolidation fails group reporting needs.
+
+  # enterprise-security
+  - id: q08
+    lesson: enterprise-security
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name the access principle of minimum necessary rights
+    prompt: Name the principle that each user should receive only the access needed to perform their job.
+    answers: [Least privilege, principle of least privilege, minimum privilege]
+    explanation: >-
+      Least privilege limits the damage any compromised or careless account can cause and makes segregation of duties
+      easier to maintain.
+
+  - id: q09
+    lesson: enterprise-security
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain the purpose of segregation of duties
+    prompt: What is the main purpose of segregation of duties?
+    options:
+      - To make each employee's job more varied
+      - To prevent any one person from both committing and concealing an error or fraud
+      - To reduce the number of system licences required
+      - To speed up approval of transactions
+    answer: 1
+    explanation: >-
+      SoD divides authorisation, custody, recording and reconciliation so that one person cannot complete and hide an
+      irregular transaction. It is not intended to vary jobs, save licences or speed approvals; it may in fact add steps.
+
+  - id: q10
+    lesson: enterprise-security
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Detect a segregation of duties conflict
+    scenario: |
+      Illustrative scenario. In a pharmacy chain's ERP, Efua holds the accounts payable role (post supplier invoices)
+      and the treasury role (release payments). Each role on its own is conflict-free.
+    prompt: What does this assignment show?
+    options:
+      - There is no risk because each role is clean
+      - A user-level conflict that lets Efua post and pay a fictitious invoice
+      - A network security weakness
+      - A data migration error
+    answer: 1
+    explanation: >-
+      Clean roles can combine into a conflict at user level. Posting invoices and releasing payment together allows a
+      fictitious invoice to be created and paid. This is an authorisation and process-control issue, not a network or
+      migration problem.
+
+  - id: q11
+    lesson: enterprise-security
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain compensating controls
+    prompt: Where an SoD conflict cannot practically be removed, an independent review of a payment report by a manager can serve as a compensating control.
+    answer: true
+    explanation: >-
+      True. Compensating controls such as independent review, approval thresholds and exception reports reduce residual
+      risk where staffing prevents full separation. They should be documented, owned and periodically tested.
+
+  - id: q12
+    lesson: enterprise-security
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match security layers to typical controls
+    prompt: Match each enterprise security layer to a typical control.
+    pairs:
+      - left: Identity and authentication
+        right: Multi-factor authentication and prompt removal of leavers
+      - left: Application authorisation
+        right: Roles restricting transactions by branch
+      - left: Business process controls
+        right: Three-way match of order, receipt and invoice
+      - left: Monitoring and audit
+        right: Alerts on changes to supplier bank details
+      - left: Data protection
+        right: Encryption at rest and masking of sensitive fields
+    explanation: >-
+      Defence in depth layers different controls so that a failure in one is caught by another. Recognising which layer
+      a control belongs to helps identify gaps in a security design.
+
+  - id: q13
+    lesson: enterprise-security
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Apply the conflict matrix to procure-to-pay
+    prompt: Which pair of functions represents the most direct risk of paying a fictitious supplier?
+    options:
+      - Approve purchase order and record goods receipt
+      - Maintain supplier master data and release payment
+      - Create purchase order and view stock levels
+      - Record goods receipt and print a delivery note
+    answer: 1
+    explanation: >-
+      A user who can create or alter a supplier, including bank details, and also release payments can pay a fictitious
+      or redirected supplier directly. The other pairs either involve lower-risk functions or do not touch payment.
+
+  - id: q14
+    lesson: enterprise-security
+    type: true_false
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the Barings case in control terms
+    prompt: The Barings collapse is best explained as a failure of network security controls.
+    answer: false
+    explanation: >-
+      False. The central failure was organisational: Nick Leeson controlled both trading and the settlement operations
+      that recorded and reconciled trades, allowing losses to be concealed, combined with weak management oversight.
+      It is a segregation of duties and monitoring failure, not a network breach.
+
+  # bi-reporting-and-digital-transformation
+  - id: q15
+    lesson: bi-reporting-and-digital-transformation
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Identify the components of a star schema
+    prompt: In a star schema, what does the central fact table contain?
+    options:
+      - Descriptions of products and customers
+      - Numeric measurements of business events, such as quantity and revenue
+      - User passwords and roles
+      - The ETL program code
+    answer: 1
+    explanation: >-
+      Fact tables hold measurements at a defined grain, linked to dimension tables (product, customer, date, branch) that
+      describe the context. Security data and code are not part of the dimensional model.
+
+  - id: q16
+    lesson: bi-reporting-and-digital-transformation
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Calculate gross margin percentage
+    prompt: Revenue is GHS 500,000 and cost of goods sold is GHS 400,000. What is the gross margin percentage? (Number only, without the % sign.)
+    answers: ["20", "20%"]
+    explanation: >-
+      Gross margin % = (500,000 − 400,000) / 500,000 = 100,000 / 500,000 = 20%. Note that margin is calculated on
+      revenue, not on cost; on cost the mark-up would be 25%.
+
+  - id: q17
+    lesson: bi-reporting-and-digital-transformation
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Interpret interacting KPIs
+    scenario: |
+      Illustrative scenario. Branch X has a gross margin of 30% and stock turnover of 4 times a year. Branch Y has a
+      gross margin of 25% and stock turnover of 6 times a year. Their average inventories differ.
+    prompt: What is the most appropriate conclusion?
+    options:
+      - Branch X is clearly better because its margin is higher
+      - Branch Y is clearly better because its turnover is higher
+      - The KPIs must be considered together, for example via gross margin return on inventory, before judging
+      - The data is meaningless because the branches differ
+    answer: 2
+    explanation: >-
+      Margin and turnover pull in different directions, so neither alone ranks the branches. A combined measure such as
+      gross profit per cedi of average inventory, plus drill-down by product category, gives a sounder judgement.
+      Dismissing the data ignores what comparative analysis can reveal.
+
+  - id: q18
+    lesson: bi-reporting-and-digital-transformation
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish analytics types
+    prompt: Match each type of analytics to the question it answers.
+    pairs:
+      - left: Descriptive
+        right: What happened?
+      - left: Diagnostic
+        right: Why did it happen?
+      - left: Predictive
+        right: What is likely to happen?
+      - left: Prescriptive
+        right: What should we do?
+    explanation: >-
+      The sequence reflects increasing analytical maturity. Most early BI value comes from reliable descriptive and
+      diagnostic analysis, which must be trusted before predictive and prescriptive models can be.
+
+  - id: q19
+    lesson: bi-reporting-and-digital-transformation
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Classify initiatives by depth of digital change
+    prompt: A pharmacy moves paper prescriptions into an electronic workflow that routes them to the dispensary. How is this best classified?
+    options:
+      - Digitisation
+      - Digitalisation
+      - Digital transformation of the business model
+      - Business intelligence
+    answer: 1
+    explanation: >-
+      Changing an existing process with digital tools is digitalisation. Scanning prescriptions alone would be
+      digitisation; launching online consultations with subscription refills would change the business model; BI is
+      about analysis rather than process execution.
+
+  - id: q20
+    lesson: bi-reporting-and-digital-transformation
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate the role of leadership in digital transformation
+    prompt: According to Westerman, Bonnet and McAfee, digital capabilities alone are sufficient for successful digital transformation.
+    answer: false
+    explanation: >-
+      False. Their framework pairs digital capabilities with leadership capabilities such as vision, engagement and
+      governance. Technology without leadership rarely changes how an organisation works.
+
+  - id: q21
+    lesson: bi-reporting-and-digital-transformation
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Calculate days of inventory
+    prompt: Stock turnover is 5 times per year. Using 365 days, how many days of inventory does this represent? (Number only.)
+    answers: ["73"]
+    explanation: >-
+      Days of inventory = 365 / turnover = 365 / 5 = 73 days. Higher turnover means fewer days of stock held, which
+      frees cash but may risk stock-outs.
+
+  # module-level
+  - id: q22
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate an enterprise technology roadmap
+    marks: 25
+    case: |
+      Illustrative scenario. Nkabom Retail, a Ghanaian chain of twenty convenience stores, runs a cloud ERP. The finance
+      director wants RPA bots to compile the weekly sales spreadsheet from each store's ERP screens. Store managers
+      currently create, approve and receive their own purchase orders, and two head office staff can both edit supplier
+      bank details and release payments. Board reports are assembled manually and figures often differ between
+      departments. The chief executive wants to "transform the business digitally" with a delivery app within a year.
+    prompt: Evaluate Nkabom's situation and recommend a prioritised enterprise technology roadmap covering automation, security and BI, and the proposed digital transformation.
+    structure:
+      - Diagnosis of the core problems and their business risk
+      - Automation - RPA versus reporting from governed data
+      - Security - SoD conflicts, remediation and compensating controls
+      - BI - architecture, semantic layer, KPI definitions
+      - Digital transformation - readiness and sequencing of the delivery app
+      - Prioritised roadmap with justification
+    rubric:
+      - criterion: Automation judgement
+        marks: 5
+        descriptor: Recognises that bots scraping ERP screens is inferior to governed BI reporting from ERP data and justifies the alternative.
+      - criterion: Security analysis
+        marks: 6
+        descriptor: Identifies both SoD conflicts, explains the fraud risks and proposes role redesign and compensating controls.
+      - criterion: BI design
+        marks: 5
+        descriptor: Proposes a warehouse or governed data model, semantic layer and KPI definition cards with owners.
+      - criterion: Digital transformation evaluation
+        marks: 5
+        descriptor: Distinguishes digitalisation from transformation and argues for sequencing based on data and process readiness.
+      - criterion: Roadmap and coherence
+        marks: 4
+        descriptor: Presents a prioritised, coherent roadmap with clear rationale.
+    modelAnswer: |
+      The strongest answers first identify the most urgent risk: the SoD conflicts. Store managers who create, approve
+      and receive their own purchase orders can order goods for private use or collude with suppliers, and confirm
+      receipt without independent evidence. Two staff who can both edit supplier bank details and release payment can
+      redirect funds. Supplier master maintenance should move to a separate officer with second-person approval of bank
+      detail changes; purchase approval should go to an area manager through workflow, with thresholds; and where small
+      stores cannot separate receipt from ordering, weekly exception reports and stock counts act as compensating
+      controls.
+
+      Second, RPA scraping ERP screens is a poor fit: the data already sits in a cloud ERP with reporting interfaces, so
+      a governed BI layer is more robust. A small warehouse or cloud analytics model fed from the ERP, a semantic layer
+      defining sales, margin and stock measures once, and KPI definition cards with owners would end conflicting figures
+      in board reports.
+
+      Third, the delivery app is a genuine transformation of customer experience, but it depends on accurate real-time
+      stock and pricing data and on store fulfilment processes. Launching it before data and controls are trusted risks
+      customer disappointment. A sensible roadmap is: quarter one, fix SoD and access; quarters one and two, build
+      governed BI and KPIs; quarters two and three, redesign store fulfilment and pilot the app in a few stores; then
+      scale, measuring order accuracy, delivery time and margin.
+    explanation: >-
+      Examiners look for prioritisation driven by risk, accurate application of SoD and BI concepts, a reasoned rejection
+      of inappropriate RPA, and a realistic sequencing of transformation on top of trustworthy data.
+
+  - id: q23
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the strategic role of cloud ERP
+    marks: 20
+    prompt: Critically evaluate the claim that cloud ERP is now the best choice for most Ghanaian medium-sized enterprises.
+    structure:
+      - Introduction defining cloud ERP models
+      - Arguments for - cost profile, speed, upgrades, scalability
+      - Arguments against - connectivity, currency exposure, customisation limits, lock-in
+      - Security and data protection as a shared responsibility
+      - Conditions under which the claim holds
+      - Conclusion
+    rubric:
+      - criterion: Argument and balance
+        marks: 6
+        descriptor: Presents a clear, balanced judgement with conditions.
+      - criterion: Conceptual accuracy
+        marks: 6
+        descriptor: Distinguishes SaaS, private cloud, hosted and on-premise models and uses TCO reasoning correctly.
+      - criterion: Contextual application
+        marks: 5
+        descriptor: Applies the arguments to Ghanaian conditions without invented statistics.
+      - criterion: Structure and expression
+        marks: 3
+        descriptor: Logical structure, clear academic English and correct referencing.
+    modelAnswer: |
+      A strong essay defines cloud ERP using the NIST service models and distinguishes multi-tenant SaaS from private
+      cloud and hosted deployments. Arguments in favour include low upfront cost, rapid deployment, vendor-managed
+      infrastructure and continuous upgrades, which suit medium-sized firms with small IT teams. Arguments against
+      include dependence on reliable connectivity at every site, subscription pricing in foreign currency that exposes
+      firms to exchange-rate movements, restricted customisation under a clean-core model, mandatory release cycles that
+      require regression testing, and the risk of lock-in without strong data-export clauses.
+
+      The essay should stress that security and data protection are shared responsibilities: the customer still owns
+      user access, roles and SoD, and must satisfy itself that arrangements are consistent with the Data Protection Act,
+      2012 (Act 843). A TCO comparison over five and ten years, with currency sensitivity, is the right analytical tool.
+
+      A balanced conclusion might accept the claim for firms with standard processes, reliable connectivity and limited
+      IT capacity, while noting that firms with unusual core processes, weak connectivity or long planning horizons
+      should evaluate private cloud, hosted or on-premise options carefully.
+    explanation: >-
+      Examiners reward conditional, evidence-based judgements that use deployment-model distinctions and TCO reasoning
+      accurately and apply them to local conditions qualitatively.

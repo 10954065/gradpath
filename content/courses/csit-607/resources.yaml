@@ -1,0 +1,100 @@
+resources:
+  - title: Machine Learning Crash Course
+    description: Google's free, self-paced introduction to machine learning with videos, interactive visualisations and exercises on regression, classification, evaluation and neural networks.
+    provider: Google for Developers
+    url: https://developers.google.com/machine-learning/crash-course
+    category: course
+    module: machine-learning
+    difficulty: introductory
+    stage: foundation
+    accessType: free
+  - title: Google AI
+    description: Official portal for Google's AI research, products and educational resources, including material on responsible AI.
+    provider: Google
+    url: https://ai.google/
+    category: organisation
+    module: ai-foundations
+    difficulty: introductory
+    stage: foundation
+    accessType: unknown
+  - title: Google Cloud Training
+    description: Official catalogue of Google Cloud learning paths, including data analytics, machine learning and generative AI courses.
+    provider: Google Cloud
+    url: https://cloud.google.com/learn/training
+    category: course
+    module: ai-in-business
+    difficulty: intermediate
+    stage: core
+    accessType: unknown
+  - title: "IBM Think: What is artificial intelligence?"
+    description: IBM's explainer on AI definitions, types, techniques and business applications, with links to related topics such as machine learning and generative AI.
+    provider: IBM
+    url: https://www.ibm.com/think/topics/artificial-intelligence
+    category: guide
+    module: ai-foundations
+    difficulty: introductory
+    stage: foundation
+    accessType: unknown
+  - title: Hugging Face Learn
+    description: Free courses on transformers, large language models, NLP, computer vision and reinforcement learning using open models and notebooks.
+    provider: Hugging Face
+    url: https://huggingface.co/learn
+    category: course
+    module: advanced-ai
+    difficulty: intermediate
+    stage: advanced
+    accessType: unknown
+  - title: scikit-learn documentation
+    description: Official user guide and API reference for the open-source Python machine learning library, covering classification, regression, clustering and model evaluation.
+    provider: scikit-learn
+    url: https://scikit-learn.org/stable/
+    category: documentation
+    module: machine-learning
+    difficulty: intermediate
+    stage: core
+    accessType: free
+  - title: Kaggle Learn
+    description: Short, hands-on micro-courses in Python, machine learning, data visualisation, feature engineering and related topics, run in browser notebooks.
+    provider: Kaggle
+    url: https://www.kaggle.com/learn
+    category: course
+    module: machine-learning
+    difficulty: introductory
+    stage: foundation
+    accessType: unknown
+  - title: Elements of AI
+    description: Free online introduction to what AI is, what it can and cannot do, and how it affects society, designed for non-specialists.
+    provider: University of Helsinki and MinnaLearn
+    url: https://www.elementsofai.com/
+    category: course
+    module: ai-foundations
+    difficulty: introductory
+    stage: foundation
+    accessType: unknown
+  - title: "Deep Learning (Goodfellow, Bengio and Courville)"
+    description: Online edition of the standard textbook on deep learning, covering neural networks, optimisation, convolutional and sequence models.
+    provider: MIT Press / authors
+    url: https://www.deeplearningbook.org/
+    category: reference
+    module: advanced-ai
+    difficulty: advanced
+    stage: advanced
+    accessType: unknown
+  - title: "Forecasting: Principles and Practice"
+    description: Online textbook by Hyndman and Athanasopoulos on forecasting methods including exponential smoothing, ARIMA and forecast evaluation.
+    provider: OTexts
+    url: https://otexts.com/fpp3/
+    category: reference
+    module: ai-in-business
+    difficulty: intermediate
+    stage: core
+    accessType: unknown
+  - title: An Introduction to Statistical Learning
+    description: Companion website for the textbook by James, Witten, Hastie and Tibshirani, covering regression, classification, resampling and clustering.
+    provider: Statlearning (book authors)
+    url: https://www.statlearning.com/
+    category: reference
+    module: machine-learning
+    difficulty: intermediate
+    stage: core
+    accessType: unknown

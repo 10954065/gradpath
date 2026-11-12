@@ -1,0 +1,224 @@
+module: data-and-privacy
+questions:
+  # ---- privacy-consent-and-data-protection ----
+  - id: q01
+    lesson: privacy-consent-and-data-protection
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Recall Westin's definition of privacy
+    prompt: Alan Westin's account of privacy in Privacy and Freedom (1967) is best summarised as
+    options:
+      - the right to be let alone, protecting people from photographers and newspapers
+      - the claim of individuals, groups or institutions to determine when, how and to what extent information about them is communicated to others
+      - the appropriateness of information flows to the norms of their context
+      - the legal ownership of personal data as property
+    answer: 1
+    explanation: Westin's is a control theory of informational privacy. The right to be let alone comes from Warren and Brandeis (1890), contextual integrity is Nissenbaum's, and property ownership of data is a separate model that most data protection laws do not adopt.
+  - id: q02
+    lesson: privacy-consent-and-data-protection
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match the parameters of contextual integrity to examples
+    prompt: A patient tells a doctor about symptoms in confidence. Match each contextual integrity parameter to its value in this flow.
+    pairs:
+      - left: Sender
+        right: The patient
+      - left: Recipient
+        right: The doctor
+      - left: Subject
+        right: The person whose health is described
+      - left: Information type
+        right: Symptoms and medical history
+      - left: Transmission principle
+        right: Confidentiality within the clinical relationship
+    explanation: Contextual integrity analyses flows by these five parameters. A later flow, such as the clinic selling the symptoms to an advertiser, changes the recipient and transmission principle and breaches healthcare norms.
+  - id: q03
+    lesson: privacy-consent-and-data-protection
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Understand why aggregating public information can violate privacy
+    prompt: Under contextual integrity, compiling a person's publicly visible social media posts into a detailed profile for sale to employers cannot violate privacy because the information is already public.
+    answer: false
+    explanation: Contextual integrity rejects a simple public/private divide. The new flow to employers, for sale, does not respect the norms under which the posts were shared among friends or followers, so it can be a privacy violation even though each item was visible.
+  - id: q04
+    lesson: privacy-consent-and-data-protection
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Name the body established by Act 843
+    prompt: Which Ghanaian body, established under the Data Protection Act, 2012 (Act 843), is responsible for implementing the Act and maintaining the register of data controllers?
+    answers: [Data Protection Commission, DPC, the Data Protection Commission]
+    explanation: The Data Protection Commission implements Act 843, registers data controllers, handles complaints and promotes compliance. Organisations should consult its current guidance directly.
+  - id: q05
+    lesson: privacy-consent-and-data-protection
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply purpose specification and compatibility to a data-sharing plan
+    scenario: |
+      Illustrative scenario. A fictional Ghanaian pharmacy chain collects customers' names, phone numbers and purchase histories to run a loyalty points scheme. The marketing director proposes selling the purchase histories to a life insurance company.
+    prompt: Which data protection principle is most directly engaged, and what is the likely assessment?
+    options:
+      - Quality of information; the sale is acceptable if the data are accurate
+      - Compatibility of further processing with the original purpose; selling health-revealing purchase data to an insurer is incompatible with a loyalty scheme and may involve special personal data
+      - Openness; the sale is acceptable if mentioned anywhere in the terms and conditions
+      - Security safeguards; the sale is acceptable if the file is encrypted in transit
+    answer: 1
+    explanation: The core problem is a new purpose incompatible with the context of collection. Pharmacy purchases can reveal health conditions, which attract extra protection. Accuracy, a buried mention in terms or encryption do not cure an incompatible purpose.
+  - id: q06
+    lesson: privacy-consent-and-data-protection
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the consent failure in the Cambridge Analytica case
+    prompt: Which feature of the Facebook–Cambridge Analytica case most clearly shows the limits of individual consent?
+    options:
+      - Users who installed the quiz app agreed to a long privacy policy
+      - The app collected data from the friends of users who installed it, people who had not themselves agreed to the collection
+      - Cambridge Analytica ceased operations in 2018
+      - The UK regulator imposed a fine
+    answer: 1
+    explanation: One person's consent exposed many others who never agreed, illustrating that consent is individual while data is relational. The other options are facts about the case but do not demonstrate the limits of consent.
+  - id: q07
+    lesson: privacy-consent-and-data-protection
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate the claim that consent is the only lawful basis for processing
+    prompt: Under the GDPR, consent is only one of several lawful bases for processing personal data.
+    answer: true
+    explanation: The GDPR recognises six lawful bases, namely consent, contract, legal obligation, vital interests, public task and legitimate interests. Act 843 also recognises grounds other than consent. Relying on consent where it cannot be freely given, as in employment, is often inappropriate.
+
+  # ---- data-ownership-surveillance-and-confidentiality ----
+  - id: q08
+    lesson: data-ownership-surveillance-and-confidentiality
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain why the property model fits personal data poorly
+    prompt: Which is the strongest objection to treating personal data as property that individuals can sell?
+    options:
+      - Data cannot be stored digitally
+      - Personal data is often relational and people under financial pressure might sell away privacy cheaply, deepening inequality
+      - Property rights cannot exist in any intangible thing
+      - Companies would refuse to buy data
+    answer: 1
+    explanation: Messages, photos and genetic data involve several people, and markets can pressure the poor into selling privacy. Intangible property such as copyright does exist, so the third option is false, and the others are irrelevant or implausible.
+  - id: q09
+    lesson: data-ownership-surveillance-and-confidentiality
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match surveillance theories to thinkers
+    prompt: Match each concept to the thinker most associated with it.
+    pairs:
+      - left: The panopticon as an architectural design for a prison
+        right: Jeremy Bentham
+      - left: The panopticon as a metaphor for disciplinary power
+        right: Michel Foucault
+      - left: Surveillance capitalism
+        right: Shoshana Zuboff
+      - left: Contextual integrity
+        right: Helen Nissenbaum
+    explanation: Bentham designed the panopticon; Foucault used it in Discipline and Punish to explain self-regulation under possible observation; Zuboff analysed the extraction of behavioural data for profit; Nissenbaum developed contextual integrity.
+  - id: q10
+    lesson: data-ownership-surveillance-and-confidentiality
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish confidentiality from privacy
+    prompt: Confidentiality is a duty owed by a person entrusted with information, whereas privacy is an interest of the person the information concerns.
+    answer: true
+    explanation: The distinction matters for IT staff. A database administrator owes a duty of confidentiality because of their role and access, while the customer has a privacy interest in their data. Both principles appear separately in the ACM Code (2018).
+  - id: q11
+    lesson: data-ownership-surveillance-and-confidentiality
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply confidentiality duties to curiosity access
+    scenario: |
+      Illustrative scenario. A system administrator at a fictional Accra bank has privileged access to all customer accounts. A colleague asks her to check the account balance of a well-known politician "just out of interest".
+    prompt: What should she do, and which control would best support this behaviour organisationally?
+    options:
+      - Check the balance but tell nobody, since her access is authorised
+      - Refuse, because access without a role-based need breaches confidentiality, and the bank should use audit logging with regular access reviews
+      - Check the balance and report it to the media if it seems unusual
+      - Refuse, but only because politicians have special rights not shared by other customers
+    answer: 1
+    explanation: Technical access is not the same as authorised purpose. Need-to-know access, audit logs and access reviews make curiosity access detectable and deter it. All customers, not only politicians, are owed confidentiality, and disclosure to media is not a justified response here.
+  - id: q12
+    lesson: data-ownership-surveillance-and-confidentiality
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Name the effect by which surveillance discourages lawful behaviour
+    prompt: What term describes the discouragement of lawful expression or association caused by people's awareness that they may be watched?
+    answers: [chilling effect, chilling effects, the chilling effect]
+    explanation: Chilling effects explain why surveillance can harm democracy and freedom even when no data are misused, because people change their behaviour simply in anticipation of observation.
+  - id: q13
+    lesson: data-ownership-surveillance-and-confidentiality
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse state surveillance against human rights standards
+    prompt: A proposed national system would automatically retain the location and call records of every mobile subscriber for ten years, accessible to any security agency without a warrant. Which element of the surveillance checklist is most clearly failed?
+    options:
+      - Legitimate aim, because security is never a legitimate aim
+      - Necessity, proportionality and oversight, because indiscriminate long-term retention without independent authorisation is not targeted or accountable
+      - Security, because location data cannot be encrypted
+      - None, because metadata reveals nothing about individuals
+    answer: 1
+    explanation: Security can be a legitimate aim, but blanket retention of everyone's data for a long period, accessible without independent authorisation, fails necessity, proportionality and oversight. Metadata can reveal relationships and habits, and encryption is possible, so the other options are wrong.
+  - id: q14
+    lesson: data-ownership-surveillance-and-confidentiality
+    type: true_false
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate whether confidentiality is absolute
+    prompt: The ACM Code (2018) treats confidentiality as an absolute duty that can never be overridden.
+    answer: false
+    explanation: The ACM Code recognises that confidentiality may yield to legal requirements and to other principles of the Code, such as avoiding serious harm. Professionals must weigh these duties carefully and normally use internal channels before any external disclosure.
+
+  # ---- module-level ----
+  - id: q15
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a data-driven product against privacy theory, data protection principles and surveillance ethics
+    prompt: Analyse the privacy, data protection, ownership, surveillance and confidentiality issues in the case and recommend how SafeRide should redesign its product. Note that any legal analysis is educational, not legal advice.
+    marks: 25
+    case: |
+      Illustrative scenario. SafeRide, a fictional Ghanaian ride-hailing start-up, collects passengers' Ghana Card numbers, continuous location (even when the app is closed), contact lists and in-car audio recordings "for safety". Drivers' faces are scanned at the start of each shift, and their routes, speeds and break times are recorded. SafeRide's terms state that "all data generated on the platform belongs to SafeRide". The company plans to share location histories with advertisers and to give police direct, unlogged access to all trip data on request. A support agent recently posted screenshots of a celebrity's trip history in a staff chat group.
+    structure:
+      - Identification of stakeholders and data flows
+      - Privacy analysis using Westin and contextual integrity
+      - Assessment against data protection principles reflected in Act 843, with high-level GDPR comparison where relevant
+      - Evaluation of the ownership claim using property, rights and stewardship models
+      - Surveillance analysis for passengers, drivers and police access using the checklist
+      - Confidentiality breach by the support agent and organisational controls
+      - Prioritised recommendations with justification
+    rubric:
+      - criterion: Privacy theory
+        marks: 5
+        descriptor: Applies control and contextual integrity accurately to at least two flows, such as advertiser sharing and audio recording
+      - criterion: Data protection principles
+        marks: 6
+        descriptor: Assesses purpose specification, minimisation or lawfulness, compatibility, openness, security and special data without inventing legal detail
+      - criterion: Ownership and surveillance
+        marks: 6
+        descriptor: Critiques the ownership clause and evaluates passenger, driver and police surveillance using legality, necessity, proportionality and oversight
+      - criterion: Confidentiality
+        marks: 3
+        descriptor: Identifies the agent's breach and proposes access controls, logging, training and discipline
+      - criterion: Recommendations
+        marks: 5
+        descriptor: Concrete, prioritised redesign that preserves legitimate safety aims
+    modelAnswer: |
+      A strong answer acknowledges SafeRide's legitimate safety aims before testing each data practice. Collecting Ghana Card numbers may be justified for driver vetting but is hard to justify for every passenger; continuous location when the app is closed and contact lists are not necessary for providing rides. In-car audio recording is highly intrusive and may capture special personal data, so it should at most be an opt-in, trip-specific safety feature with strict retention. Under contextual integrity, sharing location histories with advertisers breaches the norms of transport, where location is shared to complete a journey, and fails the compatibility and purpose specification principles.
+      The ownership clause should be critiqued. Personal data is relational and data protection law grants inalienable rights rather than allowing a company to claim ownership; a stewardship model, in which SafeRide holds data in trust, is more defensible. For drivers, facial scans and continuous tracking should be tested for proportionality, with transparency, limited retention and human review of any disciplinary use. Unlogged police access fails legality, oversight and remedy; requests should require a lawful basis, be logged, be limited in scope and be reviewed by a responsible officer.
+      The support agent breached confidentiality and the passenger's privacy. Controls should include role-based access, audit logs, alerts on unusual access, training and disciplinary consequences, as well as consideration of notification duties.
+      Recommendations should be prioritised: stop advertiser sharing and unlogged police access immediately, minimise collection, rewrite the privacy notice, register and engage with the Data Protection Commission as required, and implement confidentiality controls. Answers should note that legal conclusions require professional advice.
+    explanation: Examiners look for accurate theory, careful application of principles without invented legal detail, a critique of data ownership claims, structured surveillance analysis and prioritised, practical recommendations.

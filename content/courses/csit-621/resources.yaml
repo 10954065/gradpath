@@ -1,0 +1,82 @@
+resources:
+  - title: Google Cloud Learn
+    description: Explainers on cloud computing, data, AI and related emerging technologies, useful for understanding service and deployment models.
+    provider: Google Cloud
+    url: https://cloud.google.com/learn
+    category: guide
+    module: cloud-and-edge-computing
+    difficulty: introductory
+    stage: foundation
+    accessType: unknown
+  - title: IBM Think
+    description: IBM's hub of articles and explainers on emerging technologies including IoT, blockchain, digital twins, edge computing and AI.
+    provider: IBM
+    url: https://www.ibm.com/think
+    category: guide
+    module: emerging-technology-foundations
+    difficulty: introductory
+    stage: foundation
+    accessType: unknown
+  - title: International Telecommunication Union
+    description: The United Nations agency for information and communication technologies, publishing standards and reports relevant to IoT, connectivity and digital infrastructure.
+    provider: ITU
+    url: https://www.itu.int/
+    category: organisation
+    module: internet-of-things
+    difficulty: intermediate
+    stage: core
+    accessType: unknown
+  - title: Ethereum Developer Documentation
+    description: Official documentation covering blocks, consensus, proof of stake, smart contracts, the EVM, gas and oracles.
+    provider: Ethereum.org
+    url: https://ethereum.org/developers/docs/
+    category: documentation
+    module: blockchain-and-distributed-technology
+    difficulty: intermediate
+    stage: core
+    accessType: unknown
+  - title: Microsoft Learn
+    description: Free learning paths and documentation on cloud concepts, hybrid and edge computing, IoT solutions, mixed reality and digital twins.
+    provider: Microsoft
+    url: https://learn.microsoft.com/
+    category: course
+    module: immersive-technologies
+    difficulty: introductory
+    stage: core
+    accessType: unknown
+  - title: NIST SP 800-145 The NIST Definition of Cloud Computing
+    description: The reference definition of cloud computing by Mell and Grance (2011), setting out the five essential characteristics, three service models and four deployment models.
+    provider: National Institute of Standards and Technology
+    url: https://csrc.nist.gov/pubs/sp/800/145/final
+    category: standard
+    module: cloud-and-edge-computing
+    difficulty: introductory
+    stage: foundation
+    accessType: unknown
+  - title: AWS Skill Builder
+    description: Amazon Web Services' official training portal, including introductory cloud practitioner material on service models and shared responsibility.
+    provider: Amazon Web Services
+    url: https://skillbuilder.aws/
+    category: course
+    module: cloud-and-edge-computing
+    difficulty: introductory
+    stage: core
+    accessType: unknown
+  - title: LF Decentralized Trust (Hyperledger Foundation)
+    description: Home of open-source enterprise distributed ledger projects such as Hyperledger Fabric, with documentation and learning resources.
+    provider: Linux Foundation Decentralized Trust
+    url: https://www.lfdecentralizedtrust.org/
+    category: organisation
+    module: blockchain-and-distributed-technology
+    difficulty: intermediate
+    stage: core
+    accessType: unknown
+  - title: Bitcoin White Paper
+    description: Satoshi Nakamoto's 2008 paper introducing Bitcoin and proof-of-work consensus for a peer-to-peer electronic cash system.
+    provider: Bitcoin.org
+    url: https://bitcoin.org/bitcoin.pdf
+    category: reference
+    module: blockchain-and-distributed-technology
+    difficulty: advanced
+    stage: advanced
+    accessType: free

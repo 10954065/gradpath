@@ -1,0 +1,41 @@
+module: ai-ethics
+cards:
+  - lesson: ai-ethics-bias-and-discrimination
+    front: Name five reasons AI raises distinctive ethical problems compared with ordinary software.
+    back: Scale, opacity, apparent objectivity, learning from historical (possibly discriminatory) data, and diffuse responsibility across many contributors.
+  - lesson: ai-ethics-bias-and-discrimination
+    front: What is proxy discrimination?
+    back: Disadvantage produced when a model relies on features correlated with a protected characteristic, such as location standing in for ethnicity or income, even though the characteristic itself is excluded.
+  - lesson: ai-ethics-bias-and-discrimination
+    front: Why is the choice of target variable an ethical decision?
+    back: What the model predicts embeds value judgements; for example, "past repayment" reflects who was previously offered credit, so it may not measure true creditworthiness fairly.
+  - lesson: ai-ethics-bias-and-discrimination
+    front: What did the COMPAS debate reveal about fairness metrics?
+    back: ProPublica found unequal false-positive rates while the developer pointed to equal calibration; both can hold, because these criteria generally conflict when base rates differ.
+  - lesson: ai-ethics-bias-and-discrimination
+    front: Distinguish allocative from representational harm.
+    back: Allocative harm withholds resources or opportunities, such as loans or jobs; representational harm demeans, stereotypes or erases groups, as in biased search results.
+  - lesson: ai-ethics-bias-and-discrimination
+    front: What is the core practice for detecting algorithmic bias before deployment?
+    back: Disaggregated testing — reporting accuracy and error rates separately for each relevant group (including intersectional groups) rather than only overall.
+  - lesson: transparency-accountability-and-oversight
+    front: How do transparency and explainability differ?
+    back: Transparency is openness about AI use, purpose, data, limits and governance at system level; explainability gives understandable reasons for a particular decision to the person affected.
+  - lesson: transparency-accountability-and-oversight
+    front: What makes human oversight meaningful rather than symbolic?
+    back: Reviewers have enough time, relevant information, authority to override, training about automation bias and protection when they disagree with the system.
+  - lesson: transparency-accountability-and-oversight
+    front: What are the four core values of the UNESCO Recommendation on the Ethics of AI?
+    back: Human rights and human dignity; living in peaceful, just and interconnected societies; diversity and inclusiveness; environment and ecosystem flourishing.
+  - lesson: transparency-accountability-and-oversight
+    front: What does the UNESCO principle of proportionality and do no harm require?
+    back: AI use should not go beyond what is necessary to achieve a legitimate aim, and risk assessment should be used to prevent harm.
+  - lesson: transparency-accountability-and-oversight
+    front: How can an organisation overcome the problem of many hands?
+    back: Name a system owner and accountable executive, keep documentation and audit trails, allocate responsibilities in vendor contracts, and provide redress and independent audit.
+  - lesson: transparency-accountability-and-oversight
+    front: Why are post-hoc explanation methods such as SHAP or LIME not a complete answer?
+    back: They approximate model behaviour and can be incomplete or misleading, so high-stakes uses may justify inherently interpretable models where performance is comparable.
+  - lesson: transparency-accountability-and-oversight
+    front: What is automation bias?
+    back: The tendency of people to over-rely on automated recommendations, accepting them even when they are wrong.

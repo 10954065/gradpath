@@ -1,0 +1,56 @@
+module: research-problem-development
+cards:
+  - lesson: identifying-problems-and-background
+    front: How does a research problem differ from a research topic?
+    back: A topic is a broad area of interest; a problem specifies a gap between an expected and an actual state, with consequences that justify investigation.
+  - lesson: identifying-problems-and-background
+    front: What three elements make up a well-formed research problem?
+    back: The expected or desired state, the actual state supported by evidence, and the consequence of the gap for people, organisations or theory.
+  - lesson: identifying-problems-and-background
+    front: Contrast gap-spotting with problematisation.
+    back: Gap-spotting finds neglected or incomplete areas in the literature; problematisation challenges the assumptions on which existing research rests, often producing more original questions.
+  - lesson: identifying-problems-and-background
+    front: What are the stages of a funnel-structured background?
+    back: Broad context, national context, specific setting, evidence of the issue, what is known and unknown, then a transition into the problem.
+  - lesson: identifying-problems-and-background
+    front: Why is "not yet studied in Ghana" an incomplete justification?
+    back: The researcher must also explain why the context could produce different results or why the knowledge is needed for theory, practice or policy.
+  - lesson: identifying-problems-and-background
+    front: What does the adapted FINER checklist test?
+    back: Whether a candidate problem is feasible, interesting, novel, ethical, relevant and researchable within MSc time and resources.
+  - lesson: problem-statements-and-scope
+    front: What five components should a problem statement contain?
+    back: The ideal or expected state, current reality with evidence, consequences, the knowledge gap, and the purpose of the study.
+  - lesson: problem-statements-and-scope
+    front: Why must a problem statement be neutral?
+    back: Presuming the answer ("this study will prove…") signals bias. A neutral statement specifies what will be examined, not what will be found.
+  - lesson: problem-statements-and-scope
+    front: What is the difference between a delimitation and a limitation?
+    back: A delimitation is a boundary the researcher deliberately chooses and justifies; a limitation is a constraint, often outside the researcher's control, that may affect findings.
+  - lesson: problem-statements-and-scope
+    front: What four dimensions usually define a study's scope?
+    back: Content (variables or themes), geography, population or unit of analysis, and time period.
+  - lesson: problem-statements-and-scope
+    front: How should a limitation be written?
+    back: Name the constraint, explain its likely effect on the findings or their interpretation, and describe how it was mitigated.
+  - lesson: problem-statements-and-scope
+    front: What should you do if reliable statistics are unavailable for your problem statement?
+    back: Use a careful qualitative statement supported by credible sources rather than inventing or repeating unverified figures.
+  - lesson: objectives-questions-and-hypotheses
+    front: Distinguish the research aim from research objectives.
+    back: The aim is one broad statement of overall purpose; objectives are specific, measurable steps that together achieve the aim.
+  - lesson: objectives-questions-and-hypotheses
+    front: Why is "to distribute questionnaires" not a research objective?
+    back: It describes a method of data collection, not the knowledge the study will produce.
+  - lesson: objectives-questions-and-hypotheses
+    front: What makes a good hypothesis?
+    back: It is grounded in theory or evidence, testable with available data, specific about variables and direction, and falsifiable.
+  - lesson: objectives-questions-and-hypotheses
+    front: State the difference between H0 and H1.
+    back: H0 states no relationship or difference; H1 states that a relationship or difference exists. Statistical tests assess whether H0 can be rejected.
+  - lesson: objectives-questions-and-hypotheses
+    front: Why do qualitative studies usually avoid hypotheses?
+    back: They aim to build understanding inductively through open "how" and "what" questions rather than to test predictions derived from theory.
+  - lesson: objectives-questions-and-hypotheses
+    front: What does a consistency matrix check?
+    back: That every objective has a matching question, any hypotheses use measured variables, and each has an appropriate data source and analysis technique.

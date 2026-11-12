@@ -1,0 +1,59 @@
+module: research-quality-and-ethics
+cards:
+  # validity-reliability-and-trustworthiness
+  - lesson: validity-reliability-and-trustworthiness
+    front: Why is reliability described as necessary but not sufficient for validity?
+    back: A measure must be consistent before it can be accurate, but a consistent measure can still be consistently wrong (for example a scale that always reads 3 kg heavy), so validity needs separate evidence.
+  - lesson: validity-reliability-and-trustworthiness
+    front: What is the difference between internal validity and internal consistency?
+    back: Internal validity concerns whether a study can rule out alternative explanations for a causal claim; internal consistency is a reliability property showing whether items in a scale measure the same thing (often via Cronbach's alpha).
+  - lesson: validity-reliability-and-trustworthiness
+    front: What do convergent and discriminant validity each show?
+    back: Convergent validity shows items for one construct relate strongly to each other; discriminant validity shows the construct is empirically distinct from other constructs (for example via the Fornell–Larcker criterion).
+  - lesson: validity-reliability-and-trustworthiness
+    front: Name Lincoln and Guba's four trustworthiness criteria with one strategy each.
+    back: Credibility (triangulation, member checking); transferability (thick description); dependability (audit trail); confirmability (reflexivity and data-grounded quotations).
+  - lesson: validity-reliability-and-trustworthiness
+    front: Why must you re-test reliability and validity when adapting a published instrument?
+    back: These are properties of scores in a particular sample and context; translation, adaptation and a new population can change how items behave.
+  - lesson: validity-reliability-and-trustworthiness
+    front: Who carries responsibility for judging transferability in qualitative research?
+    back: The reader, using the researcher's thick description of context, participants and setting to decide whether findings plausibly apply elsewhere.
+  # research-bias
+  - lesson: research-bias
+    front: Why does a bigger sample not fix bias?
+    back: Bias is systematic error pushing results in one direction; more data reduces random error but produces a more precise wrong answer if the bias remains.
+  - lesson: research-bias
+    front: Distinguish sampling bias from response bias.
+    back: Sampling bias concerns who ends up in the study (coverage, self-selection, survivorship, non-response); response bias concerns how participants answer (social desirability, acquiescence, recall).
+  - lesson: research-bias
+    front: What is common method bias and how is it best reduced?
+    back: Inflated relationships caused by measuring predictors and outcomes with the same method, source and occasion; best reduced procedurally, for example by separating measures in time or source and protecting anonymity.
+  - lesson: research-bias
+    front: How does confirmation bias show up in a dissertation?
+    back: Selective literature, leading questions, coding ambiguous data in the expected direction, and reporting only analyses that support the hypothesis.
+  - lesson: research-bias
+    front: What does the 1936 Literary Digest poll teach researchers?
+    back: An enormous sample drawn from a biased frame with self-selected responses still predicted the wrong winner; how you sample matters more than how many you sample.
+  - lesson: research-bias
+    front: What is reflexivity and why is it used?
+    back: The documented examination of how the researcher's background and role shape the research; it makes researcher influence visible and accountable rather than pretending it is absent.
+  # ethics-consent-confidentiality-and-approval
+  - lesson: ethics-consent-confidentiality-and-approval
+    front: What are the four elements of valid informed consent?
+    back: Disclosure of adequate information, comprehension, voluntariness (no coercion or undue influence) and capacity to decide.
+  - lesson: ethics-consent-confidentiality-and-approval
+    front: Distinguish anonymity, confidentiality and pseudonymisation.
+    back: Anonymity means no one can link data to identity; confidentiality means identities are known but protected; pseudonymisation replaces identifiers with codes while a key is held separately, so data remain personal data.
+  - lesson: ethics-consent-confidentiality-and-approval
+    front: List the data protection principles in Ghana's Data Protection Act, 2012 (Act 843).
+    back: Accountability, lawfulness of processing, specification of purpose, compatibility of further processing with purpose of collection, quality of information, openness, data security safeguards, and data subject participation.
+  - lesson: ethics-consent-confidentiality-and-approval
+    front: What is deductive disclosure?
+    back: Identifying a participant indirectly from contextual details (such as role, unit and experience) even when no name is reported, a particular risk in small organisations.
+  - lesson: ethics-consent-confidentiality-and-approval
+    front: When must ethical approval and gatekeeper permission be obtained?
+    back: Before any data collection begins, following your own institution's process and any sector or organisational requirements; significant design changes usually need further review.
+  - lesson: ethics-consent-confidentiality-and-approval
+    front: Why is accepting a platform's terms of service not the same as research consent?
+    back: General terms do not give participants specific information about a study's purpose, risks and right to withdraw, as criticism of the 2014 Facebook emotional contagion experiment showed.

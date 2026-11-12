@@ -1,0 +1,47 @@
+module: internet-of-things
+cards:
+  - lesson: iot-architecture-sensors-and-connectivity
+    front: What are the three layers of the basic IoT architecture, and what do five-layer models add?
+    back: Perception (sensors and actuators), network (connectivity and gateways) and application (user services). Five-layer models add a processing (middleware) layer and a business layer.
+  - lesson: iot-architecture-sensors-and-connectivity
+    front: What is the difference between a sensor and an actuator?
+    back: A sensor measures a physical quantity and converts it into data; an actuator acts on the physical world in response to a command, such as opening a valve.
+  - lesson: iot-architecture-sensors-and-connectivity
+    front: What fundamental trade-off governs IoT connectivity choice?
+    back: Range, data rate and battery life cannot all be maximised together; LPWAN gives long range and battery life for small data, while Wi-Fi and cellular broadband give high data rates at higher power.
+  - lesson: iot-architecture-sensors-and-connectivity
+    front: When would you choose LoRaWAN over NB-IoT?
+    back: When operator coverage is absent or unreliable and the organisation wants to own its network, as LoRaWAN uses unlicensed spectrum with private gateways; NB-IoT depends on licensed operator networks.
+  - lesson: iot-architecture-sensors-and-connectivity
+    front: Why do maintenance visits often dominate IoT total cost of ownership?
+    back: Power-hungry connectivity shortens battery life, multiplying field visits whose labour and transport costs exceed device prices, especially for dispersed rural deployments.
+  - lesson: iot-security
+    front: Give four reasons IoT devices are harder to secure than laptops or servers.
+    back: Constrained resources, large and heterogeneous fleets, long lifetimes beyond vendor support, physical exposure, weak defaults, shadow IoT and cyber-physical consequences.
+  - lesson: iot-security
+    front: What were the root causes of the Mirai botnet's spread?
+    back: Exposed Telnet services and unchanged factory default credentials on cameras, video recorders and routers, which Mirai tried from a short list.
+  - lesson: iot-security
+    front: Why is network segmentation a core IoT control?
+    back: It restricts each device to required communications, limiting lateral movement so that a compromised device cannot reach critical systems.
+  - lesson: iot-security
+    front: What security tasks belong to the decommissioning stage of the device lifecycle?
+    back: Revoke credentials and certificates, wipe stored data, update the asset inventory and dispose of hardware securely.
+  - lesson: iot-security
+    front: Name three IoT security baselines or reference documents.
+    back: ETSI EN 303 645 (consumer IoT baseline), NIST IR 8259 (manufacturer activities) and the OWASP IoT Top 10 (2018).
+  - lesson: industrial-iot-and-smart-systems
+    front: What is IT/OT convergence and why is it risky?
+    back: Connecting operational technology (PLCs, SCADA) to IT networks and the cloud; OT devices built for isolated networks may lack authentication and encryption, and engineering and IT cultures differ.
+  - lesson: industrial-iot-and-smart-systems
+    front: When is predictive maintenance justified?
+    back: When failure consequences are high, developing failures are detectable early (a usable P-F interval) and sufficient data exists to build reliable models; otherwise simpler strategies may be better.
+  - lesson: industrial-iot-and-smart-systems
+    front: What is the P-F interval?
+    back: The time between the point a potential failure becomes detectable and the point of functional failure; early-warning sensors lengthen the usable interval for planned repairs.
+  - lesson: industrial-iot-and-smart-systems
+    front: What four capabilities of smart, connected products did Porter and Heppelmann (2014) describe?
+    back: Monitoring, control, optimisation and autonomy, each building on the previous one.
+  - lesson: industrial-iot-and-smart-systems
+    front: What does the Rolls-Royce flying-hours model illustrate?
+    back: Servitisation - IIoT engine data allows selling availability rather than products, shifting reliability risk to the supplier and aligning incentives with uptime.

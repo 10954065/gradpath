@@ -1,0 +1,457 @@
+module: enterprise-systems-foundations
+questions:
+  # ---------- Lesson 1: enterprise-and-business-information-systems ----------
+  - id: q01
+    lesson: enterprise-and-business-information-systems
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Identify the defining characteristic of an enterprise system
+    prompt: Which feature most clearly distinguishes an enterprise system from a collection of departmental applications?
+    options:
+      - It is always hosted in the cloud
+      - It integrates cross-functional processes on a shared database
+      - It is written from scratch for each organisation
+      - It is used only by senior executives
+    answer: 1
+    explanation: >
+      The defining feature of an enterprise system is integration: modules for different functions share one
+      database and support processes that cross departmental boundaries. Hosting model is irrelevant (enterprise
+      systems can be on-premise or cloud), they are packaged and configured rather than written from scratch, and
+      they are used at every organisational level, mostly by operational staff.
+  - id: q02
+    lesson: enterprise-and-business-information-systems
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Recognise the organisational causes of functional silos
+    prompt: Functional silos are caused only by incompatible software and disappear once a single ERP suite is installed.
+    answer: false
+    explanation: >
+      Silos are also organisational: departmental budgets, performance targets and habits encourage functions to
+      guard their own data and processes. An ERP removes technical barriers, but if incentives and working practices
+      do not change, staff will continue to keep private spreadsheets and work in silo fashion.
+  - id: q03
+    lesson: enterprise-and-business-information-systems
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Match business information system types to their typical outputs
+    prompt: Match each type of business information system to its most typical output.
+    pairs:
+      - left: Transaction processing system
+        right: Receipts and updated operational records
+      - left: Management information system
+        right: Periodic summary and exception reports
+      - left: Decision support system
+        right: What-if scenario analyses and forecasts
+      - left: Executive dashboard
+        right: A small set of key indicators with drill-down
+    explanation: >
+      The classification follows organisational level and decision type. TPS records day-to-day events; MIS
+      summarises them for middle managers; DSS adds models for semi-structured decisions; executive dashboards
+      aggregate the most important indicators for senior leaders. All depend on accurate TPS data.
+  - id: q04
+    lesson: enterprise-and-business-information-systems
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Diagnose silo symptoms in an organisation
+    scenario: |
+      Illustrative scenario. A Kumasi building-materials wholesaler finds that its sales and finance teams present
+      different monthly revenue figures at management meetings. Sales uses an order spreadsheet; finance uses an
+      accounting package into which invoices are re-keyed at month end.
+    prompt: What is the most likely root cause of the conflicting figures?
+    options:
+      - The accounting package calculates VAT incorrectly
+      - Sales staff are deliberately inflating their figures
+      - Duplicate, separately maintained data with manual re-keying between silos
+      - The managing director has not set clear sales targets
+    answer: 2
+    explanation: >
+      Two systems holding separately maintained versions of the same transactions, linked only by manual re-keying,
+      will drift apart through timing differences, omissions and keying errors. That is a classic silo symptom. There
+      is no evidence of VAT errors or dishonesty, and target-setting does not explain why two records of the same
+      sales differ.
+  - id: q05
+    lesson: enterprise-and-business-information-systems
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for one authoritative version of each data item
+    prompt: What phrase describes the principle that every data item has one authoritative version relied upon by all users?
+    answers: [single source of truth, single version of the truth, one version of the truth]
+    explanation: >
+      A single source of truth means that, for example, a customer's address is maintained in one place and every
+      system reads that version. Enterprise systems pursue this through a shared database and master data management.
+  - id: q06
+    lesson: enterprise-and-business-information-systems
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse Davenport's argument about enterprise systems and strategy
+    prompt: Which statement best captures Davenport's (1998) central warning about enterprise systems?
+    options:
+      - They are too expensive for any organisation except multinationals
+      - They embody business logic that can shape strategy and organisation unless managers decide their direction first
+      - They should always be customised heavily to fit existing processes
+      - They make management reporting unnecessary
+    answer: 1
+    explanation: >
+      Davenport argued that enterprise systems impose their own logic on strategy, organisation and culture, so
+      managers must decide what kind of company they want to be before configuring the system. Heavy customisation is
+      one possible response, not his recommendation; cost and reporting are not the core of his argument.
+  - id: q07
+    lesson: enterprise-and-business-information-systems
+    type: true_false
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the lesson of the FoxMeyer case
+    prompt: The main lesson of the FoxMeyer case is that integration magnifies both benefits and risks, so scope, capacity and business expectations must be tested before go-live.
+    answer: true
+    explanation: >
+      FoxMeyer combined an SAP R/3 implementation with warehouse automation and relied on the system working at high
+      volumes to justify low-margin contracts. The case is not evidence that ERP cannot work; rather, it shows that when
+      every function depends on one integrated system, untested capacity and over-ambitious scope can harm the whole
+      enterprise.
+
+  # ---------- Lesson 2: organisational-information-flows ----------
+  - id: q08
+    lesson: organisational-information-flows
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Classify information flows by direction
+    prompt: A delivery note passed from the warehouse to the accounts team so that an invoice can be raised is an example of which flow?
+    options:
+      - Vertical upward flow
+      - Vertical downward flow
+      - Horizontal flow
+      - External flow
+    answer: 2
+    explanation: >
+      The warehouse and accounts are functions at a similar level exchanging information to complete a cross-functional
+      process, so this is a horizontal flow. Upward flows carry reports to management, downward flows carry
+      instructions and targets, and external flows cross the organisation's boundary.
+  - id: q09
+    lesson: organisational-information-flows
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Recall the stages of the transaction processing cycle
+    prompt: Match each stage of the transaction processing cycle to the activity it involves.
+    pairs:
+      - left: Data capture
+        right: Scanning a barcode at the till
+      - left: Validation
+        right: Checking the product code exists in master data
+      - left: Processing
+        right: Reducing stock and calculating VAT
+      - left: Storage
+        right: Writing records and the audit trail to the database
+      - left: Output
+        right: Printing or sending the customer receipt
+    explanation: >
+      The TPS cycle runs capture, validate, process, store, output and then supports inquiry and reporting. Controls
+      operate at every stage, and errors not caught at validation propagate into every later report.
+  - id: q10
+    lesson: organisational-information-flows
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Choose between batch and real-time processing
+    scenario: |
+      Illustrative scenario. A supermarket in Accra is launching online ordering for home delivery. Online customers
+      will buy from the same shelf stock that walk-in customers use. Currently tills upload sales to head office once a
+      night.
+    prompt: What is the most appropriate change to sales transaction processing?
+    options:
+      - Keep nightly batch uploads, because they are cheaper
+      - Move to real-time stock updates from tills so online availability reflects current stock
+      - Process sales monthly to reduce network costs
+      - Stop recording walk-in sales in the system
+    answer: 1
+    explanation: >
+      When two channels draw on the same stock, the online channel needs current availability; nightly batch data
+      would allow customers to order items already sold in-store. Monthly processing is worse, and not recording sales
+      would destroy the stock record. Batch remains suitable for inherently periodic processes such as payroll.
+  - id: q11
+    lesson: organisational-information-flows
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name the report type that shows only out-of-limit items
+    prompt: What type of report lists only items that fall outside defined limits, such as drugs expiring within 90 days?
+    answers: [exception report, exception reports, exception]
+    explanation: >
+      Exception reports direct attention to items needing action and are usually more useful to managers than long
+      detailed listings. Summary reports aggregate everything; exception reports filter by rule.
+  - id: q12
+    lesson: organisational-information-flows
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Calculate a reorder level
+    prompt: A pharmacy sells an average of 25 packs of a pain reliever per day, the supplier lead time is 4 days and safety stock is 20 packs. What is the reorder level?
+    options:
+      - "45 packs"
+      - "100 packs"
+      - "120 packs"
+      - "125 packs"
+    answer: 2
+    explanation: >
+      Reorder level = average daily sales × lead time + safety stock = 25 × 4 + 20 = 120 packs. 100 omits safety stock,
+      45 adds rather than multiplies, and 125 is an arithmetic slip. The calculation depends entirely on accurate
+      transaction data for average sales.
+  - id: q13
+    lesson: organisational-information-flows
+    type: true_false
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse information needs across Anthony's management levels
+    prompt: Strategic planning typically requires more detailed, more frequent and more precise internal information than operational control.
+    answer: false
+    explanation: >
+      The reverse is true. Operational control needs detailed, frequent, accurate internal data; strategic planning uses
+      aggregated, forward-looking information, often from external sources, which is inherently less precise.
+  - id: q14
+    lesson: organisational-information-flows
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate risks of informal information flows
+    scenario: |
+      Illustrative scenario. A Tema logistics firm receives most customer booking requests through a messaging app on
+      dispatchers' personal phones. Bookings are later typed into the transport system when dispatchers have time.
+    prompt: Which is the strongest argument for redesigning this flow?
+    options:
+      - Messaging apps are always slower than e-mail
+      - Bookings lack a reliable audit trail and depend on individuals, creating risks of lost orders and disputes
+      - Customers prefer telephone calls
+      - The transport system cannot store customer names
+    answer: 1
+    explanation: >
+      The core weakness is control: bookings held on personal phones may be lost when staff are absent, cannot be
+      audited and are re-keyed later with risk of error. Messaging is actually fast, and there is no evidence about
+      customer preference or system limits. A redesign could keep the channel's convenience while capturing requests
+      directly into the system.
+
+  # ---------- Lesson 3: enterprise-architecture-and-integration ----------
+  - id: q15
+    lesson: enterprise-architecture-and-integration
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Match TOGAF architecture domains to example artefacts
+    prompt: Match each architecture domain to an artefact that belongs to it.
+    pairs:
+      - left: Business architecture
+        right: Capability map
+      - left: Data architecture
+        right: Data ownership matrix
+      - left: Application architecture
+        right: Interface diagram between systems
+      - left: Technology architecture
+        right: Network and hosting deployment diagram
+    explanation: >
+      The four domains are layered: technology supports applications, applications manage data and all serve business
+      capabilities. Placing artefacts in the right domain shows understanding of what each perspective describes.
+  - id: q16
+    lesson: enterprise-architecture-and-integration
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain the role of requirements management in the TOGAF ADM
+    prompt: In the TOGAF Architecture Development Method, how is Requirements Management positioned?
+    options:
+      - As the final phase, after Architecture Change Management
+      - As a one-off activity in the Preliminary phase
+      - At the centre of the cycle, continuously feeding all phases
+      - As an optional activity used only for technology architecture
+    answer: 2
+    explanation: >
+      Requirements Management sits at the centre of the ADM and operates continuously, capturing and managing
+      requirements that inform every phase. It is not a single step, not confined to the Preliminary phase and not
+      limited to technology.
+  - id: q17
+    lesson: enterprise-architecture-and-integration
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Calculate point-to-point interface counts
+    prompt: If 10 applications must each exchange data with every other application directly, what is the maximum number of point-to-point interfaces?
+    answers: ["45", forty-five, forty five]
+    explanation: >
+      The formula is n × (n − 1) / 2 = 10 × 9 / 2 = 45. A hub-and-spoke design would need only 10 connections,
+      illustrating why point-to-point integration becomes fragile and costly as the estate grows.
+  - id: q18
+    lesson: enterprise-architecture-and-integration
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish Zachman from TOGAF
+    prompt: The Zachman framework is primarily a step-by-step method for developing architecture, whereas TOGAF is only a taxonomy.
+    answer: false
+    explanation: >
+      It is the other way round. Zachman (1987) is a classification matrix organising architecture descriptions by
+      perspective and interrogative. TOGAF provides a framework plus a method, the ADM, for developing and governing
+      architecture.
+  - id: q19
+    lesson: enterprise-architecture-and-integration
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Select an integration style for a given requirement
+    scenario: |
+      Illustrative scenario. A hospital pharmacy system must notify billing every time a medicine is dispensed. Billing
+      is occasionally offline for maintenance, and no dispensing event may be lost.
+    prompt: Which integration style is most suitable?
+    options:
+      - Nightly file transfer
+      - Messaging through a message broker that stores and forwards events
+      - Synchronous API call that blocks dispensing until billing responds
+      - Staff re-keying dispensing records into billing
+    answer: 1
+    explanation: >
+      Messaging decouples the systems in time: the broker holds events until billing is available, so none are lost and
+      dispensing is not delayed. A blocking API call would halt dispensing whenever billing is down; a nightly file
+      delays charge capture; re-keying reintroduces errors and lost charges.
+  - id: q20
+    lesson: enterprise-architecture-and-integration
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate integration topologies for a small organisation
+    prompt: A four-branch pharmacy chain with no in-house developers needs its cloud POS to send daily sales to a cloud accounting service. Which approach is most proportionate?
+    options:
+      - Build a full enterprise service bus on its own servers
+      - Use a prebuilt connector or iPaaS integration between the two cloud services
+      - Rewrite both applications to share one database
+      - Commission a full TOGAF architecture repository before any integration
+    answer: 1
+    explanation: >
+      A prebuilt connector or iPaaS offering matches the small scale and limited skills, with low cost and support for
+      common cloud applications. An ESB and a full TOGAF repository are disproportionate, and rewriting vendor
+      applications to share a database is impractical for cloud services.
+  - id: q21
+    lesson: enterprise-architecture-and-integration
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for the comparison of current and future architecture
+    prompt: What is the name of the analysis that compares baseline and target architectures to identify what must be added, changed or removed?
+    answers: [gap analysis, gap]
+    explanation: >
+      Gap analysis is performed in TOGAF phases B, C and D. Its output feeds Opportunities and Solutions (phase E), where
+      gaps are grouped into projects and work packages.
+
+  # ---------- Module-level extended questions ----------
+  - id: q22
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate an integration and architecture strategy for a Ghanaian organisation
+    marks: 20
+    case: |
+      Illustrative scenario. Sankofa Foods is a hypothetical food distributor with depots in Accra, Kumasi and Tamale.
+      Each depot uses its own copy of a stock package; sales representatives take orders by phone and messaging apps;
+      head office finance uses an accounting package into which depot sales are imported from spreadsheets each week.
+      Mobile money collections from retailers are reconciled manually against bank statements. Management complains of
+      stock-outs, disputes with retailers over balances and a two-week month-end close. The board is considering either
+      an integrated cloud ERP or connecting the existing systems through an integration platform.
+    prompt: >
+      Analyse the information-flow and integration problems at Sankofa Foods and evaluate the two options. Recommend and
+      justify a target architecture and a phased migration path.
+    structure:
+      - Diagnosis of silos and information-flow weaknesses using lesson concepts
+      - Baseline versus target architecture across business, data, application and technology domains
+      - Evaluation of integrated ERP versus integration platform (benefits, risks, cost, skills)
+      - Recommendation with phased migration plan
+      - Risks and change-management considerations
+    rubric:
+      - criterion: Diagnosis
+        marks: 5
+        descriptor: Identifies duplicate data, re-keying, batch delays, informal order capture and reconciliation weaknesses with reference to the case.
+      - criterion: Architecture reasoning
+        marks: 5
+        descriptor: Uses baseline, target and gap language across EA domains, including shared identifiers and master data.
+      - criterion: Option evaluation
+        marks: 5
+        descriptor: Balanced comparison of the two options covering integration style, coupling, cost, skills and risk.
+      - criterion: Recommendation and migration
+        marks: 5
+        descriptor: Clear, justified recommendation with a realistic, prioritised phasing and awareness of change management.
+    modelAnswer: |
+      A strong answer begins by diagnosing silo effects: three separate stock databases mean no group-wide stock view;
+      orders captured informally lack an audit trail; weekly spreadsheet imports make finance data stale and error-prone;
+      and manual mobile money reconciliation causes balance disputes. These are horizontal-flow failures worsened by
+      batch processing and the absence of a single source of truth for products and customers.
+
+      The baseline architecture has duplicated applications and no shared customer or product identifiers. A target
+      architecture should provide one inventory record across depots, order capture directly into the system (for
+      example a mobile sales app), real-time posting of sales to finance and automated matching of mobile money
+      references to invoices.
+
+      An integrated cloud ERP offers a shared database, standard order-to-cash processes and lower integration
+      maintenance, but requires process change, data migration and subscription costs. Connecting existing systems
+      through an integration platform preserves familiar tools and may be cheaper initially, but leaves three stock
+      databases that still need synchronisation and does not fix weak processes. Given the scale of the problems, a
+      reasoned recommendation is a cloud ERP for core order-to-cash and inventory, with APIs or connectors for mobile
+      money and banks.
+
+      Migration might proceed: phase 1, cleanse and unify customer and product master data; phase 2, deploy inventory
+      and sales at one pilot depot; phase 3, roll out to other depots and automate payment reconciliation. The answer
+      should acknowledge training, representatives' adoption of the sales app and the need to change informal credit
+      practices.
+    explanation: >
+      Examiners look for explicit use of silo, information-flow and architecture concepts applied to the case, a
+      balanced option appraisal and a realistic phased plan rather than a generic description of ERP.
+  - id: q23
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Critically evaluate the value of enterprise architecture frameworks
+    marks: 20
+    prompt: >
+      "Enterprise architecture frameworks such as TOGAF create more documentation than value." Critically evaluate this
+      statement with reference to the purpose of enterprise architecture, the TOGAF ADM and public-sector experience.
+    structure:
+      - Purpose of EA and the problems it addresses
+      - Overview of TOGAF ADM and its tailoring principle
+      - Arguments supporting the statement (bureaucracy, compliance focus)
+      - Arguments against (alignment, reduced duplication, roadmaps)
+      - Conditions for EA to add value and a reasoned conclusion
+    rubric:
+      - criterion: Understanding of EA and TOGAF
+        marks: 6
+        descriptor: Accurate account of EA domains, ADM phases and requirements management.
+      - criterion: Critical argument
+        marks: 8
+        descriptor: Balanced arguments for and against, supported by examples such as the US federal experience.
+      - criterion: Conditions for success
+        marks: 4
+        descriptor: Identifies governance links to investment decisions, tailoring and stakeholder engagement.
+      - criterion: Structure and conclusion
+        marks: 2
+        descriptor: Logical structure with a justified conclusion.
+    modelAnswer: |
+      A good essay first explains that EA links strategy to technology by describing business, data, application and
+      technology architecture and planning movement from baseline to target. TOGAF's ADM provides a cycle from
+      Preliminary and Architecture Vision through business, information systems and technology architectures to
+      opportunities, migration planning, implementation governance and change management, with requirements management
+      at the centre.
+
+      Support for the statement comes from organisations that treat EA as a compliance activity, producing extensive
+      models that are not used to make decisions. Public-sector EA programmes, for example in the United States after
+      the Clinger-Cohen Act of 1996, were criticised at times for exactly this. Full adoption of every TOGAF artefact can
+      overwhelm small organisations.
+
+      Against the statement, EA provides a shared view of the estate, reveals duplicated systems and integration
+      spaghetti, supports gap analysis and gives investment decisions a roadmap. TOGAF explicitly expects tailoring, so
+      over-documentation is a misuse of the framework rather than its intended form.
+
+      A strong conclusion argues that EA adds value when it is tailored, connected to governance of IT investment and
+      projects, and communicated in forms that business stakeholders use; otherwise the criticism is justified.
+    explanation: >
+      Examiners reward a balanced, evidence-based argument that shows understanding of the ADM and tailoring, rather than
+      a list of phases or an unqualified opinion.

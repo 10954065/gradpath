@@ -64,6 +64,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     staleTime: 10 * 60 * 1000,
   })
 
+  // A stored session can outlive its account (e.g. the account was deleted). Validate with the server
+  // and sign out cleanly instead of leaving the student in a broken half-signed-in state.
+  useEffect(() => {
+    if (!profileQuery.isError || !userId) return
+    void supabase.auth.getUser().then(({ data, error }) => {
+      if (error || !data.user) void supabase.auth.signOut({ scope: 'local' })
+    })
+  }, [profileQuery.isError, userId])
+
   const refreshProfile = useCallback(async () => {
     await queryClient.invalidateQueries({ queryKey: ['profile', userId] })
   }, [queryClient, userId])

@@ -1,0 +1,56 @@
+module: digital-finance
+cards:
+  - lesson: fintech-and-digital-banking
+    front: Why is finance especially open to digital innovation?
+    back: Financial products are largely information, payments have strong network effects, and transaction data enable new ways of assessing risk.
+  - lesson: fintech-and-digital-banking
+    front: Name six FinTech categories.
+    back: Payments, digital lending, savings and investment (WealthTech), InsurTech, RegTech/SupTech and infrastructure (plus digital assets).
+  - lesson: fintech-and-digital-banking
+    front: What are the two main types of open banking API?
+    back: Account information APIs (reading balances and transactions with consent) and payment initiation APIs (instructing payments from the customer's account).
+  - lesson: fintech-and-digital-banking
+    front: State the expected loss formula used in lending.
+    back: Expected loss = PD × LGD × EAD (probability of default × loss given default × exposure at default).
+  - lesson: fintech-and-digital-banking
+    front: List four digital banking channels relevant in Ghana.
+    back: Mobile banking apps, USSD banking, internet banking and agency banking (plus ATMs, cards and POS).
+  - lesson: fintech-and-digital-banking
+    front: What is a regulatory sandbox?
+    back: A controlled environment in which a regulator lets firms test innovative products with real customers under specified conditions and safeguards.
+  - lesson: mobile-money-and-digital-wallets
+    front: Why does issuing e-money not create new money like bank lending?
+    back: E-money is issued in exchange for funds held in trust or custodial accounts, so it converts cash into a backed electronic claim rather than extending credit.
+  - lesson: mobile-money-and-digital-wallets
+    front: How do cash-in and cash-out affect an agent's cash and e-float?
+    back: Cash-in raises cash and lowers e-float; cash-out lowers cash and raises e-float. Total liquidity is unchanged apart from commissions.
+  - lesson: mobile-money-and-digital-wallets
+    front: What is agent rebalancing and why is it needed?
+    back: Converting cash to e-float or e-float to cash via a bank, super-agent or aggregator, because transaction patterns drain one form of liquidity.
+  - lesson: mobile-money-and-digital-wallets
+    front: What does interoperability require besides a technical connection?
+    back: A central switch, common rules and standards, agreed fees and a settlement mechanism for participants' net obligations.
+  - lesson: mobile-money-and-digital-wallets
+    front: When and through which body did Ghana introduce mobile money interoperability?
+    back: In 2018, through GhIPSS (Ghana Interbank Payment and Settlement Systems), a subsidiary of the Bank of Ghana.
+  - lesson: mobile-money-and-digital-wallets
+    front: What is tiered KYC?
+    back: A risk-based approach linking account balance and transaction limits to the level of identity verification, balancing inclusion and anti-money-laundering.
+  - lesson: payment-gateways-and-electronic-transactions
+    front: Put these card stages in order - settlement, authorisation, authentication, clearing, capture.
+    back: Authentication, authorisation, capture, clearing, settlement.
+  - lesson: payment-gateways-and-electronic-transactions
+    front: Who are the four parties in the card four-party model?
+    back: Cardholder, merchant, acquirer and issuer, connected by a card scheme such as Visa or Mastercard.
+  - lesson: payment-gateways-and-electronic-transactions
+    front: How does a mobile money payment through a PSP differ from a card payment?
+    back: The customer approves a debit prompt with a PIN on their phone; it is usually a single wallet debit (no hold-then-capture), can stay pending or time out, and is confirmed by webhook before later settlement.
+  - lesson: payment-gateways-and-electronic-transactions
+    front: Why should a merchant not rely on the browser redirect as proof of payment?
+    back: Redirects can be interrupted, delayed or manipulated; payment should be confirmed by a verified webhook or server-side status check.
+  - lesson: payment-gateways-and-electronic-transactions
+    front: What does idempotent webhook handling mean?
+    back: Processing the same notification more than once has the same effect as processing it once, so duplicate webhooks do not create duplicate orders or credits.
+  - lesson: payment-gateways-and-electronic-transactions
+    front: How does two-sided market theory explain card fees?
+    back: Platforms charge the side that values access more and is less price-sensitive (merchants) and subsidise the other (cardholders), so merchants pay fees such as interchange.

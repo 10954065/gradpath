@@ -18,7 +18,7 @@ export function uuidv5(name: string, namespace = NAMESPACE): string {
 }
 
 export interface LinkStatus {
-  status: 'verified' | 'unreachable'
+  status: 'verified' | 'unverified' | 'unreachable'
   checkedAt: string
   httpStatus?: number
 }
@@ -373,7 +373,15 @@ export function buildSeedSql(courses: LoadedCourse[], links: Record<string, Link
           access_type: q(r.accessType),
           verification_status: q(link?.status ?? 'unverified'),
           last_verified_at: q(link?.checkedAt ?? null),
-          verification_note: q(link ? `HTTP ${link.httpStatus ?? 'n/a'} when checked` : 'Not yet checked'),
+          verification_note: q(
+            !link
+              ? 'Not yet checked'
+              : link.status === 'verified'
+                ? `Reachable (HTTP ${link.httpStatus ?? 'n/a'}) when checked`
+                : link.status === 'unverified'
+                  ? `The site blocked the automated check (HTTP ${link.httpStatus ?? 'n/a'}); open it to confirm`
+                  : 'Could not be reached when checked',
+          ),
           sort_order: String(i + 1),
           is_published: 'true',
         }),

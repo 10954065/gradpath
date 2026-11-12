@@ -1,0 +1,397 @@
+module: research-design
+questions:
+  # ---------- quantitative-qualitative-and-mixed ----------
+  - id: q01
+    lesson: quantitative-qualitative-and-mixed
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Identify the defining feature of mixed-methods research
+    prompt: Which feature most clearly distinguishes a mixed-methods study from a study that simply contains some numbers and some quotations?
+    options:
+      - It uses at least two different software packages for analysis
+      - It intentionally integrates quantitative and qualitative strands to answer the research questions
+      - It always gives equal priority to quantitative and qualitative data
+      - It collects data from more than one organisation
+    answer: 1
+    explanation: Integration (connecting, building, merging or embedding strands) is what makes research mixed methods. Software choice is irrelevant, priority can be unequal (for example QUAN → qual), and the number of organisations concerns sampling, not approach.
+
+  - id: q02
+    lesson: quantitative-qualitative-and-mixed
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Evaluate the claim that qualitative research is less rigorous
+    prompt: Qualitative research is best understood as a less rigorous form of quantitative research that is used when a large sample cannot be obtained.
+    answer: false
+    explanation: Qualitative research has its own logic, purposive sampling, analytical procedures and quality criteria (credibility, transferability, dependability, confirmability). It is chosen because the question requires understanding of meaning or process, not as a fallback for small samples.
+
+  - id: q03
+    lesson: quantitative-qualitative-and-mixed
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Select the appropriate mixed-methods design
+    scenario: |
+      Abena wants to study digital payment acceptance among traders in Kumasi Central Market. Her literature
+      review finds that existing UTAUT questionnaire items do not capture concerns traders raise informally,
+      such as fear of tax visibility and the role of customer credit. She wants to interview traders first and
+      then use what she learns to build and test a questionnaire on a larger sample.
+    prompt: Which design best matches Abena's plan?
+    options:
+      - Convergent design
+      - Explanatory sequential design
+      - Exploratory sequential design
+      - Single-method cross-sectional survey
+    answer: 2
+    explanation: An exploratory sequential design (QUAL → quan) begins with qualitative exploration and uses the findings to build an instrument for quantitative testing. A convergent design collects both strands at the same time; an explanatory sequential design starts with the survey; a single survey would ignore the gap she identified.
+
+  - id: q04
+    lesson: quantitative-qualitative-and-mixed
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name the philosophy commonly associated with mixed methods
+    prompt: Name the research philosophy most commonly used to justify mixed-methods research because it judges methods by how well they answer the research question.
+    answers: [pragmatism, pragmatist, pragmatic paradigm]
+    explanation: Pragmatism focuses on the practical consequences of knowledge and the fit between methods and questions, so it accommodates both quantitative and qualitative strands. It still requires a reasoned argument for combining them.
+
+  - id: q05
+    lesson: quantitative-qualitative-and-mixed
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match mixed-methods notation and integration types to their meanings
+    prompt: Match each term to its meaning.
+    pairs:
+      - left: "QUAN → qual"
+        right: Dominant quantitative phase followed by a supporting qualitative phase
+      - left: "QUAL + quan"
+        right: Concurrent strands with qualitative priority
+      - left: Building
+        right: Qualitative themes are turned into questionnaire items
+      - left: Connecting
+        right: Results of one phase determine the sample or questions of the next
+      - left: Merging
+        right: Results of both strands are compared in a joint display
+    explanation: Capital letters show priority and arrows show sequence, while a plus sign shows concurrency. Building, connecting and merging are distinct integration strategies; naming the strategy in a methodology chapter shows the examiner how the strands relate.
+
+  - id: q06
+    lesson: quantitative-qualitative-and-mixed
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the coherence of a proposed design
+    prompt: A proposal states an interpretivist paradigm, five hypotheses derived from TAM, a 400-respondent questionnaire and structural equation modelling. What is the most serious problem?
+    options:
+      - The sample is too large for structural equation modelling
+      - TAM cannot be used in Ghanaian studies
+      - The stated paradigm is inconsistent with a deductive, hypothesis-testing quantitative design
+      - Questionnaires cannot measure perceived usefulness
+    answer: 2
+    explanation: Interpretivism seeks to understand subjective meanings, whereas hypothesis testing with a large survey reflects positivist or post-positivist assumptions. The design itself may be sound, but the philosophical justification is incoherent. Large samples suit SEM, TAM is widely applied internationally, and validated scales for perceived usefulness exist.
+
+  - id: q07
+    lesson: quantitative-qualitative-and-mixed
+    type: true_false
+    bloom: analyse
+    difficulty: medium
+    objective: Distinguish mixed methods from a survey with open-ended items
+    prompt: Adding two optional open-ended comment boxes to a structured questionnaire is normally enough to describe a study as mixed methods.
+    answer: false
+    explanation: A few open comments usually form a minor qualitative component without its own sampling logic, analytical procedure or planned integration. A mixed-methods label requires a deliberately designed qualitative strand integrated with the quantitative one.
+
+  # ---------- exploratory-descriptive-explanatory ----------
+  - id: q08
+    lesson: exploratory-descriptive-explanatory
+    type: mcq
+    bloom: apply
+    difficulty: easy
+    objective: Classify a research question by purpose
+    prompt: "Classify this question: What proportion of pharmacies in the Ashanti Region use electronic inventory systems, and how does use vary by pharmacy size?"
+    options:
+      - Exploratory
+      - Descriptive
+      - Explanatory
+      - Evaluative
+    answer: 1
+    explanation: The question asks "what proportion" and how use varies across a characteristic, which is a profile of a population. It does not ask why pharmacies adopt (explanatory), what concepts matter (exploratory) or whether an intervention worked (evaluative).
+
+  - id: q09
+    lesson: exploratory-descriptive-explanatory
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for a variable that distorts a relationship
+    prompt: What term describes a third variable, related to both the presumed cause and the outcome, that can create a misleading association between them?
+    answers: [confounding variable, confounder, confound]
+    explanation: A confounder (for example, firm size influencing both AI adoption and efficiency) can make an association appear causal when it is not. Explanatory designs address confounders through random assignment or statistical control.
+
+  - id: q10
+    lesson: exploratory-descriptive-explanatory
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Identify which causal condition is weakest in a cross-sectional design
+    scenario: |
+      A cross-sectional survey of 250 Accra SMEs finds that firms using AI tools report higher operational
+      efficiency. The regression controls for firm size and sector. The student concludes that "AI adoption
+      causes efficiency gains".
+    prompt: Which condition for causal inference is least well established by this design?
+    options:
+      - Covariation, because regression cannot show association
+      - Temporal precedence, because adoption and efficiency were measured at the same time
+      - Non-spuriousness, because no control variables were used
+      - Reliability, because surveys cannot be reliable
+    answer: 1
+    explanation: The survey shows covariation, and controls for size and sector partly address non-spuriousness. However, both variables were measured at one point, so it is unclear whether AI use preceded efficiency or efficient firms were simply better placed to adopt AI. Reliability is a measurement issue, not a causal condition.
+
+  - id: q11
+    lesson: exploratory-descriptive-explanatory
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Recognise that explanatory research can be qualitative
+    prompt: Explanatory research can be conducted qualitatively, for example through a case study that traces the process by which a hospital's e-records system succeeded or failed.
+    answer: true
+    explanation: Explanatory research seeks to explain why things happen. Qualitative explanatory case studies do this by tracing mechanisms and processes in depth, complementing quantitative hypothesis testing.
+
+  - id: q12
+    lesson: exploratory-descriptive-explanatory
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match research purposes to the claims they support
+    prompt: Match each research purpose to the kind of claim it most directly supports.
+    pairs:
+      - left: Exploratory
+        right: New concepts and propositions for later testing
+      - left: Descriptive
+        right: An accurate profile of a defined population
+      - left: Explanatory
+        right: Relationships between variables and reasons for them
+      - left: Evaluative
+        right: A judgement of whether an intervention achieved its aims
+    explanation: Each purpose permits a different strength and type of conclusion. Examiners check whether conclusions exceed what the purpose and design support, for example claiming prevalence from exploratory interviews.
+
+  - id: q13
+    lesson: exploratory-descriptive-explanatory
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Judge when exploratory research is the most rigorous choice
+    prompt: In which situation is an exploratory design the most defensible choice for an MSc dissertation?
+    options:
+      - When the student wants to avoid statistics
+      - When validated scales and a well-tested theory already exist for the population
+      - When a phenomenon is new in the context and the relevant concepts and variables are not yet known
+      - When the aim is to estimate the percentage of firms that have adopted a technology
+    answer: 2
+    explanation: Exploration is justified when knowledge is too thin to specify variables or hypotheses, such as new uses of generative AI by Ghanaian micro-enterprises. Avoiding statistics is not a justification; existing validated scales point to explanatory testing; estimating percentages is descriptive.
+
+  # ---------- experimental-case-study-and-time-horizons ----------
+  - id: q14
+    lesson: experimental-case-study-and-time-horizons
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain the purpose of random assignment
+    prompt: What is the main purpose of random assignment in an experiment?
+    options:
+      - To make the sample representative of the national population
+      - To make treatment and control groups equivalent on average on measured and unmeasured characteristics
+      - To increase the response rate
+      - To allow the researcher to choose the most motivated participants for treatment
+    answer: 1
+    explanation: Random assignment balances groups so that differences in outcomes can be attributed to the treatment, addressing selection and non-spuriousness. Representativeness comes from random sampling, which is a different concept; choosing motivated participants would introduce selection bias.
+
+  - id: q15
+    lesson: experimental-case-study-and-time-horizons
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Calculate a difference-in-differences estimate
+    prompt: "A trained group's error rate falls from 20% to 8%; a comparison group's falls from 22% to 18%. What is the difference-in-differences estimate in percentage points? (Give the number with its sign.)"
+    answers: ["-8", "−8", "minus 8", "-8 points", "-8 percentage points"]
+    explanation: "DiD = (8 − 20) − (18 − 22) = −12 − (−4) = −8 percentage points. The comparison group's change removes the part of the improvement that would probably have happened anyway because of history or maturation."
+
+  - id: q16
+    lesson: experimental-case-study-and-time-horizons
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Identify a threat to internal validity
+    scenario: |
+      A bank measures staff compliance with password policies, runs a security training session, and measures
+      compliance again one month later. Compliance has risen. During that month, a major cyber-attack on another
+      Ghanaian institution was widely reported in the national media. There was no comparison group.
+    prompt: Which threat to internal validity is most clearly illustrated?
+    options:
+      - History
+      - Attrition
+      - Diffusion of treatment
+      - Instrumentation
+    answer: 0
+    explanation: History refers to external events occurring during the study that could explain the change. The media coverage may have increased caution regardless of training. A comparison group exposed to the same news would help separate the effects. No dropouts (attrition), contamination of a control group (diffusion) or change in the measuring instrument is described.
+
+  - id: q17
+    lesson: experimental-case-study-and-time-horizons
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain analytic generalisation in case studies
+    prompt: According to Yin, case study findings generalise to theoretical propositions (analytic generalisation) rather than to populations (statistical generalisation).
+    answer: true
+    explanation: Case studies are not samples of a population. Their value lies in testing, extending or building theory, which can then be applied to other settings. This answers the common criticism that one case cannot be generalised.
+
+  - id: q18
+    lesson: experimental-case-study-and-time-horizons
+    type: matching
+    bloom: apply
+    difficulty: medium
+    objective: Match designs to examples
+    prompt: Match each design to the example that best fits it.
+    pairs:
+      - left: Single embedded case study
+        right: One hospital's e-records roll-out examined across three departments
+      - left: Multiple holistic case study
+        right: Four SMEs, each studied as a whole, adopting AI bookkeeping
+      - left: Panel study
+        right: The same 150 traders surveyed in January and again in July
+      - left: Field experiment
+        right: SMEs randomly selected to receive a free cloud accounting tool
+      - left: Cross-sectional survey
+        right: Students across faculties surveyed once about password habits
+    explanation: Embedded designs have sub-units within a case; holistic designs treat each case as a whole. Panels follow the same units over time. Field experiments manipulate a treatment with random assignment in a natural setting. Cross-sectional designs collect data once.
+
+  - id: q19
+    lesson: experimental-case-study-and-time-horizons
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate whether a design qualifies as a case study
+    prompt: A student describes a questionnaire sent to 200 employees of one bank as "a case study". Which change would most strengthen the claim that it is a case study?
+    options:
+      - Increasing the sample to 400 employees
+      - Defining the unit of analysis and adding other evidence sources such as documents and interviews about the phenomenon in context
+      - Using a five-point instead of a seven-point Likert scale
+      - Removing all open-ended questions
+    answer: 1
+    explanation: Case studies investigate a bounded phenomenon in context using multiple sources of evidence. A single questionnaire of one firm's staff is a survey. Sample size and scale format do not change the strategy, and removing qualitative data would move further from case study logic.
+
+  - id: q20
+    lesson: experimental-case-study-and-time-horizons
+    type: true_false
+    bloom: analyse
+    difficulty: medium
+    objective: Distinguish longitudinal design from retrospective questions
+    prompt: A single survey that asks respondents how often they used mobile money two years ago and how often they use it today is a longitudinal design.
+    answer: false
+    explanation: Data are collected only once, so the design is cross-sectional with retrospective questions. Recall of past behaviour is vulnerable to memory error. A longitudinal design collects data at two or more points in time.
+
+  # ---------- module-level ----------
+  - id: q21
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Justify a complete research design for an IT-for-business question
+    prompt: "\"To what extent, and how, does the adoption of AI tools affect the operational efficiency of SMEs in Greater Accra?\" Design and justify a research design for this question, covering approach, purpose, strategy and time horizon, and evaluate its main limitations."
+    marks: 20
+    structure:
+      - Interpret the question and identify its two components (extent and mechanism)
+      - Justify the paradigm and approach (for example, pragmatism and explanatory sequential mixed methods)
+      - Classify the purposes involved (descriptive and explanatory)
+      - Choose and justify strategies (survey plus multiple case studies or interviews)
+      - Choose a time horizon and discuss whether a longitudinal element is feasible
+      - Evaluate causal limits, threats and how they will be mitigated
+      - Conclude with a coherent design statement
+    rubric:
+      - criterion: Interpretation of the question
+        marks: 3
+        descriptor: Recognises that "to what extent" and "how" require different kinds of evidence.
+      - criterion: Approach and paradigm
+        marks: 4
+        descriptor: Justifies the approach and a named mixed-methods design coherently with the philosophy.
+      - criterion: Strategy and time horizon
+        marks: 5
+        descriptor: Selects appropriate strategies and time horizon with clear reasons and integration points.
+      - criterion: Critical evaluation
+        marks: 5
+        descriptor: Identifies causal limits (temporal precedence, confounders) and realistic mitigation.
+      - criterion: Structure and academic writing
+        marks: 3
+        descriptor: Logical, concise argument using correct terminology and appropriate sources.
+    modelAnswer: |
+      A strong answer begins by noting that the question has two parts: "to what extent" asks for the size
+      and direction of a relationship across SMEs, while "how" asks for the mechanisms through which AI use
+      translates into efficiency. Neither a survey nor interviews alone would answer both, so a pragmatist,
+      explanatory sequential mixed-methods design (QUAN → qual) is justified.
+
+      The first phase is a descripto-explanatory cross-sectional survey of SMEs drawn from a defined frame,
+      using validated scales for AI use and operational efficiency and controlling for confounders such as
+      firm size, sector and owner education. Regression would estimate the association. The second phase
+      would be a multiple-case study or set of interviews with owners selected using survey results, for
+      example typical high-use/high-efficiency firms and surprising high-use/low-efficiency firms (theoretical
+      replication). Integration occurs by connecting survey results to case selection and by a joint display.
+
+      A good answer evaluates limitations. The cross-sectional survey establishes covariation but not temporal
+      precedence; efficient firms may adopt AI more readily (reverse causality). Unmeasured confounders such as
+      managerial capability may remain. Mitigation could include asking about adoption dates, using archival
+      performance data before and after adoption, or a two-wave panel if time allows. A field experiment would
+      give the strongest causal evidence but may be infeasible for an MSc timeline. Conclusions should therefore
+      use calibrated language ("is associated with", "owners attribute gains to") and recognise that case
+      findings generalise analytically rather than statistically.
+    explanation: Examiners look for a design that is justified from the question, internally coherent, explicit about integration, and honest about causal limitations rather than a list of definitions.
+
+  - id: q22
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Critically evaluate a quasi-experimental evaluation
+    case: |
+      Illustrative scenario. A regional hospital in Ghana introduced an electronic appointment system in its
+      outpatient department in March. The hospital's IT manager reports that average waiting time fell from
+      3.5 hours in February to 2.2 hours in May and concludes that "the system reduced waiting times by
+      1.3 hours". During the same period the hospital recruited two additional doctors, and a nearby
+      district hospital reopened after renovation. A second outpatient department in a comparable hospital,
+      which did not introduce the system, recorded waiting times of 3.4 hours in February and 3.0 hours in May.
+    prompt: Evaluate the IT manager's conclusion. Identify the design, the threats to internal validity, compute a better estimate of the system's effect, and recommend how a future evaluation could be strengthened.
+    marks: 15
+    structure:
+      - Identify the original design (one-group pre-test post-test) and its weakness
+      - Identify specific threats (history, selection, maturation)
+      - Compute a difference-in-differences estimate using the comparison hospital
+      - Discuss assumptions and remaining threats
+      - Recommend design improvements
+    rubric:
+      - criterion: Design identification
+        marks: 3
+        descriptor: Correctly identifies the one-group pre-test post-test design and why it is weak.
+      - criterion: Threat analysis
+        marks: 4
+        descriptor: Links named threats (history, selection) to specific events in the case.
+      - criterion: Calculation and interpretation
+        marks: 4
+        descriptor: Computes DiD correctly and interprets it with appropriate caution.
+      - criterion: Recommendations
+        marks: 4
+        descriptor: Proposes feasible improvements such as staggered roll-out, longer time series or mixed methods.
+    modelAnswer: |
+      The IT manager used a one-group pre-test post-test design (O X O), which cannot separate the system's
+      effect from other changes occurring at the same time. Two history threats are explicit: the recruitment
+      of two doctors increases capacity independently of the system, and the reopening of the district
+      hospital may have diverted patients. Seasonal variation in attendance could also act like maturation.
+
+      Using the comparison hospital, the difference-in-differences estimate is (2.2 − 3.5) − (3.0 − 3.4) =
+      −1.3 − (−0.4) = −0.9 hours. This suggests the system is associated with a reduction of about 0.9 hours
+      beyond the general trend, smaller than the claimed 1.3 hours. However, the estimate still assumes
+      parallel trends and does not remove the hospital-specific effect of extra doctors, which the comparison
+      hospital did not experience, so even 0.9 hours may overstate the system's contribution. Selection is
+      also a concern because the hospitals were not randomly chosen.
+
+      Improvements include collecting a longer time series of monthly waiting times before and after
+      implementation (an interrupted time-series design), recording staffing levels and patient volumes as
+      control variables, using a staggered roll-out across departments, and adding interviews with staff and
+      patients to understand the mechanisms by which the system affects waiting times. The conclusion should be
+      re-worded as an association with stated limitations.
+    explanation: Examiners reward precise identification of threats tied to case details, a correct DiD calculation, and recognition that even the improved estimate has limitations.

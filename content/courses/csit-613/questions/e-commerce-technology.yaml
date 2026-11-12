@@ -1,0 +1,297 @@
+module: e-commerce-technology
+questions:
+  - id: q01
+    lesson: storefronts-catalogues-and-carts
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Match storefront architecture layers to their roles
+    prompt: Match each storefront architecture layer to its main role.
+    pairs:
+      - left: Presentation layer
+        right: Pages and app screens the customer sees
+      - left: Application layer
+        right: Pricing rules, promotions, cart calculations and order creation
+      - left: Data layer
+        right: Databases and search index for products, customers and orders
+      - left: Integration layer
+        right: APIs to payment gateways, couriers and accounting systems
+      - left: Infrastructure layer
+        right: Hosting, CDN, TLS certificates, backups and monitoring
+    explanation: Analysing a storefront by layers shows that a "website" depends on logic, data, integrations and infrastructure that determine performance, security and capability.
+
+  - id: q02
+    lesson: storefronts-catalogues-and-carts
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain products, variants and SKUs
+    prompt: A shop sells one T-shirt design in three sizes and four colours. How should this be modelled in the catalogue?
+    options:
+      - Twelve separate products with no link between them
+      - One product with twelve variants, each with its own SKU, price and stock level
+      - One SKU with a note describing sizes and colours
+      - Three products, one per size, each with four colour images
+    answer: 1
+    explanation: Variants under one product keep listings clean and allow per-variant stock and price. Separate products clutter search; a single SKU cannot track stock by size and colour; splitting only by size is inconsistent.
+
+  - id: q03
+    lesson: storefronts-catalogues-and-carts
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Understand the effect of forced account creation
+    prompt: Requiring every shopper to create an account before checkout is a recommended way to reduce cart abandonment.
+    answer: false
+    explanation: Forced registration is a well-documented cause of abandonment. Guest checkout, with an optional account afterwards, usually reduces friction.
+
+  - id: q04
+    lesson: storefronts-catalogues-and-carts
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for decoupled front-end commerce architecture
+    prompt: What term describes an architecture in which the front-end presentation layer is separated from the commerce back end and connected through APIs?
+    answers: [headless commerce, headless]
+    explanation: Headless commerce offers flexibility and performance but requires greater skills and cost, so it suits larger or fast-growing firms more than most SMEs.
+
+  - id: q05
+    lesson: storefronts-catalogues-and-carts
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply the friction audit to a Ghanaian checkout
+    scenario: |
+      Illustrative scenario. A Kumasi electronics shop's website shows the delivery fee only on the final payment page, accepts only card payments and requires a full street address. Analytics show most abandonment happens at the payment step.
+    prompt: Which set of changes best addresses the evidence?
+    options:
+      - Add more product photos and a blog
+      - Show the delivery fee in the cart, add mobile money through a payment service provider, and accept a digital address or landmark
+      - Require customers to create an account so that they feel committed
+      - Increase prices to cover lost sales
+    answer: 1
+    explanation: The evidence points to late cost disclosure, missing preferred payment methods and unsuitable address fields. Product photos affect earlier funnel stages, forced accounts add friction, and price rises do not fix abandonment.
+
+  - id: q06
+    lesson: storefronts-catalogues-and-carts
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate storefront options for an SME
+    prompt: A small Ghanaian bakery with no in-house developer wants online pre-orders with mobile money payment, launched within a month and at low cost. Which option is most appropriate?
+    options:
+      - A custom headless build with a bespoke mobile app
+      - A SaaS or simple hosted store integrated with a local payment service provider, possibly alongside WhatsApp ordering
+      - Self-hosted open-source software maintained by the owner
+      - Waiting until it can afford an enterprise platform
+    answer: 1
+    explanation: SaaS options give a fast, low-maintenance launch, and local PSP plugins provide mobile money. Custom builds are costly and slow; self-hosting shifts security and updates to someone without skills; waiting forgoes demand.
+
+  - id: q07
+    lesson: order-and-customer-management
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain how an order moves from pending payment to confirmed
+    prompt: In a typical integration, what usually moves a mobile money order from "pending payment" to "confirmed" in the merchant's system?
+    options:
+      - The customer refreshing the order page
+      - A callback or webhook from the payment provider confirming a successful payment, ideally verified by the merchant
+      - The courier collecting the parcel
+      - The merchant assuming success after five minutes
+    answer: 1
+    explanation: Payment providers notify merchants asynchronously, and merchants should verify the status before fulfilling. Page refreshes and assumptions are unreliable, and dispatch happens only after confirmation.
+
+  - id: q08
+    lesson: order-and-customer-management
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match fulfilment models to descriptions
+    prompt: Match each fulfilment model to its description.
+    pairs:
+      - left: In-house
+        right: Merchant stores, packs and arranges delivery itself
+      - left: Third-party logistics
+        right: External provider stores, picks, packs and ships for the merchant
+      - left: Dropshipping
+        right: Supplier ships directly to the customer and the merchant holds no stock
+      - left: Marketplace fulfilment
+        right: Marketplace stores and delivers the seller's stock
+    explanation: Each model trades control for scalability and cost. Dropshipping avoids inventory investment but weakens control over delivery time and quality.
+
+  - id: q09
+    lesson: order-and-customer-management
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the RFM dimensions
+    prompt: In RFM analysis, what does the letter F stand for?
+    answers: [frequency]
+    explanation: RFM scores customers on Recency, Frequency and Monetary value of purchases to segment them for targeted actions.
+
+  - id: q10
+    lesson: order-and-customer-management
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse an RFM profile and choose an action
+    scenario: |
+      Illustrative scenario. A customer of an online skincare shop last purchased 220 days ago but bought eight times in the previous year and spent well above average.
+    prompt: How should this customer be classified and treated?
+    options:
+      - Champion; send a loyalty tier invitation
+      - At risk; prioritise a personalised win-back contact and check for past service problems
+      - New customer; send a welcome series
+      - Lost low-value customer; send only automated reminders
+    answer: 1
+    explanation: Low recency combined with high frequency and monetary value marks a valuable customer who is lapsing. Personal win-back and service recovery are justified by their historical value.
+
+  - id: q11
+    lesson: order-and-customer-management
+    type: true_false
+    bloom: recall
+    difficulty: easy
+    objective: Recall the nature of CRM
+    prompt: Customer relationship management is best understood purely as a category of software.
+    answer: false
+    explanation: CRM is a customer-focused strategy supported by processes, data and technology. Software supports it but does not constitute it.
+
+  - id: q12
+    lesson: order-and-customer-management
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate controls for pay-on-delivery orders
+    prompt: A Ghanaian SME offers pay on delivery through motorbike riders. Which control most directly reduces revenue leakage?
+    options:
+      - Asking riders to keep cash until the end of the month
+      - Daily reconciliation of rider cash and mobile money collections against orders marked delivered in the OMS
+      - Removing order numbers to simplify paperwork
+      - Allowing riders to mark orders delivered without confirmation
+    answer: 1
+    explanation: Matching collections to delivered orders each day detects missing payments quickly. The other options delay or remove the evidence needed to detect leakage.
+
+  - id: q13
+    lesson: digital-marketing-and-analytics
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Calculate conversion rate, AOV and CAC
+    scenario: |
+      Illustrative scenario. In a month an online shop has 25,000 visitors and 500 orders producing GHS 90,000 revenue. It spent GHS 24,000 on acquisition marketing and gained 300 new customers.
+    prompt: Which set of figures is correct?
+    options:
+      - Conversion rate 2%, AOV GHS 180, CAC GHS 80
+      - Conversion rate 0.5%, AOV GHS 3.60, CAC GHS 48
+      - Conversion rate 2%, AOV GHS 300, CAC GHS 48
+      - Conversion rate 20%, AOV GHS 180, CAC GHS 80
+    answer: 0
+    explanation: Conversion = 500 ÷ 25,000 = 2%. AOV = 90,000 ÷ 500 = GHS 180. CAC = 24,000 ÷ 300 new customers = GHS 80. Using all orders instead of new customers for CAC gives GHS 48, a common mistake.
+
+  - id: q14
+    lesson: digital-marketing-and-analytics
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Calculate a simple customer lifetime value
+    prompt: AOV is GHS 200, customers buy 3 times a year, gross margin is 30 per cent and customers stay 2 years. What is the simple CLV in cedis? (Number only.)
+    answers: ["360", "GHS 360", "360 cedis"]
+    explanation: CLV = 200 × 3 × 0.30 × 2 = GHS 360 of gross margin. Forgetting the margin would overstate CLV at GHS 1,200.
+
+  - id: q15
+    lesson: digital-marketing-and-analytics
+    type: true_false
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse ROAS in relation to margin
+    prompt: With a gross margin of 40 per cent, an ad campaign with a ROAS of 2.0 is generating gross profit greater than its cost.
+    answer: false
+    explanation: ROAS 2.0 means GHS 2 revenue per GHS 1 spent; at 40 per cent margin that is GHS 0.80 gross margin per GHS 1, a loss. Break-even ROAS at 40 per cent margin is 2.5.
+
+  - id: q16
+    lesson: digital-marketing-and-analytics
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match attribution models to their rules
+    prompt: Match each attribution model to its rule.
+    pairs:
+      - left: Last-click
+        right: All credit to the final touchpoint before purchase
+      - left: First-click
+        right: All credit to the first touchpoint
+      - left: Linear
+        right: Equal credit to every touchpoint
+      - left: Time-decay
+        right: More credit to touchpoints closer to the purchase
+    explanation: Each model embeds assumptions; switching models can change which channel appears most valuable.
+
+  - id: q17
+    lesson: digital-marketing-and-analytics
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse funnel data to locate the weakest step
+    prompt: A funnel shows 10,000 visitors, 5,000 product views, 400 add-to-carts, 300 checkouts and 240 purchases. Which step should be investigated first?
+    options:
+      - Visit to product view
+      - Product view to add-to-cart
+      - Add-to-cart to checkout
+      - Checkout to purchase
+    answer: 1
+    explanation: Step rates are 50%, 8%, 75% and 80%. The 8% product-view-to-cart rate is the weakest, pointing to product information, pricing or trust issues on product pages.
+
+  - id: q18
+    lesson: digital-marketing-and-analytics
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate measurement approaches for social and WhatsApp sales
+    prompt: A Ghanaian SME closes most sales in WhatsApp chats paid by mobile money, so web analytics show few conversions. What is the best way to evaluate which campaigns work?
+    options:
+      - Conclude that digital marketing does not work and stop it
+      - Use campaign-specific discount codes or WhatsApp links and record the order source in the order system
+      - Rely only on social media follower counts
+      - Assume all sales came from the most recent campaign
+    answer: 1
+    explanation: Codes, unique links and order-source fields connect off-site sales to campaigns. Follower counts are vanity metrics, and assumptions do not measure anything.
+
+  - id: q19
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Integrate storefront, order management and analytics to diagnose an e-commerce business
+    prompt: Analyse ShopRight GH's performance using funnel metrics, CAC, AOV and CLV, diagnose the operational causes of its problems, and recommend priorities for the next six months.
+    marks: 25
+    case: |
+      Illustrative scenario. ShopRight GH is a hypothetical online home-goods retailer in Accra. Last quarter it recorded 60,000 visitors, 2,400 add-to-carts and 900 orders, with revenue of GHS 225,000. It spent GHS 72,000 on Instagram ads and influencers and acquired 720 new customers. Gross margin is 35 per cent. The owner believes customers buy twice a year and stay three years, but has not checked. Customers complain about late deliveries and items shown as available that are out of stock. Orders arrive through the website, Instagram and WhatsApp and are entered manually into a spreadsheet. Only card payment and pay on delivery are offered; about a fifth of pay-on-delivery orders fail at the door.
+    structure:
+      - Calculate conversion rate, cart-to-order rate, AOV, CAC and estimated CLV with CLV-to-CAC ratio
+      - Test the sensitivity of CLV to the unverified assumptions
+      - Diagnose storefront, order management and CRM causes (overselling, manual entry, payment options, failed deliveries)
+      - Recommend prioritised actions with expected effects and measures
+      - Discuss risks and data protection considerations
+    rubric:
+      - criterion: Accurate calculations
+        marks: 6
+        descriptor: Conversion 1.5%, cart-to-order 37.5%, AOV GHS 250, CAC GHS 100, CLV GHS 525 and ratio 5.25, correctly derived.
+      - criterion: Sensitivity and critique of assumptions
+        marks: 4
+        descriptor: Shows how CLV falls if frequency or lifespan is lower and explains why repeat data must be checked.
+      - criterion: Operational diagnosis
+        marks: 7
+        descriptor: Links complaints to lack of a central OMS and inventory synchronisation, missing mobile money, and pay-on-delivery failure costs.
+      - criterion: Recommendations
+        marks: 6
+        descriptor: Prioritised, specific and realistic actions with metrics to monitor.
+      - criterion: Risks and compliance
+        marks: 2
+        descriptor: Identifies implementation risks and consent and data protection obligations under Act 843.
+    modelAnswer: |
+      Conversion rate is 900 ÷ 60,000 = 1.5 per cent; cart-to-order rate is 900 ÷ 2,400 = 37.5 per cent, so most carts are abandoned. AOV is 225,000 ÷ 900 = GHS 250. CAC is 72,000 ÷ 720 = GHS 100. Using the owner's assumptions, CLV = 250 × 2 × 0.35 × 3 = GHS 525, giving a CLV-to-CAC ratio of 5.25, which looks healthy. However, the assumptions are unverified. If customers buy once a year for one year, CLV = 250 × 1 × 0.35 × 1 = GHS 87.50, below CAC, so acquisition would destroy value. The first recommendation is therefore to measure repeat purchase rates from order data.
+
+      The operational complaints share a root cause: orders from three channels are entered manually into a spreadsheet, so stock is not synchronised and orders are delayed or lost. Overselling and late delivery damage retention, which directly undermines CLV. The checkout lacks mobile money, a preferred method for many Ghanaian customers, which likely contributes to abandonment and pushes customers to pay on delivery, where a fifth of orders fail, wasting delivery cost.
+
+      Priorities: (1) adopt an order management system or SaaS store that unifies channels and synchronises inventory; (2) integrate a payment service provider supporting mobile money and cards, and introduce prepaid incentives or deposits for pay-on-delivery orders; (3) capture digital addresses and confirm orders before dispatch to reduce failed deliveries; (4) track campaign sources with codes and links and calculate CAC by channel; (5) launch retention messages to customers who consent. Monitor cart-to-order rate, delivery success rate, repeat purchase rate and CAC by channel. Risks include staff adoption and integration effort; customer data must be handled in line with the Data Protection Act, 2012 (Act 843).
+    explanation: Examiners look for correct calculations, critical treatment of CLV assumptions, a diagnosis linking technology and operations to metrics, and prioritised, measurable recommendations.

@@ -1,0 +1,41 @@
+module: security-fundamentals
+cards:
+  - lesson: principles-and-cia-triad
+    front: Why can an integrity failure be more dangerous than a confidentiality failure?
+    back: Altered data may go unnoticed and continue to be trusted, driving wrong decisions or payments, whereas a disclosure is a one-off loss that is often easier to detect.
+  - lesson: principles-and-cia-triad
+    front: How does authenticity differ from integrity?
+    back: Integrity asks whether data has been changed improperly; authenticity asks whether it genuinely came from the claimed source. An unaltered message can still be fraudulent if an impostor sent it.
+  - lesson: principles-and-cia-triad
+    front: What does non-repudiation require that ordinary logging does not provide?
+    back: Evidence strong enough that the actor cannot credibly deny the action, typically a digital signature made with a private key only they control, rather than a log entry that an administrator or impostor could have produced.
+  - lesson: principles-and-cia-triad
+    front: State the fail-safe defaults principle and give an example.
+    back: Access should be denied unless explicitly permitted. Example - a firewall rule set ending in "deny all".
+  - lesson: principles-and-cia-triad
+    front: Name the three control types that defence in depth should layer for an important asset.
+    back: Preventive (stop the event), detective (identify it quickly) and corrective or recovery (limit damage and restore service).
+  - lesson: principles-and-cia-triad
+    front: Why does SIM-swap fraud undermine authenticity for mobile banking?
+    back: It lets a criminal receive SMS one-time passwords meant for the customer, so a factor the customer does not physically control can be hijacked and the bank cannot be sure who approved a transaction.
+  - lesson: threats-vulnerabilities-and-risk
+    front: Explain the relationship between threat, vulnerability and risk in one sentence.
+    back: Risk exists when a threat could exploit a vulnerability in a valuable asset, and is estimated by combining the likelihood of that happening with its impact.
+  - lesson: threats-vulnerabilities-and-risk
+    front: What are the four NIST SP 800-30 threat source categories?
+    back: Adversarial, accidental, structural and environmental.
+  - lesson: threats-vulnerabilities-and-risk
+    front: Why is a CVSS score not a risk score for your organisation?
+    back: CVSS rates the generic technical severity of a flaw; organisational risk also depends on how exposed the system is, how valuable the asset is and what controls already exist.
+  - lesson: threats-vulnerabilities-and-risk
+    front: Give the formula for annualised loss expectancy and define its terms.
+    back: ALE = SLE × ARO, where SLE is the cost of a single occurrence and ARO is the expected number of occurrences per year.
+  - lesson: threats-vulnerabilities-and-risk
+    front: What are the four risk treatment options?
+    back: Mitigate (reduce), transfer (share), avoid and accept (retain). Acceptance must be a documented decision by an accountable owner.
+  - lesson: threats-vulnerabilities-and-risk
+    front: What is the difference between inherent and residual risk?
+    back: Inherent risk is the level before controls; residual risk is what remains after controls. Management formally accepts residual risk.
+  - lesson: threats-vulnerabilities-and-risk
+    front: What was the key risk-management lesson of the 2017 Equifax breach?
+    back: A publicly known, patchable vulnerability raised likelihood sharply, but patching and detection processes failed to respond, and weak internal controls amplified the impact.

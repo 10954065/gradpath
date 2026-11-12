@@ -1,0 +1,228 @@
+module: applied-ai
+questions:
+  - id: q01
+    lesson: ai-in-finance-healthcare-and-education
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain the role of alternative data in credit scoring
+    prompt: Why do lenders in mobile-money-intensive markets use alternative data in credit scoring?
+    options:
+      - To replace the need for any model validation
+      - To assess applicants who have little or no formal credit history
+      - To guarantee that every applicant is approved
+      - To avoid having to comply with data protection law
+    answer: 1
+    explanation: Alternative data such as mobile money transaction patterns can provide predictive signals for "thin-file" applicants who lack bureau records, which supports financial inclusion. It does not remove the need for validation, does not guarantee approval and certainly does not exempt the lender from data protection obligations; if anything, it increases them.
+  - id: q02
+    lesson: ai-in-finance-healthcare-and-education
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Recognise why accuracy misleads on rare-event problems
+    prompt: A fraud model that labels every transaction as legitimate can achieve very high accuracy if fraud is rare.
+    answer: true
+    explanation: If fraud represents a tiny fraction of transactions, predicting "legitimate" every time is correct almost always, so accuracy is high even though the model detects no fraud at all. This is why precision, recall and cost-weighted metrics are used for fraud and other rare-event problems.
+  - id: q03
+    lesson: ai-in-finance-healthcare-and-education
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Set a triage threshold according to asymmetric error costs
+    scenario: |
+      A regional hospital (illustrative scenario) is piloting a model that scores emergency patients for risk of sepsis. Clinicians say that missing a septic patient can be fatal, while an unnecessary escalation costs some extra nursing time.
+    prompt: How should the decision threshold for escalation be set?
+    options:
+      - High threshold to maximise precision, because false alarms waste nursing time
+      - Threshold chosen to maximise overall accuracy on the test set
+      - Lower threshold to favour high recall, accepting more false alarms, with clinicians reviewing escalations
+      - No threshold; the model should decide treatment directly
+    answer: 2
+    explanation: Because a false negative (missed sepsis) is far more harmful than a false positive, the threshold should favour recall (sensitivity) while clinicians review the escalations. Maximising precision would miss more septic patients; accuracy ignores asymmetric costs; and letting the model decide treatment removes the human oversight that clinical decision support requires.
+  - id: q04
+    lesson: ai-in-finance-healthcare-and-education
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Match sector AI applications to their sector
+    prompt: Match each AI application to the sector where it is primarily used.
+    pairs:
+      - left: Anti-money-laundering transaction monitoring
+        right: Finance
+      - left: Retinal image screening for diabetic retinopathy
+        right: Healthcare
+      - left: Intelligent tutoring that selects the next exercise
+        right: Education
+      - left: Predicting appointment no-shows
+        right: Healthcare operations
+    explanation: AML monitoring is a regulated financial activity; retinal screening is diagnostic support; tutoring systems are adaptive learning; and no-show prediction is operational AI in healthcare, often a lower-risk starting point than diagnosis.
+  - id: q05
+    lesson: ai-in-finance-healthcare-and-education
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name the human tendency to over-trust automated outputs
+    prompt: What term describes clinicians or loan officers trusting an AI recommendation too readily, even when it is wrong?
+    answers: [automation bias, automation-bias]
+    explanation: Automation bias is the tendency to over-rely on automated systems and to under-weight contradictory evidence. It is a key risk in clinical decision support and credit decisions, and is mitigated by training, interface design that shows uncertainty, and auditing of overrides.
+  - id: q06
+    lesson: ai-in-finance-healthcare-and-education
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the lesson from the Thailand retinopathy deployment
+    prompt: What is the most important lesson of the deep learning retinopathy screening deployment in Thai clinics reported by Beede et al. (2020)?
+    options:
+      - Deep learning cannot detect eye disease
+      - Real-world conditions such as image quality, connectivity and workflow can undermine a model that performed well in validation
+      - Nurses should be replaced by automated screening
+      - Field studies are unnecessary when published accuracy is high
+    answer: 1
+    explanation: The study showed that variable lighting produced ungradable images, connectivity affected turnaround and clinic workflows had to adapt, so strong laboratory accuracy did not translate automatically into benefit. The model did detect disease; the point is about socio-technical readiness, not replacing nurses, and it argues for more field evaluation, not less.
+  - id: q07
+    lesson: ai-in-finance-healthcare-and-education
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a proposal to use AI detectors for misconduct decisions
+    scenario: |
+      A private university college (illustrative scenario) proposes to automatically fail any assignment that an AI-text detector scores above 80% "likely AI-generated", with no further review.
+    prompt: Which evaluation of this proposal is most defensible?
+    options:
+      - It is sound, because detectors give an objective probability
+      - It is sound if students are told about the policy in advance
+      - It is unsound, because detectors are unreliable enough that they should not be the sole basis for high-stakes decisions; human review and other evidence are needed
+      - It is unsound only because detectors are too expensive
+    answer: 2
+    explanation: AI-text detectors can produce false positives, including on writing by non-native speakers, so using one score as the only evidence for a high-stakes academic decision is unfair. Advance notice does not fix the reliability problem, and the "probability" is not objective ground truth. Cost is not the central objection.
+  - id: q08
+    lesson: ai-in-retail-logistics-and-manufacturing
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish maintenance strategies
+    prompt: Match each maintenance strategy to the trigger for performing maintenance.
+    pairs:
+      - left: Reactive
+        right: The asset breaks down
+      - left: Preventive
+        right: A fixed time or usage schedule is reached
+      - left: Condition-based
+        right: A measured reading crosses a set threshold
+      - left: Predictive
+        right: A model forecasts likely failure or remaining useful life
+      - left: Prescriptive
+        right: A model recommends the optimal action and timing
+    explanation: The continuum runs from no monitoring (reactive), through schedules (preventive) and simple thresholds (condition-based), to models that forecast failure (predictive) and finally models that also recommend actions considering costs (prescriptive).
+  - id: q09
+    lesson: ai-in-retail-logistics-and-manufacturing
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Recognise that predictive maintenance is not always optimal
+    prompt: Predictive maintenance is always the economically best strategy for every asset in a factory.
+    answer: false
+    explanation: For cheap, non-critical assets with little failure history, the monitoring and modelling costs of predictive maintenance may exceed its benefits, so preventive or even reactive maintenance can be rational. Strategy should match asset criticality, failure cost and data availability.
+  - id: q10
+    lesson: ai-in-retail-logistics-and-manufacturing
+    type: scenario
+    bloom: apply
+    difficulty: hard
+    objective: Calculate the net benefit of a predictive maintenance programme
+    scenario: |
+      An illustrative scenario factory has 10 failures a year, each costing GHS 50,000 when unplanned. A predictive programme costs GHS 120,000 a year, catches 60% of failures early, and each caught failure is repaired in a planned way for GHS 10,000. False alarms cost GHS 15,000 a year.
+    prompt: What is the net annual benefit of the programme?
+    options:
+      - GHS 105,000
+      - GHS 125,000
+      - GHS 165,000
+      - GHS 240,000
+    answer: 0
+    explanation: Current cost is 10 x 50,000 = 500,000. With the programme, 6 caught failures cost 6 x 10,000 = 60,000; 4 missed failures cost 4 x 50,000 = 200,000; plus 15,000 false alarms and 120,000 programme cost, giving 395,000. Net benefit = 500,000 - 395,000 = GHS 105,000. Option 240,000 is the gross saving on caught failures before costs; the others omit one cost component.
+  - id: q11
+    lesson: ai-in-retail-logistics-and-manufacturing
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the relationship between prediction and decision value
+    prompt: A retailer's new forecasting model is much more accurate than the old one, but waste and stock-outs have not changed. What is the most likely explanation?
+    options:
+      - Accurate forecasts can never reduce waste
+      - The forecasts are not being used to change ordering decisions, or supply constraints prevent orders from following them
+      - The model must be overfitting, because accuracy and waste are unrelated
+      - Waste is only affected by pricing, not ordering
+    answer: 1
+    explanation: Prediction creates value only when it changes a decision. If buyers ignore forecasts, orders are fixed by supplier minimums, or lead times prevent adjustment, accuracy gains do not reach the business outcome. The other options make claims that are either false in general or unsupported by the scenario.
+  - id: q12
+    lesson: ai-in-retail-logistics-and-manufacturing
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name a data-driven virtual representation of a physical asset
+    prompt: What term describes a data-driven virtual representation of a physical asset or process used for monitoring and simulation?
+    answers: [digital twin, digital twins]
+    explanation: A digital twin mirrors a physical asset or process using live and historical data, enabling simulation of changes before they are made in the real world. It builds on sensor data and process models.
+  - id: q13
+    lesson: ai-in-retail-logistics-and-manufacturing
+    type: scenario
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate an implementation strategy for route optimisation
+    scenario: |
+      A Ghanaian courier company (illustrative scenario) has bought route optimisation software. Drivers complain that suggested routes ignore one-way streets, market-day congestion and customers who are only available after work, and many drivers have stopped following the routes.
+    prompt: Which response best reflects lessons from cases such as UPS ORION?
+    options:
+      - Discipline drivers who do not follow the software
+      - Abandon route optimisation as unsuitable for Ghana
+      - Involve drivers in feedback, encode the missing practical constraints and improve address and stop-time data, then re-pilot on a subset of routes
+      - Buy a more expensive optimisation package
+    answer: 2
+    explanation: Route optimisation succeeds when practical constraints are captured, data is good and drivers trust the logic. Disciplining drivers ignores valid information they hold; abandoning the idea ignores fixable problems; and a more expensive package does not solve missing constraints or poor data.
+  - id: q14
+    lesson: ai-in-retail-logistics-and-manufacturing
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Understand data strategies for rare defects in visual inspection
+    prompt: When defects are rare, an inspection model can be trained as an anomaly detector using mainly images of good products.
+    answer: true
+    explanation: Anomaly detection learns what normal products look like and flags deviations, which is useful when few defect images exist. Real defect examples are still needed to validate recall before deployment.
+  - id: q15
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate competing sector AI investments using opportunity, risk and readiness
+    prompt: Advise the board on which AI initiative to fund first, and design a staged plan for it.
+    marks: 20
+    case: |
+      Illustrative scenario. A fictional Ghanaian conglomerate owns three businesses: a chain of pharmacies, a distribution company supplying supermarkets, and a small plastics manufacturer. The board has budget for one AI initiative this year. Options are (a) a symptom-checker chatbot for pharmacy customers, (b) demand forecasting for the distribution company's top 300 products, and (c) camera-based quality inspection of plastic bottles. The pharmacies hold limited digital records; the distributor has five years of clean sales data in its ERP; the manufacturer has no cameras on its lines and frequent power interruptions.
+    structure:
+      - Brief framing of the decision and evaluation criteria
+      - Opportunity analysis for each option
+      - Risk analysis including harm, regulation and data protection
+      - Readiness analysis across data, technology, skills, governance and culture
+      - Justified recommendation
+      - Staged implementation plan with metrics and controls
+    rubric:
+      - criterion: Opportunity analysis
+        marks: 4
+        descriptor: Identifies the decisions improved and value for each option in business terms
+      - criterion: Risk analysis
+        marks: 5
+        descriptor: Recognises the health-harm and regulatory risk of the chatbot, the lower risk of forecasting and operational risks of inspection
+      - criterion: Readiness analysis
+        marks: 5
+        descriptor: Uses the case facts on data, infrastructure and power to judge readiness for each option
+      - criterion: Recommendation and plan
+        marks: 4
+        descriptor: Gives a defensible recommendation with a staged plan, baseline, metrics and override process
+      - criterion: Communication
+        marks: 2
+        descriptor: Clear, structured, board-appropriate writing
+    modelAnswer: |
+      A strong answer recommends demand forecasting for the distributor as the first initiative. Its opportunity is clear and measurable: fewer stock-outs at supermarket customers, lower inventory holding and less expired stock, measured through service level, inventory days and waste. Its risk is comparatively low, because errors affect stock levels rather than individuals' health or rights, and buyers can override forecasts. Readiness is strong: five years of clean ERP sales data, an existing system to integrate with, and a decision (ordering) that already happens weekly.
+
+      The symptom-checker has social value but high risk: incorrect advice could delay care, it may be regulated as health advice, and health data is especially sensitive under the Data Protection Act, 2012 (Act 843). Readiness is weak given limited digital records. Quality inspection offers clear value but readiness is poor: no cameras, unstable power and no defect image library.
+
+      The plan should run in stages: (1) define the business objective and baseline using a seasonal naive forecast; (2) build a model with calendar, promotion and price features for the top 300 products; (3) backtest on rolling origins and compare with the baseline using MAE and service-level simulations; (4) pilot with buyers on two product categories, recording overrides; (5) scale if waste and stock-outs improve; (6) monitor drift monthly. Meanwhile, the conglomerate can build foundations for the other options, for example digitising pharmacy records with consent processes and fitting power backup before any vision pilot.
+    explanation: Examiners look for a recommendation driven by explicit opportunity, risk and readiness reasoning grounded in the case facts, not a generic preference for the most advanced technology, together with a staged and measurable plan.

@@ -1,0 +1,586 @@
+module: enterprise-implementation
+questions:
+  # implementation-strategies-and-requirements
+  - id: q01
+    lesson: implementation-strategies-and-requirements
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Identify the phases of the enterprise systems life cycle
+    prompt: In Markus and Tanis's enterprise systems life cycle, which phase covers the period from go-live until normal operations are reached?
+    options:
+      - Chartering
+      - Project
+      - Shakedown
+      - Onward and upward
+    answer: 2
+    explanation: >-
+      Shakedown is the period immediately after go-live when performance often dips while users learn new procedures
+      and defects surface. Chartering is the business case and scope phase, the project phase covers configuration and
+      roll-out up to go-live, and onward and upward is the later phase of stabilisation and benefits realisation.
+
+  - id: q02
+    lesson: implementation-strategies-and-requirements
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the trade-offs of a big bang strategy
+    prompt: A big bang implementation avoids the need to build temporary interfaces between legacy and new systems.
+    answer: true
+    explanation: >-
+      True. Because all modules switch at once, there is no period in which a new module must exchange data with a
+      legacy one, so no bridge interfaces are needed. The trade-off is that risk is concentrated in a single cut-over
+      with limited fallback.
+
+  - id: q03
+    lesson: implementation-strategies-and-requirements
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Recommend an implementation strategy for a multi-site organisation
+    scenario: |
+      Illustrative scenario. A supermarket group has fifteen branches with almost identical operations. Branch staff
+      have limited ERP experience, and head office has a small IT team. The group wants to avoid disrupting all
+      branches at once.
+    prompt: Which implementation strategy is most defensible?
+    options:
+      - Big bang across all fifteen branches on one weekend
+      - Pilot at one representative branch, then roll out in waves
+      - Parallel running of both systems at every branch for six months
+      - Implement only the finance module and never extend the system
+    answer: 1
+    explanation: >-
+      Standardised branches and limited readiness make a pilot followed by site-phased waves the strongest option: risk
+      is contained, the training and support model is tested in real conditions, and lessons are applied to later
+      waves. Big bang concentrates risk where readiness is weakest; parallel running everywhere would double staff
+      workload; and abandoning the wider scope would fail the business case.
+
+  - id: q04
+    lesson: implementation-strategies-and-requirements
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name the prioritisation scheme for requirements
+    prompt: Name the prioritisation scheme that classifies requirements as Must have, Should have, Could have and Won't have this time.
+    answers: [MoSCoW, MoSCoW prioritisation, MoSCoW method]
+    explanation: >-
+      MoSCoW forces stakeholders to separate essential requirements from desirable ones, which protects scope and
+      timelines. Must requirements typically become knock-out criteria in vendor selection and mandatory UAT scenarios.
+
+  - id: q05
+    lesson: implementation-strategies-and-requirements
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match requirements-gathering techniques to what they reveal best
+    prompt: Match each requirements-gathering technique to the insight it is best at producing.
+    pairs:
+      - left: Observation and job shadowing
+        right: Actual work practices and undocumented workarounds
+      - left: Facilitated workshops
+        right: Agreed cross-functional process designs
+      - left: Document and data analysis
+        right: Objective evidence such as transaction volumes and forms
+      - left: Conference-room pilot
+        right: Feedback on the configured system using realistic scenarios
+      - left: Process mining
+        right: Quantified process variants from event logs
+    explanation: >-
+      Each technique has a characteristic strength, which is why good practice triangulates. Observation reveals what
+      people actually do rather than what they say; workshops build consensus across hand-offs; documents and data
+      provide objective sizing; conference-room pilots expose misunderstandings on the real configuration; and process
+      mining quantifies variation from system logs.
+
+  - id: q06
+    lesson: implementation-strategies-and-requirements
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Distinguish testable from untestable requirements
+    prompt: Which of the following is the best-formed non-functional requirement?
+    options:
+      - The system should be user-friendly for all staff
+      - The system must record goods receipts against purchase orders
+      - A trained cashier must complete a three-item mobile money sale in under 60 seconds
+      - The system should look like the old system so users are comfortable
+    answer: 2
+    explanation: >-
+      The cashier requirement is measurable and testable, and it describes a quality (speed and usability) rather than
+      a function. "User-friendly" is untestable; recording goods receipts is a functional requirement; and copying the
+      old system's look is a legacy preference, not a business need.
+
+  - id: q07
+    lesson: implementation-strategies-and-requirements
+    type: true_false
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the role of the business calendar in go-live planning
+    prompt: The Hershey case suggests that the go-live date should be set by the project schedule, with the business calendar adjusted around it.
+    answer: false
+    explanation: >-
+      False. Hershey's widely reported 1999 problems arose partly because the go-live placed shakedown just before its
+      peak Halloween season. The lesson is the reverse: the business calendar should constrain the go-live date, and
+      peak periods, year-end and statutory deadlines should be avoided.
+
+  # vendor-selection
+  - id: q08
+    lesson: vendor-selection
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Distinguish RFI from RFP
+    prompt: What is the main purpose of a request for information (RFI) in vendor selection?
+    options:
+      - To sign the contract with the chosen vendor
+      - To gather broad product information so a long list can be reduced
+      - To run scripted demonstrations with the buyer's data
+      - To agree service level penalties
+    answer: 1
+    explanation: >-
+      The RFI is an early, lightweight step used to screen a long list. The RFP follows with detailed requirements and
+      commercial terms for a short list; scripted demonstrations and SLA negotiation come later still.
+
+  - id: q09
+    lesson: vendor-selection
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Calculate a weighted score
+    prompt: A criterion has a weight of 0.25 and a vendor scores 4 out of 5 on it. What is the weighted score? (Give the number only.)
+    answers: ["1", "1.0", "1.00"]
+    explanation: >-
+      Weighted score equals weight multiplied by score: 0.25 × 4 = 1.00. Summing such products across all criteria
+      gives the vendor's total, provided the weights sum to 1.
+
+  - id: q10
+    lesson: vendor-selection
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Interpret sensitivity analysis in a weighted scoring model
+    scenario: |
+      Illustrative scenario. Vendor A scores 3.70 and vendor B 3.65 under the agreed weights. When the cost weight is
+      raised from 0.20 to 0.30 and functional fit lowered from 0.30 to 0.20, vendor C moves into first place.
+    prompt: What is the most appropriate conclusion for the analyst to present?
+    options:
+      - Vendor A must be chosen because it won under the agreed weights
+      - The weights should be changed until the preferred vendor wins
+      - The ranking is sensitive to the fit-versus-cost trade-off, which the steering committee must decide explicitly
+      - Weighted scoring is useless and should be abandoned
+    answer: 2
+    explanation: >-
+      A 0.05 margin is within the uncertainty of subjective scores, and the ranking flips under a plausible change in
+      weights. The analyst should make the strategic trade-off explicit. Mechanically choosing A ignores fragility;
+      manipulating weights introduces bias; and abandoning the method discards a useful, transparent tool.
+
+  - id: q11
+    lesson: vendor-selection
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain what total cost of ownership includes
+    prompt: Total cost of ownership should include internal staff time, training and future upgrades as well as licence or subscription fees.
+    answer: true
+    explanation: >-
+      True. TCO covers acquisition, implementation, operation and change costs over a defined horizon. Internal
+      backfill, support staff, training and upgrades often exceed the licence cost, so ignoring them distorts
+      comparisons.
+
+  - id: q12
+    lesson: vendor-selection
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Calculate five-year subscription cost
+    prompt: A cloud ERP costs GHS 300,000 per year in subscriptions plus GHS 400,000 one-off implementation. Ignoring all other costs, what is the five-year cost?
+    options:
+      - GHS 700,000
+      - GHS 1,500,000
+      - GHS 1,900,000
+      - GHS 2,000,000
+    answer: 2
+    explanation: >-
+      Five years of subscription is 5 × 300,000 = 1,500,000; adding the one-off implementation gives 1,900,000.
+      700,000 counts only one year of subscription; 1,500,000 omits implementation; 2,000,000 wrongly adds a further
+      year's subscription.
+
+  - id: q13
+    lesson: vendor-selection
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match selection concepts to their definitions
+    prompt: Match each vendor selection concept to its description.
+    pairs:
+      - left: Knock-out criterion
+        right: A requirement that excludes any vendor failing it, regardless of total score
+      - left: Scripted demonstration
+        right: Vendors run the buyer's own scenarios and data
+      - left: Service level agreement
+        right: Contractual, measurable service standards with remedies
+      - left: Vendor lock-in
+        right: Switching becomes costly because of proprietary formats or terms
+    explanation: >-
+      These mechanisms protect the buyer: knock-outs stop a high total from hiding a fatal gap, scripted demos prevent
+      polished generic sales presentations, SLAs make service enforceable, and awareness of lock-in shapes exit and
+      data-ownership clauses.
+
+  - id: q14
+    lesson: vendor-selection
+    type: true_false
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the integrity of the evaluation process
+    prompt: Adjusting criterion weights after seeing the vendor demonstrations is good practice because it reflects what the team has learned.
+    answer: false
+    explanation: >-
+      False. Changing weights after demonstrations invites bias towards a favoured product. Weights should be fixed in
+      advance; new insights are better handled through sensitivity analysis and transparent discussion of trade-offs.
+
+  # data-migration-and-integration
+  - id: q15
+    lesson: data-migration-and-integration
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Identify the purpose of data profiling
+    prompt: What is the main purpose of data profiling at the start of a migration?
+    options:
+      - To load data into the target system
+      - To quantify data quality problems such as duplicates and missing values
+      - To design the user interface of the new system
+      - To archive the legacy system
+    answer: 1
+    explanation: >-
+      Profiling statistically examines source data to reveal null rates, duplicates and invalid values, so cleansing can
+      be planned and sized. Loading, interface design and archiving are separate activities.
+
+  - id: q16
+    lesson: data-migration-and-integration
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Calculate the number of point-to-point links
+    prompt: Using n × (n − 1) / 2, how many point-to-point links could be needed to fully connect six systems? (Give the number only.)
+    answers: ["15"]
+    explanation: >-
+      6 × 5 / 2 = 15. The rapid growth in links as systems are added is the main argument for hub-and-spoke or API-led
+      integration, which reduces connections to roughly one per system.
+
+  - id: q17
+    lesson: data-migration-and-integration
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Interpret a reconciliation discrepancy
+    scenario: |
+      Illustrative scenario. After a mock load, legacy open receivables total GHS 4,862,350.00 and the ERP shows
+      GHS 4,858,100.00. The error file lists 35 rejected customers whose open invoices total GHS 3,900.00.
+    prompt: What should the migration team conclude?
+    options:
+      - The migration is acceptable because the difference is under 0.1%
+      - GHS 350.00 remains unexplained, suggesting a further error that must be investigated before sign-off
+      - The rejected customers explain the whole difference
+      - The legacy system must be wrong and should be ignored
+    answer: 1
+    explanation: >-
+      The total difference is 4,250.00; rejected records explain only 3,900.00, leaving 350.00 unexplained. Every
+      difference must be eliminated or explained, because an unexplained amount may signal a mapping error affecting
+      other records. Materiality arguments and blaming the source are not acceptable substitutes for investigation.
+
+  - id: q18
+    lesson: data-migration-and-integration
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain why record counts alone are insufficient
+    prompt: If source and target record counts match exactly, the migration has been proven accurate.
+    answer: false
+    explanation: >-
+      False. Counts prove completeness of records, not accuracy of values. A balance could be truncated or a code
+      mis-mapped while counts still match. Control totals and sample checks are also required.
+
+  - id: q19
+    lesson: data-migration-and-integration
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match integration patterns to typical uses
+    prompt: Match each integration pattern to its most typical use.
+    pairs:
+      - left: File-based batch
+        right: Nightly bank statement import
+      - left: API-led
+        right: E-commerce site checking ERP stock in real time
+      - left: Publish-subscribe events
+        right: A goods-received event updating several systems
+      - left: Enterprise service bus
+        right: Central routing and transformation across many systems
+    explanation: >-
+      Pattern choice follows latency and scale. Batch suits non-urgent bulk data; APIs give real-time request-response;
+      events loosely couple many consumers; and an ESB centralises routing and monitoring in large estates.
+
+  - id: q20
+    lesson: data-migration-and-integration
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Apply idempotency to payment interfaces
+    prompt: A mobile money aggregator occasionally resends the same payment confirmation. Which interface property prevents the invoice being paid twice?
+    options:
+      - Idempotency
+      - Asynchronous batching
+      - Point-to-point design
+      - Data profiling
+    answer: 0
+    explanation: >-
+      An idempotent interface recognises a repeated message (for example, by a unique transaction reference) and
+      produces the same result as processing it once. Batching, point-to-point design and profiling do not by
+      themselves prevent duplicate postings.
+
+  - id: q21
+    lesson: data-migration-and-integration
+    type: true_false
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate migration scope decisions
+    prompt: Archiving the legacy system in read-only form is usually a better choice than migrating full transactional history into the new ERP.
+    answer: true
+    explanation: >-
+      True. Full history multiplies mapping, cleansing and reconciliation effort and extends the cut-over window.
+      Migrating master data, open items and balances, while keeping the legacy system for enquiry and audit, usually
+      meets business needs at much lower risk.
+
+  # training-testing-deployment-and-evaluation
+  - id: q22
+    lesson: training-testing-deployment-and-evaluation
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Identify the purpose of regression testing
+    prompt: What is the purpose of regression testing?
+    options:
+      - To confirm that changes have not broken functionality that previously worked
+      - To test the system with business users for the first time
+      - To measure performance at peak load
+      - To train super-users
+    answer: 0
+    explanation: >-
+      Regression testing re-runs earlier tests after a fix or upgrade. UAT involves business users, performance testing
+      measures speed under load, and super-user training is not testing at all.
+
+  - id: q23
+    lesson: training-testing-deployment-and-evaluation
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match test types to examples
+    prompt: Match each test type to the example that best illustrates it.
+    pairs:
+      - left: System integration testing
+        right: Sales order through delivery, invoice, payment and ledger posting
+      - left: Performance testing
+        right: Forty tills processing simultaneous sales on a festive Saturday
+      - left: Authorisation testing
+        right: A cashier cannot approve their own refund
+      - left: Operational acceptance testing
+        right: Restoring from backup within the agreed time
+      - left: User acceptance testing
+        right: Pharmacists processing realistic prescriptions end to end
+    explanation: >-
+      Each test type answers a different question: do flows work across modules, is the system fast enough, are
+      controls enforced, can IT operate it, and does it support real business work? Owners differ accordingly.
+
+  - id: q24
+    lesson: training-testing-deployment-and-evaluation
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a go/no-go decision
+    scenario: |
+      Illustrative scenario. At the go/no-go meeting, UAT shows two open critical defects in the invoicing process,
+      reconciliation is complete, and 70% of cashiers are certified against a criterion of 90%. The managing director
+      has already announced the go-live date to customers.
+    prompt: What should the steering committee do?
+    options:
+      - Go live because the date has been announced
+      - Go live but ask cashiers to work harder
+      - Defer go-live until the pre-agreed criteria are met, communicating a revised date
+      - Cancel the project entirely
+    answer: 2
+    explanation: >-
+      Pre-agreed criteria exist precisely to protect the decision from schedule pressure. Open critical defects and
+      insufficient certification are clear no-go signals. Deferral with clear communication is usually far cheaper
+      than a failed go-live; cancellation is a disproportionate response to fixable readiness gaps.
+
+  - id: q25
+    lesson: training-testing-deployment-and-evaluation
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name the intensive post-go-live support period
+    prompt: What term describes the intensive support period immediately after go-live, with extra staffing and rapid defect resolution?
+    answers: [Hypercare, hyper care, hyper-care]
+    explanation: >-
+      Hypercare provides a triaged support desk, floor support from super-users and daily reviews of defects and
+      backlogs until agreed stability criteria are met.
+
+  - id: q26
+    lesson: training-testing-deployment-and-evaluation
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Calculate a KPI change in a post-implementation review
+    prompt: Days to close the monthly accounts fell from 12 before go-live to 6 six months later. What is the percentage change?
+    options:
+      - "-25%"
+      - "-50%"
+      - "-100%"
+      - "+50%"
+    answer: 1
+    explanation: >-
+      Percentage change is (new − old) / old = (6 − 12) / 12 = −0.5, a 50% reduction. The other options apply the
+      formula incorrectly or reverse the direction of change.
+
+  - id: q27
+    lesson: training-testing-deployment-and-evaluation
+    type: true_false
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the importance of baselines
+    prompt: Benefits in a post-implementation review can be demonstrated convincingly even if no KPIs were measured before go-live.
+    answer: false
+    explanation: >-
+      False. Without a pre-implementation baseline, there is no reference point against which change can be measured,
+      and claimed improvements cannot be distinguished from opinion. Baselining belongs in the chartering phase.
+
+  - id: q28
+    lesson: training-testing-deployment-and-evaluation
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain effective training design
+    prompt: Which training design is most likely to produce competent users at go-live?
+    options:
+      - A single generic lecture for all staff three months before go-live
+      - Role-based, hands-on sandbox sessions close to go-live, with certification and super-user support
+      - Emailing the vendor's user manual to all staff
+      - Training only managers and letting them explain the system informally
+    answer: 1
+    explanation: >-
+      Role-based, hands-on training timed close to go-live, verified by certification and backed by super-users,
+      addresses both knowledge and ability. Early generic lectures decay, manuals alone rarely build skill, and
+      informal cascades from managers are inconsistent.
+
+  # module-level
+  - id: q29
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate an end-to-end ERP implementation plan
+    marks: 25
+    case: |
+      Illustrative scenario. Adom Distribution Ltd, a Ghanaian distributor of consumer goods with a head office in Tema
+      and six depots, plans to replace spreadsheets and a standalone accounting package with an ERP. The managing
+      director wants a big bang go-live on 1 December to "start the new year clean". The project manager proposes
+      migrating ten years of transaction history. Vendor selection was based mainly on the lowest licence price. UAT
+      is scheduled for the final week of November, and training will consist of one half-day session for all staff.
+      No KPIs have been measured.
+    prompt: Critically evaluate Adom's implementation plan and recommend improvements covering strategy, vendor selection, data migration, testing and training, and evaluation.
+    structure:
+      - Brief diagnosis of the overall plan and its key risks
+      - Implementation strategy and timing relative to the business calendar
+      - Vendor selection weaknesses and the case for weighted scoring and TCO
+      - Data migration scope, cleansing and reconciliation
+      - Testing, go/no-go criteria, training and hypercare
+      - Baselining and post-implementation review
+    rubric:
+      - criterion: Strategy and timing
+        marks: 5
+        descriptor: Identifies risk of big bang before the December peak and proposes a justified alternative such as a pilot depot and phased waves.
+      - criterion: Vendor selection
+        marks: 5
+        descriptor: Explains why licence price is inadequate and proposes weighted scoring with knock-outs, sensitivity analysis and five-year TCO.
+      - criterion: Data migration
+        marks: 5
+        descriptor: Challenges ten-year history, recommends master data, open items and balances with archiving, and specifies cleansing and reconciliation controls.
+      - criterion: Testing and training
+        marks: 6
+        descriptor: Proposes staged testing, UAT with exit criteria earlier in the plan, measurable go/no-go criteria, role-based training with certification and hypercare.
+      - criterion: Evaluation and use of evidence
+        marks: 4
+        descriptor: Recommends baseline KPIs and a post-implementation review, using relevant concepts and cases such as Hershey accurately.
+    modelAnswer: |
+      A strong answer opens by noting that the plan concentrates risk at every stage. A big bang on 1 December places
+      shakedown in the festive peak for a consumer-goods distributor, repeating the timing error widely associated with
+      Hershey's 1999 go-live. A pilot at one depot near head office in, say, February, followed by waves of two or
+      three depots, would contain risk and test training and support in real conditions.
+
+      Selecting on licence price ignores fit and lifetime cost. The firm should agree weighted criteria before vendor
+      contact, use Must requirements as knock-outs, run scripted demonstrations with its own scenarios, test sensitivity
+      of the ranking, and compare five-year TCO including implementation, internal staff, training and upgrades.
+
+      Migrating ten years of history multiplies effort and extends the cut-over window. Master data, open receivables
+      and payables, open orders and stock by depot should be migrated, with the old system archived read-only. Profiling,
+      de-duplication of customers, and reconciliation by counts, control totals and samples, signed off by data owners
+      after several timed mock loads, are essential.
+
+      UAT in the final week leaves no time to fix defects. Integration testing should precede UAT by several weeks, UAT
+      should be driven by a requirements traceability matrix with exit criteria, and the go/no-go decision should rest
+      on measurable criteria including defect status, reconciliation and user certification. One half-day session is
+      inadequate: training should be role-based, hands-on in a sandbox, close to go-live and supported by super-users
+      and hypercare.
+
+      Finally, KPIs such as order cycle time, order accuracy, stock accuracy and month-end close days should be
+      baselined now so that a post-implementation review six months after go-live can demonstrate benefits.
+    explanation: >-
+      Examiners look for a structured critique that links each weakness to a specific remedy, uses module concepts
+      precisely (shakedown, knock-out criteria, TCO, reconciliation, go/no-go criteria, baseline) and refers to
+      documented cases accurately without invented figures.
+
+  - id: q30
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate why enterprise implementations fail around go-live
+    marks: 20
+    prompt: '"Most ERP failures are decided long before go-live." Critically discuss this statement with reference to implementation strategy, data migration and testing, using at least one well-documented international case.'
+    structure:
+      - Introduction defining failure and the life-cycle view (Markus and Tanis)
+      - Early decisions - strategy, scope, timing, vendor and partner selection
+      - Data migration and integration readiness
+      - Testing, training and go/no-go governance
+      - Counter-argument - shakedown management and post-go-live recovery
+      - Conclusion with a balanced judgement
+    rubric:
+      - criterion: Argument and judgement
+        marks: 6
+        descriptor: Takes a clear, balanced position and sustains it across the essay.
+      - criterion: Use of concepts and frameworks
+        marks: 6
+        descriptor: Applies life-cycle phases, strategy trade-offs, reconciliation and go/no-go criteria accurately.
+      - criterion: Use of cases
+        marks: 5
+        descriptor: Uses documented cases such as Hershey, TSB or Heathrow T5 accurately and analytically.
+      - criterion: Structure and expression
+        marks: 3
+        descriptor: Logical structure, clear academic English and appropriate referencing.
+    modelAnswer: |
+      A good essay accepts much of the statement while qualifying it. Using Markus and Tanis's life cycle, it argues that
+      chartering and project-phase decisions largely determine shakedown risk. Strategy and timing are decisive: Hershey's
+      widely reported 1999 difficulties followed a go-live close to its peak season, a choice made months earlier. Scope
+      and readiness evidence matter too: TSB's 2018 migration was executed as a single weekend event, and subsequent
+      reviews and regulatory action focused on whether readiness had been adequately evidenced and challenged.
+
+      The essay should show how data migration (profiling, cleansing, mock loads, reconciliation) and testing (integration,
+      performance, UAT with exit criteria) produce the evidence on which a go/no-go decision rests, and that compressing
+      them to meet a date removes that evidence. Heathrow Terminal 5's 2008 opening illustrates that operational
+      readiness of people and procedures must be tested alongside technology.
+
+      A balanced answer then argues that not everything is pre-determined. Strong hypercare, rapid defect triage, clear
+      communication and willingness to apply workarounds can limit damage during shakedown, and post-implementation
+      reviews can recover benefits over time. The conclusion might be that early decisions set the level of risk, while
+      post-go-live management determines how much of that risk turns into business harm.
+    explanation: >-
+      Examiners reward a nuanced judgement supported by life-cycle reasoning, precise use of implementation concepts and
+      accurate use of well-documented cases rather than descriptive narrative.

@@ -1,0 +1,38 @@
+module: applied-ai
+cards:
+  - lesson: ai-in-finance-healthcare-and-education
+    front: What three questions does the opportunity–risk–readiness lens ask of an AI application?
+    back: What value it creates and for whom (opportunity), who could be harmed and how severely (risk), and whether the organisation has the data, systems, skills, governance and culture to sustain it (readiness).
+  - lesson: ai-in-finance-healthcare-and-education
+    front: Why is alternative-data credit scoring both an opportunity and a risk?
+    back: It can extend credit to people without bureau histories, but it may encode proxies for protected traits, reduce explainability, raise consent issues and enable over-lending to vulnerable borrowers.
+  - lesson: ai-in-finance-healthcare-and-education
+    front: Why should triage models usually favour recall for serious conditions?
+    back: Missing a seriously ill patient (false negative) is far more harmful than an unnecessary escalation (false positive), so thresholds are set to catch more true cases, with clinicians reviewing alerts.
+  - lesson: ai-in-finance-healthcare-and-education
+    front: What does "diagnostic support" imply about responsibility for decisions?
+    back: The AI flags, prioritises or offers a second opinion, but a qualified clinician makes and owns the diagnosis and treatment decision.
+  - lesson: ai-in-finance-healthcare-and-education
+    front: Name two education-specific risks of AI.
+    back: Widening the digital divide for learners without devices or data, and undermining learning or assessment validity through over-reliance or unreliable automated grading and detection.
+  - lesson: ai-in-finance-healthcare-and-education
+    front: What does the Thailand retinopathy deployment teach about AI readiness?
+    back: Validation accuracy does not guarantee field benefit; image quality, connectivity and clinic workflow determined outcomes, so local pilots and socio-technical design are essential.
+  - lesson: ai-in-retail-logistics-and-manufacturing
+    front: How does predictive maintenance differ from preventive maintenance?
+    back: Preventive maintenance follows a fixed schedule; predictive maintenance uses sensor data and models to forecast failure so work is timed to actual need.
+  - lesson: ai-in-retail-logistics-and-manufacturing
+    front: Why must a predictive maintenance business case include sensitivity analysis?
+    back: Net benefit depends heavily on real-world recall and false-alarm rates; if production recall is lower than in the trial, the savings can largely disappear.
+  - lesson: ai-in-retail-logistics-and-manufacturing
+    front: What is the difference between prediction and optimisation in operations AI?
+    back: Prediction estimates an uncertain quantity (demand, travel time, failure); optimisation chooses the best action given that estimate (order quantity, route, maintenance timing). Value requires both.
+  - lesson: ai-in-retail-logistics-and-manufacturing
+    front: Why is visual quality inspection often deployed on edge devices?
+    back: Production lines need very low latency and may have unreliable connectivity, so models run beside the line rather than calling a remote server.
+  - lesson: ai-in-retail-logistics-and-manufacturing
+    front: Which Ghanaian factors shape logistics AI readiness?
+    back: Urban congestion, informal addressing (helped by digital addressing such as GhanaPostGPS), variable road conditions and port clearance times all affect ETA and routing data quality.
+  - lesson: ai-in-retail-logistics-and-manufacturing
+    front: What is the key lesson of the UPS ORION case for smaller firms?
+    back: Invest in data foundations, involve drivers in design, encode practical constraints and measure results on a subset of routes before scaling.

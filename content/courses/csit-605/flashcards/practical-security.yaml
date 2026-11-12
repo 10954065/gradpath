@@ -1,0 +1,56 @@
+module: practical-security
+cards:
+  - lesson: threat-modelling
+    front: What are Shostack's four threat modelling questions?
+    back: What are we working on? What can go wrong? What are we going to do about it? Did we do a good job?
+  - lesson: threat-modelling
+    front: Expand STRIDE and give the property each threat violates.
+    back: Spoofing (authentication), Tampering (integrity), Repudiation (non-repudiation), Information disclosure (confidentiality), Denial of service (availability), Elevation of privilege (authorisation).
+  - lesson: threat-modelling
+    front: What are the five elements of a data flow diagram used in threat modelling?
+    back: External entities, processes, data stores, data flows and trust boundaries.
+  - lesson: threat-modelling
+    front: Why focus threat analysis on trust boundaries?
+    back: Where data crosses from less trusted to more trusted zones, identities and inputs must be verified; failures at these crossings cause many serious flaws, such as forged partner callbacks.
+  - lesson: threat-modelling
+    front: Repudiation versus spoofing?
+    back: Spoofing is pretending to be someone else; repudiation is denying an action you performed because there is insufficient evidence, countered by individual accounts and tamper-evident logs.
+  - lesson: threat-modelling
+    front: Name three alternatives or complements to STRIDE.
+    back: Attack trees (goal decomposition), PASTA (risk-centric seven-stage method) and LINDDUN (privacy threats).
+  - lesson: security-assessment-and-vulnerability-management
+    front: List the stages of the vulnerability management lifecycle.
+    back: Asset discovery and inventory, identification, analysis and prioritisation, remediation or compensating controls, verification, and reporting and improvement.
+  - lesson: security-assessment-and-vulnerability-management
+    front: State the CVSS qualitative severity bands.
+    back: None 0.0; Low 0.1–3.9; Medium 4.0–6.9; High 7.0–8.9; Critical 9.0–10.0.
+  - lesson: security-assessment-and-vulnerability-management
+    front: Why is CVSS severity not the same as risk?
+    back: The base score ignores your exposure, asset criticality, active exploitation and compensating controls; risk-based prioritisation adds these, using sources such as CISA KEV and EPSS.
+  - lesson: security-assessment-and-vulnerability-management
+    front: What must be in place before any security test begins?
+    back: Written authorisation from someone with authority over the systems and rules of engagement covering scope, exclusions, methods, timing, contacts, stop conditions and data handling.
+  - lesson: security-assessment-and-vulnerability-management
+    front: What are the four metric groups in CVSS v4.0?
+    back: Base, Threat, Environmental and Supplemental.
+  - lesson: security-assessment-and-vulnerability-management
+    front: What made Log4Shell hard to remediate?
+    back: Log4j was embedded deep in many products and applications as a transitive dependency, so organisations without an SBOM or SCA struggled to find where they were exposed.
+  - lesson: awareness-scenarios-and-secure-architecture
+    front: What distinguishes an effective awareness programme?
+    back: Behaviour-focused objectives, risk-based targeting of roles, short relevant content, easy secure options, a positive reporting culture, ethical simulations and outcome metrics.
+  - lesson: awareness-scenarios-and-secure-architecture
+    front: What are the key steps in running a tabletop exercise?
+    back: Set objectives, involve decision-makers, write a scenario with injects, facilitate neutrally, then debrief and produce an after-action report with owned actions.
+  - lesson: awareness-scenarios-and-secure-architecture
+    front: Name Saltzer and Schroeder's eight design principles.
+    back: Economy of mechanism, fail-safe defaults, complete mediation, open design, separation of privilege, least privilege, least common mechanism and psychological acceptability.
+  - lesson: awareness-scenarios-and-secure-architecture
+    front: Defence in depth versus zero trust?
+    back: Defence in depth layers independent controls so one failure is not fatal; zero trust removes implicit trust based on network location and evaluates every access request; they are complementary.
+  - lesson: awareness-scenarios-and-secure-architecture
+    front: What were the key lessons of the Twitter 2020 incident?
+    back: Phone spear-phishing captured credentials and MFA codes in real time; powerful internal tools were too widely accessible; phishing-resistant MFA, least privilege and dual approval would have reduced impact.
+  - lesson: awareness-scenarios-and-secure-architecture
+    front: Why should staff who report their own mistakes be thanked rather than punished?
+    back: Fast reporting shortens incidents; punishment discourages reporting and lets attacks run longer undetected.

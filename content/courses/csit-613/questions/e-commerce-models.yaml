@@ -1,0 +1,246 @@
+module: e-commerce-models
+questions:
+  - id: q01
+    lesson: b2b-b2c-c2c-and-c2b
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Match e-commerce models to examples
+    prompt: Match each e-commerce model to the example that best illustrates it.
+    pairs:
+      - left: B2B
+        right: A distributor's portal where registered retailers order at contract prices
+      - left: B2C
+        right: An online fashion shop selling to individual shoppers
+      - left: C2C
+        right: An individual selling a used phone to another individual on a classified-ads site
+      - left: C2B
+        right: A freelance designer selling logo work to companies through a work platform
+    explanation: The models are defined by who sells to whom. Platforms often sit in the middle, so classify by the seller and buyer, not by the platform's name.
+
+  - id: q02
+    lesson: b2b-b2c-c2c-and-c2b
+    type: true_false
+    bloom: recall
+    difficulty: easy
+    objective: Recall the relative size of B2B and B2C
+    prompt: B2B e-commerce is generally much larger by value than B2C e-commerce, even though it is less visible to consumers.
+    answer: true
+    explanation: Business purchases of inputs, stock and services involve large, repeated orders, so B2B dominates by value. Consumers see B2C, which is why its size is often overestimated.
+
+  - id: q03
+    lesson: b2b-b2c-c2c-and-c2b
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain distinctive features of B2B buying
+    prompt: Which feature most clearly distinguishes B2B from B2C buying processes?
+    options:
+      - B2B buyers never use mobile devices
+      - B2B purchases typically involve several people, negotiated prices, approval workflows and credit terms
+      - B2B transactions are always conducted through public marketplaces
+      - B2B buyers decide more quickly and emotionally than consumers
+    answer: 1
+    explanation: B2B buying centres, contract pricing, approvals and invoices on credit terms define B2B. B2B buyers do use mobile devices; much B2B trade happens on private portals and EDI; and B2B decisions are usually slower and more rational than consumer purchases.
+
+  - id: q04
+    lesson: b2b-b2c-c2c-and-c2b
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the payment arrangement that addresses C2C trust
+    prompt: What term describes a trusted third party holding the buyer's payment until satisfactory delivery is confirmed?
+    answers: [escrow, escrow payment, escrow service]
+    explanation: Escrow-style payment protects both buyer and seller in transactions between strangers, as with Alipay's original role on Taobao.
+
+  - id: q05
+    lesson: b2b-b2c-c2c-and-c2b
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply the classification to a Ghanaian distributor's customer groups
+    scenario: |
+      Illustrative scenario. A pharmaceutical distributor in Accra supplies (1) licensed pharmacies that order weekly on 30-day credit, (2) individual customers who buy over-the-counter products from its retail outlet, and (3) public hospitals that procure through electronic tenders.
+    prompt: Which classification of these three relationships is correct?
+    options:
+      - B2C, B2C and B2G
+      - B2B, B2C and B2G
+      - B2B, C2C and G2C
+      - C2B, B2C and B2B
+    answer: 1
+    explanation: Pharmacies are business buyers (B2B), individuals are consumers (B2C), and public hospitals buying through tenders represent business-to-government trade (B2G). Each requires different payment, pricing and ordering systems.
+
+  - id: q06
+    lesson: b2b-b2c-c2c-and-c2b
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Understand that m-commerce is a channel
+    prompt: Mobile commerce is a separate party model, equivalent to B2B or C2C.
+    answer: false
+    explanation: M-commerce describes the channel (mobile devices). A mobile transaction can belong to any party model, for example B2C shopping in an app or C2C selling via a messaging group.
+
+  - id: q07
+    lesson: b2b-b2c-c2c-and-c2b
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse why trust mechanisms matter most in C2C
+    prompt: Why is the trust problem typically more severe in C2C than in established B2C e-commerce?
+    options:
+      - C2C transactions are always larger in value
+      - C2C buyers and sellers are usually strangers without brands, contracts or reputations to lose, so the platform must supply trust through ratings, verification and payment holding
+      - C2C platforms are not allowed to process payments
+      - Consumers in C2C markets do not care about product quality
+    answer: 1
+    explanation: Established B2C sellers have brands and legal accountability; individuals in C2C lack these signals, so platform-provided reputation and payment protection become decisive. C2C values are typically small, and platforms often do process payments.
+
+  - id: q08
+    lesson: marketplaces-and-platform-business-models
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish a marketplace from a reseller
+    prompt: Which statement correctly distinguishes a marketplace from a reseller?
+    options:
+      - A marketplace owns inventory and sets prices; a reseller earns commission
+      - A marketplace hosts third-party sellers who keep ownership and pricing, typically earning commission; a reseller buys stock and earns a margin
+      - They differ only in the design of their websites
+      - A reseller never sells online
+    answer: 1
+    explanation: The reseller (merchant) model takes ownership and inventory risk; the marketplace facilitates third-party transactions. Many firms are hybrids, operating both.
+
+  - id: q09
+    lesson: marketplaces-and-platform-business-models
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match network effect types to examples
+    prompt: Match each network effect type to the example that illustrates it.
+    pairs:
+      - left: Positive cross-side
+        right: More sellers on a marketplace give buyers more choice
+      - left: Negative same-side
+        right: More drivers on a ride-hailing app compete for the same fares
+      - left: Positive same-side
+        right: More friends on a messaging app make it more useful to each user
+      - left: Negative cross-side
+        right: A flood of low-quality listings reduces buyers' trust in the marketplace
+    explanation: Distinguishing the side and the sign of each effect is essential for platform analysis. Negative effects are managed through governance.
+
+  - id: q10
+    lesson: marketplaces-and-platform-business-models
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the term for users participating in several platforms
+    prompt: What term describes users who participate in several competing platforms at the same time?
+    answers: [multi-homing, multihoming, multi homing]
+    explanation: Multi-homing weakens the protection network effects give a platform, because users can easily shift activity between platforms.
+
+  - id: q11
+    lesson: marketplaces-and-platform-business-models
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply Rochet and Tirole's pricing logic
+    scenario: |
+      Illustrative scenario. A new platform connects event venues in Kumasi with people planning weddings and funerals. Planners are highly price-sensitive and compare options informally, while venues value a steady flow of bookings and are willing to pay for them.
+    prompt: Which pricing structure is most consistent with two-sided market theory?
+    options:
+      - Charge planners a high booking fee and let venues list free
+      - Let planners search and book free and charge venues a commission on confirmed bookings
+      - Charge both sides the same fee for fairness
+      - Charge neither side and rely on future growth
+    answer: 1
+    explanation: Rochet and Tirole show that price structure matters. Subsidising the price-sensitive side whose participation creates value for the other (planners) and charging the side that values access more (venues) is consistent with the theory. Equal fees ignore asymmetric sensitivities, and charging nothing provides no revenue model.
+
+  - id: q12
+    lesson: marketplaces-and-platform-business-models
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Understand the limits of network effects
+    prompt: Strong network effects guarantee that a leading platform will remain dominant permanently.
+    answer: false
+    explanation: Multi-homing, low switching costs, negative network effects from poor governance, disintermediation and regulation can all erode a leader's position.
+
+  - id: q13
+    lesson: marketplaces-and-platform-business-models
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate responses to disintermediation risk
+    scenario: |
+      Illustrative scenario. A platform connecting home cleaners with households in Accra finds that after the first booking many households contact cleaners directly by phone, so the platform loses its commission on repeat work.
+    prompt: Which response is most likely to reduce disintermediation sustainably?
+    options:
+      - Hide cleaners' names so that households cannot recognise them
+      - Provide ongoing value to both sides inside the platform, such as payment protection, insurance, scheduling, ratings that build cleaners' reputations, and lower commission on repeat bookings
+      - Double the commission to recover lost revenue
+      - Ban households that are suspected of contacting cleaners directly
+    answer: 1
+    explanation: Users bypass platforms that add little value after matching. Ongoing benefits and fair value sharing give both sides reasons to stay. Hiding identities undermines trust, higher commission strengthens the incentive to bypass, and bans are hard to enforce and alienate users.
+
+  - id: q14
+    lesson: marketplaces-and-platform-business-models
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse chicken-and-egg launch strategies
+    prompt: A new B2C marketplace in Ghana starts by selling its own stock of phone accessories before opening to third-party sellers. Which launch strategy does this illustrate?
+    options:
+      - Piggybacking on an existing user base
+      - Seeding the platform with its own supply to attract buyers before sellers join
+      - Multi-homing
+      - Same-side subsidy for buyers
+    answer: 1
+    explanation: Acting as a reseller first provides supply so that buyers arrive, which then attracts third-party sellers. Piggybacking uses another network's users; multi-homing is user behaviour, not a launch strategy.
+
+  - id: q15
+    lesson: marketplaces-and-platform-business-models
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the authors of the seminal two-sided market paper
+    prompt: Which two economists wrote the 2003 paper "Platform competition in two-sided markets"? (Give surnames.)
+    answers: [Rochet and Tirole, Rochet & Tirole, Rochet Tirole]
+    explanation: Jean-Charles Rochet and Jean Tirole's paper in the Journal of the European Economic Association established the importance of price structure in two-sided markets.
+
+  - id: q16
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate platform strategy in a Ghanaian context
+    prompt: |
+      "Network effects mean that in every digital market in Ghana, a single platform will eventually dominate." Critically evaluate this statement with reference to platform theory and at least two Ghanaian or African examples.
+    marks: 20
+    structure:
+      - Define platforms, two-sided markets and network effects (cross-side, same-side, positive, negative)
+      - Explain the mechanism by which network effects can lead to concentration
+      - Present counter-forces such as multi-homing, low switching costs, negative network effects, local niches, disintermediation and regulation
+      - Apply to Ghanaian or African examples such as ride-hailing, marketplaces and mobile money interoperability
+      - Reach a reasoned conclusion on when concentration is and is not likely
+    rubric:
+      - criterion: Conceptual accuracy
+        marks: 5
+        descriptor: Defines platforms and network effects precisely, including the distinction between cross-side and same-side and between positive and negative effects.
+      - criterion: Argument for concentration
+        marks: 4
+        descriptor: Explains the virtuous circle and why winner-take-most outcomes can arise, citing Rochet and Tirole or Parker et al. appropriately.
+      - criterion: Counter-arguments
+        marks: 5
+        descriptor: Analyses multi-homing, switching costs, governance failures, disintermediation and regulation as limits on dominance.
+      - criterion: Application to examples
+        marks: 4
+        descriptor: Uses accurate, well-known facts about Ghanaian or African platforms without invented statistics.
+      - criterion: Conclusion
+        marks: 2
+        descriptor: Reaches a balanced, conditional conclusion supported by the argument.
+    modelAnswer: |
+      A strong answer opens by defining a platform as a business that facilitates interactions between interdependent groups and explains that cross-side network effects create a virtuous circle: more sellers attract more buyers and vice versa, while data improves matching. Where these effects are strong and users single-home, markets tend towards concentration, which supports the statement.
+
+      The answer should then challenge the word "every". Multi-homing is common in Ghanaian ride-hailing, where many drivers and riders use more than one app, so network effects provide weaker protection and several platforms coexist. Switching costs are low when the service is standardised. Negative network effects from fraud or poor quality can push users away if governance is weak. Disintermediation is a strong force in Ghana's relationship-based markets: once a buyer has a seller's WhatsApp contact, the platform may be bypassed. Regulation can also reduce the advantages of size, as with mobile money interoperability, which allowed customers on different networks and banks to transact with one another and so reduced the value of being on the largest network alone.
+
+      Examples might include ride-hailing competition, marketplaces that combine first- and third-party sales, and M-Pesa in Kenya as a contrasting case of a dominant mobile money platform. The conclusion should be conditional: concentration is likely where cross-side effects are strong, multi-homing is costly and governance is good; it is unlikely where services are standardised, users multi-home and regulators promote interoperability.
+    explanation: Examiners look for precise use of platform concepts, a balanced argument that recognises counter-forces, accurate examples and a conditional conclusion.

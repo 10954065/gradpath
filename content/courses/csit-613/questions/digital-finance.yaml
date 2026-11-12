@@ -1,0 +1,326 @@
+module: digital-finance
+questions:
+  - id: q01
+    lesson: fintech-and-digital-banking
+    type: matching
+    bloom: understand
+    difficulty: easy
+    objective: Classify FinTech activities into categories
+    prompt: Match each activity to its FinTech category.
+    pairs:
+      - left: Mobile micro-loans disbursed to a wallet
+        right: Digital lending
+      - left: Automated anti-money-laundering transaction monitoring
+        right: RegTech
+      - left: Micro-insurance sold and paid for by mobile phone
+        right: InsurTech
+      - left: Robo-adviser building an investment portfolio
+        right: WealthTech
+      - left: Online checkout accepting cards and mobile money
+        right: Payments
+    explanation: Classifying activities helps identify the relevant risks and regulations. Many providers span several categories through partnerships.
+
+  - id: q02
+    lesson: fintech-and-digital-banking
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Understand consent in open banking
+    prompt: Under open banking, banks publish customers' account data so that any firm can use it.
+    answer: false
+    explanation: Open banking allows authorised third parties to access account data or initiate payments only with the customer's explicit consent, through secure, standardised APIs.
+
+  - id: q03
+    lesson: fintech-and-digital-banking
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the protocol used for menu-based banking on basic phones
+    prompt: What mobile network protocol provides menu-based banking and mobile money sessions on basic phones without internet access? (Give the acronym.)
+    answers: [USSD]
+    explanation: USSD (Unstructured Supplementary Service Data) is widely used in Ghana because it works on any phone without data, although sessions are short and the interface is limited.
+
+  - id: q04
+    lesson: fintech-and-digital-banking
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply the expected loss formula to a digital loan product
+    scenario: |
+      Illustrative scenario. A digital lender offers GHS 800 loans. It estimates a probability of default of 5 per cent and a loss given default of 75 per cent.
+    prompt: What is the expected loss per loan?
+    options:
+      - GHS 30
+      - GHS 40
+      - GHS 600
+      - GHS 3.75
+    answer: 0
+    explanation: Expected loss = PD × LGD × EAD = 0.05 × 0.75 × 800 = GHS 30. GHS 40 ignores LGD; GHS 600 ignores PD; GHS 3.75 omits the exposure.
+
+  - id: q05
+    lesson: fintech-and-digital-banking
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the main purpose of UK open banking
+    prompt: What was the principal policy objective behind the introduction of open banking in the United Kingdom?
+    options:
+      - To replace banks with technology companies
+      - To increase competition by letting customers share their data with authorised third parties
+      - To abolish card payments
+      - To allow banks to sell customer data for profit
+    answer: 1
+    explanation: Open banking followed a Competition and Markets Authority investigation and aimed to reduce incumbents' informational advantage. It did not aim to replace banks, abolish cards or monetise data without consent.
+
+  - id: q06
+    lesson: fintech-and-digital-banking
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate responses to a loss-making digital loan product
+    prompt: A digital lender's expected loss exceeds its expected fee income. Which response best balances viability and consumer protection?
+    options:
+      - Sharply raise fees for all borrowers
+      - Improve credit scoring with consented transaction data and start new borrowers on small limits that grow with repayment
+      - Lend larger amounts to spread fixed costs
+      - Remove affordability checks to speed up approvals
+    answer: 1
+    explanation: Better data and graduated limits reduce default risk and exposure while new information accumulates. Raising fees invites adverse selection and over-indebtedness, larger loans raise exposure, and removing checks increases harm.
+
+  - id: q07
+    lesson: fintech-and-digital-banking
+    type: true_false
+    bloom: recall
+    difficulty: medium
+    objective: Recall Ghana's payment systems legislation
+    prompt: The Payment Systems and Services Act, 2019 (Act 987) provides the framework for licensing payment service providers and electronic money issuers in Ghana.
+    answer: true
+    explanation: Act 987 is the principal legislation for payment systems and services in Ghana, under the regulatory authority of the Bank of Ghana. Specific licence requirements should be checked in the official text.
+
+  - id: q08
+    lesson: mobile-money-and-digital-wallets
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain how mobile money balances are backed
+    prompt: What makes customers' mobile money balances safe in a well-regulated system?
+    options:
+      - The operator lends the funds to borrowers to earn interest
+      - The issuer holds funds equal to outstanding e-money in trust or custodial accounts at banks
+      - Mobile money balances are backed by airtime credit
+      - Agents hold the customers' cash in their shops
+    answer: 1
+    explanation: E-money is issued against funds held in trust accounts, so total e-value should equal backing funds. Lending out the funds, airtime or agent cash would not protect customers.
+
+  - id: q09
+    lesson: mobile-money-and-digital-wallets
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Calculate an agent's liquidity position after transactions
+    scenario: |
+      Illustrative scenario. An agent starts with GHS 4,000 cash and GHS 3,000 e-float. During the morning she processes cash-ins of GHS 2,500 and cash-outs of GHS 1,000.
+    prompt: What are her cash and e-float balances afterwards (ignoring commissions)?
+    options:
+      - Cash GHS 5,500; e-float GHS 1,500
+      - Cash GHS 2,500; e-float GHS 4,500
+      - Cash GHS 5,500; e-float GHS 4,500
+      - Cash GHS 7,000; e-float GHS 0
+    answer: 0
+    explanation: Cash-in raises cash and lowers e-float; cash-out does the reverse. Cash = 4,000 + 2,500 − 1,000 = 5,500; e-float = 3,000 − 2,500 + 1,000 = 1,500. Total liquidity stays at GHS 7,000.
+
+  - id: q10
+    lesson: mobile-money-and-digital-wallets
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Understand that cash-in requires e-float
+    prompt: An agent with a large amount of cash but very little e-float can still accept large cash-in deposits.
+    answer: false
+    explanation: A cash-in requires the agent to send e-value from the agent wallet, so it is limited by e-float. Cash helps only with cash-out; the agent must rebalance.
+
+  - id: q11
+    lesson: mobile-money-and-digital-wallets
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match wallet types to descriptions
+    prompt: Match each digital wallet type to its description.
+    pairs:
+      - left: Stored-value e-money wallet
+        right: Value held as e-money backed by trust funds, with agents for cash
+      - left: Pass-through wallet
+        right: Stores a card token and charges payments to the underlying card
+      - left: Bank-linked wallet
+        right: An interface to funds held in a bank deposit account
+      - left: Closed-loop wallet
+        right: Value usable only within one merchant or platform
+    explanation: Wallet type determines where value sits and which risks matter, such as trust accounts, card tokenisation or limited acceptance.
+
+  - id: q12
+    lesson: mobile-money-and-digital-wallets
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the organisation that operates Ghana's mobile money interoperability switch
+    prompt: Which Bank of Ghana subsidiary operates the platform for mobile money interoperability in Ghana? (Give the acronym.)
+    answers: [GhIPSS, GHIPSS]
+    explanation: Ghana Interbank Payment and Settlement Systems (GhIPSS) introduced mobile money interoperability in 2018, allowing transfers between wallets on different networks and between wallets and bank accounts.
+
+  - id: q13
+    lesson: mobile-money-and-digital-wallets
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the effect of interoperability on network effects
+    prompt: How does interoperability change the competitive effect of network size in mobile money?
+    options:
+      - It strengthens the largest operator's exclusive advantage
+      - It raises the value of the whole system to users while reducing the exclusive network advantage of the largest operator, shifting competition towards price and service
+      - It has no effect because each operator keeps separate customers
+      - It eliminates the need for agents
+    answer: 1
+    explanation: When anyone can pay anyone, the benefit of being on the biggest network shrinks, but every user gains. Competition moves to reliability, agent quality, fees and services. Agents remain needed for cash.
+
+  - id: q14
+    lesson: mobile-money-and-digital-wallets
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain Jack and Suri's (2014) findings on M-Pesa
+    prompt: Which statement best summarises the main finding of Jack and Suri (2014) on M-Pesa in Kenya?
+    options:
+      - M-Pesa users stopped using cash entirely
+      - Households with access to M-Pesa were better able to cope with negative shocks because receiving remittances became cheaper and easier, improving risk sharing
+      - M-Pesa caused banks in Kenya to close
+      - M-Pesa had no measurable economic effects
+    answer: 1
+    explanation: The paper links lower transaction costs to better risk sharing through social networks. The other options exaggerate or misstate the evidence.
+
+  - id: q15
+    lesson: payment-gateways-and-electronic-transactions
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Match card transaction parties to roles
+    prompt: Match each party in a card transaction to its role.
+    pairs:
+      - left: Issuer
+        right: Issues the customer's card and approves or declines transactions
+      - left: Acquirer
+        right: Contracts with the merchant and receives funds on its behalf
+      - left: Card scheme
+        right: Sets rules and routes messages between issuers and acquirers
+      - left: Payment gateway
+        right: Securely captures payment details at checkout and transmits requests
+    explanation: The four-party model (cardholder, merchant, acquirer, issuer) plus the scheme, with gateways and PSPs as intermediaries, underpins every card payment.
+
+  - id: q16
+    lesson: payment-gateways-and-electronic-transactions
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish authorisation from settlement
+    prompt: What has happened when a card transaction has been authorised but not yet settled?
+    options:
+      - Funds have been transferred into the merchant's bank account
+      - The issuer has approved the transaction and placed a hold on funds, but funds have not yet moved to the merchant
+      - The cardholder has filed a chargeback
+      - The transaction has been refunded
+    answer: 1
+    explanation: Authorisation approves and holds; clearing and settlement later move funds, net of fees. Chargebacks and refunds are separate post-transaction events.
+
+  - id: q17
+    lesson: payment-gateways-and-electronic-transactions
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for a provider-to-merchant event notification
+    prompt: What is the term for an automated HTTP message sent by a payment provider to a merchant's server to report an event such as a successful payment?
+    answers: [webhook, webhooks, a webhook]
+    explanation: Webhooks deliver asynchronous events; merchants should verify them and process them idempotently.
+
+  - id: q18
+    lesson: payment-gateways-and-electronic-transactions
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Diagnose an integration flaw causing unpaid orders to ship
+    scenario: |
+      Illustrative scenario. An online shop in Accra marks orders as paid as soon as the customer's browser returns to the "success" page after a mobile money checkout. Several orders were shipped although the PSP later reported the payments as failed after the customer did not approve the prompt.
+    prompt: What is the most appropriate correction?
+    options:
+      - Ask customers to send screenshots of their payment confirmation
+      - Mark orders as paid only after a verified webhook or server-side status check confirms success, keeping others in a pending state with a timeout
+      - Stop accepting mobile money
+      - Ship orders only on weekdays
+    answer: 1
+    explanation: Redirects do not prove payment. Server-side verification of the PSP status, with explicit pending handling, prevents shipping unpaid orders. Screenshots can be faked, abandoning mobile money loses customers, and timing is irrelevant.
+
+  - id: q19
+    lesson: payment-gateways-and-electronic-transactions
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Calculate expected net settlement
+    scenario: |
+      Illustrative scenario. A merchant has GHS 10,000 of card sales at a 2.5 per cent fee and GHS 20,000 of mobile money sales at a 1.5 per cent fee in a day, plus a GHS 500 refund deducted from the payout. (Fees are illustrative.)
+    prompt: What is the expected net settlement?
+    options:
+      - GHS 28,950
+      - GHS 29,450
+      - GHS 30,000
+      - GHS 29,050
+    answer: 0
+    explanation: Fees = 250 + 300 = GHS 550. Net = 30,000 − 550 − 500 = GHS 28,950. GHS 29,450 ignores the refund; GHS 30,000 ignores fees and refund; GHS 29,050 uses wrong fees.
+
+  - id: q20
+    lesson: payment-gateways-and-electronic-transactions
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish refunds from chargebacks
+    prompt: A chargeback is a refund that the merchant initiates voluntarily after a customer complains.
+    answer: false
+    explanation: A refund is merchant-initiated. A chargeback is initiated by the cardholder through the issuer under card scheme rules, and the merchant may contest it with evidence.
+
+  - id: q21
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Design and evaluate a digital payment acceptance strategy for a Ghanaian SME
+    prompt: Evaluate MamaPure's payment problems and design a payment acceptance approach covering methods, integration, transaction lifecycle handling and reconciliation. Note that your answer is an educational exercise, not financial or regulatory advice.
+    marks: 25
+    case: |
+      Illustrative scenario. MamaPure is a hypothetical producer of packaged shea butter and black soap in Tamale that sells to customers across Ghana through Instagram and WhatsApp, and wants to start selling to buyers in other West African countries. It currently asks customers to send mobile money to the owner's personal wallet and to send a screenshot as proof. Problems include fake screenshots, payments sent to the wrong number, difficulty separating business and personal funds, and customers on other networks complaining about the process. Some foreign buyers want to pay by card. The owner is considering a website with a PSP checkout, payment links sent through WhatsApp, or a marketplace.
+    structure:
+      - Diagnose risks of the current approach (fraud, commingling, poor records, customer friction)
+      - Explain relevant concepts (merchant accounts, interoperability, PSP aggregation, card versus mobile money lifecycles)
+      - Compare website checkout, payment links and marketplace options
+      - Design the transaction handling process (references, webhooks, verification, pending states, refunds)
+      - Propose reconciliation controls and identify regulatory, cost and data protection considerations
+    rubric:
+      - criterion: Diagnosis of current risks
+        marks: 4
+        descriptor: Identifies screenshot fraud, commingled funds, missing records and friction across networks, with consequences.
+      - criterion: Application of payment concepts
+        marks: 6
+        descriptor: Correctly explains PSP aggregation, interoperability, card authorisation and settlement, and mobile money approval and pending states.
+      - criterion: Option evaluation
+        marks: 5
+        descriptor: Compares options on cost, control, customer experience, cross-border reach and dependence.
+      - criterion: Transaction handling design
+        marks: 6
+        descriptor: Specifies unique references, verified webhooks, idempotency, timeouts, retry and refund policy.
+      - criterion: Reconciliation and compliance
+        marks: 4
+        descriptor: Proposes daily three-way reconciliation and notes licensed providers, fees, Act 987 context and Act 843 data protection.
+    modelAnswer: |
+      The current approach exposes MamaPure to several risks. Screenshots are easily fabricated, so goods may be shipped without payment. Using a personal wallet commingles business and personal funds, making bookkeeping, tax and growth difficult, and provides no structured transaction records. Customers on other networks face friction, and payments to wrong numbers create disputes.
+
+      A PSP model addresses these issues. A licensed payment service provider can provide a business account that accepts mobile money from different networks, supported by interoperability, together with cards for foreign buyers. Card payments involve authentication (for example 3-D Secure), issuer authorisation and later settlement net of fees; mobile money payments require the customer to approve a prompt with their PIN and may remain pending until approval or timeout.
+
+      Comparing options: payment links sent through WhatsApp fit the existing social commerce model, are quick to implement and carry low fixed cost; a website checkout adds catalogue and order management but requires more effort; a marketplace provides reach and trust but charges commission and reduces control over customer relationships. A sensible path is payment links immediately, followed by a simple website with PSP checkout as volumes grow, with a marketplace considered for regional reach.
+
+      Transaction handling should generate a unique reference per order, treat orders as paid only after a verified webhook or status check, keep pending orders on hold with a timeout and retry option, process notifications idempotently, and publish a clear refund policy. Reconciliation should match order records, PSP reports and bank settlements daily, investigating differences from fees, refunds and timing. MamaPure should use licensed providers operating under the Bank of Ghana framework, understand fees and settlement schedules, handle customer data in line with the Data Protection Act, 2012 (Act 843), and check cross-border acceptance rules with the provider.
+    explanation: Examiners reward accurate use of transaction lifecycle concepts, a realistic option comparison, a robust handling design and explicit reconciliation and compliance controls.

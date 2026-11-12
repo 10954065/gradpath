@@ -1,0 +1,510 @@
+module: literature-review
+questions:
+  # Lesson 1: purpose-and-searching
+  - id: q01
+    lesson: purpose-and-searching
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain the purpose of a literature review
+    prompt: Which statement best describes the purpose of a postgraduate literature review?
+    options:
+      - To summarise every publication on the topic in chronological order
+      - To build a critical argument about existing knowledge that justifies and informs the study
+      - To demonstrate that the student has read at least fifty sources
+      - To copy definitions from textbooks
+    answer: 1
+    explanation: >
+      A literature review evaluates what is known, identifies gaps and positions the study, while also
+      supplying theory and methodological guidance. Exhaustive summary, source counts and copied definitions
+      do not achieve these purposes.
+  - id: q02
+    lesson: purpose-and-searching
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply Boolean logic to construct a search string
+    scenario: |
+      A student wants articles on mobile money adoption by retailers or traders. Her concepts are the
+      technology (mobile money, mobile payments), the behaviour (adoption, acceptance) and the population
+      (retailers, traders, merchants).
+    prompt: Which search string is constructed most appropriately?
+    options:
+      - mobile money OR adoption OR retailers
+      - ("mobile money" OR "mobile payment*") AND (adopt* OR accept*) AND (retailer* OR trader* OR merchant*)
+      - ("mobile money" AND "mobile payment*") AND (adopt* AND accept*) AND (retailer* AND trader*)
+      - mobile money NOT retailers
+    answer: 1
+    explanation: >
+      Synonyms within a concept should be joined with OR and concepts combined with AND. Joining everything
+      with OR retrieves far too much, joining synonyms with AND demands every term in every record and
+      retrieves too little, and NOT retailers excludes the target population.
+  - id: q03
+    lesson: purpose-and-searching
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate reliance on a single search tool
+    prompt: Google Scholar alone is sufficient for a rigorous MSc literature search because it indexes all scholarly literature.
+    answer: false
+    explanation: >
+      Google Scholar has broad coverage but its coverage and ranking are not transparent, and it does not
+      guarantee comprehensiveness. Combining it with subject databases, open access aggregators and credible
+      grey literature produces a more rigorous search.
+  - id: q04
+    lesson: purpose-and-searching
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish types of literature review
+    prompt: Match each type of review to its description.
+    pairs:
+      - left: Narrative review
+        right: Broad, flexible overview that may be selective and hard to reproduce
+      - left: Systematic review
+        right: Explicit protocol, defined criteria, comprehensive search and formal appraisal
+      - left: Scoping review
+        right: Maps the extent and nature of research on a broad topic
+      - left: Integrative review
+        right: Combines diverse study types to generate new frameworks or perspectives
+    explanation: >
+      Review types differ in protocol, comprehensiveness and purpose. Most MSc dissertations use a narrative
+      review strengthened by systematic searching and transparent selection.
+  - id: q05
+    lesson: purpose-and-searching
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the technique of following references and citing works
+    prompt: What term describes finding further sources by following a key article's references and the later works that cite it?
+    answers: [citation chaining, snowballing, citation searching]
+    explanation: >
+      Backward chaining uses the reference list; forward chaining uses tools such as "Cited by". It often
+      reveals important studies and keywords that a database search missed.
+  - id: q06
+    lesson: purpose-and-searching
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse how to refine a search returning too many results
+    prompt: A search returns tens of thousands of loosely related records. Which refinement is most appropriate first?
+    options:
+      - Read every record in order
+      - Add a further concept with AND, use phrase searching and apply relevant filters
+      - Replace AND with OR throughout
+      - Abandon databases and rely on news websites
+    answer: 1
+    explanation: >
+      Adding a concept, using exact phrases and applying date or document-type filters increases precision.
+      Reading everything is impractical, switching to OR broadens the search further, and news websites are
+      not scholarly sources.
+  - id: q07
+    lesson: purpose-and-searching
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Understand the value of a search log
+    prompt: Keeping a search log with sources, strings, dates, filters and results helps make a literature search transparent and repeatable.
+    answer: true
+    explanation: >
+      A search log allows the researcher to report the process in the methodology or review chapter and to
+      repeat or update the search, borrowing the transparency logic of systematic reviews and PRISMA.
+
+  # Lesson 2: evaluating-sources-and-gaps
+  - id: q08
+    lesson: evaluating-sources-and-gaps
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Identify source evaluation criteria
+    prompt: Which set of criteria forms the CRAAP test for evaluating sources?
+    options:
+      - Currency, Relevance, Authority, Accuracy, Purpose
+      - Cost, Reliability, Access, Availability, Popularity
+      - Citations, Reviews, Abstract, Author, Publisher
+      - Content, Readability, Appearance, Age, Price
+    answer: 0
+    explanation: >
+      The CRAAP test asks about currency, relevance, authority, accuracy and purpose. The other lists contain
+      factors such as popularity or appearance that do not indicate credibility.
+  - id: q09
+    lesson: evaluating-sources-and-gaps
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a questionable journal
+    scenario: |
+      A student finds an article supporting his hypothesis in a journal that accepted it within five days,
+      charged a high publication fee, lists no editorial board and contains several statistical errors.
+    prompt: What is the most appropriate way to treat this source?
+    options:
+      - Cite it as strong evidence because it supports the hypothesis
+      - Exclude it or treat it with explicit caution because its authority and accuracy are doubtful
+      - Cite it only in the abstract
+      - Assume all open access journals are of this quality
+    answer: 1
+    explanation: >
+      The signs suggest questionable publishing practices and the errors undermine accuracy. Agreement with
+      a hypothesis is not evidence of quality, and many reputable open access journals exist, so the problem
+      is this journal, not open access in general.
+  - id: q10
+    lesson: evaluating-sources-and-gaps
+    type: matching
+    bloom: analyse
+    difficulty: medium
+    objective: Classify research gaps
+    prompt: Match each observation to the type of research gap it represents.
+    pairs:
+      - left: Most cybersecurity awareness studies use self-report rather than observed behaviour
+        right: Methodological gap
+      - left: Few studies examine AI adoption among Ghanaian SMEs outside Accra
+        right: Contextual gap
+      - left: Adoption models assume individual decisions although SME decisions may be collective
+        right: Theoretical gap
+      - left: Studies disagree on whether perceived risk deters mobile payment use
+        right: Empirical or evidence gap
+    explanation: >
+      Gaps differ in kind. Naming the type precisely helps the researcher explain what the study contributes
+      and choose an appropriate design.
+  - id: q11
+    lesson: evaluating-sources-and-gaps
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Understand the limits of peer review
+    prompt: An article published in a prestigious peer-reviewed journal can be assumed to be correct without further appraisal.
+    answer: false
+    explanation: >
+      Peer review improves quality but does not guarantee it. The retracted 1998 Lancet paper by Wakefield
+      and colleagues shows that prestigious journals can publish flawed work, so methodological appraisal is
+      always needed.
+  - id: q12
+    lesson: evaluating-sources-and-gaps
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Write an accurate gap statement
+    prompt: Which gap statement is most defensible?
+    options:
+      - No research has ever been conducted on digital payments in Ghana
+      - Limited research has examined merchants' acceptance of digital payments in Ghanaian markets, as most studies focus on consumers
+      - Digital payments are important, so they need research
+      - Everyone knows that retailers dislike digital payments
+    answer: 1
+    explanation: >
+      A defensible statement is precise, evidence-aware and avoids absolute claims. "No research has ever"
+      is rarely true, the third option states importance without a gap, and the fourth is an unsupported
+      generalisation.
+  - id: q13
+    lesson: evaluating-sources-and-gaps
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for the formal withdrawal of an article
+    prompt: What is the term for the formal withdrawal of a published article because of serious error or misconduct?
+    answers: [retraction, retracted, retracting]
+    explanation: >
+      Retracted articles continue to be cited, so researchers should check the status of key sources on the
+      publisher's page or in databases before relying on them.
+  - id: q14
+    lesson: evaluating-sources-and-gaps
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate qualitative evidence fairly
+    prompt: A small qualitative study of Ghanaian market traders provides rich insight into privacy concerns about digital payments. How should it be evaluated?
+    options:
+      - Dismissed, because small samples are always weak evidence
+      - Evaluated by qualitative quality criteria and valued for contextual insight, while recognising it is not statistically generalisable
+      - Treated as proof that all Ghanaian traders share these concerns
+      - Used only to calculate prevalence percentages
+    answer: 1
+    explanation: >
+      Qualitative studies are judged by criteria such as credibility and transferability and provide depth
+      that surveys cannot. They cannot support statistical generalisation or prevalence estimates, but they
+      should not be dismissed.
+
+  # Lesson 3: synthesising-literature
+  - id: q15
+    lesson: synthesising-literature
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish synthesis from summary
+    prompt: Which best describes synthesis in a literature review?
+    options:
+      - Reporting the main points of one article in your own words
+      - Listing all sources in alphabetical order
+      - Integrating findings from multiple sources to identify patterns, contradictions and gaps and build an argument
+      - Quoting long passages from key authors
+    answer: 2
+    explanation: >
+      Synthesis combines many sources to make claims no single source makes. The first option is summary,
+      the second is a reference list, and long quotations replace analysis with other people's words.
+  - id: q16
+    lesson: synthesising-literature
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Diagnose author-centric writing
+    scenario: |
+      A draft review reads: "Author A studied students and found low awareness. Author B studied staff and
+      found moderate awareness. Author C found training helped. Author D found victims were more careful."
+    prompt: What is the main weakness of this paragraph?
+    options:
+      - It uses too few sources
+      - It is author-centric and descriptive, with no claim, comparison, evaluation or link to the study
+      - It should use direct quotations instead
+      - It should be organised chronologically
+    answer: 1
+    explanation: >
+      The paragraph strings summaries together. A synthesised paragraph would make a claim about factors
+      associated with awareness, compare populations, evaluate reliance on self-report and link to the
+      study. More sources, quotations or chronology would not fix the problem.
+  - id: q17
+    lesson: synthesising-literature
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Identify elements of a synthesis paragraph
+    prompt: Match each element of the Claim, Evidence, Analysis, Link structure to its function.
+    pairs:
+      - left: Claim
+        right: States a point about the body of literature
+      - left: Evidence
+        right: Cites several sources that support or complicate the point
+      - left: Analysis
+        right: Compares sources, explains differences and evaluates quality
+      - left: Link
+        right: Connects the point to the current study or the next section
+    explanation: >
+      The structure ensures each paragraph argues rather than describes, and always shows the relevance of
+      the literature to the study.
+  - id: q18
+    lesson: synthesising-literature
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Understand critical writing
+    prompt: Critical writing in a literature review means mainly pointing out the faults of other authors.
+    answer: false
+    explanation: >
+      Critical writing means making reasoned, balanced judgements about evidence, recognising strengths as
+      well as weaknesses, explaining disagreement and drawing conclusions.
+  - id: q19
+    lesson: synthesising-literature
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the tool that organises sources by concept
+    prompt: What table, with sources as rows and concepts or themes as columns, helps reveal patterns across studies?
+    answers: [synthesis matrix, concept matrix, literature matrix]
+    explanation: >
+      Reading down a column of a synthesis or concept matrix shows how a concept is treated across studies
+      and which concepts are rarely examined together.
+  - id: q20
+    lesson: synthesising-literature
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Choose accurate reporting verbs
+    prompt: A single small cross-sectional survey found an association between training and safer passwords. Which reporting verb is most accurate?
+    options:
+      - The study proves that training causes safer passwords
+      - The study suggests that training is associated with safer password practices
+      - The study establishes beyond doubt that training works
+      - The study confirms a universal law of security behaviour
+    answer: 1
+    explanation: >
+      "Suggests" and "associated with" accurately convey tentative, correlational evidence. "Proves",
+      "establishes beyond doubt" and "universal law" overstate what one cross-sectional study can show.
+  - id: q21
+    lesson: synthesising-literature
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate review structures
+    prompt: For an MSc review of determinants of e-commerce adoption among small businesses, which structure is usually most effective?
+    options:
+      - Chronological, describing each study in order of publication
+      - Alphabetical by author surname
+      - Thematic, organised around determinants such as cost, skills and logistics
+      - Random, to avoid bias
+    answer: 2
+    explanation: >
+      A thematic structure supports concept-centric synthesis and maps directly onto the conceptual
+      framework. Chronological reviews risk description, and alphabetical or random ordering has no
+      analytical logic.
+
+  # Lesson 4: theoretical-and-conceptual-frameworks
+  - id: q22
+    lesson: theoretical-and-conceptual-frameworks
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish theoretical and conceptual frameworks
+    prompt: What is the key difference between a theoretical framework and a conceptual framework?
+    options:
+      - There is no difference; the terms are interchangeable
+      - The theoretical framework is existing theory used as a lens; the conceptual framework is the researcher's adapted model of constructs and relationships for this study
+      - A conceptual framework is used only in qualitative research
+      - A theoretical framework must always be drawn as a diagram
+    answer: 1
+    explanation: >
+      Theory is borrowed; the conceptual framework is built for the specific study. Conceptual frameworks
+      appear in both quantitative and qualitative work, and theoretical frameworks need not be diagrams.
+  - id: q23
+    lesson: theoretical-and-conceptual-frameworks
+    type: matching
+    bloom: recall
+    difficulty: medium
+    objective: Associate constructs with their theories
+    prompt: Match each construct to the theory in which it is a core construct.
+    pairs:
+      - left: Perceived ease of use
+        right: Technology Acceptance Model
+      - left: Facilitating conditions
+        right: UTAUT
+      - left: Trialability
+        right: Diffusion of Innovations
+      - left: Top management support as an organisational factor
+        right: Technology-Organisation-Environment framework
+    explanation: >
+      Misattributing constructs is a common examination error. TAM centres on usefulness and ease of use,
+      UTAUT on four determinants including facilitating conditions, DOI on five innovation attributes, and
+      TOE on technology, organisation and environment contexts.
+  - id: q24
+    lesson: theoretical-and-conceptual-frameworks
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Select a theory appropriate to the level of analysis
+    scenario: |
+      A researcher wants to explain why some SMEs in Greater Accra decide to adopt cloud accounting
+      software for the whole firm while others do not. The decision is usually made by the owner-manager
+      and depends on resources, competition and vendor support.
+    prompt: Which theoretical approach fits best?
+    options:
+      - TAM alone, because it explains individual employee attitudes
+      - TOE, possibly combined with DOI, because the question concerns organisational adoption shaped by internal and external factors
+      - UTAUT2, because it was designed for consumer hedonic use
+      - No theory is needed for applied research
+    answer: 1
+    explanation: >
+      The unit of analysis is the firm, and the factors span organisation and environment, which TOE
+      addresses; DOI adds innovation attributes. TAM and UTAUT2 explain individual acceptance, and applied
+      research still requires theory.
+  - id: q25
+    lesson: theoretical-and-conceptual-frameworks
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Recognise UTAUT moderators
+    prompt: In UTAUT, gender, age, experience and voluntariness of use are proposed as moderators of key relationships.
+    answer: true
+    explanation: >
+      Venkatesh et al. (2003) proposed these four moderators. Researchers who drop them should justify the
+      decision, for example when all participants share the same level of experience.
+  - id: q26
+    lesson: theoretical-and-conceptual-frameworks
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the DOI attribute concerning visibility of results
+    prompt: In Rogers' Diffusion of Innovations, which attribute refers to how visible an innovation's results are to others?
+    answers: [observability]
+    explanation: >
+      Observability, along with relative advantage, compatibility, complexity and trialability, influences
+      the rate of adoption. Seeing neighbouring traders succeed with a payment app is an example.
+  - id: q27
+    lesson: theoretical-and-conceptual-frameworks
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a conceptual framework
+    prompt: >
+      A conceptual framework for EHR use contains fifteen constructs and twenty arrows, several of which
+      have no hypothesis or literature support. What is the strongest criticism?
+    options:
+      - It has too few constructs
+      - It lacks parsimony and justification, because every construct and arrow should be grounded in theory or evidence and tied to a hypothesis
+      - It should not include facilitating conditions
+      - Diagrams are not allowed in dissertations
+    answer: 1
+    explanation: >
+      Crowded frameworks with unjustified arrows weaken coherence and can make analysis unwieldy. Facilitating
+      conditions are often highly relevant in Ghanaian healthcare, and diagrams are standard practice.
+  - id: q28
+    lesson: theoretical-and-conceptual-frameworks
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse lessons from the hybrid corn diffusion study
+    prompt: Which insight from Ryan and Gross's hybrid seed corn study, as discussed by Rogers, is most relevant to a Ghanaian payment app?
+    options:
+      - Innovations with clear advantages are adopted instantly by everyone
+      - Interpersonal networks and the ability to trial an innovation influence adoption over time
+      - Commercial salespeople are the only influence that matters
+      - Adoption is unrelated to social context
+    answer: 1
+    explanation: >
+      Adoption of hybrid corn spread gradually, farmers often trialled it on part of their land, and
+      neighbours were influential even though salespeople often introduced the innovation. Instant adoption
+      and context-free adoption contradict the study.
+
+  # Module-level essay
+  - id: q29
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    marks: 20
+    objective: Critically evaluate adoption theories and justify a conceptual framework for a Ghanaian study
+    prompt: >
+      Critically compare TAM, UTAUT and Diffusion of Innovations as foundations for a study of electronic
+      health records adoption in Ghanaian district hospitals, and propose and justify a conceptual framework
+      for such a study.
+    structure:
+      - Distinguish theoretical and conceptual frameworks
+      - Explain core constructs and assumptions of TAM, UTAUT and DOI
+      - Compare their strengths and limitations for EHR adoption in Ghanaian district hospitals, including level of analysis
+      - Propose a conceptual framework with justified constructs and hypotheses
+      - Conclude with limitations of the chosen framework
+    rubric:
+      - criterion: Accurate explanation of theories
+        marks: 5
+        descriptor: Correctly explains constructs and relationships of TAM, UTAUT and DOI with appropriate citations.
+      - criterion: Critical comparison in context
+        marks: 6
+        descriptor: Compares theories with reference to individual versus organisational adoption and Ghanaian healthcare conditions.
+      - criterion: Proposed conceptual framework
+        marks: 6
+        descriptor: Parsimonious framework with literature-justified constructs, clear hypotheses and alignment to a research question.
+      - criterion: Academic writing and referencing
+        marks: 3
+        descriptor: Coherent argument, accurate APA 7 citations and a reasoned conclusion.
+    modelAnswer: |
+      A strong answer begins by distinguishing the theoretical framework (existing theory used as a lens)
+      from the conceptual framework (the researcher's adapted model). It then explains TAM (Davis, 1989),
+      where perceived usefulness and perceived ease of use shape intention and use; UTAUT (Venkatesh et al.,
+      2003), which integrates eight models around performance expectancy, effort expectancy, social influence
+      and facilitating conditions, moderated by gender, age, experience and voluntariness; and Rogers' DOI,
+      with relative advantage, compatibility, complexity, trialability and observability and a social
+      diffusion process.
+
+      The comparison should be contextual. TAM is parsimonious but neglects organisational and infrastructural
+      conditions. UTAUT is attractive for nurses' and clinicians' use because it includes facilitating
+      conditions, which matter where power supply, connectivity, devices and technical support may be
+      uneven, and social influence, which may operate through professional hierarchies. DOI is useful if
+      the question concerns how EHR spreads across wards or facilities, or a hospital's decision to adopt,
+      though it can carry pro-innovation bias. Level of analysis is decisive: individual use suggests UTAUT;
+      facility-level adoption suggests DOI or TOE.
+
+      A suitable proposal for the question "What factors influence nurses' use of EHR in district hospitals?"
+      adapts UTAUT: performance expectancy, effort expectancy and social influence predicting behavioural
+      intention; facilitating conditions and intention predicting use; experience as a moderator; and
+      possibly computer self-efficacy or training added with literature support. Each arrow is stated as a
+      hypothesis. Voluntariness may be dropped if use is mandatory, with justification. The conclusion notes
+      limitations such as reliance on self-reported use and the model's individual focus.
+    explanation: >
+      Examiners look for accurate theory, comparison grounded in Ghanaian healthcare conditions and level of
+      analysis, and a parsimonious, justified framework aligned with a clear research question.

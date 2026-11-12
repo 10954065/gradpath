@@ -1,0 +1,346 @@
+module: future-technologies
+questions:
+  - id: ft01
+    lesson: robotics-automation-and-autonomous-systems
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish RPA from physical robotics
+    prompt: Which statement best describes robotic process automation (RPA)?
+    options:
+      - Physical robotic arms that perform repetitive tasks on assembly lines
+      - Software bots that interact with application user interfaces to perform rule-based digital tasks
+      - Self-driving vehicles used in warehouses
+      - Machine learning models that replace all back-office staff
+    answer: 1
+    explanation: RPA is software that mimics human interactions with applications, such as copying data between screens. It has no physical component, so robotic arms and warehouse vehicles are physical robotics. RPA can be combined with AI, but it does not by definition replace all staff; it automates specific rule-based tasks.
+
+  - id: ft02
+    lesson: robotics-automation-and-autonomous-systems
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match SAE J3016 levels to their defining characteristics
+    prompt: Match each SAE driving automation level to its description.
+    pairs:
+      - left: Level 1
+        right: System controls either steering or speed; human drives and supervises
+      - left: Level 2
+        right: System controls steering and speed together; human must constantly supervise
+      - left: Level 3
+        right: System drives within its ODD; human must take over when requested
+      - left: Level 4
+        right: System drives and handles fallback within its ODD without human takeover
+      - left: Level 5
+        right: System drives under all conditions a human could
+    explanation: The key boundary is between levels 2 and 3. At levels 0–2 the human is driving; at levels 3–5 the system drives when engaged. Level 3 still needs a fallback-ready human; level 4 does not within its operational design domain; level 5 has no ODD limitation.
+
+  - id: ft03
+    lesson: robotics-automation-and-autonomous-systems
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain automation complacency
+    prompt: Placing a human safety operator in an autonomous test vehicle reliably prevents accidents, because humans can always take over in time.
+    answer: false
+    explanation: 'Humans supervising reliable automation tend to become complacent and lose situational awareness, so they often react too late. The 2018 Tempe fatality illustrated this: the safety operator was not watching the road. Safety must be designed into the system and organisation, not left to a human backstop.'
+
+  - id: ft04
+    lesson: robotics-automation-and-autonomous-systems
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply criteria to select a suitable RPA candidate
+    scenario: |
+      Illustrative scenario. A Ghanaian insurer is considering RPA for four processes: (A) re-keying standard motor claim forms into its core system, which uses a stable interface; (B) negotiating settlements with distressed claimants; (C) a claims process that will be completely redesigned next quarter; (D) investigating suspected fraud rings.
+    prompt: Which process is the best RPA candidate?
+    options:
+      - A, because it is high-volume, rule-based and uses a stable interface
+      - B, because negotiation is time-consuming
+      - C, because automation will speed up the redesign
+      - D, because fraud investigation is costly
+    answer: 0
+    explanation: RPA suits high-volume, rule-based tasks with stable inputs and interfaces, which describes A. Negotiation (B) requires empathy and judgement. Automating a process about to be redesigned (C) wastes effort and bots would break. Fraud investigation (D) involves complex, unstructured judgement, although analytics may support it.
+
+  - id: ft05
+    lesson: robotics-automation-and-autonomous-systems
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for the conditions under which an automated system is designed to work
+    prompt: What term (abbreviated ODD) describes the specific conditions under which an automated driving system is designed to operate?
+    answers: [operational design domain, ODD]
+    explanation: The operational design domain specifies the roads, speeds, weather, lighting and other conditions within which the system is designed to function. Level 4 systems need no human fallback only within their ODD.
+
+  - id: ft06
+    lesson: robotics-automation-and-autonomous-systems
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse autonomous system failures as socio-technical
+    prompt: Which conclusion about the 2018 Tempe, Arizona, autonomous vehicle fatality is best supported by the NTSB's findings?
+    options:
+      - The crash was caused solely by a sensor hardware defect
+      - The crash resulted from combined failures in the automated system, human supervision, organisational safety culture and regulatory oversight
+      - The pedestrian alone was responsible, so no lessons apply to operators
+      - The crash proves that autonomous vehicles can never be safe
+    answer: 1
+    explanation: The NTSB identified multiple contributing factors, including the system's failure to correctly classify and predict the pedestrian's path, disabled emergency braking, an inattentive safety operator, and weaknesses in the company's safety culture and state oversight. A single-cause explanation misreads the evidence, and one crash does not prove that safe autonomy is impossible.
+
+  - id: ft07
+    lesson: 5g-and-future-connectivity
+    type: matching
+    bloom: apply
+    difficulty: medium
+    objective: Match applications to 5G usage scenarios
+    prompt: Match each application to the 5G usage scenario it chiefly relies on.
+    pairs:
+      - left: High-quality video streaming in a crowded stadium
+        right: eMBB
+      - left: Remote control of port cranes
+        right: URLLC
+      - left: Tens of thousands of battery-powered smart water meters
+        right: mMTC
+    explanation: eMBB delivers capacity and data rates for people and video; URLLC delivers very low latency and very high reliability for control applications; mMTC supports huge numbers of low-power, low-data devices.
+
+  - id: ft08
+    lesson: 5g-and-future-connectivity
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the dependency of network slicing on standalone 5G
+    prompt: Network slicing is available on any 5G network, including non-standalone deployments anchored on a 4G core.
+    answer: false
+    explanation: Network slicing depends on the capabilities of the 5G core, so it requires standalone 5G. Non-standalone networks add 5G radio to a 4G core, mainly for faster speeds, and cannot deliver full slicing or the lowest-latency features.
+
+  - id: ft09
+    lesson: 5g-and-future-connectivity
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate connectivity options against requirements
+    scenario: |
+      Illustrative scenario. A cocoa cooperative in the Western Region wants to monitor humidity and temperature in 40 rural warehouses. Each sensor sends a few bytes every 15 minutes and must run on batteries for years. A vendor proposes a private 5G network.
+    prompt: Which recommendation is best justified?
+    options:
+      - Accept private 5G, because it is the most advanced technology
+      - Use an LPWAN or cellular IoT option such as NB-IoT or LoRaWAN, because the need is low data rate, long battery life and wide coverage
+      - Install fibre to every warehouse
+      - Use Wi-Fi in each warehouse with no backhaul
+    answer: 1
+    explanation: The requirements are low data rates, long battery life and dispersed rural coverage, which LPWAN and cellular IoT are designed for. Private 5G would be costly and over-specified. Fibre to rural warehouses is expensive for such small data volumes. Wi-Fi without backhaul cannot deliver data to the cooperative, and Wi-Fi radios drain batteries faster.
+
+  - id: ft10
+    lesson: 5g-and-future-connectivity
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the 5G scenario for reliability and low latency
+    prompt: Which 5G usage scenario, abbreviated URLLC, is designed for very low latency and very high reliability? Give the full name.
+    answers: [ultra-reliable low-latency communications, ultra reliable low latency communications, URLLC]
+    explanation: URLLC (ultra-reliable low-latency communications) targets industrial control, grid protection and similar applications where delay or loss is dangerous, and it relies on standalone 5G and edge computing.
+
+  - id: ft11
+    lesson: 5g-and-future-connectivity
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse when private 5G is justified
+    prompt: In which situation is private 5G most clearly justified over upgraded Wi-Fi?
+    options:
+      - A ten-person accounting office
+      - A large outdoor port with many moving vehicles and interference from metal containers
+      - A coffee shop offering customer internet access
+      - A home office
+    answer: 1
+    explanation: Private 5G suits large, outdoor, mission-critical sites with many mobile devices and challenging radio conditions, where Wi-Fi handover and interference are problems. Offices, cafés and homes are well served by Wi-Fi at much lower cost.
+
+  - id: ft12
+    lesson: 5g-and-future-connectivity
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain the relationship between 5G and fibre
+    prompt: Why will 5G not make fibre networks unnecessary?
+    options:
+      - Fibre is only used for television
+      - 5G cells, especially dense mid- and high-band deployments, rely on fibre backhaul to connect to the core and internet
+      - 5G cannot carry data
+      - Regulators prohibit 5G without fibre to every home
+    answer: 1
+    explanation: 'Wireless networks carry traffic only over the last link; base stations need high-capacity backhaul, usually fibre, and denser 5G deployments need more of it. The other options are false: fibre carries all kinds of data, 5G certainly carries data, and no such universal regulation exists.'
+
+  - id: ft13
+    lesson: advanced-ai-and-smart-cities
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain the role of an urban data platform
+    prompt: What is the main strategic purpose of an urban data platform in a smart city?
+    options:
+      - To replace all city staff with AI
+      - To integrate and govern data from many city systems through common standards and open interfaces, avoiding fragmented, vendor-locked pilots
+      - To store CCTV footage indefinitely
+      - To sell residents' data to advertisers
+    answer: 1
+    explanation: A platform provides shared standards, APIs, governance, privacy controls and open-data publication, allowing systems to interoperate and the city to change suppliers. It is not about replacing staff, indefinite storage of footage (which would breach data minimisation) or selling personal data.
+
+  - id: ft14
+    lesson: advanced-ai-and-smart-cities
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a smart city proposal using proportionality and privacy principles
+    scenario: |
+      Illustrative scenario. A vendor offering traffic-counting cameras to a Kumasi assembly proposes adding facial recognition "for security" at no extra cost and storing all footage on its own servers abroad.
+    prompt: Which response best reflects responsible smart city governance?
+    options:
+      - Accept, because the extra feature is free
+      - Limit cameras to anonymous counting with no stored identifiable images, reject facial recognition as disproportionate, and require city-owned data through open APIs
+      - Accept facial recognition but delete footage after ten years
+      - Cancel all traffic management technology
+    answer: 1
+    explanation: Proportionality and data minimisation favour the least intrusive approach that achieves the traffic goal; facial recognition creates surveillance and function-creep risk and raises legal issues under Act 843. City ownership and open APIs prevent lock-in and sovereignty problems. "Free" features carry hidden costs, long retention worsens risk, and cancelling everything throws away genuine public value.
+
+  - id: ft15
+    lesson: advanced-ai-and-smart-cities
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Explain hallucination in generative AI
+    prompt: A large language model's fluent, confident answer can still be factually false.
+    answer: true
+    explanation: LLMs generate statistically plausible text and can hallucinate. For public communication, such as flood alerts, outputs should be grounded in verified sources (for example through retrieval-augmented generation) and reviewed by people.
+
+  - id: ft16
+    lesson: advanced-ai-and-smart-cities
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for using data beyond its original purpose
+    prompt: What two-word term describes the gradual reuse of data or technology for purposes beyond those originally approved?
+    answers: [function creep]
+    explanation: Function creep occurs, for example, when traffic camera data is later used for policing or monitoring without a new legal basis. Purpose limitation in data protection law is designed to prevent it.
+
+  - id: ft17
+    lesson: advanced-ai-and-smart-cities
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match smart city layers to components
+    prompt: Match each smart city layer to an example component.
+    pairs:
+      - left: Sensing layer
+        right: Water-level sensors in drains
+      - left: Connectivity layer
+        right: LPWAN and 4G/5G networks
+      - left: Data platform layer
+        right: Integration, catalogue, access control and open APIs
+      - left: Analytics and AI layer
+        right: Flood prediction models
+      - left: Governance layer
+        right: Data protection impact assessments and citizen consultation
+    explanation: The layers move from collecting data to transporting, integrating, analysing and governing it. Governance cuts across all layers and is what distinguishes a responsible smart city from a collection of gadgets.
+
+  - id: ft18
+    lesson: advanced-ai-and-smart-cities
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse lessons from Sidewalk Toronto
+    prompt: What is the most important lesson of the Sidewalk Toronto project for public-private smart city partnerships?
+    options:
+      - Sensors are too expensive for cities
+      - Data governance, public ownership and trust need to be settled early, or they can derail even well-funded projects
+      - Technology firms should never work with cities
+      - Waterfront locations are unsuitable for smart cities
+    answer: 1
+    explanation: The project's controversy centred on who would own and control data collected in public spaces and the influence of a private technology firm; Sidewalk Labs withdrew in 2020. The lesson is about governance and trust, not sensor cost or geography, and partnerships can work if these issues are resolved transparently.
+
+  - id: ft19
+    module: future-technologies
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Design and evaluate an IoT-enabled business solution with a cloud versus edge analysis
+    prompt: Propose and critically evaluate an IoT-enabled solution for the company, including a justified cloud versus edge processing design, connectivity choices, automation level, risks and a recommendation.
+    marks: 25
+    case: |
+      Illustrative scenario. Volta Fresh Logistics is a fictional cold-chain distributor based in Tema that moves fish, poultry and vaccines to retailers and clinics across Ghana in 60 refrigerated trucks and three cold stores. Spoilage from temperature excursions is costly, drivers sometimes switch off refrigeration to save fuel, and clients increasingly demand proof of temperature compliance. Mobile coverage is good in cities but patchy on some rural routes. Management is considering sensors in trucks and cold stores, a cloud dashboard, automated alerts, possibly automated cold-store doors and, in the longer term, autonomous yard robots in its Tema warehouse. The IT team is small and the budget is limited.
+    structure:
+      - Define business problem, objectives and success measures
+      - Design IoT architecture (sensors, gateways, connectivity, platform, applications)
+      - Analyse cloud versus edge processing, including offline operation on rural routes
+      - Choose connectivity (cellular, LPWAN, 5G, satellite) with justification
+      - Determine appropriate automation levels and human oversight
+      - Assess risks (security, data quality, workforce, cost) and mitigations
+      - Recommend a phased plan with measurable outcomes
+    rubric:
+      - criterion: Problem framing and objectives
+        marks: 3
+        descriptor: Clear statement of spoilage, compliance and behavioural problems with measurable objectives
+      - criterion: IoT architecture
+        marks: 5
+        descriptor: Coherent layered design with suitable sensors, gateways, platform and applications
+      - criterion: Cloud versus edge analysis
+        marks: 6
+        descriptor: Justifies local buffering and alerting at the edge for patchy coverage and latency, with cloud for fleet analytics, compliance records and integration; discusses trade-offs
+      - criterion: Connectivity and automation choices
+        marks: 4
+        descriptor: Realistic connectivity choices; appropriate automation levels with human oversight; critical view of autonomous robots
+      - criterion: Risk assessment
+        marks: 4
+        descriptor: Identifies security, data integrity, driver relations, cost and vendor risks with mitigations
+      - criterion: Recommendation and phasing
+        marks: 3
+        descriptor: Phased, affordable plan with KPIs and justification
+    modelAnswer: |
+      A strong answer frames the problem as reducing spoilage, proving compliance and changing driver behaviour, with KPIs such as excursion minutes per trip, spoilage value and audit pass rates.
+
+      Architecture: temperature and door sensors in each truck compartment and cold store, connected to an in-vehicle gateway with GPS. Gateways send data to a cloud IoT platform feeding dashboards, compliance reports and client portals, with integration to dispatch systems.
+
+      Cloud versus edge: the decisive factor is patchy rural coverage and the need for immediate response. The truck gateway should process data at the edge, detecting excursions and alerting the driver locally within seconds and buffering readings when offline, then synchronising later with tamper-evident timestamps. The cloud suits fleet-wide analytics, historical compliance records, predictive maintenance of refrigeration units and client access, where latency is not critical. Pure cloud processing would fail offline; pure edge would lose fleet visibility.
+
+      Connectivity: 4G cellular for trucks, with store-and-forward; LPWAN or Wi-Fi inside cold stores; satellite only as an optional backup for vaccine loads. 5G is unnecessary for these data rates.
+
+      Automation: automated alerts and escalation are appropriate; automated door control in cold stores may be justified with manual override; autonomous yard robots are premature given scale, budget and skills.
+
+      Risks: device tampering, insecure default credentials, data gaps, driver resistance (address through engagement and incentives rather than only surveillance), vendor lock-in and running costs. Phase 1 pilots ten trucks and one cold store; scale if KPIs improve.
+    explanation: Examiners look for an architecture grounded in requirements, a reasoned cloud-versus-edge split driven by connectivity and latency, proportionate automation, realistic risks and a phased plan.
+
+  - id: ft20
+    module: future-technologies
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the opportunities and risks of smart city initiatives in Ghana
+    prompt: Critically evaluate the extent to which advanced AI and 5G-enabled smart city initiatives could address urban challenges in Accra or Kumasi, and what safeguards are required.
+    marks: 20
+    structure:
+      - Identify urban challenges and relevant smart city applications
+      - Explain the roles of AI, IoT, connectivity and data platforms
+      - Evaluate benefits against privacy, surveillance, inclusion, cost and lock-in risks
+      - Discuss legal and governance safeguards including Act 843
+      - Conclude with a justified position and priorities
+    rubric:
+      - criterion: Understanding of technologies and architecture
+        marks: 5
+        descriptor: Accurate account of AI capabilities and limits, connectivity options and the data platform
+      - criterion: Application to Ghanaian urban context
+        marks: 5
+        descriptor: Relevant challenges such as flooding, congestion and waste, with illustrative scenarios clearly labelled
+      - criterion: Critical evaluation of risks
+        marks: 6
+        descriptor: Balanced analysis of privacy, surveillance, exclusion, security, sustainability of funding and vendor lock-in
+      - criterion: Safeguards and conclusion
+        marks: 4
+        descriptor: Concrete governance measures and a justified conclusion
+    modelAnswer: |
+      A strong essay begins with real problems: recurrent flooding, congestion, waste management and pressure on services. It explains that AI can predict floods from sensor and weather data, optimise traffic signals and waste routes, and support citizen services through multilingual assistants, while connectivity ranges from LPWAN for sensors to 4G and, where justified, 5G for video-heavy or low-latency applications. It stresses that the urban data platform, with open standards and city ownership of data, determines whether projects integrate or fragment.
+
+      The evaluation recognises benefits but also constraints: maintenance funding beyond pilots, power and connectivity reliability, scarce skills, and the risk that technology-led projects ignore informal settlements and traders. It analyses privacy and surveillance risks, especially facial recognition and function creep, and notes AI limitations such as hallucination and weak coverage of Ghanaian languages. Sidewalk Toronto illustrates how data governance failures can derail projects.
+
+      Safeguards include compliance with Act 843 and the Cybersecurity Act, data protection impact assessments, proportionality tests, transparency registers of AI systems, independent oversight, inclusive non-digital channels, procurement clauses on data ownership and exit, and phased, problem-led pilots.
+
+      A justified conclusion is that targeted, well-governed applications can address specific urban challenges, but smart technology cannot substitute for urban planning, drainage investment and institutional capacity.
+    explanation: Examiners reward essays that are problem-led, technically accurate, critical about risks, specific on safeguards and honest about the limits of technology.

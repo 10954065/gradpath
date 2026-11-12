@@ -1,0 +1,65 @@
+module: sampling-and-data-collection
+cards:
+  - lesson: populations-frames-and-sampling-methods
+    front: What is coverage error?
+    back: Error that arises when the sampling frame omits or over-represents parts of the target population, for example a business association list that excludes informal firms.
+  - lesson: populations-frames-and-sampling-methods
+    front: How do you compute a systematic sampling interval, and what must accompany it?
+    back: k = N / n, with a random start between 1 and k; check the list has no periodic pattern matching k.
+  - lesson: populations-frames-and-sampling-methods
+    front: Why does cluster sampling usually need a larger sample than simple random sampling?
+    back: Cases within a cluster tend to be similar, so each extra case adds less new information; the loss is captured by the design effect.
+  - lesson: populations-frames-and-sampling-methods
+    front: When is a non-probability sample the right choice rather than a weakness?
+    back: When the aim is depth, exploration or theory building, or when no frame exists; the error is to report it as if it were representative.
+  - lesson: populations-frames-and-sampling-methods
+    front: What does the 1936 Literary Digest poll teach about sampling?
+    back: A huge sample from a biased frame (telephone and car-owner lists) plus non-response produced a wrong prediction; size cannot fix bias.
+
+  - lesson: sample-size
+    front: State Cochran's formula for a proportion and its usual conservative inputs.
+    back: n0 = z²pq / e²; with z = 1.96, p = 0.5 and e = 0.05, n0 = 384.16, rounded up to 385.
+  - lesson: sample-size
+    front: What does the finite population correction do, and when does it matter?
+    back: n = n0 / (1 + (n0 − 1)/N) reduces the required sample when n0 is a noticeable fraction of a small known population; for very large N it changes little.
+  - lesson: sample-size
+    front: Is the calculated sample size the number of questionnaires to distribute?
+    back: No. It is the number of usable responses; divide by the expected response rate (for example 292 / 0.6 = 487) to find how many to approach.
+  - lesson: sample-size
+    front: How does the margin of error change if you quadruple the sample size?
+    back: It halves, because the margin of error is proportional to 1 / √n.
+  - lesson: sample-size
+    front: How should a qualitative study justify its sample size?
+    back: Through saturation (tracking new codes per interview), information power and the analytic approach, with transparent stopping criteria.
+
+  - lesson: questionnaires
+    front: What is a double-barrelled question, and how do you fix it?
+    back: An item that asks about two things at once, such as "fast and secure"; split it into two separate items.
+  - lesson: questionnaires
+    front: Why collect variables at the highest sensible level of measurement?
+    back: Ratio data (exact employee count) can later be grouped into categories, but categorical data cannot be converted back into exact values.
+  - lesson: questionnaires
+    front: Give Cronbach's alpha formula and what it does not show.
+    back: α = (k/(k−1)) × (1 − Σ item variances / total variance). It shows internal consistency, not validity.
+  - lesson: questionnaires
+    front: How do you reverse-code a negatively worded item on a five-point scale?
+    back: Use 6 − x, so 1 becomes 5, 2 becomes 4, and so on, before computing scale scores.
+  - lesson: questionnaires
+    front: What should a good pilot test produce?
+    back: Evidence on clarity, completion time, routing and reliability from respondents like the target population, plus a documented list of changes.
+
+  - lesson: interviews-focus-groups-observation-documents
+    front: Why use "Tell me about the last time..." questions in interviews?
+    back: They elicit concrete episodes rather than generalisations or idealised accounts, giving richer and more credible data.
+  - lesson: interviews-focus-groups-observation-documents
+    front: Why separate staff by rank in focus groups?
+    back: Hierarchy encourages junior participants to defer or give socially desirable answers; homogeneous groups make honest discussion more likely.
+  - lesson: interviews-focus-groups-observation-documents
+    front: What is the main strength of observation compared with interviews?
+    back: It captures what people actually do in context rather than what they say they do, revealing workarounds and gaps between policy and practice.
+  - lesson: interviews-focus-groups-observation-documents
+    front: Which four criteria are commonly used to evaluate documents as data?
+    back: Authenticity, credibility, representativeness and meaning.
+  - lesson: interviews-focus-groups-observation-documents
+    front: What should a researcher do when interview accounts and observation disagree?
+    back: Treat the divergence as a finding, explore it further (for example through follow-up interviews) and report it rather than discarding either source.

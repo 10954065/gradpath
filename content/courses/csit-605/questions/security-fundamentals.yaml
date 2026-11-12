@@ -1,0 +1,229 @@
+module: security-fundamentals
+questions:
+  - id: sf01
+    lesson: principles-and-cia-triad
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish integrity from confidentiality
+    prompt: An attacker changes the amount on a pending supplier payment from GH₵ 5,000 to GH₵ 50,000 without reading any other data. Which security property has primarily been violated?
+    options:
+      - Confidentiality
+      - Integrity
+      - Availability
+      - Privacy
+    answer: 1
+    explanation: Integrity concerns unauthorised or undetected modification of data. No information was disclosed, so confidentiality is not the primary failure; the service still works, so availability is unaffected; privacy concerns rights over personal data and is not the core issue here.
+  - id: sf02
+    lesson: principles-and-cia-triad
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the limits of encryption for integrity and authenticity
+    prompt: Encrypting a message with a shared symmetric key, on its own, guarantees that the message has not been altered and proves which person sent it.
+    answer: false
+    explanation: Encryption primarily protects confidentiality. Without a message authentication code or authenticated encryption mode, ciphertext can sometimes be altered in predictable ways, and a shared key cannot prove which of the key holders sent the message, so it gives neither full integrity nor non-repudiation.
+  - id: sf03
+    lesson: principles-and-cia-triad
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Match Saltzer and Schroeder principles to examples
+    prompt: Match each design principle to the control that best illustrates it.
+    pairs:
+      - left: Least privilege
+        right: A teller account that can post deposits but cannot change interest rates
+      - left: Fail-safe defaults
+        right: A firewall whose last rule denies all traffic not explicitly permitted
+      - left: Separation of privilege
+        right: Two managers must approve payments above a set threshold
+      - left: Complete mediation
+        right: Authorisation is checked on every API request, not only at login
+      - left: Open design
+        right: Using a published, peer-reviewed algorithm such as AES
+    explanation: Each principle describes a design property. Least privilege limits rights to the task; fail-safe defaults deny unless permitted; separation of privilege requires more than one condition; complete mediation checks every access; open design avoids reliance on secrecy of the mechanism.
+  - id: sf04
+    lesson: principles-and-cia-triad
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply non-repudiation to a payment dispute
+    scenario: |
+      Illustrative scenario. A customer of a fictional Accra bank disputes a GH₵ 20,000 transfer, saying she never approved it. The bank's logs show only that someone entered the correct password and an SMS one-time password sent to her registered number. She reports that her SIM stopped working on the day of the transfer.
+    prompt: Which control would most strengthen the bank's ability to show that the customer personally approved future transfers?
+    options:
+      - Longer password complexity rules
+      - Transaction signing with a private key held securely on the customer's registered device
+      - Encrypting the bank's database backups
+      - Sending a second SMS confirmation after the transfer
+    answer: 1
+    explanation: Non-repudiation needs evidence tied to something only the customer controls. A key protected on the bound device creates a signature per transaction; a SIM swap would not give the attacker that key. Longer passwords do not address SMS interception, backup encryption protects confidentiality, and a further SMS is still vulnerable to the same SIM swap.
+  - id: sf05
+    lesson: principles-and-cia-triad
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for layered controls
+    prompt: What is the name of the strategy of layering multiple independent security controls so that the failure of one does not expose the asset?
+    answers: [defence in depth, defense in depth, layered defence, layered defense]
+    explanation: Defence in depth combines administrative, physical and technical controls, and preventive, detective and corrective controls, so that an attacker must defeat several layers.
+  - id: sf06
+    lesson: principles-and-cia-triad
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse which property failed in the Bangladesh Bank case
+    prompt: In the 2016 Bangladesh Bank SWIFT fraud, the fraudulent instructions arrived through the correct channel in the correct format. Which property was decisively undermined from the receiving bank's point of view?
+    options:
+      - Availability of the SWIFT network
+      - Confidentiality of the messages in transit
+      - Authenticity of the payment instructions
+      - Availability of the receiving bank's systems
+    answer: 2
+    explanation: The messages looked genuine but did not represent a legitimate decision by Bangladesh Bank, so authenticity failed. The network remained available and the messages were not disclosed in transit. The case shows that channel security does not help when the originating endpoint is compromised.
+  - id: sf07
+    lesson: principles-and-cia-triad
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the priority of security objectives for an asset
+    prompt: For a public web page listing a bank's branch locations and phone numbers, which prioritisation of security objectives is most defensible?
+    options:
+      - Confidentiality highest, because all bank data is sensitive
+      - Integrity and availability above confidentiality, because the content is public but must be correct and reachable
+      - Availability only, because integrity does not apply to public data
+      - All three equally, because the CIA triad must always be balanced
+    answer: 1
+    explanation: Public information needs little confidentiality, but an attacker who changed phone numbers could direct customers to fraudsters, so integrity matters; availability matters for customer service. Treating all properties as equal ignores the asset's context, and integrity clearly applies to public data.
+  - id: sf08
+    lesson: threats-vulnerabilities-and-risk
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish threat from vulnerability
+    prompt: In a risk assessment, which item is a vulnerability rather than a threat?
+    options:
+      - A criminal gang running phishing campaigns
+      - Heavy flooding in the area around the data centre
+      - Staff who have never received phishing awareness training
+      - A ransomware campaign targeting the health sector
+    answer: 2
+    explanation: A vulnerability is a weakness that a threat could exploit. Untrained staff are a people vulnerability. The gang, the flood and the campaign are threats or threat sources that might exploit such weaknesses.
+  - id: sf09
+    lesson: threats-vulnerabilities-and-risk
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Apply the risk equation
+    prompt: Using risk = likelihood × impact on 1–5 scales, what is the risk score for a scenario with likelihood 4 and impact 4?
+    answers: ["16", sixteen]
+    explanation: 4 × 4 = 16, which falls in the High band (10–16) on the common 5 × 5 matrix. Remember the score is ordinal; it ranks risks rather than measuring money.
+  - id: sf10
+    lesson: threats-vulnerabilities-and-risk
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Classify threat sources using NIST SP 800-30 categories
+    prompt: Match each event to its NIST SP 800-30 threat source category.
+    pairs:
+      - left: A fraud ring impersonating telecom staff to obtain mobile money PINs
+        right: Adversarial
+      - left: An administrator mistakenly deletes a production table
+        right: Accidental
+      - left: A server room air-conditioning unit fails
+        right: Structural
+      - left: Flooding damages a branch office
+        right: Environmental
+    explanation: Adversarial sources act deliberately; accidental sources are errors by legitimate users; structural sources are failures of equipment, software or environmental controls; environmental sources are natural or human-made disasters outside the organisation's control.
+  - id: sf11
+    lesson: threats-vulnerabilities-and-risk
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the limits of risk transfer
+    prompt: Purchasing cyber insurance transfers both the financial impact and the organisation's legal accountability for protecting customer data to the insurer.
+    answer: false
+    explanation: Insurance can transfer part of the financial impact, but accountability to customers and regulators, along with operational disruption and reputational harm, stays with the organisation.
+  - id: sf12
+    lesson: threats-vulnerabilities-and-risk
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply annualised loss expectancy to a control decision
+    scenario: |
+      Illustrative scenario. A Tema logistics firm estimates that each laptop theft costs GH₵ 10,000 including data-breach handling and expects four thefts a year. Full-disk encryption and a tracking service would cost GH₵ 18,000 a year and are expected to cut the cost per theft to GH₵ 2,500, with the same number of thefts.
+    prompt: What is the annual reduction in loss expectancy, and is the control cost-justified on this measure?
+    options:
+      - GH₵ 30,000 reduction; justified because it exceeds GH₵ 18,000
+      - GH₵ 10,000 reduction; not justified
+      - GH₵ 40,000 reduction; justified
+      - GH₵ 7,500 reduction; not justified
+    answer: 0
+    explanation: ALE before = 10,000 × 4 = 40,000. ALE after = 2,500 × 4 = 10,000. Reduction = 30,000, which exceeds the 18,000 cost, so the control is justified on this narrow financial measure. The other options misapply the formula.
+  - id: sf13
+    lesson: threats-vulnerabilities-and-risk
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the Equifax breach as a failure of defence in depth
+    prompt: Which combination best explains why the 2017 Equifax breach caused such severe impact?
+    options:
+      - A previously unknown zero-day vulnerability that no vendor had addressed
+      - An unpatched, publicly disclosed web framework flaw combined with failed traffic inspection due to an expired certificate and insecurely stored credentials
+      - A distributed denial-of-service attack that took the dispute portal offline
+      - A malicious insider who copied data to removable media
+    answer: 1
+    explanation: Official reports describe a known Apache Struts vulnerability left unpatched, an expired certificate that stopped inspection of encrypted traffic, and credentials that aided lateral movement. It was not a zero-day, a DDoS or an insider case.
+  - id: sf14
+    lesson: threats-vulnerabilities-and-risk
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the use of CVSS in risk prioritisation
+    prompt: A vulnerability scanner reports a CVSS 9.8 flaw on an isolated test server with no sensitive data and a CVSS 6.5 flaw on the internet-facing mobile money integration server. Which response is most defensible?
+    options:
+      - Fix the 9.8 flaw first because CVSS scores define organisational risk
+      - Fix the 6.5 flaw first or in parallel, because exposure and asset value make its organisational risk higher
+      - Ignore both because neither is being actively exploited
+      - Accept both because scanners produce false positives
+    answer: 1
+    explanation: CVSS measures generic technical severity, not organisational risk. Exposure and asset value raise the risk of the integration server's flaw. Ignoring or accepting without analysis is not documented risk management.
+  - id: sf15
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate risks and recommend treatments for a Ghanaian SME
+    marks: 20
+    case: |
+      Illustrative scenario. Sika Trading is a fictional importer of electronics in Accra with 25 staff. Sales are paid mainly into a merchant mobile money wallet controlled by the managing director's personal phone number, which receives SMS one-time passwords. The accounts officer approves supplier payments alone after receiving bank details by email. All staff share one administrator account on the office PC that holds customer records and invoices. There is a single external hard drive backup that stays plugged into the PC. Last month a staff member received a call from someone claiming to be from the telecom operator asking for the director's wallet PIN.
+    prompt: Identify and score the four most significant risks facing Sika Trading using a 5 × 5 likelihood × impact matrix, recommend a treatment for each, estimate residual risk and advise the managing director which actions to take first.
+    structure:
+      - Brief statement of key assets and the CIA properties that matter most
+      - Four risk scenarios, each linking threat, vulnerability and asset
+      - Defined scales and justified likelihood and impact scores
+      - Treatment options and specific controls for each risk
+      - Residual risk estimates and prioritised action plan
+    rubric:
+      - criterion: Risk identification
+        marks: 5
+        descriptor: Identifies four distinct, realistic risks linking threat, vulnerability and asset (for example SIM swap or social engineering on the wallet, business email compromise of supplier payments, ransomware via the shared admin account, backup loss)
+      - criterion: Scoring and justification
+        marks: 5
+        descriptor: Uses defined scales and justifies each likelihood and impact score with evidence from the case
+      - criterion: Treatment and controls
+        marks: 5
+        descriptor: Selects appropriate treatment options with specific, proportionate controls and states whether each reduces likelihood or impact
+      - criterion: Residual risk and prioritisation
+        marks: 3
+        descriptor: Estimates residual risk and presents a clear, justified order of action
+      - criterion: Communication
+        marks: 2
+        descriptor: Writes clearly for a non-technical managing director with a concise recommendation
+    modelAnswer: |
+      Key assets are the wallet funds (integrity and availability), supplier payments (integrity and authenticity) and customer records (confidentiality, which is also a Data Protection Act, 2012 obligation).
+      R1: Social engineering or SIM swap leads to wallet takeover. The attempted call shows active targeting (likelihood 4); losing several days' takings is severe (impact 5), score 20, Critical. Treat by mitigating: staff awareness that the operator never asks for PINs, app-based authentication with device binding, asking the operator about SIM-swap protection and sweeping funds daily to a bank account. Residual about 2 × 3 = 6.
+      R2: Business email compromise changes supplier bank details. Single approval and email-only instructions give likelihood 3 and impact 5, score 15, High. Mitigate with call-back verification to a known number, two-person approval and email MFA. Residual 2 × 3 = 6.
+      R3: Ransomware via the shared administrator account. Likelihood 4, impact 4, score 16, High. Mitigate with individual standard accounts, patching, endpoint protection and email filtering. Residual 2 × 3 = 6, but only if backups are fixed.
+      R4: Backups lost together with the PC. The drive is always connected, so ransomware or theft would take both (likelihood 3, impact 4, score 12). Mitigate with a 3-2-1 approach including an offline or immutable copy and monthly restore tests.
+      Priority: R1 and R2 first because they cause direct, irreversible financial loss and need little spending; then the backup fix, which reduces the impact of R3; then account separation. Remaining residual risks should be accepted formally by the director and reviewed quarterly.
+    explanation: Examiners look for correct use of threat, vulnerability and risk, defined and justified scoring, specific proportionate controls, residual risk and a prioritised plan suited to a small business.

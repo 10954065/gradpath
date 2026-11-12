@@ -1,0 +1,56 @@
+module: threats-and-attacks
+cards:
+  - lesson: malware-and-ransomware
+    front: What is the key difference between a virus and a worm?
+    back: A virus needs a host file and usually user action to spread; a worm propagates by itself across networks by exploiting vulnerabilities.
+  - lesson: malware-and-ransomware
+    front: List the seven stages of the Lockheed Martin Cyber Kill Chain.
+    back: Reconnaissance, weaponisation, delivery, exploitation, installation, command and control, actions on objectives.
+  - lesson: malware-and-ransomware
+    front: How does MITRE ATT&CK differ from the Cyber Kill Chain?
+    back: ATT&CK is a detailed matrix of tactics (attacker goals) and techniques (methods) based on observed behaviour, used to map detections and gaps; the Kill Chain is a simpler linear model of intrusion stages.
+  - lesson: malware-and-ransomware
+    front: Why does restoring from backup not end a double-extortion ransomware incident?
+    back: The data has already been stolen, so the confidentiality breach, possible publication, legal notification duties and any attacker persistence remain.
+  - lesson: malware-and-ransomware
+    front: What made NotPetya a supply chain attack?
+    back: Its initial spread came through a compromised update of M.E.Doc, a trusted Ukrainian accounting software package.
+  - lesson: malware-and-ransomware
+    front: Why is the time between initial access and encryption important for defenders?
+    back: Human-operated ransomware often spends days or weeks escalating privileges and moving laterally, giving defenders a window to detect and stop it before impact.
+  - lesson: phishing-social-engineering-and-insiders
+    front: Name six persuasion principles attackers exploit in social engineering.
+    back: Authority, scarcity or urgency, liking, reciprocity, social proof, and commitment and consistency.
+  - lesson: phishing-social-engineering-and-insiders
+    front: What single process control most reliably defeats business email compromise involving changed bank details?
+    back: Call-back verification using a phone number already on file, combined with dual approval for payment detail changes.
+  - lesson: phishing-social-engineering-and-insiders
+    front: How does the mobile money "wrong transfer" scam work?
+    back: A fake SMS credit alert is followed by a call asking the victim to return money "sent by mistake"; the victim sends real money although no funds were received. Always check the balance through the official menu or app.
+  - lesson: phishing-social-engineering-and-insiders
+    front: Distinguish malicious, negligent and compromised insiders.
+    back: Malicious insiders intend harm; negligent insiders cause harm through carelessness; compromised insiders are legitimate users whose accounts or devices have been taken over by outsiders.
+  - lesson: phishing-social-engineering-and-insiders
+    front: Why does phishing-resistant MFA defeat adversary-in-the-middle phishing?
+    back: Methods such as FIDO2 keys and passkeys are cryptographically bound to the genuine website's domain, so a fake site cannot obtain a usable authentication response to relay.
+  - lesson: phishing-social-engineering-and-insiders
+    front: What two weaknesses did the July 2020 Twitter compromise combine?
+    back: Phone-based spear phishing of employees and over-broad access to powerful internal account-management tools.
+  - lesson: denial-of-service-and-credential-attacks
+    front: Name the three main categories of denial-of-service attack.
+    back: Volumetric (bandwidth), protocol or state exhaustion (connection tables), and application layer (server and database resources).
+  - lesson: denial-of-service-and-credential-attacks
+    front: How do reflection and amplification attacks work?
+    back: Attackers send small requests with the victim's spoofed address to third-party servers, which send much larger responses to the victim, multiplying the traffic.
+  - lesson: denial-of-service-and-credential-attacks
+    front: Password spraying versus credential stuffing - what is the difference?
+    back: Spraying tries a few common passwords against many accounts; stuffing tests many username–password pairs leaked from other services, exploiting reuse.
+  - lesson: denial-of-service-and-credential-attacks
+    front: Why does length matter more than complexity for random passwords?
+    back: Search space is N^L, so adding characters multiplies the space exponentially, whereas enlarging the alphabet raises it more slowly; but this holds only for random passwords.
+  - lesson: denial-of-service-and-credential-attacks
+    front: Why is aggressive account lockout risky?
+    back: Attackers can deliberately lock out many legitimate users, causing denial of service, while spraying stays below the threshold; throttling and MFA are better.
+  - lesson: denial-of-service-and-credential-attacks
+    front: What did the 2016 Mirai attack on Dyn demonstrate?
+    back: Default IoT credentials can build huge botnets, and attacking a shared dependency such as a DNS provider can disrupt many websites at once.

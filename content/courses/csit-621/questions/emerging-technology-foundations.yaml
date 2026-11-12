@@ -1,0 +1,250 @@
+module: emerging-technology-foundations
+questions:
+  - id: q01
+    lesson: emerging-technology-and-innovation
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Identify the attributes of an emerging technology
+    prompt: Which set lists the five attributes of emerging technologies proposed by Rotolo, Hicks and Martin (2015)?
+    options:
+      - Radical novelty, relatively fast growth, coherence, prominent impact, uncertainty and ambiguity
+      - Low cost, high speed, open source, scalability, security
+      - Relative advantage, compatibility, complexity, trialability, observability
+      - Trigger, peak, trough, slope, plateau
+    answer: 0
+    explanation: Rotolo, Hicks and Martin define emergence through radical novelty, relatively fast growth, coherence, prominent impact, and uncertainty and ambiguity. The third option lists Rogers' perceived attributes of innovations, which explain adoption rates rather than emergence. The fourth lists hype-cycle phases. The second is a generic list of desirable features with no theoretical basis.
+  - id: q02
+    lesson: emerging-technology-and-innovation
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish invention from innovation
+    prompt: An invention becomes an innovation only when it is adopted and creates economic or social value.
+    answer: true
+    explanation: Invention is the creation of a new idea or device; innovation requires successful introduction and adoption that creates value. Many inventions never become innovations because they lack a business model, complementary assets or regulatory acceptance.
+  - id: q03
+    lesson: emerging-technology-and-innovation
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Classify innovation types using Henderson and Clark's framework
+    prompt: Match each innovation type to its description.
+    pairs:
+      - left: Incremental innovation
+        right: Refines existing components and existing links between them
+      - left: Modular innovation
+        right: Replaces a core component while the overall architecture stays the same
+      - left: Architectural innovation
+        right: Reconfigures links between largely familiar components
+      - left: Radical innovation
+        right: Changes both core components and the links between them
+    explanation: Henderson and Clark (1990) classify innovation by whether it changes core design concepts (components) and/or the linkages between them. Architectural innovation is dangerous for incumbents because familiar components hide the fact that knowledge about how parts interact, embedded in organisational routines, has become obsolete.
+  - id: q04
+    lesson: emerging-technology-and-innovation
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply hype-cycle thinking to an investment stance
+    scenario: |
+      A Ghanaian insurance company's board reads many news stories about a new AI tool. Vendors promise large savings, but two local pilots by other firms have been quietly abandoned and there are few production deployments anywhere.
+    prompt: Which managerial stance is most consistent with hype-cycle reasoning?
+    options:
+      - Sign a multi-year enterprise licence immediately to secure first-mover advantage
+      - Dismiss the technology permanently because pilots have failed
+      - Run a small, time-boxed experiment with explicit learning goals and exit criteria
+      - Wait until the technology appears on the plateau of productivity in every market before learning anything about it
+    answer: 2
+    explanation: The description suggests a technology at or near the peak of inflated expectations. The model advises discounting supplier claims while learning through bounded experiments. Committing heavily ignores the risk of disillusionment; permanent dismissal ignores the possibility of later recovery; waiting passively forgoes the capability-building time a firm needs.
+  - id: q05
+    lesson: emerging-technology-and-innovation
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the hype-cycle phase that follows the peak
+    prompt: Which hype-cycle phase immediately follows the peak of inflated expectations?
+    answers:
+      - trough of disillusionment
+      - the trough of disillusionment
+      - trough
+    explanation: After the peak, failed experiments and unmet promises cause interest to fall into the trough of disillusionment. Investment continues only where early adopters see a clear path to value, before the slope of enlightenment.
+  - id: q06
+    lesson: emerging-technology-and-innovation
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the limitations of the hype-cycle model
+    prompt: Which is the strongest criticism of using the hype cycle as the main basis for a technology investment decision?
+    options:
+      - It uses too many phases to be memorable
+      - Positioning is an expert judgement and the model says little about how long each phase lasts or whether recovery will occur
+      - It only applies to consumer electronics
+      - It has never been discussed in management literature
+    answer: 1
+    explanation: The model is a sense-making heuristic. Where a technology sits is a judgement, timing is unspecified and some technologies never recover, so it cannot replace business-case analysis. The other options are incorrect; the model is not limited to consumer electronics, it has been discussed widely (for example Fenn and Raskino, 2008), and memorability is not a substantive weakness.
+  - id: q07
+    lesson: emerging-technology-and-innovation
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse which emergence attribute is weakest in a case
+    scenario: |
+      Dozens of start-ups worldwide are experimenting with a new materials technology. Funding and patent filings are rising quickly, but each firm uses different terminology, there are no standards bodies or dedicated conferences, and experts disagree on what the technology is for.
+    prompt: Which attribute of emergence is least developed in this case?
+    options:
+      - Relatively fast growth
+      - Coherence
+      - Radical novelty
+      - Uncertainty and ambiguity
+    answer: 1
+    explanation: Coherence refers to a technology beginning to hang together as an identifiable field with shared terminology, communities and standards. The case shows rapid growth (funding, patents) and high uncertainty, while the absence of shared terms and institutions indicates low coherence.
+  - id: q08
+    lesson: forecasting-adoption-and-disruption
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain the distinctive features of the Delphi method
+    prompt: What most clearly distinguishes the Delphi method from a focus group?
+    options:
+      - Delphi uses statistical regression on historical data
+      - Delphi collects anonymous expert judgements over several rounds with summarised feedback
+      - Delphi relies on a single face-to-face workshop
+      - Delphi requires customers rather than experts as participants
+    answer: 1
+    explanation: Delphi is iterative and anonymous; experts respond independently, receive a statistical summary and reasons, then revise. Anonymity reduces the influence of dominant or senior participants, which is a known weakness of face-to-face groups. It is a judgement-based method, not regression.
+  - id: q09
+    lesson: forecasting-adoption-and-disruption
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Explain the purpose of scenario planning
+    prompt: The main purpose of scenario planning is to identify the single most likely future so that the firm can plan for it.
+    answer: false
+    explanation: Scenario planning builds several plausible, internally consistent futures around critical uncertainties and tests strategies against all of them. It deliberately avoids single-point prediction, which is why it suits emerging technologies with intrinsic uncertainty.
+  - id: q10
+    lesson: forecasting-adoption-and-disruption
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Recall Rogers' adopter categories and their approximate shares
+    prompt: Match each adopter category to its approximate share in Rogers' idealised distribution.
+    pairs:
+      - left: Innovators
+        right: 2.5%
+      - left: Early adopters
+        right: 13.5%
+      - left: Early majority and late majority (each)
+        right: 34%
+      - left: Laggards
+        right: 16%
+    explanation: Rogers derived these categories from standard deviations of a normal distribution of adoption times. They are an idealised classification, useful for reasoning about market segments rather than measured facts about any particular market.
+  - id: q11
+    lesson: forecasting-adoption-and-disruption
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply Rogers' perceived attributes to an adoption problem
+    scenario: |
+      A Ghanaian agritech firm offers a soil-testing app. Farmers say it is useful, but they must buy a sensor kit upfront before they can see any results, and neighbouring farmers rarely see the outcomes because results are private.
+    prompt: Which two perceived attributes should the firm improve first?
+    options:
+      - Complexity and compatibility
+      - Trialability and observability
+      - Relative advantage and complexity
+      - Compatibility and relative advantage
+    answer: 1
+    explanation: The upfront purchase prevents limited trial (low trialability) and private results prevent others from seeing benefits (low observability). Remedies include rental or shared kits for trial and demonstration plots or shared community dashboards. Relative advantage appears adequate because farmers find it useful.
+  - id: q12
+    lesson: forecasting-adoption-and-disruption
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Distinguish disruptive from sustaining innovation
+    prompt: A new entrant launches a payments terminal that is faster, more secure and more feature-rich than incumbents' devices and sells it to the incumbents' biggest merchant customers. In Christensen's terms this is best described as
+    options:
+      - Low-end disruption
+      - New-market disruption
+      - A sustaining innovation strategy
+      - Architectural innovation by definition
+    answer: 2
+    explanation: Christensen, Raynor and McDonald (2015) stress that an entrant offering a better product to mainstream customers from the outset is pursuing a sustaining strategy, however successful. Disruption starts with an inferior or simpler offer in a low-end or non-consumer foothold. Whether it is architectural depends on component linkages, which the scenario does not establish.
+  - id: q13
+    lesson: forecasting-adoption-and-disruption
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the term for the gap between early adopters and the early majority
+    prompt: What term did Geoffrey Moore use for the gap between early adopters and the early majority in high-technology markets?
+    answers:
+      - chasm
+      - the chasm
+    explanation: Moore (1991) argued that early adopters buy a vision while the early majority want proven, complete solutions and peer references. Many technology ventures stall in this chasm unless they deliver a whole product for a target niche.
+  - id: q14
+    lesson: forecasting-adoption-and-disruption
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Apply the logistic adoption model
+    prompt: In the logistic model adoption(t) = L / (1 + e^(-k(t - t0))), with L = 40,000 and t0 = 5 years, what is adoption at t = 5?
+    options:
+      - 40,000
+      - 20,000
+      - 10,000
+      - It cannot be determined without k
+    answer: 1
+    explanation: At t = t0 the exponent is zero, so e^0 = 1 and adoption = L / 2 = 20,000 regardless of k. The midpoint is where the curve is steepest; k controls how quickly adoption moves through this phase, not the value at the midpoint.
+  - id: q15
+    lesson: forecasting-adoption-and-disruption
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate the risks of trend extrapolation
+    prompt: Because exponential improvement trends have held for long periods in some technologies, it is safe to extrapolate them indefinitely when building a ten-year business case.
+    answer: false
+    explanation: Technologies typically follow S-curves; improvement slows as physical, economic or market limits are approached. A business case should test alternative assumptions and look for signals that a curve is flattening or that a successor technology is emerging.
+  - id: q16
+    lesson: forecasting-adoption-and-disruption
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate an incumbent response to a potential disruptor
+    scenario: |
+      An established Ghanaian bank notices a digital lender offering very small, short-term loans to traders the bank has never served. The loans are expensive and limited, and the bank's corporate customers have no interest in them. The lender is improving its credit scoring quickly.
+    prompt: According to disruption theory, which response is most appropriate?
+    options:
+      - Ignore it because the bank's best customers do not want the product
+      - Evaluate the opportunity using the bank's existing margin thresholds and approval process
+      - Create a separate unit with its own cost structure and metrics to compete in this segment
+      - Lobby only for stricter regulation and take no other action
+    answer: 2
+    explanation: This resembles new-market disruption. Christensen argued that incumbents fail because resource allocation processes tied to existing customers and margins make low-margin footholds look unattractive. A separate unit with suitable metrics can learn and compete. Ignoring it, or judging it by existing thresholds, reproduces the failure pattern; relying solely on regulation does not build capability.
+  - id: q17
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Critically evaluate frameworks for anticipating technology change
+    prompt: "Critically evaluate the usefulness of the hype cycle, Rogers' diffusion of innovations and Christensen's disruptive innovation theory for a Ghanaian retail chain deciding whether and when to invest in an emerging technology of your choice."
+    marks: 20
+    structure:
+      - Introduce the decision context and the chosen technology, explaining why it is emerging
+      - Explain each framework briefly and what question it helps answer
+      - Apply each framework to the retail chain's situation with specific reasoning
+      - Evaluate limitations, including context, timing and evidence problems
+      - Conclude with an integrated recommendation on timing and form of investment
+    rubric:
+      - criterion: Understanding of frameworks
+        marks: 5
+        descriptor: Accurate, concise explanation of the hype cycle, Rogers' attributes and adopter categories, and disruption theory
+      - criterion: Application to context
+        marks: 6
+        descriptor: Frameworks applied to a specific Ghanaian retail situation with relevant local constraints such as infrastructure, payments and customer behaviour
+      - criterion: Critical evaluation
+        marks: 6
+        descriptor: Balanced discussion of limitations, such as judgement-based positioning, idealised adopter shares and overuse of the disruption label
+      - criterion: Recommendation and structure
+        marks: 3
+        descriptor: Clear, justified recommendation linked to the analysis; logical structure and academic style
+    modelAnswer: |
+      A strong answer selects a plausible technology, for example AI-based demand forecasting or self-checkout, and justifies why it is emerging using attributes such as fast growth and uncertainty. It then treats each framework as answering a different question. The hype cycle addresses expectations versus capability: if supplier claims outrun proven deployments, the chain should discount claims and prefer small pilots. Rogers addresses who will adopt and how quickly: for customer-facing technologies such as self-checkout, compatibility with shopping habits, complexity for less digitally confident customers and observability in store all shape uptake, and the chain must decide which customer segments to target first. Disruption theory addresses competitive threat: the chain should ask whether an entrant, such as a low-cost online grocery platform, is serving non-consumers or over-served customers with an initially inferior offer that is improving.
+      The evaluation should note that hype-cycle positioning is subjective and silent on timing; Rogers' percentages are idealised and the model can underplay infrastructure and cost barriers; and disruption theory is often applied retrospectively and loosely. Local factors such as power reliability, data costs, mobile money integration and staff skills may matter more than any generic model. A good conclusion integrates the frameworks into a staged plan, such as a time-boxed pilot in selected stores with clear metrics, scenarios for competitor moves and criteria for scaling or stopping.
+    explanation: Examiners look for accurate use of all three frameworks, genuine application to a Ghanaian retail context, critical discussion of limitations and a justified, staged recommendation rather than description alone.

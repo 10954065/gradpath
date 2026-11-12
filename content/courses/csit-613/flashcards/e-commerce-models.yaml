@@ -1,0 +1,38 @@
+module: e-commerce-models
+cards:
+  - lesson: b2b-b2c-c2c-and-c2b
+    front: On which dimensions should B2B, B2C, C2C and C2B be compared?
+    back: Seller and buyer, transaction value, buying process, pricing mechanism, payment method, main trust problem and key technologies.
+  - lesson: b2b-b2c-c2c-and-c2b
+    front: Name four forms of B2B e-commerce.
+    back: Direct selling through customer portals, e-procurement systems, EDI or API integration between buyer and supplier, B2B marketplaces, and private industrial networks.
+  - lesson: b2b-b2c-c2c-and-c2b
+    front: What is the central problem of C2C e-commerce and how do platforms address it?
+    back: Trust between strangers; platforms use ratings, identity verification, escrow-style payment holding and dispute resolution.
+  - lesson: b2b-b2c-c2c-and-c2b
+    front: Give three examples of C2B e-commerce.
+    back: Freelancers selling services to firms via work platforms, photographers licensing images to stock sites used by businesses, and creators paid by brands for promotion.
+  - lesson: b2b-b2c-c2c-and-c2b
+    front: How does transaction cost economics explain the value of e-commerce models?
+    back: Digital tools reduce the costs of searching, negotiating, contracting and monitoring, for example integration cuts B2B order processing costs and reputation systems cut the cost of assessing unknown C2C sellers.
+  - lesson: b2b-b2c-c2c-and-c2b
+    front: What did Alipay originally do for Taobao's C2C marketplace?
+    back: It acted as an escrow-style service, holding the buyer's payment until the buyer confirmed receipt, which addressed trust between strangers.
+  - lesson: marketplaces-and-platform-business-models
+    front: How does a pipeline business differ from a platform business?
+    back: A pipeline controls a linear chain (buy inputs, transform, sell); a platform creates value by facilitating interactions between external producers and consumers.
+  - lesson: marketplaces-and-platform-business-models
+    front: What are the three components of a platform's core interaction (Parker et al.)?
+    back: Participants (producer and consumer), the value unit (for example a listing) and the filter that matches value units to consumers.
+  - lesson: marketplaces-and-platform-business-models
+    front: What is the key insight of Rochet and Tirole (2003) about platform pricing?
+    back: The structure of prices across sides matters, not just the level; it is often optimal to subsidise the price-sensitive side whose presence creates value for the other and charge the side that values access more.
+  - lesson: marketplaces-and-platform-business-models
+    front: List four strategies for solving the chicken-and-egg problem.
+    back: Subsidise one side, seed the platform with its own supply, start in a dense niche, piggyback on an existing user base, or provide stand-alone value to one side.
+  - lesson: marketplaces-and-platform-business-models
+    front: Why does multi-homing weaken network-effect advantages?
+    back: If users can easily use several platforms at once, no single platform captures all the network benefits, so competitors can survive and switching is easy.
+  - lesson: marketplaces-and-platform-business-models
+    front: What is disintermediation risk for a platform, and how is it reduced?
+    back: Users bypass the platform after being matched; it is reduced by providing ongoing value inside the platform (payment protection, scheduling, reputation, insurance) and fair value sharing.

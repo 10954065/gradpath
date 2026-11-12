@@ -1,0 +1,350 @@
+module: application-and-database-security
+questions:
+  # Lesson 1: web-application-security-sqli-and-xss
+  - id: q01
+    lesson: web-application-security-sqli-and-xss
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Identify the first-ranked category in the OWASP Top 10:2021
+    prompt: Which category is ranked A01 in the OWASP Top 10:2021?
+    options:
+      - Injection
+      - Broken Access Control
+      - Cryptographic Failures
+      - Security Misconfiguration
+    answer: 1
+    explanation: Broken Access Control moved to first place in the 2021 edition, reflecting how often applications fail to check whether a user may act on a specific object. Injection fell to A03 (and now includes XSS), Cryptographic Failures is A02 and Security Misconfiguration is A05.
+  - id: q02
+    lesson: web-application-security-sqli-and-xss
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Recognise the primary defence against SQL injection
+    prompt: Rigorous input validation is a sufficient replacement for parameterised queries as a defence against SQL injection.
+    answer: false
+    explanation: Validation reduces attack surface but cannot safely handle every legitimate value (for example names containing apostrophes) and is easy to get wrong. Parameterised queries fix the root cause by keeping SQL structure and data separate, so validation is a supporting layer only.
+  - id: q03
+    lesson: web-application-security-sqli-and-xss
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Classify an XSS vulnerability by its data flow
+    scenario: |
+      A single-page web application reads the value after the # in the URL and writes it into a welcome banner using element.innerHTML. The server never receives the fragment. An authorised tester shows that a crafted link causes script to run in the victim's browser.
+    prompt: Which type of cross-site scripting is this?
+    options:
+      - Stored XSS
+      - Reflected XSS
+      - DOM-based XSS
+      - SQL injection
+    answer: 2
+    explanation: The vulnerable code runs entirely in client-side JavaScript, reading attacker-influenced data (the URL fragment) and writing it to a dangerous sink (innerHTML), so it is DOM-based. It is not stored because nothing is saved on the server, and not reflected because the server does not echo the payload. Server-side filters cannot see it, so the fix is to use a safe sink such as textContent.
+  - id: q04
+    lesson: web-application-security-sqli-and-xss
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name the HTTP header that restricts permitted script sources
+    prompt: Name the HTTP response header that tells the browser which sources of script and other content are permitted on a page.
+    answers: [Content Security Policy, Content-Security-Policy, CSP]
+    explanation: Content Security Policy (CSP) limits where scripts may load from and can block inline script, reducing the impact of any XSS that slips through. It complements, but does not replace, output encoding.
+  - id: q05
+    lesson: web-application-security-sqli-and-xss
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match web vulnerabilities to their primary defences
+    prompt: Match each vulnerability or risk to its primary defence.
+    pairs:
+      - left: SQL injection
+        right: Parameterised queries
+      - left: Stored or reflected XSS
+        right: Context-aware output encoding
+      - left: DOM-based XSS via innerHTML
+        right: Use safe sinks such as textContent
+      - left: Injected script that bypasses encoding
+        right: A strict Content Security Policy
+    explanation: Each defence addresses the interpreter boundary involved. Parameterised queries keep SQL data separate from code; encoding makes data inert in HTML; safe DOM sinks avoid parsing markup; CSP is a browser-enforced backstop limiting what injected script can do.
+  - id: q06
+    lesson: web-application-security-sqli-and-xss
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate compensating controls for a legacy injection flaw
+    scenario: |
+      Illustrative scenario. A Ghanaian insurer's legacy claims portal contains concatenated SQL throughout. A full rewrite will take nine months. The portal connects to the database as the database owner.
+    prompt: Which immediate action most reduces risk while the rewrite is planned?
+    options:
+      - Rely on the existing perimeter firewall because the portal is behind it
+      - Deploy a web application firewall and reduce the portal's database account to only the permissions it needs, while prioritising fixes to the most exposed queries
+      - Add a CAPTCHA to every form
+      - Encrypt the database files with transparent data encryption
+    answer: 1
+    explanation: A WAF buys time against common injection patterns and least privilege limits what a successful injection can do; prioritised code fixes then address the root cause. A network firewall allows web traffic by design, CAPTCHA does not stop injection, and TDE protects files at rest but not data queried through the application.
+  - id: q07
+    lesson: web-application-security-sqli-and-xss
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain why stored XSS is often high impact
+    prompt: Stored XSS can be more damaging than reflected XSS because the payload is delivered to every user who views the affected content, including administrators, without needing a crafted link.
+    answer: true
+    explanation: Stored XSS persists on the server and executes whenever the content is viewed, so it can reach many users and privileged staff. Reflected XSS requires each victim to be lured into following a crafted request.
+
+  # Lesson 2: authentication-and-authorisation
+  - id: q08
+    lesson: authentication-and-authorisation
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish authentication from authorisation
+    prompt: Which statement correctly distinguishes authentication from authorisation?
+    options:
+      - Authentication decides what a user may do; authorisation verifies who they are
+      - Authentication verifies a claimed identity; authorisation decides whether that identity may perform a specific action on a resource
+      - They are synonyms used in different countries
+      - Authorisation happens only once at login, authentication on every request
+    answer: 1
+    explanation: Authentication answers "who is this?" and authorisation answers "may they do this to this object?". Authorisation must be checked on every request; logging in once does not grant blanket permission.
+  - id: q09
+    lesson: authentication-and-authorisation
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Apply NIST SP 800-63B to password policy
+    prompt: Which policy change best aligns with NIST SP 800-63B guidance?
+    options:
+      - Require one uppercase letter, one digit and one symbol
+      - Force all users to change passwords every 60 days
+      - Screen new passwords against lists of common and breached passwords and require changes only on evidence of compromise
+      - Ask users a security question such as their mother's maiden name
+    answer: 2
+    explanation: SP 800-63B recommends screening against common or compromised passwords and changing on evidence of compromise. It advises against arbitrary composition rules and periodic forced changes, which produce predictable patterns, and against knowledge-based security questions.
+  - id: q10
+    lesson: authentication-and-authorisation
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse MFA phishing resistance
+    scenario: |
+      Staff at a logistics firm use passwords plus six-digit codes from an authenticator app. An attacker sends a phishing email linking to a proxy site that looks identical to the staff portal and relays everything the victim types to the real site in real time.
+    prompt: Which control would most effectively defeat this attack?
+    options:
+      - Increasing the code length to eight digits
+      - FIDO2/WebAuthn security keys or passkeys bound to the genuine site's origin
+      - Requiring passwords to be changed monthly
+      - Sending codes by SMS instead
+    answer: 1
+    explanation: A real-time relay captures any typed code, whatever its length or delivery channel. FIDO2/WebAuthn authenticators sign a challenge that includes the origin, so a signature obtained on a look-alike domain is useless to the attacker. Password expiry does not address relay attacks.
+  - id: q11
+    lesson: authentication-and-authorisation
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the relationship between OAuth 2.0 and OpenID Connect
+    prompt: OAuth 2.0 on its own provides a standard, verifiable statement of the user's identity to the client application.
+    answer: false
+    explanation: OAuth 2.0 is a delegated authorisation framework; its access token tells a resource server that access was granted. OpenID Connect adds an ID token, a signed JWT with claims about the authenticated user, which the client validates.
+  - id: q12
+    lesson: authentication-and-authorisation
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Identify the attack defeated by regenerating session identifiers at login
+    prompt: Which session attack is prevented by issuing a new session identifier when the user logs in?
+    answers: [session fixation, fixation]
+    explanation: In session fixation the attacker plants a known session ID before login; if the ID is not regenerated, it becomes authenticated. Regenerating the identifier at login makes the attacker's planted value worthless.
+  - id: q13
+    lesson: authentication-and-authorisation
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match identity concepts to examples
+    prompt: Match each concept to the best example.
+    pairs:
+      - left: Possession factor
+        right: A code generated by an authenticator app on the user's phone
+      - left: Inherence factor
+        right: A fingerprint used to unlock a passkey
+      - left: RBAC rule
+        right: Loan officers can view loan files
+      - left: ABAC rule
+        right: Loan officers can view loan files for their own branch from managed devices
+      - left: Accountability
+        right: An audit log attributing each refund to a named staff account
+    explanation: Possession and inherence are factor categories; RBAC grants permissions via roles while ABAC evaluates attributes such as branch and device; accountability depends on individual accounts and logging so actions can be attributed.
+  - id: q14
+    lesson: authentication-and-authorisation
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate identity governance failures
+    scenario: |
+      A post-incident review finds that attackers logged into a company's VPN using the password of an employee who left two years earlier. The VPN required only a password.
+    prompt: Which pair of controls would most directly have prevented this intrusion?
+    options:
+      - Longer password expiry and a stronger firewall
+      - Timely deprovisioning of leavers' accounts and MFA on remote access
+      - Data loss prevention and full-disk encryption
+      - Security awareness posters and CAPTCHA
+    answer: 1
+    explanation: The intrusion relied on an account that should not have existed and on single-factor remote access, the same pattern reported in the Colonial Pipeline case. Joiner-mover-leaver processes and MFA address both. The other options do not stop a valid but stale credential being used.
+
+  # Lesson 3: secure-development-and-database-protection
+  - id: q15
+    lesson: secure-development-and-database-protection
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish SAST from DAST
+    prompt: Which statement best describes static application security testing (SAST)?
+    options:
+      - It sends crafted requests to a running application and observes the responses
+      - It analyses source code or binaries without executing them to find insecure patterns
+      - It lists open-source components and their licences
+      - It is a manual test performed by an authorised human tester
+    answer: 1
+    explanation: SAST inspects code without running it, so it can point to the exact line but cannot see runtime configuration. Sending requests to a running app is DAST, listing components is SCA, and manual chained testing is penetration testing.
+  - id: q16
+    lesson: secure-development-and-database-protection
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the limits of transparent data encryption
+    prompt: Transparent data encryption prevents attackers from stealing data through a SQL injection flaw in the application.
+    answer: false
+    explanation: TDE protects data files and backups at rest. Data returned through queries is decrypted automatically by the database engine, so a successful injection still exposes it. Parameterised queries and least privilege address injection.
+  - id: q17
+    lesson: secure-development-and-database-protection
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Name the inventory that lists software components
+    prompt: What is the name of the formal inventory of components and dependencies that make up a piece of software (abbreviation accepted)?
+    answers: [software bill of materials, SBOM]
+    explanation: An SBOM lets an organisation answer quickly whether it uses a component named in a new advisory, which was a weakness highlighted by the Equifax breach.
+  - id: q18
+    lesson: secure-development-and-database-protection
+    type: matching
+    bloom: apply
+    difficulty: medium
+    objective: Map security activities to SDLC phases
+    prompt: Match each secure SDLC phase to an appropriate security activity.
+    pairs:
+      - left: Requirements
+        right: Classify data and define abuse cases
+      - left: Design
+        right: STRIDE threat modelling
+      - left: Build
+        right: Software composition analysis and artefact signing
+      - left: Test
+        right: DAST and threat-informed test cases
+      - left: Operate
+        right: Monitoring, patching and incident response
+    explanation: Shifting left places each activity where it is cheapest and most effective, while operations activities continue after release because new vulnerabilities are disclosed in components already in production.
+  - id: q19
+    lesson: secure-development-and-database-protection
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply row-level security to a multi-branch data store
+    scenario: |
+      Illustrative scenario. A savings company with twenty branches discovers that a developer forgot a branch filter in one report query, so branch staff could see other branches' customers.
+    prompt: Which database control would most robustly prevent this class of error recurring?
+    options:
+      - A row-level security policy that filters rows by the session's branch attribute
+      - Transparent data encryption
+      - Nightly full backups
+      - Renaming the table
+    answer: 0
+    explanation: RLS enforces the branch restriction inside the database for every query, so a missing WHERE clause in application code no longer exposes other rows. TDE and backups address different risks, and renaming a table is not a control.
+  - id: q20
+    lesson: secure-development-and-database-protection
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the Equifax breach as a lifecycle failure
+    prompt: Which lifecycle weakness was most central to the Equifax 2017 breach?
+    options:
+      - Use of a weak encryption algorithm in the website's TLS configuration
+      - Failure to identify and patch a known vulnerable Apache Struts component after a fix was available
+      - A malicious insider deleting audit logs
+      - A distributed denial-of-service attack
+    answer: 1
+    explanation: A patch for CVE-2017-5638 was published in March 2017 but the dispute portal was not updated, and attackers exploited it from May. This is an operate-phase failure of component inventory and patch management, compounded by monitoring gaps; the other options were not the reported cause.
+  - id: q21
+    lesson: secure-development-and-database-protection
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate the claim that penetration testing replaces secure development
+    prompt: An annual penetration test is an adequate substitute for security activities during design and coding.
+    answer: false
+    explanation: Penetration testing is periodic and samples the system; it cannot find everything, and defects found late are expensive to fix. It is one assurance activity within a secure SDLC that also includes threat modelling, code review, SAST, SCA and patch management.
+
+  # Module-level extended questions
+  - id: q22
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate and prioritise application and database security controls for a Ghanaian fintech
+    marks: 20
+    case: |
+      Illustrative scenario. PayNkoso is a fictional Accra fintech offering a merchant dashboard and an API that lets small shops accept mobile money payments. It has eight developers and releases twice a week. An authorised assessment finds: (1) two report pages building SQL by string concatenation; (2) merchant support messages rendered unencoded in the staff console; (3) staff log in with passwords only, and a single shared "admin" account exists; (4) the API returns another merchant's transactions if the merchant ID in the URL is changed; (5) the database account used by the API has owner rights and no audit logging is enabled; (6) no dependency scanning is performed.
+    prompt: Analyse the findings, map them to relevant OWASP Top 10:2021 categories, and recommend a prioritised remediation plan that also strengthens PayNkoso's development lifecycle. Justify your priorities with reference to likelihood, impact and regulatory context in Ghana.
+    structure:
+      - Brief context and the assets at risk
+      - Mapping of each finding to OWASP categories and root causes
+      - Prioritisation using likelihood and impact
+      - Technical remediation for each finding
+      - Lifecycle and governance improvements (SAST, SCA, threat modelling, access reviews)
+      - Regulatory considerations (Act 843, Act 1038, sector regulator) and conclusion
+    rubric:
+      - criterion: Accurate mapping and root-cause analysis
+        marks: 5
+        descriptor: Correctly links findings to Injection, Broken Access Control, Identification and Authentication Failures, Vulnerable and Outdated Components and Logging failures, explaining root causes.
+      - criterion: Justified prioritisation
+        marks: 5
+        descriptor: Uses likelihood and impact explicitly; places the broken object-level authorisation and injection at the top with reasons.
+      - criterion: Quality of technical recommendations
+        marks: 5
+        descriptor: Recommends parameterised queries, output encoding and CSP, server-side authorisation checks, MFA and named accounts, least-privilege database roles and auditing.
+      - criterion: Lifecycle, governance and regulatory insight
+        marks: 5
+        descriptor: Proposes sustainable SDLC changes and correctly references Ghanaian data protection and cybersecurity obligations without overstating them.
+    modelAnswer: |
+      A strong answer starts by identifying the assets: merchant and customer transaction data, payout details and the integrity of the payment flow. Finding 4 is Broken Access Control (A01) and should be the top priority: it is trivially exploitable by any authenticated merchant and exposes other merchants' data at scale. Findings 1 and 2 are Injection (A03), covering SQLi and stored XSS; the XSS is especially serious because it executes in staff browsers with elevated privileges. Finding 3 is an Identification and Authentication Failure (A07) and also undermines accountability. Finding 5 magnifies every other flaw by giving attackers full database rights and leaves the firm blind, aligning with A09 Logging and Monitoring Failures. Finding 6 relates to A06 Vulnerable and Outdated Components.
+
+      The plan should therefore be: immediately add server-side object-level authorisation checks on every API endpoint; replace concatenated SQL with parameterised queries; encode output and introduce a CSP in the staff console; remove the shared admin account, issue named accounts and enforce phishing-resistant MFA for staff; create a least-privilege database role and enable auditing with logs sent to a separate platform. In the medium term, add SAST and SCA to the CI pipeline, run short STRIDE sessions for new features, write threat-informed test cases for authorisation, and schedule periodic access reviews.
+
+      Regulatory context: as a data controller PayNkoso must protect personal data under the Data Protection Act, 2012 (Act 843); as a payment business it is subject to Bank of Ghana requirements; and if designated as Critical Information Infrastructure it would have obligations under the Cybersecurity Act, 2020 (Act 1038), including incident reporting to the Cyber Security Authority. The conclusion should stress that fixing individual bugs without lifecycle changes will lead to recurrence.
+    explanation: Examiners look for correct OWASP mapping, explicit risk-based prioritisation, specific controls rather than generic advice, and accurate but measured regulatory references.
+  - id: q23
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Critically evaluate modern authentication approaches
+    marks: 15
+    prompt: '"Passwords should be abolished." Critically evaluate this claim with reference to NIST SP 800-63B, MFA methods and phishing-resistant authentication, considering the practical constraints faced by Ghanaian organisations serving both urban and rural customers.'
+    structure:
+      - Define the problem with passwords (reuse, phishing, guessing)
+      - Summarise NIST SP 800-63B improvements to password practice
+      - Compare MFA methods and introduce passkeys and FIDO2
+      - Discuss account recovery, device access, cost and inclusion
+      - Reach a reasoned, nuanced conclusion
+    rubric:
+      - criterion: Understanding of password weaknesses and NIST guidance
+        marks: 5
+        descriptor: Accurately explains length, breached-password screening, no forced expiry or composition rules.
+      - criterion: Comparative evaluation of MFA and passwordless options
+        marks: 5
+        descriptor: Compares SMS, TOTP, push and FIDO2 on phishing resistance and usability, including SIM-swap risk.
+      - criterion: Contextual judgement and conclusion
+        marks: 5
+        descriptor: Weighs inclusion, cost and recovery risks in the Ghanaian context and reaches a justified position.
+    modelAnswer: |
+      A good essay accepts that passwords are a weak sole factor: they are reused, guessed, sprayed and phished. NIST SP 800-63B has improved practice by recommending longer passphrases, screening against breached and common lists, rate limiting and change-on-compromise rather than arbitrary complexity and expiry, but even well-chosen passwords can be phished. MFA reduces risk, yet methods differ: SMS codes are vulnerable to SIM swap and real-time relay, TOTP codes to relay, and push approvals to fatigue unless number matching is used. FIDO2/WebAuthn keys and passkeys are phishing resistant because they bind authentication to the site's origin.
+
+      Abolition, however, raises practical problems. Passkeys require compatible devices; many customers use basic or shared phones; recovery of a lost authenticator often falls back to weaker channels such as SMS or customer-care calls, which social engineers target. For a Ghanaian bank serving rural customers, a realistic position is tiered: passkeys or hardware keys for staff and high-value business users; SMS or app-based MFA plus transaction limits, SIM-change checks and fraud analytics for mass-market customers; and well-designed, verified recovery processes. The conclusion should argue that passwords should cease to be the sole factor wherever possible and be phased out for privileged access, but that complete abolition depends on device access and robust recovery.
+    explanation: Examiners reward accurate reference to NIST guidance, a comparative rather than descriptive treatment of MFA, and a conclusion that balances security, usability and inclusion.

@@ -1,0 +1,306 @@
+module: business-ai-projects
+questions:
+  - id: q01
+    lesson: demand-forecasting-and-churn-projects
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain the role of a forecasting baseline
+    prompt: Why should a supermarket forecasting project begin with a seasonal naïve forecast?
+    options:
+      - Because it is always the most accurate method
+      - Because it provides a simple benchmark that any proposed model must beat to justify its complexity
+      - Because regulators require it
+      - Because machine learning cannot be used for retail forecasting
+    answer: 1
+    explanation: A seasonal naïve forecast (for example, same weekday last week) is cheap and often competitive, so it sets the bar a model must clear. It is not always the most accurate, there is no regulatory requirement, and machine learning is widely used for retail forecasting.
+  - id: q02
+    lesson: demand-forecasting-and-churn-projects
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Recognise censored demand
+    prompt: Recording zero sales on days when a product was out of stock correctly measures zero demand on those days.
+    answer: false
+    explanation: During stock-outs, sales are capped by availability, so demand is censored. Treating these days as zero demand biases forecasts downward and perpetuates stock-outs; stock-out flags should be used to adjust or exclude such observations.
+  - id: q03
+    lesson: demand-forecasting-and-churn-projects
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Name a forecast error metric robust to zero sales
+    prompt: Which percentage error metric divides total absolute error by total actual sales, making it more robust than MAPE when some products have zero sales? (Give the acronym.)
+    answers: [WAPE, weighted absolute percentage error]
+    explanation: WAPE aggregates errors and actuals before dividing, avoiding the division-by-zero and explosion problems that affect MAPE for low-volume or intermittent items.
+  - id: q04
+    lesson: demand-forecasting-and-churn-projects
+    type: scenario
+    bloom: apply
+    difficulty: hard
+    objective: Calculate the net value of a retention campaign
+    scenario: |
+      An illustrative scenario telecoms provider contacts its 2,000 highest-risk customers with an offer costing GHS 15 each. Precision at 2,000 is 0.25, the offer retains 30% of true churners contacted, and average CLV is GHS 500.
+    prompt: What is the net value of the campaign?
+    options:
+      - GHS 15,000
+      - GHS 30,000
+      - GHS 45,000
+      - GHS 75,000
+    answer: 2
+    explanation: True churners reached = 0.25 x 2,000 = 500; saved = 0.30 x 500 = 150; value = 150 x 500 = GHS 75,000; cost = 2,000 x 15 = GHS 30,000; net = GHS 45,000. GHS 75,000 omits the cost and GHS 30,000 is the cost alone.
+  - id: q05
+    lesson: demand-forecasting-and-churn-projects
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse churn definitions in prepaid settings
+    prompt: For a prepaid mobile data provider, which churn definition is most suitable for a prediction project?
+    options:
+      - The date a customer signs a cancellation form
+      - A behavioural definition such as no bundle purchase for a defined number of consecutive days, agreed with the business
+      - Any month in which usage falls slightly
+      - Customers who complain at least once
+    answer: 1
+    explanation: Prepaid customers rarely cancel formally, so churn must be defined from behaviour over an agreed window. Cancellation forms do not exist for most prepaid users, small usage dips are too noisy, and complaints are a feature rather than the outcome.
+  - id: q06
+    lesson: demand-forecasting-and-churn-projects
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate evidence of retention impact
+    prompt: A team reports that churn among contacted high-risk customers was 20% and claims the campaign "worked". What additional evidence is most needed?
+    options:
+      - The model's training accuracy
+      - Churn among a randomly selected control group of similar high-risk customers who were not contacted
+      - The number of features in the model
+      - The cost of the cloud server
+    answer: 1
+    explanation: Without a control group, it is impossible to know whether 20% is better than what would have happened anyway. A randomised control estimates the causal effect of the campaign; the other options do not address impact.
+  - id: q07
+    lesson: demand-forecasting-and-churn-projects
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match project template elements to forecasting design choices
+    prompt: Match each project template element to the corresponding design choice in the supermarket forecasting project.
+    pairs:
+      - left: Evaluation
+        right: Rolling-origin backtests reporting WAPE and bias
+      - left: Deployment
+        right: Nightly batch forecasts with buyer overrides
+      - left: Approach
+        right: Global gradient-boosted model with lag and calendar features
+      - left: Fallback
+        right: Revert to the seasonal naïve forecast if the pipeline fails
+    explanation: The template ensures that every element is specified. Backtesting supports evaluation, batch outputs suit weekly or daily ordering, a global model shares patterns across products, and a simple fallback keeps operations running.
+  - id: q08
+    lesson: support-and-document-automation-projects
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain why containment alone is a poor objective
+    prompt: Why should a support assistant not be optimised for containment rate alone?
+    options:
+      - Containment cannot be measured
+      - An assistant can raise containment by refusing to transfer customers who need help, harming satisfaction and trust
+      - Containment is only relevant for email support
+      - Higher containment always increases costs
+    answer: 1
+    explanation: Containment counts conversations not transferred, which can be inflated by blocking escalation. It must be balanced with correctness, resolution, satisfaction and correct escalation of sensitive intents. It is measurable, applies to chat as well, and usually lowers costs.
+  - id: q09
+    lesson: support-and-document-automation-projects
+    type: scenario
+    bloom: apply
+    difficulty: hard
+    objective: Calculate document automation metrics
+    scenario: |
+      An illustrative scenario pipeline processes 300 invoices with 5 fields each. 1,410 fields are extracted correctly; 240 invoices are fully correct; 180 invoices pass straight through without review, and an audit finds 3 of those contain an error.
+    prompt: What are the field accuracy, STP rate and error escape rate?
+    options:
+      - 94%, 60%, about 1.7%
+      - 80%, 60%, 1%
+      - 94%, 80%, about 1.7%
+      - 96%, 75%, 3%
+    answer: 0
+    explanation: Field accuracy = 1,410 / 1,500 = 94%. STP rate = 180 / 300 = 60%. Escape rate = 3 / 180 ≈ 1.7%. 80% is the document-level accuracy (240/300), not the STP rate.
+  - id: q10
+    lesson: support-and-document-automation-projects
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Recognise the role of deterministic validation
+    prompt: In a document automation pipeline using an LLM for extraction, arithmetic checks, supplier matching and duplicate detection are still needed.
+    answer: true
+    explanation: LLMs and OCR can misread values, and fraudsters may alter documents. Deterministic validation catches arithmetic mismatches, duplicates and unexpected bank details that extraction models do not reliably detect.
+  - id: q11
+    lesson: support-and-document-automation-projects
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name the technology that converts images of text to characters
+    prompt: What technology converts scanned images of text into machine-readable characters? (Give the acronym.)
+    answers: [OCR, optical character recognition]
+    explanation: Optical character recognition, for example with the open-source Tesseract engine, is the first step for scanned documents before field extraction.
+  - id: q12
+    lesson: support-and-document-automation-projects
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a deployment strategy for a support assistant
+    scenario: |
+      A microfinance institution (illustrative scenario) has built a RAG assistant that scored well on a 200-question offline test set. The marketing team wants to launch it immediately on all channels for all question types, including loan restructuring and fraud reports.
+    prompt: What is the most defensible recommendation?
+    options:
+      - Launch immediately, since offline results were good
+      - Abandon the assistant because AI is unsuitable for finance
+      - Run an agent-assist pilot first, then launch customer-facing chat for low-risk informational intents only, with sensitive intents such as fraud and restructuring always escalated to staff
+      - Launch for fraud reports only, as they are most urgent
+    answer: 2
+    explanation: Staged deployment builds live evidence while limiting harm, and sensitive intents should always reach humans. Immediate full launch ignores live risk; abandoning ignores the value for routine queries; and fraud reports are exactly the cases that need human handling.
+  - id: q13
+    lesson: support-and-document-automation-projects
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match components to their role in a RAG support assistant
+    prompt: Match each component to its role in the support assistant.
+    pairs:
+      - left: Embedding model
+        right: Converts passages and questions into vectors that capture meaning
+      - left: Vector index such as FAISS
+        right: Finds passages most similar to the question
+      - left: Intent classifier
+        right: Routes sensitive requests directly to human agents
+      - left: Constrained prompt
+        right: Instructs the LLM to answer only from retrieved sources and cite them
+    explanation: Retrieval relies on embeddings and a vector index; triage protects sensitive cases; and the prompt grounds and constrains generation.
+  - id: q14
+    lesson: fraud-detection-and-ai-reporting-projects
+    type: scenario
+    bloom: apply
+    difficulty: hard
+    objective: Choose a fraud threshold by total cost
+    scenario: |
+      An illustrative scenario provider sees 50 frauds a day averaging GHS 2,000. Threshold P flags 500 transactions and catches 30 frauds; threshold Q flags 1,500 and catches 40. Each alert costs GHS 25 to review. Ignore friction costs.
+    prompt: Which threshold has the lower total daily cost (missed fraud plus review)?
+    options:
+      - P, with total cost GHS 52,500
+      - Q, with total cost GHS 57,500
+      - P, with total cost GHS 40,000
+      - Q, with total cost GHS 37,500
+    answer: 0
+    explanation: "P: missed 20 x 2,000 = 40,000 plus review 500 x 25 = 12,500, total 52,500. Q: missed 10 x 2,000 = 20,000 plus review 1,500 x 25 = 37,500, total 57,500. P is cheaper despite catching fewer frauds, and it also places less load on analysts and fewer genuine customers. Option B states Q's cost correctly but Q is the more expensive threshold; options C and D each omit one cost component."
+  - id: q15
+    lesson: fraud-detection-and-ai-reporting-projects
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Select metrics for imbalanced fraud data
+    prompt: Which evaluation approach is most informative for a fraud model where fraud is far below 1% of transactions?
+    options:
+      - Overall accuracy
+      - Precision, recall and PR-AUC at capacity-feasible thresholds
+      - Mean absolute error
+      - R-squared
+    answer: 1
+    explanation: Precision–recall measures focus on performance for the rare class and are more informative than ROC-based or accuracy measures on heavily imbalanced data. MAE and R-squared are regression metrics.
+  - id: q16
+    lesson: fraud-detection-and-ai-reporting-projects
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Understand the design principle for AI reporting
+    prompt: In an AI-powered reporting system, the LLM should compute KPIs such as gross margin directly from raw transaction data.
+    answer: false
+    explanation: KPIs should be computed by tested, deterministic code from a metric dictionary. The LLM should only describe supplied, verified facts, with automated number checks and human sign-off.
+  - id: q17
+    lesson: fraud-detection-and-ai-reporting-projects
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Name an anomaly detection algorithm used for novel fraud
+    prompt: Which tree-based anomaly detection algorithm isolates unusual observations with fewer random splits than normal ones?
+    answers: [isolation forest, isolation forests, iForest]
+    explanation: Isolation forest (Liu, Ting & Zhou, 2008) is useful for surfacing novel fraud patterns not yet represented in labels, complementing supervised models.
+  - id: q18
+    lesson: fraud-detection-and-ai-reporting-projects
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the ethical consequences of fraud false positives
+    prompt: Why is a challenge tier (extra verification) valuable between approve and block decisions?
+    options:
+      - It removes the need for fraud models
+      - It reduces harm to genuine customers flagged by the model while still stopping many fraudsters, lowering friction compared with outright blocking
+      - It increases the number of blocked transactions
+      - It avoids the need to monitor drift
+    answer: 1
+    explanation: Genuine customers who are blocked may lose access to money they urgently need. A challenge step lets them proceed after verification while still deterring fraud. It complements, rather than replaces, models and monitoring.
+  - id: q19
+    lesson: fraud-detection-and-ai-reporting-projects
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate controls for natural-language querying of company data
+    scenario: |
+      A distributor (illustrative scenario) wants managers to ask questions such as "What were Kumasi depot sales last month?" through a text-to-SQL feature connected directly to the production ERP database with full write permissions.
+    prompt: Which design change is most important?
+    options:
+      - Use a larger language model
+      - Restrict queries to read-only, pre-approved views with access controls, test the feature on a question set, and show the generated SQL and source for verification
+      - Allow only the managing director to use it
+      - Remove the dashboard so managers rely on the chat feature
+    answer: 1
+    explanation: Full write access to production risks data corruption and leakage; read-only curated views, access controls, testing and transparency reduce these risks. A larger model does not remove them, restricting users does not fix the design flaw, and removing the dashboard reduces verifiability.
+  - id: q20
+    lesson: fraud-detection-and-ai-reporting-projects
+    type: true_false
+    bloom: analyse
+    difficulty: medium
+    objective: Recognise limitations of the anonymised fraud benchmark
+    prompt: Because the public anonymised credit-card fraud dataset covers only a short period with PCA-transformed features, it is poorly suited to practising behavioural feature design and drift monitoring.
+    answer: true
+    explanation: Anonymised components prevent meaningful feature engineering, and a two-day window hides concept drift. The dataset is useful for practising imbalance-aware metrics and thresholds, but local projects need time-based splits and behavioural features.
+  - id: q21
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Design a complete business AI project proposal
+    prompt: "Choose ONE of the six projects in this module and write a project proposal for an illustrative Ghanaian organisation. Your proposal must cover the business problem, data needed, approach (including a baseline), evaluation metrics, deployment, risks, ethics and a phased plan using free tools. Critically justify your key design decisions."
+    marks: 30
+    structure:
+      - Organisation context labelled as an illustrative scenario and the business objective
+      - Data sources, quality issues, labels and legal basis under Act 843
+      - Approach with baseline and justified model choices
+      - Model, business and guardrail metrics with an evaluation design
+      - Deployment pattern, human oversight and fallback
+      - Risks, ethics and mitigations
+      - Phased plan with tools, timeline and success criteria
+      - Critical reflection on limitations
+    rubric:
+      - criterion: Problem framing and business objective
+        marks: 4
+        descriptor: Clear decision, owner and measurable objective in a labelled illustrative scenario
+      - criterion: Data and approach
+        marks: 7
+        descriptor: Realistic data and labels, quality issues, a baseline and justified model choices
+      - criterion: Evaluation design
+        marks: 6
+        descriptor: Appropriate model metrics, business metrics, guardrails, time-aware testing and a controlled pilot
+      - criterion: Deployment, risk and ethics
+        marks: 7
+        descriptor: Suitable deployment pattern, fallback, human oversight, specific risks and Act 843 compliance
+      - criterion: Plan and critical justification
+        marks: 6
+        descriptor: Feasible phased plan with free tools and reasoned trade-offs and limitations
+    modelAnswer: |
+      A strong proposal might choose fraud detection for an illustrative scenario Ghanaian fintech offering wallet transfers. It frames the decision (approve, challenge or block each transaction), the owner (head of risk) and the objective (reduce total fraud-related cost without increasing complaints).
+
+      Data includes twelve months of transactions, device and SIM-swap events, account age and confirmed fraud labels, with recognition that labels are delayed and incomplete. Quality checks cover duplicates, timestamps and inconsistent labels. Processing is justified under Act 843, with minimised features and documented purpose.
+
+      The approach starts with the existing rules as a baseline, then a gradient-boosted classifier with class weights and an isolation forest for novel patterns. Choices are justified by tabular data, interpretability through SHAP reason codes and the need to catch unseen tactics.
+
+      Evaluation uses a time-based split, PR-AUC, precision and recall at capacity-feasible thresholds, value detection rate, and a total-cost comparison of thresholds; guardrails include segment false positive rates and latency. Deployment is a real-time API with a rules fallback, preceded by shadow deployment and canary release, with analysts reviewing alerts and customers able to verify or appeal.
+
+      Risks include adversarial drift, label delay, model extraction and unfair friction; mitigations include monitoring with PSI and flag rates, monthly retraining, rate limiting and fairness review. The phased plan runs over about sixteen weeks using Python, scikit-learn and Google Colab. A reflective conclusion acknowledges limits such as unreported fraud and the difficulty of estimating friction costs.
+    explanation: Examiners reward coherence across all template elements, realistic data and evaluation design, justified rather than fashionable model choices, concrete risk and ethics controls, and a feasible plan that uses free tools.

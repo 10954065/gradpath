@@ -1,0 +1,416 @@
+module: sampling-and-data-collection
+questions:
+  # ---------- populations-frames-and-sampling-methods ----------
+  - id: q01
+    lesson: populations-frames-and-sampling-methods
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish the sampling frame from the target population
+    prompt: A researcher studying registered SMEs in Greater Accra draws firms from a business association's membership list. In this study, the membership list is best described as the
+    options:
+      - target population
+      - sampling frame
+      - sampling unit
+      - respondent group
+    answer: 1
+    explanation: The sampling frame is the practical list from which cases are drawn. The target population is the conceptual group (registered SMEs in Greater Accra); the sampling unit is each firm; respondents are those who actually participate. Gaps between frame and population produce coverage error.
+
+  - id: q02
+    lesson: populations-frames-and-sampling-methods
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish quota from stratified sampling
+    prompt: Quota sampling supports the same statistical inference to the population as stratified random sampling, because both divide the population into subgroups.
+    answer: false
+    explanation: Both use subgroups, but quota sampling fills quotas non-randomly (for example, by approaching whoever is available), so selection probabilities are unknown. Stratified random sampling selects randomly within strata and supports probability-based inference.
+
+  - id: q03
+    lesson: populations-frames-and-sampling-methods
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Calculate a systematic sampling interval
+    prompt: A list contains 2,400 students and a sample of 300 is required using systematic sampling. What is the sampling interval k?
+    answers: ["8", "k = 8", "eight"]
+    explanation: "k = N / n = 2,400 / 300 = 8. A random start between 1 and 8 is chosen, and every eighth student thereafter is selected. Check that the list has no periodic pattern that coincides with the interval."
+
+  - id: q04
+    lesson: populations-frames-and-sampling-methods
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Identify the sampling method and its main bias
+    scenario: |
+      A student researching mobile money fraud among traders cannot find any list of victims. She interviews
+      three traders she knows were defrauded and asks each to introduce her to other victims, continuing until
+      she has interviewed eighteen people, most of whom sell in the same market section.
+    prompt: Which method has she used, and what is its main limitation here?
+    options:
+      - Cluster sampling; clusters were too large
+      - Snowball sampling; participants are likely to share networks and similar characteristics
+      - Simple random sampling; the sample is too small
+      - Systematic sampling; the interval was not random
+    answer: 1
+    explanation: Referral from initial participants is snowball sampling, appropriate for hidden populations. Its main limitation is homogeneity, since referrals follow social networks; here most participants come from one market section. Using several unconnected starting points would reduce this. No clusters, random selection or intervals were used.
+
+  - id: q05
+    lesson: populations-frames-and-sampling-methods
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match sampling methods to descriptions
+    prompt: Match each sampling method to its description.
+    pairs:
+      - left: Stratified random sampling
+        right: Random selection within subgroups defined by a characteristic such as region
+      - left: Cluster sampling
+        right: Random selection of naturally occurring groups such as markets or schools
+      - left: Purposive sampling
+        right: Deliberate selection of information-rich cases for the research question
+      - left: Convenience sampling
+        right: Selection of cases because they are easy to access
+      - left: Multi-stage sampling
+        right: Combining selection methods across successive levels such as districts, then markets, then traders
+    explanation: Stratified and cluster sampling both use groups, but stratified samples within every stratum while cluster sampling selects some groups. Purposive and convenience sampling are both non-probability methods, but purposive selection is justified by the research question whereas convenience selection is justified only by access.
+
+  - id: q06
+    lesson: populations-frames-and-sampling-methods
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the representativeness of a large sample
+    prompt: An online survey posted on a fintech company's social media page receives 3,000 responses. Which conclusion is most defensible?
+    options:
+      - The large sample guarantees the results represent all Ghanaian adults
+      - The results describe respondents and may indicate patterns among the company's online followers, but cannot be generalised to the national population
+      - The results are invalid and should not be reported
+      - The margin of error can be calculated with Cochran's formula to support national estimates
+    answer: 1
+    explanation: Self-selected online respondents over-represent connected, engaged followers, so coverage and self-selection bias remain however large the sample, as the 1936 Literary Digest poll showed. The data are still usable for limited claims, and Cochran's margin of error assumes probability sampling, so it would be misleading here.
+
+  # ---------- sample-size ----------
+  - id: q07
+    lesson: sample-size
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Apply Cochran's formula for proportions
+    prompt: Using Cochran's formula with z = 1.96, p = 0.5 and a margin of error of 0.05 for a very large population, what is the required sample size after rounding up?
+    answers: ["385"]
+    explanation: "n0 = (1.96² × 0.5 × 0.5) / 0.05² = (3.8416 × 0.25) / 0.0025 = 384.16, which is rounded up to 385. Rounding down would give slightly less precision than specified."
+
+  - id: q08
+    lesson: sample-size
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Apply the finite population correction
+    prompt: With n0 = 384.16 and a population of N = 600, what is the corrected sample size using n = n0 / (1 + (n0 − 1)/N)?
+    options:
+      - "235"
+      - "385"
+      - "300"
+      - "150"
+    answer: 0
+    explanation: "(n0 − 1)/N = 383.16 / 600 = 0.6386, so n = 384.16 / 1.6386 = 234.4, rounded up to 235. 385 ignores the correction, 300 is half the population (an arbitrary rule), and 150 is unjustified."
+
+  - id: q09
+    lesson: sample-size
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Understand what the margin of error covers
+    prompt: A survey's margin of error accounts for bias caused by an incomplete sampling frame and by non-response.
+    answer: false
+    explanation: The margin of error reflects only random sampling error under probability sampling. Coverage, non-response and measurement biases are additional and can be larger, as the 2015 UK election polling inquiry found when unrepresentative samples produced errors beyond the stated margins.
+
+  - id: q10
+    lesson: sample-size
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Adjust a sample size for response rate
+    scenario: |
+      A researcher needs 300 usable questionnaires from hospital staff across a region. In a pilot, about
+      half of the staff approached completed the questionnaire.
+    prompt: How many staff should she plan to approach?
+    options:
+      - "150"
+      - "300"
+      - "450"
+      - "600"
+    answer: 3
+    explanation: "Cases to approach = required usable responses / expected response rate = 300 / 0.5 = 600. Approaching 300 would yield about 150 responses; 450 assumes a response rate of about two-thirds, which the pilot does not support."
+
+  - id: q11
+    lesson: sample-size
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match sample size concepts to their meaning
+    prompt: Match each concept to its meaning.
+    pairs:
+      - left: Statistical power
+        right: Probability of detecting an effect that truly exists
+      - left: Design effect
+        right: Inflation factor for sample size under cluster sampling
+      - left: Saturation
+        right: Point at which new qualitative data add little new insight
+      - left: Information power
+        right: Fewer participants needed when the sample holds highly relevant information
+      - left: Finite population correction
+        right: Reduction in required sample for a small known population
+    explanation: Each concept addresses a different sample size question. Power and design effects concern quantitative tests and cluster designs; saturation and information power concern qualitative studies; the finite population correction concerns small populations.
+
+  - id: q12
+    lesson: sample-size
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a qualitative sample size justification
+    prompt: Which justification for interviewing 14 SME owners is strongest?
+    options:
+      - Fourteen interviews is the standard number for qualitative research
+      - The supervisor suggested about fifteen
+      - Interviews continued until three consecutive interviews produced no new codes relevant to the aim, with a maximum-variation sample across sectors and firm sizes
+      - Fourteen was all the time allowed
+    answer: 2
+    explanation: A strong justification states transparent stopping criteria (tracking new codes) and a sampling logic linked to the aim. No standard number exists, supervisor advice is not a methodological argument, and time constraints are a limitation to acknowledge, not a justification of adequacy.
+
+  # ---------- questionnaires ----------
+  - id: q13
+    lesson: questionnaires
+    type: mcq
+    bloom: analyse
+    difficulty: easy
+    objective: Diagnose a poorly worded questionnaire item
+    prompt: "What is the main problem with the item 'The mobile banking app is fast and secure' (strongly disagree to strongly agree)?"
+    options:
+      - It is leading
+      - It is double-barrelled
+      - It contains a double negative
+      - It is an open question
+    answer: 1
+    explanation: The item asks about two different attributes (speed and security). A respondent who finds the app fast but insecure cannot answer accurately. It should be split into two items. It is not phrased to push agreement, has no negatives, and has fixed responses.
+
+  - id: q14
+    lesson: questionnaires
+    type: matching
+    bloom: understand
+    difficulty: easy
+    objective: Match variables to levels of measurement
+    prompt: Match each variable to its level of measurement.
+    pairs:
+      - left: Business sector (retail, manufacturing, services)
+        right: Nominal
+      - left: Highest education level completed
+        right: Ordinal
+      - left: Temperature of a server room in degrees Celsius
+        right: Interval
+      - left: Number of employees
+        right: Ratio
+    explanation: Nominal variables are unordered categories; ordinal variables are ordered with unknown gaps; interval variables have equal gaps but no true zero; ratio variables have a true zero, so "twice as many employees" is meaningful.
+
+  - id: q15
+    lesson: questionnaires
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Reverse-code a Likert item
+    prompt: On a five-point Likert scale, a respondent answers 2 to a negatively worded item. What is the reverse-coded value?
+    answers: ["4"]
+    explanation: "Reverse coding on a five-point scale uses 6 − x, so 6 − 2 = 4. Negatively worded items must be reverse-coded before computing scale scores or Cronbach's alpha, otherwise they reduce consistency artificially."
+
+  - id: q16
+    lesson: questionnaires
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Calculate and interpret Cronbach's alpha
+    scenario: |
+      A four-item pilot scale measuring perceived usefulness of an AI bookkeeping tool has item variances
+      of 0.6, 0.7, 0.8 and 0.9. The variance of the total score is 9.0.
+    prompt: What is Cronbach's alpha, and how should it be interpreted?
+    options:
+      - About 0.67; poor consistency, so the scale should be discarded
+      - About 0.89; good internal consistency under the usual convention
+      - About 0.33; the items measure different constructs
+      - About 1.00; the items are perfectly valid
+    answer: 1
+    explanation: "Sum of item variances = 0.6 + 0.7 + 0.8 + 0.9 = 3.0. α = (4/3) × (1 − 3.0/9.0) = 1.3333 × 0.6667 = 0.89. This exceeds the common 0.70 convention, indicating good internal consistency. 0.67 omits the k/(k − 1) factor, 0.33 is simply the variance ratio, and alpha never proves validity."
+
+  - id: q17
+    lesson: questionnaires
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate the relationship between reliability and validity
+    prompt: A scale with a Cronbach's alpha of 0.90 can still be an invalid measure of the construct it claims to measure.
+    answer: true
+    explanation: Alpha shows that items respond consistently with one another. They could all consistently measure something other than the intended construct, for example general satisfaction instead of trust. Validity needs separate evidence such as content review and correlations with related measures.
+
+  - id: q18
+    lesson: questionnaires
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain the purpose of back-translation
+    prompt: Why would a researcher back-translate a Twi version of a questionnaire into English?
+    options:
+      - To shorten the questionnaire
+      - To check that the translated items keep the meaning of the original
+      - To convert ordinal data into interval data
+      - To increase the response rate among English speakers
+    answer: 1
+    explanation: Back-translation by an independent translator reveals meaning shifts introduced during translation. It does not change length, measurement level or response rates. Team approaches such as TRAPD add review and adjudication for further quality assurance.
+
+  # ---------- interviews-focus-groups-observation-documents ----------
+  - id: q19
+    lesson: interviews-focus-groups-observation-documents
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Identify the distinctive feature of focus groups
+    prompt: What is the distinctive source of data in a focus group?
+    options:
+      - The moderator's opinions
+      - Interaction among participants as they discuss, agree and challenge one another
+      - The speed with which many individuals can be interviewed
+      - Structured responses that can be counted
+    answer: 1
+    explanation: Focus groups generate data through interaction, revealing shared norms and how views form. They are not a quick substitute for individual interviews, the moderator's views should not shape data, and responses are not structured counts.
+
+  - id: q20
+    lesson: interviews-focus-groups-observation-documents
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Identify a design flaw in a focus group plan
+    scenario: |
+      A researcher plans a single focus group on information security practices that includes the bank's
+      head of IT, two branch managers and five junior tellers. The head of IT will open the session by
+      explaining the bank's security policy.
+    prompt: What is the most serious weakness of this plan?
+    options:
+      - The group is too small for analysis
+      - Hierarchy and the senior manager's framing are likely to suppress honest views from junior staff
+      - Focus groups cannot be used in banks
+      - The session should be unrecorded to save time
+    answer: 1
+    explanation: Mixing ranks and letting a senior manager frame the topic invites deference and socially desirable answers about security practices. Separate groups by rank and use an independent moderator. Eight participants is within the usual range; focus groups are feasible in banks; recording with consent is good practice.
+
+  - id: q21
+    lesson: interviews-focus-groups-observation-documents
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Understand the nature of semi-structured interviews
+    prompt: A semi-structured interview requires a prepared guide of main questions and probes, even though the order and follow-up may vary between interviews.
+    answer: true
+    explanation: Semi-structured interviews balance comparability (a common guide) with flexibility (probing and reordering). "Semi-structured" does not mean unplanned.
+
+  - id: q22
+    lesson: interviews-focus-groups-observation-documents
+    type: matching
+    bloom: apply
+    difficulty: medium
+    objective: Match research needs to qualitative methods
+    prompt: Match each research need to the most suitable method.
+    pairs:
+      - left: Understanding how one SME owner decided to adopt an AI chatbot
+        right: Semi-structured interview
+      - left: Seeing whether cashiers actually offer mobile money at the till
+        right: Non-participant observation
+      - left: Establishing what a hospital's e-records policy officially required
+        right: Document analysis
+      - left: Exploring shared student norms about password sharing
+        right: Focus group
+    explanation: Interviews suit individual decision processes, observation captures actual behaviour, documents show official positions and focus groups reveal shared norms through interaction. Combining them supports triangulation.
+
+  - id: q23
+    lesson: interviews-focus-groups-observation-documents
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for cross-checking with multiple sources
+    prompt: What term describes using multiple data sources, methods or investigators to cross-check and deepen understanding of a phenomenon?
+    answers: [triangulation]
+    explanation: Triangulation, in Denzin's typology, includes data, investigator, theory and methodological forms. In qualitative research it builds a fuller account rather than proving a single truth.
+
+  - id: q24
+    lesson: interviews-focus-groups-observation-documents
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate conflicting evidence from interviews and observation
+    prompt: Nurses say in interviews that they always record observations in the EHR, but field observation shows frequent use of paper notes that are entered later. What is the best interpretation?
+    options:
+      - The interviews are worthless and should be discarded
+      - The observation was biased and should be ignored
+      - The divergence is a finding that suggests workarounds and should be explored further, for example in follow-up interviews
+      - Average the two sources to estimate EHR use
+    answer: 2
+    explanation: Divergence between what people say and do is common in technology-use research and often reveals workarounds driven by workload or system problems. Neither source should be discarded; follow-up enquiry can explain the gap. Averaging qualitative accounts is meaningless.
+
+  # ---------- module-level ----------
+  - id: q25
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Design and justify a sampling and data collection plan
+    case: |
+      Illustrative scenario. A student plans to study digital payment adoption among retailers in three large
+      markets in Accra, Kumasi and Tamale. No list of traders exists. Her proposal says: "A random sample of
+      400 traders will be selected by approaching traders as they arrive at the market. A questionnaire in
+      English will be used. Twenty interviews will be conducted with traders the researcher knows personally
+      to explain the results." Her supervisor asks her to revise the plan.
+    prompt: Critically evaluate the proposed sampling and data collection plan and propose a revised, justified plan.
+    marks: 20
+    structure:
+      - Identify the actual sampling methods used and why "random" is incorrect
+      - Discuss frame, coverage and selection biases
+      - Evaluate the language and mode of the questionnaire
+      - Evaluate the qualitative sample and its link to the survey
+      - Propose a revised sampling design (for example, cluster and systematic sampling of stalls)
+      - Justify sample size and response-rate assumptions
+      - Address ethics and data protection
+    rubric:
+      - criterion: Diagnosis of sampling problems
+        marks: 5
+        descriptor: Correctly identifies convenience sampling, absence of a frame and resulting biases.
+      - criterion: Instrument and mode evaluation
+        marks: 4
+        descriptor: Addresses language, literacy, translation and piloting.
+      - criterion: Revised sampling plan
+        marks: 6
+        descriptor: Proposes a feasible probability-approximating design with clear steps and sample size reasoning.
+      - criterion: Qualitative strand and integration
+        marks: 3
+        descriptor: Proposes purposive selection of interviewees linked to survey results.
+      - criterion: Ethics and presentation
+        marks: 2
+        descriptor: Mentions consent, confidentiality and data protection; clear structure.
+    modelAnswer: |
+      The proposal mislabels its method. Approaching traders as they arrive is convenience sampling, not random
+      sampling, because selection probabilities are unknown and early-arriving traders may differ systematically
+      (for example, wholesalers or full-time traders). Without a frame, coverage cannot be assessed. Interviewing
+      traders the researcher knows personally adds selection bias and risks socially desirable answers.
+
+      The English-only questionnaire may exclude traders more comfortable in Twi, Ga, Dagbani or other languages,
+      creating non-response and measurement error. Translation with independent back-translation, enumerator
+      administration and piloting with traders in each market are needed.
+
+      A revised plan would construct an area-based frame. In each market, sections or rows would be mapped and a
+      random sample of sections (clusters) selected; within each selected section, every kth occupied stall would be
+      chosen after a random start, approximating probability sampling. Allocation across the three markets could be
+      proportional to estimated stall counts or equal if comparison between cities is the aim. Using Cochran's
+      formula with p = 0.5 and ±5% gives about 385 completed responses, which should be inflated for a design effect
+      because traders in the same section are similar, and further adjusted for the expected response rate from the pilot.
+
+      For the qualitative strand, an explanatory sequential design would purposively select interviewees from survey
+      respondents, for example adopters and non-adopters in each market and unexpected cases, until saturation.
+      Informed consent, anonymity, secure storage and compliance with the Data Protection Act, 2012 (Act 843) should
+      be stated, together with market association permission.
+    explanation: Examiners look for precise naming of methods and biases, a realistic alternative for a setting without a frame, numerical reasoning about sample size, and attention to language and ethics.

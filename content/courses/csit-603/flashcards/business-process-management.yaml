@@ -1,0 +1,56 @@
+module: business-process-management
+cards:
+  - lesson: business-processes-and-identification
+    front: What features define a business process?
+    back: It is repeatable and measurable, has a trigger and an outcome, delivers value to an internal or external customer and usually crosses functional boundaries.
+  - lesson: business-processes-and-identification
+    front: Distinguish core, support and management processes.
+    back: Core processes create value for external customers; support processes enable core processes; management processes plan, direct and control the organisation.
+  - lesson: business-processes-and-identification
+    front: List the phases of the BPM lifecycle.
+    back: Process identification, discovery, analysis, redesign, implementation, and monitoring and controlling, repeated continuously.
+  - lesson: business-processes-and-identification
+    front: What three criteria help prioritise processes for improvement?
+    back: Strategic importance, health (degree of dysfunction) and feasibility of improvement (Dumas et al., 2018).
+  - lesson: business-processes-and-identification
+    front: What is the "white space" on the organisation chart?
+    back: Rummler and Brache's term for the hand-offs between departments, where much delay and error occurs and where process improvement opportunities lie.
+  - lesson: business-processes-and-identification
+    front: What are the four dimensions of the Devil's Quadrangle?
+    back: Time, cost, quality and flexibility; improving one often worsens another.
+  - lesson: process-mapping-and-documentation
+    front: Why should process discovery triangulate methods?
+    back: Each method has blind spots (documents are idealised, interviews partial, logs miss manual steps); combining them yields an accurate as-is picture.
+  - lesson: process-mapping-and-documentation
+    front: What is a SIPOC used for?
+    back: Scoping a process at a high level by agreeing its Suppliers, Inputs, Process steps (five to seven), Outputs and Customers before detailed mapping.
+  - lesson: process-mapping-and-documentation
+    front: What does a lane crossing on a swimlane map indicate?
+    back: A hand-off between roles, a common point of waiting, miscommunication and error.
+  - lesson: process-mapping-and-documentation
+    front: What does RACI stand for, and what is the key rule?
+    back: Responsible, Accountable, Consulted, Informed; each activity should have exactly one Accountable role.
+  - lesson: process-mapping-and-documentation
+    front: What are the three kinds of process mining analysis?
+    back: Discovery (build a model from logs), conformance checking (compare actual and intended behaviour) and enhancement (overlay measures such as waiting time).
+  - lesson: process-mapping-and-documentation
+    front: How does value stream mapping differ from a swimlane map?
+    back: It emphasises material and information flow and time, including waiting between steps, rather than who performs each activity.
+  - lesson: bpmn-modelling
+    front: How do BPMN event borders differ?
+    back: Thin single border = start event; double border = intermediate event; thick border = end event.
+  - lesson: bpmn-modelling
+    front: Compare XOR, AND and OR gateways when splitting.
+    back: Exclusive (XOR) takes exactly one path; parallel (AND) takes all paths; inclusive (OR) takes every path whose condition is true.
+  - lesson: bpmn-modelling
+    front: What is the rule for sequence flows and message flows?
+    back: Sequence flows stay within one pool (they may cross lanes); message flows connect different pools and never link elements within the same pool.
+  - lesson: bpmn-modelling
+    front: What goes wrong if parallel branches are merged with an exclusive gateway?
+    back: Each token passes through separately, so downstream activities run once per branch; merge with a parallel gateway instead.
+  - lesson: bpmn-modelling
+    front: What is a non-interrupting boundary event?
+    back: An event attached to an activity, drawn with a dashed border, that starts an additional path without cancelling the activity.
+  - lesson: bpmn-modelling
+    front: What extra detail turns a descriptive BPMN model into an executable one?
+    back: Task assignments, form fields, service connections, data mappings and precise gateway conditions that a process engine can interpret.

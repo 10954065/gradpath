@@ -1,0 +1,362 @@
+module: governance-and-risk
+questions:
+  # Lesson 1: security-governance-and-policies
+  - id: q01
+    lesson: security-governance-and-policies
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish governance from management
+    prompt: Which activity is primarily a security governance responsibility rather than a management responsibility?
+    options:
+      - Configuring firewall rules
+      - Setting the organisation's risk appetite and approving the top-level security policy
+      - Running weekly vulnerability scans
+      - Resetting user passwords
+    answer: 1
+    explanation: Governance sets direction, risk appetite and accountability, and is exercised by the board and executives. Configuring firewalls, scanning and password resets are management and operational activities carried out within that direction.
+  - id: q02
+    lesson: security-governance-and-policies
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish levels of the policy hierarchy
+    prompt: Match each document type to the statement that best describes it.
+    pairs:
+      - left: Policy
+        right: Short, mandatory statement of management intent and direction, approved at senior level
+      - left: Standard
+        right: Mandatory specific requirement, such as MFA for all remote access
+      - left: Procedure
+        right: Step-by-step instructions for carrying out a task
+      - left: Guideline
+        right: Recommended, non-mandatory advice
+    explanation: The hierarchy moves from stable intent to changeable detail. Policies and standards are mandatory; procedures implement them; guidelines advise. Each level has a different approver and review frequency.
+  - id: q03
+    lesson: security-governance-and-policies
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Identify who classifies data
+    prompt: In a well-governed organisation, the IT department decides the classification of every dataset because it operates the systems.
+    answer: false
+    explanation: Data owners, senior business roles accountable for the data, decide classification and approve access. IT usually acts as custodian, implementing and operating the controls the owner requires.
+  - id: q04
+    lesson: security-governance-and-policies
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply the Three Lines Model
+    scenario: |
+      Illustrative scenario. A Ghanaian insurer's IT operations team applies patches and manages user access. The CISO's team sets security standards and monitors compliance. Internal audit reviews access controls annually and reports to the board audit committee.
+    prompt: Which line does the CISO's team represent under the Three Lines Model?
+    options:
+      - First line
+      - Second line
+      - Third line
+      - External assurance
+    answer: 1
+    explanation: The second line provides expertise, oversight and challenge on risk. IT operations owning and applying controls is the first line, and internal audit providing independent assurance is the third line. External auditors and regulators sit outside the three lines.
+  - id: q05
+    lesson: security-governance-and-policies
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name Ghana's cybersecurity regulator established by Act 1038
+    prompt: Which body did Ghana's Cybersecurity Act, 2020 (Act 1038) establish to regulate cybersecurity activities in the country?
+    answers: [Cyber Security Authority, CSA, the Cyber Security Authority]
+    explanation: Act 1038 established the Cyber Security Authority, with functions including protection of Critical Information Infrastructure, licensing of cybersecurity service providers and accreditation of cybersecurity establishments and professionals.
+  - id: q06
+    lesson: security-governance-and-policies
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse governance failures in the Target 2013 breach
+    prompt: Which governance weakness is most clearly illustrated by the Target 2013 breach?
+    options:
+      - Lack of any security technology
+      - Inadequate governance of supplier access and of escalation when security alerts were raised
+      - Use of the wrong encryption algorithm
+      - Failure to purchase cyber insurance
+    answer: 1
+    explanation: Attackers entered using a contractor's credentials and security tools raised alerts that were not acted on in time. Target owned detection technology, so the failure lay in supplier risk management, segmentation and alert-handling authority, not in a lack of tools.
+  - id: q07
+    lesson: security-governance-and-policies
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate CISO reporting lines
+    scenario: |
+      Illustrative scenario. A bank's CISO reports to the Chief Information Officer. The CISO has found repeated failures by the IT infrastructure team to patch critical systems on time, but the CIO has asked that these not be included in the board report until fixed.
+    prompt: Which governance change best addresses this situation?
+    options:
+      - Move the CISO into the infrastructure team
+      - Give the CISO a direct reporting line to the chief executive, chief risk officer or a board committee for risk matters
+      - Remove patching metrics from all reports
+      - Ask internal audit to take over patching
+    answer: 1
+    explanation: The situation shows a conflict of interest, because the CISO must report on the CIO's own area. Independent access to senior leadership or a board committee preserves objective risk reporting. Removing metrics hides risk, and internal audit should not run operational controls it must independently assess.
+
+  # Lesson 2: risk-assessment-and-nist-csf
+  - id: q08
+    lesson: risk-assessment-and-nist-csf
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Identify the Functions of NIST CSF 2.0
+    prompt: Which list correctly gives the six Functions of NIST CSF 2.0?
+    options:
+      - Plan, Do, Check, Act, Review, Improve
+      - Govern, Identify, Protect, Detect, Respond, Recover
+      - Identify, Protect, Detect, Respond, Recover, Audit
+      - Prevent, Detect, Contain, Eradicate, Recover, Learn
+    answer: 1
+    explanation: CSF 2.0 added Govern to the five original Functions (Identify, Protect, Detect, Respond, Recover). Plan-Do-Check-Act is the ISO management-system cycle, and containment and eradication are incident response phases from SP 800-61.
+  - id: q09
+    lesson: risk-assessment-and-nist-csf
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply a likelihood and impact matrix
+    scenario: |
+      Illustrative scenario. Using a 5 x 5 matrix with bands 1-4 Low, 5-9 Medium, 10-14 High and 15-25 Critical, a team rates "credential stuffing against the customer portal" as likelihood 4 (Likely) and impact 3 (Moderate).
+    prompt: What is the risk score and band?
+    options:
+      - 7, Medium
+      - 12, High
+      - 16, Critical
+      - 9, Medium
+    answer: 1
+    explanation: Risk score is likelihood multiplied by impact, 4 x 3 = 12, which falls in the 10-14 High band. Adding the values (7) is a common error; the matrix uses multiplication.
+  - id: q10
+    lesson: risk-assessment-and-nist-csf
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match risk treatment options to examples
+    prompt: Match each risk treatment to the example that illustrates it.
+    pairs:
+      - left: Mitigate
+        right: Deploy phishing-resistant MFA to reduce account takeover
+      - left: Transfer
+        right: Buy cyber insurance to cover part of the financial loss
+      - left: Avoid
+        right: Retire an insecure legacy file-transfer service
+      - left: Accept
+        right: Risk owner formally records a low-rated risk as within appetite
+    explanation: Each option responds differently. Transfer shifts some financial impact but not legal or regulatory accountability; acceptance must be an informed decision by an authorised owner, recorded in the register.
+  - id: q11
+    lesson: risk-assessment-and-nist-csf
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain how the CSF Functions relate to one another
+    prompt: The NIST CSF 2.0 Functions are intended to be performed strictly one after another, starting with Govern and ending with Recover.
+    answer: false
+    explanation: The Functions operate concurrently. Govern informs all others, Identify, Protect and Detect are continuous, and Respond and Recover must be prepared in advance and activated when incidents occur.
+  - id: q12
+    lesson: risk-assessment-and-nist-csf
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Calculate annualised loss expectancy
+    prompt: A fraud event has a single loss expectancy of GH₵ 50,000 and is expected to occur 0.2 times per year. What is the annualised loss expectancy in GH₵ (number only)?
+    answers: ["10000", "10,000", "GH₵ 10,000"]
+    explanation: ALE = SLE x ARO = 50,000 x 0.2 = 10,000. A control costing more than about GH₵ 10,000 a year to remove this risk entirely would be hard to justify on financial grounds alone, though regulatory and reputational factors also matter.
+  - id: q13
+    lesson: risk-assessment-and-nist-csf
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Distinguish CSF Profiles from Tiers
+    prompt: An organisation states, "We currently achieve asset inventory and MFA outcomes but not continuous monitoring, and we aim to achieve all three within a year." What CSF concept is it describing?
+    options:
+      - Its Tier
+      - Its Current and Target Organizational Profiles
+      - A Subcategory of Recover
+      - Its risk appetite
+    answer: 1
+    explanation: Profiles describe posture in terms of Core outcomes; the Current Profile records what is achieved and the Target Profile what is aimed for. Tiers describe the rigour of risk governance and management practices (Partial to Adaptive), not specific outcomes.
+  - id: q14
+    lesson: risk-assessment-and-nist-csf
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a risk treatment decision against risk appetite
+    scenario: |
+      Illustrative scenario. A board has a low risk appetite for loss of customer personal data. A risk "unencrypted backups stored at a third-party warehouse" is rated likelihood 3, impact 5 (score 15, Critical). The IT manager proposes to accept the risk because encryption would slow backups.
+    prompt: What is the most appropriate response?
+    options:
+      - Accept the risk as proposed because the IT manager owns the backups
+      - Reject acceptance at that level; treat the risk by encrypting backups (or otherwise reducing it) unless an authorised senior risk owner explicitly accepts it with justification
+      - Transfer the risk by telling the warehouse it is responsible
+      - Lower the impact score to 3 so the risk becomes Medium
+    answer: 1
+    explanation: A Critical risk to personal data is well outside a low appetite, and acceptance at that level must come from an authorised senior owner, not the IT manager. Encryption is a proportionate mitigation. Contracts do not transfer legal accountability under Act 843, and changing scores to fit appetite undermines the assessment.
+
+  # Lesson 3: incident-response-continuity-and-audit
+  - id: q15
+    lesson: incident-response-continuity-and-audit
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Recall the NIST SP 800-61 Rev. 2 lifecycle
+    prompt: Which sequence matches the incident response lifecycle in NIST SP 800-61 Rev. 2?
+    options:
+      - Identify; Protect; Detect; Respond
+      - Preparation; Detection and Analysis; Containment, Eradication and Recovery; Post-Incident Activity
+      - Plan; Do; Check; Act
+      - Detection; Reporting; Prosecution; Closure
+    answer: 1
+    explanation: SP 800-61 Rev. 2 uses these four phases and treats the lifecycle as iterative. Identify-Protect-Detect-Respond are CSF Functions, and Plan-Do-Check-Act is the ISO management-system cycle.
+  - id: q16
+    lesson: incident-response-continuity-and-audit
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply evidence-preserving containment
+    scenario: |
+      A server hosting customer records shows signs of compromise. A junior administrator wants to reformat it immediately and restore from backup to get service back.
+    prompt: What should the incident handler do first?
+    options:
+      - Reformat immediately to save time
+      - Isolate the server from the network, capture memory and disk images and relevant logs with chain of custody, then scope the incident before eradication
+      - Post about the incident on social media to warn customers
+      - Ignore it until the end of the month
+    answer: 1
+    explanation: Isolation contains the incident while preserving evidence needed to understand scope, entry point and persistence. Wiping first destroys evidence and may leave attackers' other footholds in place. Communication should follow the agreed plan, not ad hoc posts.
+  - id: q17
+    lesson: incident-response-continuity-and-audit
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish business continuity from disaster recovery
+    prompt: A disaster recovery plan and a business continuity plan are the same document under different names.
+    answer: false
+    explanation: DR restores IT systems and data; BC keeps critical business processes running, sometimes through manual workarounds, during and after disruption. They must be co-ordinated but serve different purposes.
+  - id: q18
+    lesson: incident-response-continuity-and-audit
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Name the analysis that sets continuity priorities
+    prompt: What analysis identifies critical processes, impact over time and maximum tolerable downtime to set recovery priorities (abbreviation accepted)?
+    answers: [business impact analysis, BIA]
+    explanation: The BIA is the foundation of continuity planning; its MTD values constrain RTOs and RPOs for supporting systems and drive the choice of recovery strategies.
+  - id: q19
+    lesson: incident-response-continuity-and-audit
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match audit concepts to descriptions
+    prompt: Match each audit concept to its description.
+    pairs:
+      - left: Design effectiveness
+        right: Whether a control, as designed, would address the risk
+      - left: Operating effectiveness
+        right: Whether the control actually worked consistently over the period tested
+      - left: Compliance audit
+        right: Tests conformity with a standard, law or contract
+      - left: Penetration test
+        right: Authorised attempt to exploit weaknesses, distinct from an audit
+      - left: Follow-up
+        right: Verifies that agreed remediation of findings has been completed
+    explanation: Audits assess controls against criteria using evidence such as samples, documents and interviews. A control can be well designed but fail to operate, which is why auditors test both.
+  - id: q20
+    lesson: incident-response-continuity-and-audit
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse BIA results to set recovery objectives
+    scenario: |
+      Illustrative scenario. A BIA finds that a hospital's patient registration process causes severe harm if unavailable for more than 12 hours. The supporting system currently takes about 20 hours to restore from backup.
+    prompt: What does this finding imply?
+    options:
+      - The current recovery capability is adequate
+      - The system's RTO must be set below the 12-hour MTD, so the recovery approach must improve (for example a warm standby) and a manual continuity procedure is needed meanwhile
+      - The MTD should be increased to 24 hours to match IT capability
+      - The BIA should be repeated until it gives a longer MTD
+    answer: 1
+    explanation: RTO must be shorter than MTD. A 20-hour restore exceeds the 12-hour tolerance, so recovery must be improved and a manual workaround planned. Adjusting the MTD to fit IT capability reverses the logic, because business impact should drive technical objectives.
+  - id: q21
+    lesson: incident-response-continuity-and-audit
+    type: mcq
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate post-incident activity
+    prompt: Which outcome best demonstrates an effective post-incident review?
+    options:
+      - Identifying an individual to blame and closing the ticket
+      - A documented timeline, root-cause analysis and a set of owned, time-bound improvements to controls and plans
+      - Deleting incident logs to save storage
+      - A statement that no improvements are needed
+    answer: 1
+    explanation: Post-incident activity aims at learning. A blameless review with root causes and owned actions improves preparation for the next incident; blame-focused reviews discourage honest reporting, and deleting logs removes evidence.
+
+  # Module-level extended questions
+  - id: q22
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Apply governance, risk assessment and NIST CSF 2.0 to a Ghanaian organisation
+    marks: 20
+    case: |
+      Illustrative scenario. Oforiwaa Polytechnic Services is a fictional company that runs student records, fees payment and e-learning platforms for several private tertiary institutions in Ghana. It has no CISO; security is handled part-time by the network administrator, who reports to the finance director. There is no documented security policy or risk register. Last term a phishing campaign compromised two staff email accounts, and fees-payment instructions were altered in emails to parents. The board has asked for a plan.
+    prompt: Using security governance principles, a likelihood x impact risk assessment and the NIST CSF 2.0 Functions, analyse the company's position and propose a governance structure, a prioritised risk register extract and a CSF-based improvement roadmap.
+    structure:
+      - Governance diagnosis and proposed roles and reporting lines
+      - Policy hierarchy to be created
+      - Risk register extract with at least four rated risks and treatments
+      - Current versus Target Profile across the six CSF Functions
+      - Ghanaian legal and regulatory considerations
+      - Prioritised roadmap and conclusion
+    rubric:
+      - criterion: Governance structure and policy hierarchy
+        marks: 5
+        descriptor: Proposes board oversight, a CISO or security lead with appropriate reporting, data owners, and a sensible policy, standard and procedure set.
+      - criterion: Risk assessment quality
+        marks: 6
+        descriptor: Rates realistic risks (business email compromise, ransomware, data breach of student records, payment fraud) with correct arithmetic, links to appetite and justified treatments with owners.
+      - criterion: Accurate use of NIST CSF 2.0
+        marks: 5
+        descriptor: Correctly describes all six Functions, uses Current and Target Profiles, and maps actions to Functions.
+      - criterion: Context and prioritisation
+        marks: 4
+        descriptor: References Act 843 and Act 1038 appropriately and sequences actions realistically for a resource-constrained firm.
+    modelAnswer: |
+      The diagnosis is weak governance: no accountable security leader, a reporting line to finance that obscures technical risk, no policy and no risk register. The board should formally own cybersecurity risk, set an appetite (low for student data and payment fraud), appoint a security lead with direct access to the managing director and a board committee, and name data owners for student records and fees data. A short information security policy approved by the board should be supported by standards for access control and MFA, email security and backups, and procedures for payment-change verification and incident handling.
+
+      A risk register might include: business email compromise altering payment instructions (L4 x I4 = 16, Critical), mitigated by MFA, email authentication (SPF, DKIM, DMARC), and an out-of-band verification procedure for payment changes; ransomware affecting student records (L3 x I5 = 15, Critical), mitigated by EDR, immutable backups and an incident plan; unauthorised access to student records through weak access control (L3 x I4 = 12, High), mitigated by role-based access and logging; outage of the e-learning platform at examination time (L3 x I3 = 9, Medium), mitigated by hosting resilience or accepted within appetite.
+
+      A CSF 2.0 Current Profile would show minimal Govern outcomes (no strategy, roles or policy), partial Identify (no asset inventory), basic Protect, weak Detect, and ad hoc Respond and Recover. The Target Profile for twelve months: Govern roles, policy and oversight in place; asset inventory and risk register maintained; MFA and email protections; centralised logging with alerting; a tested incident response plan and restore tests. Legal context: student and parent data is personal data under Act 843, and incident handling should consider reporting expectations under Act 1038 where applicable. The roadmap should prioritise governance and the two Critical risks in the first quarter.
+    explanation: Examiners reward a coherent link between governance, risk ratings and CSF outcomes, correct arithmetic, accurate naming of all six Functions and realistic prioritisation.
+  - id: q23
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the relationship between incident response, continuity and audit
+    marks: 15
+    prompt: '"An organisation that has a well-tested incident response plan does not need a separate business continuity plan or regular security audits." Critically evaluate this statement with reference to NIST SP 800-61, business impact analysis and the purpose of audit.'
+    structure:
+      - Define incident response and outline the SP 800-61 lifecycle
+      - Explain the scope of business continuity and the role of the BIA
+      - Explain what audits add (independent assurance, design and operating effectiveness)
+      - Use an example to show the gaps if any element is missing
+      - Reasoned conclusion
+    rubric:
+      - criterion: Understanding of incident response
+        marks: 5
+        descriptor: Accurately explains the four-phase lifecycle and its limits in scope.
+      - criterion: Understanding of continuity and BIA
+        marks: 5
+        descriptor: Explains that BC covers all disruption causes and business processes, using MTD, RTO and manual workarounds.
+      - criterion: Evaluation and use of audit
+        marks: 5
+        descriptor: Explains independent assurance and reaches a balanced, well-justified conclusion.
+    modelAnswer: |
+      The statement should be rejected, though it contains a partial truth. NIST SP 800-61 describes a lifecycle of Preparation; Detection and Analysis; Containment, Eradication and Recovery; and Post-Incident Activity. A tested plan greatly improves an organisation's handling of security incidents, and its recovery phase overlaps with disaster recovery.
+
+      However, incident response is centred on the security incident. Business continuity addresses the continuation of critical business processes whatever the cause of disruption: floods, power failures, supplier failure, pandemics or cyber attacks. Its foundation is a business impact analysis that identifies critical processes, impact over time, maximum tolerable downtime and dependencies, and that sets RTOs and RPOs. A bank might restore its core banking system in eight hours, but without a continuity plan its branches would have no manual procedure to serve customers during those hours. Incident response plans also rarely address staff relocation, alternative premises or supplier substitution.
+
+      Audits add independent assurance. Even a well-tested plan can decay: contact lists go out of date, backups stop working, playbooks drift from actual systems. Audits evaluate whether controls and plans are both well designed and operating effectively over time, and they report to the board through the audit committee, supporting governance under the Three Lines Model. A strong conclusion is that incident response, continuity and audit are complementary: incident response handles the event, continuity protects the business, and audit verifies both.
+    explanation: Examiners look for accurate use of SP 800-61, a clear scope distinction supported by BIA concepts, and recognition of audit's independent assurance role.

@@ -1,0 +1,109 @@
+resources:
+  - title: NIST Cybersecurity Framework
+    description: Official home of the NIST Cybersecurity Framework (CSF) 2.0, with the framework document, quick-start guides and implementation resources organised around the Govern, Identify, Protect, Detect, Respond and Recover functions.
+    provider: National Institute of Standards and Technology (NIST)
+    url: https://www.nist.gov/cyberframework
+    category: standard
+    module: governance-and-risk
+    difficulty: intermediate
+    stage: core
+    accessType: free
+  - title: Cisco Skills for All
+    description: Cisco Networking Academy's self-paced learning platform with introductory and intermediate cybersecurity and networking courses, including simulations suitable for safe, legal practice.
+    provider: Cisco Networking Academy
+    url: https://skillsforall.com/
+    category: course
+    module: security-fundamentals
+    difficulty: introductory
+    stage: foundation
+    accessType: unknown
+  - title: PortSwigger Web Security Academy
+    description: Learning materials and deliberately vulnerable practice labs covering web vulnerabilities such as SQL injection, cross-site scripting and authentication flaws, intended for legal hands-on practice.
+    provider: PortSwigger
+    url: https://portswigger.net/web-security
+    category: course
+    module: application-and-database-security
+    difficulty: intermediate
+    stage: core
+    accessType: unknown
+  - title: OWASP Foundation
+    description: Open community whose projects, guides and tools support secure software development, including testing guides, verification standards and awareness documents.
+    provider: OWASP Foundation
+    url: https://owasp.org/
+    category: organisation
+    module: application-and-database-security
+    difficulty: introductory
+    stage: foundation
+    accessType: free
+  - title: OWASP Top 10
+    description: Widely used awareness document describing the most critical security risk categories for web applications, with descriptions, examples and prevention guidance.
+    provider: OWASP Foundation
+    url: https://owasp.org/www-project-top-ten/
+    category: reference
+    module: application-and-database-security
+    difficulty: intermediate
+    stage: core
+    accessType: free
+  - title: Cybersecurity and Infrastructure Security Agency (CISA)
+    description: US government agency publishing advisories, ransomware guidance, known exploited vulnerability information and practical security recommendations for organisations of all sizes.
+    provider: Cybersecurity and Infrastructure Security Agency
+    url: https://www.cisa.gov/
+    category: organisation
+    module: threats-and-attacks
+    difficulty: introductory
+    stage: core
+    accessType: free
+  - title: MITRE ATT&CK
+    description: Knowledge base of adversary tactics and techniques based on real-world observations, with mitigation and detection notes used by defenders to map coverage and describe incidents.
+    provider: The MITRE Corporation
+    url: https://attack.mitre.org/
+    category: reference
+    module: threats-and-attacks
+    difficulty: intermediate
+    stage: advanced
+    accessType: free
+  - title: NIST Computer Security Resource Center (CSRC)
+    description: Official repository of NIST security publications, including SP 800-30 (risk assessment), SP 800-41 (firewalls), SP 800-57 (key management), SP 800-63B (authentication) and SP 800-207 (zero trust), plus cryptographic standards.
+    provider: National Institute of Standards and Technology (NIST)
+    url: https://csrc.nist.gov/
+    category: standard
+    module: cryptography
+    difficulty: advanced
+    stage: advanced
+    accessType: free
+  - title: Cyber Security Authority, Ghana
+    description: Ghana's national cybersecurity regulator established under the Cybersecurity Act, 2020 (Act 1038), providing official information on regulation, incident reporting and public awareness.
+    provider: Cyber Security Authority (Ghana)
+    url: https://www.csa.gov.gh/
+    category: organisation
+    module: security-fundamentals
+    difficulty: introductory
+    stage: foundation
+    accessType: unknown
+  - title: OWASP Cheat Sheet Series
+    description: Concise, practical guidance on specific security topics, including password storage, authentication, transport layer security and cryptographic storage.
+    provider: OWASP Foundation
+    url: https://cheatsheetseries.owasp.org/
+    category: guide
+    module: cryptography
+    difficulty: intermediate
+    stage: core
+    accessType: free
+  - title: RFC Editor
+    description: Official publisher of Internet standards documents (RFCs), including TLS 1.3 (RFC 8446), SSH (RFC 4253), DNSSEC (RFC 4033), X.509 profiles (RFC 5280) and Argon2 (RFC 9106).
+    provider: RFC Editor
+    url: https://www.rfc-editor.org/
+    category: standard
+    module: network-and-system-security
+    difficulty: advanced
+    stage: advanced
+    accessType: free
+  - title: Center for Internet Security (CIS)
+    description: Non-profit organisation that publishes the CIS Benchmarks secure configuration guides and the CIS Controls, widely used for operating system and endpoint hardening.
+    provider: Center for Internet Security
+    url: https://www.cisecurity.org/
+    category: organisation
+    module: network-and-system-security
+    difficulty: intermediate
+    stage: core
+    accessType: unknown

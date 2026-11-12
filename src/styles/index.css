@@ -95,6 +95,144 @@
   color-scheme: dark;
 }
 
+/* Lesson reading typography. Scaled by --reader-scale (text-size control). */
+@layer components {
+  .prose-gp {
+    font-family: var(--font-serif);
+    font-size: calc(1.0625rem * var(--reader-scale, 1));
+    line-height: 1.75;
+    color: var(--color-foreground);
+    overflow-wrap: anywhere;
+  }
+  .prose-gp > * + * {
+    margin-top: 1em;
+  }
+  .prose-gp h2,
+  .prose-gp h3,
+  .prose-gp h4 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+    margin-top: 1.8em;
+  }
+  .prose-gp h3 {
+    font-size: 1.15em;
+  }
+  .prose-gp h4 {
+    font-size: 1em;
+  }
+  .prose-gp a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .prose-gp ul,
+  .prose-gp ol {
+    padding-left: 1.4em;
+  }
+  .prose-gp ul {
+    list-style: disc;
+  }
+  .prose-gp ol {
+    list-style: decimal;
+  }
+  .prose-gp li + li {
+    margin-top: 0.35em;
+  }
+  .prose-gp li > ul,
+  .prose-gp li > ol {
+    margin-top: 0.35em;
+  }
+  .prose-gp strong {
+    font-weight: 650;
+  }
+  .prose-gp blockquote {
+    border-left: 3px solid var(--color-primary);
+    padding: 0.25em 0 0.25em 1em;
+    color: var(--color-muted-foreground);
+    font-style: italic;
+  }
+  .prose-gp code {
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    background: var(--color-muted);
+    border-radius: 4px;
+    padding: 0.1em 0.35em;
+  }
+  .prose-gp pre {
+    background: var(--color-surface-2);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1em;
+    overflow-x: auto;
+    font-size: 0.85em;
+    line-height: 1.6;
+  }
+  .prose-gp pre code {
+    background: none;
+    padding: 0;
+  }
+  .prose-gp table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    font-family: var(--font-sans);
+    font-size: 0.86em;
+    line-height: 1.5;
+  }
+  .prose-gp th,
+  .prose-gp td {
+    border: 1px solid var(--color-border);
+    padding: 0.5em 0.75em;
+    text-align: left;
+    vertical-align: top;
+  }
+  .prose-gp th {
+    background: var(--color-surface-2);
+    font-weight: 600;
+  }
+  .prose-gp hr {
+    border-color: var(--color-border);
+    margin: 2em 0;
+  }
+  .prose-gp .mermaid-block {
+    margin: 1.5em 0;
+    padding: 1em;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    overflow-x: auto;
+    text-align: center;
+  }
+  .prose-gp .mermaid-block[data-rendered] .mermaid-source {
+    display: none;
+  }
+  .prose-gp .mermaid-block svg {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .prose-gp .mermaid-note {
+    font-family: var(--font-sans);
+    font-size: 0.8em;
+    color: var(--color-muted-foreground);
+  }
+  /* Dark reading mode: a calm, low-glare surface independent of the app theme. */
+  .reader-dark {
+    --gp-surface: #141821;
+    --gp-surface-2: #1b202b;
+    --gp-foreground: #e4e1d8;
+    --gp-muted: #232936;
+    --gp-muted-foreground: #a8a397;
+    --gp-border: #2a303d;
+    --gp-primary: #9aa4ff;
+    background: var(--gp-surface);
+    color: var(--gp-foreground);
+  }
+}
+
 @layer base {
   * {
     border-color: var(--color-border);

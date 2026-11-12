@@ -1,0 +1,392 @@
+module: research-quality-and-ethics
+questions:
+  # ---------- validity-reliability-and-trustworthiness ----------
+  - id: q01
+    lesson: validity-reliability-and-trustworthiness
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain the relationship between reliability and validity
+    prompt: Which statement best describes the relationship between reliability and validity?
+    options:
+      - A valid measure can be unreliable, but a reliable measure is always valid
+      - Reliability is necessary but not sufficient for validity
+      - Validity and reliability are independent, so neither affects the other
+      - Reliability is only relevant to qualitative research
+    answer: 1
+    explanation: A measure must be consistent before it can be accurate, but consistency alone does not guarantee accuracy; a scale that always reads 3 kg too heavy is reliable yet invalid. The first option reverses the logic, the third ignores that inconsistent measurement cannot be accurate, and reliability is primarily a quantitative criterion (qualitative work speaks of dependability).
+
+  - id: q02
+    lesson: validity-reliability-and-trustworthiness
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Interpret Cronbach's alpha correctly
+    prompt: A Cronbach's alpha of 0.88 demonstrates that a questionnaire scale has strong construct validity.
+    answer: false
+    explanation: Cronbach's alpha measures internal consistency, a form of reliability. Items can be highly consistent with each other while measuring the wrong construct. Construct validity needs separate evidence, such as expert content review, convergent loadings and discriminant validity tests.
+
+  - id: q03
+    lesson: validity-reliability-and-trustworthiness
+    type: matching
+    bloom: recall
+    difficulty: medium
+    objective: Match Lincoln and Guba's trustworthiness criteria to their conventional parallels
+    prompt: Match each trustworthiness criterion with the conventional quantitative criterion it parallels.
+    pairs:
+      - left: Credibility
+        right: Internal validity
+      - left: Transferability
+        right: External validity
+      - left: Dependability
+        right: Reliability
+      - left: Confirmability
+        right: Objectivity
+    explanation: Lincoln and Guba (1985) proposed these criteria as qualitative parallels. Credibility concerns whether findings faithfully represent participants' realities; transferability concerns applicability elsewhere via thick description; dependability concerns a traceable, consistent process; confirmability concerns grounding findings in data rather than researcher preference.
+
+  - id: q04
+    lesson: validity-reliability-and-trustworthiness
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Identify a threat to internal validity
+    scenario: |
+      Illustrative scenario. A bank in Accra evaluates a new cybersecurity training programme. Employees who volunteered for training are compared with employees who did not. The trained group later reports fewer clicks on suspicious links, and the bank concludes that the training caused the improvement.
+    prompt: What is the most serious threat to the bank's causal conclusion?
+    options:
+      - Selection, because volunteers may already have been more security-conscious
+      - Low inter-rater reliability, because two people counted the clicks
+      - Poor transferability, because the study used no thick description
+      - Regression to the mean, because the training was short
+    answer: 0
+    explanation: Because participants self-selected, the groups probably differed before training, so the difference cannot be attributed confidently to the training (a selection threat to internal validity). Nothing suggests multiple raters; transferability is a qualitative criterion about applying findings elsewhere, not causal inference; regression to the mean concerns extreme scores re-measured, not programme length.
+
+  - id: q05
+    lesson: validity-reliability-and-trustworthiness
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name a qualitative credibility strategy
+    prompt: What is the term for returning interpretations or summaries to participants so they can comment on whether they reflect their experience?
+    answers: [member checking, member check, respondent validation]
+    explanation: Member checking (also called respondent validation) strengthens credibility by allowing participants to confirm, correct or extend the researcher's interpretations. It should be used thoughtfully, since participants may disagree for reasons unrelated to accuracy.
+
+  - id: q06
+    lesson: validity-reliability-and-trustworthiness
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Diagnose a measurement problem from item statistics
+    scenario: |
+      Illustrative scenario. In a pilot of a four-item "perceived ease of use" scale for a mobile banking app, three items have corrected item–total correlations above 0.60. The fourth item, "I would recommend the app to friends", has an item–total correlation of 0.10, and alpha rises from 0.74 to 0.85 if it is deleted.
+    prompt: What is the most defensible interpretation and action?
+    options:
+      - Keep the item because overall alpha already exceeds 0.70
+      - Delete the item purely because doing so raises alpha
+      - Recognise that the item measures recommendation intention rather than ease of use, remove it on conceptual and statistical grounds, and document the change
+      - Add more items similar to the fourth item to raise its correlation
+    answer: 2
+    explanation: The statistical signal (low item–total correlation) agrees with the conceptual diagnosis that the item belongs to a different construct, so removal is justified on content and construct validity grounds and should be documented. Keeping it ignores the validity problem; deleting purely to raise alpha is mechanical and poor practice; adding similar items would create a second construct inside the scale.
+
+  - id: q07
+    lesson: validity-reliability-and-trustworthiness
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the use of borrowed instruments
+    prompt: A student adapts UTAUT items for Ghanaian pharmacists and writes, "Since Venkatesh et al. (2003) established reliability and validity, no further tests are needed." What is the best evaluation?
+    options:
+      - Acceptable, because published instruments retain their validity in all contexts
+      - Acceptable, provided the items are translated accurately
+      - Weak, because reliability and validity are properties of scores in a specific sample and must be re-established after adaptation
+      - Weak, because UTAUT has never been tested for reliability
+    answer: 2
+    explanation: Reliability and validity evidence belongs to the scores from a particular population and context; adaptation, translation and a new population can all change how items behave, so the student must pilot and report their own evidence. UTAUT was published with measurement evidence, so the fourth option is incorrect, and accurate translation alone does not remove the need to test.
+
+  # ---------- research-bias ----------
+  - id: q08
+    lesson: research-bias
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish bias from random error
+    prompt: Why does increasing sample size not solve a sampling bias problem?
+    options:
+      - Because larger samples always increase random error
+      - Because bias is systematic error, so a larger biased sample gives a more precise but still distorted estimate
+      - Because statistical tests cannot be run on large samples
+      - Because bias only affects qualitative research
+    answer: 1
+    explanation: Random error tends to average out as samples grow, but systematic error pushes every observation the same way, so it persists. The Literary Digest poll of 1936 is the classic illustration. Larger samples reduce rather than increase random error, tests work on large samples, and bias affects all research traditions.
+
+  - id: q09
+    lesson: research-bias
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Classify types of bias
+    prompt: Match each example to the type of bias it best illustrates.
+    pairs:
+      - left: Only e-commerce firms still trading are surveyed about success factors
+        right: Survivorship bias
+      - left: Employees overstate how often they change passwords
+        right: Social desirability bias
+      - left: Respondents agree with almost every positively worded statement
+        right: Acquiescence bias
+      - left: A researcher codes ambiguous comments in the direction of her hypothesis
+        right: Confirmation bias
+      - left: A survey frame of registered online taxpayers omits informal traders
+        right: Coverage bias
+    explanation: Survivorship bias hides failures; social desirability produces self-flattering answers; acquiescence is a tendency to agree regardless of content; confirmation bias shapes interpretation towards prior beliefs; coverage bias arises when the frame omits part of the target population.
+
+  - id: q10
+    lesson: research-bias
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Evaluate remedies for common method bias
+    prompt: Procedural remedies, such as separating the measurement of predictor and outcome variables in time or source, are generally regarded as more effective against common method bias than relying only on statistical tests after data collection.
+    answer: true
+    explanation: Podsakoff et al. (2003) recommended designing procedural remedies into the study, because post-hoc statistical checks have limited ability to detect or correct the problem. Remedies include temporal or source separation, anonymity, varied scale formats and careful wording.
+
+  - id: q11
+    lesson: research-bias
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Recommend a remedy for response bias
+    scenario: |
+      Illustrative scenario. A student surveying hospital nurses about compliance with data-handling rules includes the item "I always log out of the records system when I leave my workstation" on an agree–disagree scale. The questionnaire is distributed by ward managers.
+    prompt: Which change would most directly reduce the main response bias?
+    options:
+      - Increase the sample from 80 to 300 nurses
+      - Distribute anonymously through a neutral channel and replace the self-rating with a realistic scenario question
+      - Add more agree–disagree items about compliance
+      - Report percentages to two decimal places
+    answer: 1
+    explanation: The main risk is social desirability, intensified by managers distributing the survey. Anonymous neutral distribution reduces pressure and scenario-based items are less transparent than self-ratings. A larger sample does not remove systematic bias, more similar items add acquiescence risk, and reporting precision is irrelevant.
+
+  - id: q12
+    lesson: research-bias
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name the qualitative practice for managing researcher influence
+    prompt: What term describes the researcher's ongoing, documented examination of how their own background and role shape the research?
+    answers: [reflexivity, reflexive practice]
+    explanation: Reflexivity makes the researcher's influence visible rather than pretending it is absent, typically through a reflexive journal and a positionality statement in the methodology.
+
+  - id: q13
+    lesson: research-bias
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the dominant bias in a study design
+    scenario: |
+      Illustrative scenario. A fintech start-up in Kumasi wants to understand why small traders do not use its payment app. It emails a questionnaire to all registered users and receives many responses explaining minor usability complaints.
+    prompt: What is the most fundamental flaw in this design for answering the start-up's question?
+    options:
+      - Acquiescence bias in the usability items
+      - Coverage bias, because non-users, the group of interest, are excluded from the frame
+      - Low test–retest reliability of the questionnaire
+      - Interviewer effects caused by face-to-face administration
+    answer: 1
+    explanation: The question concerns non-users, yet only registered users can respond, so the frame cannot cover the target population; the results describe users' complaints, not reasons for non-adoption. Acquiescence may exist but is secondary, test–retest reliability is not the issue, and the survey was emailed, not administered face to face.
+
+  - id: q14
+    lesson: research-bias
+    type: mcq
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate how residual bias should be reported
+    prompt: A student has used convenience sampling in a single Accra business district due to time constraints. Which approach to reporting is most appropriate?
+    options:
+      - Omit the issue, since examiners may not notice
+      - State that the sample is representative of all Ghanaian SMEs because it is large
+      - Acknowledge the specific selection bias, explain its likely direction and effect on generalisability, and justify the design for an exploratory purpose
+      - Replace the term "convenience sampling" with "random sampling" in the report
+    answer: 2
+    explanation: Honest, specific acknowledgement of residual bias and its implications demonstrates critical maturity. Omission and mislabelling are integrity failures, and size does not make a convenience sample representative.
+
+  # ---------- ethics-consent-confidentiality-and-approval ----------
+  - id: q15
+    lesson: ethics-consent-confidentiality-and-approval
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish anonymity from confidentiality
+    prompt: An MSc student conducts face-to-face interviews with IT managers. Which promise is accurate?
+    options:
+      - Participants will be completely anonymous, even to the researcher
+      - Participants' identities will be kept confidential, with pseudonyms used in reports
+      - No personal data will be processed at any point
+      - Participants cannot withdraw once the interview starts
+    answer: 1
+    explanation: The researcher meets participants, so anonymity is impossible; confidentiality with pseudonyms is the honest promise. Recordings and contact details are personal data, and participants should normally be able to withdraw.
+
+  - id: q16
+    lesson: ethics-consent-confidentiality-and-approval
+    type: matching
+    bloom: recall
+    difficulty: medium
+    objective: Link Act 843 data protection principles to research practice
+    prompt: Match each data protection principle in Ghana's Data Protection Act, 2012 (Act 843) with the research practice that best reflects it.
+    pairs:
+      - left: Specification of purpose
+        right: Collecting data only for a defined research purpose stated to participants
+      - left: Data security safeguards
+        right: Encrypting transcripts and restricting access
+      - left: Openness
+        right: Informing participants how their data will be processed
+      - left: Data subject participation
+        right: Allowing participants to access and request correction of their data
+      - left: Accountability
+        right: Being able to demonstrate compliance with the Act
+    explanation: Act 843 sets out principles including accountability, lawfulness of processing, specification of purpose, compatibility of further processing, quality of information, openness, data security safeguards and data subject participation. Translating each into a concrete research action is the practical skill examiners look for.
+
+  - id: q17
+    lesson: ethics-consent-confidentiality-and-approval
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Recognise that public online data still raises ethical issues
+    prompt: Because social media posts are publicly visible, researchers may quote them verbatim without any ethical consideration.
+    answer: false
+    explanation: Public visibility does not remove privacy expectations or data protection duties. Verbatim quotations can be traced back to individuals through a search, so researchers should assess identifiability and harm, and often paraphrase or aggregate.
+
+  - id: q18
+    lesson: ethics-consent-confidentiality-and-approval
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Identify threats to voluntary consent
+    scenario: |
+      Illustrative scenario. A lecturer who is also an MSc student plans to survey students in her own course about cybersecurity habits. She intends to distribute the questionnaire during her class and collect completed forms before students leave.
+    prompt: What is the main ethical concern?
+    options:
+      - The questionnaire is too long for a class period
+      - Voluntariness, because students may feel pressured to participate by someone who assesses them
+      - The study lacks a conceptual framework
+      - Cybersecurity is not a suitable research topic
+    answer: 1
+    explanation: The power relationship between lecturer and students threatens voluntary consent. Safer designs include recruitment by a neutral third party, anonymous online completion outside class and clear statements that participation does not affect grades. The other options are not the central ethical issue.
+
+  - id: q19
+    lesson: ethics-consent-confidentiality-and-approval
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the regulator established by Act 843
+    prompt: Which Ghanaian body was established by the Data Protection Act, 2012 (Act 843) to oversee the processing of personal data?
+    answers: [Data Protection Commission, the Data Protection Commission, DPC]
+    explanation: Act 843 established the Data Protection Commission. Researchers should consult the Commission's official guidance and their institution's advice to understand obligations such as registration.
+
+  - id: q20
+    lesson: ethics-consent-confidentiality-and-approval
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate data minimisation in a research design
+    scenario: |
+      Illustrative scenario. A student studying electronic health record use at a private hospital is offered full raw audit logs, which include staff names and patient record identifiers. Her research question concerns how frequently different staff roles use particular system functions.
+    prompt: Which response is most ethically and legally defensible?
+    options:
+      - Accept the raw logs because hospital management has offered them
+      - Accept the raw logs but delete patient identifiers after analysis
+      - Request aggregated, de-identified usage statistics by role prepared by the data controller, and obtain the required approvals
+      - Decline to study the hospital at all
+    answer: 2
+    explanation: Aggregated statistics by role answer the research question while minimising personal and sensitive health data, consistent with purpose specification and security principles. Management's offer does not settle ethical or legal questions, and deleting identifiers after analysis still exposes sensitive data during processing. Declining entirely is unnecessary when a safer design exists.
+
+  - id: q21
+    lesson: ethics-consent-confidentiality-and-approval
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the ethical lesson of the Facebook emotional contagion study
+    prompt: What is the central ethical lesson of the 2014 Facebook emotional contagion study for IT-for-business researchers?
+    options:
+      - Large samples remove the need for consent
+      - Agreement to platform terms of service is not necessarily informed consent to being part of an experiment that manipulates users' experience
+      - Emotional contagion effects are too small to matter
+      - Industry research never requires ethical review
+    answer: 1
+    explanation: Critics argued that relying on a general data use policy did not provide informed consent to an intervention, and that oversight responsibilities between company and university were unclear; the journal published an editorial expression of concern. Sample size does not replace consent, effect size is not the ethical point, and industry collaborations do raise review obligations.
+
+  # ---------- module-level extended questions ----------
+  - id: q22
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate quality, bias and ethics in a complete research design
+    marks: 20
+    prompt: Critically evaluate the quality, bias and ethical dimensions of Abena's design and recommend specific improvements.
+    case: |
+      Illustrative scenario. Abena, an MSc student who works in the IT department of a mid-sized insurance company in Accra, proposes to study "the effect of a new claims-processing system on staff productivity". Her plan is to (1) send an online questionnaire through her line manager to all claims staff, asking them to rate their productivity before and after the system on a five-point scale; (2) interview five staff she knows well; (3) download system logs showing each employee's processing times and names; and (4) begin data collection next week, applying for ethical approval later "if required". She plans to report that the system "caused" a rise in productivity if average ratings increase.
+    structure:
+      - Brief overview of the design and its purpose
+      - Validity issues (construct validity of self-rated productivity, internal validity of causal claim)
+      - Reliability and trustworthiness of the survey and interviews
+      - Sampling, response and researcher biases including insider role
+      - Ethical issues (voluntariness, confidentiality, personal data, approval timing)
+      - Act 843 implications for system logs
+      - Prioritised, specific recommendations
+    rubric:
+      - criterion: Validity and reliability analysis
+        marks: 5
+        descriptor: Correctly identifies construct validity problems with self-rated productivity, recall-based before/after ratings, and threats to internal validity such as history and maturation; proposes objective or comparative measures.
+      - criterion: Bias analysis
+        marks: 5
+        descriptor: Identifies social desirability and pressure from manager distribution, convenience selection of interviewees, and researcher insider bias, each with a specific remedy.
+      - criterion: Ethics and data protection
+        marks: 6
+        descriptor: Explains threats to voluntary consent, confidentiality risks, the need to minimise and de-identify log data with reference to Act 843 principles, and that institutional approval and gatekeeper permission must be obtained before data collection.
+      - criterion: Quality of recommendations and argument
+        marks: 4
+        descriptor: Recommendations are prioritised, feasible and justified; the answer is well structured and critically argued rather than descriptive.
+    modelAnswer: |
+      A strong answer recognises that Abena's design has serious weaknesses in validity, bias and ethics. Self-rated "productivity before and after" measures perception, not productivity, and relies on retrospective recall, weakening construct validity. Claiming that the system "caused" improvement ignores threats to internal validity: other events (history), staff gaining experience (maturation) and the absence of a comparison group. Objective measures such as aggregated processing times by period, ideally compared with a baseline or comparable team, would be stronger, with limitations stated.
+
+      Bias is pervasive. Distribution through a line manager invites social desirability and undermines anonymity; staff may praise a system management favours. Interviewing five people she knows well introduces convenience selection and researcher bias, amplified by her insider position in the IT department that may have implemented the system. Remedies include neutral anonymous distribution, purposive sampling across roles, a reflexive journal, a positionality statement and a second coder.
+
+      Ethically, the plan fails before it starts. Data collection must not begin before institutional ethical approval and written gatekeeper permission. Named processing-time logs are personal data that could expose individuals to performance judgements; under Act 843 principles of purpose specification, security safeguards and accountability, she should request aggregated or pseudonymised data prepared by the data controller and collect only what the question requires. Information sheets, consent procedures, secure storage and retention plans are needed, and confidentiality promises must account for the small team, where deductive disclosure is likely.
+
+      Recommendations, in priority order: pause and obtain approvals; redesign measures and add a comparison; minimise and de-identify data; neutralise recruitment; and report residual limitations honestly.
+    explanation: Examiners look for integrated analysis across validity, bias and ethics, explicit links to the scenario's details, correct use of Act 843 principles without invented procedures, and feasible, prioritised recommendations.
+
+  - id: q23
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Compare quality criteria across research paradigms
+    marks: 15
+    prompt: '"Validity and reliability are universal standards; qualitative researchers who reject them are simply avoiding scrutiny." Critically discuss this statement with reference to Lincoln and Guba''s trustworthiness criteria and an example from IT-for-business research.'
+    structure:
+      - Introduction defining validity, reliability and trustworthiness
+      - Philosophical basis of conventional criteria (positivism) and of trustworthiness (interpretivism)
+      - The four trustworthiness criteria and their strategies
+      - Evaluation of whether trustworthiness is less rigorous or differently rigorous
+      - Applied example, such as an interview study of EHR adoption by nurses
+      - Conclusion taking a reasoned position
+    rubric:
+      - criterion: Conceptual accuracy
+        marks: 4
+        descriptor: Accurately defines validity, reliability and the four trustworthiness criteria and their parallels.
+      - criterion: Critical argument
+        marks: 5
+        descriptor: Links criteria to paradigm assumptions and evaluates the statement rather than merely describing; considers counter-arguments.
+      - criterion: Application
+        marks: 4
+        descriptor: Uses a relevant IT-for-business example with specific strategies such as triangulation, audit trail and thick description.
+      - criterion: Structure and expression
+        marks: 2
+        descriptor: Clear structure, academic tone and a reasoned conclusion.
+    modelAnswer: |
+      A strong essay begins by defining validity as accuracy of measurement and inference, reliability as consistency, and trustworthiness as the qualitative umbrella for quality. It then explains that conventional criteria rest on positivist assumptions of an objective reality that instruments can capture and that repeated measurement should reproduce. Interpretivists hold that social reality is constructed and context-bound, so demanding statistical generalisation or identical replication misunderstands what qualitative research aims to do.
+
+      The essay presents Lincoln and Guba's (1985) criteria: credibility (parallel to internal validity) through prolonged engagement, triangulation, member checking and negative case analysis; transferability (external validity) through thick description; dependability (reliability) through an audit trail; and confirmability (objectivity) through reflexivity and data-grounded quotations. The key argument is that these criteria do not avoid scrutiny; they relocate it to transparent, auditable processes. A reader can inspect the audit trail and judge transferability from detailed context.
+
+      Balanced answers acknowledge critiques: the parallels can appear to concede positivist standards, criteria are sometimes applied as box-ticking, and member checking has limitations. Applying the ideas to an interview study of nurses' EHR experiences in a Ghanaian hospital, the student shows how triangulating interviews with observation, describing the hospital context in depth and keeping coding memos create rigour appropriate to the question.
+
+      The conclusion rejects the statement as overstated: quality standards are paradigm-sensitive rather than absent, and the real test is whether the researcher demonstrates rigour transparently.
+    explanation: Examiners reward essays that connect quality criteria to underlying philosophy, evaluate rather than list, and apply specific strategies to a realistic example.

@@ -1,0 +1,41 @@
+module: emerging-technology-foundations
+cards:
+  - lesson: emerging-technology-and-innovation
+    front: What five attributes define an emerging technology according to Rotolo, Hicks and Martin (2015)?
+    back: Radical novelty, relatively fast growth, coherence, prominent impact, and uncertainty and ambiguity. They are dimensions held to a greater or lesser degree, not a pass/fail checklist.
+  - lesson: emerging-technology-and-innovation
+    front: Why is a recent product not necessarily an emerging technology?
+    back: Emergence depends on the character of development (novelty, growth, coherence, impact, uncertainty), not recency. A new phone model is usually an incremental refinement of a mature technology.
+  - lesson: emerging-technology-and-innovation
+    front: Why are architectural innovations dangerous for incumbent firms?
+    back: The components look familiar, so incumbents underestimate the change, but knowledge about how components link is embedded in their structures and routines, which become obsolete (Henderson & Clark, 1990).
+  - lesson: emerging-technology-and-innovation
+    front: What is the core insight of the hype-cycle concept?
+    back: Expectations (driven by media, investors and marketing) move faster than real capability (driven by engineering, standards, skills and organisational change), producing a peak, a trough and a slower recovery.
+  - lesson: emerging-technology-and-innovation
+    front: Give two limitations of hype-cycle thinking.
+    back: Positioning is expert judgement rather than measurement, and the model says little about phase duration or whether recovery happens; positions also vary by industry and country.
+  - lesson: emerging-technology-and-innovation
+    front: What decision approach suits technologies with high uncertainty and ambiguity?
+    back: Staged, option-like commitments such as bounded pilots with learning goals and exit criteria, rather than all-or-nothing investments.
+  - lesson: forecasting-adoption-and-disruption
+    front: How does the Delphi method reduce bias from dominant participants?
+    back: Experts respond anonymously and independently, receive a statistical summary and reasons, then revise over several rounds without face-to-face discussion.
+  - lesson: forecasting-adoption-and-disruption
+    front: How are scenarios built in two-by-two scenario planning?
+    back: Identify driving forces, pick two that are both highly uncertain and highly important, combine their extremes into four plausible futures, then test strategies for robustness against each.
+  - lesson: forecasting-adoption-and-disruption
+    front: What managerial danger does S-curve analysis highlight?
+    back: Incumbents keep investing at the flattening top of an old curve while a new technology, still on the flat bottom of its own curve, looks unimpressive until it steepens and overtakes.
+  - lesson: forecasting-adoption-and-disruption
+    front: List Rogers' five perceived attributes that affect the rate of adoption.
+    back: Relative advantage, compatibility, complexity (slows adoption), trialability and observability.
+  - lesson: forecasting-adoption-and-disruption
+    front: What is the difference between low-end and new-market disruption?
+    back: Low-end disruption serves over-served customers at the bottom of an existing market with a cheaper, adequate offer; new-market disruption serves non-consumers who previously could not use the product at all.
+  - lesson: forecasting-adoption-and-disruption
+    front: Why is an entrant with a better product for mainstream customers not disruptive in Christensen's sense?
+    back: Disruption begins with an offer that is inferior on mainstream metrics in a low-end or new-market foothold; a better product for mainstream customers is a sustaining strategy, which incumbents usually contest.
+  - lesson: forecasting-adoption-and-disruption
+    front: What lesson does the Kodak case add to disruption theory?
+    back: Recognising a technology is not enough; Kodak worked on digital imaging early, but value shifted away from its film-based business model, so incumbents need business models and units able to capture value from the new technology.

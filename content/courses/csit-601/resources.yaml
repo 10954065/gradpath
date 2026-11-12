@@ -1,0 +1,109 @@
+resources:
+  - title: Google Scholar
+    description: Search engine for scholarly literature across disciplines, with "Cited by" links for forward citation chaining.
+    provider: Google
+    url: https://scholar.google.com/
+    category: database
+    module: literature-review
+    difficulty: introductory
+    stage: foundation
+    accessType: unknown
+  - title: Directory of Open Access Journals (DOAJ)
+    description: Curated directory of open access, peer-reviewed journals and articles; also useful for checking whether a journal is listed.
+    provider: DOAJ
+    url: https://doaj.org/
+    category: database
+    module: literature-review
+    difficulty: introductory
+    stage: foundation
+    accessType: unknown
+  - title: CORE
+    description: Aggregator of open access research papers from repositories and journals worldwide.
+    provider: CORE
+    url: https://core.ac.uk/
+    category: database
+    module: literature-review
+    difficulty: introductory
+    stage: core
+    accessType: unknown
+  - title: Purdue Online Writing Lab (OWL)
+    description: Writing guidance covering research, literature reviews, paraphrasing, synthesis and citation styles including APA.
+    provider: Purdue University
+    url: https://owl.purdue.edu/
+    category: guide
+    module: academic-writing-and-proposals
+    difficulty: introductory
+    stage: foundation
+    accessType: unknown
+  - title: Zotero
+    description: Open-source reference manager for collecting, organising, annotating and citing sources in APA 7 and other styles.
+    provider: Zotero
+    url: https://www.zotero.org/
+    category: tool
+    module: academic-writing-and-proposals
+    difficulty: introductory
+    stage: foundation
+    accessType: unknown
+  - title: APA Style
+    description: Official APA Style website with guidance on APA 7 references, in-text citations and paper formatting.
+    provider: American Psychological Association
+    url: https://apastyle.apa.org/
+    category: standard
+    module: academic-writing-and-proposals
+    difficulty: introductory
+    stage: core
+    accessType: unknown
+  - title: SAGE Research Methods
+    description: Research methods platform with explanations of research philosophies, designs, sampling, data collection and analysis.
+    provider: SAGE Publishing
+    url: https://methods.sagepub.com/
+    category: reference
+    module: research-design
+    difficulty: intermediate
+    stage: core
+    accessType: unknown
+  - title: PRISMA Statement
+    description: Official site of the PRISMA reporting guideline for systematic reviews, including the PRISMA 2020 checklist and flow diagram.
+    provider: PRISMA
+    url: https://www.prisma-statement.org/
+    category: standard
+    module: literature-review
+    difficulty: advanced
+    stage: advanced
+    accessType: unknown
+  - title: Cochrane Handbook for Systematic Reviews of Interventions
+    description: Detailed guidance on systematic searching, study selection, appraisal and synthesis from Cochrane.
+    provider: Cochrane
+    url: https://training.cochrane.org/handbook
+    category: guide
+    module: literature-review
+    difficulty: advanced
+    stage: advanced
+    accessType: unknown
+  - title: Zotero Documentation
+    description: Official documentation for installing Zotero, capturing sources, using notes and tags and generating citations.
+    provider: Zotero
+    url: https://www.zotero.org/support/
+    category: documentation
+    module: academic-writing-and-proposals
+    difficulty: introductory
+    stage: foundation
+    accessType: unknown
+  - title: AIS eLibrary
+    description: Digital library of the Association for Information Systems, hosting information systems journals and conference proceedings.
+    provider: Association for Information Systems
+    url: https://aisel.aisnet.org/
+    category: database
+    module: literature-review
+    difficulty: intermediate
+    stage: core
+    accessType: unknown
+  - title: Retraction Watch
+    description: Blog and database tracking retracted scientific articles, useful when checking the status of key sources.
+    provider: The Center for Scientific Integrity
+    url: https://retractionwatch.com/
+    category: reference
+    module: literature-review
+    difficulty: intermediate
+    stage: core
+    accessType: unknown

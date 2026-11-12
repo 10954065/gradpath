@@ -1,0 +1,52 @@
+module: research-design
+cards:
+  - lesson: quantitative-qualitative-and-mixed
+    front: What makes a study genuinely mixed methods rather than two studies placed side by side?
+    back: Intentional integration of the quantitative and qualitative strands, by connecting, building, merging or embedding, so that together they answer the research questions.
+  - lesson: quantitative-qualitative-and-mixed
+    front: How does an explanatory sequential design differ from an exploratory sequential design?
+    back: Explanatory sequential runs QUAN then qual to explain survey results; exploratory sequential runs QUAL then quan to build an instrument or hypotheses from qualitative findings.
+  - lesson: quantitative-qualitative-and-mixed
+    front: When is a convergent design most appropriate?
+    back: When you want a fuller picture of one phenomenon within limited time, collecting quantitative and qualitative data concurrently and comparing them in a joint display.
+  - lesson: quantitative-qualitative-and-mixed
+    front: What is the characteristic risk of quantitative research, and of qualitative research?
+    back: Quantitative research risks measuring the wrong thing precisely; qualitative research risks rich findings that are hard to transfer. Good design anticipates each risk.
+  - lesson: quantitative-qualitative-and-mixed
+    front: Why is pragmatism often linked to mixed methods?
+    back: It judges methods by how well they answer the question, allowing both strands, but still requires an argument that combining them adds understanding neither gives alone.
+
+  - lesson: exploratory-descriptive-explanatory
+    front: What are the three conditions for claiming that X causes Y?
+    back: Covariation (X and Y vary together), temporal precedence (X comes before Y) and non-spuriousness (no third variable explains the relationship).
+  - lesson: exploratory-descriptive-explanatory
+    front: Why should a cross-sectional survey usually avoid the word "causes" in its conclusions?
+    back: It measures variables at one time, so temporal precedence is assumed rather than shown and unmeasured confounders may remain; "is associated with" or "predicts" is safer.
+  - lesson: exploratory-descriptive-explanatory
+    front: When is exploratory research the right choice?
+    back: When a phenomenon is new or poorly understood in the context and the relevant concepts or variables cannot yet be specified with confidence.
+  - lesson: exploratory-descriptive-explanatory
+    front: What is descripto-explanatory research?
+    back: A study that first describes a situation accurately and then uses the description to analyse and explain relationships, common in business dissertations.
+  - lesson: exploratory-descriptive-explanatory
+    front: Give an example of a spurious relationship in SME technology research.
+    back: AI use and efficiency may both be driven by firm size or managerial capability, making AI appear to cause efficiency when the third variable explains both.
+
+  - lesson: experimental-case-study-and-time-horizons
+    front: Why does random assignment strengthen causal claims?
+    back: It makes groups equivalent on average on measured and unmeasured characteristics, so outcome differences can be attributed to the treatment rather than to selection.
+  - lesson: experimental-case-study-and-time-horizons
+    front: How do you compute a difference-in-differences estimate?
+    back: Subtract the comparison group's change from the treatment group's change - (After_T − Before_T) − (After_C − Before_C).
+  - lesson: experimental-case-study-and-time-horizons
+    front: What does a control group protect against that a one-group before-and-after design cannot?
+    back: History and maturation, because both groups experience the same external events and natural change over time.
+  - lesson: experimental-case-study-and-time-horizons
+    front: What are Yin's two dimensions for classifying case study designs?
+    back: Single versus multiple cases, and holistic (one unit of analysis) versus embedded (several sub-units within each case).
+  - lesson: experimental-case-study-and-time-horizons
+    front: What is the difference between a panel study and a trend study?
+    back: A panel measures the same units repeatedly; a trend study draws different samples from the same population at different times.
+  - lesson: experimental-case-study-and-time-horizons
+    front: How should a researcher answer "one case cannot be generalised"?
+    back: Case studies aim for analytic generalisation to theory, not statistical generalisation to a population; multiple cases follow replication logic.

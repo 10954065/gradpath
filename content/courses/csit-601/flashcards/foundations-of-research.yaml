@@ -1,0 +1,53 @@
+module: foundations-of-research
+cards:
+  - lesson: meaning-purpose-and-characteristics
+    front: What three features make an enquiry count as research rather than casual information gathering?
+    back: It is systematic (planned and logically ordered), grounded in evidence, and transparent enough for others to examine and challenge its procedures and conclusions.
+  - lesson: meaning-purpose-and-characteristics
+    front: What is the difference between research methods and research methodology?
+    back: Methods are the techniques for collecting and analysing data; methodology is the justified strategy and philosophy explaining why those techniques suit the question.
+  - lesson: meaning-purpose-and-characteristics
+    front: Name the five common purposes of research.
+    back: Exploration, description, explanation, prediction and evaluation. The wording of the research question usually signals which purpose applies.
+  - lesson: meaning-purpose-and-characteristics
+    front: Why does applied MSc research still need theory?
+    back: Theory makes findings interpretable and transferable beyond the immediate organisation, and it allows the study to contribute to knowledge rather than only solve a local problem.
+  - lesson: meaning-purpose-and-characteristics
+    front: Why does a large sample not guarantee good research?
+    back: Rigour depends on the fit between question, design and sampling. A large but biased sample, such as friends on social media, still cannot support generalisation.
+  - lesson: meaning-purpose-and-characteristics
+    front: What did the 2015 reproducibility project teach researchers about published findings?
+    back: Many published results replicated weakly or not at all, showing that publication does not guarantee robustness and that transparency and replication matter.
+  - lesson: research-paradigms
+    front: What is a research paradigm?
+    back: A shared framework of assumptions about reality, knowledge and appropriate methods that guides how a research community frames and studies problems.
+  - lesson: research-paradigms
+    front: How does positivism view the researcher's role?
+    back: As detached and value-neutral, measuring an objective reality with structured instruments and testing hypotheses deductively.
+  - lesson: research-paradigms
+    front: Why is "make sense of" in a research question a clue to interpretivism?
+    back: It signals interest in participants' meanings and lived experience, which interpretivism studies through rich data such as interviews and observation.
+  - lesson: research-paradigms
+    front: What is the weakest justification for choosing pragmatism?
+    back: Indecision or a wish to avoid philosophy. A sound justification shows how combining approaches answers the question and how findings will be integrated.
+  - lesson: research-paradigms
+    front: What does critical realism add to the positivism versus interpretivism debate?
+    back: It accepts an independent reality but argues our knowledge is fallible and focuses on the underlying mechanisms that produce observable outcomes in context.
+  - lesson: ontology-and-epistemology
+    front: Distinguish ontology from epistemology in one sentence each.
+    back: Ontology asks what reality is and what exists; epistemology asks what counts as valid knowledge about it and how that knowledge can be obtained.
+  - lesson: ontology-and-epistemology
+    front: Contrast objectivism and constructionism using "trust in mobile money".
+    back: Objectivism treats trust as a stable, measurable attribute; constructionism treats it as continually formed through experiences, conversations and relationships.
+  - lesson: ontology-and-epistemology
+    front: What is axiology and why does it matter in quantitative studies too?
+    back: Axiology concerns the role of values. Values shape topic choice, item wording and interpretation even in quantitative research.
+  - lesson: ontology-and-epistemology
+    front: What does the research onion help a researcher check?
+    back: That philosophy, approach to theory, methodological choice, strategy, time horizon and techniques follow logically from one another, so the design is coherent.
+  - lesson: ontology-and-epistemology
+    front: Which approach to theory development fits testing hypotheses from UTAUT?
+    back: Deduction, which derives hypotheses from existing theory and tests them, consistent with a positivist epistemology.
+  - lesson: ontology-and-epistemology
+    front: What is reflexivity?
+    back: Ongoing critical reflection by the researcher on how their background, role and presence influence data collection and interpretation.

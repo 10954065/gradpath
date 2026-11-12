@@ -1,0 +1,44 @@
+module: responsible-ai
+cards:
+  - lesson: bias-fairness-and-explainability
+    front: Why does "fairness through unawareness" usually fail?
+    back: Proxy features such as location, language or school can encode the removed protected attribute, so disparities persist; fairness must be measured on outcomes.
+  - lesson: bias-fairness-and-explainability
+    front: How do demographic parity and equal opportunity differ?
+    back: Demographic parity compares overall selection rates across groups; equal opportunity compares true positive rates among qualified individuals.
+  - lesson: bias-fairness-and-explainability
+    front: What does the four-fifths rule indicate?
+    back: A selection-rate ratio below 0.8 between a group and the most favoured group is treated, in US employment practice, as an indicator of possible adverse impact needing investigation.
+  - lesson: bias-fairness-and-explainability
+    front: What do the fairness impossibility results imply for practice?
+    back: When base rates differ, calibration and equal error rates cannot all hold, so selecting a fairness criterion is a justified, documented normative choice.
+  - lesson: bias-fairness-and-explainability
+    front: Explain LIME in one sentence.
+    back: LIME perturbs inputs around one instance, observes the black-box predictions and fits a simple interpretable surrogate model that approximates the model locally.
+  - lesson: bias-fairness-and-explainability
+    front: Global versus local explanation?
+    back: Global explanations describe overall model behaviour (for example permutation importance); local explanations account for one specific prediction (for example SHAP values for one applicant).
+  - lesson: bias-fairness-and-explainability
+    front: What is the key lesson of Obermeyer et al. (2019)?
+    back: Predicting a biased proxy (cost) for the real target (health need) produced racial disparity even without race as an input; label choice is a fairness decision.
+  - lesson: privacy-security-governance-and-deployment
+    front: List the eight data protection principles in Act 843.
+    back: Accountability; lawfulness of processing; specification of purpose; compatibility of further processing; quality of information; openness; data security safeguards; data subject participation.
+  - lesson: privacy-security-governance-and-deployment
+    front: Contrast data poisoning with evasion attacks.
+    back: Data poisoning manipulates training data so the model learns harmful behaviour; evasion modifies inputs at inference time to fool an already trained model.
+  - lesson: privacy-security-governance-and-deployment
+    front: Why can prompt injection not be solved by prompts alone?
+    back: LLMs cannot reliably separate instructions from data, so defences must include least-privilege tools, output validation, treating retrieved content as untrusted and human approval for risky actions.
+  - lesson: privacy-security-governance-and-deployment
+    front: Name the four functions of the NIST AI RMF 1.0.
+    back: Govern (cross-cutting accountability and culture), Map (context and risks), Measure (assess and track), Manage (prioritise and act).
+  - lesson: privacy-security-governance-and-deployment
+    front: What are the EU AI Act's risk tiers?
+    back: Unacceptable (prohibited), high risk (strict requirements), limited risk (transparency obligations) and minimal risk (no specific new obligations).
+  - lesson: privacy-security-governance-and-deployment
+    front: What are the four core values of the UNESCO Recommendation on the Ethics of AI?
+    back: Human rights and human dignity; living in peaceful, just and interconnected societies; ensuring diversity and inclusiveness; environment and ecosystem flourishing.
+  - lesson: privacy-security-governance-and-deployment
+    front: What governance failures does the Dutch childcare benefits case illustrate?
+    back: Discriminatory use of nationality data, opaque risk scoring that families could not contest, weak human oversight of automated flags and no effective accountability mechanism.

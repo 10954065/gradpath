@@ -1,0 +1,460 @@
+module: enterprise-applications
+questions:
+  # ---------- Lesson: erp-systems ----------
+  - id: q01
+    lesson: erp-systems
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain ERP integration
+    prompt: In an integrated ERP, what happens when a goods receipt is posted against a purchase order?
+    options:
+      - Only the warehouse stock record changes; finance is updated at month end
+      - Stock quantity and value, purchase order status and an accounting entry are updated together
+      - The supplier is paid immediately
+      - A new supplier master record is created
+    answer: 1
+    explanation: >
+      Integration means one transaction updates every affected record: stock rises, the purchase order shows the
+      receipt and finance records the inventory and a goods-received/invoice-received clearing entry. Payment happens
+      only after invoice verification, and master records are not created by transactions.
+  - id: q02
+    lesson: erp-systems
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Match ERP documents to modules
+    prompt: Match each ERP document or activity to the module that typically creates it.
+    pairs:
+      - left: Sales order
+        right: Sales and distribution
+      - left: Purchase order
+        right: Materials management / procurement
+      - left: Journal entry in the general ledger
+        right: Financial accounting
+      - left: Production order
+        right: Production planning
+      - left: Payroll run
+        right: Human capital management
+    explanation: >
+      Each module owns particular documents but shares data with the others. Recognising which module creates which
+      document helps when tracing end-to-end processes such as order-to-cash.
+  - id: q03
+    lesson: erp-systems
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the procure-to-pay control comparing three documents
+    prompt: What is the name of the control that compares the purchase order, goods receipt and supplier invoice before payment?
+    answers: [three-way match, three way match, 3-way match]
+    explanation: >
+      The three-way match prevents payment for goods that were not ordered or not received, or invoiced at the wrong
+      price. Tolerances allow small differences without blocking payment.
+  - id: q04
+    lesson: erp-systems
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish configuration from customisation
+    prompt: Configuring an ERP using its built-in settings generally carries more upgrade risk than modifying its program code.
+    answer: false
+    explanation: >
+      Configuration uses options the vendor supports and maintains, so it normally survives upgrades. Modifying code
+      (customisation) must be re-tested and often reworked at each upgrade, increasing cost and risk, especially with
+      frequently updated cloud ERP.
+  - id: q05
+    lesson: erp-systems
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply fit-to-standard reasoning
+    scenario: |
+      Illustrative scenario. A Takoradi engineering supplier implementing ERP finds that its accounts payable team wants
+      the system changed to reproduce a paper approval form they have used for fifteen years. The standard ERP workflow
+      already supports multi-level approval by amount.
+    prompt: What is the most defensible recommendation?
+    options:
+      - Customise the ERP to replicate the paper form exactly
+      - Adopt the standard approval workflow, configuring approval limits, because accounts payable is a commodity process
+      - Abandon approvals altogether to save time
+      - Keep the paper form alongside the ERP permanently
+    answer: 1
+    explanation: >
+      Accounts payable rarely differentiates a business, and the standard workflow provides the required control. The
+      sensible approach is to configure approval levels and train staff. Customising for habit adds cost and upgrade
+      risk; removing approvals weakens control; parallel paper forms create duplicate work and confusion.
+  - id: q06
+    lesson: erp-systems
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the causes of the Hershey ERP difficulties
+    prompt: Which combination of factors is most commonly cited in analyses of Hershey's 1999 ERP go-live problems?
+    options:
+      - Use of open-source software and lack of vendor support
+      - Go-live close to peak season, simultaneous cutover of several interdependent systems and reported pressure on testing time
+      - Refusal by staff to use computers and a lack of hardware
+      - Choice of a cloud ERP that could not handle confectionery products
+    answer: 1
+    explanation: >
+      Hershey switched on SAP R/3, Manugistics and Siebel together in mid-1999, shortly before its Halloween peak, and
+      analyses highlight compressed testing. The systems were commercial on-premise packages, not open-source or cloud,
+      and the problems were implementation decisions rather than lack of hardware.
+  - id: q07
+    lesson: erp-systems
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Sequence the order-to-cash process
+    prompt: Which sequence correctly represents order-to-cash in an ERP?
+    options:
+      - Invoice, sales order, goods issue, delivery, payment
+      - Sales order, delivery, goods issue, invoice, payment receipt
+      - Purchase order, goods receipt, invoice verification, payment
+      - Delivery, sales order, payment receipt, invoice, goods issue
+    answer: 1
+    explanation: >
+      Order-to-cash runs from sales order through delivery and goods issue (which reduces stock and records cost of
+      goods sold) to invoicing and receipt of payment. The third option is procure-to-pay; the others are out of order.
+
+  # ---------- Lesson: crm-scm-and-hris ----------
+  - id: q08
+    lesson: crm-scm-and-hris
+    type: matching
+    bloom: understand
+    difficulty: easy
+    objective: Classify CRM functions by type
+    prompt: Match each CRM function to its CRM type.
+    pairs:
+      - left: Sales force automation and opportunity tracking
+        right: Operational CRM
+      - left: Customer segmentation and churn analysis
+        right: Analytical CRM
+      - left: Shared customer history across branches and channels
+        right: Collaborative CRM
+    explanation: >
+      Operational CRM automates customer-facing work; analytical CRM analyses customer data to improve decisions;
+      collaborative CRM coordinates interactions across channels, branches and partners.
+  - id: q09
+    lesson: crm-scm-and-hris
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the name for amplification of demand variability upstream
+    prompt: What is the name of the phenomenon in which order variability increases as orders move upstream in a supply chain?
+    answers: [bullwhip effect, bullwhip, the bullwhip effect]
+    explanation: >
+      Lee, Padmanabhan and Whang (1997) explained the bullwhip effect through forecasting on received orders, order
+      batching, price fluctuations and shortage gaming. Sharing point-of-sale data is a key remedy.
+  - id: q10
+    lesson: crm-scm-and-hris
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply bullwhip remedies
+    scenario: |
+      Illustrative scenario. A Ghanaian beverage distributor notices that its orders to the bottling plant swing far more
+      than consumer purchases in the shops it supplies. Retailers order in large monthly batches and over-order whenever
+      they hear rumours of shortages.
+    prompt: Which action would most directly reduce the problem?
+    options:
+      - Increase the distributor's own safety stock substantially
+      - Share retailers' sales data upstream and move to smaller, more frequent orders
+      - Raise prices during busy periods
+      - Stop supplying retailers who over-order
+    answer: 1
+    explanation: >
+      Information sharing and smaller, more frequent orders address two causes of bullwhip: forecasting from orders and
+      order batching. Extra safety stock treats the symptom at a cost; price changes encourage forward buying and worsen
+      variability; dropping retailers is not a supply chain solution.
+  - id: q11
+    lesson: crm-scm-and-hris
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Recall SCOR process categories
+    prompt: Which list correctly gives the main SCOR process categories?
+    options:
+      - Plan, Source, Make, Deliver, Return, Enable
+      - Plan, Do, Check, Act
+      - Design, Build, Test, Deploy, Operate
+      - Lead, Opportunity, Quote, Order
+    answer: 0
+    explanation: >
+      SCOR uses Plan, Source, Make, Deliver, Return and Enable to provide a common supply chain vocabulary. The others
+      are the PDCA quality cycle, a software lifecycle and a CRM sales pipeline.
+  - id: q12
+    lesson: crm-scm-and-hris
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Recognise the scope of HRIS
+    prompt: An HRIS supports the whole hire-to-retire cycle, including recruitment, records, time and leave, payroll, performance and exit.
+    answer: true
+    explanation: >
+      Payroll is only one part of HRIS. The hire-to-retire cycle covers the employee's entire relationship with the
+      organisation, and HRIS integrates with ERP through payroll postings and organisational structure.
+  - id: q13
+    lesson: crm-scm-and-hris
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate suite versus best-of-breed
+    scenario: |
+      Illustrative scenario. A mid-sized Accra hotel group runs a cloud ERP for finance and procurement. Marketing wants a
+      specialist guest loyalty platform with richer campaign features than the ERP vendor's CRM module. The IT team has
+      two staff and limited integration experience.
+    prompt: Which is the strongest evaluation?
+    options:
+      - Always choose the specialist platform because functional depth matters most
+      - Always choose the suite module because integration is never worth the effort
+      - Choose the specialist platform only if its marketing value outweighs integration and support costs, ideally using prebuilt connectors
+      - Build a bespoke loyalty system in-house
+    answer: 2
+    explanation: >
+      The decision is a trade-off. A best-of-breed platform may deliver more marketing value, but with a small IT team
+      the cost and risk of integration must be weighed; prebuilt connectors reduce that burden. Absolute rules ignore
+      context, and building in-house is the riskiest option for a team of two.
+  - id: q14
+    lesson: crm-scm-and-hris
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the Nike planning system case
+    prompt: Why is the Nike demand-planning case particularly instructive compared with transactional ERP failures?
+    options:
+      - It shows that planning systems can amplify input and parameter errors across the supply chain
+      - It proves that footwear companies should not use software
+      - It shows that CRM systems cannot forecast demand
+      - It demonstrates that cloud systems are unreliable
+    answer: 0
+    explanation: >
+      Planning systems produce recommendations from forecasts and models; flawed data, parameters or integration can
+      lead to over- and under-production, a variant of the bullwhip problem. The case concerned an on-premise planning
+      package around 2000, not CRM or cloud, and Nike continued its supply chain transformation.
+
+  # ---------- Lesson: enterprise-databases-and-analytics ----------
+  - id: q15
+    lesson: enterprise-databases-and-analytics
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish OLTP and OLAP workloads
+    prompt: Which workload is most characteristic of an analytical (OLAP) data store?
+    options:
+      - Recording a single sale at a till
+      - Updating one customer's address
+      - Aggregating three years of sales by region and product category
+      - Approving a purchase requisition
+    answer: 2
+    explanation: >
+      OLAP workloads aggregate large volumes of historical data. The other options are small transactional reads and
+      writes typical of OLTP databases that run day-to-day operations.
+  - id: q16
+    lesson: enterprise-databases-and-analytics
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Classify master and transaction data
+    prompt: Match each data item to its category.
+    pairs:
+      - left: Supplier name and bank details
+        right: Supplier master data
+      - left: A specific goods receipt on 3 March
+        right: Transaction data
+      - left: Product code, generic name and therapeutic category
+        right: Product master data
+      - left: Employee job title and grade
+        right: Employee master data
+    explanation: >
+      Master data describes long-lived business entities referenced by many transactions; transaction data records
+      time-stamped events. Errors in master data propagate into every transaction that refers to it.
+  - id: q17
+    lesson: enterprise-databases-and-analytics
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for the level of detail of a fact table row
+    prompt: In dimensional modelling, what term describes the level of detail represented by one row of a fact table?
+    answers: [grain, the grain, granularity]
+    explanation: >
+      Kimball and Ross stress declaring the grain before choosing dimensions and facts, for example "one row per product
+      per sales receipt line". An undeclared grain leads to double counting and confused designs.
+  - id: q18
+    lesson: enterprise-databases-and-analytics
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Recognise MDM as governance
+    prompt: Master data management can be fully achieved by installing an MDM software hub, without assigning data owners or stewards.
+    answer: false
+    explanation: >
+      MDM is primarily an organisational programme: owners, stewards, agreed definitions and creation workflows. A hub
+      supports these but cannot by itself prevent duplicates or settle definitional disputes.
+  - id: q19
+    lesson: enterprise-databases-and-analytics
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Diagnose a master data quality problem
+    scenario: |
+      Illustrative scenario. A supermarket's dashboard shows that sales of a popular rice brand have fallen by half, but
+      shelf staff report it is selling as well as ever. Investigation shows a new product code was created for the same
+      item when a new pack design arrived.
+    prompt: What is the root cause, and what is the best remedy?
+    options:
+      - A dashboard software bug; replace the dashboard tool
+      - Duplicate product master data; merge the codes and introduce controlled product creation with a steward
+      - Theft at the branch; install cameras
+      - Wrong ETL schedule; refresh the warehouse more often
+    answer: 1
+    explanation: >
+      Sales are split across two codes for the same item, a classic duplicate master data problem. Merging and
+      controlling creation fixes the cause. The dashboard reports correctly what the data says; refresh frequency and
+      theft do not explain a split between codes.
+  - id: q20
+    lesson: enterprise-databases-and-analytics
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Apply analytics types to business questions
+    prompt: A hospital asks, "Which wards are likely to exceed bed capacity next week?" Which type of analytics does this require?
+    options:
+      - Descriptive
+      - Diagnostic
+      - Predictive
+      - Prescriptive
+    answer: 2
+    explanation: >
+      Forecasting what is likely to happen is predictive analytics. Descriptive reports what happened, diagnostic
+      explains why, and prescriptive recommends an action, such as how to reallocate beds.
+  - id: q21
+    lesson: enterprise-databases-and-analytics
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate data-sharing in the Retail Link example
+    prompt: Which condition is most essential for a retailer's sales data sharing with suppliers, such as Walmart's Retail Link, to deliver value?
+    options:
+      - Suppliers must use the same ERP vendor as the retailer
+      - Product, store and date identifiers must be consistent and governed across partners
+      - Data must be shared only once a year
+      - All analysis must be done by the retailer, not the suppliers
+    answer: 1
+    explanation: >
+      Shared data is useful only if identifiers mean the same thing to every party; that requires governed master data.
+      Common vendors are unnecessary, annual sharing defeats the purpose of replenishment, and the point of sharing is
+      that suppliers can analyse demand themselves.
+
+  # ---------- Module-level extended questions ----------
+  - id: q22
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate an enterprise application portfolio for a Ghanaian hospital group
+    marks: 20
+    case: |
+      Illustrative scenario. Nkabom Health is a hypothetical group of three private hospitals in Accra and Kumasi. Each
+      hospital has its own patient registration and billing system, pharmacy stock is managed in a separate package, HR
+      and payroll are run on spreadsheets, and there is no group-wide reporting. Insurers, including NHIS-accredited
+      claims processes, require accurate itemised bills. The board wants an integrated ERP for finance, procurement,
+      inventory and HR, and asks whether patient-facing functions should come from the same suite or a specialist
+      hospital management system.
+    prompt: >
+      Analyse the group's application and data problems, evaluate the suite versus best-of-breed options for
+      patient-facing functions, and recommend an application and data architecture, including master data governance and
+      analytics priorities.
+    structure:
+      - Diagnosis of application fragmentation and data problems
+      - Role of ERP modules (finance, procurement, inventory, HR) and their integration
+      - Suite versus specialist hospital system evaluation
+      - Master data domains, ownership and governance
+      - Analytics priorities and a justified recommendation
+    rubric:
+      - criterion: Diagnosis
+        marks: 4
+        descriptor: Identifies duplicate patient and product data, lost charges, manual payroll and lack of group reporting.
+      - criterion: ERP and integration
+        marks: 5
+        descriptor: Explains how procure-to-pay, inventory, payroll and finance would integrate and what controls they provide.
+      - criterion: Suite versus best-of-breed
+        marks: 4
+        descriptor: Balanced evaluation of functional depth, integration effort, skills and vendor management.
+      - criterion: Master data and governance
+        marks: 4
+        descriptor: Identifies master data domains (patient, product, supplier, employee) with owners, stewards and quality measures.
+      - criterion: Analytics and recommendation
+        marks: 3
+        descriptor: Prioritises descriptive reporting before predictive work and gives a clear, justified recommendation.
+    modelAnswer: |
+      The diagnosis should note that three separate registration and billing systems give no group view of patients or
+      revenue; the pharmacy package is unlinked to billing, risking lost charges and weak claims; spreadsheet payroll
+      lacks controls; and the absence of shared product and patient identifiers prevents group reporting.
+
+      An ERP would provide integrated financial accounting, procure-to-pay with three-way matching for medical supplies,
+      inventory with batch and expiry tracking, and an HR module whose payroll posts to the ledger and cost centres. These
+      bring control and visibility, but clinical workflows are specialised.
+
+      For patient-facing functions, an ERP suite simplifies integration and vendor management but may lack clinical depth
+      (wards, laboratory orders, clinical records). A specialist hospital management system offers that depth but requires
+      integration for charges, stock consumption and patient billing. A reasoned answer might recommend a specialist
+      hospital system for clinical and patient administration integrated with the ERP through APIs or messaging for
+      charges and stock consumption, provided the vendor offers proven connectors.
+
+      Master data governance should cover patient (master patient index owned by medical records), product and medicine
+      codes (owned by pharmacy and procurement), suppliers (procurement) and employees (HR), each with stewards, creation
+      rules and quality measures such as duplicate rates. Analytics should start with reliable descriptive reporting on
+      revenue, claims and stock, then progress to predictive uses such as demand for medicines or bed occupancy.
+    explanation: >
+      Examiners look for integration reasoning, a balanced option appraisal and explicit master data governance rather
+      than a list of modules.
+  - id: q23
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Critically evaluate best-practice processes in ERP
+    marks: 20
+    prompt: >
+      "Organisations should always adapt their processes to the ERP package rather than customise the package."
+      Critically evaluate this statement using the concepts of best-practice processes, configuration, customisation and
+      competitive advantage.
+    structure:
+      - Define best-practice processes, configuration and customisation
+      - Arguments for adapting processes (cost, upgrades, controls, cloud ERP)
+      - Arguments for selective customisation or extension (differentiation, local requirements)
+      - Use of cases and Davenport's argument
+      - Reasoned conclusion with decision criteria
+    rubric:
+      - criterion: Conceptual accuracy
+        marks: 5
+        descriptor: Correct definitions and distinction between configuration, customisation and extension.
+      - criterion: Arguments for the statement
+        marks: 5
+        descriptor: Explains cost, risk, upgrade and control benefits of adopting standard processes.
+      - criterion: Arguments against
+        marks: 5
+        descriptor: Uses Davenport (1998) and examples of differentiating or locally required processes.
+      - criterion: Conclusion and criteria
+        marks: 5
+        descriptor: Offers clear criteria (commodity versus differentiating, extension outside the core) and a justified position.
+    modelAnswer: |
+      A strong essay defines best-practice processes as vendor-designed standard processes embedded in the package,
+      configuration as using built-in settings, and customisation as modifying or adding code. Extensions built outside the
+      core through APIs or add-ons form a middle path.
+
+      In support of the statement, adopting standard processes lowers implementation cost and risk, simplifies upgrades
+      (especially in cloud ERP with frequent releases), brings proven controls such as three-way matching, and offers an
+      opportunity to abandon inefficient habits. Fit-to-standard approaches, such as those in SAP Activate, embody this
+      view.
+
+      Against the statement, Davenport (1998) warned that enterprise systems can push firms towards generic processes and
+      erode differentiation. Where a process is a genuine source of competitive advantage, or where local legal, tax or
+      industry requirements are not supported, adaptation may be inappropriate. Ghanaian businesses may also need to
+      support mobile money reconciliation or local statutory reporting.
+
+      A balanced conclusion rejects "always": organisations should standardise commodity processes such as payables and
+      payroll, consider differentiation only where it creates real value, and prefer configuration and extensions over
+      modifying the core, with every customisation justified by a business case.
+    explanation: >
+      Examiners reward precise terminology, balanced argument supported by theory and examples, and practical decision
+      criteria in the conclusion.

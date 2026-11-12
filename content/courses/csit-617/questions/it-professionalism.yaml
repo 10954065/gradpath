@@ -1,0 +1,222 @@
+module: it-professionalism
+questions:
+  # ---- professional-identity-and-responsibility ----
+  - id: q01
+    lesson: professional-identity-and-responsibility
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Identify the characteristics traditionally used to define a profession
+    prompt: Which of the following is NOT usually listed as a defining characteristic of a profession?
+    options:
+      - A specialised, theory-based body of knowledge
+      - A code of ethics and a professional association
+      - Guaranteed high salaries for all members
+      - A public-service orientation
+    answer: 2
+    explanation: Accounts of professions stress specialised knowledge, controlled entry, a professional body, a code of ethics, autonomy and a public-service orientation. High pay may be common, but it is a consequence of professional status rather than a defining characteristic, and many professionals are not highly paid.
+  - id: q02
+    lesson: professional-identity-and-responsibility
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish accountability from causal responsibility
+    prompt: A chief information officer can be accountable for a data breach even if they did not personally cause it.
+    answer: true
+    explanation: Accountability attaches to roles. The CIO must explain and justify what happened to the board or regulator because of their position, even if causal responsibility lies with a contractor or a junior engineer. This is why accountability and causal responsibility must be kept distinct.
+  - id: q03
+    lesson: professional-identity-and-responsibility
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Name Nissenbaum's barrier concerning many contributors
+    prompt: Which barrier to accountability, identified by Nissenbaum, describes the difficulty of assigning responsibility when many people contribute to a system?
+    answers: [problem of many hands, many hands, the problem of many hands]
+    explanation: The problem of many hands arises because systems are built and operated by large teams, vendors and libraries, so each contributor can point to others. The other barriers are bugs, the computer as scapegoat and ownership without liability.
+  - id: q04
+    lesson: professional-identity-and-responsibility
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match responsibility concepts to their defining questions
+    prompt: Match each concept to the question it answers.
+    pairs:
+      - left: Role responsibility
+        right: What duties come with this position?
+      - left: Causal responsibility
+        right: Did this person's action contribute to the outcome?
+      - left: Moral responsibility
+        right: Did the person act knowingly and freely, without adequate excuse?
+      - left: Accountability
+        right: Who must explain and justify what happened to a forum?
+      - left: Liability
+        right: Who must compensate or be penalised under law?
+    explanation: Separating these five concepts is essential in case analysis. They frequently come apart, for example a person may be causally involved but not blameworthy, or a company may be legally liable without any individual being morally at fault.
+  - id: q05
+    lesson: professional-identity-and-responsibility
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply the concept of moral responsibility to a software failure
+    scenario: |
+      Illustrative scenario. At a fictional Accra fintech, a junior developer writes interest-calculation code that is reviewed and approved by two seniors and passes all tests in the agreed test plan. A rare rounding defect later overcharges some customers. Investigation shows the test plan was cut by the product director to meet a launch date, despite written objections from the QA lead.
+    prompt: Which assessment of moral responsibility is most defensible?
+    options:
+      - The junior developer bears all the blame because they wrote the faulty line of code
+      - Nobody is to blame because software bugs are unavoidable
+      - Significant moral responsibility lies with the product director who knowingly cut testing despite objections, while the developer is causally but not primarily morally responsible
+      - Only the customers are responsible because they accepted the terms and conditions
+    answer: 2
+    explanation: Moral responsibility requires knowledge and free choice. The director knowingly overrode a warning, so a large share of blame shifts to them. The developer is causally involved but followed reasonable procedures. Treating bugs as nobody's fault is Nissenbaum's "bugs" barrier, and blaming customers ignores the organisation's duties.
+  - id: q06
+    lesson: professional-identity-and-responsibility
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the Therac-25 case using barriers to accountability
+    prompt: In the Therac-25 accidents, the manufacturer initially doubted that its machine could be responsible for patient injuries. Which barrier to accountability does this most directly illustrate?
+    options:
+      - Ownership without liability
+      - Treating bugs as improbable natural hazards rather than investigating them as consequences of design choices
+      - The problem of many hands
+      - The digital divide
+    answer: 1
+    explanation: Doubting that the software could be at fault reflects the tendency to treat bugs as improbable or unavoidable rather than as outcomes of choices about design, testing and safety interlocks. Many hands also played a role, but the specific behaviour described is about dismissing software faults. The digital divide is unrelated.
+  - id: q07
+    lesson: professional-identity-and-responsibility
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate the claim that IT is not a profession because licensing is absent
+    prompt: The absence of compulsory licensing for most IT roles in Ghana means that IT practitioners cannot meaningfully act as professionals.
+    answer: false
+    explanation: Licensing is only one characteristic of a profession. IT has specialised knowledge, professional bodies and codes of ethics, and individuals can adopt professional standards voluntarily. Some specialisms, such as cybersecurity under Act 1038, are moving towards accreditation. IT is better described as a partial or emerging profession.
+
+  # ---- codes-of-conduct-and-competence ----
+  - id: q08
+    lesson: codes-of-conduct-and-competence
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Recall the structure of the ACM Code of Ethics (2018)
+    prompt: Which of the following correctly lists the four parts of the ACM Code of Ethics and Professional Conduct (2018)?
+    options:
+      - General ethical principles; professional responsibilities; professional leadership principles; compliance with the code
+      - Public interest; duty to employer; duty to the profession; duty to colleagues
+      - Safety; honesty; competence; environment
+      - Privacy; security; intellectual property; accessibility
+    answer: 0
+    explanation: The ACM 2018 code has four parts. The second option resembles the BCS Code of Conduct's organising headings, the third mixes IEEE themes, and the fourth lists topics rather than the code's structure.
+  - id: q09
+    lesson: codes-of-conduct-and-competence
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Understand the legal status of professional codes
+    prompt: Breaching the ACM or IEEE code of ethics is, in itself, a criminal offence.
+    answer: false
+    explanation: Professional codes are commitments made by members of voluntary bodies. A breach may lead to disciplinary action or loss of membership, but it is not itself a crime. Many code duties do, however, overlap with legal obligations such as data protection.
+  - id: q10
+    lesson: codes-of-conduct-and-competence
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Define the term for ongoing structured learning
+    prompt: What is the term (or its abbreviation) for the planned, ongoing learning that maintains a professional's competence throughout their career?
+    answers: [continuing professional development, CPD, continuous professional development]
+    explanation: CPD keeps competence current in a fast-changing field. A useful cycle is reflect, plan, act and evaluate, with records kept as evidence.
+  - id: q11
+    lesson: codes-of-conduct-and-competence
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply competence principles to a request beyond one's expertise
+    scenario: |
+      Illustrative scenario. Kojo, a web developer at a fictional Tamale logistics firm, is asked to implement end-to-end encryption for driver location data within a week. He has never implemented cryptographic protocols and suspects a home-made solution could be insecure.
+    prompt: Which response is most consistent with the competence provisions of the ACM and IEEE codes?
+    options:
+      - Accept silently and write his own encryption algorithm to save time
+      - Refuse and take no further part in the project
+      - Disclose his lack of experience, recommend using a well-reviewed library under supervision of someone qualified, and propose a realistic timeline
+      - Ask a friend to do it informally without telling his manager
+    answer: 2
+    explanation: Both codes permit unfamiliar work only after full disclosure of limitations and with appropriate support, and both require honest estimates. Silent acceptance breaches honesty and competence; outright refusal is unhelpful; informal outsourcing conceals the problem and may breach confidentiality.
+  - id: q12
+    lesson: codes-of-conduct-and-competence
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Associate distinctive commitments with the correct code
+    prompt: Match each commitment to the code or framework in which it is most distinctively emphasised.
+    pairs:
+      - left: A dedicated section on the obligations of leaders
+        right: ACM Code (2018)
+      - left: Explicit reference to sustainable development and the environment
+        right: IEEE Code of Ethics
+      - left: Organised around public interest, competence and integrity, duty to relevant authority, and duty to the profession
+        right: BCS Code of Conduct
+      - left: New technologies creating policy vacuums that rules do not yet address
+        right: James Moor's account of computer ethics
+    explanation: The ACM code includes a professional leadership section; the IEEE code explicitly mentions sustainable development; the BCS code uses four duty headings; and Moor's 1985 article introduced the idea of policy vacuums, which explains why codes can never anticipate every technology.
+  - id: q13
+    lesson: codes-of-conduct-and-competence
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the ethical failure in the Volkswagen emissions case
+    prompt: Which analysis best captures why the Volkswagen defeat-device case is significant for professional codes of ethics?
+    options:
+      - It shows that the engineers lacked technical competence
+      - It shows that technical competence without integrity and commitment to public welfare can produce serious harm, and that following instructions does not discharge professional duties
+      - It shows that codes of ethics apply only to managers, not engineers
+      - It shows that emissions testing software is outside the scope of computing ethics
+    answer: 1
+    explanation: The software worked exactly as designed; the failure was one of honesty and public welfare. An engineer was prosecuted, demonstrating that individual practitioners remain responsible. Codes apply to all members, and embedded software is squarely within computing ethics.
+  - id: q14
+    lesson: codes-of-conduct-and-competence
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate the role of disclosure in competence obligations
+    prompt: Under the IEEE code, a member may undertake a task for which they are not fully qualified provided they give full disclosure of their limitations.
+    answer: true
+    explanation: The IEEE code asks members to undertake technological tasks only if qualified by training or experience, or after full disclosure of pertinent limitations. What it prohibits is concealment. Disclosure allows the employer to arrange support or alternatives.
+
+  # ---- module-level ----
+  - id: q15
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate professional responsibility and code obligations in a realistic Ghanaian IT failure
+    prompt: Analyse the case below. Allocate responsibility, accountability and possible liability, identify the relevant ACM and IEEE principles, and recommend actions for the individuals and the organisation.
+    marks: 25
+    case: |
+      Illustrative scenario. HealthLink Ghana, a fictional company, supplies an appointment and laboratory-results system to private clinics in Accra and Kumasi. To win a new contract, the sales director promised delivery of a results-notification feature in four weeks. The development lead, Esi, warned in writing that the integration had not been security-tested. The director instructed the team to release anyway. A contractor configured the cloud storage bucket, which was left publicly readable. For two months, laboratory results, including HIV test results, were accessible to anyone with the link pattern. A journalist discovered the exposure. Staff told clinics that "the system had a glitch".
+    structure:
+      - Brief statement of the ethical and professional issues
+      - Allocation of role, causal and moral responsibility to each party
+      - Accountability and possible liability (educational, not legal advice)
+      - Relevant ACM and IEEE principles, paraphrased and applied
+      - Nissenbaum's barriers evident in the case
+      - Recommendations for individuals and the organisation, with justification
+    rubric:
+      - criterion: Responsibility analysis
+        marks: 7
+        descriptor: Distinguishes role, causal and moral responsibility for the director, Esi, the contractor and leadership, with reasons grounded in knowledge and choice
+      - criterion: Accountability and liability
+        marks: 4
+        descriptor: Identifies who must answer to clinics, patients and regulators, and notes potential legal exposure without giving legal advice
+      - criterion: Application of codes
+        marks: 6
+        descriptor: Accurately paraphrases and applies relevant ACM and IEEE principles such as avoiding harm, privacy, confidentiality, security, honesty and competence
+      - criterion: Barriers to accountability
+        marks: 3
+        descriptor: Recognises the computer-as-scapegoat framing ("glitch") and the many-hands problem
+      - criterion: Recommendations
+        marks: 5
+        descriptor: Proposes concrete, justified actions such as disclosure to affected patients, root-cause review, release governance and CPD
+    modelAnswer: |
+      A strong answer begins by naming the core issues: exposure of highly sensitive health data, a release decision that overrode a security warning, and a misleading explanation to clients. On responsibility, the sales director made a promise without technical consultation and knowingly overrode Esi's written warning, so carries substantial moral responsibility. Esi discharged an important part of her duty by warning in writing, though candidates may discuss whether she should have escalated further. The contractor is causally responsible for the misconfiguration and morally responsible to the extent that a competent practitioner would know to restrict bucket access. Senior leadership is accountable to clinics, patients and the Data Protection Commission because accountability attaches to their roles. Liability may arise under contract and data protection law, but this is educational analysis, not legal advice.
+      Applying the codes, the ACM principles to avoid harm, respect privacy, honour confidentiality, be honest and build robustly secure systems were all breached, as was the IEEE commitment to public welfare, privacy and prompt disclosure of dangers. Describing the incident as a "glitch" is a clear instance of the computer as scapegoat, and the chain from sales to contractor illustrates many hands.
+      Recommendations should include honest notification of clinics and affected patients, reporting as required by law, an independent root-cause review that examines management decisions and not only the contractor, a release gate requiring security sign-off, contractual standards for contractors, and CPD in cloud security. The best answers justify each recommendation by reference to the principles and show awareness of trade-offs, such as reputational cost against the duty of honesty.
+    explanation: Examiners look for precise use of responsibility concepts, accurate paraphrase of the codes, recognition of organisational causes and practical, justified recommendations.

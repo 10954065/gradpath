@@ -1,0 +1,56 @@
+module: intellectual-property
+cards:
+  - lesson: copyright-patents-and-trademarks
+    front: What does the idea–expression distinction mean for software?
+    back: Copyright protects the way a program is expressed (its code and some structure), not its ideas, algorithms or functionality, so independently written code with the same features does not infringe.
+  - lesson: copyright-patents-and-trademarks
+    front: Why is independent creation a defence to copyright but not to patent infringement?
+    back: Copyright is infringed only by copying expression; a patent protects the claimed invention itself, so anyone practising it without a licence infringes, even if they invented it independently.
+  - lesson: copyright-patents-and-trademarks
+    front: When is a trade secret the best protection for an algorithm?
+    back: When the algorithm is valuable, can be kept confidential (it is not exposed by the product), and the owner does not want the disclosure or cost that a patent requires.
+  - lesson: copyright-patents-and-trademarks
+    front: Give one utilitarian argument for and one against software patents.
+    back: For — patents can reward costly R&D and add disclosed knowledge. Against — long, broad patents in a fast, incremental field may block follow-on innovation and impose litigation costs, reducing overall welfare.
+  - lesson: copyright-patents-and-trademarks
+    front: In general terms, what does Ghana's Copyright Act, 2005 (Act 690) do for software?
+    back: It treats computer software as a protected work, grants authors economic and moral rights, provides limitations for certain uses such as research and education, and establishes the Copyright Office.
+  - lesson: copyright-patents-and-trademarks
+    front: What is the "bargain" underlying intellectual property law?
+    back: The state grants creators limited, temporary exclusivity as an incentive, in return for public benefits such as disclosure (patents) and eventual entry of works into the public domain.
+  - lesson: software-licensing-and-open-source
+    front: What triggers the source-code release obligation under the GPL?
+    back: Mainly distributing (conveying) the program or a work based on it to others; purely internal use generally does not trigger it.
+  - lesson: software-licensing-and-open-source
+    front: How does Apache 2.0 differ from MIT?
+    back: Both are permissive, but Apache 2.0 adds an express patent licence, a patent retaliation clause, a NOTICE-file requirement and the duty to mark changed files.
+  - lesson: software-licensing-and-open-source
+    front: Why can proprietary software use an LGPL library?
+    back: The LGPL allows linking from non-LGPL programs provided changes to the library remain LGPL and users can replace or relink the library.
+  - lesson: software-licensing-and-open-source
+    front: What are the four freedoms of free software?
+    back: Freedom to run the program for any purpose, to study and change it (needs source), to redistribute copies, and to distribute modified versions.
+  - lesson: software-licensing-and-open-source
+    front: How do the free software and open-source movements differ in emphasis?
+    back: Free software treats user freedom as an ethical obligation; open source emphasises the practical benefits of collaborative development, such as quality and innovation.
+  - lesson: software-licensing-and-open-source
+    front: What does a software bill of materials (SBOM) help an organisation do?
+    back: Inventory every third-party component and its licence so that obligations, incompatibilities and security vulnerabilities can be managed.
+  - lesson: plagiarism-and-academic-integrity
+    front: Why can you plagiarise a work that has no copyright?
+    back: Plagiarism is a failure of attribution — misrepresenting origin — not a breach of legal rights, so presenting a public-domain text as your own is still plagiarism.
+  - lesson: plagiarism-and-academic-integrity
+    front: What is patchwriting and why is it plagiarism?
+    back: Stitching together a source's phrases with minor word changes; it preserves the original expression and structure, so it misrepresents the writing as your own even if cited.
+  - lesson: plagiarism-and-academic-integrity
+    front: What does "permit, disclose, verify, own" mean for generative AI use?
+    back: Confirm use is allowed by your institution and the assessment; disclose the tool and purpose; check every claim and reference; take full responsibility for the final work.
+  - lesson: plagiarism-and-academic-integrity
+    front: Why do publication-ethics bodies say AI cannot be an author?
+    back: Authorship requires accountability — answering for the work and its integrity — which a tool cannot provide.
+  - lesson: plagiarism-and-academic-integrity
+    front: What lesson does Mata v. Avianca (2023) teach about AI-generated references?
+    back: AI tools can fabricate plausible citations, and the professional who submits them remains responsible; verification is a non-negotiable duty.
+  - lesson: plagiarism-and-academic-integrity
+    front: How does a Kantian analysis condemn plagiarism?
+    back: It involves deception that cannot be universalised without destroying the practice of credit, and it treats original authors merely as means.

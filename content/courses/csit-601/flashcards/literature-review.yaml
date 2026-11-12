@@ -1,0 +1,71 @@
+module: literature-review
+cards:
+  - lesson: purpose-and-searching
+    front: Name four purposes of a literature review.
+    back: Establishing the state of knowledge, justifying the study through gaps, providing a theoretical foundation, and informing methodology (also supporting interpretation of findings).
+  - lesson: purpose-and-searching
+    front: What does "concept-centric" mean in Webster and Watson's guidance?
+    back: Organising the review around ideas and constructs rather than around individual authors, which supports synthesis.
+  - lesson: purpose-and-searching
+    front: How should OR and AND be used in a search string?
+    back: Join synonyms within a concept with OR to broaden; join different concepts with AND to narrow.
+  - lesson: purpose-and-searching
+    front: Why combine Google Scholar with other databases?
+    back: Its coverage and ranking are not transparent; subject databases, open access aggregators such as DOAJ and CORE, and grey literature fill gaps.
+  - lesson: purpose-and-searching
+    front: What should a search log record?
+    back: The source searched, date, exact search string, filters applied, number of results and number retained, so the search can be reported and repeated.
+  - lesson: purpose-and-searching
+    front: What is the difference between backward and forward citation chaining?
+    back: Backward chaining follows a key article's reference list; forward chaining finds later works that cite it.
+  - lesson: evaluating-sources-and-gaps
+    front: What do the letters in the CRAAP test stand for?
+    back: Currency, Relevance, Authority, Accuracy and Purpose.
+  - lesson: evaluating-sources-and-gaps
+    front: Name three warning signs of questionable publishing.
+    back: Very rapid acceptance, unsolicited invitations with high fees, unclear editorial boards or peer review, and visible errors in published work.
+  - lesson: evaluating-sources-and-gaps
+    front: What lesson does the retracted 1998 Wakefield paper teach about sources?
+    back: Prestigious publication does not guarantee reliability; small samples and designs unable to show causation must be appraised critically, and retraction status should be checked.
+  - lesson: evaluating-sources-and-gaps
+    front: List five types of research gap.
+    back: Theoretical, empirical or evidence, methodological, contextual or population, practical, and temporal gaps.
+  - lesson: evaluating-sources-and-gaps
+    front: Why is "limited research has examined…" better than "no research exists…"?
+    back: Absolute claims are rarely true and easily disproved; precise, evidence-aware wording is more defensible.
+  - lesson: evaluating-sources-and-gaps
+    front: What does "fitness for purpose" mean when judging evidence?
+    back: The strongest evidence is the design most appropriate to the question, rigorously executed, rather than a fixed ranking of designs.
+  - lesson: synthesising-literature
+    front: How does synthesis differ from summary?
+    back: Summary reports one source; synthesis integrates multiple sources to identify patterns, contradictions and gaps and to construct a new argument.
+  - lesson: synthesising-literature
+    front: What are the four elements of a synthesis paragraph?
+    back: Claim (point about the literature), Evidence (several sources), Analysis (comparison and evaluation) and Link (implication for the study).
+  - lesson: synthesising-literature
+    front: How does a synthesis matrix reveal patterns?
+    back: With sources as rows and concepts as columns, reading down a column shows how a concept is treated across studies and where evidence is missing.
+  - lesson: synthesising-literature
+    front: Why is thematic organisation usually better than chronological?
+    back: Thematic structure supports comparison across sources and maps onto the conceptual framework; chronological structure tends to become descriptive.
+  - lesson: synthesising-literature
+    front: Why do reporting verbs matter?
+    back: They signal strength of evidence; "suggests" fits tentative findings, while "demonstrates" or "proves" imply strong evidence and can overclaim.
+  - lesson: theoretical-and-conceptual-frameworks
+    front: Theoretical framework versus conceptual framework, in one line?
+    back: The theoretical framework is borrowed theory used as a lens; the conceptual framework is the researcher's own adapted model of constructs and relationships.
+  - lesson: theoretical-and-conceptual-frameworks
+    front: What are the two core constructs of TAM?
+    back: Perceived usefulness and perceived ease of use, which shape attitudes, intention and use (Davis, 1989).
+  - lesson: theoretical-and-conceptual-frameworks
+    front: What are UTAUT's four core determinants and four moderators?
+    back: Performance expectancy, effort expectancy, social influence and facilitating conditions; moderated by gender, age, experience and voluntariness of use.
+  - lesson: theoretical-and-conceptual-frameworks
+    front: Name Rogers' five perceived attributes of innovations.
+    back: Relative advantage, compatibility, complexity, trialability and observability.
+  - lesson: theoretical-and-conceptual-frameworks
+    front: When is TOE more suitable than TAM or UTAUT?
+    back: When the question concerns organisation-level adoption decisions shaped by technological, organisational and environmental factors, such as SME adoption of AI.
+  - lesson: theoretical-and-conceptual-frameworks
+    front: What rule governs the arrows in a quantitative conceptual framework?
+    back: Each arrow represents a hypothesis and must be justified by theory or literature; unjustified arrows weaken the framework.

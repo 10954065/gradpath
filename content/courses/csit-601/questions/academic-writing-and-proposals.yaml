@@ -1,0 +1,600 @@
+module: academic-writing-and-proposals
+questions:
+  # ---------- academic-writing-and-abstracts ----------
+  - id: q01
+    lesson: academic-writing-and-abstracts
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish critical from descriptive writing
+    prompt: Which sentence is the best example of critical rather than descriptive writing?
+    options:
+      - Davis (1989) developed the Technology Acceptance Model, which has two main constructs.
+      - Many studies have used the Technology Acceptance Model in different countries.
+      - TAM's parsimony makes it easy to apply, but it largely omits social influences that may matter where owners decide on behalf of employees.
+      - The Technology Acceptance Model was published in MIS Quarterly.
+    answer: 2
+    explanation: The third option evaluates a strength and a weakness and connects them to a context, which is what critical writing does. The other options report facts about the model without evaluation, interpretation or an answer to the "so what?" question.
+
+  - id: q02
+    lesson: academic-writing-and-abstracts
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Identify the required content of an abstract
+    prompt: An abstract for a completed study should state the main findings rather than saying that "results will be discussed".
+    answer: true
+    explanation: An informative abstract summarises the whole study, including its findings and implications, so that it can stand alone. Promising that results "will be discussed" withholds the most important information. Proposal abstracts are different because no data exist yet; they state expected contributions instead.
+
+  - id: q03
+    lesson: academic-writing-and-abstracts
+    type: matching
+    bloom: recall
+    difficulty: medium
+    objective: Recall the PEAL paragraph structure
+    prompt: Match each element of the PEAL paragraph structure with its function.
+    pairs:
+      - left: Point
+        right: A topic sentence stating the paragraph's claim
+      - left: Evidence
+        right: Data, examples or citations supporting the claim
+      - left: Analysis
+        right: Explanation of what the evidence shows and why it matters
+      - left: Link
+        right: Connection back to the argument or forward to the next paragraph
+    explanation: PEAL makes paragraphs argumentative rather than descriptive. Students most often omit the Analysis step, leaving evidence uninterpreted, and the Link step, which makes the argument hang together across paragraphs.
+
+  - id: q04
+    lesson: academic-writing-and-abstracts
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply hedging proportionate to evidence
+    scenario: |
+      Illustrative scenario. A student's cross-sectional survey of 300 retailers found a significant positive correlation between perceived usefulness and intention to accept digital payments. The draft conclusion reads: "This study proves that perceived usefulness causes retailers to adopt digital payments."
+    prompt: Which revision is most appropriate?
+    options:
+      - "This study conclusively demonstrates that usefulness causes adoption."
+      - "The findings suggest that perceived usefulness is positively associated with retailers' intention to accept digital payments."
+      - "It might perhaps be possible that usefulness could be somewhat related to something."
+      - "Usefulness is the only factor that matters for digital payments."
+    answer: 1
+    explanation: Correlational cross-sectional data support claims of association, not proof of causation, and intention is not the same as adoption. The second option is proportionate. The first over-claims, the third is so hedged that the contribution disappears, and the fourth over-generalises far beyond the evidence.
+
+  - id: q05
+    lesson: academic-writing-and-abstracts
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the name of Swales's model of research introductions
+    prompt: What is the name of Swales's model describing the moves of establishing a territory, establishing a niche and occupying the niche? (Give the acronym or full name.)
+    answers: [CARS, Create a Research Space, CARS model]
+    explanation: The Create a Research Space (CARS) model, explained in Swales and Feak's Academic Writing for Graduate Students, describes how introductions and the opening of abstracts justify a study by showing the area's importance, identifying a gap and stating how the study fills it.
+
+  - id: q06
+    lesson: academic-writing-and-abstracts
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the quality of an abstract
+    prompt: Which weakness would most seriously undermine an abstract for a completed survey study?
+    options:
+      - It uses the past tense to describe the method
+      - It omits the sample, design and principal findings
+      - It defines the abbreviation SME on first use
+      - It is written as a single paragraph
+    answer: 1
+    explanation: Without design, sample and findings, a reader cannot judge what was done or what was found, so the abstract fails its central purpose. Past tense is correct for completed work, defining abbreviations is good practice, and single-paragraph abstracts are common and acceptable unless a structured format is required.
+
+  # ---------- proposal-structure-introduction-and-literature ----------
+  - id: q07
+    lesson: proposal-structure-introduction-and-literature
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain the funnel structure of a background section
+    prompt: What is the purpose of the funnel structure in the background to a study?
+    options:
+      - To present every available fact about the topic
+      - To move logically from broad context to the specific problem the study addresses
+      - To summarise the methodology before the literature review
+      - To list the researcher's personal reasons for choosing the topic
+    answer: 1
+    explanation: The funnel narrows from global or regional context to the national setting and then to the specific phenomenon and problem. Covering everything dilutes the argument, methodology belongs in its own chapter, and personal motivation is at most a minor element.
+
+  - id: q08
+    lesson: proposal-structure-introduction-and-literature
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Recognise the weakness of an author-centred literature review
+    prompt: A literature review in which each paragraph summarises one study in turn ("Author (Year) found...") is the recommended approach for a postgraduate dissertation.
+    answer: false
+    explanation: This "author parade" reports without synthesising. Webster and Watson (2002) recommended a concept-centric approach, grouping studies by concept or relationship so that agreements, contradictions and gaps become visible.
+
+  - id: q09
+    lesson: proposal-structure-introduction-and-literature
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse alignment between proposal elements
+    scenario: |
+      Illustrative scenario. A proposal's objectives concern the effects of perceived usefulness, cost and trust on digital payment intention. Its conceptual framework also includes "government policy" and "network quality", and the planned analysis includes only descriptive statistics.
+    prompt: What is the main problem with this proposal?
+    options:
+      - The objectives use measurable verbs
+      - The framework and analysis are misaligned with the objectives
+      - The study focuses on Ghanaian retailers
+      - The proposal uses a conceptual framework
+    answer: 1
+    explanation: The framework contains constructs not reflected in the objectives, and descriptive statistics cannot test the effects the objectives describe, so the alignment chain is broken. Measurable verbs, a Ghanaian focus and a conceptual framework are all appropriate.
+
+  - id: q10
+    lesson: proposal-structure-introduction-and-literature
+    type: matching
+    bloom: apply
+    difficulty: medium
+    objective: Match theories to appropriate research problems
+    prompt: Match each research focus with the theory that best fits it.
+    pairs:
+      - left: Organisational adoption of AI by SMEs
+        right: Technology–organisation–environment (TOE) framework
+      - left: Individual employees' intention to use a new system
+        right: UTAUT
+      - left: Spread of an innovation through a community over time
+        right: Diffusion of Innovations
+      - left: Success of an implemented information system in terms of quality, use and net benefits
+        right: DeLone and McLean IS success model
+    explanation: Theory should match the unit of analysis and the phenomenon. TOE addresses firm-level adoption contexts, UTAUT individual acceptance, Diffusion of Innovations adoption over time and innovation attributes, and DeLone and McLean the success of systems after implementation.
+
+  - id: q11
+    lesson: proposal-structure-introduction-and-literature
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the tool for organising a concept-centric review
+    prompt: What tool, recommended by Webster and Watson (2002), maps studies against the concepts they address to support synthesis?
+    answers: [concept matrix, a concept matrix, synthesis matrix]
+    explanation: A concept matrix (similar to a synthesis matrix) lists studies as rows and concepts, theories, methods or contexts as columns, revealing patterns and gaps across the literature.
+
+  - id: q12
+    lesson: proposal-structure-introduction-and-literature
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a stated research gap
+    prompt: A student justifies a study only by stating, "No study on this topic has been conducted in Ghana." What is the best evaluation of this justification?
+    options:
+      - Fully sufficient, because any new context is a contribution
+      - Insufficient on its own; the student should argue why Ghanaian conditions might change the relationships being studied
+      - Irrelevant, because context never matters in research
+      - Acceptable only if the student uses qualitative methods
+    answer: 1
+    explanation: A contextual gap is persuasive when the student explains why context plausibly matters, for example different infrastructure, regulation, culture or market structure. Context does matter, and the strength of the argument does not depend on the method chosen.
+
+  # ---------- methodology-results-discussion-and-conclusions ----------
+  - id: q13
+    lesson: methodology-results-discussion-and-conclusions
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish results from discussion
+    prompt: Which statement belongs in a discussion chapter rather than a results chapter?
+    options:
+      - Perceived cost had a significant negative effect on intention (β = −0.28, p = .002).
+      - Table 4.3 presents the respondents' demographic profile.
+      - The non-significant effect of trust contrasts with consumer studies and may reflect respondents' prior experience with mobile money.
+      - Cronbach's alpha for all scales exceeded 0.70.
+    answer: 2
+    explanation: Comparing a finding with prior studies and offering an explanation is interpretation, which belongs in the discussion. The other statements report results, descriptions or measurement quality, which belong in the results chapter.
+
+  - id: q14
+    lesson: methodology-results-discussion-and-conclusions
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Recognise the correct tense for a dissertation methodology
+    prompt: In the final dissertation, the methodology chapter should normally be written in the past tense, whereas in the proposal it is written in the future tense.
+    answer: true
+    explanation: Proposals describe planned work ("data will be collected"), while dissertations report completed work ("data were collected"). Leaving future-tense passages in a dissertation is a common sign of an unrevised proposal.
+
+  - id: q15
+    lesson: methodology-results-discussion-and-conclusions
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Write a recommendation grounded in findings
+    scenario: |
+      Illustrative scenario. A study found that perceived transaction cost was the second strongest predictor of retailers' intention to accept digital payments, and that trust was not significant.
+    prompt: Which recommendation is best grounded in these findings?
+    options:
+      - The government should support all businesses in Ghana.
+      - Payment providers should review and clearly communicate merchant fee structures, given the negative association between perceived cost and intention.
+      - Providers should invest mainly in trust-building campaigns.
+      - Retailers should stop using cash immediately.
+    answer: 1
+    explanation: A good recommendation names a stakeholder, a specific action and the finding that justifies it. The first is vague, the third contradicts the non-significant trust result, and the fourth is unrealistic and not derived from the evidence.
+
+  - id: q16
+    lesson: methodology-results-discussion-and-conclusions
+    type: matching
+    bloom: recall
+    difficulty: medium
+    objective: Match chapters to their primary purposes
+    prompt: Match each dissertation chapter with its primary purpose.
+    pairs:
+      - left: Methodology
+        right: Describe and justify how the study was conducted
+      - left: Results
+        right: Report what the data show
+      - left: Discussion
+        right: Interpret findings in relation to literature and theory
+      - left: Conclusion
+        right: Answer each research question and state the contribution
+    explanation: Keeping these purposes distinct prevents common faults such as interpretation in the results, a discussion that merely repeats results, or new literature introduced in the conclusion.
+
+  - id: q17
+    lesson: methodology-results-discussion-and-conclusions
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the qualitative reporting checklist
+    prompt: What is the acronym of the 32-item checklist for reporting interview and focus group studies published by Tong, Sainsbury and Craig (2007)?
+    answers: [COREQ]
+    explanation: COREQ (Consolidated Criteria for Reporting Qualitative Research) covers the research team and reflexivity, study design, and analysis and findings. It is a useful self-audit tool for transparent qualitative reporting.
+
+  - id: q18
+    lesson: methodology-results-discussion-and-conclusions
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a methodology justification
+    scenario: |
+      Illustrative scenario. A methodology chapter states: "A questionnaire was used because questionnaires are commonly used in research. Data were analysed using SPSS."
+    prompt: What is the most important improvement needed?
+    options:
+      - Replace SPSS with different software
+      - Justify the survey strategy in relation to the research questions and name the analysis technique for each objective
+      - Add a longer textbook explanation of what a questionnaire is
+      - Remove the methodology chapter and describe methods in the introduction
+    answer: 1
+    explanation: Methodology must justify choices by linking them to the questions and context, and must specify techniques (for example regression for objective 1, thematic analysis for objective 3), not merely software. Changing software or adding textbook definitions does not address the missing justification.
+
+  # ---------- apa7-referencing-and-plagiarism ----------
+  - id: q19
+    lesson: apa7-referencing-and-plagiarism
+    type: mcq
+    bloom: apply
+    difficulty: easy
+    objective: Format an APA 7 parenthetical citation for two authors
+    prompt: Which is the correct APA 7 parenthetical citation for a 2021 work by two authors named Asante and Boateng?
+    options:
+      - (Asante and Boateng, 2021)
+      - (Asante & Boateng, 2021)
+      - (Asante et al., 2021)
+      - (Asante, Boateng 2021)
+    answer: 1
+    explanation: APA 7 uses an ampersand inside parentheses and "and" in narrative citations. "Et al." is used for three or more authors, and a comma is required between author and year.
+
+  - id: q20
+    lesson: apa7-referencing-and-plagiarism
+    type: true_false
+    bloom: recall
+    difficulty: easy
+    objective: Recall the APA 7 rule for three or more authors
+    prompt: In APA 7, a work by three or more authors is cited with the first author's surname followed by "et al." from the very first in-text citation.
+    answer: true
+    explanation: This is a change from APA 6, which listed up to five authors on first citation. In the reference list, APA 7 lists up to 20 authors.
+
+  - id: q21
+    lesson: apa7-referencing-and-plagiarism
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Identify errors in an APA 7 journal reference
+    scenario: |
+      A student writes: Davis, F. D. (1989). Perceived Usefulness, Perceived Ease Of Use, And User Acceptance Of Information Technology. MIS Quarterly, 13(3), 319-340.
+    prompt: Which set of corrections brings this reference into line with APA 7?
+    options:
+      - Add the publisher's city and put the article title in italics
+      - Put the article title in sentence case, italicise the journal title and volume, use an en dash in the page range and add the DOI as https://doi.org/...
+      - Move the year to the end and put the author's full first name
+      - Put the journal title in quotation marks and remove the issue number
+    answer: 1
+    explanation: APA 7 article titles use sentence case and are not italicised; the journal title and volume are italicised; page ranges use an en dash; and a DOI is given as a URL where available. Publisher locations, quotation marks around titles and full first names are not APA 7 conventions.
+
+  - id: q22
+    lesson: apa7-referencing-and-plagiarism
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish ways of using sources
+    prompt: Match each description with the correct term.
+    pairs:
+      - left: Restating an idea in your own words and structure, with a citation
+        right: Paraphrase
+      - left: Swapping synonyms while keeping the source's sentence structure
+        right: Patchwriting
+      - left: Reproducing exact words in quotation marks with a page number
+        right: Direct quotation
+      - left: Condensing the main point of a whole work, with a citation
+        right: Summary
+      - left: Presenting another's work as your own without acknowledgement
+        right: Plagiarism
+    explanation: Paraphrase, quotation and summary are legitimate when cited. Patchwriting is a form of plagiarism even when cited, because it reproduces the source's expression with superficial changes.
+
+  - id: q23
+    lesson: apa7-referencing-and-plagiarism
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the name of a free open-source reference manager
+    prompt: Name the free, open-source reference manager discussed in this lesson that uses a browser connector and word processor plugins.
+    answers: [Zotero]
+    explanation: Zotero captures source details through its browser connector, stores them in collections and inserts formatted citations through plugins for Word, LibreOffice and Google Docs. Its output must still be checked, because captured metadata can be wrong.
+
+  - id: q24
+    lesson: apa7-referencing-and-plagiarism
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the meaning of a similarity report
+    prompt: A student's Turnitin similarity report shows 8%. Which conclusion is most defensible?
+    options:
+      - The work is certainly free of plagiarism
+      - The work definitely contains 8% plagiarism
+      - The report shows matching text that must be reviewed; a low figure does not rule out patchwriting, translated copying or uncredited ideas
+      - Similarity reports are irrelevant to academic integrity
+    answer: 2
+    explanation: Similarity software detects text matches, not plagiarism. Correctly quoted material produces matches, while paraphrased idea theft may not. The report is evidence to review, not a verdict, so neither of the first two conclusions follows, and the reports are still useful.
+
+  # ---------- dissertation-planning-and-defence ----------
+  - id: q25
+    lesson: dissertation-planning-and-defence
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain the critical path
+    prompt: What is the critical path in a dissertation project plan?
+    options:
+      - The list of chapters in the dissertation
+      - The sequence of dependent tasks that determines the minimum project duration
+      - The supervisor's preferred order of reading
+      - The tasks that can be done in parallel at any time
+    answer: 1
+    explanation: Any delay to a critical-path task, such as ethics approval or data collection, delays completion. Parallel tasks are by definition not on the critical path, and the chapter list is a document structure, not a schedule.
+
+  - id: q26
+    lesson: dissertation-planning-and-defence
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Recognise the student's responsibility in supervision
+    prompt: The supervisor is ultimately responsible for the decisions and deadlines in a student's dissertation.
+    answer: false
+    explanation: The supervisor advises and reviews; the student owns the research, its decisions and its time management. Effective students prepare for meetings, submit drafts regularly and communicate problems early.
+
+  - id: q27
+    lesson: dissertation-planning-and-defence
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Identify a planning dependency error
+    scenario: |
+      Illustrative scenario. A student's Gantt chart schedules questionnaire distribution in week 3 and submission of the ethics application in week 6.
+    prompt: What is the main problem with this plan?
+    options:
+      - The literature review is not scheduled in parallel
+      - Data collection is scheduled before ethical approval, breaking a critical dependency
+      - The plan uses weeks rather than months
+      - Questionnaires should always be distributed in week 1
+    answer: 1
+    explanation: Data must not be collected before the required approvals are in place, so the ethics application and approval must precede distribution, with buffer time. The other options are not the central issue.
+
+  - id: q28
+    lesson: dissertation-planning-and-defence
+    type: matching
+    bloom: recall
+    difficulty: medium
+    objective: Match planning tools to their purposes
+    prompt: Match each planning tool with its purpose.
+    pairs:
+      - left: Work breakdown structure
+        right: Decomposes the project into manageable tasks
+      - left: Gantt chart
+        right: Shows tasks against time with durations and overlaps
+      - left: Risk register
+        right: Records risks with likelihood, impact and mitigation
+      - left: Milestone
+        right: Marks a significant checkpoint such as a full draft
+    explanation: These tools work together; the WBS lists the tasks, the Gantt chart schedules them, milestones mark progress and the risk register anticipates what could derail the plan.
+
+  - id: q29
+    lesson: dissertation-planning-and-defence
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the research communication competition
+    prompt: What is the name of the competition, developed at the University of Queensland, in which research students present their work in three minutes with one slide?
+    answers: [Three Minute Thesis, 3MT]
+    explanation: The Three Minute Thesis (3MT) shows that research can be distilled to its problem, approach, key finding and significance; preparing such a summary is excellent defence practice.
+
+  - id: q30
+    lesson: dissertation-planning-and-defence
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate responses to an examiner's question
+    scenario: |
+      Illustrative scenario. During a defence, an examiner asks a student who surveyed students in one university: "How far can your findings be generalised to students in Ghana as a whole?"
+    prompt: Which response is most effective?
+    options:
+      - "My sample was large, so the findings apply to all Ghanaian students."
+      - "I don't think that question is relevant to my study."
+      - "Stratifying by faculty improved coverage within the institution, but because the study used one university, generalisation beyond it is limited; I discuss this in Chapter 5 and suggest a multi-institution study."
+      - "Generalisation is not important in research."
+    answer: 2
+    explanation: The best answer is honest, refers to specific design features and to where the limitation is discussed, and proposes a way forward. Over-claiming from sample size, dismissing the question or denying the value of generalisation all suggest weak critical understanding.
+
+  # ---------- worked-proposal-examples ----------
+  - id: q31
+    lesson: worked-proposal-examples
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Calculate a sample size with Cochran's formula
+    prompt: Using Cochran's formula with 95% confidence (z = 1.96), p = 0.5 and a 5% margin of error, what is the initial sample size before any finite population correction?
+    options:
+      - 196
+      - 385
+      - 500
+      - 1,000
+    answer: 1
+    explanation: n0 = 1.96² × 0.5 × 0.5 / 0.05² = 3.8416 × 0.25 / 0.0025 = 384.16, rounded up to 385. The other values do not follow from the formula; a finite population correction would reduce the figure when the population is known and relatively small.
+
+  - id: q32
+    lesson: worked-proposal-examples
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match worked proposals to their theoretical frameworks
+    prompt: Match each worked proposal topic with the theory used in its framework.
+    pairs:
+      - left: AI adoption and SME operational efficiency
+        right: Technology–organisation–environment framework
+      - left: Digital payment acceptance among retailers
+        right: Extended UTAUT
+      - left: Cybersecurity awareness among students
+        right: Protection Motivation Theory
+      - left: E-commerce adoption among small businesses
+        right: Diffusion of Innovations as a sensitising framework
+    explanation: Each theory fits the unit of analysis and question, namely firm-level adoption (TOE), individual acceptance (UTAUT), protective behaviour (PMT) and an exploratory account of adoption processes (Diffusion of Innovations used to inform, not test).
+
+  - id: q33
+    lesson: worked-proposal-examples
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Recognise when hypotheses are appropriate
+    prompt: The exploratory qualitative proposal on e-commerce adoption should include formal hypotheses to be tested.
+    answer: false
+    explanation: Hypotheses belong to deductive, usually quantitative designs. An inductive interview study uses research questions and may use theory as a sensitising framework while allowing new themes to emerge.
+
+  - id: q34
+    lesson: worked-proposal-examples
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse a sampling choice when no frame exists
+    scenario: |
+      Illustrative scenario. A student wants to survey traders in a large market in Kumasi about digital payment acceptance. No list of traders exists, but the market is divided into clearly defined sections.
+    prompt: Which sampling approach best fits this situation?
+    options:
+      - Simple random sampling from a complete list of traders
+      - Multi-stage cluster sampling: randomly select sections, then select stalls systematically within them, acknowledging the design effect
+      - Snowball sampling starting with the student's relatives
+      - Interviewing whichever traders are least busy
+    answer: 1
+    explanation: Without a frame, simple random sampling is impossible. Randomly selecting sections and then systematically selecting stalls keeps a probability element while being practical; the design effect of clustering should be acknowledged. Snowball and convenience approaches introduce strong selection bias for a question about market-wide acceptance.
+
+  - id: q35
+    lesson: worked-proposal-examples
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the mixed-methods design in the healthcare proposal
+    prompt: What is the name of the mixed-methods design used in the healthcare proposal, in which a survey is followed by interviews that explain its results?
+    answers: [explanatory sequential, explanatory sequential design, explanatory sequential mixed methods]
+    explanation: In an explanatory sequential design, the quantitative phase comes first and the qualitative phase explains significant or unexpected results; integration, for example through a joint display, is essential.
+
+  - id: q36
+    lesson: worked-proposal-examples
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a causal claim from a cross-sectional design
+    prompt: The AI-in-SMEs proposal uses a cross-sectional survey. Which conclusion would its design best support?
+    options:
+      - AI adoption causes higher operational efficiency in Ghanaian SMEs
+      - AI adoption is positively associated with perceived operational efficiency among the SMEs surveyed
+      - All Ghanaian SMEs should adopt AI immediately
+      - Operational efficiency causes AI adoption
+    answer: 1
+    explanation: A single-time-point survey can establish association within the sample but not the direction of causation, and perceived efficiency is not an objective measure. Causal claims in either direction and sweeping prescriptions go beyond the evidence.
+
+  # ---------- module-level extended questions ----------
+  - id: q37
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the alignment and quality of a draft research proposal
+    marks: 20
+    prompt: Critically evaluate Kwame's draft proposal and recommend specific revisions to its structure, alignment, methodology, referencing and ethics.
+    case: |
+      Illustrative scenario. Kwame's draft proposal is titled "E-commerce in Ghana". His background lists statistics copied from blog posts without original sources. His problem statement says, "E-commerce is important and many businesses are not using it." His objectives are to "look at e-commerce" and "find out what businesses think". His conceptual framework, drawn from UTAUT, includes performance expectancy, effort expectancy, social influence and facilitating conditions. His methodology states that "a questionnaire and interviews will be used and the data will be analysed with SPSS", with no sampling details. He plans to interview friends who run online shops. His reference list mixes Harvard and APA styles, and several in-text citations do not appear in it. Ethics is covered in one sentence: "Ethics will be observed."
+    structure:
+      - Overview of the proposal's overall coherence
+      - Title, background and problem statement weaknesses
+      - Objectives, questions and alignment with the UTAUT framework
+      - Methodology, design, sampling and analysis gaps
+      - Referencing and integrity issues
+      - Ethics gaps
+      - Prioritised recommendations
+    rubric:
+      - criterion: Introduction and problem analysis
+        marks: 5
+        descriptor: Identifies the vague title, unverified statistics, lack of a knowledge gap and consequences, and proposes a focused title and evidenced problem statement.
+      - criterion: Alignment and framework
+        marks: 5
+        descriptor: Explains that objectives are not measurable and do not map to the UTAUT constructs, and proposes aligned objectives, questions and hypotheses or a justified qualitative alternative.
+      - criterion: Methodology and sampling
+        marks: 5
+        descriptor: Identifies missing paradigm, design, population, frame, sample size and analysis per objective; recognises convenience and researcher bias in interviewing friends; proposes a coherent design such as a survey or a justified mixed-methods approach.
+      - criterion: Referencing and ethics
+        marks: 5
+        descriptor: Identifies mixed styles, missing references and reliance on blogs; recommends consistent APA 7 and primary sources; replaces the generic ethics sentence with specific consent, confidentiality, data protection (Act 843 principles) and institutional approval measures.
+    modelAnswer: |
+      A strong answer argues that Kwame's draft lacks the alignment that makes a proposal defensible. The title "E-commerce in Ghana" names no variables, population or setting; a revision might be "Determinants of e-commerce adoption intention among small retail businesses in Accra". The background relies on blog statistics, which should be replaced with verified primary sources such as official reports and peer-reviewed studies. The problem statement asserts importance without evidence, consequences or a knowledge gap; it should state the practical problem, the evidence for it and what research has not established.
+
+      The objectives "look at" and "find out" are not measurable and bear no relation to the UTAUT framework. If Kwame keeps UTAUT, his objectives should examine the effects of each construct on adoption intention, with matching questions and hypotheses. Alternatively, if his real interest is how owners experience e-commerce, a qualitative design with research questions and theory used as a sensitising framework would be more coherent; mixing the two without justification creates confusion.
+
+      The methodology names tools but not a paradigm, design, population, sampling frame, sample size or analysis technique for each objective; "SPSS" is software, not analysis. Interviewing friends introduces convenience and researcher bias; purposive or probability sampling with a stated frame is needed.
+
+      Mixed Harvard and APA styles and citations missing from the reference list raise integrity concerns; Kwame should adopt APA 7 consistently and use Zotero to manage sources. "Ethics will be observed" must be replaced with specific measures: information sheets, informed consent, confidentiality and pseudonyms, secure data handling consistent with Act 843 principles, and institutional ethical approval before data collection. Recommendations should be prioritised: refocus the problem, realign objectives with the framework, specify the design, then fix referencing and ethics.
+    explanation: Examiners reward answers that diagnose specific weaknesses, explain why they matter, and propose concrete, aligned revisions rather than generic criticism.
+
+  - id: q38
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the relationship between methodology, findings and recommendations
+    marks: 15
+    prompt: '"A dissertation is only as credible as the chain linking its research questions to its recommendations." Discuss this statement, explaining how the methodology, results, discussion and conclusion chapters each contribute to that chain, with examples from IT-for-business research in Ghana.'
+    structure:
+      - Introduction explaining the idea of an alignment chain
+      - Methodology as justification and transparency
+      - Results as accurate, complete reporting
+      - Discussion as interpretation against literature and theory
+      - Conclusions and recommendations derived from findings
+      - Example of a broken and a strong chain
+      - Conclusion evaluating the statement
+    rubric:
+      - criterion: Understanding of chapter purposes
+        marks: 4
+        descriptor: Accurately explains the distinct roles of methodology, results, discussion and conclusion chapters.
+      - criterion: Critical argument about alignment
+        marks: 5
+        descriptor: Evaluates how breaks in the chain (such as causal claims from correlational data or ungrounded recommendations) undermine credibility, and considers whether alignment alone is sufficient.
+      - criterion: Application to Ghanaian IT-for-business examples
+        marks: 4
+        descriptor: Uses realistic examples such as digital payments, AI in SMEs or EHR adoption to illustrate strong and weak chains.
+      - criterion: Structure and expression
+        marks: 2
+        descriptor: Logical structure, academic tone and a reasoned conclusion.
+    modelAnswer: |
+      A strong essay explains that credibility depends on a traceable chain from research questions through methodology, results and discussion to conclusions and recommendations. The methodology contributes by justifying each design decision in relation to the questions and reporting enough detail for replication or audit; a survey of retailers, for example, should justify its cluster sampling where no frame exists and map each objective to an analysis technique. The results chapter contributes accurate, complete reporting, including effect sizes and non-significant findings, without interpretation creeping in.
+
+      The discussion links findings to literature and theory: a non-significant trust effect among experienced mobile money users might be compared with consumer studies and explained cautiously. Conclusions answer each research question and state the contribution, and recommendations follow directly, such as advising payment providers to review fee structures when perceived cost predicts intention.
+
+      The essay should illustrate a broken chain, for instance a cross-sectional study of AI in SMEs that concludes AI "causes" efficiency and recommends national policy changes, and contrast it with a well-aligned study whose claims are proportionate. Critical answers note that alignment is necessary but not sufficient: a perfectly aligned study can still be weak if measures lack validity, samples are biased or ethics are neglected. The conclusion broadly supports the statement while emphasising that the strength of each link, not only its presence, determines credibility.
+    explanation: Examiners look for clear understanding of each chapter's role, critical evaluation of alignment and its limits, and realistic, well-chosen examples.

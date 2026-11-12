@@ -1,0 +1,56 @@
+module: e-commerce-technology
+cards:
+  - lesson: storefronts-catalogues-and-carts
+    front: Name the five layers of an e-commerce storefront architecture.
+    back: Presentation, application (commerce logic), data, integration (APIs to payments, couriers, ERP) and infrastructure (hosting, CDN, TLS, backups).
+  - lesson: storefronts-catalogues-and-carts
+    front: How do a product, a variant and a SKU relate?
+    back: A product is the general item; variants are attribute combinations such as size and colour; each variant has its own SKU, price and stock level.
+  - lesson: storefronts-catalogues-and-carts
+    front: Why must a shopping cart be designed to maintain state?
+    back: HTTP is stateless, so carts persist selections via sessions or the database; persistent carts let shoppers return later or switch devices.
+  - lesson: storefronts-catalogues-and-carts
+    front: List five common causes of cart abandonment.
+    back: Unexpected costs shown late, forced account creation, long forms, missing preferred payment methods (such as mobile money) and slow pages or trust concerns.
+  - lesson: storefronts-catalogues-and-carts
+    front: What are the five principles of the checkout friction audit?
+    back: Transparency, minimal effort, choice, reassurance and recovery.
+  - lesson: storefronts-catalogues-and-carts
+    front: Why is a SaaS platform often the best storefront choice for SMEs?
+    back: It offers fast launch, managed hosting, security and updates and payment plug-ins, at predictable cost, without in-house developers; the trade-off is fees and less flexibility.
+  - lesson: order-and-customer-management
+    front: List the main stages of a B2C order lifecycle.
+    back: Placed/pending payment, confirmed, risk check, allocated, picked and packed, dispatched, delivered, completed, with branches for cancellation, failed delivery and returns.
+  - lesson: order-and-customer-management
+    front: What two common SME problems does a central OMS solve?
+    back: Overselling (stock not synchronised across channels) and lost orders (orders taken in chats or calls never recorded).
+  - lesson: order-and-customer-management
+    front: Distinguish operational, analytical and collaborative CRM.
+    back: Operational automates sales, marketing and service; analytical analyses customer data for segmentation and prediction; collaborative shares customer information across channels and departments.
+  - lesson: order-and-customer-management
+    front: What does RFM stand for and what is it used for?
+    back: Recency, Frequency, Monetary value; it scores customers to create segments such as champions and at-risk customers for targeted actions.
+  - lesson: order-and-customer-management
+    front: What are the key limitations of RFM?
+    back: It is backward-looking, ignores margins and product mix, and depends on accurate order data.
+  - lesson: order-and-customer-management
+    front: Which Ghanaian law governs the processing of customer personal data in CRM?
+    back: The Data Protection Act, 2012 (Act 843), which also established the Data Protection Commission.
+  - lesson: digital-marketing-and-analytics
+    front: Give the formulas for conversion rate, CAC and AOV.
+    back: Conversion rate = purchases ÷ visitors × 100; CAC = acquisition cost ÷ new customers; AOV = revenue ÷ orders.
+  - lesson: digital-marketing-and-analytics
+    front: Give a simple formula for customer lifetime value.
+    back: CLV = AOV × purchases per year × gross margin % × expected lifespan in years.
+  - lesson: digital-marketing-and-analytics
+    front: What is the break-even ROAS for a product with a 40 per cent gross margin?
+    back: 2.5, because 1 ÷ 0.40 = 2.5; below that, each cedi of ad spend returns less than a cedi of gross margin.
+  - lesson: digital-marketing-and-analytics
+    front: Why does last-click attribution bias channel evaluation?
+    back: It gives all credit to the final touchpoint, overvaluing search and retargeting and undervaluing awareness channels such as social ads and content.
+  - lesson: digital-marketing-and-analytics
+    front: What does the owned, paid and earned media framework distinguish?
+    back: Channels the firm controls (website, email list), channels it pays for (ads) and exposure it earns from others (reviews, shares, press).
+  - lesson: digital-marketing-and-analytics
+    front: How can SMEs measure sales that close in WhatsApp chats?
+    back: Use campaign-specific discount codes or WhatsApp links, ask customers how they heard of the business, and record the order source in the order system.

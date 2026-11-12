@@ -1,0 +1,567 @@
+module: data-analysis
+questions:
+  # ---------- data-preparation-and-descriptive-statistics ----------
+  - id: q01
+    lesson: data-preparation-and-descriptive-statistics
+    type: short_answer
+    bloom: apply
+    difficulty: easy
+    objective: Calculate a median for an even-sized dataset
+    prompt: "What is the median of the values 9, 11, 12, 12, 13, 14, 15, 16, 18, 20?"
+    answers: ["13.5"]
+    explanation: "With ten ordered values, the median is the average of the 5th and 6th values, (13 + 14) / 2 = 13.5. Forgetting to order the data first, or picking only one middle value, are common errors."
+
+  - id: q02
+    lesson: data-preparation-and-descriptive-statistics
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Calculate a sample standard deviation
+    prompt: For a sample of 10 values, the sum of squared deviations from the mean is 100. What is the sample standard deviation?
+    options:
+      - "10.00"
+      - "3.33"
+      - "3.16"
+      - "11.11"
+    answer: 1
+    explanation: "Sample variance = 100 / (n − 1) = 100 / 9 = 11.11, and SD = √11.11 = 3.33. 11.11 is the variance, not the SD; 3.16 results from dividing by n instead of n − 1; 10.00 is the square root of the sum itself."
+
+  - id: q03
+    lesson: data-preparation-and-descriptive-statistics
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Understand the effect of undeclared missing-value codes
+    prompt: If the code 99 is used for "no response" on a five-point scale but is not declared as missing in the software, the mean of that item will be inflated.
+    answer: true
+    explanation: The software treats 99 as a genuine score, so even a few such cases pull the mean far above the possible maximum of 5. Missing-value codes must be declared, and range checks should flag impossible values.
+
+  - id: q04
+    lesson: data-preparation-and-descriptive-statistics
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Choose an appropriate summary for skewed data
+    scenario: |
+      A researcher summarises monthly mobile money transaction values for 200 small retailers. Most retailers
+      process modest amounts, but a few wholesalers process very large sums. The histogram shows a long
+      tail to the right, and the mean is much larger than the median.
+    prompt: Which summary is most appropriate as the main description of a typical retailer?
+    options:
+      - The mean and standard deviation only
+      - The median and interquartile range, with the mean also reported
+      - The mode only
+      - The range only
+    answer: 1
+    explanation: The distribution is positively skewed, so a few large values pull the mean upwards. The median and IQR describe the typical case and spread robustly; reporting the mean as well keeps the summary transparent. The mode and range alone are too limited for interval data.
+
+  - id: q05
+    lesson: data-preparation-and-descriptive-statistics
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match data preparation checks to the errors they detect
+    prompt: Match each data preparation check to the problem it is designed to detect.
+    pairs:
+      - left: Range check
+        right: A value of 7 on a five-point scale
+      - left: Consistency check
+        right: A non-user of mobile money reporting weekly mobile money transactions
+      - left: Duplicate check
+        right: The same online submission received twice
+      - left: Double entry of a subset
+        right: The error rate of manual typing from paper questionnaires
+    explanation: Each check targets a different kind of error. Range checks catch impossible values, consistency checks catch logically incompatible answers, duplicate checks catch repeated submissions, and double entry estimates data entry accuracy.
+
+  - id: q06
+    lesson: data-preparation-and-descriptive-statistics
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate how to handle a genuine outlier
+    prompt: A survey of micro-enterprises includes one verified firm with far higher revenue than all others. What is the most defensible handling?
+    options:
+      - Delete it silently because it distorts the mean
+      - Change its value to the sample maximum of the other firms
+      - Keep it, report robust statistics such as the median, and show results with and without it where it matters
+      - Replace the whole revenue variable with the mode
+    answer: 2
+    explanation: A verified value is genuine data, so deleting or altering it without disclosure misrepresents the sample. Robust statistics and a sensitivity check (with and without the case) let readers judge its influence. Replacing values with the mode destroys information.
+
+  # ---------- inferential-statistics ----------
+  - id: q07
+    lesson: inferential-statistics
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Interpret a p-value correctly
+    prompt: A study reports p = 0.03 for a difference between two groups. Which interpretation is correct?
+    options:
+      - There is a 3% probability that the null hypothesis is true
+      - There is a 97% probability that the research hypothesis is true
+      - If the null hypothesis and model assumptions were true, results at least this extreme would occur about 3% of the time
+      - The effect is large and practically important
+    answer: 2
+    explanation: A p-value is computed assuming H0 is true; it is not the probability of H0 or of the research hypothesis. It also says nothing about effect size or importance, as the ASA's 2016 statement emphasises.
+
+  - id: q08
+    lesson: inferential-statistics
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Calculate a standard error of the mean
+    prompt: A sample of 64 SMEs has a standard deviation of 1.2 on an AI-readiness scale. What is the standard error of the mean?
+    answers: ["0.15", ".15"]
+    explanation: "SE = s / √n = 1.2 / √64 = 1.2 / 8 = 0.15. The SE measures how much the sample mean would vary from sample to sample, and it is the basis for confidence intervals and t-tests."
+
+  - id: q09
+    lesson: inferential-statistics
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Select an appropriate statistical test
+    scenario: |
+      A researcher wants to know whether gender (male or female) is associated with whether university
+      students reuse passwords across accounts (yes or no). She has responses from 250 students.
+    prompt: Which test is most appropriate?
+    options:
+      - Independent-samples t-test
+      - Pearson correlation
+      - Chi-square test of independence
+      - Paired-samples t-test
+    answer: 2
+    explanation: Both variables are nominal, so a chi-square test of independence is appropriate (Fisher's exact test if expected frequencies are small). t-tests need an interval outcome, Pearson correlation needs two interval variables, and a paired test needs repeated measures of the same people.
+
+  - id: q10
+    lesson: inferential-statistics
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Understand non-significant results
+    prompt: A non-significant result (p = 0.20) proves that there is no difference between the groups in the population.
+    answer: false
+    explanation: Failing to reject H0 means the data are not sufficiently incompatible with it. The study may have lacked power to detect a real effect. Confidence intervals show which effect sizes remain plausible.
+
+  - id: q11
+    lesson: inferential-statistics
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match inferential concepts to their definitions
+    prompt: Match each concept to its definition.
+    pairs:
+      - left: Type I error
+        right: Rejecting a null hypothesis that is actually true
+      - left: Type II error
+        right: Failing to reject a null hypothesis that is actually false
+      - left: Power
+        right: Probability of detecting an effect that truly exists
+      - left: Effect size
+        right: Magnitude of a difference or relationship
+      - left: Confidence interval
+        right: Range of plausible values for a population parameter
+    explanation: Type I errors are false positives (probability α) and Type II errors are false negatives (probability β). Power is 1 − β. Effect sizes and confidence intervals complement p-values by conveying magnitude and precision.
+
+  - id: q12
+    lesson: inferential-statistics
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Calculate and interpret a chi-square statistic
+    prompt: "In a 2 × 2 table, the four (O − E)²/E contributions are 2.70, 0.85, 1.80 and 0.57. With df = 1 and a critical value of 3.84 at α = 0.05, what is the conclusion?"
+    options:
+      - χ² = 5.92; reject H0, the variables are associated
+      - χ² = 5.92; fail to reject H0
+      - χ² = 1.48; fail to reject H0
+      - χ² = 5.92; the result proves one variable causes the other
+    answer: 0
+    explanation: "χ² is the sum of contributions, 2.70 + 0.85 + 1.80 + 0.57 = 5.92, which exceeds 3.84, so H0 of no association is rejected. 1.48 is the mean contribution, not the statistic. A chi-square test on observational data shows association, not causation."
+
+  # ---------- correlation-and-regression ----------
+  - id: q13
+    lesson: correlation-and-regression
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Interpret the coefficient of determination
+    prompt: Pearson's correlation between perceived usefulness and intention to use an AI tool is r = 0.60. What proportion of variance do they share?
+    options:
+      - 60%
+      - 36%
+      - 6%
+      - 77%
+    answer: 1
+    explanation: "Shared variance is r² = 0.60² = 0.36, or 36%. Treating r itself as a percentage is a common error; 77% would be √0.60, which has no meaning here."
+
+  - id: q14
+    lesson: correlation-and-regression
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Calculate a regression slope
+    prompt: "If Σ(x − x̄)(y − ȳ) = 6 and Σ(x − x̄)² = 10, what is the regression slope b?"
+    answers: ["0.6", ".6"]
+    explanation: "b = Σ(x − x̄)(y − ȳ) / Σ(x − x̄)² = 6 / 10 = 0.6. Each one-unit increase in x is associated with a 0.6-unit increase in predicted y. The intercept is then a = ȳ − b × x̄."
+
+  - id: q15
+    lesson: correlation-and-regression
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Interpret a multiple regression coefficient
+    scenario: |
+      A regression of operational efficiency (1–5) on perceived usefulness (1–5), facilitating conditions
+      (1–5) and firm age (years) for 180 SMEs gives, for perceived usefulness, B = 0.42, SE = 0.07,
+      β = 0.39, t = 6.00, p < .001. R² = 0.31.
+    prompt: Which interpretation of the perceived usefulness coefficient is most accurate?
+    options:
+      - Perceived usefulness causes a 42% increase in efficiency
+      - Holding the other predictors constant, a one-point increase in perceived usefulness is associated with a 0.42-point increase in efficiency
+      - Perceived usefulness explains 39% of the variance in efficiency
+      - The coefficient is not significant because R² is below 0.5
+    answer: 1
+    explanation: B is in the outcome's units and is interpreted holding other predictors constant. It is not a percentage and does not establish causation from cross-sectional data. β is a standardised coefficient, not variance explained, and R² does not determine the significance of individual predictors.
+
+  - id: q16
+    lesson: correlation-and-regression
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Understand the limits of Pearson's r
+    prompt: A Pearson correlation close to zero shows that two variables have no relationship of any kind.
+    answer: false
+    explanation: Pearson's r measures linear association only. A strong curved relationship can produce r near zero, which is why scatter plots should always be inspected, as Anscombe's quartet demonstrates.
+
+  - id: q17
+    lesson: correlation-and-regression
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match regression output elements to their meaning
+    prompt: Match each regression output element to its meaning.
+    pairs:
+      - left: R²
+        right: Proportion of variance in the outcome explained by the model
+      - left: Adjusted R²
+        right: Explained variance penalised for unnecessary predictors
+      - left: F-test
+        right: Whether the model as a whole explains significant variance
+      - left: Standardised beta
+        right: Change in the outcome in standard deviations per standard deviation of a predictor
+      - left: Variance inflation factor
+        right: Diagnostic for multicollinearity among predictors
+    explanation: Reading a regression output requires distinguishing model-level statistics (R², adjusted R², F) from predictor-level statistics (B, β, t, p) and diagnostics (VIF).
+
+  - id: q18
+    lesson: correlation-and-regression
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the lesson of Google Flu Trends
+    prompt: What is the most important methodological lesson of the Google Flu Trends failure for correlational research?
+    options:
+      - Large datasets always produce accurate predictions
+      - Predictors chosen only because they correlate historically can capture spurious or unstable patterns, so models need theory and validation on new data
+      - Search data should never be used in research
+      - Regression cannot be used for prediction
+    answer: 1
+    explanation: The model relied on search terms that correlated with past flu data, some for spurious or seasonal reasons, and the relationships shifted when search behaviour and algorithms changed. Size did not protect against these problems. The lesson is about theory, stability and validation, not a ban on data sources or regression.
+
+  # ---------- qualitative-coding-and-thematic-analysis ----------
+  - id: q19
+    lesson: qualitative-coding-and-thematic-analysis
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Recall the first phase of Braun and Clarke's thematic analysis
+    prompt: According to Braun and Clarke (2006), what is the first phase of thematic analysis?
+    options:
+      - Generating initial codes
+      - Familiarising yourself with the data
+      - Searching for themes
+      - Defining and naming themes
+    answer: 1
+    explanation: Familiarisation (transcribing or checking transcripts, reading and re-reading, noting initial ideas) comes first. Coding, searching for themes, reviewing, defining and naming, and reporting follow, with movement back and forth between phases.
+
+  - id: q20
+    lesson: qualitative-coding-and-thematic-analysis
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish themes from topic summaries
+    prompt: Organising findings into one "theme" per interview question (for example, "Theme 1 - Training") is good practice in thematic analysis.
+    answer: false
+    explanation: Grouping answers by question produces topic summaries, not themes. A theme is a pattern of shared meaning with a central organising concept that cuts across questions, such as "Training as a ritual rather than a resource".
+
+  - id: q21
+    lesson: qualitative-coding-and-thematic-analysis
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for codes using participants' own words
+    prompt: What type of code uses a participant's own words, such as "the system sleeps", as its label?
+    answers: [in vivo, in vivo code, in-vivo]
+    explanation: In vivo codes preserve participants' language and meanings, which can make themes more vivid and grounded. They are often combined with descriptive, process and interpretive codes.
+
+  - id: q22
+    lesson: qualitative-coding-and-thematic-analysis
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply a hybrid coding approach
+    scenario: |
+      A student uses UTAUT constructs as initial codes to analyse interviews with nurses about an EHR system.
+      Several nurses describe relying on a senior colleague's informal "night-shift tips" rather than
+      formal training, an issue that does not fit neatly into any UTAUT code.
+    prompt: What should the student do with these data?
+    options:
+      - Discard them because they do not fit the theory
+      - Force them into the effort expectancy code
+      - Create a new inductive code and consider whether it extends or challenges the theoretical framework
+      - Count them and report a percentage
+    answer: 2
+    explanation: A hybrid approach combines deductive codes from theory with inductive codes for unanticipated issues. Data that do not fit the framework may represent a contribution, for example extending facilitating conditions to include informal peer support. Discarding or forcing data undermines credibility.
+
+  - id: q23
+    lesson: qualitative-coding-and-thematic-analysis
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match coding-frame components to their purpose
+    prompt: Match each coding-frame component to its purpose.
+    pairs:
+      - left: Code name
+        right: Short label used to tag segments
+      - left: Definition
+        right: Statement of what the code means
+      - left: Inclusion criteria
+        right: Conditions under which the code should be applied
+      - left: Exclusion criteria
+        right: Similar material that should not receive the code
+      - left: Example extract
+        right: Illustration of a segment that fits the code
+    explanation: A complete coding frame supports consistent, transparent coding and forms part of the audit trail. Exclusion criteria are often omitted but are essential for distinguishing similar codes.
+
+  - id: q24
+    lesson: qualitative-coding-and-thematic-analysis
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the use of inter-coder reliability in reflexive thematic analysis
+    prompt: A student using reflexive thematic analysis is asked by a reviewer to report Cohen's kappa. What is the most defensible response?
+    options:
+      - Report kappa because it is required for all qualitative research
+      - Explain that reflexive thematic analysis treats coding as interpretive, so quality is shown through reflexivity, transparency and an audit trail rather than agreement statistics
+      - Refuse to discuss quality at all
+      - Replace the analysis with a word-frequency count
+    answer: 1
+    explanation: Braun and Clarke argue that agreement measures assume a single correct coding, which conflicts with reflexive TA. Codebook approaches may legitimately report kappa, but a reflexive study should justify quality in terms consistent with its epistemology.
+
+  # ---------- visualising-and-interpreting-findings ----------
+  - id: q25
+    lesson: visualising-and-interpreting-findings
+    type: mcq
+    bloom: apply
+    difficulty: easy
+    objective: Select a chart type for a purpose
+    prompt: Which chart is most appropriate for showing the relationship between training hours and the number of security incidents across 150 bank branches?
+    options:
+      - Pie chart
+      - Scatter plot
+      - Stacked bar chart
+      - Line chart joining branches alphabetically
+    answer: 1
+    explanation: A scatter plot displays the relationship between two interval or ratio variables and reveals linearity, outliers and spread. Pie and stacked bar charts show composition, and a line joining unordered branches implies a sequence that does not exist.
+
+  - id: q26
+    lesson: visualising-and-interpreting-findings
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Calculate the visual distortion of a truncated axis
+    prompt: "A bar chart's axis starts at 60%. Bars show 62% and 68%. By what factor does the taller bar appear larger than the shorter one?"
+    answers: ["4", "four", "4 times"]
+    explanation: "Visible heights are 68 − 60 = 8 and 62 − 60 = 2, so the taller bar looks 8 / 2 = 4 times larger, although the actual ratio is 68 / 62 ≈ 1.10. Bar charts should start at zero."
+
+  - id: q27
+    lesson: visualising-and-interpreting-findings
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish results and discussion
+    prompt: The main purpose of a discussion chapter is to restate the results in more detail.
+    answer: false
+    explanation: The discussion interprets results by linking them to research questions, literature and theory, considering alternative explanations, and stating implications and limitations. Restating results adds no interpretation.
+
+  - id: q28
+    lesson: visualising-and-interpreting-findings
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate an interpretation for over-claiming
+    scenario: |
+      A dissertation reports that students who attended cybersecurity orientation scored 0.3 points higher
+      on a five-point awareness scale (d = 0.35, p = .004, n = 300). Attendance was voluntary. The student
+      recommends that "the university should make orientation compulsory because it causes higher awareness".
+    prompt: What is the main weakness of the interpretation?
+    options:
+      - The p-value is too large to be significant
+      - The effect size is too large to be believable
+      - Voluntary attendance means self-selection could explain the difference, so the causal claim and recommendation overreach
+      - Sample size of 300 is too small for any conclusion
+    answer: 2
+    explanation: More security-conscious students may have chosen to attend, so the association may not be causal. The result is significant, d = 0.35 is a plausible small-to-medium effect, and n = 300 is adequate. A better recommendation would be cautious and could propose a randomised or staggered evaluation.
+
+  - id: q29
+    lesson: visualising-and-interpreting-findings
+    type: matching
+    bloom: apply
+    difficulty: medium
+    objective: Match results to suitable visualisations
+    prompt: Match each result to the most suitable visualisation.
+    pairs:
+      - left: Distribution of monthly online sales for 120 SMEs
+        right: Histogram or box plot
+      - left: Responses to five Likert items on trust in digital payments
+        right: Diverging stacked bar chart
+      - left: Monthly EHR log-ins over two years
+        right: Line chart
+      - left: Survey percentages beside interview themes
+        right: Joint display
+    explanation: Chart choice follows the data type and message. Distributions need histograms or box plots, Likert items suit diverging bars, time series suit line charts, and mixed-methods integration suits joint displays.
+
+  - id: q30
+    lesson: visualising-and-interpreting-findings
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the visualisation lesson of the Challenger case
+    prompt: According to Tufte's analysis of the Challenger O-ring charts, what was the key visual weakness?
+    options:
+      - The charts used too many colours
+      - The charts did not plot damage against temperature for all previous flights, including those without damage, obscuring the relationship
+      - The charts started the axis at zero
+      - The charts were drawn by hand
+    answer: 1
+    explanation: Tufte argued that showing only some flights, and not ordering evidence by temperature, hid the link between cold and O-ring damage. The general lesson is that selecting cases and choosing charts shapes what decision-makers see. Others emphasise organisational factors too.
+
+  # ---------- module-level ----------
+  - id: q31
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Critically evaluate a quantitative results and discussion section
+    case: |
+      Illustrative scenario. A dissertation on digital payment adoption among 210 retailers recruited by
+      convenience sampling in two Accra markets reports: "Trust was strongly correlated with intention to
+      accept merchant payments (r = 0.25, p < .001). Regression showed that trust (B = 0.30, p < .001) and
+      transaction cost (B = −0.20, p = .02) significantly impact intention (R² = 0.12). This proves that
+      improving trust will increase digital payment adoption across Ghana." A 3D pie chart shows
+      intention categories. Data were collected in English only, and 40 questionnaires with missing items
+      were deleted without comment.
+    prompt: Critically evaluate the analysis, presentation and interpretation, and rewrite the conclusion appropriately.
+    marks: 20
+    structure:
+      - Evaluate the description of r = 0.25 as "strong" and interpret r²
+      - Interpret the regression coefficients and R² correctly
+      - Critique causal language and generalisation from a convenience sample
+      - Evaluate data preparation issues (missing data, language)
+      - Critique the visualisation and propose alternatives
+      - Rewrite the conclusion with calibrated language
+    rubric:
+      - criterion: Statistical interpretation
+        marks: 6
+        descriptor: Correctly interprets r, r², B, p and R², noting the small explained variance.
+      - criterion: Causal and generalisation critique
+        marks: 5
+        descriptor: Identifies the unjustified causal claim and the limits of a convenience sample.
+      - criterion: Data preparation critique
+        marks: 3
+        descriptor: Addresses undocumented deletion of missing cases and language-related measurement issues.
+      - criterion: Visualisation critique
+        marks: 3
+        descriptor: Explains problems with 3D pie charts and proposes a suitable chart.
+      - criterion: Revised conclusion
+        marks: 3
+        descriptor: Provides a calibrated, accurate conclusion with limitations.
+    modelAnswer: |
+      Describing r = 0.25 as "strong" is inaccurate; by Cohen's guidelines it is a small-to-medium correlation,
+      and r² = 0.0625 means trust shares only about 6% of the variance in intention. The significance reflects
+      the sample size rather than strength. In the regression, B = 0.30 means a one-point increase in trust is
+      associated with a 0.30-point increase in intention, holding transaction cost constant, and B = −0.20 shows
+      that higher perceived cost is associated with lower intention. However, R² = 0.12 indicates that 88% of the
+      variance is unexplained, so other factors matter substantially.
+
+      The word "impact" and the claim that improving trust "will increase adoption" are causal claims that a
+      cross-sectional design cannot support: temporal order is unknown and unmeasured confounders such as
+      business size or customer base may explain the associations. Generalising "across Ghana" from a
+      convenience sample in two Accra markets is unjustified; p-values assume random sampling and should be
+      treated as indicative.
+
+      Deleting 40 cases (about 16% of 250) without comment risks bias if missingness relates to the variables,
+      for example less literate traders struggling with an English-only instrument. The student should report
+      missingness patterns and consider translated instruments in future.
+
+      The 3D pie chart distorts proportions and makes comparison hard; a simple horizontal bar chart with
+      percentages and n would be clearer.
+
+      A revised conclusion: "Among surveyed retailers in two Accra markets, higher trust and lower perceived
+      transaction costs were modestly associated with stronger intention to accept merchant payments, together
+      explaining 12% of its variance. Given the cross-sectional convenience sample, these findings are
+      indicative and should be tested with probability samples and longitudinal or experimental designs."
+    explanation: Examiners reward precise statistical interpretation, recognition of over-claiming, attention to data preparation and presentation, and a well-calibrated rewritten conclusion.
+
+  - id: q32
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Plan an integrated mixed-methods analysis strategy
+    prompt: "For a mixed-methods study of healthcare technology adoption in Ghanaian hospitals (a nurse survey plus interviews), propose and justify an analysis strategy covering data preparation, descriptive and inferential analysis, thematic analysis and integrated presentation of findings."
+    marks: 20
+    structure:
+      - Data preparation for survey data (codebook, cleaning, missing data, scale construction, reliability)
+      - Descriptive statistics appropriate to each variable type
+      - Inferential analyses aligned with hypotheses (for example, regression on UTAUT constructs) and assumption checks
+      - Thematic analysis approach (reflexive or codebook, deductive or hybrid) and quality measures
+      - Integration through a joint display and interpretation
+      - Ethical handling of data and limitations
+    rubric:
+      - criterion: Quantitative preparation and description
+        marks: 4
+        descriptor: Covers coding, cleaning, missing data, reliability and appropriate descriptives.
+      - criterion: Inferential analysis
+        marks: 5
+        descriptor: Selects tests aligned to hypotheses, checks assumptions and reports effect sizes and CIs.
+      - criterion: Qualitative analysis
+        marks: 5
+        descriptor: Justifies a thematic analysis approach with clear phases and quality criteria.
+      - criterion: Integration and presentation
+        marks: 4
+        descriptor: Explains joint displays and how divergence will be interpreted.
+      - criterion: Ethics, limitations and writing
+        marks: 2
+        descriptor: Addresses data protection and limitations in clear academic prose.
+    modelAnswer: |
+      A strong answer begins with a codebook defining all survey variables, missing-value codes and UTAUT scale
+      items. Cleaning involves range, consistency and duplicate checks, logged in a cleaning record, with
+      missing data quantified and its pattern examined before choosing listwise deletion or imputation. Negatively
+      worded items are reverse-coded and scale scores computed as item means, with Cronbach's alpha reported for
+      each construct.
+
+      Descriptive analysis would report frequencies and percentages for nominal variables such as hospital type,
+      medians for single Likert items, and means and SDs for scale scores, using histograms or box plots to check
+      distributions. Inferential analysis would test hypotheses with multiple regression of behavioural intention
+      or reported use on performance expectancy, effort expectancy, social influence and facilitating
+      conditions, controlling for experience and ward. Assumptions (linearity, homoscedasticity, normality of
+      residuals, multicollinearity via VIF, independence given clustering by ward) would be checked, and
+      results reported with B, β, CIs and R², using calibrated language.
+
+      For interviews, a hybrid reflexive thematic analysis following Braun and Clarke's six phases would start
+      with UTAUT-informed codes but remain open to inductive codes such as informal peer support or paper
+      workarounds. Quality would be demonstrated through reflexive memos, a coding frame and an audit trail.
+
+      Integration would use a joint display aligning each UTAUT construct's regression result with related
+      themes, classifying them as confirming, expanding or diverging. Divergence would be interpreted rather than
+      dismissed. Data would be pseudonymised and stored securely under the Data Protection Act, 2012 (Act 843),
+      and limitations such as self-report and cross-sectional design acknowledged.
+    explanation: Examiners look for a coherent, justified sequence from preparation to integration, with analyses matched to data types and hypotheses, explicit quality criteria for both strands, and a clear integration strategy.

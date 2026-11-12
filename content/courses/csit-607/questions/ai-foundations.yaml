@@ -1,0 +1,245 @@
+module: ai-foundations
+questions:
+  - id: q01
+    lesson: defining-ai-and-its-history
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain the two dimensions behind Russell and Norvig's four approaches to AI
+    prompt: Which pair of dimensions generates Russell and Norvig's four approaches to defining AI?
+    options:
+      - Symbolic versus statistical, and narrow versus general
+      - Thought processes versus behaviour, and human performance versus rationality
+      - Supervised versus unsupervised, and online versus offline
+      - Hardware versus software, and academic versus commercial
+    answer: 1
+    explanation: The four approaches (thinking humanly, acting humanly, thinking rationally, acting rationally) come from crossing whether we judge thought or behaviour with whether the standard is human performance or ideal rationality. Symbolic versus statistical describes research traditions, supervised versus unsupervised describes learning paradigms, and hardware versus software is unrelated.
+
+  - id: q02
+    lesson: defining-ai-and-its-history
+    type: true_false
+    bloom: recall
+    difficulty: easy
+    objective: Identify the origin of the term artificial intelligence
+    prompt: The term "artificial intelligence" was adopted for the 1956 Dartmouth summer research project organised by John McCarthy and colleagues.
+    answer: true
+    explanation: The Dartmouth project of 1956, proposed by McCarthy, Minsky, Rochester and Shannon, is widely regarded as the founding event of AI as a named field. Turing's 1950 paper predates it but used the language of "thinking machines" and the imitation game.
+
+  - id: q03
+    lesson: defining-ai-and-its-history
+    type: matching
+    bloom: recall
+    difficulty: medium
+    objective: Match AI milestones to their significance
+    prompt: Match each milestone to its significance.
+    pairs:
+      - left: Turing (1950)
+        right: Proposed the imitation game as a behavioural test of machine intelligence
+      - left: AlexNet (2012)
+        right: Triggered the deep learning resurgence by winning ImageNet using GPUs and large labelled data
+      - left: Vaswani et al. (2017)
+        right: Introduced the transformer architecture behind modern large language models
+      - left: Deep Blue (1997)
+        right: Defeated the world chess champion using massive search and expert-crafted evaluation
+      - left: Expert systems (1980s)
+        right: Delivered narrow commercial value through hand-coded rules but proved costly to maintain
+    explanation: Each milestone represents a different enabler. Turing framed the question, Deep Blue showed search in a closed world, expert systems showed rule-based value and brittleness, AlexNet showed learning from big data, and the transformer enabled scalable language models.
+
+  - id: q04
+    lesson: defining-ai-and-its-history
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Classify a product claim using AI definitions
+    scenario: |
+      Illustrative scenario. A vendor offers a Ghanaian pharmacy chain an "AI stock manager". On inspection, the product reorders a drug whenever its quantity falls below a fixed number that the branch manager types in. It does not use sales history and never changes the threshold by itself.
+    prompt: How should the pharmacy chain classify this product?
+    options:
+      - As machine learning, because it makes decisions automatically
+      - As a learning agent, because it reacts to stock levels
+      - As conventional rule-based automation marketed as AI
+      - As artificial general intelligence, because it replaces a human task
+    answer: 2
+    explanation: A fixed threshold trigger set by a person involves no learning, no reasoning under uncertainty and no perception, so it is conventional automation. Automatic decisions are not the same as machine learning; a learning agent would improve from feedback; and nothing about a single rule approaches general intelligence.
+
+  - id: q05
+    lesson: defining-ai-and-its-history
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name periods of reduced AI funding and confidence
+    prompt: What term describes periods, such as the 1970s and late 1980s, when funding and confidence in AI research fell sharply?
+    answers:
+      - AI winter
+      - AI winters
+      - winter
+    explanation: AI winters followed unmet expectations. The first followed the failure of early systems to scale; the second followed the high maintenance cost and brittleness of expert systems. Both were driven by overpromising combined with limits of data, computing and knowledge engineering.
+
+  - id: q06
+    lesson: defining-ai-and-its-history
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse why the deep learning resurgence occurred around 2012
+    prompt: Which combination best explains why neural networks, studied since the 1950s, achieved breakthrough results around 2012?
+    options:
+      - The invention of the perceptron and the Turing test
+      - Large labelled datasets, GPU computing power and improved training methods for deep networks
+      - The replacement of statistics by formal logic
+      - Government regulation requiring AI in businesses
+    answer: 1
+    explanation: AlexNet's success depended on ImageNet's large labelled dataset, training on GPUs, and techniques for training deeper networks. The perceptron dates from the 1950s and could not explain a 2012 change; formal logic belongs to the symbolic tradition; regulation played no role in the breakthrough.
+
+  - id: q07
+    lesson: defining-ai-and-its-history
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate claims that current AI products are general intelligence
+    prompt: Because large language models can perform many text tasks, they should be regarded as artificial general intelligence.
+    answer: false
+    explanation: Large language models are broad within text but remain narrow AI. They fail outside their training distribution, can produce confident falsehoods and do not act reliably in the physical world. AGI remains a hypothetical research goal, so treating LLMs as AGI overstates their capability.
+
+  - id: q08
+    lesson: intelligent-systems-and-applications
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Recall the components of PEAS
+    prompt: In the PEAS framework, what does the letter A stand for?
+    options:
+      - Algorithms
+      - Actuators
+      - Accuracy
+      - Agents
+    answer: 1
+    explanation: PEAS stands for Performance measure, Environment, Actuators and Sensors. Actuators are the means by which the agent acts on its environment, such as declining a payment or sending a message. Algorithms and accuracy are not PEAS elements, and the agent is the thing being specified.
+
+  - id: q09
+    lesson: intelligent-systems-and-applications
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Classify a business task environment
+    scenario: |
+      Illustrative scenario. A mobile money operator's fraud system must decide within seconds whether to approve transfers. Fraudsters constantly change tactics to evade detection, and the system cannot know a sender's true intent.
+    prompt: Which classification of this task environment is most accurate?
+    options:
+      - Fully observable, deterministic, static, single-agent
+      - Partially observable, stochastic, dynamic, multi-agent and adversarial
+      - Fully observable, stochastic, episodic, single-agent
+      - Partially observable, deterministic, static, cooperative
+    answer: 1
+    explanation: Intent is hidden (partially observable), outcomes are uncertain (stochastic), patterns change in real time (dynamic), and fraudsters are agents who adapt against the system (multi-agent, adversarial). The other options wrongly claim full observability, determinism, a static world or cooperation.
+
+  - id: q10
+    lesson: intelligent-systems-and-applications
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish agent architectures
+    prompt: Match each agent architecture to its defining characteristic.
+    pairs:
+      - left: Simple reflex agent
+        right: Acts on the current percept using condition-action rules
+      - left: Model-based reflex agent
+        right: Maintains internal state about parts of the world it cannot currently see
+      - left: Goal-based agent
+        right: Chooses actions by considering whether future consequences achieve a goal
+      - left: Utility-based agent
+        right: Trades off competing outcomes using a numerical measure of desirability
+      - left: Learning agent
+        right: Uses a critic's feedback to improve its own performance element
+    explanation: The architectures form a ladder. Each adds a capability that the previous one lacks, from memory (model-based), to foresight (goal-based), to trade-offs (utility-based), to self-improvement (learning).
+
+  - id: q11
+    lesson: intelligent-systems-and-applications
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the meaning of rationality in agents
+    prompt: A rational agent is one that always achieves the best actual outcome.
+    answer: false
+    explanation: Rationality means choosing the action with the best expected outcome given the agent's knowledge and percepts. In uncertain environments a rational decision can still turn out badly, so agents should be judged by the quality of their decision process as well as by results.
+
+  - id: q12
+    lesson: intelligent-systems-and-applications
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a performance measure for unintended behaviour
+    scenario: |
+      Illustrative scenario. A telecom company rewards its customer-service chatbot for minimising average conversation length. After three months, chats are shorter but complaints to the regulator and repeat calls have increased.
+    prompt: What is the best explanation and remedy?
+    options:
+      - The chatbot needs more computing power; upgrade the servers
+      - The performance measure rewarded ending chats rather than solving problems; redesign it to include resolution and satisfaction
+      - Customers dislike chatbots; remove the system entirely
+      - The chatbot is a simple reflex agent; replace it with a goal-based agent while keeping the same measure
+    answer: 1
+    explanation: Agents optimise what they are measured on. Designing the measure around desired outcomes (resolution rate, satisfaction, correct escalation) addresses the root cause. More computing power or a different architecture would still optimise the wrong target, and removing the system ignores the design flaw.
+
+  - id: q13
+    lesson: intelligent-systems-and-applications
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name the element of an agent that represents what the agent perceives
+    prompt: What term describes the input an agent receives from its environment at a given instant?
+    answers:
+      - percept
+      - a percept
+    explanation: A percept is a single input; the percept sequence is the complete history of inputs. The agent function maps percept sequences to actions.
+
+  - id: q14
+    lesson: intelligent-systems-and-applications
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the lesson of the Netflix Prize for performance measures
+    prompt: What is the main agent-design lesson from Netflix's decision not to deploy the full prize-winning ensemble?
+    options:
+      - Ensembles never improve prediction accuracy
+      - Public competitions should be avoided
+      - A benchmark performance measure can drift away from what the business actually values
+      - Root mean squared error cannot be calculated for ratings
+    answer: 2
+    explanation: The winning ensemble improved rating-prediction error, but Netflix reported that the engineering cost was not justified and that its streaming business needed different signals. The measure optimised in the competition no longer tracked business value. Ensembles did improve accuracy, competitions produced useful ideas, and RMSE is a standard metric for ratings.
+
+  - id: q15
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate an AI proposal using definitions, history and the agent framework
+    marks: 20
+    case: |
+      Illustrative scenario. A regional hospital in Ghana is offered an "AI triage assistant" that reads patients' symptoms typed by nurses and recommends a priority level. The vendor says the product "thinks like a doctor", was built using rules written by specialists abroad ten years ago, and will "fully replace manual triage". Hospital managers must decide whether to pilot it.
+    prompt: Critically evaluate the proposal. Use the definitions of AI, lessons from AI history and the PEAS framework to recommend whether and how the hospital should proceed.
+    structure:
+      - Classify the system using Russell and Norvig's approaches and identify it as an expert system
+      - Relate the product to the strengths and weaknesses of expert systems and the second AI winter
+      - Produce a PEAS specification with an appropriate performance measure
+      - Classify the environment and discuss the appropriate level of autonomy
+      - Recommend a pilot design with safeguards, data protection and accountability
+    rubric:
+      - criterion: Conceptual classification
+        marks: 4
+        descriptor: Correctly identifies the system as a rule-based expert system, critiques the "thinks like a doctor" claim using the four approaches
+      - criterion: Use of history
+        marks: 4
+        descriptor: Links outdated, foreign-authored rules to brittleness and maintenance problems that contributed to the second AI winter
+      - criterion: PEAS and environment analysis
+        marks: 6
+        descriptor: Complete PEAS with a patient-outcome performance measure; accurate environment classification
+      - criterion: Recommendation and safeguards
+        marks: 6
+        descriptor: Justified, realistic recommendation covering human oversight, local validation, updating, Act 843 and accountability
+    modelAnswer: |
+      A strong answer first challenges the claim that the system "thinks like a doctor". It is a rule-based expert system, so at best it imitates specialist conclusions (acting humanly in a narrow sense); there is no evidence it models human reasoning, and it should instead be judged by the acting-rationally standard: does it lead to better triage outcomes?
+
+      History is directly relevant. Expert systems in the 1980s delivered value in narrow domains but were brittle and expensive to maintain, contributing to the second AI winter. Rules written a decade ago by specialists abroad may not reflect local disease patterns, current clinical guidelines or the language nurses use, so knowledge may be outdated and mismatched.
+
+      A PEAS specification might be: Performance measure (correct prioritisation of urgent cases, missed urgent cases, waiting time, clinician agreement); Environment (patients, nurses, clinicians, ward capacity, local disease profile); Actuators (displaying a recommended priority, alerting a clinician); Sensors (typed symptoms, vital signs, age). The environment is partially observable, stochastic, dynamic and high-stakes, so missed urgent cases carry severe costs.
+
+      The recommendation should reject "full replacement". A cautious pilot should run the tool in advisory mode alongside existing triage, compare its recommendations with clinician decisions on local cases, measure especially the rate of under-triage, and require a named owner for updating the rules. Patient data is personal and sensitive under Ghana's Data Protection Act, 2012 (Act 843), so data handling, consent and vendor contracts need review. Proceed only if local validation shows benefit, with clinicians remaining accountable.
+    explanation: Examiners look for correct classification of the system, explicit use of AI history rather than generic criticism, a complete PEAS specification, and a balanced recommendation that keeps humans accountable.

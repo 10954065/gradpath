@@ -1,0 +1,81 @@
+module: data-analysis
+cards:
+  - lesson: data-preparation-and-descriptive-statistics
+    front: Why should a codebook be written alongside the questionnaire rather than after data collection?
+    back: It fixes variable names, value codes, missing-value codes and measurement levels in advance, preventing inconsistent entry and making cleaning and scale construction systematic.
+  - lesson: data-preparation-and-descriptive-statistics
+    front: Why divide by n − 1 when computing a sample variance?
+    back: It corrects the tendency of a sample to underestimate population variability, giving an unbiased estimate of the population variance.
+  - lesson: data-preparation-and-descriptive-statistics
+    front: What does a single mistyped value (200 instead of 20) do to the mean and median of ten values?
+    back: In the worked example it raises the mean from 14.0 to 32.0 but leaves the median at 13.5, showing why range checks matter and why the median is robust.
+  - lesson: data-preparation-and-descriptive-statistics
+    front: Which measures of centre and spread suit skewed interval data?
+    back: The median and interquartile range, with the mean reported alongside for transparency.
+  - lesson: data-preparation-and-descriptive-statistics
+    front: What is the main lesson of the Reinhart–Rogoff spreadsheet error for MSc students?
+    back: Coding and data-handling errors can change conclusions; keep raw data untouched, script or log every step, and be ready to share analysis files.
+
+  - lesson: inferential-statistics
+    front: What does a p-value actually measure?
+    back: The probability of results at least as extreme as those observed if the null hypothesis and model assumptions were true - not the probability that H0 is true.
+  - lesson: inferential-statistics
+    front: How do you compute an approximate 95% confidence interval for a mean?
+    back: x̄ ± 1.96 × SE, where SE = s / √n (use the t multiplier for small samples).
+  - lesson: inferential-statistics
+    front: Why should effect sizes be reported alongside p-values?
+    back: p-values depend heavily on sample size; effect sizes such as Cohen's d show magnitude, which determines practical importance.
+  - lesson: inferential-statistics
+    front: How are expected frequencies calculated in a chi-square test of independence?
+    back: E = (row total × column total) / grand total for each cell; then χ² = Σ(O − E)² / E with df = (r − 1)(c − 1).
+  - lesson: inferential-statistics
+    front: Why is "fail to reject H0" preferred to "accept H0"?
+    back: A non-significant result may reflect low power; it shows the data are not sufficiently incompatible with H0, not that H0 is true.
+
+  - lesson: correlation-and-regression
+    front: What does r² tell you that r does not?
+    back: The proportion of variance shared by the two variables; r = 0.5 means only 25% shared variance.
+  - lesson: correlation-and-regression
+    front: How do you interpret B in a multiple regression?
+    back: The expected change in the outcome, in its own units, for a one-unit increase in the predictor, holding the other predictors constant.
+  - lesson: correlation-and-regression
+    front: When should you compare standardised β rather than B?
+    back: When predictors are measured on different scales, because β expresses effects in standard deviation units.
+  - lesson: correlation-and-regression
+    front: Name four assumptions of linear regression to check.
+    back: Linearity, independence of errors, homoscedasticity, normality of residuals (plus no severe multicollinearity or unduly influential cases).
+  - lesson: correlation-and-regression
+    front: Why did Google Flu Trends fail despite huge data volumes?
+    back: It relied on search-term correlations that were partly spurious or seasonal and that shifted as search behaviour and algorithms changed; size could not substitute for theory and validation.
+
+  - lesson: qualitative-coding-and-thematic-analysis
+    front: List Braun and Clarke's six phases of thematic analysis.
+    back: Familiarising with data, generating initial codes, searching for themes, reviewing themes, defining and naming themes, producing the report.
+  - lesson: qualitative-coding-and-thematic-analysis
+    front: What distinguishes a theme from a topic summary?
+    back: A theme has a central organising concept that makes an analytic claim about shared meaning across the data; a topic summary just groups what was said about a subject.
+  - lesson: qualitative-coding-and-thematic-analysis
+    front: What is hybrid coding and why is it useful in Ghanaian studies?
+    back: Starting with theory-driven codes (such as UTAUT constructs) and adding inductive codes; it captures local factors imported theories may miss, such as family tech support.
+  - lesson: qualitative-coding-and-thematic-analysis
+    front: How is Cohen's kappa computed, and when is it appropriate?
+    back: κ = (Po − Pe) / (1 − Pe); appropriate for codebook-style analysis, not usually for reflexive thematic analysis.
+  - lesson: qualitative-coding-and-thematic-analysis
+    front: How does a reflexive thematic analysis demonstrate quality?
+    back: Through reflexive memos, a transparent coding frame, an audit trail from codes to themes, and well-evidenced themes linked to literature.
+
+  - lesson: visualising-and-interpreting-findings
+    front: Why must bar charts usually start at zero?
+    back: Bars encode values by length; a truncated axis exaggerates differences (bars of 62% and 68% from a 60% baseline look four times different).
+  - lesson: visualising-and-interpreting-findings
+    front: Which chart suits five Likert items on trust in digital payments?
+    back: A diverging stacked bar chart ordered by response category, rather than five pie charts.
+  - lesson: visualising-and-interpreting-findings
+    front: What are the six steps for interpreting a finding?
+    back: Restate it, assess its strength, relate it to literature, consider alternative explanations, judge practical significance, and state limitations.
+  - lesson: visualising-and-interpreting-findings
+    front: How do results and discussion sections differ?
+    back: Results report what was found; the discussion interprets findings, links them to theory and literature, and states implications and limitations.
+  - lesson: visualising-and-interpreting-findings
+    front: What does the Challenger O-ring case teach about presenting data?
+    back: Showing only selected cases and not plotting damage against temperature for all flights obscured a vital relationship; case selection and chart choice shape decisions.

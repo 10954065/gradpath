@@ -1,0 +1,38 @@
+module: immersive-technologies
+cards:
+  - lesson: ar-vr-mr-and-xr
+    front: Describe Milgram and Kishino's reality-virtuality continuum.
+    back: A scale from the real environment through augmented reality and augmented virtuality to a fully virtual environment; mixed reality originally meant everything between the two extremes.
+  - lesson: ar-vr-mr-and-xr
+    front: What are Azuma's three defining characteristics of augmented reality?
+    back: It combines real and virtual content, is interactive in real time, and is registered in three dimensions.
+  - lesson: ar-vr-mr-and-xr
+    front: What is the difference between immersion and presence?
+    back: Immersion is the objective capability of the system (field of view, tracking, display); presence is the user's subjective sense of being in the virtual place.
+  - lesson: ar-vr-mr-and-xr
+    front: When does AR fit a task better than VR?
+    back: When the user must see and work on real objects or surroundings, often hands-free, such as guided repairs; VR suits tasks where the real environment is irrelevant or too dangerous to practise in.
+  - lesson: ar-vr-mr-and-xr
+    front: What usually dominates the cost of immersive projects?
+    back: Content creation and maintenance, integration with enterprise data and device management, rather than headset hardware.
+  - lesson: ar-vr-mr-and-xr
+    front: Why do scale and frequency matter in immersive business cases?
+    back: Content costs are largely fixed, so spreading them over many users and repetitions lowers cost per use; small-scale deployments rarely pay back custom content.
+  - lesson: digital-twins
+    front: What are the three components of a digital twin in Grieves' model?
+    back: The physical entity, the virtual entity, and the data and information connections linking them in both directions.
+  - lesson: digital-twins
+    front: How do digital models, shadows and twins differ (Kritzinger et al., 2018)?
+    back: Model - manual flows both ways; shadow - automatic physical-to-virtual, manual back; twin - automatic flows in both directions.
+  - lesson: digital-twins
+    front: List the five maturity levels of a digital twin.
+    back: Descriptive, diagnostic, predictive, prescriptive and autonomous.
+  - lesson: digital-twins
+    front: Why is the integration and context layer often the hardest part of a twin?
+    back: Data from sensors, control and business systems must be cleaned, time-aligned and linked to consistent asset identifiers; without this, models produce misleading results.
+  - lesson: digital-twins
+    front: Why should digital twin business cases include break-even sensitivity tests?
+    back: Benefits depend heavily on assumed performance, such as loss reduction; a small shortfall can leave savings below running costs, as the water utility example shows.
+  - lesson: digital-twins
+    front: What safeguards are needed when a twin can command physical assets?
+    back: Segmentation, authenticated commands, least privilege, limits on high-impact actions, human approval where safety is affected and override controls.

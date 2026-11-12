@@ -1,0 +1,244 @@
+module: blockchain-and-distributed-technology
+questions:
+  - id: q01
+    lesson: distributed-ledgers-and-consensus
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain why hash-linking makes a blockchain tamper-evident
+    prompt: Why does altering a transaction in an old block become detectable in a blockchain?
+    options:
+      - Because the transaction is encrypted and cannot be decrypted
+      - Because the altered block's hash changes and no longer matches the previous-hash value stored in the next block
+      - Because a central administrator checks every block daily
+      - Because old blocks are deleted automatically
+    answer: 1
+    explanation: Each block stores the hash of its predecessor. Changing any data changes the block's hash, breaking the link to the following block. Hashing is not encryption, there is no central administrator in a distributed ledger, and old blocks are retained.
+  - id: q02
+    lesson: distributed-ledgers-and-consensus
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Evaluate the claim that blockchains guarantee truthful data
+    prompt: Recording supply chain data on a blockchain guarantees that the data is accurate.
+    answer: false
+    explanation: A blockchain preserves whatever is entered. If a false weight or origin is recorded, the false record is preserved faithfully. This oracle or garbage-in problem must be addressed through measurement, inspection and audit.
+  - id: q03
+    lesson: distributed-ledgers-and-consensus
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match consensus mechanisms to their characteristics
+    prompt: Match each consensus mechanism to its defining characteristic.
+    pairs:
+      - left: Proof of work
+        right: Security from computational cost; chain with most accumulated work accepted
+      - left: Proof of stake
+        right: Validators lock up capital that can be slashed for misbehaviour
+      - left: PBFT
+        right: Known validators vote; decisions final once 2f + 1 agree
+    explanation: The mechanisms differ in how they resist fake identities and how finality is reached. PoW uses computation, PoS uses capital at risk, and PBFT uses known identities and voting.
+  - id: q04
+    lesson: distributed-ledgers-and-consensus
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Apply the 3f + 1 rule for Byzantine fault tolerance
+    prompt: A consortium using a PBFT-style protocol wants to tolerate up to 3 malicious validators. What is the minimum number of validators required?
+    options:
+      - 6
+      - 9
+      - 10
+      - 7
+    answer: 2
+    explanation: n = 3f + 1 = 3 x 3 + 1 = 10, with a quorum of 2f + 1 = 7. Nine validators would tolerate only 2 faults; 6 and 7 tolerate 1 and 2 respectively.
+  - id: q05
+    lesson: distributed-ledgers-and-consensus
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for an attack by a majority of mining power
+    prompt: What is the common name for an attack in which a party controlling most of a proof-of-work network's computing power rewrites recent history?
+    answers:
+      - 51% attack
+      - 51 percent attack
+      - majority attack
+    explanation: PoW security assumes an honest majority of computing power. A party with more than half could outpace honest miners and reorganise recent blocks, enabling double-spending.
+  - id: q06
+    lesson: distributed-ledgers-and-consensus
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the choice between permissioned and permissionless ledgers
+    scenario: |
+      Seven Ghanaian organisations in the cocoa supply chain want to share records of bag movements. Prices and volumes are commercially sensitive, all participants are known, and the regulator requires clear accountability for every entry.
+    prompt: Which design is most appropriate?
+    options:
+      - A permissionless proof-of-work blockchain open to anyone
+      - A permissioned ledger with BFT-style consensus among the known organisations
+      - A public proof-of-stake chain with all data visible to everyone
+      - No shared record; each party keeps paper ledgers
+    answer: 1
+    explanation: Known participants, sensitive data and accountability requirements point to a permissioned ledger. BFT-style consensus suits a small number of known validators and gives deterministic finality. Public chains expose data and add unnecessary cost; paper ledgers do not solve reconciliation.
+  - id: q07
+    lesson: distributed-ledgers-and-consensus
+    type: true_false
+    bloom: recall
+    difficulty: easy
+    objective: Recall Ethereum's change of consensus mechanism
+    prompt: Ethereum moved from proof of work to proof of stake in an event known as the Merge in 2022.
+    answer: true
+    explanation: The Merge in September 2022 joined Ethereum's execution layer with the proof-of-stake Beacon Chain, substantially reducing the network's energy use according to the Ethereum Foundation.
+  - id: q08
+    lesson: distributed-ledgers-and-consensus
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate finality properties for business settlement
+    prompt: A bank consortium needs settlement that is final immediately once agreed, with no possibility of later reversal by chain reorganisation. Which approach best meets this need?
+    options:
+      - Proof of work with one confirmation
+      - A BFT-style protocol among known validators
+      - Any public blockchain, because all blockchains are immutable
+      - A single spreadsheet emailed between banks
+    answer: 1
+    explanation: BFT-style protocols provide deterministic finality once a quorum agrees. PoW finality is probabilistic and one confirmation offers weak assurance. Blockchains are not literally immutable, and spreadsheets lack integrity controls.
+  - id: q09
+    lesson: smart-contracts-and-enterprise-blockchain
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain the role of oracles in smart contracts
+    prompt: Why do smart contracts need oracles?
+    options:
+      - To make contracts run faster
+      - To supply external real-world data, such as delivery confirmations, that the deterministic blockchain cannot obtain itself
+      - To encrypt all contract code
+      - To replace consensus mechanisms
+    answer: 1
+    explanation: All nodes must produce identical results, so contracts cannot fetch external data directly. Oracles provide it, which shifts trust to the oracle; a compromised oracle causes the contract to execute wrong outcomes automatically.
+  - id: q10
+    lesson: smart-contracts-and-enterprise-blockchain
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the legal status of smart contracts
+    prompt: Any smart contract deployed on a blockchain is automatically a legally binding contract in every jurisdiction.
+    answer: false
+    explanation: Legal effect depends on the applicable law and surrounding agreements. Businesses usually pair smart contracts with conventional legal agreements covering governing law, disputes and what happens if code and intention diverge.
+  - id: q11
+    lesson: smart-contracts-and-enterprise-blockchain
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply the blockchain decision tree
+    scenario: |
+      A Ghanaian supermarket chain proposes putting its internal stock records on a blockchain. Only the chain's own staff and systems write to the records.
+    prompt: According to the decision tree, what should be recommended?
+    options:
+      - A permissionless blockchain
+      - A permissioned blockchain with public read access
+      - A conventional database, because there is only one writer
+      - A smart contract escrow
+    answer: 2
+    explanation: The decision tree asks early whether there are multiple writers. With a single writer there is no trust problem between parties to solve, so a conventional database is simpler, faster and cheaper.
+  - id: q12
+    lesson: smart-contracts-and-enterprise-blockchain
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Recall Hyperledger Fabric terminology
+    prompt: Match each Hyperledger Fabric term to its meaning.
+    pairs:
+      - left: Chaincode
+        right: Smart contract code
+      - left: Channel
+        right: Private ledger shared by a subset of members
+      - left: Endorsement policy
+        right: Rule specifying which organisations must approve a transaction
+      - left: Ordering service
+        right: Component that sequences transactions into blocks
+    explanation: Fabric's execute-order-validate model uses endorsing peers, an ordering service and validation against endorsement policies; channels address enterprise confidentiality needs.
+  - id: q13
+    lesson: smart-contracts-and-enterprise-blockchain
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the type of vulnerability exploited in The DAO incident
+    prompt: What type of smart contract vulnerability was exploited in The DAO incident of 2016?
+    answers:
+      - reentrancy
+      - re-entrancy
+      - reentrancy vulnerability
+    explanation: A reentrancy flaw allowed repeated withdrawals before the contract updated its balance. The incident led to a contentious hard fork and the continuation of the original chain as Ethereum Classic.
+  - id: q14
+    lesson: smart-contracts-and-enterprise-blockchain
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse reasons for enterprise blockchain failure
+    scenario: |
+      A blockchain trade-documentation platform is launched by one of the largest firms in an industry together with a technology partner. Several competitors decline to join, and after a few years the platform is discontinued for lack of commercial viability.
+    prompt: Which explanation is best supported by network-economics reasoning?
+    options:
+      - The consensus algorithm was too slow
+      - Competitors were reluctant to join a platform led by a rival, so the network never reached sufficient participation
+      - Blockchains cannot store documents
+      - Regulators banned blockchains globally
+    answer: 1
+    explanation: The pattern resembles TradeLens. Platform value depends on participation, and sponsorship by a dominant competitor can deter rivals who fear value capture or information exposure. Neutral governance is often critical.
+  - id: q15
+    lesson: smart-contracts-and-enterprise-blockchain
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a warehouse-receipt proposal
+    prompt: Several Ghanaian banks, warehouses and buyers want digital warehouse receipts for cocoa. A neutral, well-run registry that all parties already trust is willing to operate the system. What is the strongest recommendation?
+    options:
+      - Use a permissionless blockchain to maximise decentralisation
+      - Use a central digital registry with strong audit trails, because an acceptable trusted operator exists
+      - Do nothing, because digital receipts cannot work
+      - Issue a new cryptocurrency for each receipt
+    answer: 1
+    explanation: The decision tree recommends a centrally operated database when an always-online trusted third party is acceptable to all writers. A blockchain adds cost and complexity without solving an unresolved trust problem; issuing cryptocurrencies adds volatility and regulatory risk.
+  - id: q16
+    lesson: smart-contracts-and-enterprise-blockchain
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate the trust assumptions of smart contracts
+    prompt: Smart contracts eliminate the need for trust because code executes exactly as written.
+    answer: false
+    explanation: Trust shifts rather than disappears, towards code authors, auditors, oracles and whoever controls upgrade mechanisms. The DAO incident shows that code executing as written can still produce outcomes participants regard as unacceptable.
+  - id: q17
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Critically evaluate blockchain for a Ghanaian business problem
+    prompt: "Blockchain is a solution in search of a problem. Critically evaluate this statement with reference to consensus mechanisms, smart contracts, the decision of when to use blockchain, and one Ghanaian and one international application."
+    marks: 20
+    structure:
+      - Define distributed ledgers, consensus and smart contracts concisely
+      - Present the case for the statement, including oracle problems, governance failures and database alternatives
+      - Present the case against, identifying conditions where blockchain adds genuine value
+      - Apply a structured decision tree to a Ghanaian application
+      - Use a documented international case to support the argument
+      - Conclude with a nuanced judgement
+    rubric:
+      - criterion: Technical understanding
+        marks: 5
+        descriptor: Accurate explanation of ledgers, consensus types and smart contracts, including finality and permission models
+      - criterion: Critical argument
+        marks: 6
+        descriptor: Balanced evaluation of the statement with clear reasoning on both sides
+      - criterion: Application
+        marks: 6
+        descriptor: Decision tree applied rigorously to a Ghanaian case and an international case used accurately without invented facts
+      - criterion: Conclusion and communication
+        marks: 3
+        descriptor: Nuanced, justified conclusion; logical structure and academic style
+    modelAnswer: |
+      A strong answer opens by explaining that a distributed ledger replicates records among participants who agree on updates through consensus, whether proof of work, proof of stake or BFT-style voting among known validators, and that smart contracts automate logic on the ledger. It then supports the statement: many proposals fail basic tests because a single organisation writes the data or because a trusted operator exists, so a conventional database would be cheaper and faster. The oracle problem means a ledger cannot guarantee that physical reality matches the record, and enterprise consortia often fail for governance reasons, as TradeLens illustrates.
+      The counter-argument identifies genuine value where multiple writers who do not fully trust one another must share state and no operator is acceptable to all; where public verifiability without a gatekeeper matters; or where programmable assets enable new forms of settlement. Walmart's traceability work shows benefits when a powerful participant can drive adoption, though one should ask how much value came from digitisation and standards rather than the ledger itself.
+      Applied to a Ghanaian case, such as cocoa warehouse receipts or land records, the decision tree highlights the pivotal question of whether a neutral trusted registry exists, along with oracle controls such as inspection and audits. A nuanced conclusion argues that blockchain is not inherently a solution in search of a problem, but that its appropriate problem space is narrow, and governance, participation and data quality determine success.
+    explanation: Examiners look for accurate technical grounding, a genuinely two-sided argument, rigorous use of the decision tree, accurate case facts and a nuanced conclusion.

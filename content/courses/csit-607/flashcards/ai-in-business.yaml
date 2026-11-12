@@ -1,0 +1,50 @@
+module: ai-in-business
+cards:
+  - lesson: bi-predictive-analytics-and-forecasting
+    front: How does business intelligence differ from predictive analytics?
+    back: BI integrates and presents historical and current data to show what happened and why; predictive analytics uses models to estimate what is likely to happen, with uncertainty.
+  - lesson: bi-predictive-analytics-and-forecasting
+    front: What are the main layers of a BI architecture?
+    back: Source systems, ETL or ELT pipelines, a data warehouse or lakehouse, and a presentation layer of dashboards and reports, all governed by data definitions, ownership and quality controls.
+  - lesson: bi-predictive-analytics-and-forecasting
+    front: State the simple exponential smoothing formula and the effect of alpha.
+    back: F(t+1) = α × A(t) + (1 − α) × F(t). High α reacts quickly but follows noise; low α is smoother but slower to respond.
+  - lesson: bi-predictive-analytics-and-forecasting
+    front: Why should advanced forecasting models be compared with simple benchmarks?
+    back: Simple methods are often competitive, especially with short or noisy data; a complex model is only justified if it beats them on the same held-out periods.
+  - lesson: bi-predictive-analytics-and-forecasting
+    front: Why is MAPE problematic for slow-moving products?
+    back: It divides by actual values, so it is undefined when sales are zero and is inflated by small denominators; MAE or scaled measures are often better.
+  - lesson: customer-analytics-and-fraud-detection
+    front: What do the letters in RFM stand for and how is recency scored?
+    back: Recency, frequency and monetary value. Recency scores highest for customers who purchased most recently, that is, the fewest days ago.
+  - lesson: customer-analytics-and-fraud-detection
+    front: Why is predicting churn not enough to reduce it?
+    back: Some predicted churners will not respond to an offer and some would stay anyway; uplift-oriented targeting tested with control groups directs spending where it changes behaviour.
+  - lesson: customer-analytics-and-fraud-detection
+    front: Why do fraud systems combine rules, supervised models and anomaly detection?
+    back: Rules are transparent but evadable, supervised models need delayed and incomplete labels, and anomaly detection catches new schemes; layering covers each method's weaknesses.
+  - lesson: customer-analytics-and-fraud-detection
+    front: How should class imbalance be handled in fraud modelling?
+    back: Resample or weight the training data only, choose a cost-sensitive threshold on validation data, and evaluate with precision, recall and PR-AUC rather than accuracy.
+  - lesson: customer-analytics-and-fraud-detection
+    front: Why does fraud detection suffer from concept drift?
+    back: Fraudsters adapt to controls, changing the relationship between features and fraud, so models must be monitored, retrained and fed investigator outcomes.
+  - lesson: customer-analytics-and-fraud-detection
+    front: What ethical lesson does the Target pregnancy-prediction case teach?
+    back: Accurately inferring sensitive traits from ordinary data can feel intrusive and cause harm, so organisations must decide in advance which inferences are acceptable.
+  - lesson: support-automation-and-decision-support
+    front: Why can containment rate be misleading?
+    back: A bot can keep customers from reaching humans without solving their problems. Resolution, verified by absence of repeat contact, and satisfaction must also be measured.
+  - lesson: support-automation-and-decision-support
+    front: When should a support chatbot escalate to a human?
+    back: When intent confidence is low, the customer repeats themselves or shows frustration, or the topic is sensitive such as fraud, PIN compromise, bereavement or health, always passing conversation context.
+  - lesson: support-automation-and-decision-support
+    front: What did Moffatt v. Air Canada (2024) establish for chatbot deployers?
+    back: The tribunal held the airline responsible for incorrect bereavement-fare information from its website chatbot, rejecting the argument that the bot was separately responsible.
+  - lesson: support-automation-and-decision-support
+    front: What are the three components of a decision support system?
+    back: Data management, model management (forecasts, optimisation, simulation, ML predictions) and a user interface, supporting semi-structured decisions.
+  - lesson: support-automation-and-decision-support
+    front: What is automation bias and how can a DSS reduce it?
+    back: Over-reliance on system recommendations even when wrong. Showing key factors and uncertainty, requiring recorded reasons and auditing agreement rates encourage critical use.

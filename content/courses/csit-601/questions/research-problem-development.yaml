@@ -1,0 +1,416 @@
+module: research-problem-development
+questions:
+  # Lesson 1: identifying-problems-and-background
+  - id: q01
+    lesson: identifying-problems-and-background
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish a research topic from a research problem
+    prompt: Which of the following is a research problem rather than a research topic?
+    options:
+      - E-commerce in Ghana
+      - Cybersecurity among university students
+      - Despite supplying tablets, a microfinance institution finds field officers still record data on paper, delaying loan approvals, and the reasons are unclear
+      - Artificial intelligence and small businesses
+    answer: 2
+    explanation: >
+      A research problem specifies an expected state, an actual state and a consequence, and signals what is
+      unknown. The other options are broad topics that name an area of interest without identifying a
+      specific gap to investigate.
+  - id: q02
+    lesson: identifying-problems-and-background
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match examples to sources of research problems
+    prompt: Match each example to the source of the research problem.
+    pairs:
+      - left: Staff ignore a newly introduced HR portal at your workplace
+        right: Professional practice
+      - left: Several published studies report contradictory effects of trust on mobile banking use
+        right: Academic literature
+      - left: A new national cybersecurity law requires organisations to meet new obligations
+        right: Policy and regulation
+      - left: An adoption model built in large firms may not hold in informal family businesses
+        right: Theory
+    explanation: >
+      Problems arise from practice, literature, policy and theory, among other sources. Strong proposals
+      often combine a practical observation with evidence from the literature.
+  - id: q03
+    lesson: identifying-problems-and-background
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate the justification "not studied in Ghana"
+    prompt: Stating that "no one has studied this topic in Ghana" is, on its own, sufficient justification for a dissertation.
+    answer: false
+    explanation: >
+      A context gap is a starting point, not a full justification. The researcher must explain why the
+      Ghanaian context might produce different results or why the knowledge is needed by theory, practice or
+      policy.
+  - id: q04
+    lesson: identifying-problems-and-background
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the name for questioning the assumptions of existing theory
+    prompt: What term do Alvesson and Sandberg use for generating research questions by challenging the assumptions underlying existing literature?
+    answers: [problematisation, problematization]
+    explanation: >
+      Problematisation questions underlying assumptions, whereas gap-spotting identifies neglected or
+      incomplete areas in existing research. Problematisation can lead to more original questions.
+  - id: q05
+    lesson: identifying-problems-and-background
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply feasibility criteria to a candidate problem
+    scenario: |
+      An MSc student with a nine-month timeline and no research funding proposes to survey the chief
+      information officers of every bank in West Africa about AI governance. She has no contacts in banks
+      outside Ghana.
+    prompt: Which criterion does this proposal most clearly fail?
+    options:
+      - Interesting
+      - Feasible
+      - Relevant
+      - Novel
+    answer: 1
+    explanation: >
+      The topic may be interesting, relevant and novel, but access, time and resources make it unrealistic.
+      Narrowing to banks in Ghana, or a small number of accessible institutions, would improve feasibility.
+  - id: q06
+    lesson: identifying-problems-and-background
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the structure of a research background
+    prompt: In a funnel-structured background, what should immediately precede the research problem?
+    options:
+      - The broad global context
+      - A full list of references
+      - A brief signal of what is known and not known in the literature
+      - The detailed data analysis plan
+    answer: 2
+    explanation: >
+      The funnel moves from broad context to national context, specific setting, evidence of the issue and
+      the state of knowledge, then the problem. Global context comes first, and references and analysis
+      plans belong elsewhere.
+  - id: q07
+    lesson: identifying-problems-and-background
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse how a research problem was framed in the M-Pesa research
+    prompt: What made Suri and Jack's research problem on M-Pesa especially significant?
+    options:
+      - It only counted the number of M-Pesa users
+      - It framed the problem around consequences for household welfare, not just usage
+      - It was based on the researchers' personal opinions about mobile money
+      - It assumed results would automatically apply to every country
+    answer: 1
+    explanation: >
+      The study asked whether access to mobile money affected outcomes such as consumption and poverty,
+      which makes the problem significant. It used household survey data, not opinion, and findings from one
+      country should be tested rather than assumed to transfer.
+
+  # Lesson 2: problem-statements-and-scope
+  - id: q08
+    lesson: problem-statements-and-scope
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Identify the components of a problem statement
+    prompt: Which set of components best describes an effective problem statement?
+    options:
+      - Ideal state, current reality, consequences, knowledge gap and purpose
+      - Title, abstract, keywords and references
+      - Hypotheses, sample size and statistical tests
+      - Personal motivation, acknowledgements and timeline
+    answer: 0
+    explanation: >
+      A problem statement shows the discrepancy between what should and what does happen, why it matters,
+      what is unknown and what the study will do. The other options belong to other parts of a proposal.
+  - id: q09
+    lesson: problem-statements-and-scope
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Distinguish delimitations from limitations
+    scenario: |
+      A researcher studying digital payment acceptance chooses to include only registered retailers in one
+      municipality because a sampling frame is available from a business association. Informal traders are
+      therefore excluded.
+    prompt: How should the decision to include only registered retailers be classified?
+    options:
+      - A limitation, because it is a weakness outside the researcher's control
+      - A delimitation, because it is a deliberate boundary chosen and justified by the researcher
+      - An assumption, because it cannot be tested
+      - A hypothesis, because it predicts behaviour
+    answer: 1
+    explanation: >
+      The researcher chose the boundary for a stated reason, so it is a delimitation. The resulting inability
+      to generalise to informal traders is a limitation that should also be reported.
+  - id: q10
+    lesson: problem-statements-and-scope
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Understand the value of stating limitations
+    prompt: Honestly stating limitations, with their likely effects and mitigations, strengthens the credibility of a study.
+    answer: true
+    explanation: >
+      Examiners expect researchers to recognise the boundaries of their claims. Reporting limitations with
+      mitigations shows rigour and prevents overclaiming; concealing them damages credibility.
+  - id: q11
+    lesson: problem-statements-and-scope
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the neutrality of a problem statement
+    prompt: Which purpose statement is most appropriately neutral?
+    options:
+      - This study will prove that poor training causes low EHR use among nurses
+      - This study will show that nurses resist technology
+      - This study examines factors associated with EHR use among nurses in selected district hospitals
+      - This study will confirm that hospital managers are to blame for low EHR use
+    answer: 2
+    explanation: >
+      A neutral statement specifies what will be examined without presuming the answer. The other options
+      presuppose causes or conclusions, which signals bias and makes the study appear designed to confirm a
+      belief.
+  - id: q12
+    lesson: problem-statements-and-scope
+    type: matching
+    bloom: analyse
+    difficulty: medium
+    objective: Classify statements as scope, delimitation or limitation
+    prompt: Match each statement to the concept it illustrates.
+    pairs:
+      - left: The study covers perceived usefulness, perceived risk and adoption intention among SMEs in Greater Accra
+        right: Scope
+      - left: Microenterprises with fewer than five employees are excluded because their decision processes differ
+        right: Delimitation
+      - left: Responses are self-reported and may overstate good practice
+        right: Limitation
+    explanation: >
+      Scope describes coverage, a delimitation is a justified boundary chosen by the researcher, and a
+      limitation is a constraint that may affect findings.
+  - id: q13
+    lesson: problem-statements-and-scope
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for applying findings beyond the sample
+    prompt: What term describes the extent to which findings can be applied beyond the sample or setting studied?
+    answers: [generalisability, generalizability, external validity]
+    explanation: >
+      Generalisability depends on sampling, scope and context. A clearly stated scope helps readers judge
+      how far findings can be transferred.
+  - id: q14
+    lesson: problem-statements-and-scope
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Write limitations that explain effects
+    prompt: Which is the best-written limitation for a cross-sectional survey of AI adoption among SMEs?
+    options:
+      - There was not enough time and money
+      - The cross-sectional design captures one point in time, so relationships are reported as associations rather than causal effects
+      - The researcher did not like the topic
+      - Some respondents were busy
+    answer: 1
+    explanation: >
+      A good limitation names the constraint and explains its effect on interpretation. Time and money, or
+      busy respondents, are vague unless their consequences for the findings are explained, and personal
+      feelings are not limitations.
+
+  # Lesson 3: objectives-questions-and-hypotheses
+  - id: q15
+    lesson: objectives-questions-and-hypotheses
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Identify a well-written research objective
+    prompt: Which is the best-formulated research objective?
+    options:
+      - To understand cybersecurity
+      - To distribute questionnaires to students
+      - To assess the influence of security training on students' password practices
+      - To know more about phishing
+    answer: 2
+    explanation: >
+      A good objective is specific and measurable and uses an action verb such as assess. "Understand" and
+      "know" are vague, and distributing questionnaires is a method rather than an objective.
+  - id: q16
+    lesson: objectives-questions-and-hypotheses
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Recognise when hypotheses are appropriate
+    prompt: An interpretivist study exploring how owner-managers make sense of AI tools should normally include formal hypotheses.
+    answer: false
+    explanation: >
+      Hypotheses suit deductive quantitative studies that test predictions. Interpretivist studies build
+      understanding inductively and use open research questions; adding hypotheses signals philosophical
+      incoherence.
+  - id: q17
+    lesson: objectives-questions-and-hypotheses
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Write a correct null hypothesis
+    prompt: Which is the correct null hypothesis for testing whether trust influences retailers' intention to accept mobile money?
+    options:
+      - Trust has a significant positive relationship with intention to accept mobile money
+      - Trust has no significant relationship with intention to accept mobile money
+      - Does trust influence intention to accept mobile money?
+      - Retailers should trust mobile money more
+    answer: 1
+    explanation: >
+      The null hypothesis states no relationship. The first option is the alternative hypothesis, the third
+      is a research question, and the fourth is a normative recommendation.
+  - id: q18
+    lesson: objectives-questions-and-hypotheses
+    type: matching
+    bloom: analyse
+    difficulty: medium
+    objective: Classify research questions by type
+    prompt: Match each research question to its type.
+    pairs:
+      - left: What is the level of EHR use among nurses?
+        right: Descriptive
+      - left: What is the relationship between perceived usefulness and intention to use AI tools?
+        right: Relational
+      - left: Does a training module reduce susceptibility to simulated phishing emails?
+        right: Causal
+      - left: How do nurses adapt their routines after EHR introduction?
+        right: Exploratory or process
+    explanation: >
+      Question type shapes design. Causal questions need experimental or quasi-experimental designs, while
+      exploratory process questions suit qualitative approaches.
+  - id: q19
+    lesson: objectives-questions-and-hypotheses
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the alignment of a research design
+    scenario: |
+      A proposal's aim is to examine factors influencing e-commerce adoption among small businesses. Its
+      objectives concern customer satisfaction with delivery services, and its hypotheses test the effect of
+      website quality on customer loyalty.
+    prompt: What is the most serious problem?
+    options:
+      - The proposal has too few hypotheses
+      - The aim, objectives and hypotheses address different phenomena, so the study is misaligned
+      - E-commerce cannot be studied quantitatively
+      - Website quality is not a valid construct
+    answer: 1
+    explanation: >
+      The elements describe three different studies, so the design is incoherent. The number of hypotheses
+      is secondary, e-commerce is commonly studied quantitatively, and website quality is a legitimate
+      construct in the right study.
+  - id: q20
+    lesson: objectives-questions-and-hypotheses
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the tool for checking alignment
+    prompt: What table maps each objective to its research question, hypothesis, data and analysis to check alignment?
+    answers: [consistency matrix, alignment matrix]
+    explanation: >
+      A consistency matrix exposes gaps, such as hypotheses with unmeasured variables, before data collection
+      when they are still easy to fix.
+  - id: q21
+    lesson: objectives-questions-and-hypotheses
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Derive hypotheses from UTAUT
+    prompt: According to UTAUT (Venkatesh et al., 2003), which hypothesis is most directly grounded in the model?
+    options:
+      - Facilitating conditions positively influence use behaviour
+      - Website colour positively influences behavioural intention
+      - Perceived enjoyment is the main predictor of use in all contexts
+      - Behavioural intention has no role in technology use
+    answer: 0
+    explanation: >
+      UTAUT proposes that facilitating conditions influence use behaviour, alongside performance expectancy,
+      effort expectancy and social influence shaping intention. Website colour and perceived enjoyment are not
+      core UTAUT constructs, and intention is central to the model.
+
+  # Module-level case analysis
+  - id: q22
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    marks: 25
+    objective: Develop an aligned problem statement, objectives and hypotheses for a Ghanaian study
+    prompt: >
+      Critically evaluate the draft proposal in the case and produce an improved problem statement, aim,
+      objectives, research questions and hypotheses, together with a statement of scope, delimitations and
+      limitations.
+    case: |
+      Illustrative scenario. Yaw, an MSc IT for Business student, works for a fintech start-up in Accra. His
+      draft proposal states: "Digital payments are very important. Many retailers in Ghana do not use them.
+      This study will prove that retailers are afraid of technology. Objectives: (1) to understand digital
+      payments; (2) to give questionnaires to retailers; (3) to recommend solutions. Hypothesis: Website
+      design affects customer loyalty. The study will cover all retailers in Ghana. Limitation: lack of time."
+      Yaw has permission to recruit retailers who are registered with a traders' association in two Accra
+      markets and intends to use UTAUT.
+    structure:
+      - Diagnose weaknesses in the problem statement, objectives, hypothesis and scope
+      - Rewrite the problem statement using ideal state, reality, consequences, gap and purpose
+      - Formulate an aim, three SMART objectives and matching research questions
+      - Derive two or three hypotheses from UTAUT
+      - State scope, justified delimitations and limitations with mitigations
+      - Present a brief consistency matrix
+    rubric:
+      - criterion: Diagnosis of weaknesses
+        marks: 5
+        descriptor: Identifies vagueness, presumed conclusion, method-as-objective, misaligned hypothesis and infeasible scope.
+      - criterion: Revised problem statement
+        marks: 5
+        descriptor: Specific, neutral, evidence-aware statement containing all five components.
+      - criterion: Aim, objectives and questions
+        marks: 6
+        descriptor: One aim, SMART objectives with measurable verbs and matching questions.
+      - criterion: Hypotheses grounded in theory
+        marks: 4
+        descriptor: Testable hypotheses derived correctly from UTAUT constructs.
+      - criterion: Scope, delimitations and limitations
+        marks: 5
+        descriptor: Clearly separated, justified boundaries and limitations with effects and mitigations.
+    modelAnswer: |
+      A strong answer first diagnoses the draft. The problem statement is vague and unsupported ("very
+      important", "many retailers"), and it presumes its conclusion ("will prove that retailers are afraid").
+      Objective 1 uses an unmeasurable verb, objective 2 is a method, and objective 3 is an outcome rather
+      than a research step. The hypothesis concerns customer loyalty and website design, which are unrelated
+      to retailer adoption. Covering "all retailers in Ghana" is infeasible, and "lack of time" is not
+      explained in terms of its effect on findings.
+
+      The revised problem statement might read: digital payment platforms are expected to make transactions
+      faster and safer for merchants; however, available evidence suggests that many market retailers still
+      rely mainly on cash (to be supported with verified sources); this may limit traders' access to digital
+      records and financial services; existing research focuses more on consumers than on merchants in
+      Ghanaian markets; this study therefore examines factors influencing retailers' intention to accept
+      digital payments in two Accra markets.
+
+      Aim: to examine factors influencing retailers' intention to accept digital payments in selected Accra
+      markets. Objectives: to assess the influence of performance expectancy on intention; to assess the
+      influence of effort expectancy on intention; to examine the influence of facilitating conditions on
+      actual acceptance. Each objective has a matching question. Hypotheses: H1 performance expectancy
+      positively influences intention; H2 effort expectancy positively influences intention; H3 facilitating
+      conditions positively influence acceptance behaviour.
+
+      Scope: UTAUT constructs, registered retailers in two Accra markets, one data collection period.
+      Delimitations: registered retailers only, because a sampling frame is available through the
+      association. Limitations: results may not generalise to informal traders; self-reported data may be
+      affected by social desirability (mitigated by anonymity); Yaw's employment in fintech creates potential
+      bias (mitigated by declaring the interest and making participation voluntary). A short consistency
+      matrix confirms alignment.
+    explanation: >
+      Examiners reward accurate diagnosis, a neutral and specific problem statement, alignment between all
+      elements, hypotheses genuinely derived from UTAUT, and careful separation of scope, delimitations and
+      limitations, including the insider-researcher issue.

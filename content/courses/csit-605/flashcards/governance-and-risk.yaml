@@ -1,0 +1,56 @@
+module: governance-and-risk
+cards:
+  - lesson: security-governance-and-policies
+    front: How does security governance differ from security management?
+    back: Governance (board and executives) sets direction, risk appetite and accountability and demands assurance; management plans, builds, runs and monitors the programme within that direction.
+  - lesson: security-governance-and-policies
+    front: What are the four main levels of the security policy hierarchy?
+    back: Policies (short, mandatory intent), standards (mandatory specifics, including baselines), procedures (step-by-step instructions) and guidelines (recommended advice).
+  - lesson: security-governance-and-policies
+    front: Summarise the Three Lines Model.
+    back: First line owns and manages risk day to day; second line provides expertise, oversight and challenge (for example the CISO); third line, internal audit, provides independent assurance to the governing body.
+  - lesson: security-governance-and-policies
+    front: Data owner versus data custodian?
+    back: The owner is a senior business role accountable for the data, its classification and access approvals; the custodian (often IT) implements and operates the protective controls.
+  - lesson: security-governance-and-policies
+    front: What does Ghana's Cybersecurity Act, 2020 (Act 1038) establish?
+    back: The Cyber Security Authority, a framework for protecting Critical Information Infrastructure with obligations such as incident reporting, and licensing and accreditation of cybersecurity providers, establishments and professionals.
+  - lesson: security-governance-and-policies
+    front: Why is CISO reporting line a governance issue?
+    back: If the CISO reports only through IT, reporting on IT's own failures can be suppressed; independent access to the CEO, risk function or a board committee protects objective risk reporting.
+  - lesson: risk-assessment-and-nist-csf
+    front: What are the four steps of risk assessment in NIST SP 800-30 Rev. 1?
+    back: Prepare for the assessment, conduct it, communicate the results, and maintain it over time.
+  - lesson: risk-assessment-and-nist-csf
+    front: How is a risk scored on a five-by-five matrix, and what must follow?
+    back: Score = likelihood × impact; the band is compared with risk appetite, and a treatment, owner and target residual rating are recorded.
+  - lesson: risk-assessment-and-nist-csf
+    front: Name and describe the six NIST CSF 2.0 Functions.
+    back: Govern (strategy, roles, policy, oversight), Identify (understand current risks), Protect (use safeguards), Detect (find and analyse attacks), Respond (act on incidents), Recover (restore assets and operations).
+  - lesson: risk-assessment-and-nist-csf
+    front: Why was Govern placed at the centre of CSF 2.0?
+    back: Because cybersecurity risk management strategy, roles, policy, oversight and supply chain risk inform how every other Function is carried out.
+  - lesson: risk-assessment-and-nist-csf
+    front: CSF Profiles versus Tiers?
+    back: Profiles describe current and target outcomes from the Core; Tiers (Partial, Risk Informed, Repeatable, Adaptive) describe the rigour of risk governance and management practices.
+  - lesson: risk-assessment-and-nist-csf
+    front: Why does cyber insurance not fully transfer cyber risk?
+    back: It offsets some financial loss, but legal duties, regulatory accountability, operational disruption and reputational harm remain with the organisation.
+  - lesson: incident-response-continuity-and-audit
+    front: List the NIST SP 800-61 Rev. 2 incident response phases.
+    back: Preparation; Detection and Analysis; Containment, Eradication and Recovery; Post-Incident Activity, used iteratively.
+  - lesson: incident-response-continuity-and-audit
+    front: Why should evidence be preserved before systems are wiped?
+    back: Evidence reveals scope, entry point and attacker persistence and may be needed for legal or regulatory purposes; wiping first can leave other footholds undetected.
+  - lesson: incident-response-continuity-and-audit
+    front: What does a business impact analysis produce?
+    back: A list of critical processes, impact over time, maximum tolerable downtime, dependencies, and RTO and RPO targets for supporting systems.
+  - lesson: incident-response-continuity-and-audit
+    front: Distinguish IRP, BCP and DRP.
+    back: The IRP handles the security incident; the BCP keeps critical business processes running; the DRP restores IT systems and data. They must be co-ordinated.
+  - lesson: incident-response-continuity-and-audit
+    front: Design effectiveness versus operating effectiveness in audits?
+    back: Design asks whether the control would address the risk as designed; operating effectiveness asks whether it actually worked consistently over the period tested.
+  - lesson: incident-response-continuity-and-audit
+    front: What incident response lessons does the SolarWinds/FireEye case offer?
+    back: Monitor identity events (FireEye noticed an unexpected MFA device registration), scope across the supply chain, hunt for persistence, and share information and countermeasures transparently.

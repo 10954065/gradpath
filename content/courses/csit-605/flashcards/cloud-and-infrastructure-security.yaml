@@ -1,0 +1,56 @@
+module: cloud-and-infrastructure-security
+cards:
+  - lesson: cloud-security-and-identity-management
+    front: What is the core message of the shared responsibility model?
+    back: The provider secures the cloud (facilities, hardware, hypervisor, network); the customer secures what it puts in the cloud, and data and identities are always the customer's duty whatever the service model.
+  - lesson: cloud-security-and-identity-management
+    front: Why is identity described as the new perimeter in cloud computing?
+    back: Management consoles and APIs are reachable over the internet, so anyone with valid credentials can control resources; strong identity controls replace the physical and network boundary.
+  - lesson: cloud-security-and-identity-management
+    front: Name the five essential characteristics of cloud computing in NIST SP 800-145.
+    back: On-demand self-service, broad network access, resource pooling, rapid elasticity and measured service.
+  - lesson: cloud-security-and-identity-management
+    front: Why should workloads use roles rather than static access keys?
+    back: Roles issue short-lived credentials automatically, so nothing long-lived is stored in code or configuration to leak; exposure windows shrink and rotation is built in.
+  - lesson: cloud-security-and-identity-management
+    front: How did the Capital One 2019 breach illustrate shared responsibility?
+    back: A customer-side WAF misconfiguration enabled SSRF to the metadata service, yielding role credentials whose broad storage permissions allowed bulk data access; the provider's infrastructure was not breached.
+  - lesson: cloud-security-and-identity-management
+    front: What does federation give an organisation for cloud access?
+    back: Central sign-in with corporate MFA and single sign-on, and automatic removal of cloud access when a leaver's corporate account is disabled.
+  - lesson: configuration-security-and-data-protection
+    front: Why is misconfiguration so common in cloud environments?
+    back: Self-service speed, enormous configuration complexity and the invisibility of exposure, combined with attackers' automated internet-wide scanning.
+  - lesson: configuration-security-and-data-protection
+    front: What makes a data classification scheme effective?
+    back: Few simple levels, clear owners for each dataset, and concrete handling rules and technical controls mapped to each label.
+  - lesson: configuration-security-and-data-protection
+    front: Tokenisation versus masking?
+    back: Tokenisation replaces the real value with a surrogate and stores the original in a secured vault; masking displays only part of the value to users while the full value still exists in the system.
+  - lesson: configuration-security-and-data-protection
+    front: Why is encryption "only as strong as its key management"?
+    back: If keys are stored with the data, widely accessible or never rotated, an attacker who reaches the data can usually reach the keys; separation, restricted access, rotation and logging are essential.
+  - lesson: configuration-security-and-data-protection
+    front: What were the configuration and governance lessons of the Uber 2016 breach?
+    back: Cloud credentials stored in a code repository enabled mass data access; concealing the breach by paying attackers turned it into a legal and reputational crisis.
+  - lesson: configuration-security-and-data-protection
+    front: How does infrastructure as code improve configuration security?
+    back: Settings become version-controlled, peer-reviewed, automatically scanned before deployment and reproducible, and drift can be detected against the template.
+  - lesson: backup-and-disaster-recovery
+    front: What do the extra "1" and "0" add in 3-2-1-1-0?
+    back: One immutable or offline copy that survives an attacker with admin rights, and zero errors on verified restore tests.
+  - lesson: backup-and-disaster-recovery
+    front: "RPO versus RTO: what does each drive?"
+    back: RPO (maximum data loss) drives backup or replication frequency; RTO (maximum downtime) drives restore capability such as throughput, standby systems and procedures.
+  - lesson: backup-and-disaster-recovery
+    front: How do you check a design against RPO and RTO?
+    back: Worst-case data loss = time since last recoverable copy; recovery time = data size ÷ restore throughput + provisioning and verification overheads; compare each with the targets.
+  - lesson: backup-and-disaster-recovery
+    front: Compare hot, warm and cold DR sites.
+    back: Hot is fully equipped with replicated data (minutes to hours, high cost); warm has some equipment and restores from backups (hours to days); cold provides space and power only (days to weeks, low cost).
+  - lesson: backup-and-disaster-recovery
+    front: Why is replication not a backup?
+    back: It copies every change, including deletion, corruption and ransomware encryption, to the replica; isolated point-in-time copies are needed to restore a clean state.
+  - lesson: backup-and-disaster-recovery
+    front: What is the Ghana connection in Maersk's NotPetya recovery?
+    back: A domain controller in Maersk's Ghana office survived because a power outage had taken it offline, and it was used to rebuild the company's Active Directory.

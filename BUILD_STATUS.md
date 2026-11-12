@@ -18,7 +18,7 @@ _Last updated: 2026-11-12_
 | 1. Audit and foundation | Done | Toolchain, configs, content spec + validator, docs |
 | 2. Database and security | Done | 5 migrations, RLS on every table, server-side scoring, seed generator, 25 integration tests passing |
 | 3. Design system | Done | Tokens, light/dark themes, UI primitives, sidebar + mobile drawer + bottom nav, auth screens, onboarding, settings, PWA icons |
-| 4. Curriculum engine | Pending | Content authoring in progress (see CURRICULUM_STATUS.md) |
+| 4. Curriculum engine | Done | All 7 courses authored: 159/159 lessons (~430k words), 1,161 practice questions, 919 flashcards, 76 resources; 225 URLs checked (196 reachable, 26 blocked automated checks, 3 unreachable). Course catalogue, course overview, lesson reader (TOC, progress, text size, dark reading, Mermaid), library, resources |
 | 5. Learning progress | Pending | |
 | 6. Assessments | Pending | |
 | 7. Productivity | Pending | |
@@ -54,5 +54,12 @@ Not ready — application build in progress.
 
 ## Continuation instructions
 
-Start the local stack with `npx supabase start`, then continue with the first phase above marked
-Pending.
+1. `npx supabase start` (Studio/analytics/realtime/edge runtime are disabled in config.toml), then
+   `npx supabase db reset` to apply migrations and `supabase/seed.sql`.
+2. Write `.env.local` from `npx supabase status -o json` (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`).
+3. `npm run dev`. Content changes: edit `content/`, run `npm run content:build`, then `npx supabase db reset`.
+4. Remaining routes to build are listed in `src/routes/router.tsx` (`shellRoutes`): dashboard, planner,
+   timetable, assignments, assessments (+ runner/results), mock exams, revision, flashcards, notes,
+   progress, announcements, notifications, search, admin. Services for courses, progress, notes,
+   assessments, notifications and offline sync already exist in `src/services/`.
+5. Continue with the first phase above marked Pending.

@@ -1,0 +1,395 @@
+module: machine-learning
+questions:
+  - id: q01
+    lesson: learning-paradigms
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish learning paradigms by type of feedback
+    prompt: What primarily distinguishes supervised, unsupervised and reinforcement learning?
+    options:
+      - The programming language used to implement them
+      - The type of feedback available, whether labels, none, or rewards from interaction
+      - The size of the dataset
+      - Whether the model runs in the cloud or on premises
+    answer: 1
+    explanation: The paradigms are defined by feedback. Supervised learning has a known label for each example, unsupervised learning has no labels, and reinforcement learning receives rewards after actions in an environment. Language, dataset size and hosting location do not define the paradigm.
+
+  - id: q02
+    lesson: learning-paradigms
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Select a paradigm for a business problem
+    scenario: |
+      Illustrative scenario. A supermarket chain in Kumasi has three years of loyalty-card purchase records but no predefined customer categories. Managers want to discover what kinds of shoppers exist in order to design new promotions.
+    prompt: Which approach is most appropriate?
+    options:
+      - Supervised classification using customer type as the label
+      - Unsupervised clustering of customers on purchasing behaviour
+      - Reinforcement learning with promotions as rewards
+      - Linear regression predicting customer identifiers
+    answer: 1
+    explanation: There is no label for customer type, and the aim is to discover structure, so clustering fits. Supervised classification would need existing labels, reinforcement learning addresses sequential decisions with rewards, and customer identifiers carry no generalisable meaning.
+
+  - id: q03
+    lesson: learning-paradigms
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match reinforcement learning concepts to their meaning
+    prompt: Match each reinforcement learning term to its meaning.
+    pairs:
+      - left: Policy
+        right: A rule mapping states of the environment to actions
+      - left: Reward
+        right: A numerical signal of how good an action's immediate outcome was
+      - left: Exploration
+        right: Trying actions whose value is uncertain to gain information
+      - left: Exploitation
+        right: Choosing actions already known to perform well
+      - left: Reward hacking
+        right: Maximising a mis-specified reward in unintended ways
+    explanation: These concepts capture what makes RL distinct from supervised learning. The agent's actions influence future data, so it must balance exploration and exploitation and its reward must be designed carefully.
+
+  - id: q04
+    lesson: learning-paradigms
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain how large language models are pre-trained
+    prompt: Large language models are mainly pre-trained through self-supervised learning, such as predicting the next token, rather than through humans labelling every example.
+    answer: true
+    explanation: Self-supervised learning creates prediction targets from the data itself, allowing training on vast unlabelled text. Human feedback is typically used later, in refinement stages such as reinforcement learning from human feedback.
+
+  - id: q05
+    lesson: learning-paradigms
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Identify the known outcome in supervised learning
+    prompt: In supervised learning, what is the term for the known outcome a model learns to predict?
+    answers:
+      - label
+      - target
+      - the label
+      - target variable
+    explanation: The label (or target) is the outcome recorded for each training example, such as defaulted or repaid. Features are the inputs used to predict it.
+
+  - id: q06
+    lesson: learning-paradigms
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse selection bias in supervised labels
+    prompt: A digital lender trains a default model using only loans it previously approved. What is the main analytical problem?
+    options:
+      - The model will be unable to compute probabilities
+      - The labels exist only for previously approved applicants, so the model learns nothing about the rejected population
+      - Default is a regression target, not a classification target
+      - Approved loans contain no features
+    answer: 1
+    explanation: This is selection bias. Outcomes are only observed for applicants the old process accepted, so the model may perform poorly on people unlike past approvals. Logistic models can still output probabilities, default is a classification target, and approved loans do have features.
+
+  - id: q07
+    lesson: classification-and-regression
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Compute a linear regression prediction
+    prompt: A model is predicted sales = 1.7 + 1.5 × promo spend (both in hundreds). What is predicted sales when promo spend is 4?
+    options:
+      - "6.2"
+      - "7.7"
+      - "5.7"
+      - "8.0"
+    answer: 1
+    explanation: 1.7 + 1.5 × 4 = 1.7 + 6.0 = 7.7 hundred units. A value of 6.2 is the mean of y, 5.7 omits part of the slope term, and 8.0 is the actual week-4 value in the lesson's data, not the prediction.
+
+  - id: q08
+    lesson: classification-and-regression
+    type: mcq
+    bloom: apply
+    difficulty: hard
+    objective: Apply the sigmoid function in logistic regression
+    prompt: A logistic regression model produces a linear score z = 0 for an applicant. What is the predicted probability of the positive class?
+    options:
+      - "0"
+      - "0.5"
+      - "1"
+      - It cannot be determined without the threshold
+    answer: 1
+    explanation: The sigmoid is 1 / (1 + e^(−z)). With z = 0, e^0 = 1, so p = 1 / 2 = 0.5. The threshold is used to turn the probability into a decision, not to compute the probability.
+
+  - id: q09
+    lesson: classification-and-regression
+    type: short_answer
+    bloom: apply
+    difficulty: hard
+    objective: Compute Gini impurity of a node
+    prompt: A decision tree node contains 4 churners and 4 non-churners. What is its Gini impurity? Give a decimal.
+    answers:
+      - "0.5"
+      - "0.50"
+      - ".5"
+    explanation: Gini = 1 − (0.5² + 0.5²) = 1 − 0.5 = 0.5, the maximum for two classes. A pure node would have Gini 0.
+
+  - id: q10
+    lesson: classification-and-regression
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Interpret regression coefficients correctly
+    prompt: A positive regression coefficient on promotional spend proves that promotions cause higher sales.
+    answer: false
+    explanation: Coefficients describe associations in the observed data. Other factors, such as promotions being run in festive weeks, may explain the relationship. Causal claims require experiments or careful causal analysis.
+
+  - id: q11
+    lesson: classification-and-regression
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate model choice in a regulated context
+    scenario: |
+      Illustrative scenario. A rural bank compares a logistic regression model and a gradient-boosted tree for loan screening. The boosted model is slightly more accurate on held-out data. The bank must explain decisions to applicants and its board.
+    prompt: Which decision is best justified?
+    options:
+      - Deploy the boosted model because accuracy is the only relevant criterion
+      - Deploy the logistic model with a reviewed threshold and monitor the boosted model as a challenger
+      - Deploy neither, because machine learning cannot be used in lending
+      - Average the two models' coefficients
+    answer: 1
+    explanation: In a regulated, high-impact setting, a small accuracy gain may not outweigh the explainability and predictability of logistic regression. Keeping the boosted model as a challenger preserves learning. Accuracy is not the only criterion, ML is used in lending with safeguards, and tree ensembles do not have coefficients to average.
+
+  - id: q12
+    lesson: classification-and-regression
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Match model types to business tasks
+    prompt: Match each business task to the most natural model framing.
+    pairs:
+      - left: Predicting next week's units sold of rice per branch
+        right: Regression
+      - left: Estimating the probability that an applicant defaults
+        right: Logistic regression
+      - left: Producing transparent if-then rules for triaging support tickets
+        right: Shallow decision tree
+      - left: Combining many trees trained on random samples for higher accuracy
+        right: Random forest
+    explanation: Quantities call for regression, probabilities of a category for logistic regression, readable rules for a shallow tree, and higher accuracy at some loss of transparency for ensembles such as random forests.
+
+  - id: q13
+    lesson: clustering
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Describe the k-means update step
+    prompt: In k-means, how is each centroid updated after points are assigned?
+    options:
+      - It moves to the point furthest from it
+      - It becomes the mean of the points assigned to it
+      - It is chosen at random again
+      - It becomes the median of all points in the dataset
+    answer: 1
+    explanation: The update step sets each centroid to the mean of its assigned points, which reduces the within-cluster sum of squares. Random reselection happens only at initialisation, and the dataset-wide median ignores cluster membership.
+
+  - id: q14
+    lesson: clustering
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply a k-means assignment
+    scenario: |
+      Illustrative scenario. Two centroids are at c1 = (1, 1.5) and c2 = (5.25, 4.5). A customer is at (2, 1) using features visits per month and basket value in hundreds of cedis.
+    prompt: To which centroid is the customer assigned, using Euclidean distance?
+    options:
+      - c1, because its squared distance is 1.25 compared with about 22.8 for c2
+      - c2, because it has more members
+      - c2, because its squared distance is smaller
+      - Neither, because the point lies between them
+    answer: 0
+    explanation: Distance squared to c1 is (2 − 1)² + (1 − 1.5)² = 1.25, and to c2 is (2 − 5.25)² + (1 − 4.5)² ≈ 22.81. The nearer centroid is c1. Cluster size plays no role in assignment, and every point is always assigned to some centroid.
+
+  - id: q15
+    lesson: clustering
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the effect of feature scaling
+    prompt: If annual spend in cedis and visits per month are used without scaling in k-means, annual spend will tend to dominate the clustering.
+    answer: true
+    explanation: k-means relies on distances, and spend values in hundreds or thousands vary far more than visit counts, so distance is driven by spend. Standardising each feature to mean 0 and standard deviation 1 gives them comparable influence.
+
+  - id: q16
+    lesson: clustering
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Name a method for choosing the number of clusters
+    prompt: Name the heuristic that plots within-cluster sum of squares against k and looks for a bend where improvements slow sharply.
+    answers:
+      - elbow method
+      - elbow
+      - the elbow method
+    explanation: The elbow method is widely used but often ambiguous, so it should be combined with silhouette analysis and business actionability.
+
+  - id: q17
+    lesson: clustering
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse algorithm suitability for anomaly screening
+    prompt: Why might DBSCAN suit screening mobile money wallet behaviour better than k-means?
+    options:
+      - DBSCAN requires k in advance, which simplifies tuning
+      - DBSCAN finds irregularly shaped dense clusters and labels isolated points as noise, which highlights unusual wallets
+      - DBSCAN only works on categorical variables
+      - DBSCAN guarantees the global optimum of WCSS
+    answer: 1
+    explanation: DBSCAN groups dense regions and marks sparse points as noise, a natural fit for spotting unusual behaviour. It does not require k, it works on numeric distances, and it does not optimise WCSS.
+
+  - id: q18
+    lesson: clustering
+    type: true_false
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the choice of k against business constraints
+    prompt: The clustering solution with the lowest within-cluster sum of squares should always be chosen for a marketing segmentation.
+    answer: false
+    explanation: WCSS always falls as k increases, reaching zero when every customer is its own cluster. A useful segmentation balances fit with stability, interpretability and the number of distinct actions the organisation can actually take.
+
+  - id: q19
+    lesson: training-and-evaluation
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Compute precision from a confusion matrix
+    prompt: A fraud model has TP = 40, FP = 60, FN = 10 and TN = 890. What is its precision?
+    options:
+      - "0.80"
+      - "0.40"
+      - "0.93"
+      - "0.53"
+    answer: 1
+    explanation: Precision = TP / (TP + FP) = 40 / 100 = 0.40. The value 0.80 is recall (40 / 50), 0.93 is accuracy and 0.53 is F1.
+
+  - id: q20
+    lesson: training-and-evaluation
+    type: short_answer
+    bloom: apply
+    difficulty: hard
+    objective: Compute F1 from precision and recall
+    prompt: A model has precision 0.5 and recall 0.5. What is its F1 score? Give a decimal.
+    answers:
+      - "0.5"
+      - "0.50"
+      - ".5"
+    explanation: F1 = 2 × 0.5 × 0.5 / (0.5 + 0.5) = 0.5 / 1 = 0.5. When precision equals recall, F1 equals both; when they differ, the harmonic mean is pulled towards the lower value.
+
+  - id: q21
+    lesson: training-and-evaluation
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Diagnose overfitting from training and validation results
+    scenario: |
+      Illustrative scenario. A churn model reaches 99 per cent accuracy on training data but only 72 per cent on validation data drawn from a later month.
+    prompt: What is the most likely diagnosis and remedy?
+    options:
+      - Underfitting; add more layers or depth
+      - Overfitting; simplify or regularise the model and check for leakage
+      - A perfect model; deploy immediately
+      - The validation data are wrong; discard them
+    answer: 1
+    explanation: A large gap between training and validation performance indicates overfitting. Remedies include reducing complexity, regularisation, more data and checking that no leaking features inflate training results. Adding complexity would worsen the problem, and discarding inconvenient validation data defeats evaluation.
+
+  - id: q22
+    lesson: training-and-evaluation
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the accuracy paradox
+    prompt: When only 5 per cent of transactions are fraudulent, a model that labels every transaction legitimate achieves 95 per cent accuracy while catching no fraud.
+    answer: true
+    explanation: This is the accuracy paradox. Under class imbalance, accuracy rewards predicting the majority class. Recall would be 0, revealing the model's uselessness.
+
+  - id: q23
+    lesson: training-and-evaluation
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match evaluation concepts to definitions
+    prompt: Match each concept to its definition.
+    pairs:
+      - left: Validation set
+        right: Held-out data used to compare models and tune hyperparameters
+      - left: Test set
+        right: Data used once at the end for an unbiased performance estimate
+      - left: Data leakage
+        right: Information unavailable at prediction time entering training
+      - left: Recall
+        right: Proportion of actual positives correctly identified
+      - left: Hyperparameter
+        right: A setting chosen before training, such as tree depth
+    explanation: Keeping these roles separate is the foundation of honest evaluation. Using the test set for tuning or allowing leakage both produce over-optimistic estimates.
+
+  - id: q24
+    lesson: training-and-evaluation
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate data splitting for forecasting
+    scenario: |
+      Illustrative scenario. An analyst forecasting weekly supermarket demand randomly shuffles two years of weekly records into training and test sets and reports very low error.
+    prompt: What is the strongest criticism of this evaluation?
+    options:
+      - Random splitting lets the model learn from weeks after the test weeks, so the error estimate is optimistic
+      - Two years is too much data for forecasting
+      - Demand forecasting should be evaluated with precision and recall
+      - The test set should always be larger than the training set
+    answer: 0
+    explanation: Forecasts must be evaluated on genuinely future periods. A time-based split, training on earlier weeks and testing on later weeks, mimics deployment. More data is generally helpful, regression metrics suit quantities, and test sets are normally smaller than training sets.
+
+  - id: q25
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Design and justify an end-to-end supervised learning evaluation for a business problem
+    marks: 25
+    prompt: |
+      A Ghanaian telecommunications operator wants to predict which prepaid subscribers will churn within the next 60 days so that it can target retention offers. Critically discuss how you would frame the problem, prepare and split the data, select and train models, and evaluate them, justifying your choice of metrics and threshold in business terms.
+    structure:
+      - Frame as supervised classification; define the label and prediction horizon
+      - Identify features available at prediction time and discuss leakage
+      - Propose a time-based split with validation and test sets, and baselines
+      - Compare candidate models such as logistic regression and decision trees, addressing overfitting
+      - Justify metrics (precision, recall, F1, precision at top k) and a cost-based threshold
+      - Address monitoring, fairness and data protection
+    rubric:
+      - criterion: Problem framing
+        marks: 4
+        descriptor: Clear label definition, horizon and link to the retention decision
+      - criterion: Data preparation and leakage
+        marks: 5
+        descriptor: Realistic features, explicit leakage checks, handling of class imbalance
+      - criterion: Splitting and model selection
+        marks: 6
+        descriptor: Time-based split, validation versus test roles, baselines, overfitting control
+      - criterion: Metrics and threshold
+        marks: 6
+        descriptor: Correct metric definitions and a cost-based, capacity-aware threshold with worked reasoning
+      - criterion: Critical evaluation
+        marks: 4
+        descriptor: Discusses limitations, monitoring, fairness and Act 843 obligations
+    modelAnswer: |
+      A strong answer frames the task as binary classification, with the label "no top-up or activity in the 60 days after the scoring date". The decision is which subscribers receive a retention offer, so the model output should rank subscribers by churn probability.
+
+      Features must be available on the scoring date, for example recent top-up frequency and value, change in data usage, complaint counts, network-quality indicators and tenure. Any field recorded after the scoring date, such as a deactivation flag, would leak. Churners may be a minority, so stratification and imbalance-aware metrics are needed.
+
+      Data should be split by time, training on earlier scoring months, validating on a later month to tune hyperparameters and choose between models, and testing once on the most recent month. Baselines include "predict no churn" and a simple rule such as "no top-up in 14 days". Logistic regression provides an interpretable benchmark; a depth-limited decision tree or ensemble may capture interactions. Overfitting is diagnosed by comparing training and validation performance.
+
+      Accuracy is inappropriate under imbalance. Recall indicates how many churners are reached, precision how many offers are wasted, and precision at top k matches a fixed campaign budget. The threshold should minimise expected cost, for example comparing offer cost with expected lost margin, and respect contact capacity.
+
+      Finally, the answer should discuss monitoring for drift, checking whether offers systematically exclude some regions or groups, and processing subscriber data lawfully under Ghana's Data Protection Act, 2012 (Act 843).
+    explanation: Examiners reward coherent links between the business decision, the data split and the metric. Generic lists of algorithms without evaluation reasoning score poorly.

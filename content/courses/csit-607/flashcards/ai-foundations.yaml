@@ -1,0 +1,38 @@
+module: ai-foundations
+cards:
+  - lesson: defining-ai-and-its-history
+    front: What two dimensions produce Russell and Norvig's four approaches to AI?
+    back: Whether we judge thought processes or behaviour, and whether we measure against human performance or ideal rationality. Crossing them gives thinking humanly, acting humanly, thinking rationally and acting rationally.
+  - lesson: defining-ai-and-its-history
+    front: Why is the acting-rationally (rational agent) approach most useful in business?
+    back: It is mathematically well defined and forces designers to state an explicit performance measure, so systems are judged by outcomes such as lower losses or fewer stock-outs rather than by whether they imitate people.
+  - lesson: defining-ai-and-its-history
+    front: What did Turing's 1950 imitation game replace, and what is its main criticism?
+    back: It replaced the vague question "Can machines think?" with a behavioural test of conversation. Critics argue it rewards imitation, even deception, rather than understanding or broad competence.
+  - lesson: defining-ai-and-its-history
+    front: What caused the AI winters?
+    back: Overpromising combined with practical limits; early systems did not scale, computing and data were insufficient, and expert systems proved brittle and costly to maintain.
+  - lesson: defining-ai-and-its-history
+    front: Why did AlexNet (2012) matter more for business AI than Deep Blue (1997)?
+    back: Deep Blue showed search plus expert knowledge in a closed, fully observable game. AlexNet showed that learning from large data on GPUs could solve open-ended perception, the pattern behind most modern business AI.
+  - lesson: defining-ai-and-its-history
+    front: What is the difference between narrow AI and AGI?
+    back: Narrow AI performs specific tasks within a defined data distribution; all deployed systems, including LLMs, are narrow. AGI is a hypothetical system with broad, flexible, human-level competence.
+  - lesson: intelligent-systems-and-applications
+    front: What does PEAS stand for and why is the P most important for managers?
+    back: Performance measure, Environment, Actuators, Sensors. The performance measure encodes business values and trade-offs; a poorly chosen one leads agents to optimise the wrong thing.
+  - lesson: intelligent-systems-and-applications
+    front: Why does rational not mean omniscient?
+    back: A rational agent picks the best expected action given its knowledge and percepts. In uncertain environments the outcome can still be bad, so decisions are judged by the information available at the time.
+  - lesson: intelligent-systems-and-applications
+    front: Why do simple reflex agents fail in fraud detection?
+    back: They act only on the current input with fixed rules, so they ignore behavioural history and can be gamed by adversaries who keep transactions just below thresholds.
+  - lesson: intelligent-systems-and-applications
+    front: What are the four components of a learning agent?
+    back: A performance element that chooses actions, a critic that gives feedback against the performance standard, a learning element that improves the performance element, and a problem generator that suggests exploratory actions.
+  - lesson: intelligent-systems-and-applications
+    front: What typical environment properties do business AI problems have?
+    back: Partially observable, stochastic, sequential, dynamic and often multi-agent or adversarial, which is why rule-based systems degrade and models need monitoring and retraining.
+  - lesson: intelligent-systems-and-applications
+    front: What factors should determine how much autonomy an AI system is given?
+    back: The cost of errors, the reversibility of actions, regulatory requirements and the system's demonstrated reliability. High-stakes, irreversible decisions usually keep a human in the loop.

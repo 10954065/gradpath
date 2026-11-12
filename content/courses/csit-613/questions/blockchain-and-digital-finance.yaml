@@ -1,0 +1,259 @@
+module: blockchain-and-digital-finance
+questions:
+  - id: bc01
+    lesson: blockchain-and-distributed-ledgers
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain how linked blocks make a ledger tamper-evident
+    prompt: Why does altering a transaction in an old block become detectable?
+    options:
+      - Because transactions are encrypted and cannot be read
+      - Because the change alters the block's Merkle root and header hash, breaking the previous-hash link stored in the next block
+      - Because each block is stored on a central server that logs changes
+      - Because miners delete blocks older than one day
+    answer: 1
+    explanation: Each block header commits to its transactions through the Merkle root and to its predecessor through the previous-hash field, so any change cascades into mismatched hashes. Transactions on public chains are usually not encrypted, there is no central server, and old blocks are not deleted.
+  - id: bc02
+    lesson: blockchain-and-distributed-ledgers
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish hashing from encryption
+    prompt: A cryptographic hash such as SHA-256 is designed to be decrypted by someone who holds the correct key.
+    answer: false
+    explanation: Hash functions are one-way and keyless; pre-image resistance means the input cannot feasibly be recovered from the digest. Encryption, by contrast, is designed to be reversible with a key.
+  - id: bc03
+    lesson: blockchain-and-distributed-ledgers
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Apply Merkle proof sizing
+    prompt: Approximately how many sibling hashes are needed in a Merkle proof for a block containing 16 transactions?
+    answers: ["4", "four"]
+    explanation: A Merkle proof needs roughly log2(n) sibling hashes; log2(16) = 4. This logarithmic growth is what lets lightweight wallets verify inclusion without downloading entire blocks.
+  - id: bc04
+    lesson: blockchain-and-distributed-ledgers
+    type: matching
+    bloom: recall
+    difficulty: medium
+    objective: Match consensus mechanisms to their characteristics
+    prompt: Match each consensus mechanism to its defining characteristic.
+    pairs:
+      - left: Proof of work
+        right: Computational puzzle with probabilistic finality
+      - left: Proof of stake
+        right: Validators lock capital that can be slashed for misbehaviour
+      - left: Practical Byzantine Fault Tolerance
+        right: Voting among known validators giving deterministic finality
+      - left: Centralised database
+        right: Single operator decides the authoritative record
+    explanation: Proof of work secures the chain by expended computation, proof of stake by capital at risk, and BFT protocols by rounds of voting among a known set that tolerates fewer than one-third faulty members. A centralised database has no consensus problem because one party is trusted.
+  - id: bc05
+    lesson: blockchain-and-distributed-ledgers
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate whether a blockchain is needed
+    scenario: |
+      A single supermarket chain in Ghana wants to run a loyalty points scheme. Only the chain issues and redeems points, and customers trust it to keep the records. A consultant proposes building the scheme on a permissioned blockchain.
+    prompt: Using a decision framework such as Wüst and Gervais (2018), what is the best recommendation?
+    options:
+      - Use a public permissionless blockchain to maximise transparency
+      - Use a permissioned blockchain with BFT consensus among the chain's branches
+      - Use a conventional database, because there is a single trusted writer
+      - Use proof of work so that customers can mine points
+    answer: 2
+    explanation: With one writer that participants already trust, the framework points to a conventional database, which is simpler and cheaper. Public or permissioned blockchains add cost without solving a trust problem, and mining points would be absurdly inefficient.
+  - id: bc06
+    lesson: blockchain-and-distributed-ledgers
+    type: true_false
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the limits of blockchain for supply-chain data quality
+    prompt: Recording cocoa lots on a blockchain guarantees that the origin information entered by a warehouse clerk is accurate.
+    answer: false
+    explanation: A blockchain prevents undetected alteration after recording but cannot verify the truth of inputs. Physical controls, audits and digital identity for participants are needed to address the "garbage in, garbage out" problem.
+  - id: bc07
+    lesson: blockchain-and-distributed-ledgers
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the risk of probabilistic finality
+    prompt: Why might a merchant accepting a proof-of-work cryptocurrency payment wait for several further blocks before releasing high-value goods?
+    options:
+      - Because the transaction is encrypted until several blocks pass
+      - Because a chain reorganisation could remove the block containing the payment, and each extra block makes this less likely
+      - Because miners charge the merchant per block waited
+      - Because the customer's private key is only valid after several blocks
+    answer: 1
+    explanation: Proof of work offers probabilistic finality; a competing longer chain could displace recent blocks, enabling double spending. Waiting for confirmations reduces this risk. Transactions are not encrypted, merchants are not charged per block, and private keys do not have block-based validity.
+  - id: bc08
+    lesson: cryptocurrency-smart-contracts-and-digital-identity
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain custodial wallet risk
+    prompt: What is the main additional risk of holding cryptocurrency in a custodial wallet at an exchange?
+    options:
+      - The user may forget the recovery phrase
+      - Counterparty risk if the exchange fails, is hacked or misuses customer assets
+      - The blockchain will reject transactions from exchanges
+      - Transactions become reversible by the central bank
+    answer: 1
+    explanation: In a custodial wallet the exchange controls the keys, so customers depend on its solvency and security, as the FTX collapse illustrated. Forgetting a recovery phrase is a non-custodial risk; blockchains accept exchange transactions; and central banks cannot reverse crypto transactions.
+  - id: bc09
+    lesson: cryptocurrency-smart-contracts-and-digital-identity
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match stablecoin designs to their principal risks
+    prompt: Match each stablecoin type to its main risk.
+    pairs:
+      - left: Fiat-collateralised
+        right: Quality and transparency of the issuer's reserves
+      - left: Crypto-collateralised
+        right: Sharp falls in collateral value triggering liquidations
+      - left: Algorithmic
+        right: Loss of confidence causing a collapse of the peg
+    explanation: Each design's stability rests on a different foundation, so each fails differently. Fiat-backed coins depend on reserves; crypto-backed coins on volatile collateral; algorithmic coins on market confidence, as the TerraUSD collapse demonstrated.
+  - id: bc10
+    lesson: cryptocurrency-smart-contracts-and-digital-identity
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for external data providers to smart contracts
+    prompt: What is the term for a service that supplies off-chain data, such as delivery confirmation, to a smart contract?
+    answers: [oracle, an oracle, blockchain oracle]
+    explanation: Oracles bridge the blockchain and the real world. The oracle problem is that a contract is only as trustworthy as the oracle feeding it.
+  - id: bc11
+    lesson: cryptocurrency-smart-contracts-and-digital-identity
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse where trust lies in a smart contract escrow
+    scenario: |
+      A Tema importer and an overseas supplier use a smart contract escrow. Funds are released to the supplier when the shipping agent's system calls confirmDelivery(). The importer can claim a refund only if no confirmation arrives before the deadline.
+    prompt: Which statement best describes the trust structure of this arrangement?
+    options:
+      - The arrangement is completely trustless because it runs on a blockchain
+      - Trust has been relocated to the shipping agent acting as oracle, and disputes about damaged goods fall outside the contract
+      - The supplier must trust the importer to release the funds manually
+      - The central bank guarantees the outcome of the contract
+    answer: 1
+    explanation: The contract removes the need to trust the counterparty with funds but depends on the oracle's honesty and security, and it has no logic for partial or damaged delivery, which would require off-chain dispute resolution. Funds are not released manually, and no central bank guarantees smart contracts.
+  - id: bc12
+    lesson: cryptocurrency-smart-contracts-and-digital-identity
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish CBDC from mobile money
+    prompt: Mobile money balances in Ghana are a direct liability of the Bank of Ghana, which makes them a form of CBDC.
+    answer: false
+    explanation: Mobile money is electronic money issued by licensed issuers and backed by funds held in trust at banks; it is a liability of the issuer, not the central bank. A CBDC would be a direct central bank liability.
+  - id: bc13
+    lesson: cryptocurrency-smart-contracts-and-digital-identity
+    type: matching
+    bloom: apply
+    difficulty: medium
+    objective: Apply digital identity models to examples
+    prompt: Match each example to the identity model it best represents.
+    pairs:
+      - left: A national register issuing a biometric ID card
+        right: Centralised identity
+      - left: Many websites accepting a single "sign in with" provider
+        right: Federated identity
+      - left: A graduate holding a signed degree credential in a personal wallet
+        right: Self-sovereign identity
+    explanation: Centralised identity relies on a single authority; federated identity on a trusted provider authenticating users for many services; self-sovereign identity on individuals holding verifiable credentials and disclosing them selectively.
+  - id: bc14
+    lesson: cryptocurrency-smart-contracts-and-digital-identity
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate CBDC design choices for inclusion
+    prompt: A central bank wants a retail CBDC that supports financial inclusion in areas with weak connectivity while protecting bank deposit stability. Which combination of design features is most consistent with these goals?
+    options:
+      - Direct issuance to citizens, online-only, unlimited holdings
+      - Intermediated distribution, offline capability, holding limits
+      - Wholesale-only access for banks, no retail use
+      - Anonymous bearer tokens with no limits and no intermediaries
+    answer: 1
+    explanation: Intermediated models leverage existing banks and payment providers; offline capability serves low-connectivity areas; holding limits reduce the risk of rapid deposit outflows. Online-only and unlimited designs work against both goals, wholesale-only excludes the public, and unlimited anonymous tokens raise integrity and stability concerns.
+  - id: bc15
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a blockchain proposal for a Ghanaian business consortium
+    marks: 25
+    prompt: Critically evaluate the consortium's proposal and recommend whether, and how, it should proceed.
+    case: |
+      Illustrative scenario: a hypothetical consortium of five Ghanaian agricultural exporters, two warehouse operators and a certification body proposes a "blockchain traceability and payment platform". Lots would be recorded on a permissioned ledger, and a smart contract would automatically pay farmers' cooperatives in a stablecoin when a certifier confirms quality. Farmer identities would be stored on-chain using their Ghana Card numbers so buyers abroad can verify origin. The consortium argues that the platform will "guarantee honest data" and remove the need for banks.
+    structure:
+      - Apply a blockchain decision framework to the trust problem
+      - Evaluate consensus and governance among consortium members
+      - Analyse the smart contract, oracle and stablecoin payment design
+      - Evaluate the identity and data protection approach
+      - Recommend a revised design and implementation safeguards
+    rubric:
+      - criterion: Application of decision framework
+        marks: 5
+        descriptor: Correctly determines whether multiple mutually distrusting writers and the absence of an accepted intermediary justify a permissioned ledger.
+      - criterion: Technical and governance analysis
+        marks: 6
+        descriptor: Discusses consensus among a small known group, governance, onboarding and data-quality limits.
+      - criterion: Payment and smart contract evaluation
+        marks: 6
+        descriptor: Identifies oracle trust in the certifier, stablecoin and regulatory risks, and farmers' practical need for cedi or mobile money payouts.
+      - criterion: Identity and privacy evaluation
+        marks: 5
+        descriptor: Explains why storing national ID numbers on an immutable ledger conflicts with data protection and proposes alternatives such as off-chain storage or verifiable credentials.
+      - criterion: Recommendation quality
+        marks: 3
+        descriptor: Gives a reasoned, balanced recommendation and notes that the analysis is educational, not regulatory advice.
+    modelAnswer: |
+      A strong answer starts with the trust problem. Several independent organisations write records and may not fully trust one another, and buyers abroad want verifiable claims, so a permissioned ledger is defensible under the Wüst and Gervais framework, provided no existing intermediary is acceptable to all. A BFT-style consensus among the eight members would give fast finality, but governance must define who may join, how disputes are resolved and what happens if members collude.
+
+      The claim that the platform "guarantees honest data" should be rejected: the ledger only prevents later alteration. Sealed bags, audits and identity checks at points of entry remain essential.
+
+      The payment design needs scrutiny. The certifier acts as an oracle, so the contract relocates trust rather than removing it; a dishonest or compromised certifier could trigger or block payments. Paying farmers' cooperatives in a stablecoin introduces reserve, conversion and regulatory risks, given the Bank of Ghana's cautious position on crypto-assets, and cooperatives need cedis or mobile money. A better design records the certification on-chain but triggers payment through a licensed PSP or bank in cedis, so the claim of "removing banks" is neither realistic nor desirable.
+
+      Storing Ghana Card numbers on an immutable ledger conflicts with data protection principles under the Data Protection Act, 2012 (Act 843), since data cannot be erased and may be exposed to many parties. Identity should be verified off-chain through authorised services, with only pseudonymous references or verifiable credentials on the ledger.
+
+      The recommendation should be a limited pilot of the traceability ledger with off-chain identity and conventional payments, evaluated against clear benefits.
+    explanation: Examiners look for disciplined use of a decision framework, recognition of the oracle and data-quality problems, regulatory awareness about stablecoins, sound privacy reasoning and a balanced recommendation.
+  - id: bc16
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the potential role of a CBDC alongside mobile money
+    marks: 20
+    prompt: Critically evaluate whether a retail central bank digital currency would add value in an economy where mobile money is already widely used, with reference to Ghana's eCedi pilot in general terms and international experience.
+    structure:
+      - Define CBDC and distinguish it from mobile money and cryptocurrency
+      - Identify potential benefits such as resilience, interoperability, inclusion and offline payments
+      - Analyse risks including bank disintermediation, privacy and adoption
+      - Draw on international experience such as the Sand Dollar and eNaira
+      - Reach a reasoned conclusion
+    rubric:
+      - criterion: Conceptual clarity
+        marks: 5
+        descriptor: Accurately defines CBDC and contrasts liability and control with mobile money.
+      - criterion: Benefits and risks analysis
+        marks: 7
+        descriptor: Balanced analysis of benefits and risks with clear reasoning.
+      - criterion: Use of evidence
+        marks: 5
+        descriptor: Uses international examples accurately and refers to the eCedi only in general, well-documented terms.
+      - criterion: Conclusion
+        marks: 3
+        descriptor: Justified conclusion recognising uncertainty.
+    modelAnswer: |
+      A CBDC is a digital form of the national currency that is a direct liability of the central bank. Mobile money, by contrast, is e-money issued by licensed issuers and backed by funds held in trust at commercial banks. Both are digital, but they differ in who stands behind the value and who sets the rules.
+
+      Potential benefits include a public, sovereign payment instrument that could support interoperability across providers, resilience if a private platform fails, offline payment capability for areas with weak connectivity and a foundation for more efficient government payments. The Bank of Ghana's eCedi pilot has publicly emphasised inclusion and offline use, which suggests these goals.
+
+      Risks are significant. If citizens hold large CBDC balances, deposits could leave banks, reducing lending capacity, which is why holding limits and intermediated distribution are commonly proposed. Privacy concerns arise if the central bank could see all transactions. Adoption is uncertain: international experience with the Bahamas' Sand Dollar and Nigeria's eNaira suggests that uptake can be slow when users already have convenient alternatives. In a mobile money economy, a CBDC must offer a clear advantage, perhaps in cost, interoperability or offline functionality, or be integrated into existing wallets so that users experience it as an improvement rather than a new product.
+
+      A reasoned conclusion is that a CBDC may add value as public infrastructure working through mobile money and banks, rather than competing with them, but its value depends on design choices and remains uncertain while pilots continue.
+    explanation: Examiners reward precise distinctions between forms of money, balanced evaluation, accurate and cautious use of evidence and a conclusion that acknowledges uncertainty.

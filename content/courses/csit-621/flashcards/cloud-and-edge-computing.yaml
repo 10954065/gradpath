@@ -1,0 +1,47 @@
+module: cloud-and-edge-computing
+cards:
+  - lesson: cloud-models
+    front: What are the five essential characteristics of cloud computing in NIST SP 800-145?
+    back: On-demand self-service, broad network access, resource pooling, rapid elasticity and measured service (Mell & Grance, 2011).
+  - lesson: cloud-models
+    front: Why is a manually provisioned dedicated server from a data centre usually hosting rather than cloud?
+    back: It lacks on-demand self-service, rapid elasticity and measured service; network access alone does not make a service cloud.
+  - lesson: cloud-models
+    front: How does NIST define a private cloud, and what common misunderstanding does this correct?
+    back: Infrastructure provisioned for exclusive use by one organisation, on or off premises and possibly run by a third party; private does not have to mean in your own building.
+  - lesson: cloud-models
+    front: In a cloud cost comparison, where do most savings usually come from?
+    back: Elasticity and managed services that let the firm pay for peak capacity only when needed; a peak-sized lift-and-shift often costs about the same as on-premises.
+  - lesson: cloud-models
+    front: Name three costs often omitted from cloud business cases for Ghanaian firms.
+    back: Data transfer (egress) and internet bandwidth with backup links, staff skills and migration effort, and currency exposure when bills are in foreign currency.
+  - lesson: iaas-paas-and-saas
+    front: Which layers does the customer manage in IaaS, PaaS and SaaS?
+    back: IaaS - operating system, middleware, applications, data and access. PaaS - application code, configuration, data and access. SaaS - data, users and settings.
+  - lesson: iaas-paas-and-saas
+    front: Which two responsibilities never move to the provider under the shared responsibility model?
+    back: Data (classification, what is uploaded, retention) and identity and access management (who has accounts and with what permissions).
+  - lesson: iaas-paas-and-saas
+    front: State the service-model selection heuristic.
+    back: SaaS if you can, PaaS if you must build, IaaS if you must control - then test against data protection, integration and exit requirements.
+  - lesson: iaas-paas-and-saas
+    front: What does the Capital One breach illustrate about cloud security?
+    back: Customer-side failures - a misconfigured firewall and overly broad permissions - can expose data even when provider infrastructure is sound; least privilege and configuration checking are essential.
+  - lesson: iaas-paas-and-saas
+    front: When is serverless computing a good fit, and when is it not?
+    back: Good for spiky, event-driven, intermittent workloads with no idle cost; poor for constant heavy workloads where per-execution charges exceed a well-used reserved server.
+  - lesson: edge-and-hybrid-cloud
+    front: What four forces drive computing to the edge?
+    back: Latency requirements, bandwidth cost of high-volume data, resilience during connectivity loss, and privacy or sovereignty concerns.
+  - lesson: edge-and-hybrid-cloud
+    front: What is the minimum round-trip propagation delay per 1,000 km of fibre path?
+    back: About 10 ms, because light in fibre travels roughly 200 km per millisecond (5 ms each way per 1,000 km), before routing and processing delays.
+  - lesson: edge-and-hybrid-cloud
+    front: What does "act locally, learn centrally" mean?
+    back: Edge nodes make time-critical decisions and filter data; the central cloud aggregates data across sites, trains models and pushes updates back to the edge.
+  - lesson: edge-and-hybrid-cloud
+    front: How do hybrid cloud and multi-cloud differ?
+    back: Hybrid integrates distinct infrastructure types (typically private and public) for portability; multi-cloud uses more than one public provider, integrated or not.
+  - lesson: edge-and-hybrid-cloud
+    front: Why does storing data in Ghana not by itself ensure compliance with Act 843?
+    back: Residency is only location; the Act also requires lawful, purpose-specific processing, security safeguards, accountability and respect for data subject rights.

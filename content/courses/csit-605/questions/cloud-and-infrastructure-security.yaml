@@ -1,0 +1,320 @@
+module: cloud-and-infrastructure-security
+questions:
+  # Lesson 1: cloud-security-and-identity-management
+  - id: q01
+    lesson: cloud-security-and-identity-management
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Apply the shared responsibility model across service models
+    prompt: Under the shared responsibility model, which responsibility remains with the customer in IaaS, PaaS and SaaS alike?
+    options:
+      - Patching the hypervisor
+      - Physical security of the data centre
+      - Protecting their data and managing identities and access
+      - Maintaining the provider's global network
+    answer: 2
+    explanation: Data, its classification and the identities that can access it are always the customer's responsibility. Hypervisors, physical facilities and the provider's network are part of security of the cloud, handled by the provider in all three models.
+  - id: q02
+    lesson: cloud-security-and-identity-management
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish cloud service models by customer duties
+    prompt: Match each service to the model it best represents.
+    pairs:
+      - left: Renting virtual machines and patching their operating systems yourself
+        right: IaaS
+      - left: A managed database where the provider patches the engine
+        right: PaaS
+      - left: A hosted email and office productivity suite
+        right: SaaS
+      - left: A cloud shared by several government agencies with common requirements
+        right: Community cloud
+    explanation: IaaS, PaaS and SaaS are service models with progressively more provider-managed layers; community cloud is a deployment model defined in NIST SP 800-145, shared by organisations with common concerns.
+  - id: q03
+    lesson: cloud-security-and-identity-management
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Recognise the risk of long-lived access keys
+    prompt: Attaching a role with temporary credentials to a cloud workload is generally safer than storing a long-lived access key in the application's configuration file.
+    answer: true
+    explanation: Temporary credentials expire automatically and are not stored where they can leak through repositories, images or logs. Static keys remain valid until someone notices and revokes them.
+  - id: q04
+    lesson: cloud-security-and-identity-management
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the attack chain in an SSRF-based cloud breach
+    scenario: |
+      A web application firewall running on a cloud virtual machine can be induced to fetch arbitrary URLs. An attacker uses it to request the instance metadata service, obtains temporary credentials for the machine's role, and then lists and downloads many storage buckets.
+    prompt: Which single change would most directly have limited the damage once the credentials were obtained?
+    options:
+      - Enabling full-disk encryption on the virtual machine
+      - Restricting the role's permissions to only the specific resources the firewall needed
+      - Changing the root account password
+      - Moving the virtual machine to a different region
+    answer: 1
+    explanation: This is the Capital One 2019 pattern. The SSRF gave access to the role's credentials, and the role's broad storage permissions turned that into mass data access. Least privilege on the role limits blast radius. Disk encryption, root password changes and region moves do not affect what the stolen role could do.
+  - id: q05
+    lesson: cloud-security-and-identity-management
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Name the practice of using an organisation's identity provider for cloud sign-in
+    prompt: What term describes letting staff sign in to cloud services with their organisation's own identity provider, via SAML or OpenID Connect, instead of separate cloud passwords?
+    answers: [federation, identity federation, federated identity]
+    explanation: Federation centralises authentication and MFA and means that disabling a leaver's corporate account removes their cloud access, reducing orphaned accounts.
+  - id: q06
+    lesson: cloud-security-and-identity-management
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Prioritise cloud account hardening
+    prompt: A small company has just opened a public cloud account. Which action should be taken first?
+    options:
+      - Enable strong MFA on the root or global administrator account and remove any root access keys
+      - Purchase a dedicated hot DR site
+      - Disable audit logging to reduce cost
+      - Grant all developers administrator rights to speed up work
+    answer: 0
+    explanation: The root account can do anything, including deleting all resources and logs, so protecting it is the highest-value first step. Audit logging should be enabled, not disabled, and broad administrator rights violate least privilege. A hot DR site is a later, risk-based decision.
+  - id: q07
+    lesson: cloud-security-and-identity-management
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate the claim that SaaS removes customer security duties
+    prompt: Because the provider runs the application, a SaaS customer has no meaningful security configuration responsibilities.
+    answer: false
+    explanation: SaaS customers still manage user identities, MFA, administrator roles, sharing settings, retention and audit logging. Many SaaS data exposures result from customer-side settings such as public sharing links.
+
+  # Lesson 2: configuration-security-and-data-protection
+  - id: q08
+    lesson: configuration-security-and-data-protection
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Define configuration drift
+    prompt: What is configuration drift?
+    options:
+      - The movement of data between cloud regions
+      - The gradual divergence of a system's actual settings from its approved baseline
+      - A type of denial-of-service attack
+      - The rotation of encryption keys
+    answer: 1
+    explanation: Drift occurs through manual changes, emergency fixes and updates. Continuous monitoring (for example CSPM) detects it so that it can be remediated or formally accepted.
+  - id: q09
+    lesson: configuration-security-and-data-protection
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply data classification to prioritise findings
+    scenario: |
+      Illustrative scenario. A posture management tool reports two publicly readable storage buckets. One holds published product brochures; the other holds scanned Ghana Card images submitted by customers for identity verification.
+    prompt: How should the security team prioritise these findings?
+    options:
+      - Treat both equally because both are public
+      - Treat the Ghana Card bucket as critical because it contains restricted personal data, and review the brochure bucket as low priority
+      - Treat the brochure bucket as critical because it is customer-facing
+      - Ignore both because storage is the provider's responsibility
+    answer: 1
+    explanation: Classification turns identical misconfigurations into different risk levels. National ID images are restricted personal data protected under Act 843, so exposure is serious and may require investigation of access logs and breach assessment. Brochures are public by design. Storage configuration is the customer's responsibility.
+  - id: q10
+    lesson: configuration-security-and-data-protection
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Recognise correct secrets management
+    prompt: Storing cloud access keys in a private code repository is acceptable because only employees can see the repository.
+    answer: false
+    explanation: Repository access can be compromised, as in the Uber 2016 breach. Secrets belong in a dedicated secrets manager with rotation, access control and logging, and workloads should use temporary credentials where possible.
+  - id: q11
+    lesson: configuration-security-and-data-protection
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match data protection controls to their purpose
+    prompt: Match each control to its purpose.
+    pairs:
+      - left: Tokenisation
+        right: Replaces a sensitive value with a surrogate, keeping the real value in a secured vault
+      - left: Masking
+        right: Shows only part of a value, such as the last four digits, to users who do not need it all
+      - left: Data loss prevention
+        right: Detects and blocks unauthorised movement of sensitive data
+      - left: Customer-managed keys
+        right: Gives the organisation control over rotation and revocation of encryption keys
+      - left: Data minimisation
+        right: Collects and keeps only the data needed for the stated purpose
+    explanation: These controls complement encryption. They reduce how much sensitive data exists, who can see it and where it can go, and keep control of keys with the data owner.
+  - id: q12
+    lesson: configuration-security-and-data-protection
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Name the category of tools that continuously assess cloud settings
+    prompt: What category of tool continuously checks cloud configurations against policies and benchmarks and alerts on risky settings (abbreviation accepted)?
+    answers: [cloud security posture management, CSPM]
+    explanation: CSPM tools detect public storage, unencrypted resources, permissive security groups and similar issues across accounts, supporting continuous verification of baselines.
+  - id: q13
+    lesson: configuration-security-and-data-protection
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the design of a classification scheme
+    prompt: A company's draft policy classifies all information as "Strictly Confidential" and requires encryption and director approval for any sharing. What is the main weakness?
+    options:
+      - It is too permissive
+      - Over-classification makes rules impractical, so staff bypass them and truly sensitive data is not distinguished
+      - It does not mention firewalls
+      - Classification should be set by the cloud provider
+    answer: 1
+    explanation: Effective schemes are simple, proportionate and actionable. Labelling everything at the highest level imposes unworkable controls, encourages workarounds and obscures which data truly needs the strongest protection. Data owners, not providers, set classification.
+  - id: q14
+    lesson: configuration-security-and-data-protection
+    type: true_false
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the role of infrastructure as code in preventing misconfiguration
+    prompt: Defining cloud infrastructure in version-controlled templates allows insecure settings to be caught by peer review and automated scanning before deployment.
+    answer: true
+    explanation: Infrastructure as code makes configuration visible, reviewable and repeatable, and scanners can block risky settings such as public access or wildcard permissions in the pipeline, shifting configuration security left.
+
+  # Lesson 3: backup-and-disaster-recovery
+  - id: q15
+    lesson: backup-and-disaster-recovery
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: State the 3-2-1 backup rule
+    prompt: Which statement correctly describes the 3-2-1 backup rule?
+    options:
+      - Three backups per day, two administrators, one restore test per year
+      - Three copies of data, on two different types of media or storage, with one copy off-site
+      - Three servers, two data centres, one cloud provider
+      - Three-hour RPO, two-hour RTO, one-day MTD
+    answer: 1
+    explanation: 3-2-1 protects against corrupt copies, media-specific failure and site loss. Modern practice extends it with an immutable or offline copy and verified restores (3-2-1-1-0).
+  - id: q16
+    lesson: backup-and-disaster-recovery
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Calculate whether a backup schedule meets RPO
+    scenario: |
+      Illustrative scenario. A company takes a full backup every night at 00:00 and no other backups. Its RPO for the finance system is 6 hours. The system fails at 15:00.
+    prompt: How much data is lost, and is the RPO met?
+    options:
+      - 6 hours lost; RPO met
+      - 9 hours lost; RPO not met
+      - 15 hours lost; RPO not met
+      - 0 hours lost; RPO met
+    answer: 2
+    explanation: Data loss equals the failure time minus the last recoverable copy, 15:00 minus 00:00, which is 15 hours, exceeding the 6-hour RPO. Backups at least every 6 hours (or replication plus point-in-time copies) would be needed.
+  - id: q17
+    lesson: backup-and-disaster-recovery
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Calculate restore time from size and throughput
+    prompt: A 1,200 GB database restores at 150 GB per hour, with 1 additional hour for verification and reconnection. What is the total recovery time in hours (number only)?
+    answers: ["9", "9 hours", nine]
+    explanation: Restore time is 1,200 ÷ 150 = 8 hours, plus 1 hour of overhead, giving 9 hours. This must be compared with the RTO to judge whether the design is adequate.
+  - id: q18
+    lesson: backup-and-disaster-recovery
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish replication from backup
+    prompt: Continuous replication to a second site removes the need for point-in-time backups.
+    answer: false
+    explanation: Replication copies changes faithfully, including deletions, corruption and ransomware encryption. Isolated point-in-time backups are needed to roll back to a clean state; the Maersk NotPetya case showed synchronised domain controllers being destroyed together.
+  - id: q19
+    lesson: backup-and-disaster-recovery
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match recovery concepts to definitions
+    prompt: Match each term to its definition.
+    pairs:
+      - left: RPO
+        right: Maximum acceptable data loss measured in time
+      - left: RTO
+        right: Maximum acceptable time to restore a system to agreed service
+      - left: MTD
+        right: Total time a business process can be down before unacceptable harm
+      - left: Warm site
+        right: Recovery location with some equipment ready, restored from recent backups
+      - left: Immutable backup
+        right: Copy that cannot be altered or deleted during its retention period
+    explanation: RPO drives backup frequency, RTO drives restore capability, and both must sit within MTD from the business impact analysis. Warm sites trade cost against recovery speed; immutability resists ransomware.
+  - id: q20
+    lesson: backup-and-disaster-recovery
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate backup resilience against ransomware
+    scenario: |
+      Illustrative scenario. A logistics firm backs up nightly to a network-attached storage device joined to the corporate domain. Domain administrators can manage the backup software. The firm says it complies with 3-2-1 because it also copies backups weekly to a second NAS in the same building.
+    prompt: What is the most significant weakness against a ransomware attacker who gains domain administrator rights?
+    options:
+      - Nightly backups are too frequent
+      - All copies are online, reachable with domain credentials and on-site, so the attacker can delete or encrypt them before encrypting production
+      - NAS devices cannot store database backups
+      - Weekly copies violate data protection law
+    answer: 1
+    explanation: Attackers target backups to force payment. Copies reachable with the same administrative credentials, all in one building, offer no immutable, offline or off-site protection. Separate credentials, MFA, an off-site immutable copy and restore testing are needed. The design is not genuinely 3-2-1 compliant because no copy is off-site.
+  - id: q21
+    lesson: backup-and-disaster-recovery
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse which testing method gives the strongest evidence
+    prompt: Which test provides the strongest evidence that an RTO can be met, while avoiding disruption to production?
+    options:
+      - Checking that last night's backup job reported success
+      - A tabletop walk-through of the DR plan
+      - A full restoration of the system into an isolated environment, timed from start to service verification
+      - Reading the vendor's documentation on restore speeds
+    answer: 2
+    explanation: A timed, full restore to an isolated environment measures real-world recovery time and data integrity without affecting production. Job success messages, tabletop reviews and vendor claims do not prove the organisation can actually restore within the target.
+
+  # Module-level extended question
+  - id: q22
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a cloud migration's security, data protection and recovery design
+    marks: 20
+    case: |
+      Illustrative scenario. Ahenfie Microinsurance, a fictional Kumasi company, is moving its policy administration system to a public cloud IaaS platform and its staff email to a SaaS suite. The current plan is: one shared administrator login for the cloud account used by the three-person IT team; the application will use an access key stored in a configuration file; customer documents (including Ghana Card scans and medical declarations) will go into a storage bucket; database snapshots will be kept in the same cloud account; and email will use passwords only. Management's target is an RPO of 2 hours and an RTO of 6 hours for policy administration.
+    prompt: Critically evaluate the plan and recommend a revised design covering shared responsibility, identity and access management, configuration security, data classification and protection, and backup and disaster recovery. Show how your design meets the RPO and RTO.
+    structure:
+      - Clarify shared responsibility for IaaS and SaaS components
+      - Identity weaknesses and IAM redesign
+      - Data classification and protection for restricted documents
+      - Configuration guardrails and monitoring
+      - Backup and DR design with RPO/RTO reasoning
+      - Regulatory considerations and conclusion
+    rubric:
+      - criterion: Shared responsibility and IAM
+        marks: 5
+        descriptor: Correctly allocates duties; replaces shared admin with named federated accounts and MFA; uses roles not static keys; protects root.
+      - criterion: Classification and data protection
+        marks: 5
+        descriptor: Classifies Ghana Card and medical data as restricted and specifies encryption, key management, access restriction, logging and minimisation.
+      - criterion: Configuration security
+        marks: 4
+        descriptor: Proposes guardrails such as blocking public storage, infrastructure as code with review, CSPM and secrets management.
+      - criterion: Backup, DR and RPO/RTO reasoning
+        marks: 6
+        descriptor: Identifies that same-account snapshots are vulnerable; proposes cross-account or cross-region immutable copies, frequent backups, a warm standby or tested restore approach and shows calculations against targets.
+    modelAnswer: |
+      Under IaaS, Ahenfie is responsible for the operating system, application, configuration, identities and data; under SaaS, for user identities, MFA, sharing and retention. The shared administrator login destroys accountability and is a single point of compromise; it should be replaced by named accounts federated from the email suite's identity provider with phishing-resistant MFA, a protected root account without access keys, and least-privilege roles. The application should use an attached role with temporary credentials rather than a static key in a configuration file, and secrets scanning should be enabled.
+
+      Ghana Card scans and medical declarations are restricted personal data under Act 843. They should be stored in a bucket with account-level public access blocked, encryption using customer-managed keys, access limited to the application role and a small claims team, access logging, and retention limits. Guardrails, infrastructure as code with peer review and a CSPM tool should prevent and detect misconfiguration.
+
+      Keeping snapshots in the same account means an attacker with administrative access could delete production and backups together. A better design takes database backups every hour (worst-case loss about one hour, inside the 2-hour RPO) and copies them to a separate backup account or region with object lock. For RTO, if a restore of the database takes, say, three hours at measured throughput plus one hour to redeploy the application from templates and verify, total recovery of four hours meets the 6-hour RTO; if measured times are longer, a warm standby should be added. Quarterly timed restore tests provide evidence. The answer should conclude that the plan's main risks are identity and backup isolation, and note relevant duties under Act 843 and, where applicable, sector or Act 1038 obligations.
+    explanation: Examiners look for correct allocation of responsibilities, concrete IAM and data controls, recognition that same-account snapshots are not isolated, and explicit RPO/RTO arithmetic.

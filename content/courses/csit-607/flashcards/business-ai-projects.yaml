@@ -1,0 +1,50 @@
+module: business-ai-projects
+cards:
+  - lesson: demand-forecasting-and-churn-projects
+    front: What are the eight elements of the business AI project template?
+    back: Business problem, data needed, approach, evaluation metrics, deployment, risks, ethics and a phased plan.
+  - lesson: demand-forecasting-and-churn-projects
+    front: Why use rolling-origin backtesting for demand forecasts?
+    back: It repeatedly trains on data up to a cut-off and tests on the following period, mimicking real forecasting and avoiding learning from the future.
+  - lesson: demand-forecasting-and-churn-projects
+    front: How do forecasts become business value in a supermarket?
+    back: Through an ordering policy, such as forecast over lead time plus safety stock minus current stock, used by buyers who can override with recorded reasons.
+  - lesson: demand-forecasting-and-churn-projects
+    front: Why must churn be explicitly defined in prepaid businesses?
+    back: Prepaid customers seldom cancel formally, so churn must be defined behaviourally (for example, no purchase for 45 days), and the definition shapes labels and value.
+  - lesson: demand-forecasting-and-churn-projects
+    front: State the net value formula for a retention campaign.
+    back: Net value = (precision at k × k × retention success rate × CLV) − (k × offer cost).
+  - lesson: demand-forecasting-and-churn-projects
+    front: What does uplift modelling add to churn prediction?
+    back: It targets customers whose behaviour the offer can change, rather than those who will stay or leave regardless.
+  - lesson: support-and-document-automation-projects
+    front: What are the main components of an AI support assistant?
+    back: Intent triage, retrieval of approved knowledge (RAG), a constrained prompt, guardrails, escalation with context, and logging.
+  - lesson: support-and-document-automation-projects
+    front: Why start a support assistant in agent-assist mode?
+    back: Staff review AI drafts before sending, generating live evidence of accuracy and risks without exposing customers to unreviewed answers.
+  - lesson: support-and-document-automation-projects
+    front: Why is field accuracy insufficient for document automation decisions?
+    back: Errors spread across documents, so document-level accuracy and the error escape rate among straight-through documents are lower and more decision-relevant.
+  - lesson: support-and-document-automation-projects
+    front: List the stages of a document automation pipeline.
+    back: Ingest and classify, OCR, field extraction, deterministic validation and matching, human review of exceptions, export to ERP.
+  - lesson: support-and-document-automation-projects
+    front: Which document changes should never be auto-approved, and why?
+    back: Changes to supplier bank details, because they are a common invoice fraud vector and can divert payments.
+  - lesson: fraud-detection-and-ai-reporting-projects
+    front: What should determine a fraud alert threshold?
+    back: Total cost (missed fraud, review cost, customer friction) within analyst capacity, not recall or accuracy alone.
+  - lesson: fraud-detection-and-ai-reporting-projects
+    front: Why combine supervised models with anomaly detection for fraud?
+    back: Supervised models learn known fraud patterns from labels; anomaly detection surfaces novel tactics that labels do not yet cover.
+  - lesson: fraud-detection-and-ai-reporting-projects
+    front: Why does a real-time fraud API need a rules fallback?
+    back: If the model service fails, payments must still be screened; a rules engine keeps protection in place without halting transactions.
+  - lesson: fraud-detection-and-ai-reporting-projects
+    front: What is the core design principle of AI-powered reporting?
+    back: Code computes numbers from a metric dictionary; the LLM writes commentary only from supplied facts, checked automatically and signed off by an analyst.
+  - lesson: fraud-detection-and-ai-reporting-projects
+    front: Name three controls for a text-to-SQL reporting feature.
+    back: Read-only access to pre-approved views, user access controls, and showing the generated SQL and source for verification, plus testing on a question set.

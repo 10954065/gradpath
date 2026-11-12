@@ -1,0 +1,305 @@
+module: threats-and-attacks
+questions:
+  - id: ta01
+    lesson: malware-and-ransomware
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Classify malware types by propagation and payload
+    prompt: Match each malware type to its defining characteristic.
+    pairs:
+      - left: Worm
+        right: Spreads across networks by itself by exploiting vulnerabilities
+      - left: Trojan
+        right: Disguised as legitimate software that the user installs
+      - left: Virus
+        right: Attaches to a host file and spreads when that file is run or shared
+      - left: Rootkit
+        right: Hides its presence by subverting the operating system
+      - left: Ransomware
+        right: Encrypts or locks data and demands payment
+    explanation: Worms self-propagate without user action, Trojans rely on deception, viruses need a host file, rootkits provide concealment and ransomware's payload is extortion. Real campaigns frequently combine several of these.
+  - id: ta02
+    lesson: malware-and-ransomware
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain the significance of the Cyber Kill Chain for defenders
+    prompt: What is the main defensive insight of the Lockheed Martin Cyber Kill Chain?
+    options:
+      - Attackers only need to succeed at the final stage to cause harm
+      - The attacker must succeed at every stage, so the defender can stop the intrusion by breaking any one link
+      - Defences should focus exclusively on the reconnaissance stage
+      - Insider threats are the most common cause of intrusions
+    answer: 1
+    explanation: The model presents an intrusion as a sequence; disrupting any stage, such as blocking delivery or command and control, breaks the chain. It does not focus solely on reconnaissance, and it says little about insiders, which is one of its acknowledged limitations.
+  - id: ta03
+    lesson: malware-and-ransomware
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Recall the patch status relevant to WannaCry
+    prompt: WannaCry exploited a vulnerability for which Microsoft had already released a security update before the May 2017 outbreak.
+    answer: true
+    explanation: Microsoft released MS17-010 in March 2017, about two months before WannaCry spread. Unpatched systems with SMBv1 exposed were vulnerable, which is why WannaCry is a patch management lesson rather than a zero-day case.
+  - id: ta04
+    lesson: malware-and-ransomware
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply backup principles to ransomware resilience
+    scenario: |
+      Illustrative scenario. A fictional Takoradi accounting firm backs up its file server every night to a network-attached storage device that is permanently mapped as a drive on all staff PCs. The firm believes it is protected against ransomware.
+    prompt: What is the most important weakness in this arrangement?
+    options:
+      - Nightly backups are too frequent
+      - The backup is reachable from compromised PCs, so attackers or ransomware can encrypt or delete it
+      - Network-attached storage cannot store accounting files
+      - Backups should only be taken monthly to save storage
+    answer: 1
+    explanation: Human-operated ransomware deliberately seeks reachable backups. At least one copy must be offline or immutable and restore tests must be performed. Frequency is not the problem, and reducing frequency would increase data loss.
+  - id: ta05
+    lesson: malware-and-ransomware
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for stealing data before encryption
+    prompt: What term describes the ransomware tactic of stealing data before encrypting it and threatening to publish it?
+    answers: [double extortion]
+    explanation: Double extortion means that restoring from backup does not end the incident, because the confidentiality breach and legal duties remain.
+  - id: ta06
+    lesson: malware-and-ransomware
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse NotPetya's propagation and intent
+    prompt: Which statement best characterises NotPetya in June 2017?
+    options:
+      - A ransomware campaign spread only by phishing emails, whose victims could reliably recover by paying
+      - A supply chain attack via a compromised accounting software update that spread laterally and behaved as a destructive wiper disguised as ransomware
+      - A denial-of-service attack against DNS providers
+      - A credential stuffing campaign against online banking
+    answer: 1
+    explanation: NotPetya entered via a compromised M.E.Doc update, spread with EternalBlue and stolen credentials, and was designed so that payment would not realistically restore data. It was not phishing-led, nor a DDoS or credential stuffing campaign.
+  - id: ta07
+    lesson: malware-and-ransomware
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate priorities for ransomware prevention in a small organisation
+    prompt: A small clinic exposes remote desktop to the internet with password-only login and keeps backups on a connected drive. With a limited budget, which pair of actions gives the greatest risk reduction?
+    options:
+      - Buy a next-generation antivirus licence and redesign the website
+      - Put remote access behind a VPN with MFA and create an offline, tested backup
+      - Increase password complexity rules and enforce monthly password changes
+      - Purchase cyber insurance and accept the remaining risk
+    answer: 1
+    explanation: Exposed password-only remote access is a leading initial access route, and offline backups determine recovery. Antivirus alone does not stop credential-based intrusion; frequent password changes add little; insurance does not prevent or recover the outage.
+  - id: ta08
+    lesson: phishing-social-engineering-and-insiders
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish phishing variants
+    prompt: A caller claiming to be from the IT help desk phones an employee and asks her to read out the code just sent to her phone. Which attack type is this?
+    options:
+      - Smishing
+      - Vishing
+      - Whaling
+      - Credential stuffing
+    answer: 1
+    explanation: Vishing is voice phishing. Smishing uses SMS, whaling targets senior executives and credential stuffing reuses leaked password pairs. Combined vishing and code theft is a common account takeover technique.
+  - id: ta09
+    lesson: phishing-social-engineering-and-insiders
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply process controls against business email compromise
+    scenario: |
+      Illustrative scenario. The accounts officer of a fictional Accra construction firm receives an email in an existing thread with a long-standing supplier. It says the supplier's bank has changed and attaches a letter with new account details. The email address appears identical to the supplier's usual address.
+    prompt: Which control most reliably prevents this payment being misdirected?
+    options:
+      - Replying to the email to ask the supplier to confirm the change
+      - Calling the supplier on a phone number already held on file, not one in the email, before changing details
+      - Checking that the attached letter has a company logo
+      - Processing the payment quickly to maintain the supplier relationship
+    answer: 1
+    explanation: The mailbox itself may be compromised, so replying reaches the attacker, and logos are easily copied. Out-of-band verification using independently held contact details breaks the fraud. Urgency is exactly what the attacker exploits.
+  - id: ta10
+    lesson: phishing-social-engineering-and-insiders
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Link persuasion principles to social engineering lures
+    prompt: Match each lure to the persuasion principle it primarily exploits.
+    pairs:
+      - left: "This is the MD - process this transfer before the board meeting"
+        right: Authority
+      - left: Your wallet will be blocked in 30 minutes unless you verify now
+        right: Scarcity and urgency
+      - left: All staff in your department have already updated their details here
+        right: Social proof
+      - left: I have fixed your account problem; now just read me the code
+        right: Reciprocity
+    explanation: Recognising the principle helps staff pause. Authority invokes seniority, scarcity and urgency forces fast decisions, social proof suggests others complied and reciprocity creates a sense of obligation after a favour.
+  - id: ta11
+    lesson: phishing-social-engineering-and-insiders
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the limits of SMS-based MFA
+    prompt: SMS one-time passwords fully protect against phishing because the attacker would also need the victim's phone.
+    answer: false
+    explanation: Attackers can relay codes in real time through adversary-in-the-middle phishing pages, trick victims into reading codes aloud or obtain them via SIM swap. Phishing-resistant MFA bound to the genuine domain, such as FIDO2 keys or passkeys, is much stronger.
+  - id: ta12
+    lesson: phishing-social-engineering-and-insiders
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for fraudulent transfer of a mobile number
+    prompt: What is the term for fraudulently transferring a victim's mobile number to a SIM card controlled by an attacker?
+    answers: [SIM swap, SIM swapping, SIM-swap, SIM swap fraud]
+    explanation: SIM swap lets an attacker receive the victim's SMS codes and calls, enabling mobile money and bank account takeover. Strong identity checks and insider controls on SIM replacement are key defences.
+  - id: ta13
+    lesson: phishing-social-engineering-and-insiders
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Classify insider types in the Twitter 2020 case
+    prompt: In the July 2020 Twitter compromise, the employees whose credentials were captured by phone-based phishing are best classified as which type of insider?
+    options:
+      - Malicious insiders
+      - Compromised insiders
+      - Third-party contractors acting with intent
+      - Negligent insiders who leaked data by email
+    answer: 1
+    explanation: The employees did not intend harm; their legitimate access was taken over by external attackers after vishing. That makes them compromised insiders. The case also shows how over-broad access to administrative tools magnifies impact.
+  - id: ta14
+    lesson: phishing-social-engineering-and-insiders
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate awareness programme metrics
+    prompt: Which metric best indicates that a phishing awareness programme is building a healthy security culture?
+    options:
+      - The percentage of staff who attended the annual lecture
+      - A rising proportion of staff who quickly report suspicious messages
+      - The number of staff disciplined for clicking simulated phishing links
+      - The total number of phishing emails blocked by the filter
+    answer: 1
+    explanation: Reporting rate and speed show that staff recognise and escalate threats, enabling fast response. Attendance does not show behaviour change, discipline discourages reporting and filter statistics measure technology rather than people.
+  - id: ta15
+    lesson: denial-of-service-and-credential-attacks
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish password spraying from credential stuffing
+    prompt: Logs show the same single password tried once against each of 2,000 different accounts from a few IP addresses. Which attack is most likely?
+    options:
+      - Credential stuffing
+      - Password spraying
+      - Offline brute force
+      - Volumetric DDoS
+    answer: 1
+    explanation: Spraying tries a few common passwords across many accounts to avoid lockout. Credential stuffing uses many different leaked username–password pairs; offline brute force happens on stolen hashes, not live logins; DDoS targets availability.
+  - id: ta16
+    lesson: denial-of-service-and-credential-attacks
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Apply the search-space formula
+    prompt: How many possible combinations does a 4-digit numeric PIN have?
+    answers: ["10000", "10,000", ten thousand]
+    explanation: Search space is N^L = 10^4 = 10,000. Such a small space is only safe with strict attempt limits and binding to a device or SIM, which is why SIM replacement security matters for mobile money.
+  - id: ta17
+    lesson: denial-of-service-and-credential-attacks
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match DoS categories to resources and defences
+    prompt: Match each denial-of-service category to the resource it primarily exhausts.
+    pairs:
+      - left: Volumetric attack
+        right: Network bandwidth
+      - left: SYN flood
+        right: Connection state tables
+      - left: Repeated expensive search requests
+        right: Application server and database capacity
+    explanation: Volumetric floods saturate links and need upstream scrubbing; protocol attacks such as SYN floods exhaust connection tables and are countered with SYN cookies and limits; application-layer attacks consume server and database resources and are countered by rate limiting and caching.
+  - id: ta18
+    lesson: denial-of-service-and-credential-attacks
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain NIST guidance on password changes
+    prompt: NIST SP 800-63B recommends forcing all users to change their passwords every 30 days regardless of any evidence of compromise.
+    answer: false
+    explanation: NIST SP 800-63B advises against arbitrary periodic changes, which encourage predictable patterns, and recommends changes when there is evidence of compromise, along with screening against breached and common passwords.
+  - id: ta19
+    lesson: denial-of-service-and-credential-attacks
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse lockout trade-offs
+    scenario: |
+      Illustrative scenario. A fictional Ghanaian online bank locks any account permanently after three failed login attempts until the customer visits a branch. A competitor's customers report that a criminal group has been deliberately entering wrong passwords for thousands of usernames harvested from social media.
+    prompt: What is the most serious weakness of the bank's policy in this situation?
+    options:
+      - It allows unlimited guessing against each account
+      - It enables attackers to cause a denial of service by locking out large numbers of legitimate customers, while doing little against spraying
+      - It makes MFA unnecessary
+      - It prevents the bank from logging failed logins
+    answer: 1
+    explanation: Aggressive permanent lockout turns authentication into an availability weapon and gives little protection against spraying, which uses very few attempts per account. Throttling, bot detection and MFA are better. The policy does not allow unlimited guessing or prevent logging.
+  - id: ta20
+    lesson: denial-of-service-and-credential-attacks
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate lessons from the Colonial Pipeline intrusion
+    prompt: According to the company's congressional testimony, which control would most directly have blocked the reported initial access in the 2021 Colonial Pipeline attack?
+    options:
+      - A larger DDoS mitigation contract
+      - Removing the dormant VPN account and requiring MFA on all remote access
+      - Encrypting the pipeline's operational data at rest
+      - Annual security awareness lectures
+    answer: 1
+    explanation: The testimony described entry via a legacy VPN account protected only by a password. Account removal and MFA address exactly that weakness. DDoS protection, encryption at rest and lectures do not stop login with a valid password.
+  - id: ta21
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a layered defence against human-operated ransomware
+    marks: 25
+    prompt: >-
+      "Human-operated ransomware cannot be stopped by technology alone." Critically evaluate this statement with reference to the Cyber Kill Chain, at least one 2017 case study, and the situation of Ghanaian small and medium enterprises.
+    structure:
+      - Introduction defining human-operated ransomware and double extortion
+      - Kill Chain analysis showing technical and non-technical control points
+      - Case evidence from WannaCry or NotPetya
+      - People and process controls, including social engineering and governance of ransom decisions
+      - Ghanaian SME context and proportionate recommendations
+      - Reasoned conclusion
+    rubric:
+      - criterion: Conceptual understanding
+        marks: 5
+        descriptor: Accurately explains human-operated ransomware, RaaS and double extortion
+      - criterion: Use of frameworks
+        marks: 6
+        descriptor: Applies the Cyber Kill Chain or ATT&CK tactics to identify control points at several stages
+      - criterion: Case evidence
+        marks: 5
+        descriptor: Uses accurate public facts from WannaCry or NotPetya to support arguments
+      - criterion: Contextual application
+        marks: 5
+        descriptor: Applies the argument realistically to Ghanaian SMEs, including resource constraints and regulation
+      - criterion: Critical evaluation and conclusion
+        marks: 4
+        descriptor: Weighs technical against human and governance factors and reaches a justified conclusion
+    modelAnswer: |
+      A strong answer accepts the statement with qualification. Human-operated ransomware involves attackers who adapt in real time, use stolen credentials and legitimate administrative tools, and choose when to deploy encryption. Technology such as patching, endpoint detection, MFA and segmentation is essential, but each control can be bypassed if people and processes fail.
+      Using the Kill Chain, delivery is often social (phishing, vishing) and exploitation may consist of a user entering credentials, so awareness and process controls matter. Installation and command and control can be detected technically, but only if someone monitors alerts and has authority to act. Actions on objectives are limited by segmentation and offline backups, which are technical but require disciplined operation and restore testing.
+      WannaCry shows that a technical fix (MS17-010) existed but organisational patch management failed; the problem was governance and prioritisation as much as technology. NotPetya shows that trusted supplier channels and credential theft can defeat patched systems, requiring supplier risk management and privileged access discipline.
+      For Ghanaian SMEs, limited budgets mean low-cost controls with high impact: licensed and updated software, MFA on email and remote access, no daily admin accounts, offline backups and a simple incident plan with contacts for the Cyber Security Authority. Decisions about ransom payment are governance matters requiring legal advice and should be prepared in advance.
+      The conclusion should be that technology is necessary but insufficient; resilience depends on combining technical controls with people, process and governance.
+    explanation: Examiners reward balanced evaluation that links technical controls to human and governance factors, accurate case facts and realistic recommendations for the Ghanaian context.

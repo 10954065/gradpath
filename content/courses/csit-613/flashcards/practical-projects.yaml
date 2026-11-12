@@ -1,0 +1,38 @@
+module: practical-projects
+cards:
+  - lesson: business-model-and-payment-process-projects
+    front: What do unit economics test in an e-commerce business model?
+    back: Whether each order or customer creates value after variable costs such as cost of goods, packaging, delivery, payment fees and acquisition cost.
+  - lesson: business-model-and-payment-process-projects
+    front: How is break-even order volume calculated?
+    back: Monthly fixed costs divided by contribution per order after acquisition costs — e.g. 6,500 ÷ 43.40 ≈ 150 orders.
+  - lesson: business-model-and-payment-process-projects
+    front: Why must the server, not the browser, confirm that an order is paid?
+    back: Browser redirects can be altered or lost; a verified, signed webhook or server-side status query is the reliable source of truth.
+  - lesson: business-model-and-payment-process-projects
+    front: Which states should a robust payment state model include beyond CREATED, PENDING and PAID?
+    back: FAILED, EXPIRED, CANCELLED, FULFILLED and REFUNDED, with defined transitions such as retry after failure or expiry.
+  - lesson: business-model-and-payment-process-projects
+    front: Name four test cases every payment process test plan should include.
+    back: Duplicate pay clicks, network timeouts, a forged or unsigned callback, and a customer who closes the browser after paying.
+  - lesson: business-model-and-payment-process-projects
+    front: What are the five evaluation criteria for the business model project?
+    back: Coherence, evidence, viability, local fit and critical reflection.
+  - lesson: ecosystem-strategy-and-solution-design-projects
+    front: What three tools make up the ecosystem analysis in Project C?
+    back: A stakeholder map (interest and power), a value network of money, goods and information flows, and a PESTEL analysis linked to implications.
+  - lesson: ecosystem-strategy-and-solution-design-projects
+    front: What makes a KPI properly specified?
+    back: A clear definition, a measured baseline, a target, a time frame and an owner.
+  - lesson: ecosystem-strategy-and-solution-design-projects
+    front: What does MoSCoW stand for in requirements prioritisation?
+    back: Must have, Should have, Could have and Won't have (this time).
+  - lesson: ecosystem-strategy-and-solution-design-projects
+    front: Why is a payback period sensitive to adoption assumptions?
+    back: Net benefit is a small difference between benefits and costs, so a modest fall in benefits can cut it sharply — e.g. from GHS 1,400 to 500, stretching payback from about 13 to 36 months.
+  - lesson: ecosystem-strategy-and-solution-design-projects
+    front: Which controls should accompany a bulk payment or collection solution?
+    back: Segregation of duties, dual approval of batches and refunds, audit logs, verified callbacks, daily reconciliation and exception reports.
+  - lesson: ecosystem-strategy-and-solution-design-projects
+    front: Why keep cash as a fallback when digitising an SME's collections?
+    back: It eases the transition, keeps customers who are not yet ready and builds trust while habits change.

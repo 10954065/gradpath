@@ -1,0 +1,402 @@
+module: business-adoption
+questions:
+  - id: ba01
+    lesson: technology-evaluation-and-cost-benefit
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Calculate NPV for a technology investment
+    scenario: |
+      Illustrative scenario. A project costs GHS 200,000 today and produces net benefits of GHS 120,000 at the end of each of years 1 and 2. The discount rate is 10% (discount factors 0.9091 and 0.8264).
+    prompt: What is the project's NPV, to the nearest GHS 100?
+    options:
+      - GHS 40,000
+      - GHS 8,300
+      - "-GHS 8,300"
+      - GHS 240,000
+    answer: 1
+    explanation: PV = 120,000 × 0.9091 + 120,000 × 0.8264 = 109,092 + 99,168 = 208,260; NPV = 208,260 − 200,000 ≈ GHS 8,300. GHS 40,000 ignores discounting; −GHS 8,300 has the wrong sign; GHS 240,000 is total undiscounted benefit without subtracting the investment.
+
+  - id: ba02
+    lesson: technology-evaluation-and-cost-benefit
+    type: scenario
+    bloom: apply
+    difficulty: easy
+    objective: Calculate a simple payback period
+    scenario: |
+      Illustrative scenario. A cloud migration costs GHS 300,000 and saves GHS 80,000 in year 1, GHS 100,000 in year 2 and GHS 120,000 in year 3.
+    prompt: What is the simple payback period?
+    options:
+      - 2 years
+      - 2.5 years
+      - 3 years
+      - 3.75 years
+    answer: 2
+    explanation: Cumulative savings are 80,000 after year 1, 180,000 after year 2 and 300,000 after year 3, exactly recovering the investment at the end of year 3. Two and 2.5 years assume recovery before enough savings have accrued; 3.75 years divides the cost by the year-1 saving only.
+
+  - id: ba03
+    lesson: technology-evaluation-and-cost-benefit
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the limitations of payback
+    prompt: The simple payback method accounts for the time value of money and all cash flows after the payback point.
+    answer: false
+    explanation: Simple payback uses undiscounted cash flows and ignores everything after the investment is recovered. Discounted payback addresses the first weakness but not the second; NPV addresses both, which is why payback should be used alongside NPV.
+
+  - id: ba04
+    lesson: technology-evaluation-and-cost-benefit
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match financial appraisal techniques to their definitions
+    prompt: Match each appraisal technique to its description.
+    pairs:
+      - left: Net present value
+        right: Sum of discounted future net cash flows minus the initial investment
+      - left: Simple payback
+        right: Time for cumulative undiscounted net cash flows to recover the investment
+      - left: Discounted payback
+        right: Time for cumulative discounted net cash flows to recover the investment
+      - left: Return on investment
+        right: Net gain expressed as a percentage of cost
+      - left: Internal rate of return
+        right: Discount rate at which NPV equals zero
+    explanation: Each technique answers a different question — value created (NPV), recovery speed (payback, discounted payback), overall gain (ROI) and break-even rate (IRR). Robust business cases report several together with sensitivity analysis.
+
+  - id: ba05
+    lesson: technology-evaluation-and-cost-benefit
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a decision whose NPV is sensitive to the discount rate
+    prompt: An IoT project has NPV of +GHS 115,000 at a 15% discount rate but −GHS 34,000 at 20%. What is the most appropriate recommendation?
+    options:
+      - Approve immediately at full scale, because NPV is positive at 15%
+      - Reject outright, because NPV is negative at 20%
+      - Recognise the decision is sensitive; validate benefit assumptions, consider a staged pilot with exit criteria and reduce cost and FX risks before full commitment
+      - Ignore the discount rate and use simple ROI instead
+    answer: 2
+    explanation: The sign change shows the result depends heavily on assumptions. A staged pilot (a real option) reduces uncertainty cheaply, while renegotiating costs strengthens the case. Approving or rejecting outright ignores the sensitivity, and switching to undiscounted ROI hides the time value of money.
+
+  - id: ba06
+    lesson: technology-evaluation-and-cost-benefit
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for all lifetime costs of a technology
+    prompt: What term (abbreviated TCO) describes all costs of acquiring, implementing, operating, supporting and retiring a technology?
+    answers: [total cost of ownership, TCO]
+    explanation: Total cost of ownership includes implementation, people, operating, governance and exit costs that are frequently underestimated when only purchase price is considered.
+
+  - id: ba07
+    lesson: technology-evaluation-and-cost-benefit
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse lessons from TradeLens for ecosystem-dependent technology
+    prompt: What is the most important evaluation lesson from the discontinuation of the Maersk–IBM TradeLens platform in 2022?
+    options:
+      - Blockchain technology does not work
+      - Benefits that depend on broad ecosystem participation must be tested under pessimistic adoption scenarios, with governance and incentives for participants
+      - Shipping companies should never use digital platforms
+      - Large companies cannot afford technology investments
+    answer: 1
+    explanation: Maersk and IBM cited insufficient commercial viability and global industry collaboration. The lesson concerns ecosystem adoption, governance and incentives — including competitors' reluctance to join a rival-led platform — not the technical failure of blockchain or an inability to invest.
+
+  - id: ba08
+    lesson: adoption-risks-and-organisational-readiness
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match TOE contexts to adoption factors
+    prompt: Match each adoption factor to its TOE context.
+    pairs:
+      - left: Compatibility with existing systems
+        right: Technological context
+      - left: Top management support
+        right: Organisational context
+      - left: Regulatory requirements from a sector regulator
+        right: Environmental context
+    explanation: Tornatzky and Fleischer (1990) grouped influences into technological (characteristics and availability of technologies), organisational (size, resources, structure, skills, leadership) and environmental (industry, competitors, partners, regulation, support infrastructure) contexts.
+
+  - id: ba09
+    lesson: adoption-risks-and-organisational-readiness
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply risk scoring and select a risk response
+    scenario: |
+      Illustrative scenario. An insurer scores the risk "AI model performs poorly on local handwritten claim forms" at likelihood 4 and impact 4 on 1–5 scales. Its risk appetite treats scores above 12 as requiring treatment before go-live.
+    prompt: What is the risk score, and which response is most appropriate?
+    options:
+      - 8; accept the risk
+      - 16; reduce it by training and testing on local data and piloting with human review of all outputs
+      - 16; transfer it entirely to the vendor so it no longer concerns the insurer
+      - 4; avoid all AI use permanently
+    answer: 1
+    explanation: Score = likelihood × impact = 16, above appetite, so treatment is required. Reducing likelihood and impact through local training data and human review is proportionate. Contracts can shift some costs but not the reputational and regulatory consequences, and permanent avoidance discards the opportunity unnecessarily.
+
+  - id: ba10
+    lesson: adoption-risks-and-organisational-readiness
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Explain that risk registers are living documents
+    prompt: A risk register should be completed at the start of a project and then left unchanged so that it remains a reliable baseline.
+    answer: false
+    explanation: Risks change as projects progress; new risks emerge, others close or materialise. ISO 31000 describes risk management as iterative, so the register should be reviewed and updated regularly, with original assessments kept for learning.
+
+  - id: ba11
+    lesson: adoption-risks-and-organisational-readiness
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Distinguish TOE from TAM
+    prompt: A researcher wants to explain why some Ghanaian SMEs adopt cloud accounting while others do not. Which framework is most suitable as the primary lens?
+    options:
+      - TAM, because it explains individual users' perceived usefulness and ease of use
+      - TOE, because it explains organisation-level adoption through technological, organisational and environmental factors
+      - Stage-Gate, because it manages product development
+      - PUE, because it measures data centre efficiency
+    answer: 1
+    explanation: The unit of analysis is the firm, so TOE is the natural primary lens, possibly combined with diffusion of innovations attributes. TAM explains individual acceptance and could complement it for user-level questions. Stage-Gate and PUE are not adoption theories.
+
+  - id: ba12
+    lesson: adoption-risks-and-organisational-readiness
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the two components of organisational readiness in Weiner's theory
+    prompt: Weiner (2009) defines organisational readiness in terms of change commitment and change ____. Supply the missing word.
+    answers: [efficacy, change efficacy]
+    explanation: Change commitment is members' shared resolve to implement a change; change efficacy is their shared belief in their collective capability to do so. Readiness therefore has a psychological dimension beyond budgets and infrastructure.
+
+  - id: ba13
+    lesson: adoption-risks-and-organisational-readiness
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate implementation risk factors using the Hershey ERP case
+    prompt: Which combination of factors is most commonly cited as contributing to Hershey's 1999 ERP difficulties?
+    options:
+      - Excessive testing and too long a schedule
+      - A compressed schedule, simultaneous cut-over of several major systems, insufficient testing and training, and go-live near peak season
+      - Use of open-source software and lack of vendor involvement
+      - Choosing a cloud deployment model
+    answer: 1
+    explanation: Commentators attribute the problems to schedule compression, a "big bang" switch-over of multiple systems, inadequate testing and training, and timing close to the Halloween peak. The other options are inaccurate; cloud ERP was not the deployment model at the time.
+
+  - id: ba14
+    lesson: innovation-management-and-technology-strategy
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain the function of gates in Stage-Gate
+    prompt: In Cooper's Stage-Gate model, what happens at a gate?
+    options:
+      - Engineers write code for the product
+      - Gatekeepers review deliverables against criteria and decide go, kill, hold or recycle
+      - The product is launched to all customers
+      - Marketing creates advertising campaigns
+    answer: 1
+    explanation: Gates are decision and resource-allocation points where cross-functional gatekeepers assess deliverables against criteria such as strategic fit, feasibility, financial return and risk. Development, launch and marketing occur within stages, not at gates.
+
+  - id: ba15
+    lesson: innovation-management-and-technology-strategy
+    type: matching
+    bloom: apply
+    difficulty: medium
+    objective: Classify open innovation modes
+    prompt: Match each activity to its open innovation mode.
+    pairs:
+      - left: A bank licenses a start-up's fraud-detection algorithm
+        right: Outside-in
+      - left: A telecom company spins off an unused internal analytics tool as a new venture
+        right: Inside-out
+      - left: A cocoa exporter and a university jointly develop a quality-sensing device
+        right: Coupled
+    explanation: Outside-in brings external knowledge in; inside-out takes internal knowledge to market through others; coupled combines both through co-creation in alliances or joint ventures (Chesbrough, 2003).
+
+  - id: ba16
+    lesson: innovation-management-and-technology-strategy
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the relationship between Stage-Gate and agile
+    prompt: Stage-Gate and agile development are incompatible, so organisations must choose one or the other.
+    answer: false
+    explanation: Stage-Gate is a governance framework for investment decisions, while agile is a way of performing development work. Many organisations run agile sprints within stages and use lighter, more flexible gates; Cooper has written about hybrid Agile–Stage-Gate approaches.
+
+  - id: ba17
+    lesson: innovation-management-and-technology-strategy
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for balancing exploitation and exploration
+    prompt: What term did O'Reilly and Tushman use for organisations that exploit their existing business while exploring new opportunities?
+    answers: [ambidextrous, ambidexterity, ambidextrous organisation, ambidextrous organization]
+    explanation: Ambidextrous organisations separate exploratory units from the core while integrating them at senior level, protecting new ventures from the metrics and processes that favour the established business.
+
+  - id: ba18
+    lesson: innovation-management-and-technology-strategy
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse a technology roadmap for missing layers
+    scenario: |
+      Illustrative scenario. A Ghanaian hospital group's "technology roadmap" lists only technical milestones: cloud migration in year 1, IoT monitoring in year 2 and AI diagnostics in year 3. It does not mention patient needs, regulation, services, skills or funding.
+    prompt: What is the most significant weakness of this roadmap?
+    options:
+      - It covers too many years
+      - It lacks the market/business, product/service and resource layers that link technology choices to strategic goals and capabilities
+      - It includes cloud computing
+      - It should list technologies alphabetically
+    answer: 1
+    explanation: Phaal, Farrukh and Probert describe layered roadmaps that connect why (market and business drivers), what (products and services), how (technology) and with what (resources). A technology-only list cannot show whether milestones serve patients, comply with regulation or are resourced. The time span and inclusion of cloud are not the problem.
+
+  - id: ba19
+    lesson: innovation-management-and-technology-strategy
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the Kodak case
+    prompt: Which conclusion about Kodak is best supported by the evidence?
+    options:
+      - Kodak failed because it never developed digital technology
+      - Kodak developed early digital camera technology but did not transform its film-centred business model and strategy quickly enough as digital imaging displaced film
+      - Kodak failed because digital cameras were a passing fad
+      - Kodak's bankruptcy was caused only by poor marketing
+    answer: 1
+    explanation: A Kodak engineer built an early digital camera prototype in 1975 and the firm held digital imaging patents, so it did not lack technology. Its profits and organisation remained centred on film while digital and then smartphone cameras eroded that market, leading to a Chapter 11 filing in 2012. Digital imaging was not a fad, and a single-cause marketing explanation is too narrow.
+
+  - id: ba20
+    module: business-adoption
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a blockchain business case using cost-benefit, risk and readiness analysis
+    prompt: Evaluate whether the consortium should proceed with the blockchain traceability platform. Use suitability criteria, cost-benefit analysis, a risk register extract and a TOE readiness assessment, and make a justified recommendation.
+    marks: 25
+    case: |
+      Illustrative scenario. A fictional consortium of three Ghanaian cocoa exporters, a logistics firm and a farmer cooperative union proposes a permissioned blockchain to record cocoa bean movements from farm-gate purchase to export, to support traceability and sustainability requirements from European buyers. Estimated set-up cost is GHS 2,400,000; expected net benefits (price premiums retained, fewer document disputes, faster buyer audits) are GHS 700,000 per year for five years, starting in year 1. The consortium's cost of capital is 18% (five-year annuity factor about 3.127). Farm-gate data would be entered by purchasing clerks using smartphones, often with weak connectivity. Two exporters are competitors and disagree about who should host and govern the platform. A vendor offers a quick deployment but would control the software.
+    structure:
+      - Assess whether blockchain is suitable versus a shared database
+      - Calculate NPV and payback, and test sensitivity
+      - Build a risk register extract with scores and responses
+      - Assess TOE readiness, including governance and data-entry realities
+      - Recommend proceed, pilot, redesign or reject, with conditions
+    rubric:
+      - criterion: Blockchain suitability analysis
+        marks: 5
+        descriptor: Considers multiple mutually distrustful parties, need for shared tamper-evident records, and the "garbage in" problem at data entry; compares with a shared database
+      - criterion: Financial analysis
+        marks: 6
+        descriptor: Calculates NPV ≈ −GHS 211,000 (700,000 × 3.127 = 2,188,900 minus 2,400,000) and simple payback ≈ 3.4 years; interprets the negative NPV and sensitivity
+      - criterion: Risk register
+        marks: 5
+        descriptor: At least five relevant risks with likelihood, impact, owner and response, including governance, data quality, vendor lock-in and adoption
+      - criterion: TOE readiness assessment
+        marks: 5
+        descriptor: Applies technological, organisational and environmental factors to the consortium specifically
+      - criterion: Recommendation
+        marks: 4
+        descriptor: Justified, conditional recommendation such as a governance-first pilot with exit criteria
+    modelAnswer: |
+      Suitability: blockchain is plausible because several organisations, including competitors, need a shared, tamper-evident record without trusting a single owner, and buyers want auditable traceability. However, the ledger only guarantees that recorded data is unchanged, not that it was true when entered; farm-gate data captured by clerks with weak connectivity is the weakest link. A shared database hosted by a neutral party could deliver similar benefits more cheaply if participants trust that party.
+
+      Finance: PV of benefits ≈ 700,000 × 3.127 = GHS 2,188,900, so NPV ≈ 2,188,900 − 2,400,000 = −GHS 211,100 at 18%. Simple payback = 2,400,000 / 700,000 ≈ 3.4 years. The negative NPV means the full design destroys value unless costs fall or benefits rise; benefits would need to increase by about 10% (2,400,000 / 2,188,900 ≈ 1.096) to break even.
+
+      Risks: governance deadlock between competitors (L4, I5; reduce via a neutral governance charter); poor data quality at farm gate (L4, I4; offline-capable app, training, spot audits); vendor lock-in (L3, I4; open standards, data export, escrow); low cooperative participation (L3, I4; incentives, farmer benefits); buyer requirements changing (L2, I4; align with buyers early).
+
+      TOE: technology — maturity adequate but connectivity weak; organisation — limited blockchain skills and no agreed sponsor; environment — strong buyer pressure, but competitive tension and regulatory engagement with industry bodies are needed.
+
+      Recommendation: do not approve full deployment. Agree governance first, then run a low-cost pilot on one supply route, comparing blockchain with a neutral shared database, with exit criteria tied to data quality, participation and cost.
+    explanation: Examiners look for honest suitability analysis (including the data-entry problem), correct NPV and payback with interpretation, a scored risk register, case-specific TOE analysis and a conditional, justified recommendation.
+
+  - id: ba21
+    module: business-adoption
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Prepare an emerging-technology adoption proposal and technology risk assessment
+    prompt: Prepare an adoption proposal for the board, including evaluation criteria, a cost-benefit summary, a technology risk assessment, a readiness assessment, an innovation-management approach and a roadmap outline.
+    marks: 25
+    case: |
+      Illustrative scenario. Pempamsie Retail is a fictional chain of 25 supermarkets in Accra, Kumasi and Takoradi. Stock-outs and expired goods are rising, and customers increasingly pay by mobile money. Management is considering three emerging-technology options: (1) AI demand forecasting using sales and mobile money transaction data; (2) IoT shelf and cold-chain sensors; (3) autonomous checkout using computer vision. The board wants one integrated proposal within a limited budget. IT staff are few, store managers are sceptical, power interruptions occur, and data quality in the current point-of-sale system is mixed.
+    structure:
+      - Define objectives and evaluation criteria with weights
+      - Score and prioritise the three options
+      - Summarise costs, benefits and financial measures with stated assumptions
+      - Conduct a technology risk assessment with a risk register
+      - Assess readiness using TOE and change commitment
+      - Propose Stage-Gate governance and a phased roadmap
+    rubric:
+      - criterion: Objectives and evaluation criteria
+        marks: 4
+        descriptor: Clear objectives linked to stock-outs and waste; justified weighted criteria
+      - criterion: Option prioritisation
+        marks: 4
+        descriptor: Reasoned scoring that recognises maturity, fit and cost differences, for example autonomous checkout as lower priority
+      - criterion: Cost-benefit reasoning
+        marks: 4
+        descriptor: Identifies TCO items, benefits and appropriate measures (NPV, payback) with assumptions and sensitivity
+      - criterion: Technology risk assessment
+        marks: 5
+        descriptor: Scored risk register covering data, security, privacy (Act 843), power, vendor, people and ethical risks with responses
+      - criterion: Readiness assessment
+        marks: 4
+        descriptor: TOE analysis and attention to store managers' change commitment
+      - criterion: Governance and roadmap
+        marks: 4
+        descriptor: Stage-Gate with exit criteria and a layered, phased roadmap
+    modelAnswer: |
+      Objectives: reduce stock-outs and expired-goods write-offs, with KPIs such as on-shelf availability and waste value per store. Criteria and weights might be strategic fit (25%), maturity (20%), TCO (20%), risk (15%), readiness (10%) and vendor support (10%).
+
+      Prioritisation: AI demand forecasting scores highest because it directly targets the problem, uses existing data and is mature as a cloud service; IoT cold-chain sensors score next, particularly for perishables and power-related temperature excursions; autonomous checkout scores lowest because it is costly, less proven locally, and does not address stock-outs.
+
+      Cost-benefit: TCO includes data cleansing, integration with point-of-sale and mobile money data, subscriptions (dollar-denominated, so FX risk), sensors, connectivity, training and support. Benefits include reduced waste, higher sales from availability and lower working capital. The proposal should present NPV and payback under central and pessimistic assumptions and note sensitivity to forecast accuracy and adoption.
+
+      Risk register: poor POS data quality (L4, I4; cleanse data, pilot); privacy of customer payment data under Act 843 (L3, I5; aggregate and minimise data, DPIA); power interruptions affecting sensors and gateways (L4, I3; battery backup); vendor lock-in (L3, I3; data export clauses); store-manager resistance (L4, I3; involve managers, share results); forecast errors causing overstock (L3, I3; human review of orders).
+
+      Readiness: technology moderate; organisation weak in skills and change commitment; environment supportive (competition, mobile money ubiquity). Actions: appoint a sponsor, hire or partner for data skills, engage store managers early.
+
+      Governance and roadmap: Stage-Gate with a pilot in five stores, Gate criteria on availability improvement and data quality; year 1 forecasting pilot, year 2 scale plus cold-chain sensors, year 3 review autonomous checkout as an experimental option.
+    explanation: Examiners reward an integrated proposal that prioritises options with evidence, presents transparent assumptions, scores risks, assesses readiness realistically and proposes staged governance.
+
+  - id: ba22
+    module: business-adoption
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the role of financial appraisal in emerging-technology strategy
+    prompt: '"Financial techniques such as NPV are unsuitable for emerging technologies because their benefits are too uncertain." Critically evaluate this statement.'
+    marks: 15
+    structure:
+      - Explain NPV and why uncertainty challenges it
+      - Argue for the continued value of financial discipline
+      - Introduce sensitivity analysis, scenarios and real options
+      - Integrate qualitative criteria, readiness and portfolio thinking
+      - Conclude with a balanced position
+    rubric:
+      - criterion: Understanding of financial techniques
+        marks: 4
+        descriptor: Accurate explanation of NPV, payback and ROI and their assumptions
+      - criterion: Critical evaluation
+        marks: 5
+        descriptor: Weighs uncertainty, intangible and option value against the risks of abandoning financial discipline
+      - criterion: Use of frameworks and examples
+        marks: 4
+        descriptor: Applies sensitivity, real options, Stage-Gate and portfolio horizons, with relevant examples
+      - criterion: Conclusion
+        marks: 2
+        descriptor: Justified, nuanced position
+    modelAnswer: |
+      A strong essay accepts that emerging technologies challenge NPV: benefits depend on uncertain adoption, immature vendors and organisational change; much value lies in learning and future options; and hype inflates forecasts. A single NPV figure can therefore create false precision, and rigid hurdle rates may bias firms toward incremental horizon 1 projects, as Christensen's analysis of incumbents suggests.
+
+      However, abandoning financial analysis would be worse. Without it, decisions are driven by enthusiasm, vendor pressure or fear of missing out, and costs such as integration, skills and FX exposure are ignored. TradeLens shows how well-funded ventures can fail commercially.
+
+      The answer is to adapt rather than abandon: use sensitivity and scenario analysis to reveal which assumptions matter; apply real options reasoning to justify small pilots that buy information; use Stage-Gate so that investment increases as uncertainty falls; combine financial metrics with weighted criteria for strategic fit, maturity, risk and readiness; and manage a portfolio across horizons, judging horizon 3 bets by learning milestones rather than immediate NPV.
+
+      A balanced conclusion is that NPV is necessary but not sufficient: it should be one disciplined input within a staged, portfolio-based decision process.
+    explanation: Examiners look for accurate financial concepts, recognition of both limitations and value, and use of sensitivity, real options, Stage-Gate and portfolio thinking to reach a nuanced conclusion.

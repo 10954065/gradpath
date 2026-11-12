@@ -1,0 +1,336 @@
+module: practical-security
+questions:
+  # Lesson 1: threat-modelling
+  - id: q01
+    lesson: threat-modelling
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Map STRIDE categories to the security properties they violate
+    prompt: Match each STRIDE threat category to the security property it violates.
+    pairs:
+      - left: Spoofing
+        right: Authentication
+      - left: Tampering
+        right: Integrity
+      - left: Repudiation
+        right: Non-repudiation
+      - left: Information disclosure
+        right: Confidentiality
+      - left: Denial of service
+        right: Availability
+      - left: Elevation of privilege
+        right: Authorisation
+    explanation: Each STRIDE category is the negation of a property. Mapping threats to properties helps choose mitigations, for example strong authentication against spoofing and audit logging against repudiation.
+  - id: q02
+    lesson: threat-modelling
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Recall the four-question threat modelling framework
+    prompt: Which of the following is NOT one of Shostack's four threat modelling questions?
+    options:
+      - What are we working on?
+      - What can go wrong?
+      - Who is to blame if we are breached?
+      - Did we do a good job?
+    answer: 2
+    explanation: The four questions are What are we working on, What can go wrong, What are we going to do about it, and Did we do a good job. Threat modelling is a design and learning activity, not an exercise in assigning blame.
+  - id: q03
+    lesson: threat-modelling
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Classify a threat using STRIDE
+    scenario: |
+      Illustrative scenario. In a payment service, the mobile money operator sends an HTTP callback to confirm that a customer has paid. The API currently accepts any callback that arrives at the right URL with the right format.
+    prompt: An attacker sends a forged callback claiming a payment succeeded. Which STRIDE category is this primarily?
+    options:
+      - Spoofing
+      - Repudiation
+      - Denial of service
+      - Information disclosure
+    answer: 0
+    explanation: The attacker pretends to be the mobile money operator, so the primary threat is spoofing of an external entity, which also enables tampering with the ledger. Mitigations include verifying callback signatures or mutual TLS and confirming status with the operator before crediting.
+  - id: q04
+    lesson: threat-modelling
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Explain the importance of trust boundaries
+    prompt: Trust boundaries on a data flow diagram mark places where the level of trust changes, and many significant threats are found where data crosses them.
+    answer: true
+    explanation: Data crossing from the internet, a partner or a less trusted zone into a more trusted one must be authenticated and validated, so analysing each boundary crossing is central to STRIDE.
+  - id: q05
+    lesson: threat-modelling
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Name the DFD element that represents where data rests
+    prompt: In a data flow diagram, what element type represents a place where data rests, such as a database or file bucket?
+    answers: [data store, datastore, data stores]
+    explanation: DFDs use external entities, processes, data stores, data flows and trust boundaries. Data stores are typically analysed for tampering, information disclosure and denial of service.
+  - id: q06
+    lesson: threat-modelling
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse a threat and select the strongest mitigation
+    scenario: |
+      Illustrative scenario. A merchant API endpoint accepts a merchantId parameter in the request body and returns that merchant's balance. Merchants authenticate with a session token.
+    prompt: Which mitigation best addresses the elevation of privilege threat in this design?
+    options:
+      - Encrypt the merchantId parameter in transit
+      - Derive the merchant identity from the authenticated session on the server and ignore any client-supplied merchantId
+      - Rename the parameter so attackers cannot guess it
+      - Add a CAPTCHA to the endpoint
+    answer: 1
+    explanation: The flaw is that the client controls whose data is returned, a broken object-level authorisation issue. Complete mediation requires the server to determine authority from the authenticated identity. Encryption in transit does not stop the legitimate user changing the value, and renaming relies on obscurity.
+  - id: q07
+    lesson: threat-modelling
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate STRIDE analysis of the Bangladesh Bank case
+    prompt: In the 2016 Bangladesh Bank SWIFT fraud, attackers altered local records and suppressed printed confirmations to delay discovery. Which control would most directly address this aspect of the attack?
+    options:
+      - A faster internet connection
+      - Independent, tamper-evident logging and reconciliation of payment messages outside the compromised environment
+      - Longer passwords on the bank's public website
+      - A larger office printer
+    answer: 1
+    explanation: Tampering and repudiation were achieved by manipulating the local environment. Independent, tamper-evident records and reconciliation (for example comparing with statements from the correspondent bank) reveal discrepancies even if local systems are compromised. The other options do not address the tampering.
+
+  # Lesson 2: security-assessment-and-vulnerability-management
+  - id: q08
+    lesson: security-assessment-and-vulnerability-management
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Recall CVSS qualitative severity bands
+    prompt: Under CVSS qualitative ratings, what severity does a base score of 7.5 correspond to?
+    options:
+      - Medium
+      - High
+      - Critical
+      - Low
+    answer: 1
+    explanation: The bands are None 0.0, Low 0.1-3.9, Medium 4.0-6.9, High 7.0-8.9 and Critical 9.0-10.0, so 7.5 is High.
+  - id: q09
+    lesson: security-assessment-and-vulnerability-management
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish severity from risk
+    prompt: A CVSS base score is a complete measure of the risk a vulnerability poses to a particular organisation.
+    answer: false
+    explanation: The base score measures intrinsic severity. Organisational risk also depends on exposure, asset criticality, evidence of active exploitation and compensating controls. FIRST itself cautions against treating base scores as risk scores.
+  - id: q10
+    lesson: security-assessment-and-vulnerability-management
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Prioritise vulnerabilities using context
+    scenario: |
+      Illustrative scenario. A scan reports: (A) CVSS 9.8 remote code execution on an isolated lab server with no sensitive data and no known exploitation; (B) CVSS 7.8 privilege escalation on finance staff laptops, listed in CISA's Known Exploited Vulnerabilities catalogue; (C) CVSS 5.3 weak TLS configuration on the public website.
+    prompt: Which order of remediation is most defensible?
+    options:
+      - A, B, C (by CVSS score)
+      - B, A, C
+      - C, B, A
+      - All at the same time in the next quarterly cycle
+    answer: 1
+    explanation: B is actively exploited and affects high-value users who approve payments, so it comes first despite a lower score. A is severe but isolated, so it follows. C is lower risk. Sorting by CVSS alone ignores exploitation evidence and exposure.
+  - id: q11
+    lesson: security-assessment-and-vulnerability-management
+    type: short_answer
+    bloom: understand
+    difficulty: medium
+    objective: Name the document that defines limits of a security test
+    prompt: What is the name of the written agreement that defines the scope, methods, timing, contacts and limits of an authorised security test?
+    answers: [rules of engagement, ROE, rules-of-engagement]
+    explanation: Rules of engagement, together with written authorisation from someone with authority over the systems, make testing lawful, safe and well controlled, and specify stop conditions and data handling.
+  - id: q12
+    lesson: security-assessment-and-vulnerability-management
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match assessment methods to their purpose
+    prompt: Match each assessment method to its main purpose.
+    pairs:
+      - left: Vulnerability scanning
+        right: Broad automated discovery of known weaknesses
+      - left: Penetration testing
+        right: Authorised demonstration of exploitability and impact
+      - left: Red teaming
+        right: Testing detection and response against a realistic adversary
+      - left: Configuration review
+        right: Comparing settings against an approved baseline
+    explanation: These methods are complementary. Scans give breadth, reviews check baselines, penetration tests give depth on chosen targets, and red teams evaluate the defensive capability of the organisation as a whole.
+  - id: q13
+    lesson: security-assessment-and-vulnerability-management
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Interpret a CVSS vector string
+    prompt: What does the vector CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H indicate?
+    options:
+      - Local access required, high complexity, low impact
+      - Exploitable over the network with low complexity, no privileges and no user interaction, with high impact on confidentiality, integrity and availability
+      - Physical access required and user interaction needed
+      - The vulnerability has been patched
+    answer: 1
+    explanation: AV:N is network, AC:L low complexity, PR:N no privileges, UI:N no user interaction, S:U scope unchanged, and C, I, A all High. This yields a base score of 9.8 (Critical), typical of exposed remote code execution flaws.
+  - id: q14
+    lesson: security-assessment-and-vulnerability-management
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate responses when a patch cannot be applied
+    scenario: |
+      Illustrative scenario. A hospital's imaging system runs on a vendor-supported but unpatched operating system with a known Critical vulnerability. The vendor says a certified update will take three months.
+    prompt: What is the most appropriate interim response?
+    options:
+      - Do nothing until the vendor update arrives
+      - Apply compensating controls such as network isolation and strict access rules, increase monitoring, record a formal risk acceptance by the system owner and track the vendor commitment
+      - Install an uncertified patch immediately without testing
+      - Disconnect the system permanently
+    answer: 1
+    explanation: Compensating controls reduce exposure while the permanent fix is arranged, and formal acceptance makes the residual risk visible and owned. Doing nothing leaves the risk untreated; uncertified patches may break a clinical system; permanent disconnection may be disproportionate for patient care.
+
+  # Lesson 3: awareness-scenarios-and-secure-architecture
+  - id: q15
+    lesson: awareness-scenarios-and-secure-architecture
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish awareness, training and education
+    prompt: According to NIST SP 800-50, which activity is best described as training rather than awareness?
+    options:
+      - A poster reminding all staff to lock their screens
+      - A role-specific course teaching finance staff how to verify bank-detail changes
+      - A university master's degree in cybersecurity
+      - A monthly newsletter about current scams
+    answer: 1
+    explanation: Awareness focuses attention for everyone (posters, newsletters); training builds role-specific skills (payment verification for finance staff); education develops deep professional knowledge (degree programmes).
+  - id: q16
+    lesson: awareness-scenarios-and-secure-architecture
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate the use of phishing simulations
+    prompt: Publicly naming and disciplining staff who click on phishing simulations is the most effective way to improve reporting behaviour.
+    answer: false
+    explanation: Punitive approaches discourage staff from reporting mistakes, which delays detection of real incidents. Supportive feedback, easy reporting and recognition of good reports build the early-warning culture organisations need.
+  - id: q17
+    lesson: awareness-scenarios-and-secure-architecture
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name the information introduced during a tabletop exercise
+    prompt: In a tabletop exercise, what is the term for a new piece of scenario information introduced by the facilitator to force participants to make decisions?
+    answers: [inject, injects, an inject]
+    explanation: Injects such as a ransom note, a journalist's call or a failed backup add realism and pressure, revealing gaps in plans, roles and decision-making.
+  - id: q18
+    lesson: awareness-scenarios-and-secure-architecture
+    type: matching
+    bloom: apply
+    difficulty: medium
+    objective: Apply Saltzer and Schroeder design principles
+    prompt: Match each design decision to the principle it best applies.
+    pairs:
+      - left: Every API request is checked for authorisation on the server
+        right: Complete mediation
+      - left: Firewall rules deny all traffic unless explicitly allowed
+        right: Fail-safe defaults
+      - left: Large payments require approval by two different people
+        right: Separation of privilege
+      - left: Single sign-on and passkeys so staff do not share passwords
+        right: Psychological acceptability
+      - left: Using public, vetted cryptographic algorithms
+        right: Open design
+    explanation: Saltzer and Schroeder's 1975 principles remain a practical vocabulary for justifying architecture decisions, linking each control to a clear design rationale.
+  - id: q19
+    lesson: awareness-scenarios-and-secure-architecture
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse architectural weaknesses revealed by a social engineering incident
+    scenario: |
+      Attackers telephoned employees of a social media company, posing as internal IT staff, and directed them to a fake login page that captured passwords and MFA codes in real time. Using these accounts, the attackers accessed an internal administration tool that could change the email address on any user account.
+    prompt: Which architectural change would most reduce the impact of a similar attack in future?
+    options:
+      - Longer annual awareness presentations only
+      - Restricting the administration tool to a small set of staff, requiring phishing-resistant MFA and a second approver for sensitive account changes
+      - Moving the tool to a different data centre
+      - Hiding the tool's URL
+    answer: 1
+    explanation: This is the Twitter 2020 pattern. Least privilege limits who can be targeted, phishing-resistant MFA defeats real-time code capture, and separation of privilege means one compromised account cannot change high-value accounts alone. Awareness helps but should not be the only layer; obscuring the URL is not a control.
+  - id: q20
+    lesson: awareness-scenarios-and-secure-architecture
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain zero trust
+    prompt: Which statement best describes zero trust architecture as described in NIST SP 800-207?
+    options:
+      - A product that replaces all firewalls
+      - An approach in which no implicit trust is granted based on network location, and each access request is authenticated, authorised and evaluated against policy
+      - A policy of never trusting any employee
+      - Disabling all remote access
+    answer: 1
+    explanation: Zero trust removes reliance on network location, making per-request decisions based on identity, device and context. It is an architectural approach built from multiple capabilities, not a single product or a statement about employees.
+  - id: q21
+    lesson: awareness-scenarios-and-secure-architecture
+    type: scenario
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate the design of a tabletop exercise
+    scenario: |
+      Illustrative scenario. A company plans a ransomware tabletop exercise. Only the three-person IT team will attend, the scenario has no injects beyond "the files are encrypted", and no report will be produced.
+    prompt: Which improvement would most increase the value of the exercise?
+    options:
+      - Make the exercise longer
+      - Include executives, legal and communications staff, add realistic injects with decision points, and produce an after-action report with owned actions
+      - Run the exercise on production systems instead
+      - Replace the facilitator with a vendor sales presentation
+    answer: 1
+    explanation: Key incident decisions on notification, ransom, communication and continuity belong to executives and specialists, so they must take part. Injects create decision pressure, and the after-action report turns findings into improvements. Testing on production systems is unnecessary and risky for a discussion-based exercise.
+
+  # Module-level extended questions
+  - id: q22
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Integrate threat modelling, vulnerability management and secure architecture for a Ghanaian system
+    marks: 20
+    case: |
+      Illustrative scenario. Nhyira Pensions is a fictional Ghanaian pension administrator launching an online portal where members view balances, update beneficiaries and request withdrawals. Withdrawals are paid to bank or mobile money accounts. The proposed design has the portal, an administration console for staff and the member database on one flat network; staff use passwords only; withdrawals above any amount are approved by a single officer; and the vendor has agreed to patch "when convenient". A recent scan of a similar vendor deployment found a CVSS 9.8 remote code execution flaw in the portal framework that is listed in CISA's Known Exploited Vulnerabilities catalogue.
+    prompt: Produce a STRIDE-based threat analysis of the design, prioritise the identified threats and the reported vulnerability, and propose a secure architecture and supporting awareness and exercise activities. Justify your recommendations.
+    structure:
+      - Brief DFD description with trust boundaries
+      - STRIDE threats for key elements with ratings
+      - Vulnerability prioritisation using CVSS and context
+      - Secure architecture redesign applying named principles
+      - Awareness, training and tabletop exercise plan
+      - Contractual, regulatory and residual-risk considerations
+    rubric:
+      - criterion: Threat modelling quality
+        marks: 6
+        descriptor: Identifies element-specific STRIDE threats such as account takeover (spoofing), beneficiary change tampering, officer repudiation, data disclosure and privilege escalation, with ratings.
+      - criterion: Vulnerability management reasoning
+        marks: 4
+        descriptor: Treats the KEV-listed 9.8 flaw on an internet-facing system as top priority, proposes compensating controls and contractual patch timelines.
+      - criterion: Secure architecture
+        marks: 6
+        descriptor: Proposes segmentation, MFA, least privilege, dual approval, logging, zero trust access to the console and immutable backups, linked to named principles.
+      - criterion: Human factors and governance
+        marks: 4
+        descriptor: Designs targeted awareness (for example verification of beneficiary changes), a realistic tabletop scenario and references Act 843 and Act 1038 appropriately.
+    modelAnswer: |
+      A DFD would show members and staff as external entities, the portal and administration console as processes, the member database and audit log as data stores, and payment interfaces to banks and mobile money operators, with trust boundaries at the internet edge, between the portal and the console, and at the payment interfaces. STRIDE analysis identifies: spoofing of members through credential stuffing and SIM-swap (high); tampering with beneficiary or payout details to redirect withdrawals (critical); repudiation by a single approving officer (high); information disclosure of member records through the portal or flat network (high); denial of service at peak periods (medium); and elevation of privilege from the portal to the console on the flat network (critical).
+
+      The reported CVSS 9.8 flaw is known to be exploited and would sit on an internet-facing portal holding personal and financial data, so it is the first priority: require the vendor to patch before launch, and apply interim controls such as a WAF rule, restricted exposure and heightened monitoring. Contracts should set patch timeframes by severity and exploitation status.
+
+      The redesign should segment the portal, console and database; place the console behind zero trust access with phishing-resistant MFA for staff; enforce MFA and breached-password checks for members; require out-of-band confirmation and a cooling-off period for beneficiary and payout changes; add dual approval for withdrawals above a threshold (separation of privilege); log all sensitive actions to a tamper-evident store (addressing repudiation); apply least privilege and complete mediation in the API; and keep immutable backups. Awareness should target officers and call-centre staff on verification and social engineering, with a tabletop exercise on a fraudulent beneficiary change. Member data is personal data under Act 843, and if the system is designated Critical Information Infrastructure, Act 1038 obligations apply.
+    explanation: Examiners look for element-specific STRIDE threats, context-based vulnerability prioritisation, architecture decisions tied to principles, and attention to people and regulation.

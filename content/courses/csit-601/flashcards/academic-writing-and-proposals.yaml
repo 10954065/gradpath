@@ -1,0 +1,101 @@
+module: academic-writing-and-proposals
+cards:
+  # academic-writing-and-abstracts
+  - lesson: academic-writing-and-abstracts
+    front: What is the simplest test of whether a paragraph is critical or merely descriptive?
+    back: Ask "so what?" A critical paragraph evaluates, compares or interprets evidence and explains why it matters for the argument; a descriptive paragraph only reports.
+  - lesson: academic-writing-and-abstracts
+    front: What are the four elements of a PEAL paragraph?
+    back: Point (topic sentence), Evidence (data or citations), Analysis (what it shows and why it matters), Link (connection to the argument or next paragraph).
+  - lesson: academic-writing-and-abstracts
+    front: What five things should an abstract for a completed study cover?
+    back: Context and problem, purpose, method (design, sample, analysis), main findings, and implications.
+  - lesson: academic-writing-and-abstracts
+    front: How does a proposal abstract differ from a dissertation abstract?
+    back: It describes methods in the future tense and states expected contributions instead of findings, because no data have yet been collected.
+  - lesson: academic-writing-and-abstracts
+    front: Why is hedging a strength rather than a weakness in academic writing?
+    back: It makes claims proportionate to the evidence, for example "suggests an association" for correlational data rather than "proves causation".
+  # proposal-structure-introduction-and-literature
+  - lesson: proposal-structure-introduction-and-literature
+    front: What three things should a strong problem statement contain?
+    back: A practical problem supported by evidence, the consequences of leaving it unaddressed, and a knowledge gap in existing research.
+  - lesson: proposal-structure-introduction-and-literature
+    front: What is the funnel structure in a background section?
+    back: Moving from broad global or regional context to the national setting, then to the specific phenomenon, ending at the research problem.
+  - lesson: proposal-structure-introduction-and-literature
+    front: What is wrong with an "author parade" literature review and what should replace it?
+    back: It summarises studies one by one without synthesis; replace it with a concept-centric review organised by theme or relationship, supported by a concept matrix.
+  - lesson: proposal-structure-introduction-and-literature
+    front: How can you test the alignment of a proposal?
+    back: Trace one objective through its research question, hypothesis, framework construct, instrument items and analysis technique; any missing link is a misalignment.
+  - lesson: proposal-structure-introduction-and-literature
+    front: Why might TOE suit an SME adoption study better than TAM?
+    back: TOE explains organisational adoption through technological, organisational and environmental contexts, whereas TAM focuses on individual users' beliefs.
+  # methodology-results-discussion-and-conclusions
+  - lesson: methodology-results-discussion-and-conclusions
+    front: What is the key verb for a methodology chapter and why?
+    back: "Justify: each choice must be linked to the research questions and context, with alternatives considered, not merely described."
+  - lesson: methodology-results-discussion-and-conclusions
+    front: What distinguishes the results chapter from the discussion chapter?
+    back: Results report what the data show accurately and completely; the discussion interprets findings and compares them with literature and theory.
+  - lesson: methodology-results-discussion-and-conclusions
+    front: What four steps can structure the discussion of each key finding?
+    back: Restate the finding, compare it with prior studies and theory, explain agreements or contradictions, and draw implications.
+  - lesson: methodology-results-discussion-and-conclusions
+    front: What makes a recommendation strong?
+    back: It names a specific stakeholder and action and is directly derived from a reported finding.
+  - lesson: methodology-results-discussion-and-conclusions
+    front: Why should effect sizes be reported alongside p-values?
+    back: Statistical significance shows evidence against a null hypothesis, but effect size shows the magnitude and practical importance of a relationship.
+  # apa7-referencing-and-plagiarism
+  - lesson: apa7-referencing-and-plagiarism
+    front: How do APA 7 in-text citations differ for two authors versus three or more?
+    back: Two authors are both named, with "&" in parentheses and "and" in narrative; three or more use the first author plus "et al." from the first citation.
+  - lesson: apa7-referencing-and-plagiarism
+    front: What is the APA 7 pattern for a journal article reference?
+    back: Author, A. A. (Year). Article title in sentence case. *Journal Title, volume*(issue), pages. https://doi.org/...
+  - lesson: apa7-referencing-and-plagiarism
+    front: Name two APA 7 changes for books compared with older practice.
+    back: The publisher's location is omitted, and DOIs are written as https://doi.org/ URLs without a "DOI:" label.
+  - lesson: apa7-referencing-and-plagiarism
+    front: Why is patchwriting a form of plagiarism even when cited?
+    back: It keeps the source's structure and expression with superficial word changes, so the writing is not genuinely the student's own.
+  - lesson: apa7-referencing-and-plagiarism
+    front: Why must Zotero output still be proofread?
+    back: The software formats whatever metadata it captures; errors in author names, capitalisation, volume, pages or DOI will appear in the reference list.
+  - lesson: apa7-referencing-and-plagiarism
+    front: What does a similarity report actually show?
+    back: Text that matches other sources; it is evidence to review, not a plagiarism verdict, and a low percentage does not rule out patchwriting or uncredited ideas.
+  # dissertation-planning-and-defence
+  - lesson: dissertation-planning-and-defence
+    front: Which dissertation tasks are usually on the critical path?
+    back: Ethics approval and data collection, followed by analysis; they depend on other people and cannot be done in parallel with each other.
+  - lesson: dissertation-planning-and-defence
+    front: What tasks can be done while waiting for ethical approval?
+    back: Revising the literature review, drafting the methodology chapter and preparing the analysis plan.
+  - lesson: dissertation-planning-and-defence
+    front: What does a risk register record?
+    back: Each risk, its likelihood and impact, the mitigation strategy and early warning signs.
+  - lesson: dissertation-planning-and-defence
+    front: How should you answer an examiner who probes a limitation?
+    back: Acknowledge it honestly, explain how the design addressed it as far as possible, refer to where it is discussed, and suggest how future research could overcome it.
+  - lesson: dissertation-planning-and-defence
+    front: What should a short research presentation cover?
+    back: Context, problem and gap, objectives, framework, methodology, findings (or expected outcomes), contribution, limitations and conclusion.
+  # worked-proposal-examples
+  - lesson: worked-proposal-examples
+    front: Using Cochran's formula with z = 1.96, p = 0.5 and e = 0.05, what is n0?
+    back: n0 = 3.8416 × 0.25 / 0.0025 = 384.16, rounded up to 385, before any finite population correction.
+  - lesson: worked-proposal-examples
+    front: How does the type of research question guide design choice?
+    back: '"To what extent" questions suit surveys and hypothesis testing; "how" questions about processes suit qualitative designs; needs for measurement plus explanation suit mixed methods.'
+  - lesson: worked-proposal-examples
+    front: Why does the e-commerce proposal have no hypotheses?
+    back: It is inductive and exploratory; theory (Diffusion of Innovations) serves as a sensitising framework rather than something to test.
+  - lesson: worked-proposal-examples
+    front: How can traders be sampled when no list of them exists?
+    back: Use multi-stage cluster sampling, randomly selecting market sections and then stalls systematically within them, and acknowledge the design effect.
+  - lesson: worked-proposal-examples
+    front: What extra ethical steps does a hospital technology study need?
+    back: Institutional approval plus any required health-sector ethics review and hospital permission, no access to patient records, and protection against deductive disclosure in small departments.

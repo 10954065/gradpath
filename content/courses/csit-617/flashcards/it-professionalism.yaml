@@ -1,0 +1,41 @@
+module: it-professionalism
+cards:
+  - lesson: professional-identity-and-responsibility
+    front: Why is IT often described as a "partial" or "emerging" profession?
+    back: It has specialised knowledge, professional bodies and codes of ethics, but entry is largely uncontrolled, membership is voluntary and many practitioners are employees whose judgement can be overridden.
+  - lesson: professional-identity-and-responsibility
+    front: How does accountability differ from moral responsibility?
+    back: Moral responsibility concerns whether a person is blameworthy because they acted knowingly and freely; accountability is the obligation to explain and justify conduct to a forum, and it attaches to roles even without personal fault.
+  - lesson: professional-identity-and-responsibility
+    front: What is the difference between liability and moral responsibility?
+    back: Liability is a legal obligation to compensate or be penalised, which can exist without fault (strict liability); moral responsibility can exist even where the law imposes no liability.
+  - lesson: professional-identity-and-responsibility
+    front: Name Nissenbaum's four barriers to accountability in computerised society.
+    back: The problem of many hands, bugs treated as unavoidable, the computer as scapegoat, and ownership without liability.
+  - lesson: professional-identity-and-responsibility
+    front: What is forward-looking responsibility and why does professional ethics emphasise it?
+    back: It is responsibility for ensuring good outcomes and preventing foreseeable harm in future, rather than allocating blame afterwards; professionals are trusted precisely to take this kind of ownership.
+  - lesson: professional-identity-and-responsibility
+    front: What professional lesson does the UK Post Office Horizon case teach?
+    back: Presuming that a computer system is correct can cause grave injustice; professionals who understand a system's weaknesses must ensure that knowledge reaches decision-makers such as courts.
+  - lesson: codes-of-conduct-and-competence
+    front: What are five functions of a professional code of ethics?
+    back: Guidance for judgement, support against improper pressure, education of members, a basis for discipline, and a signal of trustworthiness to the public.
+  - lesson: codes-of-conduct-and-competence
+    front: What are the four parts of the ACM Code of Ethics (2018)?
+    back: General ethical principles, professional responsibilities, professional leadership principles, and compliance with the code.
+  - lesson: codes-of-conduct-and-competence
+    front: How do the ACM and IEEE codes resolve conflicts between employer interests and public welfare?
+    back: Both treat public welfare (safety, health and well-being) as paramount, so it overrides loyalty to employers or clients when they genuinely conflict.
+  - lesson: codes-of-conduct-and-competence
+    front: Why is competence an ethical and not merely a technical obligation?
+    back: Clients and the public rely on professionals because they cannot judge the work themselves; accepting work beyond one's competence without disclosure exploits that trust and risks harm.
+  - lesson: codes-of-conduct-and-competence
+    front: What are the five dimensions of professional competence?
+    back: Knowledge, skill, judgement, awareness of one's limits, and currency (keeping up to date).
+  - lesson: codes-of-conduct-and-competence
+    front: What does Moor's idea of a "policy vacuum" imply about codes of ethics?
+    back: New technologies create situations no existing rule addresses, so codes can never be complete and must be supplemented by ethical reasoning and judgement.
+  - lesson: codes-of-conduct-and-competence
+    front: What are the four stages of a CPD cycle?
+    back: Reflect on gaps, plan learning activities, act by completing them, and evaluate their impact on practice before repeating.

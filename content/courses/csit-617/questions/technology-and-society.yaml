@@ -1,0 +1,228 @@
+module: technology-and-society
+questions:
+  # ---- digital-inclusion-and-access ----
+  - id: q01
+    lesson: digital-inclusion-and-access
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Identify the second-level digital divide
+    prompt: The second-level digital divide refers to differences in
+    options:
+      - physical access to devices and connectivity
+      - digital skills and patterns of use among people who already have access
+      - the tangible outcomes people obtain from using technology
+      - the price of mobile handsets between countries
+    answer: 1
+    explanation: The first level concerns material access, the second concerns skills and use, and the third concerns outcomes and benefits. Handset prices are one cause of first-level divides rather than a level in themselves.
+  - id: q02
+    lesson: digital-inclusion-and-access
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Recognise that access alone does not ensure inclusion
+    prompt: Once everyone in a community owns a smartphone, the digital divide in that community has been eliminated.
+    answer: false
+    explanation: Ownership addresses only material access. People may still differ greatly in skills, confidence, language, affordability of data and the benefits they obtain, so second- and third-level divides remain.
+  - id: q03
+    lesson: digital-inclusion-and-access
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match WCAG principles to examples of good practice
+    prompt: Match each WCAG principle to an example of good practice.
+    pairs:
+      - left: Perceivable
+        right: Providing captions for training videos
+      - left: Operable
+        right: Ensuring every function can be used with a keyboard alone
+      - left: Understandable
+        right: Writing clear error messages that explain how to fix a form entry
+      - left: Robust
+        right: Using correctly labelled form fields that screen readers can interpret
+    explanation: POUR organises WCAG success criteria. Captions make audio perceivable, keyboard access makes the interface operable, clear errors make it understandable, and semantic, labelled markup makes it robust for assistive technologies.
+  - id: q04
+    lesson: digital-inclusion-and-access
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the main international web accessibility standard
+    prompt: What is the abbreviation of the W3C standard most widely used for web accessibility?
+    answers: [WCAG, Web Content Accessibility Guidelines]
+    explanation: The Web Content Accessibility Guidelines, with version 2.2 published in 2023, define success criteria at levels A, AA and AAA. Level AA is a common practical target.
+  - id: q05
+    lesson: digital-inclusion-and-access
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply inclusive design to a digital-by-default proposal
+    scenario: |
+      Illustrative scenario. A fictional rural bank in the Bono Region plans to replace all counter services with a smartphone app that works only in English and requires a 4G connection.
+    prompt: Which recommendation best reflects inclusive design principles?
+    options:
+      - Proceed, because digital services are available 24 hours a day and therefore more inclusive
+      - Cancel all digital plans to protect traditional customers
+      - Offer the app alongside USSD access, local-language support, low-bandwidth design, accessibility testing and assisted channels through agents or branches
+      - Proceed, but charge a fee for counter services so that customers are encouraged to switch
+    answer: 2
+    explanation: Inclusion requires multiple channels and design for low bandwidth, local languages and disability, as mobile money's USSD and agent model shows. Proceeding unchanged excludes many customers, cancelling ignores benefits, and fees penalise those least able to switch.
+  - id: q06
+    lesson: digital-inclusion-and-access
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse data invisibility as a form of exclusion
+    prompt: An informal-sector trader in Kumasi who conducts most business in cash is refused credit by a lender that scores applicants only on digital transaction histories. Which concept best explains this outcome?
+    options:
+      - The first-level divide only
+      - Data invisibility, in which people who generate little digital data are disadvantaged by data-driven systems
+      - Universal design
+      - Freedom of expression
+    answer: 1
+    explanation: The trader may have a phone, so this is not only a first-level issue. The problem is that data-driven systems treat a lack of digital records as a lack of creditworthiness, reproducing existing disadvantage. Universal design and expression are not the core issue here.
+  - id: q07
+    lesson: digital-inclusion-and-access
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate the justice-based argument for inclusion
+    prompt: From a Rawlsian perspective, digital innovations should be arranged so that they benefit the least advantaged members of society.
+    answer: true
+    explanation: Rawls's difference principle permits inequalities only if they benefit the least advantaged. Applied to technology, it supports designing digital services and policies with the needs of excluded groups at the centre, treating inclusion as a matter of justice rather than charity.
+
+  # ---- digital-rights-and-workplace-technology ----
+  - id: q08
+    lesson: digital-rights-and-workplace-technology
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Recall the principle affirmed by the 2012 UN Human Rights Council resolution
+    prompt: What principle did the UN Human Rights Council affirm in its 2012 resolution on the internet and human rights?
+    options:
+      - Internet access must be provided free of charge by every government
+      - The same rights that people have offline must also be protected online
+      - Private companies are not bound by any human rights expectations
+      - Governments may restrict online speech without justification
+    answer: 1
+    explanation: The resolution affirmed that rights, in particular freedom of expression, apply online as offline. It did not mandate free access, and it did not endorse unjustified restrictions.
+  - id: q09
+    lesson: digital-rights-and-workplace-technology
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match the five proportionality questions to their concerns
+    prompt: Match each element of the workplace monitoring proportionality framework to the question it asks.
+    pairs:
+      - left: Legitimate aim
+        right: What specific problem is the monitoring meant to address?
+      - left: Necessity
+        right: Could the aim be achieved by less intrusive means?
+      - left: Proportionality
+        right: Is the intrusion reasonable relative to the benefit?
+      - left: Transparency
+        right: Have workers been clearly told what is monitored and why?
+      - left: Safeguards
+        right: Are there access limits, retention periods, human review and appeal?
+    explanation: The framework balances employer interests in security and performance against employee interests in privacy and dignity. Skipping any element, especially necessity, is a common weakness in monitoring policies.
+  - id: q10
+    lesson: digital-rights-and-workplace-technology
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Understand why employee consent is a weak basis for monitoring
+    prompt: Because employees sign their employment contracts voluntarily, their consent always provides a sufficient ethical justification for any workplace monitoring.
+    answer: false
+    explanation: The power asymmetry of employment means consent may not be freely given, since refusing may risk one's job. Monitoring must therefore be justified by a legitimate aim and be necessary, proportionate and transparent, with safeguards.
+  - id: q11
+    lesson: digital-rights-and-workplace-technology
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply proportionality to a remote-work monitoring proposal
+    scenario: |
+      Illustrative scenario. A fictional Accra marketing agency wants to require all remote staff to keep webcams switched on throughout the working day so that managers can confirm they are working.
+    prompt: Applying the proportionality framework, what is the most defensible assessment?
+    options:
+      - Acceptable, because productivity is a legitimate aim and the employer owns the laptops
+      - Disproportionate, because continuous video monitoring is highly intrusive and less intrusive means, such as output-based goals and regular check-ins, can achieve the aim
+      - Acceptable, provided the footage is stored indefinitely
+      - Irrelevant to ethics, because remote work happens at home
+    answer: 1
+    explanation: Productivity is a legitimate aim, but continuous webcam monitoring intrudes into private homes and fails the necessity test when less intrusive options exist. Indefinite storage worsens the intrusion, and the home setting increases rather than removes ethical concern.
+  - id: q12
+    lesson: digital-rights-and-workplace-technology
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Name the term for gradual use of data beyond its original purpose
+    prompt: What term describes the gradual use of data or technology for purposes beyond those for which it was originally introduced?
+    answers: [function creep, mission creep]
+    explanation: Function creep is a central risk in monitoring. Vehicle GPS introduced for safety may later be used to discipline workers for breaks. Clear purpose limits and safeguards are needed to prevent it.
+  - id: q13
+    lesson: digital-rights-and-workplace-technology
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the significance of the Amsterdam ride-hailing data cases
+    prompt: What is the main significance of the 2021 Amsterdam court cases brought by ride-hailing drivers under the GDPR?
+    options:
+      - They established that platform workers are always employees
+      - They showed that data protection rights, such as access to personal data and information about automated decisions, can function as tools for workers to challenge algorithmic management
+      - They banned the use of algorithms by platforms in Europe
+      - They concerned copyright in driver-generated maps
+    answer: 1
+    explanation: The cases used GDPR rights of access and protections around automated decision-making to obtain information about how drivers were assessed. They did not settle employment status, ban algorithms or concern copyright.
+  - id: q14
+    lesson: digital-rights-and-workplace-technology
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a nationwide internet shutdown using proportionality
+    prompt: A government orders a nationwide mobile internet shutdown for a week to stop the spread of rumours during an election. Which evaluation is most consistent with human rights reasoning?
+    options:
+      - Justified, because preventing misinformation is always a legitimate aim
+      - Likely disproportionate, because it affects entire populations, disrupts commerce, mobile money, emergency services and journalism, and less intrusive measures are available
+      - Justified, because the internet is not a human right
+      - Irrelevant, because only private companies can violate digital rights
+    answer: 1
+    explanation: Even if the aim is legitimate, a blanket shutdown fails necessity and proportionality because of its wide collateral harm and the availability of targeted alternatives. Whether access is a free-standing right does not matter, since shutdowns impair recognised rights such as expression. States are primary duty-bearers for human rights.
+
+  # ---- module-level ----
+  - id: q15
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the inclusion and workplace-rights implications of a digital transformation
+    prompt: Analyse the ethical issues in the case, using concepts from both lessons in this module, and recommend a defensible plan for the company.
+    marks: 25
+    case: |
+      Illustrative scenario. NorthStar Retail, a fictional Ghanaian supermarket chain with branches in Accra, Tamale and several district towns, announces a digital transformation. Customers will need to use a new app to access loyalty discounts and home delivery; the app is available only in English and requires a smartphone. In-store, self-checkout machines will replace half the cashiers. Remaining staff will wear wristbands that track movement and idle time, and an algorithm will schedule shifts weekly based on predicted footfall, with automatic warnings for staff whose "efficiency score" falls. Delivery riders will be engaged as independent contractors through the app, with pay set algorithmically.
+    structure:
+      - Identification of the main ethical issues for customers, staff and riders
+      - Digital inclusion analysis using the three levels of the divide and accessibility
+      - Workplace monitoring analysis using the proportionality framework
+      - Algorithmic management and automation analysis
+      - Application of at least two ethical theories and relevant professional principles
+      - Recommendations with justification and implementation priorities
+    rubric:
+      - criterion: Inclusion analysis
+        marks: 6
+        descriptor: Identifies excluded customer groups across access, skills and outcomes, addresses language and accessibility, and proposes inclusive channels
+      - criterion: Monitoring and proportionality
+        marks: 6
+        descriptor: Applies aim, necessity, proportionality, transparency and safeguards to wristbands and efficiency scores
+      - criterion: Algorithmic management and automation
+        marks: 5
+        descriptor: Analyses scheduling, automatic warnings, rider pay and contractor status, including opacity and fairness
+      - criterion: Ethical theory and codes
+        marks: 4
+        descriptor: Accurately applies at least two theories and relevant ACM or IEEE principles
+      - criterion: Recommendations
+        marks: 4
+        descriptor: Concrete, prioritised and justified recommendations that balance business goals with rights
+    modelAnswer: |
+      A strong answer opens by recognising NorthStar's legitimate aims of efficiency, competitiveness and convenience, then identifies three affected groups. For customers, an English-only smartphone app makes discounts conditional on access and skills, disadvantaging older, rural, low-income, non-English-speaking and disabled customers. This creates first- and second-level divides and a third-level divide in outcomes, since excluded customers pay more. Recommendations include USSD or card-based loyalty, local-language options, accessibility testing against WCAG principles and in-store assistance.
+      For staff, wristband tracking of idle time and automatic warnings should be tested against the proportionality framework. Workforce planning is a legitimate aim, but continuous body tracking is intrusive and aggregated footfall data or supervisor observation may suffice. Automatic warnings without human review fail the safeguards test. Kantian analysis suggests workers are being treated merely as means, while a utilitarian analysis must weigh efficiency gains against stress, injury and turnover. Weekly algorithmic scheduling raises income instability, so minimum notice periods and worker input are needed.
+      Automation through self-checkout should be accompanied by consultation, redeployment and retraining, consistent with leadership obligations in the ACM Code to enhance the quality of working life. For riders, algorithmic pay and contractor status raise opacity and fairness concerns. The company should explain pay calculations, provide human review of deactivation and consider minimum earnings protections, noting that employment classification is a legal question requiring advice.
+      The conclusion should prioritise actions: inclusive loyalty channels and human review of discipline first, then replacing wristbands with less intrusive tools, then transparency for riders.
+    explanation: Examiners look for integration of inclusion and workplace rights, structured proportionality analysis, accurate use of theory and practical, prioritised recommendations.

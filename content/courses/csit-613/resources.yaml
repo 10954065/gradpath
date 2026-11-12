@@ -1,0 +1,100 @@
+resources:
+  - title: UNCTAD E-commerce and the Digital Economy
+    description: UNCTAD's official topic hub with reports, data and policy analysis on e-commerce and digital trade in developing economies.
+    provider: UNCTAD
+    url: https://unctad.org/topic/ecommerce-and-digital-economy
+    category: organisation
+    module: e-business-foundations
+    difficulty: introductory
+    stage: foundation
+    accessType: free
+  - title: Strategyzer
+    description: Official site of the Business Model Canvas creators, with explanations and tools for business model design.
+    provider: Strategyzer
+    url: https://www.strategyzer.com/
+    category: tool
+    module: e-business-foundations
+    difficulty: introductory
+    stage: core
+    accessType: unknown
+  - title: Shopify Help Center
+    description: Official help resources explaining how a SaaS storefront manages products, variants, carts and checkout.
+    provider: Shopify
+    url: https://help.shopify.com/
+    category: documentation
+    module: e-commerce-technology
+    difficulty: introductory
+    stage: core
+    accessType: unknown
+  - title: Google Analytics Help
+    description: Official documentation for Google Analytics, covering events, traffic sources, conversions and e-commerce reporting.
+    provider: Google
+    url: https://support.google.com/analytics/
+    category: documentation
+    module: e-commerce-technology
+    difficulty: intermediate
+    stage: core
+    accessType: unknown
+  - title: GSMA
+    description: Official site of the global mobile industry association, publishing research and programmes on mobile money and digital inclusion.
+    provider: GSMA
+    url: https://www.gsma.com/
+    category: organisation
+    module: digital-finance
+    difficulty: intermediate
+    stage: core
+    accessType: unknown
+  - title: Bank of Ghana
+    description: Official website of Ghana's central bank and payments regulator, with publications on payment systems, e-money and FinTech.
+    provider: Bank of Ghana
+    url: https://www.bog.gov.gh/
+    category: organisation
+    module: digital-finance
+    difficulty: intermediate
+    stage: core
+    accessType: unknown
+  - title: Ghana Interbank Payment and Settlement Systems (GhIPSS)
+    description: Official site of the Bank of Ghana subsidiary that operates national payment infrastructure, including mobile money interoperability.
+    provider: GhIPSS
+    url: https://ghipss.net/
+    category: organisation
+    module: digital-finance
+    difficulty: intermediate
+    stage: core
+    accessType: unknown
+  - title: World Bank Global Findex Database
+    description: Official World Bank database and reports on account ownership, digital payments and financial inclusion worldwide.
+    provider: World Bank
+    url: https://www.worldbank.org/en/publication/globalfindex
+    category: database
+    module: digital-finance
+    difficulty: intermediate
+    stage: advanced
+    accessType: unknown
+  - title: Paystack
+    description: Payment service provider operating in Ghana and other African markets, offering online checkout for cards and mobile money.
+    provider: Paystack
+    url: https://paystack.com/
+    category: organisation
+    module: digital-finance
+    difficulty: introductory
+    stage: foundation
+    accessType: unknown
+  - title: Paystack Documentation
+    description: Official developer documentation describing payment initiation, verification, webhooks and mobile money and card flows.
+    provider: Paystack
+    url: https://paystack.com/docs/
+    category: documentation
+    module: digital-finance
+    difficulty: advanced
+    stage: advanced
+    accessType: unknown
+  - title: Hubtel
+    description: Ghanaian provider of payment collection, checkout and business messaging services for merchants.
+    provider: Hubtel
+    url: https://hubtel.com/
+    category: organisation
+    module: digital-finance
+    difficulty: introductory
+    stage: foundation
+    accessType: unknown

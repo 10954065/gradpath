@@ -1,0 +1,458 @@
+module: business-process-reengineering
+questions:
+  # ---------- Lesson: bpr-principles ----------
+  - id: q01
+    lesson: bpr-principles
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain the definition of BPR
+    prompt: Which statement best reflects Hammer and Champy's (1993) definition of business process re-engineering?
+    options:
+      - Small, continuous improvements made by front-line staff
+      - Fundamental rethinking and radical redesign of business processes to achieve dramatic improvements in performance
+      - Replacing old computers with faster ones
+      - Reducing headcount in every department by a fixed percentage
+    answer: 1
+    explanation: >
+      The definition stresses fundamental, radical, dramatic and process-focused change. Small continuous gains describe
+      kaizen; faster computers automate old processes; across-the-board headcount cuts are not redesign.
+  - id: q02
+    lesson: bpr-principles
+    type: matching
+    bloom: apply
+    difficulty: medium
+    objective: Match Hammer's principles to examples
+    prompt: Match each of Hammer's (1990) principles to the example that best illustrates it.
+    pairs:
+      - left: Capture information once and at the source
+        right: Patient details recorded once at registration and reused throughout the visit
+      - left: Have those who use the output perform the process
+        right: Departments order low-value stationery directly from an approved online catalogue
+      - left: Organise around outcomes, not tasks
+        right: One case manager handles a loan application from receipt to decision
+      - left: Put the decision point where the work is performed
+        right: A receiving clerk accepts goods matching an order, triggering payment
+    explanation: >
+      Hammer's principles are design heuristics. Applying them to concrete examples shows understanding beyond listing.
+      The Ford receiving clerk also illustrates subsuming information processing into the real work.
+  - id: q03
+    lesson: bpr-principles
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Recognise Hammer's argument about automation
+    prompt: Hammer (1990) argued that the main opportunity from IT is to automate existing processes so that they run faster.
+    answer: false
+    explanation: >
+      Hammer's title, "Don't automate, obliterate", argued the opposite: automating processes designed for paper merely
+      speeds up obsolete work. IT should enable fundamentally new process designs.
+  - id: q04
+    lesson: bpr-principles
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the name Hammer gave to Ford's redesigned accounts payable process
+    prompt: What did Hammer call Ford's redesigned accounts payable process, in which payment was triggered by receipt of goods matching an order?
+    answers: [invoiceless processing, invoice-less processing, invoiceless]
+    explanation: >
+      In invoiceless processing, purchasing entered orders in a shared database and receiving accepted matching goods,
+      which authorised payment without the three-document match by accounts payable.
+  - id: q05
+    lesson: bpr-principles
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate whether BPR or continuous improvement is appropriate
+    scenario: |
+      Illustrative scenario. A Kumasi supermarket's checkout process is broadly efficient, but staff have identified many
+      small issues, such as poorly placed scanners and slow bagging. Customer satisfaction is reasonable and the
+      management team has limited capacity for major change this year.
+    prompt: Which approach is most appropriate?
+    options:
+      - Radical re-engineering of the checkout process from a clean sheet
+      - Continuous improvement led by front-line staff, addressing the identified issues incrementally
+      - Outsourcing the checkout to a third party
+      - Doing nothing, because satisfaction is reasonable
+    answer: 1
+    explanation: >
+      The process is broadly sound, the gap is small and change capacity is limited, all of which favour continuous
+      improvement. BPR suits large performance gaps or new enabling technology. Outsourcing is unjustified, and ignoring
+      known issues wastes improvement opportunities.
+  - id: q06
+    lesson: bpr-principles
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the Davenport and Short redesign steps
+    prompt: How does Davenport and Short's (1990) approach differ most clearly from extreme clean-sheet re-engineering?
+    options:
+      - It ignores information technology
+      - It includes understanding and measuring existing processes before designing new ones
+      - It focuses only on individual tasks
+      - It forbids prototyping
+    answer: 1
+    explanation: >
+      Davenport and Short included "understand and measure existing processes" to avoid repeating mistakes and to provide
+      a baseline. Their approach centres on IT levers, works at process level and ends by designing and building a
+      prototype.
+  - id: q07
+    lesson: bpr-principles
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate criticisms of BPR
+    prompt: A common criticism of BPR as practised in the 1990s was that it neglected the human side of change and became associated with downsizing.
+    answer: true
+    explanation: >
+      Many programmes were linked with large job cuts and underestimated organisational knowledge and resistance. These
+      criticisms led modern BPM to treat re-engineering as one option alongside explicit change management.
+
+  # ---------- Lesson: process-analysis-and-inefficiencies ----------
+  - id: q08
+    lesson: process-analysis-and-inefficiencies
+    type: matching
+    bloom: apply
+    difficulty: medium
+    objective: Classify steps using value-added analysis
+    prompt: Match each pharmacy step to its value-added classification.
+    pairs:
+      - left: Pharmacist counsels the patient on dosage
+        right: Value-adding
+      - left: Recording a controlled drug in the statutory register
+        right: Business value-adding
+      - left: Patient waits in a second queue to pay
+        right: Non-value-adding
+    explanation: >
+      Customers value counselling; regulation requires controlled-drug records; waiting adds no value for anyone. BVA
+      steps should be kept but streamlined, and their underlying reasons questioned.
+  - id: q09
+    lesson: process-analysis-and-inefficiencies
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Calculate cycle time efficiency
+    prompt: A claims process takes 4 days (5,760 minutes) end to end, of which 48 minutes are value-adding work. What is the cycle time efficiency?
+    options:
+      - "About 0.8%"
+      - "About 8%"
+      - "About 48%"
+      - "About 83%"
+    answer: 0
+    explanation: >
+      Cycle time efficiency = 48 / 5,760 × 100% ≈ 0.83%. Very low values are common in paper-based service processes and
+      show that waiting, not work, dominates; redesign should target queues and hand-offs.
+  - id: q10
+    lesson: process-analysis-and-inefficiencies
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Identify the bottleneck from capacity data
+    scenario: |
+      Illustrative scenario. A restaurant receives 40 orders per hour at lunchtime. Order taking: 2 waiters at 2 minutes
+      per order. Cooking: 3 cooks at 4 minutes per order. Payment: 1 cashier at 1 minute per order.
+    prompt: Which step is the bottleneck?
+    options:
+      - Order taking (capacity 60 per hour)
+      - Cooking (capacity 45 per hour)
+      - Payment (capacity 60 per hour)
+      - There is no bottleneck because all capacities exceed demand
+    answer: 1
+    explanation: >
+      Capacities are order taking 2 × 60/2 = 60, cooking 3 × 60/4 = 45 and payment 60/1 = 60. Utilisations are 67%, 89%
+      and 67%. Cooking has the highest utilisation and limits throughput. Although all capacities exceed demand, the step
+      with the highest utilisation is still the bottleneck and will generate the longest queues when demand varies.
+  - id: q11
+    lesson: process-analysis-and-inefficiencies
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the acronym for the seven wastes
+    prompt: What acronym is commonly used to remember the seven wastes of transport, inventory, motion, waiting, overproduction, over-processing and defects?
+    answers: [TIMWOOD, TIM WOOD]
+    explanation: >
+      TIMWOOD summarises Ohno's seven wastes. In service processes, waiting and over-processing (such as re-keying data)
+      are usually the most visible.
+  - id: q12
+    lesson: process-analysis-and-inefficiencies
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Understand the effect of improving non-bottleneck steps
+    prompt: Halving processing time at a non-bottleneck step will substantially increase the throughput of the whole process.
+    answer: false
+    explanation: >
+      Throughput is limited by the bottleneck. Improving another step may reduce its own queue but cases will still wait
+      at the constraint. The Theory of Constraints therefore focuses improvement on the constraint first.
+  - id: q13
+    lesson: process-analysis-and-inefficiencies
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Apply Little's law
+    prompt: A clinic sees 25 patients per hour and each patient spends an average of 2 hours in the clinic. Using Little's law, how many patients are in the clinic on average?
+    options:
+      - "12.5"
+      - "25"
+      - "50"
+      - "27"
+    answer: 2
+    explanation: >
+      Work in progress = throughput × cycle time = 25 × 2 = 50 patients. Halving cycle time would halve crowding, which is
+      why reducing waiting improves both experience and space use.
+  - id: q14
+    lesson: process-analysis-and-inefficiencies
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a root-cause analysis
+    scenario: |
+      Illustrative scenario. A distributor's managers conclude that late deliveries are caused by lazy drivers and plan
+      disciplinary action. A Pareto count of 200 late deliveries shows 120 caused by orders released to the warehouse
+      after the daily loading cut-off, 40 by vehicle breakdowns, 25 by wrong addresses and 15 by driver delays.
+    prompt: What is the best evaluation of the managers' conclusion?
+    options:
+      - It is correct; driver discipline will solve most late deliveries
+      - It is unsupported; most late deliveries stem from late order release, so the order-release process should be investigated first
+      - Vehicle breakdowns are the main cause and should be addressed first
+      - The data is irrelevant because lateness is a cultural issue
+    answer: 1
+    explanation: >
+      The Pareto data shows 60% of late deliveries come from late order release, a process issue, and only 7.5% from
+      drivers. A 5 Whys analysis of late release should follow. Breakdowns matter but are secondary; dismissing data
+      leads to blaming people for system problems.
+
+  # ---------- Lesson: redesign-optimisation-and-change-management ----------
+  - id: q15
+    lesson: redesign-optimisation-and-change-management
+    type: matching
+    bloom: apply
+    difficulty: medium
+    objective: Match redesign changes to heuristics
+    prompt: Match each redesign change to the heuristic it applies.
+    pairs:
+      - left: Verify the prescription before taking payment
+        right: Resequencing
+      - left: Prepare food and drinks at the same time
+        right: Parallelism
+      - left: Route simple repeat prescriptions to a nurse-led clinic
+        right: Triage
+      - left: Remove retrieval of paper folders
+        right: Task elimination
+      - left: One officer handles a customer's claim end to end
+        right: Case manager
+    explanation: >
+      Naming the heuristic shows why a change works and what trade-offs to expect, as described by Reijers and Limam
+      Mansar (2005).
+  - id: q16
+    lesson: redesign-optimisation-and-change-management
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Recall the ADKAR sequence
+    prompt: Which sequence correctly lists the ADKAR elements?
+    options:
+      - Awareness, Desire, Knowledge, Ability, Reinforcement
+      - Ability, Desire, Knowledge, Awareness, Results
+      - Analysis, Design, Knowledge, Action, Review
+      - Awareness, Delivery, Kick-off, Adoption, Reward
+    answer: 0
+    explanation: >
+      ADKAR (Hiatt, 2006) describes the individual's progression: understanding why, wanting to change, knowing how, being
+      able to perform and having the change reinforced.
+  - id: q17
+    lesson: redesign-optimisation-and-change-management
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Diagnose an ADKAR barrier point
+    scenario: |
+      Illustrative scenario. Nurses at a hospital have attended training on a new electronic triage protocol and pass the
+      knowledge test, but many still use paper forms. In interviews they say the new screens are fine but they see no
+      reason to change because "the old way works and doctors still ask for paper".
+    prompt: At which ADKAR element is the main barrier, and what intervention fits best?
+    options:
+      - Knowledge; repeat the training
+      - Desire; involve nurses and doctors, explain benefits and secure doctors' visible support for the new protocol
+      - Ability; buy faster computers
+      - Reinforcement only; introduce penalties immediately
+    answer: 1
+    explanation: >
+      Nurses know how to use the system but do not want to, partly because doctors' behaviour undermines it. That is a
+      desire barrier, addressed through involvement, sponsorship and consistent behaviour by clinical leaders. Repeating
+      training ignores the real barrier; hardware is not the issue; penalties without addressing desire breed resistance.
+  - id: q18
+    lesson: redesign-optimisation-and-change-management
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Understand Kotter's warning about early victory
+    prompt: According to Kotter, declaring victory too soon after early wins is a common cause of failed transformations.
+    answer: true
+    explanation: >
+      Kotter (1995) warned that short-term wins should be used to consolidate gains and drive further change (step 7),
+      and that change must be anchored in culture (step 8) before it is safe to relax.
+  - id: q19
+    lesson: redesign-optimisation-and-change-management
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the first of Kotter's eight steps
+    prompt: What is the first of Kotter's eight steps for leading change?
+    answers: [establish a sense of urgency, create a sense of urgency, create urgency, establish urgency, sense of urgency]
+    explanation: >
+      Without urgency, people stay with familiar practices. Urgency should be built on evidence, such as waiting-time data
+      and customer complaints, not fear.
+  - id: q20
+    lesson: redesign-optimisation-and-change-management
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate trade-offs in a redesign using the Devil's Quadrangle
+    prompt: A logistics firm proposes fully automating delivery scheduling so that the system assigns all routes. Which evaluation best reflects the Devil's Quadrangle?
+    options:
+      - It will improve time, cost, quality and flexibility simultaneously
+      - It may improve time and consistency but can reduce flexibility for unusual deliveries, so exception handling should be designed in
+      - It has no effect on performance dimensions
+      - It will always increase cost and should be rejected
+    answer: 1
+    explanation: >
+      Automation often brings speed and consistency but can make processes rigid for exceptions. A balanced design keeps a
+      route for human override. Claims of improvement on every dimension, or automatic rejection, ignore trade-offs.
+  - id: q21
+    lesson: redesign-optimisation-and-change-management
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the Mutual Benefit Life redesign
+    prompt: Which feature of Mutual Benefit Life's redesign, as described by Hammer (1990), most clearly made change management essential?
+    options:
+      - It changed the colour of application forms
+      - It replaced chains of specialists with case managers, fundamentally changing job roles and skills
+      - It moved the head office to a new city
+      - It reduced the number of insurance products
+    answer: 1
+    explanation: >
+      The case manager design turned narrow specialist jobs into broad, accountable roles supported by shared data and
+      expert-system tools. Such role changes require new skills, measures and leadership support. The other options were
+      not features of the case.
+
+  # ---------- Module-level extended questions ----------
+  - id: q22
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Analyse, redesign and plan change for a Ghanaian process
+    marks: 25
+    case: |
+      Illustrative scenario. Golden Spoon is a hypothetical restaurant chain with four branches in Accra. At lunchtime
+      each branch receives about 60 orders per hour. Waiters write orders on paper, walk them to the kitchen and later
+      re-key them into the till for payment. Three cooks handle all dishes at about 3.5 minutes per order; two waiters take
+      orders at about 1.5 minutes each; one cashier takes payment at about 1 minute per order. Customers wait on average
+      35 minutes for food and 10 minutes to pay. Kitchen errors (wrong dishes) are frequent, and many are traced to
+      unreadable handwriting. Staff fear that any new system will be used to cut jobs.
+    prompt: >
+      Analyse the as-is process quantitatively and qualitatively, propose a to-be process using redesign heuristics and
+      Hammer's principles, estimate its effects and trade-offs, and design a change management plan using Kotter's eight
+      steps and ADKAR.
+    structure:
+      - Quantitative analysis (capacity, utilisation, bottleneck) and qualitative analysis (VA, BVA, NVA and wastes)
+      - Root-cause analysis of kitchen errors
+      - To-be process with named heuristics and principles
+      - Estimated effects and Devil's Quadrangle trade-offs
+      - Change management plan using Kotter and ADKAR, including the job-loss concern
+    rubric:
+      - criterion: Quantitative analysis
+        marks: 5
+        descriptor: Correct capacities and utilisations, identification of the bottleneck and interpretation.
+      - criterion: Qualitative analysis and root cause
+        marks: 5
+        descriptor: Classifies steps, names relevant wastes and traces errors to information capture.
+      - criterion: Redesign
+        marks: 6
+        descriptor: Coherent to-be design linking each change to a problem and naming heuristics or principles.
+      - criterion: Evaluation of effects
+        marks: 4
+        descriptor: Reasoned estimates, trade-offs and recognition that a pilot is needed.
+      - criterion: Change management
+        marks: 5
+        descriptor: Applies Kotter's steps and ADKAR to specific stakeholder groups, addressing job security honestly.
+    modelAnswer: |
+      Capacities: waiters 2 × 60/1.5 = 80 orders per hour (75% utilised); cooks 3 × 60/3.5 ≈ 51 per hour (about 117%
+      utilised); cashier 60 per hour (100% utilised). The kitchen is the bottleneck, which explains the 35-minute wait;
+      the cashier is at full capacity, explaining the payment queue. Qualitatively, walking orders to the kitchen is
+      transport and motion waste, re-keying into the till is over-processing, and wrong dishes are defects. A 5 Whys
+      chain traces errors to handwritten orders, that is, information not captured once and electronically.
+
+      A to-be design applies "capture information once at the source": waiters enter orders on handheld devices that send
+      them directly to a kitchen display and the till (task elimination of re-keying, removing transport). Payment can be
+      taken at the table by card or mobile money (resequencing and parallelism), removing the cashier queue. To exploit
+      the kitchen constraint, the menu could be triaged into quick and complex dishes with a dedicated station for quick
+      items, and simple preparation could be moved before the lunch peak; a fourth cook at peak would raise capacity to
+      about 69 per hour (about 87% utilised).
+
+      Estimated effects include fewer errors, shorter food and payment waits and better data on demand. Trade-offs include
+      investment in devices, dependence on connectivity and some loss of flexibility for unusual requests. A pilot in one
+      branch should validate the estimates.
+
+      Change management: establish urgency using wait-time and error data; form a coalition of branch managers, a head
+      cook and respected waiters; communicate a vision of faster, accurate service; address job fears honestly, for
+      example by committing to redeploy time to customer service; generate a short-term win in the pilot branch;
+      consolidate and roll out; anchor the change in training and performance measures. ADKAR assessment by group
+      (waiters, cooks, cashiers) identifies barriers, such as cashiers' desire, given that their role changes most.
+    explanation: >
+      Examiners reward correct calculations, explicit links between analysis and redesign, realistic trade-offs and a
+      change plan tailored to stakeholders rather than a generic list of Kotter's steps.
+  - id: q23
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Critically evaluate the relevance of BPR today
+    marks: 20
+    prompt: >
+      "Business process re-engineering was a 1990s fad; today organisations need only continuous improvement and
+      automation." Critically evaluate this statement with reference to Hammer (1990), Hammer and Champy (1993), the
+      criticisms of BPR and contemporary enterprise technologies.
+    structure:
+      - Definition and principles of BPR
+      - Evidence from classic cases (Ford, Mutual Benefit Life)
+      - Criticisms of BPR and lessons learned
+      - Role of continuous improvement and automation today
+      - Reasoned conclusion on the place of radical redesign
+    rubric:
+      - criterion: Understanding of BPR
+        marks: 5
+        descriptor: Accurate definition, key words and principles.
+      - criterion: Use of cases and literature
+        marks: 5
+        descriptor: Appropriate, accurate use of Ford and Mutual Benefit Life and of Hammer, Champy and Davenport.
+      - criterion: Critical evaluation
+        marks: 7
+        descriptor: Weighs criticisms against continued relevance, including the risk of automating broken processes.
+      - criterion: Conclusion
+        marks: 3
+        descriptor: A justified, nuanced position.
+    modelAnswer: |
+      An effective essay defines BPR as the fundamental rethinking and radical redesign of processes for dramatic
+      improvement (Hammer & Champy, 1993) and summarises Hammer's (1990) principles, such as organising around outcomes and
+      capturing information once at the source.
+
+      Classic cases show the power of radical redesign: Ford's invoiceless processing challenged the assumption that
+      payment requires an invoice, and Mutual Benefit Life replaced specialist chains with case managers supported by
+      shared data. These changes were not achievable by incremental improvement alone.
+
+      The statement draws strength from BPR's criticisms: many programmes became vehicles for downsizing, ignored people
+      and failed in implementation, and the term fell out of fashion. Continuous improvement methods such as Lean and Six
+      Sigma deliver sustained gains with lower risk.
+
+      However, the claim that automation and continuous improvement suffice is weak. Hammer's central warning, that
+      automating an obsolete process merely makes it obsolete faster, applies directly to modern workflow automation,
+      robotic process automation and cloud ERP. New technologies such as mobile money, shared cloud databases and process
+      engines create opportunities for fundamentally different designs, as BPR anticipated.
+
+      A balanced conclusion argues that the label "BPR" may be dated but radical, IT-enabled redesign remains relevant
+      within modern BPM, combined with continuous improvement for refinement and with explicit change management to
+      avoid the failures of the 1990s.
+    explanation: >
+      Examiners look for accurate use of the literature and cases, genuine engagement with criticisms and a nuanced
+      conclusion that relates BPR to contemporary technology.

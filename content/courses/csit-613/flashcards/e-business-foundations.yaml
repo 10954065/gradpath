@@ -1,0 +1,38 @@
+module: e-business-foundations
+cards:
+  - lesson: e-business-and-e-commerce
+    front: How does e-business differ from e-commerce?
+    back: E-commerce is the digitally enabled exchange of value between parties; e-business is the digital enablement of all organisational processes (buy-side, internal and sell-side), with e-commerce as one part.
+  - lesson: e-business-and-e-commerce
+    front: Distinguish digitisation, digitalisation and digital transformation.
+    back: Digitisation changes the format of information; digitalisation changes a process using digital technology; digital transformation changes the value proposition, business model, structure and culture.
+  - lesson: e-business-and-e-commerce
+    front: Why has reintermediation been more common than disintermediation online?
+    back: New digital intermediaries (marketplaces, payment providers, review and delivery platforms) add value by reducing search costs, aggregating demand and building trust, so intermediaries change form rather than disappear.
+  - lesson: e-business-and-e-commerce
+    front: Why does information density cut both ways in digital markets?
+    back: It makes prices and product information more transparent for buyers, but it also gives sellers rich customer data that supports personalisation and price discrimination.
+  - lesson: e-business-and-e-commerce
+    front: What two capabilities do Westerman, Bonnet and McAfee say digital masters combine?
+    back: Digital capability (what the firm does with technology across customer experience, operations and business models) and leadership capability (vision, governance, engagement and IT–business relationships).
+  - lesson: e-business-and-e-commerce
+    front: Why has mobile money mattered for e-commerce in Ghana?
+    back: It provides a widely used digital payment method that does not depend on card ownership, lowering a traditional barrier to online selling, although logistics and trust remain constraints.
+  - lesson: online-business-models-and-digital-value
+    front: What four questions does a business model answer?
+    back: Who the customer is, what they value, how that value is delivered, and how the firm captures value (earns money) at an appropriate cost.
+  - lesson: online-business-models-and-digital-value
+    front: Name Amit and Zott's four sources of value creation in e-business.
+    back: Efficiency, complementarities, lock-in and novelty.
+  - lesson: online-business-models-and-digital-value
+    front: Why do near-zero marginal costs not guarantee profitability for digital businesses?
+    back: Digital goods often carry high fixed costs (development, content, marketing); profit depends on recovering them through pricing, scale and low churn.
+  - lesson: online-business-models-and-digital-value
+    front: What is the main limitation of the Business Model Canvas as an analytical tool?
+    back: It is a static description that does not model competition or dynamics; it must be followed by an evaluation of coherence, assumptions, unit economics and risks.
+  - lesson: online-business-models-and-digital-value
+    front: How do you calculate contribution per order for an online retailer?
+    back: Average order value × gross margin, minus variable per-order costs such as delivery, payment fees, packaging and spoilage or returns.
+  - lesson: online-business-models-and-digital-value
+    front: Which canvas blocks drive costs and which drive revenue?
+    back: Key partnerships, activities and resources (left side) drive the cost structure; customer segments, relationships and channels (right side) drive revenue streams, linked by the value proposition.

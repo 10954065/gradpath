@@ -1,0 +1,74 @@
+module: enterprise-implementation
+cards:
+  - lesson: implementation-strategies-and-requirements
+    front: Why is a big bang implementation both attractive and dangerous?
+    back: It delivers benefits fastest and needs no temporary interfaces between old and new systems, but it concentrates all shakedown risk in one cut-over with weak fallback options.
+  - lesson: implementation-strategies-and-requirements
+    front: When is parallel running most defensible?
+    back: For narrow, high-consequence processes such as payroll, where outputs can be compared reliably; for whole ERPs it doubles workload and is hard to reconcile when processes have been redesigned.
+  - lesson: implementation-strategies-and-requirements
+    front: Name four factors that should drive the choice of implementation strategy.
+    back: Integration density between modules, organisational readiness, the business calendar (peaks and year-end) and the cost of failure per day of disruption, plus pre-agreed rollback criteria.
+  - lesson: implementation-strategies-and-requirements
+    front: What four qualities make a requirement well formed?
+    back: It is atomic (one need), testable (pass or fail can be judged), traceable (linked to a source, owner and test) and prioritised, and ideally solution-neutral.
+  - lesson: implementation-strategies-and-requirements
+    front: In fit-gap analysis, what should be the default response to a gap?
+    back: First consider process change, configuration or deferral; customisation is the last resort because it raises upgrade, testing and support costs.
+  - lesson: implementation-strategies-and-requirements
+    front: What is the key lesson of Hershey's 1999 ERP go-live?
+    back: The business calendar must constrain the go-live date; going live with tightly integrated order and warehouse functions just before peak season concentrated shakedown risk where customers would see it.
+  - lesson: vendor-selection
+    front: Why must evaluation weights be agreed before meeting vendors?
+    back: Fixing weights in advance prevents bias towards a favoured product after impressive demonstrations; new insights should be explored through sensitivity analysis instead.
+  - lesson: vendor-selection
+    front: What is a knock-out criterion and why use it alongside weighted scoring?
+    back: A requirement that excludes any vendor failing it; it stops a high total score on other criteria from compensating for a fatal gap.
+  - lesson: vendor-selection
+    front: What does sensitivity analysis reveal in vendor selection?
+    back: Whether the ranking changes under plausible changes to weights or scores; if it does, the decision depends on a strategic trade-off the committee must make explicitly.
+  - lesson: vendor-selection
+    front: List the four main categories of total cost of ownership.
+    back: Acquisition (licences, hardware), implementation (consulting, migration, training, backfill), operation (maintenance, subscription, hosting, support) and change (upgrades, enhancements, exit).
+  - lesson: vendor-selection
+    front: Why can a cloud ERP that is cheaper over five years become dearer over ten?
+    back: Recurring subscriptions accumulate, prices may rise annually, and foreign-currency pricing exposes the buyer to exchange-rate movements, while on-premise licences are largely one-off.
+  - lesson: vendor-selection
+    front: What does the Lidl case (2018) teach about vendor selection?
+    back: Misfit between a package's core logic and a deeply embedded business practice, reportedly inventory valuation, can force heavy customisation; such conflicts must be resolved consciously during selection.
+  - lesson: data-migration-and-integration
+    front: What data is typically migrated to a new ERP, and what is archived?
+    back: Master data, open items and balances (and sometimes limited summarised history) are migrated; most transactional history stays in an archived, read-only legacy system.
+  - lesson: data-migration-and-integration
+    front: What three controls together prove a migration is complete and accurate?
+    back: Record counts (completeness), control totals such as balance sums (value accuracy) and sample checks of individual records by data owners.
+  - lesson: data-migration-and-integration
+    front: Why run several timed mock loads before cut-over?
+    back: To find mapping and quality errors early, improve each run, and prove that the final load and reconciliation fit inside the cut-over window.
+  - lesson: data-migration-and-integration
+    front: Why does point-to-point integration become unmanageable?
+    back: Full connection can need n(n − 1)/2 links (45 for ten systems), each custom and brittle; a hub or API layer reduces this to roughly one connection per system.
+  - lesson: data-migration-and-integration
+    front: What is idempotency and why does it matter for payment interfaces?
+    back: Processing the same message twice has the same effect as processing it once, so a resent mobile money confirmation does not pay an invoice twice.
+  - lesson: data-migration-and-integration
+    front: What is a system of record?
+    back: The single system authorised to create and maintain a given master data entity, such as customers, so that others consume it rather than edit conflicting copies.
+  - lesson: training-testing-deployment-and-evaluation
+    front: How does UAT differ from system integration testing?
+    back: Integration testing, run by the project team, checks technical end-to-end flows; UAT, run by business users, confirms the system supports real processes and meets agreed requirements.
+  - lesson: training-testing-deployment-and-evaluation
+    front: Give three examples of measurable go/no-go criteria.
+    back: No open critical defects with all critical UAT scenarios passed; reconciliation differences zero or signed off; at least the agreed proportion of users certified in each critical role.
+  - lesson: training-testing-deployment-and-evaluation
+    front: Why is attendance at training not a sufficient readiness measure?
+    back: Attendance shows exposure, not competence; practical certification by role, sandbox practice and super-user support show whether people can actually perform their transactions.
+  - lesson: training-testing-deployment-and-evaluation
+    front: What is the latest sensible point for rollback in a cut-over?
+    back: Usually before user access is enabled and new transactions are entered, because once live data exists in the new system reverting becomes far harder.
+  - lesson: training-testing-deployment-and-evaluation
+    front: What four perspectives does a post-implementation review cover?
+    back: Project performance (time, cost, scope), system quality, use and user satisfaction, and business benefits measured against a pre-go-live baseline.
+  - lesson: training-testing-deployment-and-evaluation
+    front: What does the Heathrow Terminal 5 opening (2008) illustrate?
+    back: Operational readiness of people, procedures and systems together, tested under realistic conditions, matters as much as software quality.

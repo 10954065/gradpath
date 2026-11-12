@@ -1,0 +1,317 @@
+module: professional-practice
+questions:
+  # ---------- workplace-ethics-and-conflicts-of-interest ----------
+  - id: pp01
+    lesson: workplace-ethics-and-conflicts-of-interest
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Identify the core wrong in a conflict of interest
+    prompt: According to the lesson, what is the central ethical failure in most conflict-of-interest cases?
+    options:
+      - Having any private interest at all
+      - Concealing or failing to manage the conflict
+      - Working for a private company
+      - Knowing people who work for vendors
+    answer: 1
+    explanation: Conflicts are situations that are often unavoidable. The wrong lies in hiding them or failing to manage them through disclosure, recusal or other controls. Simply having interests or relationships is not in itself wrongdoing.
+  - id: pp02
+    lesson: workplace-ethics-and-conflicts-of-interest
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Classify actual, potential and perceived conflicts
+    prompt: Match each situation to the type of conflict of interest it represents.
+    pairs:
+      - left: An IT manager scores a tender submitted by her brother's company
+        right: Actual conflict
+      - left: A developer owns shares in a cloud provider his employer may consider next year
+        right: Potential conflict
+      - left: A consultant recommends a vendor after a vendor-paid luxury trip, though his analysis was sound
+        right: Perceived conflict
+    explanation: Actual conflicts exist now; potential conflicts may arise if circumstances change; perceived conflicts exist where a reasonable observer could doubt impartiality. All three should be disclosed and managed.
+  - id: pp03
+    lesson: workplace-ethics-and-conflicts-of-interest
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply the conflict-management process
+    scenario: |
+      Illustrative scenario. Ama, head of IT at a Kumasi manufacturing firm, sits on the committee choosing a cybersecurity vendor. She learns that her husband has just accepted a senior role at one of the bidders. The committee meets tomorrow.
+    prompt: What should Ama do first?
+    options:
+      - Say nothing, because she will remain objective
+      - Declare the relationship in writing to the committee chair before the meeting and offer to recuse herself from evaluating that bid
+      - Ask her husband to withdraw the bid
+      - Resign from the company immediately
+    answer: 1
+    explanation: Prompt written disclosure allows the organisation to assess and manage the conflict, typically by recusal from that decision. Silence creates an undisclosed conflict; asking her husband to interfere would be improper; resignation is disproportionate when disclosure and recusal suffice.
+  - id: pp04
+    lesson: workplace-ethics-and-conflicts-of-interest
+    type: true_false
+    bloom: recall
+    difficulty: easy
+    objective: Recall ACM guidance on conflicts of interest
+    prompt: ACM principle 1.3 (Be honest and trustworthy) asks computing professionals to be forthright about circumstances that might lead to real or perceived conflicts of interest.
+    answer: true
+    explanation: Principle 1.3 explicitly includes transparency about real or perceived conflicts of interest, alongside honesty about system capabilities and limitations.
+  - id: pp05
+    lesson: workplace-ethics-and-conflicts-of-interest
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Name the act of withdrawing from a conflicted decision
+    prompt: What is the term for withdrawing from a decision or activity in which one has a conflict of interest?
+    answers: ["recusal", "recuse", "recusing"]
+    explanation: Recusal removes the conflicted person from the decision while allowing the organisation to proceed. It is one of several management options alongside independent review and divestment.
+  - id: pp06
+    lesson: workplace-ethics-and-conflicts-of-interest
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the limits of employee loyalty
+    prompt: A manager instructs a developer to mark a known security defect as "resolved" in the client report so that a milestone payment is released. Which response is most defensible?
+    options:
+      - Comply, because loyalty to the employer is the developer's primary duty
+      - Comply but keep a private record in case of problems later
+      - Decline to misreport, explain the risk and escalate through internal channels if necessary
+      - Immediately post the defect details on social media
+    answer: 2
+    explanation: Loyalty does not extend to deceiving clients; ACM principles 1.3 and 1.2 require honesty and harm avoidance. Escalating internally is proportionate. Complying, even with a private record, makes the developer complicit, and public disclosure before internal routes is premature and may expose the client to attack.
+  - id: pp07
+    lesson: workplace-ethics-and-conflicts-of-interest
+    type: true_false
+    bloom: apply
+    difficulty: medium
+    objective: Apply the purpose limitation on privileged access
+    prompt: A database administrator who looks up a celebrity customer's account out of curiosity has not acted unethically, because administrator rights allowed the query.
+    answer: false
+    explanation: Access is granted for specific purposes. Using it beyond them breaches confidentiality and ACM principle 2.8 (access resources only when authorised), whatever the system technically permits.
+
+  # ---------- whistleblowing-and-professional-negligence ----------
+  - id: pp08
+    lesson: whistleblowing-and-professional-negligence
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish De George's permissibility and obligation criteria
+    prompt: According to De George, which additional conditions turn morally permissible whistleblowing into morally obligatory whistleblowing?
+    options:
+      - The harm is serious and the employee has told a superior
+      - The employee has exhausted internal channels
+      - The employee has documented evidence convincing to a reasonable impartial observer and good reason to believe going public will bring about change
+      - The employee will receive a financial reward
+    answer: 2
+    explanation: Criteria 1–3 (serious harm, reporting to a superior, exhausting internal channels) make disclosure permissible; criteria 4–5 (convincing evidence and likelihood of success) make it obligatory. Rewards are not part of De George's criteria.
+  - id: pp09
+    lesson: whistleblowing-and-professional-negligence
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Recall the four elements of negligence
+    prompt: Match each element of negligence to its meaning.
+    pairs:
+      - left: Duty of care
+        right: An obligation to take reasonable care to avoid foreseeable harm to the claimant
+      - left: Breach
+        right: Falling below the standard of a reasonably competent professional
+      - left: Causation
+        right: The breach actually and sufficiently closely caused the loss
+      - left: Harm
+        right: The claimant suffered recognised loss or damage
+    explanation: All four elements must be established. Examination answers often omit causation, yet a breach that did not cause the loss does not ground liability.
+  - id: pp10
+    lesson: whistleblowing-and-professional-negligence
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply De George's criteria to an IT dilemma
+    scenario: |
+      Illustrative scenario. A tester at a Ghanaian health-software firm discovers that lab results can be attached to the wrong patient. She tells her team lead, who refuses to delay the release. She has not yet raised it with anyone more senior. The software is live in hospitals.
+    prompt: On De George's criteria, what is the most appropriate next step?
+    options:
+      - Go directly to the media, since harm is serious
+      - Do nothing, since she has already told her team lead
+      - Escalate in writing up the management chain, to the board if necessary, with evidence, before considering external disclosure
+      - Delete the test results to protect the company
+    answer: 2
+    explanation: Criterion 3 requires exhausting internal channels before external disclosure is permissible on De George's account, unless doing so is unsafe or futile. Doing nothing ignores serious harm, and destroying evidence would be seriously wrong and possibly unlawful.
+  - id: pp11
+    lesson: whistleblowing-and-professional-negligence
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Interpret the professional standard of care
+    prompt: In negligence, an IT professional is judged against a standard of perfection, so any software defect that causes loss establishes breach.
+    answer: false
+    explanation: The standard is that of a reasonably competent professional in the field, taking into account accepted practice and knowledge at the time. Not every defect is negligent; the question is whether reasonable care was exercised.
+  - id: pp12
+    lesson: whistleblowing-and-professional-negligence
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Identify Ghana's whistleblowing statute
+    prompt: Give the act number of Ghana's Whistleblower Act, 2006.
+    answers: ["Act 720", "720"]
+    explanation: The Whistleblower Act, 2006 (Act 720) provides a framework for disclosure of wrongdoing and protection against victimisation in specified circumstances. Its procedures and scope should be checked before disclosing.
+  - id: pp13
+    lesson: whistleblowing-and-professional-negligence
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the professional failures in Therac-25 and Horizon
+    prompt: Which common factor best links the Therac-25 accidents and the UK Post Office Horizon scandal?
+    options:
+      - Both were caused solely by external hackers
+      - In both, overconfidence in software and failure to take users' reports of anomalies seriously contributed to serious harm
+      - Both involved open-source software licence breaches
+      - Both were resolved immediately after the first report
+    answer: 1
+    explanation: Therac-25 involved overconfidence in software and poor response to early incident reports; Horizon involved treating system outputs as reliable while sub-postmasters' reports of discrepancies were disregarded. Neither was a hacking or licensing case, and neither was resolved quickly.
+  - id: pp14
+    lesson: whistleblowing-and-professional-negligence
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a criticism of De George's criteria
+    prompt: Which is the strongest criticism of De George's requirement to exhaust internal channels?
+    options:
+      - It makes whistleblowing too easy
+      - It may be dangerous or futile where senior management is complicit or evidence could be destroyed
+      - It ignores the importance of evidence
+      - It applies only to the public sector
+    answer: 1
+    explanation: Critics note that internal escalation can expose the employee to retaliation or allow concealment when leadership is involved. The criteria are, if anything, demanding rather than easy, do require evidence (criterion 4), and were developed with corporate product-safety cases in mind.
+
+  # ---------- cybercrime-and-misuse-of-information-systems ----------
+  - id: pp15
+    lesson: cybercrime-and-misuse-of-information-systems
+    type: matching
+    bloom: understand
+    difficulty: easy
+    objective: Classify forms of cybercrime
+    prompt: Match each example to its category.
+    pairs:
+      - left: Deploying ransomware against a hospital network
+        right: Cyber-dependent crime
+      - left: Tricking customers into revealing mobile-money PINs by phone
+        right: Cyber-enabled crime
+      - left: A bank clerk selling customer records to fraudsters
+        right: Insider misuse
+      - left: Distributing child sexual abuse material online
+        right: Content-related offence
+    explanation: The classification helps match responses — technical defences for cyber-dependent attacks, awareness and process for cyber-enabled fraud, access controls for insiders and specialised enforcement for content offences.
+  - id: pp16
+    lesson: cybercrime-and-misuse-of-information-systems
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Identify the body established by the Cybersecurity Act, 2020
+    prompt: Which institution was established by Ghana's Cybersecurity Act, 2020 (Act 1038)?
+    options:
+      - The Data Protection Commission
+      - The Cyber Security Authority
+      - The Copyright Office
+      - The National Communications Authority
+    answer: 1
+    explanation: Act 1038 established the Cyber Security Authority as the regulator for cybersecurity. The Data Protection Commission was established under the Data Protection Act, 2012 (Act 843); the Copyright Office relates to copyright; the NCA regulates communications under separate legislation.
+  - id: pp17
+    lesson: cybercrime-and-misuse-of-information-systems
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Recognise that Act 772 contains cyber offences
+    prompt: The Electronic Transactions Act, 2008 (Act 772) concerns only electronic signatures and contains no provisions on cyber offences.
+    answer: false
+    explanation: Act 772 gives legal recognition to electronic records, signatures and contracts, addresses consumer protection in e-commerce, and also creates cyber offences such as those relating to unauthorised access, interception and interference.
+  - id: pp18
+    lesson: cybercrime-and-misuse-of-information-systems
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply ethical security-testing principles
+    scenario: |
+      A postgraduate student notices that a Ghanaian online shop's website appears vulnerable to a common injection attack. Without asking permission, she wants to try extracting a few customer records to "prove" the flaw before reporting it.
+    prompt: What is the most ethical course of action?
+    options:
+      - Extract a few records, since her intentions are good
+      - Publish the vulnerability on social media to warn customers
+      - Not test further without authorisation, and report the suspected issue privately to the shop through any available disclosure channel
+      - Sell the information to a security firm
+    answer: 2
+    explanation: Authorisation is the legal and ethical dividing line; unauthorised access is generally an offence regardless of intent, and ACM 2.8 requires authorised access. Coordinated, private disclosure allows a fix. Public posting exposes customers, and selling the flaw is clearly wrong.
+  - id: pp19
+    lesson: cybercrime-and-misuse-of-information-systems
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Name the access-control principle that limits insider risk
+    prompt: What principle states that users should be granted only the access their role requires?
+    answers: ["least privilege", "principle of least privilege", "need to know"]
+    explanation: Least privilege limits what any insider can misuse, intentionally or accidentally. It works with separation of duties, logging and prompt leaver processes.
+  - id: pp20
+    lesson: cybercrime-and-misuse-of-information-systems
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse organisational responsibility for insider misuse
+    prompt: In the illustrative PrimeCash case, a customer-service officer leaked customer details used for SIM-swap fraud. Which analysis is most complete?
+    options:
+      - Only the officer is responsible, so dismissing her solves the problem
+      - The officer is responsible for misuse, but broad access, no monitoring of unusual queries and weak SIM-replacement checks are organisational failures that must also be fixed
+      - The telecoms partner alone is responsible
+      - No one is responsible because cybercrime is inevitable
+    answer: 1
+    explanation: Individual wrongdoing and organisational control failures both contributed. A complete response addresses accountability for the officer while fixing access, monitoring and verification weaknesses. Blaming only one party, or treating harm as inevitable, ignores preventable causes.
+  - id: pp21
+    lesson: cybercrime-and-misuse-of-information-systems
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Interpret the Morrisons insider case
+    prompt: In WM Morrison Supermarkets v Various Claimants (2020), the UK Supreme Court held that Morrisons was not vicariously liable for an employee who deliberately leaked payroll data to pursue a personal vendetta.
+    answer: true
+    explanation: The Court found the employee was not acting in the course of employment in the relevant sense. The case nonetheless illustrates insider risk and the need for controls such as monitoring bulk data extraction.
+
+  # ---------- module-level ----------
+  - id: pp22
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Integrate conflicts of interest, whistleblowing and negligence in one analysis
+    prompt: Analyse the case and recommend what Yaw should do. Apply at least two ethical theories, De George's criteria and the ACM Code, and consider possible negligence.
+    marks: 25
+    case: |
+      Illustrative scenario. Yaw is a systems engineer at "Coastal Water Utilities", a Ghanaian company serving several towns. The chief technology officer (CTO) awarded a contract for a new remote-monitoring system for water-treatment plants to a vendor in which the CTO holds an undeclared shareholding. Yaw discovers that the system ships with default administrator passwords that cannot be changed, and that it is exposed to the internet. He reports this to the CTO, who tells him the vendor will "patch it eventually" and warns him not to "make trouble". Yaw believes an attacker could alter chemical dosing levels.
+    structure:
+      - Facts and stakeholders
+      - Conflict-of-interest analysis of the CTO's conduct
+      - Security and negligence analysis (duty, breach, causation, harm)
+      - Whistleblowing analysis using De George's criteria and their limitations
+      - Ethical theories and ACM principles
+      - Options, recommendation and counter-arguments
+    rubric:
+      - criterion: Facts, stakeholders and conflict of interest
+        marks: 5
+        descriptor: Identifies the undeclared shareholding as an actual conflict and its effect on decision quality; identifies residents, staff, regulators and the company as stakeholders.
+      - criterion: Negligence and security analysis
+        marks: 5
+        descriptor: Applies all four elements of negligence accurately to the risk and notes critical infrastructure context.
+      - criterion: Whistleblowing analysis
+        marks: 6
+        descriptor: Applies De George's five criteria correctly, distinguishes permissibility from obligation and discusses limitations given the CTO's involvement.
+      - criterion: Ethical theory and ACM Code
+        marks: 5
+        descriptor: Uses two theories and principles such as 1.2, 1.3, 2.5, 2.9 and 3.7 accurately.
+      - criterion: Recommendation and counter-arguments
+        marks: 4
+        descriptor: Gives a staged, practical recommendation and answers objections such as loyalty and job risk.
+    modelAnswer: |
+      The CTO's undeclared shareholding is an actual conflict of interest, breaching ACM 1.3; it may explain why a vendor with poor security was chosen and why the CTO resists action. Stakeholders include residents who depend on safe water, plant staff, the board, regulators and Yaw himself.
+
+      Unchangeable default passwords on an internet-exposed industrial control system fall well below accepted security practice, contrary to ACM 2.9 (robustly and usably secure systems) and 3.7 (special care for infrastructure systems). If an attacker altered chemical dosing and residents were harmed, a negligence claim could argue that the company and possibly the vendor owed a duty to consumers, breached it by deploying and retaining a known insecure configuration, caused the harm, and that personal injury is recognised damage. The plant may also be treated as critical information infrastructure under the Cybersecurity Act, 2020 (Act 1038), bringing regulatory obligations.
+
+      On De George's criteria, the potential harm is serious and considerable (1) and Yaw has reported to his superior (2). Because the CTO is conflicted, Yaw should escalate in writing to the managing director, board or audit committee (3). If they fail to act, his technical evidence (4) and the likelihood that the regulator would intervene (5) would make external disclosure — to the Cyber Security Authority or another appropriate regulator rather than the media — obligatory. The limitation that internal escalation may be futile when leadership is implicated supports moving more quickly to the board.
+
+      Utilitarian reasoning strongly favours action because the expected harm to many people outweighs the costs to Yaw and the company; deontology supports refusing complicity and honesty to the public. Recommendation: document the vulnerability, propose immediate mitigations (network isolation, compensating controls), escalate to the board with a declaration of the conflict concern, seek advice on protections under the Whistleblower Act, 2006 (Act 720), and report to the regulator if the board does not act. Loyalty and job security are real concerns but cannot outweigh a credible threat to public health.
+    explanation: Examiners look for integration of the three topics, accurate De George and negligence analysis, use of the critical infrastructure context and a staged, proportionate recommendation.

@@ -1,0 +1,309 @@
+module: cloud-and-edge-computing
+questions:
+  - id: q01
+    lesson: cloud-models
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Recall the NIST essential characteristics of cloud computing
+    prompt: Which of the following is NOT one of the five essential characteristics in NIST SP 800-145?
+    options:
+      - Rapid elasticity
+      - Measured service
+      - Guaranteed lower cost
+      - Resource pooling
+    answer: 2
+    explanation: The five NIST characteristics are on-demand self-service, broad network access, resource pooling, rapid elasticity and measured service. Lower cost is a possible outcome, not a defining characteristic, and is not guaranteed; a peak-sized lift-and-shift can cost as much as on-premises.
+  - id: q02
+    lesson: cloud-models
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the NIST meaning of private cloud
+    prompt: Under the NIST definition, a private cloud must be located on the organisation's own premises.
+    answer: false
+    explanation: NIST defines private cloud by exclusive use by a single organisation. It may be owned, managed and operated by the organisation, a third party or both, and may exist on or off premises.
+  - id: q03
+    lesson: cloud-models
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish the four NIST deployment models
+    prompt: Match each deployment model to its NIST description.
+    pairs:
+      - left: Private cloud
+        right: Provisioned for exclusive use by a single organisation
+      - left: Community cloud
+        right: Provisioned for exclusive use by organisations with shared concerns
+      - left: Public cloud
+        right: Provisioned for open use by the general public
+      - left: Hybrid cloud
+        right: Two or more distinct infrastructures bound together to enable portability
+    explanation: NIST distinguishes deployment models by who the infrastructure is provisioned for and how infrastructures are combined, not simply by location or ownership.
+  - id: q04
+    lesson: cloud-models
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply the NIST characteristics to classify a service
+    scenario: |
+      A Ghanaian company rents a dedicated physical server from a local data centre. It orders the server by email, waits four days for installation, pays a fixed monthly fee regardless of use and must request a new contract to add capacity.
+    prompt: How should this arrangement be classified under the NIST definition?
+    options:
+      - Public cloud IaaS, because the server is accessed over the internet
+      - Traditional hosting, because it lacks on-demand self-service, rapid elasticity and measured service
+      - Private cloud, because the server is dedicated to one customer
+      - Community cloud, because the data centre serves several companies
+    answer: 1
+    explanation: Network access alone does not make a service cloud. Manual ordering, slow provisioning, fixed fees and contract-based scaling show the absence of self-service, elasticity and metering. Dedication to one customer does not create a private cloud without the essential characteristics.
+  - id: q05
+    lesson: cloud-models
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the source of savings in a cloud cost comparison
+    prompt: In a five-year comparison, a peak-sized on-premises system costs about the same as a fixed peak-sized cloud deployment, but an auto-scaling cloud deployment is cheaper. What primarily explains the saving?
+    options:
+      - Cloud hardware is always faster
+      - Elasticity lets the firm pay for peak capacity only during peak months
+      - Cloud services have no running costs
+      - Depreciation rules favour cloud providers
+    answer: 1
+    explanation: The fixed cloud option shows that simply relocating peak capacity does not save money. The saving comes from rapid elasticity and measured service, which convert peak-sized fixed capacity into usage-based cost. Cloud does have running costs, and depreciation affects the customer's accounting, not the provider's pricing.
+  - id: q06
+    lesson: cloud-models
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the identifier of the NIST cloud definition
+    prompt: What is the NIST Special Publication number of the cloud computing definition by Mell and Grance (2011)?
+    answers:
+      - SP 800-145
+      - 800-145
+      - NIST SP 800-145
+    explanation: NIST Special Publication 800-145, The NIST Definition of Cloud Computing, by Peter Mell and Timothy Grance (2011), is the reference definition used in this course.
+  - id: q07
+    lesson: cloud-models
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate currency risk in cloud business cases
+    prompt: For a Ghanaian company billed for cloud services in US dollars, converting capex to opex can increase its exposure to exchange-rate movements.
+    answer: true
+    explanation: Recurring foreign-currency bills mean the local-currency cost changes with the exchange rate throughout the contract, whereas an upfront hardware purchase fixes most of the cost at one point. Business cases should include currency sensitivity analysis.
+  - id: q08
+    lesson: iaas-paas-and-saas
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Identify customer responsibilities in IaaS
+    prompt: In an IaaS model, which of the following is normally the customer's responsibility?
+    options:
+      - Physical security of the data centre
+      - Patching the guest operating system
+      - Maintaining the virtualisation layer
+      - Replacing failed physical disks
+    answer: 1
+    explanation: In IaaS the provider manages facilities, hardware and virtualisation; the customer manages the operating system and everything above it, including patching. Neglecting this patching is a common cause of compromise.
+  - id: q09
+    lesson: iaas-paas-and-saas
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match workloads to service models
+    prompt: Match each example to the service model it best illustrates.
+    pairs:
+      - left: Renting virtual machines and installing your own database software
+        right: IaaS
+      - left: Deploying your own web application code onto a managed runtime
+        right: PaaS
+      - left: Subscribing to a hosted email and calendar suite
+        right: SaaS
+      - left: Running code only when a file is uploaded, billed per execution
+        right: Serverless (Function as a Service)
+    explanation: The models differ by how much of the stack the customer controls. Serverless extends PaaS by removing server management entirely and billing per invocation.
+  - id: q10
+    lesson: iaas-paas-and-saas
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Explain the shared responsibility model for SaaS
+    prompt: When a company uses a SaaS application, the provider becomes fully responsible for who can access the company's data.
+    answer: false
+    explanation: Identity and access management and data remain customer responsibilities in every service model. The SaaS customer decides who has accounts, enforces multi-factor authentication and removes leavers.
+  - id: q11
+    lesson: iaas-paas-and-saas
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply the service-model selection heuristic
+    scenario: |
+      A Ghanaian microfinance institution needs a customer-facing loan application app with features that differentiate it from competitors. It has a small development team but no infrastructure engineers, and it wants to release new features monthly.
+    prompt: Which service model best fits the app's back end?
+    options:
+      - IaaS, because it gives maximum control
+      - PaaS, because developers can focus on code while the provider manages runtimes and scaling
+      - SaaS, because it needs no development
+      - On-premises servers, because they avoid lock-in
+    answer: 1
+    explanation: A differentiated custom application with developers but no infrastructure engineers fits PaaS. IaaS would demand skills the institution lacks; SaaS cannot deliver a differentiated custom app; on-premises servers increase operational burden without addressing the need.
+  - id: q12
+    lesson: iaas-paas-and-saas
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the cause of a cloud security incident
+    scenario: |
+      A company running on IaaS suffers a data breach. Investigators find that a web application firewall the company configured was exploited to obtain credentials, and those credentials had permission to read every storage bucket in the account.
+    prompt: Which conclusion is best supported?
+    options:
+      - The provider's physical data centre security failed
+      - The breach reflects failures on the customer side of the shared responsibility model, especially excessive permissions
+      - IaaS is inherently insecure and should never be used by banks
+      - The virtualisation layer was compromised
+    answer: 1
+    explanation: The facts mirror the publicly reported Capital One case. Configuration and access permissions are customer responsibilities in IaaS. Least privilege would have limited the damage. Nothing indicates failure of provider-managed layers, and the incident does not show IaaS is inherently unusable.
+  - id: q13
+    lesson: iaas-paas-and-saas
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the term for dependence on a provider's proprietary services
+    prompt: What term describes dependence on a provider's proprietary services or formats that makes switching costly?
+    answers:
+      - vendor lock-in
+      - lock-in
+      - lockin
+    explanation: Vendor lock-in rises as organisations adopt proprietary platform features or store data in formats that are hard to export. Contracts should address data export and exit.
+  - id: q14
+    lesson: iaas-paas-and-saas
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate when serverless is cost-effective
+    prompt: For which workload is serverless computing most likely to be less cost-effective than a continuously running virtual machine?
+    options:
+      - Processing occasional document uploads at unpredictable times
+      - A nightly job that runs for a few minutes
+      - A constant, heavy workload running at high utilisation all day
+      - Responding to a few webhook calls per hour
+    answer: 2
+    explanation: Per-invocation billing suits spiky, intermittent workloads because there is no idle cost. For constant heavy use, cumulative per-execution charges can exceed the cost of a well-utilised reserved virtual machine.
+  - id: q15
+    lesson: edge-and-hybrid-cloud
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Calculate latency imposed by distance
+    prompt: Assuming light in fibre travels about 200 km per millisecond, what is the minimum round-trip propagation delay to a data centre 3,000 km away by fibre path?
+    options:
+      - 15 ms
+      - 30 ms
+      - 3 ms
+      - 60 ms
+    answer: 1
+    explanation: One way is 3,000 / 200 = 15 ms, so the round trip is 30 ms before routing, queuing and processing delays. Choosing 15 ms forgets the return journey; 60 ms doubles twice.
+  - id: q16
+    lesson: edge-and-hybrid-cloud
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish latency from bandwidth
+    prompt: Upgrading a link from 100 Mbps to 1 Gbps will remove the latency caused by the distance to a remote data centre.
+    answer: false
+    explanation: Bandwidth is capacity; latency is delay. Propagation delay is set by distance and the speed of light in the medium, so more bandwidth does not reduce it.
+  - id: q17
+    lesson: edge-and-hybrid-cloud
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish edge, hybrid and sovereignty concepts
+    prompt: Match each term to its definition.
+    pairs:
+      - left: Edge computing
+        right: Processing data near where it is produced or used
+      - left: Hybrid cloud
+        right: Integration of distinct private and public infrastructures
+      - left: Multi-cloud
+        right: Use of services from more than one public cloud provider
+      - left: Data sovereignty
+        right: Data being subject to the laws of the jurisdiction where it is held or processed
+    explanation: These terms are often blurred. Hybrid concerns integrating different infrastructure types; multi-cloud concerns multiple public providers; sovereignty is a legal concept, while residency is a location requirement.
+  - id: q18
+    lesson: edge-and-hybrid-cloud
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse workload placement at a remote industrial site
+    scenario: |
+      A mine in the Western Region of Ghana uses a satellite link that is slow and occasionally unavailable. It wants haul-truck collision alerts, video analytics for safety-equipment compliance, and fleet-wide maintenance analytics.
+    prompt: Which placement is most appropriate?
+    options:
+      - All three in a distant public cloud region to maximise economies of scale
+      - Collision alerts and video analytics at the on-site edge; fleet-wide analytics and model training in the cloud
+      - All three on employees' mobile phones
+      - Video analytics in the cloud, collision alerts on paper logs
+    answer: 1
+    explanation: Collision alerts need millisecond responses and must work offline; video is high-volume and better summarised locally. Fleet-wide analytics benefits from aggregated data and elastic cloud compute. This is the act-locally, learn-centrally pattern.
+  - id: q19
+    lesson: edge-and-hybrid-cloud
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall Ghana's principal data protection statute
+    prompt: Name Ghana's principal data protection statute (short title and year).
+    answers:
+      - Data Protection Act 2012
+      - Data Protection Act, 2012
+      - Act 843
+    explanation: The Data Protection Act, 2012 (Act 843) sets principles for processing personal data and establishes the Data Protection Commission. It applies whichever cloud model or location is used.
+  - id: q20
+    lesson: edge-and-hybrid-cloud
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the costs of a multi-cloud strategy
+    prompt: Which statement best evaluates a proposal to adopt three public cloud providers to improve resilience?
+    options:
+      - Multi-cloud always improves resilience, so it should be adopted
+      - Resilience improves only if workloads are deliberately designed to fail over; otherwise multi-cloud adds integration, security and skills costs
+      - Multi-cloud is illegal under Ghanaian data protection law
+      - Multi-cloud removes the need for identity management
+    answer: 1
+    explanation: Multi-cloud can support resilience and specialist services, but only with deliberate design. Many firms become multi-cloud by accident and face duplicated tools, several identity systems and data transfer costs. There is no general legal prohibition, and identity management becomes more complex, not less.
+  - id: q21
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Recommend a cloud and edge architecture for a Ghanaian organisation
+    case: |
+      Illustrative scenario. Savannah Agro-Processing Ltd (hypothetical) runs a shea and cashew processing plant near Tamale and sells to buyers in Ghana and the European Union. It plans to (a) monitor processing machines with sensors to reduce breakdowns, (b) launch a buyer portal where EU customers place orders and view traceability certificates, (c) move staff email and documents off an ageing local server, and (d) keep detailed farmer supplier records, including names, phone numbers and mobile money details. The plant's internet connection is unreliable during storms and power outages are frequent. The board believes moving everything to one public cloud region will be cheapest.
+    prompt: Critically evaluate the board's view and recommend an architecture covering service models, deployment models and workload placement.
+    marks: 25
+    structure:
+      - Identify the requirements of each workload, including latency, connectivity, sensitivity and demand variability
+      - Apply NIST service and deployment models to each workload
+      - Assess edge requirements for the plant and the resilience implications of unreliable connectivity and power
+      - Analyse data protection obligations under Ghana's Act 843 and implications of handling EU customer data
+      - Evaluate costs, including elasticity, bandwidth, currency exposure and skills
+      - Recommend and justify an integrated architecture with risks and mitigations
+    rubric:
+      - criterion: Workload analysis
+        marks: 5
+        descriptor: Each workload's technical and business requirements are clearly identified
+      - criterion: Use of cloud models
+        marks: 6
+        descriptor: Correct and justified use of IaaS/PaaS/SaaS and private/public/hybrid concepts, including shared responsibility
+      - criterion: Edge and resilience
+        marks: 5
+        descriptor: Convincing case for local processing at the plant, addressing connectivity and power constraints
+      - criterion: Data protection and sovereignty
+        marks: 5
+        descriptor: Accurate discussion of Act 843 obligations and the relevance of the EU GDPR for EU buyer data, without inventing specific legal rules
+      - criterion: Evaluation and recommendation
+        marks: 4
+        descriptor: Balanced critique of the board's assumption with a coherent, costed and risk-aware recommendation
+    modelAnswer: |
+      A strong answer challenges the assumption that one public cloud region is automatically cheapest and best. It separates the four workloads. Machine monitoring requires local processing: sensor data should be collected and analysed on an on-site edge gateway or small server with battery and generator backup, so that anomaly alerts work during outages; summarised data and longer-term trends can synchronise to the cloud for model training when connectivity returns. The buyer portal is customer-facing, variable in demand and must be highly available; a PaaS deployment in a public cloud suits it, with attention to the EU GDPR because it handles EU customer contact data. Staff email and documents fit a SaaS suite, with multi-factor authentication and account management remaining the company's responsibility under the shared responsibility model. Farmer supplier records contain personal and financial data; the company, as data controller under Act 843, must ensure lawful processing, security safeguards and appropriate contracts with any processor. Options include a SaaS or PaaS database in a provider region with strong contractual safeguards, or a hybrid design keeping the master records in a controlled environment.
+      The cost evaluation should note that elasticity benefits the portal, but bandwidth costs, foreign-currency billing, backup connectivity and skills must be included. The recommendation is a deliberate hybrid of edge, SaaS and PaaS rather than a single-region lift-and-shift, with risks such as edge device management and vendor lock-in mitigated through standard tools, data export clauses and staff training.
+    explanation: Examiners reward workload-by-workload reasoning, correct use of NIST models and shared responsibility, a convincing edge argument grounded in local constraints, accurate data protection discussion and a critical, justified recommendation.

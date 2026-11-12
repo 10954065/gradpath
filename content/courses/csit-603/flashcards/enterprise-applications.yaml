@@ -1,0 +1,56 @@
+module: enterprise-applications
+cards:
+  - lesson: erp-systems
+    front: What is the essence of ERP integration?
+    back: One transaction updates every affected record across modules (for example, a goods receipt updates stock, the purchase order and the ledger) because modules share one database.
+  - lesson: erp-systems
+    front: Outline the order-to-cash process in an ERP.
+    back: Sales order (availability and credit check) → delivery → goods issue (stock and cost of goods sold) → invoice (receivable) → payment receipt (receivable cleared).
+  - lesson: erp-systems
+    front: Outline the procure-to-pay process in an ERP.
+    back: Purchase requisition → approval → purchase order → goods receipt → invoice verification (three-way match) → payment.
+  - lesson: erp-systems
+    front: Why is configuration preferred to customisation?
+    back: Configuration uses vendor-supported settings that survive upgrades; customisation changes code, adding cost, testing effort and upgrade risk.
+  - lesson: erp-systems
+    front: When might an organisation justify departing from an ERP's best-practice process?
+    back: When the process genuinely differentiates the firm or local legal requirements are unsupported, preferably through configuration or extensions rather than core code changes.
+  - lesson: erp-systems
+    front: What does the Hershey 1999 case teach about ERP risk?
+    back: Risk lies in implementation decisions; going live near peak season with several interdependent systems switched on at once and compressed testing caused order and shipping problems.
+  - lesson: crm-scm-and-hris
+    front: Distinguish operational, analytical and collaborative CRM.
+    back: Operational automates customer-facing work; analytical analyses customer data; collaborative coordinates interactions across channels, branches and partners.
+  - lesson: crm-scm-and-hris
+    front: What causes the bullwhip effect?
+    back: Forecasting from orders rather than real demand, order batching, price fluctuations and promotions, and inflated orders during feared shortages.
+  - lesson: crm-scm-and-hris
+    front: How can information systems reduce the bullwhip effect?
+    back: By sharing point-of-sale demand data upstream, enabling smaller and more frequent orders and coordinating replenishment through supplier portals or SCM systems.
+  - lesson: crm-scm-and-hris
+    front: What are the SCOR process categories?
+    back: Plan, Source, Make, Deliver, Return and Enable.
+  - lesson: crm-scm-and-hris
+    front: How does an HRIS integrate with ERP?
+    back: Payroll posts journals to the general ledger and cost centres, and organisational structure from HR drives approval workflows across the enterprise.
+  - lesson: crm-scm-and-hris
+    front: What is the trade-off between a suite and best-of-breed?
+    back: A suite offers simpler integration, consistent data and one vendor; best-of-breed offers deeper specialist function at the cost of integration and vendor management.
+  - lesson: enterprise-databases-and-analytics
+    front: How do OLTP and OLAP workloads differ?
+    back: OLTP records many small, concurrent transactions on normalised, current data; OLAP aggregates large volumes of historical data using dimensional designs.
+  - lesson: enterprise-databases-and-analytics
+    front: How does master data differ from transaction data?
+    back: Master data describes long-lived shared entities (customers, products, suppliers); transaction data records time-stamped events that refer to them.
+  - lesson: enterprise-databases-and-analytics
+    front: Why is MDM mainly an organisational programme?
+    back: Quality depends on owners, stewards, agreed definitions and controlled creation workflows; software hubs only support these.
+  - lesson: enterprise-databases-and-analytics
+    front: What are the four steps of dimensional design?
+    back: Choose the business process, declare the grain, identify the dimensions, identify the facts.
+  - lesson: enterprise-databases-and-analytics
+    front: Name the four types of analytics and their questions.
+    back: Descriptive (what happened?), diagnostic (why?), predictive (what is likely?), prescriptive (what should we do?).
+  - lesson: enterprise-databases-and-analytics
+    front: Why must predictive analytics be built on governed data?
+    back: Models trained on duplicated or inconsistent master data produce confident but misleading predictions.

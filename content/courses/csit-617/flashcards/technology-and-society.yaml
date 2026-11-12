@@ -1,0 +1,38 @@
+module: technology-and-society
+cards:
+  - lesson: digital-inclusion-and-access
+    front: What are the three levels of the digital divide?
+    back: First level, material access to devices and connectivity; second level, skills and patterns of use; third level, differences in the outcomes and benefits people obtain.
+  - lesson: digital-inclusion-and-access
+    front: What stages make up van Dijk's sequence of access?
+    back: Motivational access, material access, skills access and usage access; people can fall behind at any stage.
+  - lesson: digital-inclusion-and-access
+    front: Why is mobile money often cited as an inclusion success in Ghana, and what are its limits?
+    back: It works over USSD on basic phones, needs no bank account and is supported by agents; but low-literacy users may share PINs, face fraud and be affected by charges.
+  - lesson: digital-inclusion-and-access
+    front: What do the POUR principles of WCAG stand for?
+    back: Perceivable, Operable, Understandable and Robust, the four principles under which WCAG's accessibility success criteria are organised.
+  - lesson: digital-inclusion-and-access
+    front: Why is digital inclusion a matter of justice rather than charity?
+    back: Rawls's difference principle and the capabilities approach hold that fair societies must enable everyone to access essential services and opportunities, so excluding people through design is an injustice, not merely a missed kindness.
+  - lesson: digital-inclusion-and-access
+    front: What is the main risk of a digital-by-default policy?
+    back: People without devices, skills, connectivity or accessible interfaces lose access to services unless assisted and non-digital channels are retained.
+  - lesson: digital-rights-and-workplace-technology
+    front: What are digital rights?
+    back: Human rights such as expression, privacy, association, equality and due process as applied to digital technologies, together with protections specific to digital environments.
+  - lesson: digital-rights-and-workplace-technology
+    front: Why are blanket internet shutdowns usually considered disproportionate?
+    back: They affect whole populations and disrupt commerce, mobile money, emergency services, education and journalism, while less intrusive measures are usually available.
+  - lesson: digital-rights-and-workplace-technology
+    front: Why is employee consent a weak justification for workplace monitoring?
+    back: The employment relationship involves a power imbalance, so consent may not be freely given; monitoring must also be necessary, proportionate and transparent with safeguards.
+  - lesson: digital-rights-and-workplace-technology
+    front: State the five questions of the workplace monitoring proportionality framework.
+    back: Is there a legitimate aim? Is monitoring necessary? Is the intrusion proportionate? Is it transparent to workers? Are there adequate safeguards?
+  - lesson: digital-rights-and-workplace-technology
+    front: What are the main ethical concerns about algorithmic management?
+    back: Opacity of decisions, work intensification, bias (for example via customer ratings), lack of voice or human appeal, and misclassification of workers as contractors.
+  - lesson: digital-rights-and-workplace-technology
+    front: How can data protection rights act as workers' rights?
+    back: Rights of access to personal data and protections around automated decision-making let workers obtain information about how algorithms assess them and challenge unfair decisions, as in the 2021 Amsterdam ride-hailing cases.

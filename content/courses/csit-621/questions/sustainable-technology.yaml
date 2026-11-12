@@ -1,0 +1,286 @@
+module: sustainable-technology
+questions:
+  - id: st01
+    lesson: green-computing-and-energy-efficiency
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Calculate Power Usage Effectiveness
+    scenario: |
+      Illustrative scenario. A Kumasi data centre's IT equipment draws an average of 250 kW. Total facility load, including cooling, UPS losses and lighting, averages 475 kW.
+    prompt: What is the facility's PUE?
+    options:
+      - "0.53"
+      - "1.53"
+      - "1.90"
+      - "2.25"
+    answer: 2
+    explanation: PUE = total facility energy / IT equipment energy = 475 / 250 = 1.9. The value 0.53 is the inverse (IT / total, known as DCiE), which is a common error. 1.53 and 2.25 do not follow from the data. A PUE of 1.9 means 0.9 kWh of overhead for every 1 kWh delivered to IT.
+
+  - id: st02
+    lesson: green-computing-and-energy-efficiency
+    type: true_false
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the limitations of PUE
+    prompt: Consolidating servers through virtualisation always improves (lowers) a data centre's PUE.
+    answer: false
+    explanation: Consolidation reduces IT load, and if facility overhead does not fall proportionately, the ratio of total to IT energy can rise, worsening PUE even though total energy falls. This is why PUE should be reported alongside absolute energy, carbon and useful-work measures.
+
+  - id: st03
+    lesson: green-computing-and-energy-efficiency
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the Ghanaian law governing e-waste
+    prompt: Ghana's Hazardous and Electronic Waste Control and Management Act was passed in 2016. What is its Act number (for example, "Act 843")?
+    answers: [Act 917, 917]
+    explanation: The Hazardous and Electronic Waste Control and Management Act, 2016 (Act 917) provides for the control and management of hazardous and electronic waste and introduced an advance eco-levy on imported electrical and electronic equipment.
+
+  - id: st04
+    lesson: green-computing-and-energy-efficiency
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate accounts of Agbogbloshie
+    prompt: Which statement gives the most accurate account of Agbogbloshie in Accra?
+    options:
+      - It was the world's largest dump for e-waste shipped from Europe, with no local economic role
+      - It was a complex informal scrap recycling hub that processed much locally generated material and supported many livelihoods, while practices such as open cable burning caused serious environmental and health harm
+      - It was a modern, regulated recycling plant operated by multinational firms
+      - It was a myth invented by journalists, with no environmental problems
+    answer: 1
+    explanation: Researchers have challenged the "world's largest e-waste dump" label, pointing to local generation of much of the material and the site's role as a scrap trading hub and source of livelihoods. Yet open burning of cables to recover copper produced hazardous smoke and contamination. It was not a regulated plant, and its harms were real, not invented. The scrapyard was demolished in 2021.
+
+  - id: st05
+    lesson: green-computing-and-energy-efficiency
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match green IT measures to the layer they address
+    prompt: Match each measure to the main problem it addresses.
+    pairs:
+      - left: Virtualisation and consolidation
+        right: Low server utilisation wasting IT energy
+      - left: Hot-aisle/cold-aisle containment
+        right: Mixing of hot exhaust and cold supply air
+      - left: Solar panels with battery storage
+        right: Reliance on diesel generators during outages
+      - left: Extending laptop life through repair
+        right: Embodied emissions and e-waste from frequent replacement
+      - left: Certified data sanitisation before disposal
+        right: Data breaches from discarded storage devices
+    explanation: Each measure targets a distinct source of waste or risk across the IT, facility, power, lifecycle and security dimensions. A good green IT plan combines them rather than relying on one.
+
+  - id: st06
+    lesson: green-computing-and-energy-efficiency
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Calculate annual energy savings from a PUE improvement
+    scenario: |
+      Illustrative scenario. A facility has a constant IT load of 100 kW and improves its PUE from 2.0 to 1.5 with no change in IT load.
+    prompt: What is the approximate annual energy saving?
+    options:
+      - 50 kWh
+      - 438,000 kWh
+      - 876,000 kWh
+      - 1,314,000 kWh
+    answer: 1
+    explanation: Total load falls from 100 × 2.0 = 200 kW to 100 × 1.5 = 150 kW, a reduction of 50 kW. Annual saving = 50 × 8,760 hours = 438,000 kWh. 50 kWh forgets to annualise; 876,000 kWh is the IT energy itself; 1,314,000 kWh is the new total annual energy.
+
+  - id: st07
+    lesson: green-computing-and-energy-efficiency
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain the lifecycle view of green computing
+    prompt: Why does Murugesan's holistic approach to green IT include design, manufacturing and disposal as well as use?
+    options:
+      - Because electricity use by IT is negligible
+      - Because significant environmental impacts, such as embodied emissions and hazardous waste, occur outside the use phase
+      - Because only manufacturers are responsible for green IT
+      - Because disposal is the only phase that regulators control
+    answer: 1
+    explanation: Manufacturing devices and disposing of them carry major impacts, including embodied emissions and toxic substances, so a use-only focus misses much of the footprint. Electricity use is not negligible, responsibility is shared, and regulation addresses several phases.
+
+  - id: st08
+    lesson: sustainable-innovation-and-environmental-impact
+    type: matching
+    bloom: apply
+    difficulty: medium
+    objective: Classify emissions into GHG Protocol scopes
+    prompt: Match each emission source of a Ghanaian bank to its GHG Protocol scope.
+    pairs:
+      - left: Diesel burned in the bank's own backup generators
+        right: Scope 1
+      - left: Grid electricity consumed at head office
+        right: Scope 2
+      - left: Cloud hosting services purchased from a provider
+        right: Scope 3 (purchased services)
+      - left: Manufacturing of laptops bought for staff
+        right: Scope 3 (purchased goods)
+    explanation: Scope 1 covers direct emissions from owned sources; scope 2 covers purchased electricity; scope 3 covers value-chain emissions such as purchased goods and services. Moving workloads to the cloud shifts their emissions from scope 2 to scope 3.
+
+  - id: st09
+    lesson: sustainable-innovation-and-environmental-impact
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the rebound effect
+    prompt: The rebound effect means that efficiency improvements can lead to increased consumption that offsets some or all of the expected savings.
+    answer: true
+    explanation: Efficiency lowers the cost of an activity, which can increase demand. Jevons observed that more efficient steam engines increased coal use. In digital services, cheaper computing can drive much higher total usage.
+
+  - id: st10
+    lesson: sustainable-innovation-and-environmental-impact
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the environmental footprint of AI
+    prompt: Which statement about AI's environmental impact is most accurate?
+    options:
+      - Only training matters; using a trained model has no meaningful energy cost
+      - Training is energy-intensive, but large-scale inference, hardware manufacture and water for cooling also contribute, and the carbon impact depends on location and electricity source
+      - AI always reduces net emissions because it optimises other systems
+      - AI's footprint is identical wherever it runs
+    answer: 1
+    explanation: Inference is cheaper per request but occurs at enormous scale; accelerators have manufacturing impacts; cooling uses water; and grid carbon intensity varies by location and time. AI can enable savings elsewhere, but net reductions are not guaranteed.
+
+  - id: st11
+    lesson: sustainable-innovation-and-environmental-impact
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for misleading environmental claims
+    prompt: What term describes misleading claims that exaggerate the environmental benefits of a product or organisation?
+    answers: [greenwashing]
+    explanation: Greenwashing includes vague labels, selective disclosure, ignoring scope 3 or lifecycle impacts, and unverified claims. Specific, lifecycle-based and independently verified claims reduce the risk.
+
+  - id: st12
+    lesson: sustainable-innovation-and-environmental-impact
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a carbon claim relating to cloud migration
+    scenario: |
+      Illustrative scenario. A Ghanaian insurer moves all its servers to a public cloud and announces that its "IT emissions are now zero" because its electricity bill for servers has disappeared.
+    prompt: What is the best evaluation of this claim?
+    options:
+      - Correct, because the insurer no longer pays for server electricity
+      - Misleading, because the emissions have moved from scope 2 into scope 3 (purchased cloud services); they may be lower, but they are not zero
+      - Correct, because cloud providers do not emit greenhouse gases
+      - Misleading, because cloud emissions count as the insurer's scope 1
+    answer: 1
+    explanation: The provider's data centres still consume electricity; for the insurer these emissions fall in scope 3 as purchased services. They may be lower if the provider is more efficient or uses low-carbon power, but claiming zero is greenwashing. Cloud emissions are not the insurer's scope 1, which covers only directly owned or controlled sources.
+
+  - id: st13
+    lesson: sustainable-innovation-and-environmental-impact
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain the priority order of circular economy loops
+    prompt: In circular economy thinking for IT equipment, which option generally preserves the most value?
+    options:
+      - Shredding devices to recover metals
+      - Extending device life through repair and maintenance
+      - Landfilling devices safely
+      - Incinerating plastic casings for energy
+    answer: 1
+    explanation: Inner loops such as maintenance and repair preserve the product's function and embodied energy; reuse and refurbishment come next; recycling is the last loop. Landfill and incineration lose materials and can cause pollution.
+
+  - id: st14
+    lesson: sustainable-innovation-and-environmental-impact
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain the Porter hypothesis
+    prompt: What does the Porter hypothesis (Porter and van der Linde, 1995) propose?
+    options:
+      - Environmental regulation always reduces competitiveness
+      - Well-designed environmental regulation can stimulate innovation that offsets compliance costs and improves competitiveness
+      - Firms should ignore environmental issues to maximise profit
+      - Only governments can innovate for sustainability
+    answer: 1
+    explanation: Porter and van der Linde argued that pollution often signals wasted resources, so regulation that pushes firms to innovate can improve efficiency and competitiveness. The hypothesis is contested and not guaranteed, but it rejects the idea that environmental performance and profit are always in conflict.
+
+  - id: st15
+    module: sustainable-technology
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a green IT and sustainable innovation plan for a Ghanaian organisation
+    prompt: Evaluate the organisation's environmental position and recommend a costed, prioritised sustainability plan, including a PUE calculation, a scope 1–3 analysis and an assessment of its AI plans.
+    marks: 20
+    case: |
+      Illustrative scenario. Oda River Bank is a fictional Ghanaian bank with an on-premises data centre in Accra. Over the last year the IT load averaged 200 kW and the total facility load averaged 400 kW. A diesel generator runs frequently during supply interruptions. The bank replaces laptops every three years and sells old devices to informal collectors without wiping them. It plans to deploy a generative AI customer-service assistant hosted by a cloud provider and to announce that it is "going green". Assume, for illustration only, an electricity cost of GHS 2.00 per kWh.
+    structure:
+      - Calculate current PUE and the annual saving from improving to PUE 1.6
+      - Classify the bank's emissions into scopes 1, 2 and 3
+      - Assess e-waste and data-security practices against Act 917 and good practice
+      - Evaluate the AI assistant's direct and enabling effects
+      - Recommend a prioritised plan and a credible, non-greenwashing communication approach
+    rubric:
+      - criterion: PUE calculation and interpretation
+        marks: 5
+        descriptor: Correctly calculates PUE of 2.0, annual saving of 700,800 kWh and GHS 1,401,600 at the assumed tariff, and notes PUE limitations
+      - criterion: Scope analysis
+        marks: 4
+        descriptor: Correctly assigns generator (scope 1), grid electricity (scope 2), purchased devices and cloud AI (scope 3)
+      - criterion: E-waste and lifecycle
+        marks: 4
+        descriptor: Identifies data-breach and environmental risks of informal disposal; recommends sanitisation, licensed recycling, life extension and compliance with Act 917
+      - criterion: AI evaluation
+        marks: 4
+        descriptor: Balanced qualitative assessment of training and inference energy, provider choice, model size and enabling benefits
+      - criterion: Plan and communication
+        marks: 3
+        descriptor: Prioritised, measurable plan and specific, verified claims rather than vague "going green" messaging
+    modelAnswer: |
+      Current PUE = 400 / 200 = 2.0. At PUE 1.6 total load would be 200 × 1.6 = 320 kW, saving 80 kW. Annually that is 80 × 8,760 = 700,800 kWh, worth about GHS 1,401,600 at the assumed tariff. Measures include airflow containment, raising set points within guidance, efficient cooling and UPS, and consolidation; the answer should note that consolidation may raise PUE while reducing total energy, so absolute energy must also be reported.
+
+      Scope 1 covers generator diesel (and any owned vehicles and refrigerant leaks); scope 2 covers grid electricity; scope 3 includes manufacture of laptops and servers, the cloud-hosted AI service, business travel and disposal. Solar and battery storage would cut both scope 1 fuel use and costs.
+
+      Selling unwiped laptops to informal collectors risks a serious data breach and contributes to hazardous informal recycling. The bank should extend device life to four or five years, sanitise storage with certified methods, use licensed recyclers, and keep records consistent with Act 917.
+
+      The AI assistant adds scope 3 emissions from inference at scale and from the provider's infrastructure. The bank should prefer an appropriately sized model, a provider with credible low-carbon commitments and transparent reporting, and measure enabling benefits such as fewer branch visits.
+
+      Priorities: metering and data security first, cooling and power improvements second, device lifecycle third, and AI with sustainability criteria in procurement. Communication should state measured reductions by scope and avoid "going green" slogans.
+    explanation: Examiners look for correct calculations with annualisation, accurate scope classification, linkage of e-waste to data security and Act 917, a balanced view of AI, and avoidance of greenwashing.
+
+  - id: st16
+    module: sustainable-technology
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate whether digital technology is a net environmental benefit
+    prompt: '"Digital technology is part of the solution to environmental problems, not part of the problem." Critically evaluate this statement with reference to green computing, AI and e-waste.'
+    marks: 15
+    structure:
+      - Introduce direct, enabling and systemic effects
+      - Assess direct footprints including data centres, AI and devices
+      - Assess enabling benefits with examples
+      - Discuss rebound effects and e-waste, including the Ghanaian context
+      - Conclude that net impact depends on design, governance and use
+    rubric:
+      - criterion: Analytical framework
+        marks: 4
+        descriptor: Uses direct, enabling and systemic effects to structure the argument
+      - criterion: Evidence and examples
+        marks: 5
+        descriptor: Accurate, appropriately hedged examples on data centres, AI, devices and enabling uses, including Ghana
+      - criterion: Critical evaluation
+        marks: 4
+        descriptor: Recognises rebound, greenwashing and e-waste harms; avoids one-sided claims
+      - criterion: Conclusion
+        marks: 2
+        descriptor: Justified, nuanced conclusion
+    modelAnswer: |
+      A good essay rejects the binary framing. Digital technology has substantial direct impacts: data centres and networks consume growing amounts of electricity, AI training and especially large-scale inference add to demand, cooling uses water, and device manufacturing carries embodied emissions and mineral extraction. In Ghana, diesel generators for towers and data centres and informal e-waste recycling — illustrated, with care, by Agbogbloshie — show local dimensions of these harms.
+
+      Enabling effects are real: smart grids help integrate renewables, sensors reduce fertiliser and water use, logistics optimisation saves fuel, and digital services can replace some travel and paper. AI can improve forecasting and efficiency in energy systems.
+
+      Systemic effects complicate the picture. Rebound effects (Jevons paradox) mean cheaper digital services can drive more consumption, and some "enabling" claims are greenwashing when they ignore lifecycle or scope 3 emissions.
+
+      The conclusion should be that technology is both part of the problem and part of the solution; its net effect depends on efficient design, low-carbon power, circular lifecycle management, credible carbon accounting and choices about what technology is used for.
+    explanation: Examiners reward essays that structure the argument with the three orders of effect, use accurate hedged evidence, address e-waste and rebound, and reach a nuanced conclusion.

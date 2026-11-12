@@ -1,0 +1,56 @@
+module: business-process-reengineering
+cards:
+  - lesson: bpr-principles
+    front: What are the four key words in Hammer and Champy's definition of BPR?
+    back: Fundamental (question why), radical (go to the root), dramatic (step-change improvement) and processes (end-to-end focus).
+  - lesson: bpr-principles
+    front: What did Hammer mean by "Don't automate, obliterate"?
+    back: Automating processes designed for paper only speeds up obsolete work; IT should enable fundamentally new process designs.
+  - lesson: bpr-principles
+    front: Name four of Hammer's (1990) re-engineering principles.
+    back: Organise around outcomes; have users of the output perform the process; subsume information processing into real work; capture information once at the source (also treat dispersed resources as centralised, link parallel activities, decide where work is done).
+  - lesson: bpr-principles
+    front: How did Ford re-engineer accounts payable?
+    back: Purchasing entered orders in a shared database; receiving accepted goods matching an order and the system authorised payment, replacing three-document matching ("invoiceless processing").
+  - lesson: bpr-principles
+    front: What are Davenport and Short's (1990) five redesign steps?
+    back: Develop the business vision and process objectives; identify processes to redesign; understand and measure existing processes; identify IT levers; design and build a prototype.
+  - lesson: bpr-principles
+    front: When is BPR preferable to continuous improvement?
+    back: When the performance gap is large, new technology enables a different design, the process is strategically important and cross-functional, and leaders can sponsor major change.
+  - lesson: process-analysis-and-inefficiencies
+    front: Distinguish VA, BVA and NVA steps.
+    back: Value-adding steps are valued by the customer; business value-adding steps are needed by the business or regulation; non-value-adding steps add value for neither and should be eliminated.
+  - lesson: process-analysis-and-inefficiencies
+    front: What are the seven wastes (TIMWOOD)?
+    back: Transport, inventory, motion, waiting, overproduction, over-processing and defects.
+  - lesson: process-analysis-and-inefficiencies
+    front: How is cycle time efficiency calculated, and what does a low value suggest?
+    back: "Value-adding time ÷ total cycle time × 100%; a low value shows that waiting and hand-offs, not work, dominate elapsed time."
+  - lesson: process-analysis-and-inefficiencies
+    front: How do you identify a bottleneck?
+    back: "Calculate capacity (servers × 60 ÷ minutes per case) and utilisation (demand ÷ capacity) for each resource; the highest utilisation is the bottleneck."
+  - lesson: process-analysis-and-inefficiencies
+    front: What are the Theory of Constraints' five focusing steps?
+    back: Identify the constraint, exploit it, subordinate everything else to it, elevate it, then repeat.
+  - lesson: process-analysis-and-inefficiencies
+    front: What does Little's law state?
+    back: "Work in progress = throughput × cycle time, so reducing cycle time reduces queues and crowding."
+  - lesson: redesign-optimisation-and-change-management
+    front: Name five redesign heuristics.
+    back: Task elimination, resequencing, parallelism, triage and case manager (also task composition, empowerment, automation and integration).
+  - lesson: redesign-optimisation-and-change-management
+    front: Why must a redesign be evaluated with the Devil's Quadrangle?
+    back: Changes usually trade off time, cost, quality and flexibility, so objectives must be explicit and trade-offs chosen deliberately.
+  - lesson: redesign-optimisation-and-change-management
+    front: List Kotter's eight steps.
+    back: Establish urgency; form a guiding coalition; develop a vision and strategy; communicate it; empower broad-based action; generate short-term wins; consolidate gains and produce more change; anchor new approaches in the culture.
+  - lesson: redesign-optimisation-and-change-management
+    front: What does ADKAR stand for, and what is its focus?
+    back: Awareness, Desire, Knowledge, Ability, Reinforcement; it focuses on each individual's transition through change.
+  - lesson: redesign-optimisation-and-change-management
+    front: How do Kotter's model and ADKAR complement each other?
+    back: Kotter structures leaders' organisation-wide actions; ADKAR diagnoses where each stakeholder group is stuck and targets support.
+  - lesson: redesign-optimisation-and-change-management
+    front: What are Lewin's three stages of change?
+    back: Unfreeze (create readiness), change (move to new ways) and refreeze (stabilise the new state).

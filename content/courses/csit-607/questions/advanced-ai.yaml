@@ -1,0 +1,345 @@
+module: advanced-ai
+questions:
+  - id: q01
+    lesson: neural-networks-and-deep-learning
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Compute a neuron's weighted sum
+    prompt: A neuron has inputs (2, 1, 3), weights (0.5, −1.0, 0.25) and bias 0.1. What is its weighted sum z before activation?
+    options:
+      - "0.75"
+      - "0.85"
+      - "1.85"
+      - "−0.15"
+    answer: 1
+    explanation: z = 0.5 × 2 − 1.0 × 1 + 0.25 × 3 + 0.1 = 1.0 − 1.0 + 0.75 + 0.1 = 0.85. Omitting the bias gives 0.75, dropping the negative second term gives 1.85, and −0.15 results from a sign slip on the third term.
+
+  - id: q02
+    lesson: neural-networks-and-deep-learning
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Apply the ReLU activation function
+    prompt: What is the output of a ReLU activation when its input z is −0.4?
+    answers:
+      - "0"
+      - zero
+      - "0.0"
+    explanation: ReLU outputs max(0, z). For any negative input it outputs 0, meaning the neuron is inactive for that example; for positive inputs it passes the value unchanged.
+
+  - id: q03
+    lesson: neural-networks-and-deep-learning
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the role of non-linear activation functions
+    prompt: Without non-linear activation functions, a deep network with many layers is mathematically equivalent to a single linear model.
+    answer: true
+    explanation: Composing linear transformations produces another linear transformation, so depth adds nothing without non-linearity. Non-linear activations such as ReLU and sigmoid allow networks to represent complex functions.
+
+  - id: q04
+    lesson: neural-networks-and-deep-learning
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Describe the purpose of backpropagation
+    prompt: What does backpropagation do?
+    options:
+      - It selects the network architecture automatically
+      - It uses the chain rule to compute the gradient of the loss with respect to every weight, working backwards from the output
+      - It removes neurons randomly to prevent overfitting
+      - It converts images into pixels
+    answer: 1
+    explanation: Backpropagation efficiently computes gradients for all weights, which gradient descent then uses to update them. Architecture search is a separate activity, random neuron removal is dropout, and pixel conversion is image encoding.
+
+  - id: q05
+    lesson: neural-networks-and-deep-learning
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate deep learning suitability for tabular business data
+    scenario: |
+      Illustrative scenario. A bank's team proposes replacing its gradient-boosted credit model with a deep neural network trained on the same tabular application data. On a time-based validation set both perform similarly, but the neural network is harder to explain and more expensive to run.
+    prompt: What is the best recommendation?
+    options:
+      - Adopt the neural network because deep learning is always superior
+      - Keep the gradient-boosted model, since it matches performance with better explainability and lower cost
+      - Abandon all machine learning for credit decisions
+      - Deploy both and let applicants choose
+    answer: 1
+    explanation: On tabular data, tree ensembles are often as accurate as neural networks. With equal performance, explainability and cost favour the existing model. Deep learning is not universally superior, abandoning ML ignores its proven value, and letting applicants choose models is not a sound governance practice.
+
+  - id: q06
+    lesson: neural-networks-and-deep-learning
+    type: matching
+    bloom: recall
+    difficulty: medium
+    objective: Match training techniques to their purpose
+    prompt: Match each technique to its purpose.
+    pairs:
+      - left: Dropout
+        right: Randomly deactivates neurons during training to reduce overfitting
+      - left: Early stopping
+        right: Halts training when validation loss stops improving
+      - left: Data augmentation
+        right: Creates varied copies of training examples such as flipped images
+      - left: Transfer learning
+        right: Starts from a pre-trained network and fine-tunes it on a smaller dataset
+      - left: Learning rate
+        right: Sets the size of each weight update
+    explanation: The first three are regularisation strategies that improve generalisation, transfer learning addresses limited data, and the learning rate is a key hyperparameter controlling training stability.
+
+  - id: q07
+    lesson: neural-networks-and-deep-learning
+    type: mcq
+    bloom: apply
+    difficulty: hard
+    objective: Apply the gradient-descent update direction
+    prompt: A weight is 0.5, its gradient is 1.4 and the learning rate is 0.1. What is the updated weight?
+    options:
+      - "0.64"
+      - "0.36"
+      - "0.50"
+      - "1.90"
+    answer: 1
+    explanation: new weight = old weight − learning rate × gradient = 0.5 − 0.14 = 0.36. Adding the gradient (0.64) would move uphill on the loss, leaving the weight unchanged ignores the gradient, and 1.90 adds the raw gradient.
+
+  - id: q08
+    lesson: computer-vision-and-nlp
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish computer vision tasks
+    prompt: A supermarket wants a system that locates each product on a shelf photograph and draws a box around it with a label. Which task is this?
+    options:
+      - Image classification
+      - Object detection
+      - Sentiment analysis
+      - Tokenisation
+    answer: 1
+    explanation: Object detection finds and labels multiple objects with bounding boxes. Image classification assigns one label to the whole image, while sentiment analysis and tokenisation are NLP operations.
+
+  - id: q09
+    lesson: computer-vision-and-nlp
+    type: short_answer
+    bloom: apply
+    difficulty: hard
+    objective: Compute a convolution output
+    prompt: A 3 by 3 filter with every row equal to (−1, 0, 1) is applied to a window whose rows are all (0, 0, 9). What is the output value?
+    answers:
+      - "27"
+    explanation: Each row contributes −1 × 0 + 0 × 0 + 1 × 9 = 9, and three rows give 27. The large value indicates a dark-to-bright vertical edge in that window.
+
+  - id: q10
+    lesson: computer-vision-and-nlp
+    type: mcq
+    bloom: apply
+    difficulty: hard
+    objective: Interpret cosine similarity between embeddings
+    prompt: Two embedding vectors have a dot product of 0.64 and lengths 0.831 and 0.787. What is their cosine similarity, approximately?
+    options:
+      - "0.53"
+      - "0.98"
+      - "0.64"
+      - "1.62"
+    answer: 1
+    explanation: Cosine = 0.64 / (0.831 × 0.787) ≈ 0.64 / 0.654 ≈ 0.98, indicating very similar meaning. Using the dot product alone (0.64) ignores vector length, and cosine similarity cannot exceed 1.
+
+  - id: q11
+    lesson: computer-vision-and-nlp
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain contextual embeddings
+    prompt: In a contextual embedding model, the word "bank" receives the same vector in "river bank" and "bank loan".
+    answer: false
+    explanation: Contextual embeddings depend on surrounding words, so the two uses of "bank" receive different vectors. Static word embeddings such as early word2vec models give one vector per word regardless of context.
+
+  - id: q12
+    lesson: computer-vision-and-nlp
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse NLP challenges in a multilingual market
+    scenario: |
+      Illustrative scenario. A Ghanaian telecom deploys an English sentiment model on customer WhatsApp messages. Many messages mix English with Twi and use local abbreviations. Managers notice many complaints are classified as neutral.
+    prompt: What is the most likely cause and appropriate response?
+    options:
+      - The model is too small; buy more servers
+      - The model was not trained on code-switched, low-resource language text; collect and label local data, use multilingual models and evaluate per language
+      - Customers are actually neutral; no action is needed
+      - Sentiment analysis cannot work on text messages
+    answer: 1
+    explanation: English-only models misread mixed-language and local expressions. Local labelled data, multilingual pre-trained models and per-language evaluation address the mismatch. Computing power does not fix data mismatch, assuming neutrality ignores evidence, and sentiment analysis does work on short texts when trained appropriately.
+
+  - id: q13
+    lesson: computer-vision-and-nlp
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Match NLP tasks to business uses
+    prompt: Match each NLP task to a business use.
+    pairs:
+      - left: Named entity recognition
+        right: Extracting parties, dates and amounts from contracts
+      - left: Text classification
+        right: Routing customer emails to the right department
+      - left: Machine translation
+        right: Converting product information between languages
+      - left: Speech recognition
+        right: Transcribing call-centre conversations
+    explanation: Each task maps naturally to a common business workflow. Choosing the right task framing is the first step in scoping an NLP project.
+
+  - id: q14
+    lesson: computer-vision-and-nlp
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate transfer of vision models across contexts
+    prompt: An object-detection model that performs well on international retail images can be deployed in Ghanaian supermarkets without local testing.
+    answer: false
+    explanation: Differences in packaging, lighting, shelf layout and products can reduce accuracy. Local evaluation and, often, fine-tuning on local images are needed before deployment.
+
+  - id: q15
+    lesson: generative-ai-and-llms
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain how LLMs generate text
+    prompt: How does a decoder-style large language model produce a response?
+    options:
+      - It retrieves a stored answer from a database of facts
+      - It repeatedly predicts a probability distribution over the next token and selects one, appending it to the context
+      - It translates the question into logic and proves the answer
+      - It copies the most similar web page
+    answer: 1
+    explanation: LLMs are autoregressive; they generate one token at a time from learned probabilities. They do not have a built-in fact database or theorem prover, and while they can reproduce training text, generation is not page copying.
+
+  - id: q16
+    lesson: generative-ai-and-llms
+    type: mcq
+    bloom: apply
+    difficulty: hard
+    objective: Compute softmax probabilities
+    prompt: Scores for three tokens are 2.0, 1.0 and 0.1. Using softmax at temperature 1, what is the probability of the first token, approximately?
+    options:
+      - "0.66"
+      - "0.50"
+      - "0.86"
+      - "0.67 exactly, because 2 is two-thirds of the total score"
+    answer: 0
+    explanation: e^2.0 ≈ 7.389 and the sum of exponentials ≈ 11.212, so p ≈ 0.66. Dividing raw scores by their sum is not softmax; 0.86 is the result at temperature 0.5; and 0.50 is roughly the result at temperature 2.
+
+  - id: q17
+    lesson: generative-ai-and-llms
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the effect of temperature
+    prompt: Lowering the temperature makes an LLM's output more consistent because the most likely token receives a larger share of probability.
+    answer: true
+    explanation: Dividing scores by a temperature below 1 widens the gaps between them before softmax, concentrating probability on the top token. Higher temperatures flatten the distribution and increase variety.
+
+  - id: q18
+    lesson: generative-ai-and-llms
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name the grounding technique that supplies retrieved documents to an LLM
+    prompt: What is the name, or its abbreviation, of the technique that retrieves relevant passages from trusted documents and supplies them to an LLM as context?
+    answers:
+      - retrieval-augmented generation
+      - RAG
+      - retrieval augmented generation
+    explanation: Retrieval-augmented generation grounds answers in specific sources, ideally with citations, reducing but not eliminating hallucination.
+
+  - id: q19
+    lesson: generative-ai-and-llms
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate controls for hallucination in professional use
+    scenario: |
+      Illustrative scenario. A law firm in Accra lets junior staff use a general-purpose chatbot to draft submissions. One draft contains case citations that partners cannot find in any law report.
+    prompt: Which response best addresses the risk?
+    options:
+      - Ban all AI tools permanently without further analysis
+      - Require verification of every citation against authoritative sources, use tools grounded in legal databases where possible, and keep professional accountability with the lawyer
+      - Increase the chatbot's temperature to improve creativity
+      - Trust the citations because the chatbot sounded confident
+    answer: 1
+    explanation: As Mata v. Avianca showed, LLMs can fabricate realistic citations. Verification, grounding and clear accountability address the root causes. A blanket ban forgoes benefits without analysis, higher temperature increases randomness, and confident tone is not evidence of truth.
+
+  - id: q20
+    lesson: generative-ai-and-llms
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match generative AI concepts to descriptions
+    prompt: Match each concept to its description.
+    pairs:
+      - left: Pre-training
+        right: Self-supervised next-token prediction over a very large text corpus
+      - left: Instruction tuning
+        right: Fine-tuning on examples of instructions and good responses
+      - left: RLHF
+        right: Refining a model using human preference rankings as a reward signal
+      - left: Context window
+        right: The maximum number of tokens a model can consider at once
+      - left: Diffusion model
+        right: Generates images by learning to reverse a gradual noising process
+    explanation: These stages and concepts explain both what LLMs can do and their limits, such as knowledge cut-offs and the amount of material that can be supplied in one request.
+
+  - id: q21
+    lesson: generative-ai-and-llms
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the root cause of hallucination
+    prompt: Which statement best explains why LLMs hallucinate?
+    options:
+      - They are trained to produce plausible continuations of text rather than verified facts, and have no built-in mechanism for checking truth
+      - Their programmers insert false information deliberately
+      - Hallucination only happens when the internet connection fails
+      - They always copy incorrect web pages
+    answer: 0
+    explanation: The training objective rewards plausibility. When knowledge is missing or the prompt pushes for an answer, a fluent fabrication may be the most probable continuation. Deliberate insertion, connectivity and simple copying do not explain the phenomenon.
+
+  - id: q22
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a proposed generative AI deployment and design safeguards
+    marks: 20
+    case: |
+      Illustrative scenario. A large hospital in Accra plans a patient-facing chatbot built on a general-purpose LLM. It will answer questions about clinic opening hours, preparation for procedures, medication instructions and billing, in English and Twi, through WhatsApp. The project sponsor wants it live within six weeks and proposes using the model "as is", without connecting it to hospital documents, to save time.
+    prompt: Critically evaluate the proposal and recommend a design and deployment approach that balances value and risk.
+    structure:
+      - Explain how the LLM generates answers and why hallucination is likely without grounding
+      - Distinguish lower-risk (opening hours, billing process) from higher-risk (medication) questions
+      - Propose a RAG design over approved hospital documents with citations and refusal behaviour
+      - Address Twi and code-switched language performance and evaluation
+      - Address data protection, escalation to humans, monitoring and accountability
+    rubric:
+      - criterion: Technical understanding
+        marks: 5
+        descriptor: Accurately explains next-token generation, hallucination causes and the role of grounding
+      - criterion: Risk analysis
+        marks: 5
+        descriptor: Differentiates question types by risk and identifies patient-safety, language and privacy risks
+      - criterion: Design recommendation
+        marks: 6
+        descriptor: Coherent RAG design, scope limits, low temperature, refusal and human escalation, evaluation plan
+      - criterion: Governance and realism
+        marks: 4
+        descriptor: Addresses Act 843, accountability, monitoring and a realistic phased timeline
+    modelAnswer: |
+      A strong answer begins by explaining that an ungrounded LLM generates the most plausible next tokens from training data. It does not know this hospital's opening hours, prices or procedures, so it will produce confident but possibly fabricated answers. For medication instructions, a hallucination could directly harm patients.
+
+      The candidate should segment the scope. Opening hours, directions and billing processes are lower risk and well suited to a grounded assistant. Procedure preparation is moderate risk and should only be answered from approved clinical documents. Personalised medication advice is high risk and should be excluded, with the bot directing patients to a pharmacist or clinician.
+
+      The recommended design is retrieval-augmented generation over an approved, owned and regularly updated document set, with instructions to answer only from retrieved passages, cite them, decline when no source exists and use a low temperature. Twi and code-switched performance must be tested separately with native speakers, because LLM quality is often weaker for low-resource languages; human-reviewed Twi templates may be needed for critical content.
+
+      Patient messages are personal and often health-related, so processing must comply with the Data Protection Act, 2012 (Act 843), including clear notices, minimal data collection, secure handling and review of where the provider processes data. The bot should hand over to staff for complaints, emergencies and anything outside scope. A phased plan would launch a pilot on low-risk topics after evaluation on a test set of real questions, with monitoring of unanswered and escalated queries, rather than a six-week "as is" launch.
+    explanation: Examiners look for a technically correct explanation of hallucination, explicit risk tiering, a concrete grounded design and governance that reflects healthcare's high stakes.

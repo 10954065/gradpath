@@ -1,0 +1,100 @@
+resources:
+  - title: SAP Learning
+    description: SAP's official learning site with learning journeys on SAP S/4HANA and integrated enterprise processes such as order-to-cash and procure-to-pay.
+    provider: SAP
+    url: https://learning.sap.com/
+    category: course
+    module: enterprise-applications
+    difficulty: intermediate
+    stage: core
+    accessType: unknown
+  - title: What is enterprise resource planning (ERP)?
+    description: An overview of ERP concepts, modules and benefits from IBM's Think topic pages.
+    provider: IBM
+    url: https://www.ibm.com/think/topics/enterprise-resource-planning
+    category: guide
+    module: enterprise-systems-foundations
+    difficulty: introductory
+    stage: foundation
+    accessType: unknown
+  - title: The TOGAF Standard
+    description: Official home of The Open Group Architecture Framework, including the Architecture Development Method used in enterprise architecture.
+    provider: The Open Group
+    url: https://www.opengroup.org/togaf
+    category: standard
+    module: enterprise-systems-foundations
+    difficulty: advanced
+    stage: core
+    accessType: unknown
+  - title: Microsoft Learn - Dynamics 365
+    description: Official documentation and training for Microsoft's ERP and CRM applications, useful for comparing enterprise application families.
+    provider: Microsoft
+    url: https://learn.microsoft.com/en-us/dynamics365/
+    category: documentation
+    module: enterprise-applications
+    difficulty: intermediate
+    stage: core
+    accessType: unknown
+  - title: Odoo Documentation
+    description: Official documentation for Odoo, an ERP suite widely used by small and medium-sized enterprises, covering sales, inventory, accounting and HR applications.
+    provider: Odoo
+    url: https://www.odoo.com/documentation/
+    category: documentation
+    module: enterprise-applications
+    difficulty: introductory
+    stage: core
+    accessType: unknown
+  - title: BPMN Specification
+    description: The Object Management Group's official page for the Business Process Model and Notation standard and its versions.
+    provider: Object Management Group
+    url: https://www.omg.org/spec/BPMN/
+    category: standard
+    module: business-process-management
+    difficulty: advanced
+    stage: advanced
+    accessType: unknown
+  - title: Camunda
+    description: Official site for Camunda's process orchestration platform and Camunda Modeler, used for BPMN modelling and process automation practice.
+    provider: Camunda
+    url: https://camunda.com/
+    category: tool
+    module: business-process-management
+    difficulty: intermediate
+    stage: core
+    accessType: unknown
+  - title: Camunda Documentation
+    description: Official Camunda documentation, including BPMN guides, Camunda Modeler instructions and how process engines orchestrate services.
+    provider: Camunda
+    url: https://docs.camunda.io/
+    category: documentation
+    module: business-process-management
+    difficulty: intermediate
+    stage: core
+    accessType: unknown
+  - title: Bizagi
+    description: Official site for Bizagi Modeler, a BPMN process modelling, documentation and simulation tool.
+    provider: Bizagi
+    url: https://www.bizagi.com/
+    category: tool
+    module: business-process-reengineering
+    difficulty: introductory
+    stage: core
+    accessType: unknown
+  - title: Prosci ADKAR Model
+    description: Prosci's official overview of the ADKAR model of individual change (Awareness, Desire, Knowledge, Ability, Reinforcement).
+    provider: Prosci
+    url: https://www.prosci.com/methodology/adkar
+    category: guide
+    module: business-process-reengineering
+    difficulty: intermediate
+    stage: core
+    accessType: unknown
+  - title: Kotter Inc.
+    description: Official site of the organisation founded by John Kotter, with material on the eight-step model for leading change.
+    provider: Kotter Inc.
+    url: https://www.kotterinc.com/
+    category: organisation
+    module: business-process-reengineering
+    difficulty: intermediate
+    stage: core
+    accessType: unknown

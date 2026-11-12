@@ -1,0 +1,53 @@
+module: professional-practice
+cards:
+  - lesson: workplace-ethics-and-conflicts-of-interest
+    front: What is a conflict of interest?
+    back: A situation in which private interests, or duties to another party, could improperly influence a person's professional judgement where others rely on it.
+  - lesson: workplace-ethics-and-conflicts-of-interest
+    front: Why must perceived conflicts be disclosed even if judgement is unaffected?
+    back: Because a reasonable observer's doubt undermines trust and the legitimacy of the decision; disclosure lets the organisation protect both the decision and the individual.
+  - lesson: workplace-ethics-and-conflicts-of-interest
+    front: List the steps of conflict-of-interest management.
+    back: Recognise, disclose in writing, let the organisation assess, manage (recuse, independent review, divest or decline), record and review when circumstances change.
+  - lesson: workplace-ethics-and-conflicts-of-interest
+    front: What is the test for whether a gift from a vendor is acceptable?
+    back: Whether it could influence, or appear to influence, a business decision — considering timing (e.g. during a tender), value, openness and organisational policy.
+  - lesson: workplace-ethics-and-conflicts-of-interest
+    front: What limits loyalty to an employer?
+    back: Law and duties to the public. An employer cannot legitimately require deception of clients or regulators, concealment of serious defects or unlawful acts.
+  - lesson: workplace-ethics-and-conflicts-of-interest
+    front: What is the ethical rule for privileged access?
+    back: Access is granted for a purpose and must be used only for that purpose (ACM 2.8); technical ability to view data is not permission.
+  - lesson: whistleblowing-and-professional-negligence
+    front: State De George's three criteria for permissible whistleblowing.
+    back: (1) Serious and considerable harm to the public; (2) the employee has reported it to an immediate superior; (3) internal procedures have been exhausted.
+  - lesson: whistleblowing-and-professional-negligence
+    front: What two further criteria make whistleblowing obligatory for De George?
+    back: (4) Documented evidence that would convince a reasonable impartial observer; (5) good reason to believe that going public will bring about the necessary change.
+  - lesson: whistleblowing-and-professional-negligence
+    front: Give two criticisms of De George's criteria.
+    back: Exhausting internal channels can be unsafe or futile when management is complicit; the focus on physical public harm is narrow for privacy, fraud or discrimination concerns.
+  - lesson: whistleblowing-and-professional-negligence
+    front: What are the four elements of negligence?
+    back: Duty of care, breach of the standard of a reasonably competent professional, causation, and recognised harm.
+  - lesson: whistleblowing-and-professional-negligence
+    front: What standard is an IT professional held to in negligence?
+    back: That of a reasonably competent practitioner in the field, judged by accepted practice and knowledge at the time — not perfection.
+  - lesson: whistleblowing-and-professional-negligence
+    front: What does the Post Office Horizon scandal teach IT professionals?
+    back: Treating system outputs as infallible, ignoring users' reports of anomalies and failing to disclose known defects can cause grave injustice; concerns must be heard and investigated.
+  - lesson: cybercrime-and-misuse-of-information-systems
+    front: Distinguish cyber-dependent from cyber-enabled crime.
+    back: Cyber-dependent crime exists only through computers (hacking, malware); cyber-enabled crime is a traditional offence amplified by technology (fraud, phishing).
+  - lesson: cybercrime-and-misuse-of-information-systems
+    front: What are the main roles of Ghana's Cybersecurity Act, 2020 (Act 1038)?
+    back: It established the Cyber Security Authority and regulates cybersecurity, including protection of critical information infrastructure, licensing and accreditation, and incident response structures.
+  - lesson: cybercrime-and-misuse-of-information-systems
+    front: What does the Electronic Transactions Act, 2008 (Act 772) cover?
+    back: Legal recognition of electronic records, signatures and contracts, consumer protection in e-commerce and cyber offences such as unauthorised access and interference.
+  - lesson: cybercrime-and-misuse-of-information-systems
+    front: What separates ethical security testing from hacking?
+    back: Authorisation — written permission and agreed scope — followed by harm avoidance and coordinated, private disclosure of findings.
+  - lesson: cybercrime-and-misuse-of-information-systems
+    front: Name four controls that reduce insider misuse.
+    back: Least privilege, separation of duties, logging and monitoring of privileged activity, and prompt joiner–mover–leaver access changes.

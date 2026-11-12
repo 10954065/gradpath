@@ -1,0 +1,56 @@
+module: ethical-foundations
+cards:
+  - lesson: ethics-morality-and-relativism
+    front: How do morality, ethics and law differ?
+    back: Morality is the set of norms a community lives by; ethics is the critical study of whether those norms are justified; law is rules made by a legitimate authority and enforced by the state.
+  - lesson: ethics-morality-and-relativism
+    front: Why does Moor say computers create distinctive ethical problems?
+    back: Computers are logically malleable, so they create new possibilities for action and therefore policy vacuums, often accompanied by conceptual muddles about how to classify the new technology.
+  - lesson: ethics-morality-and-relativism
+    front: What is the key flaw in the main argument for cultural relativism?
+    back: It moves from the descriptive fact that cultures disagree to the normative claim that there is no moral truth, which does not follow; disagreement does not prove that no view is better justified.
+  - lesson: ethics-morality-and-relativism
+    front: What is the reformer's dilemma?
+    back: If rightness means approval by one's culture, then moral reformers who opposed accepted practices such as slavery were wrong by definition, which is implausible.
+  - lesson: ethics-morality-and-relativism
+    front: What is ethical pluralism and how does it differ from relativism?
+    back: Pluralism holds that several genuine values exist and may be weighed differently across cultures, but some practices can still be criticised for violating core commitments such as avoiding serious harm and respecting dignity.
+  - lesson: ethics-morality-and-relativism
+    front: How does Wiredu's work bear on the relativism debate?
+    back: Wiredu argued that beneath cultural particulars there are cultural universals, including basic moral principles, which make cross-cultural understanding and evaluation possible.
+  - lesson: utilitarianism-deontology-and-virtue-ethics
+    front: Distinguish act utilitarianism from rule utilitarianism.
+    back: Act utilitarianism judges each action by whether it maximises well-being in that situation; rule utilitarianism judges actions by conformity to rules whose general adoption would maximise well-being.
+  - lesson: utilitarianism-deontology-and-virtue-ethics
+    front: State Kant's Formula of Universal Law and how to apply it.
+    back: Act only on a maxim you could will to become a universal law. State the maxim of your action and ask whether it could be followed by everyone without contradiction or self-defeat.
+  - lesson: utilitarianism-deontology-and-virtue-ethics
+    front: What does the Formula of Humanity require?
+    back: Treat humanity, in yourself and others, always as an end and never merely as a means, respecting people's rational agency and consent.
+  - lesson: utilitarianism-deontology-and-virtue-ethics
+    front: What is Aristotle's doctrine of the mean?
+    back: Each moral virtue lies between a vice of excess and a vice of deficiency (for example courage between rashness and cowardice); the right point is identified by practical wisdom, not arithmetic.
+  - lesson: utilitarianism-deontology-and-virtue-ethics
+    front: How can Rawls's veil of ignorance be used in system design?
+    back: Designers ask whether they would accept a system's rules without knowing their own position, for example whether they would be an urban professional or an informal trader under a credit-scoring model.
+  - lesson: utilitarianism-deontology-and-virtue-ethics
+    front: Why is applying several ethical theories to one case valuable?
+    back: Each theory highlights different considerations; when they converge, the recommendation is robust, and when they diverge, the conflict is exposed and must be justified explicitly.
+  - lesson: ethical-decision-making
+    front: List the seven steps of the ethical decision-making framework.
+    back: Define the issue; establish facts and gaps; identify stakeholders; generate options; evaluate using theories, codes and law; decide and justify with an argument; act, communicate and review.
+  - lesson: ethical-decision-making
+    front: What four things should a stakeholder table record for each stakeholder?
+    back: Their interests, their rights or legitimate claims, their power to influence the decision, and the impact or vulnerability under each option.
+  - lesson: ethical-decision-making
+    front: What is the structure of a defensible ethical argument?
+    back: A factual premise, a normative premise, an application premise and a conclusion, followed by the strongest objection and a reasoned rebuttal or modification.
+  - lesson: ethical-decision-making
+    front: What is the difference between a valid and a sound argument?
+    back: A valid argument's conclusion must be true if its premises are true; a sound argument is valid and its premises are actually true.
+  - lesson: ethical-decision-making
+    front: Why should you state the strongest objection to your own recommendation?
+    back: Answering the strongest objection shows the conclusion survives serious challenge; addressing only weak objections is a straw man and leaves the argument vulnerable.
+  - lesson: ethical-decision-making
+    front: Name three fallacies common in workplace ethical arguments.
+    back: Appeal to common practice ("everyone does it"), false dilemma (only two options), and appeal to authority ("the manager said so"); slippery slope without evidence is another.

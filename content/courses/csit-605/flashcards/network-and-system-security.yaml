@@ -1,0 +1,56 @@
+module: network-and-system-security
+cards:
+  - lesson: network-security-and-firewalls
+    front: What does "first match wins" mean for firewall rule sets?
+    back: Rules are evaluated top-down and the first matching rule decides the action, so a broad rule placed early can shadow later, more specific rules.
+  - lesson: network-security-and-firewalls
+    front: Why should every firewall rule set end with a logged default deny?
+    back: It applies fail-safe defaults, blocking anything not explicitly permitted, and the logs reveal attempted traffic for investigation.
+  - lesson: network-security-and-firewalls
+    front: What is the purpose of a DMZ?
+    back: To host internet-facing services in a separate segment so that compromising them does not give direct access to the internal network.
+  - lesson: network-security-and-firewalls
+    front: How does segmentation limit the damage of a phishing compromise?
+    back: A compromised PC in the user segment cannot directly reach servers, payment systems or management interfaces, so lateral movement is blocked or slowed and more detectable.
+  - lesson: network-security-and-firewalls
+    front: What network lesson does the 2013 Target breach teach?
+    back: Third-party (HVAC vendor) access must be tightly scoped and segmented from sensitive systems such as point-of-sale, and security alerts must be acted upon.
+  - lesson: network-security-and-firewalls
+    front: What is the core idea of zero trust architecture?
+    back: No implicit trust based on network location; every access request is authenticated and authorised using identity, device health and context, with least privilege per session.
+  - lesson: secure-protocols
+    front: What four properties should a secure channel provide?
+    back: Confidentiality, integrity, authentication (at least of the server) and forward secrecy.
+  - lesson: secure-protocols
+    front: In TLS 1.3, how are session keys established?
+    back: Through an ephemeral (EC)DHE key exchange - client and server exchange key shares in ClientHello and ServerHello and derive keys with HKDF; the certificate key only signs the handshake.
+  - lesson: secure-protocols
+    front: What does the client check before trusting a TLS server?
+    back: That the certificate chain leads to a trusted root, the certificate is valid and matches the server name, the CertificateVerify signature is valid and the Finished message verifies.
+  - lesson: secure-protocols
+    front: What does DNSSEC protect and what does it not protect?
+    back: It protects the authenticity and integrity of DNS answers through signatures; it does not provide confidentiality or stop lookalike domains.
+  - lesson: secure-protocols
+    front: Why is password-based SSH exposed to the internet a risk?
+    back: It invites credential attacks; key-based authentication, disabling password login and restricting source networks are safer.
+  - lesson: secure-protocols
+    front: Why did Heartbleed require more than a software patch?
+    back: Leaked memory might have exposed private keys, sessions and passwords, so organisations had to replace keys, reissue and revoke certificates and reset sessions or passwords.
+  - lesson: os-endpoint-and-access-control
+    front: Name four operating system hardening practices.
+    back: Prompt patching, secure configuration baselines (such as CIS Benchmarks), removal of unnecessary services and default accounts, and enabling host firewalls, encryption and logging.
+  - lesson: os-endpoint-and-access-control
+    front: How does EDR differ from traditional antivirus?
+    back: Antivirus mainly blocks known malicious files; EDR records endpoint behaviour, detects suspicious activity, supports investigation and can isolate devices remotely.
+  - lesson: os-endpoint-and-access-control
+    front: Contrast Bell–LaPadula and Biba.
+    back: Bell–LaPadula protects confidentiality (no read up, no write down); Biba protects integrity (no read down, no write up).
+  - lesson: os-endpoint-and-access-control
+    front: What is segregation of duties? Give a banking example.
+    back: Splitting sensitive tasks so no single person can complete them alone, for example tellers post transactions but only managers can reverse them.
+  - lesson: os-endpoint-and-access-control
+    front: List four components of privileged access management.
+    back: Separate admin accounts, credential vaulting, MFA with just-in-time elevation, and session recording or two-person control for sensitive operations.
+  - lesson: os-endpoint-and-access-control
+    front: Why are shared accounts a problem even in small businesses?
+    back: They remove accountability, so fraud or mistakes cannot be traced to individuals, and they usually carry more privilege than any one person needs.

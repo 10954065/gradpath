@@ -1,0 +1,38 @@
+module: blockchain-and-digital-finance
+cards:
+  - lesson: blockchain-and-distributed-ledgers
+    front: What four properties make cryptographic hash functions useful in blockchains?
+    back: Determinism, pre-image resistance, collision resistance and the avalanche effect — together they make a hash a reliable fingerprint of data.
+  - lesson: blockchain-and-distributed-ledgers
+    front: Why is a blockchain described as tamper-evident rather than tamper-proof?
+    back: Any change alters hashes and breaks links, so alteration is detectable, but history can still be rewritten with enough computation, stake or validator collusion.
+  - lesson: blockchain-and-distributed-ledgers
+    front: What does a Merkle proof allow a lightweight wallet to do?
+    back: Verify that a transaction is included in a block using only about log2(n) sibling hashes and the Merkle root, without downloading the whole block.
+  - lesson: blockchain-and-distributed-ledgers
+    front: How does finality differ between proof of work and BFT consensus?
+    back: Proof of work gives probabilistic finality that strengthens with each block; BFT voting among known validators gives fast, deterministic finality.
+  - lesson: blockchain-and-distributed-ledgers
+    front: When does the "Do you need a blockchain?" framework point to a conventional database?
+    back: When there is only one writer, when all writers are trusted, or when an always-available trusted third party can maintain the record.
+  - lesson: blockchain-and-distributed-ledgers
+    front: What lesson does the ASX CHESS replacement offer?
+    back: In markets with a trusted central operator, DLT benefits may be hard to realise, and conventional delivery risks still apply; ASX paused the project in 2022.
+  - lesson: cryptocurrency-smart-contracts-and-digital-identity
+    front: What is the key trade-off between custodial and non-custodial crypto wallets?
+    back: Custodial wallets are convenient but expose users to exchange failure; non-custodial wallets give full control but loss or exposure of the private key is irreversible.
+  - lesson: cryptocurrency-smart-contracts-and-digital-identity
+    front: What is the oracle problem in smart contracts?
+    back: Contracts cannot observe the real world, so they depend on oracles for external facts; the contract is only as trustworthy as its oracle.
+  - lesson: cryptocurrency-smart-contracts-and-digital-identity
+    front: What did The DAO incident of 2016 demonstrate?
+    back: Smart-contract bugs can be exploited, and immutability ultimately rests on social consensus — Ethereum forked, while Ethereum Classic kept the original chain.
+  - lesson: cryptocurrency-smart-contracts-and-digital-identity
+    front: How does a CBDC differ from mobile money?
+    back: A CBDC is a direct central bank liability; mobile money is e-money issued by a licensed issuer and backed by funds held in trust at banks.
+  - lesson: cryptocurrency-smart-contracts-and-digital-identity
+    front: Why should personal identity data not be stored directly on a blockchain?
+    back: Immutable ledgers cannot erase data and replicate it widely, conflicting with data protection principles; store data off-chain and use references or verifiable credentials.
+  - lesson: cryptocurrency-smart-contracts-and-digital-identity
+    front: Name three CBDC design choices that affect inclusion and financial stability.
+    back: Intermediated versus direct distribution, offline capability, and holding limits (plus account- versus token-based design and privacy arrangements).

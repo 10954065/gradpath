@@ -1,0 +1,293 @@
+module: payment-security
+questions:
+  - id: ps01
+    lesson: payment-authentication-and-transaction-security
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Classify authentication methods into factor categories
+    prompt: Which combination constitutes genuine multi-factor authentication?
+    options:
+      - A password and a security question
+      - A mobile money PIN entered on a handset holding the registered SIM
+      - Two different passwords entered one after another
+      - A username and an e-mail address
+    answer: 1
+    explanation: The PIN is a knowledge factor and the registered SIM in the handset is a possession factor, so two different categories are combined. A password plus a security question, or two passwords, are both knowledge factors and therefore single-factor. A username and e-mail address are identifiers, not authentication evidence.
+  - id: ps02
+    lesson: payment-authentication-and-transaction-security
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish tokenisation from encryption
+    prompt: A payment token can be mathematically decrypted back into the original card number by anyone who obtains the right key.
+    answer: false
+    explanation: That describes encryption. A token has no mathematical relationship to the card number; the original value can only be retrieved by looking up the mapping held in the secure token vault. This is why stolen tokens are of little use to criminals.
+  - id: ps03
+    lesson: payment-authentication-and-transaction-security
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply risk-based authentication thresholds
+    scenario: |
+      An online shop scores transactions: new device +30, amount above three times average +25, new delivery address +15, three or more attempts in ten minutes +20, account under 24 hours old +20, known device -10. Below 30 proceeds, 30–59 triggers step-up authentication, 60 or more is declined for review. A long-standing customer uses a new phone to buy goods worth four times her average order, delivered to a new address.
+    prompt: What decision should the system make?
+    options:
+      - Proceed frictionlessly, because she is a long-standing customer
+      - Step-up authentication, because her score is 55
+      - Decline for review, because her score is 70
+      - Decline for review, because any new device is automatically high risk
+    answer: 2
+    explanation: New device (+30), amount above three times average (+25) and new address (+15) total 70, which is at or above the 60 threshold, so the transaction is declined for review. Customer tenure is not a negative signal in this rule set, and a new device alone (30) would only trigger step-up. A critical designer might question whether such a long-standing customer should face a decline, which is why weights must be calibrated.
+  - id: ps04
+    lesson: payment-authentication-and-transaction-security
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Match transaction security controls to the threats they address
+    prompt: Match each control to the threat it primarily addresses.
+    pairs:
+      - left: TLS encryption
+        right: Eavesdropping on data in transit
+      - left: Idempotency keys
+        right: Duplicate or replayed payment requests
+      - left: Signed webhook verification
+        right: Forged payment confirmation messages
+      - left: Hardware security module
+        right: Exposure of cryptographic keys and PINs
+    explanation: TLS provides confidentiality and server authentication in transit; idempotency keys ensure a repeated request is processed once; signature verification proves a callback genuinely came from the PSP and was not altered; HSMs protect key material and PIN processing inside tamper-resistant hardware.
+  - id: ps05
+    lesson: payment-authentication-and-transaction-security
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the 3-D Secure flow without customer interaction
+    prompt: In EMV 3-D Secure 2.x, what is the name of the flow in which the issuer authenticates the cardholder silently using risk data?
+    answers: [frictionless flow, frictionless]
+    explanation: The frictionless flow lets the issuer approve authentication without a challenge when the data indicates low risk. The challenge flow requires the customer to complete a step such as an OTP or app approval.
+  - id: ps06
+    lesson: payment-authentication-and-transaction-security
+    type: mcq
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate PCI DSS scope reduction options for an SME
+    prompt: A small Ghanaian online retailer wants to accept card payments while minimising its PCI DSS burden. Which approach is most appropriate?
+    options:
+      - Store card numbers in an encrypted database column on its own server
+      - Use the PSP's hosted payment page or embedded fields so card data never touches its servers
+      - Ask customers to send card details by WhatsApp for manual processing
+      - Avoid PCI DSS entirely because it applies only to large retailers
+    answer: 1
+    explanation: Hosted or embedded PSP checkout keeps cardholder data out of the merchant's environment and greatly reduces scope, although obligations such as securing the page remain. Storing card numbers, even encrypted, places the merchant fully in scope; collecting card details by chat is insecure and non-compliant; and PCI DSS applies to any entity handling card data regardless of size.
+  - id: ps07
+    lesson: payment-authentication-and-transaction-security
+    type: true_false
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the weaknesses of SMS one-time passwords
+    prompt: SMS OTPs are vulnerable to SIM swap fraud because their security depends on control of the mobile number rather than of a specific device.
+    answer: true
+    explanation: An SMS OTP goes to whatever SIM currently holds the number. If a fraudster moves the number to their own SIM, they receive the codes. Device-bound app approvals and app-generated OTPs are stronger because they depend on keys stored on a particular handset.
+  - id: ps08
+    lesson: payment-authentication-and-transaction-security
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse an integration flaw in payment confirmation
+    scenario: |
+      An SME's online shop marks orders as paid as soon as the customer's browser is redirected back from the PSP with the parameter status=success in the URL. It does not process the PSP's signed callback.
+    prompt: What is the most serious weakness of this design?
+    options:
+      - Redirects are slower than callbacks
+      - A customer or attacker can edit the URL parameter to fake a successful payment
+      - The PSP will charge extra fees for redirects
+      - TLS cannot protect redirect URLs
+    answer: 1
+    explanation: Browser redirect parameters are under the customer's control and can be altered, so relying on them allows fake confirmations; redirects can also be lost if the browser closes. The merchant should confirm payment through a verified, signed server-to-server notification or a status query to the PSP. Speed and fees are not the core problem, and TLS does protect the URL in transit but not against the user changing it.
+  - id: ps09
+    lesson: fraud-prevention-risk-and-reconciliation
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match fraud types to their defining characteristics
+    prompt: Match each fraud type to its description.
+    pairs:
+      - left: SIM swap fraud
+        right: Victim's number moved to a SIM controlled by the criminal
+      - left: Friendly fraud
+        right: Genuine customer disputes a purchase they made
+      - left: Account takeover
+        right: Criminal logs into a real customer's account with stolen credentials
+      - left: Social engineering
+        right: Victim is manipulated into revealing a PIN or sending money
+    explanation: These four types differ in who acts and where the weakness lies. SIM swap exploits the mobile network's possession factor; friendly fraud involves the authenticated customer; account takeover uses stolen credentials; social engineering exploits human trust. Each therefore needs different controls.
+  - id: ps10
+    lesson: fraud-prevention-risk-and-reconciliation
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain the limits of authentication against friendly fraud
+    prompt: Why is strong customer authentication largely ineffective against friendly fraud?
+    options:
+      - Because friendly fraud only occurs with cash payments
+      - Because the genuine customer authenticated the payment and later disputes it
+      - Because friendly fraud is always committed by merchant staff
+      - Because authentication data is deleted after settlement
+    answer: 1
+    explanation: In friendly fraud the real cardholder made or authorised the purchase, so authentication succeeded legitimately. Controls are therefore evidential, such as delivery confirmation, clear billing descriptors and good dispute records. It occurs with card payments, involves customers rather than staff, and has nothing to do with deletion of authentication data.
+  - id: ps11
+    lesson: fraud-prevention-risk-and-reconciliation
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Classify a reconciliation break
+    scenario: |
+      A merchant's ledger shows a payment of GHS 75.00 at 23:52 on 14 March. It is absent from the PSP settlement report for 14 March, but the PSP dashboard shows it as successful, and it appears in the report for 15 March.
+    prompt: How should this break be classified and treated?
+    options:
+      - As a duplicate charge requiring a refund
+      - As a timing difference to be carried forward and confirmed in the next report
+      - As a failed payment requiring reversal of the ledger entry
+      - As fraud requiring the customer's account to be frozen
+    answer: 1
+    explanation: The payment succeeded after the PSP's daily cut-off, so it is a timing difference. It should be carried forward and confirmed when it appears in the next settlement. There is only one charge, it did not fail, and nothing suggests fraud.
+  - id: ps12
+    lesson: fraud-prevention-risk-and-reconciliation
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Calculate PSP fees as part of reconciliation
+    prompt: A settlement report shows gross receipts of GHS 1,468.00 and a contracted PSP fee of 2%. What net amount (in GHS, to two decimal places) should the bank credit be?
+    answers: ["1438.64", "1,438.64", "GHS 1,438.64", "GHS 1438.64"]
+    explanation: Fees are 2% × 1,468.00 = 29.36, so the expected net credit is 1,468.00 − 29.36 = 1,438.64. Checking the fee against the contracted rate is an essential reconciliation step because overcharging is itself a break.
+  - id: ps13
+    lesson: fraud-prevention-risk-and-reconciliation
+    type: true_false
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse transposition errors in reconciliation
+    prompt: A difference of GHS 72.00 between a ledger amount of 480.00 and a settlement amount of 408.00 is consistent with a transposition error, because differences caused by transposed digits are divisible by 9.
+    answer: true
+    explanation: Swapping two adjacent digits always produces a difference divisible by 9; 72 = 8 × 9. This heuristic points investigators towards a keying error, which in the worked example was confirmed by checking the original order.
+  - id: ps14
+    lesson: fraud-prevention-risk-and-reconciliation
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate rule-based versus score-based fraud detection
+    prompt: Which statement gives the most balanced evaluation of rule-based and score-based fraud detection?
+    options:
+      - Rules should always be replaced by machine learning because models are more accurate
+      - Rules are transparent and fast to deploy but rigid; scores adapt and capture signal interactions but need quality data and monitoring, so hybrids are common
+      - Score-based systems are illegal in regulated payments because they cannot be explained
+      - Rules generate no false positives because they are explicit
+    answer: 1
+    explanation: The balanced view recognises each approach's strengths and weaknesses and the common hybrid design with human review. Models are not always more accurate, especially with poor data; scoring is not prohibited, though explainability matters; and explicit rules frequently produce false positives.
+  - id: ps15
+    lesson: fraud-prevention-risk-and-reconciliation
+    type: matching
+    bloom: apply
+    difficulty: medium
+    objective: Apply risk treatment options to payment risks
+    prompt: Match each risk response to the treatment option it represents.
+    pairs:
+      - left: Using a hosted checkout so card data is never stored
+        right: Avoid
+      - left: Adding velocity limits on new beneficiaries
+        right: Reduce
+      - left: Relying on 3-D Secure liability shift and insurance
+        right: Transfer
+      - left: Tolerating small cash discrepancies monitored by reconciliation
+        right: Accept
+    explanation: Not storing card data removes the activity that creates the risk (avoid); velocity limits lower likelihood (reduce); liability shift and insurance move the financial consequence to another party (transfer); and minor discrepancies within appetite are consciously accepted but monitored.
+  - id: ps16
+    lesson: fraud-prevention-risk-and-reconciliation
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a response to suspected social engineering
+    scenario: |
+      A shop assistant receives an SMS that appears to confirm a GHS 500 mobile money deposit into the shop's wallet, followed by a call from a "customer" who says it was sent by mistake and asks for GHS 500 to be returned urgently.
+    prompt: What is the best immediate action?
+    options:
+      - Return the money immediately to maintain good customer relations
+      - Check the actual wallet balance and transaction history before taking any action, and do not rely on the SMS
+      - Ask the caller for their PIN to verify their identity
+      - Forward the SMS to all staff as proof of the deposit
+    answer: 1
+    explanation: SMS messages can be forged, so the assistant must verify in the wallet itself; genuine erroneous transfers are handled through the provider's reversal process. Returning money on the basis of the SMS is the scam's goal, asking for a PIN breaches basic security practice, and forwarding the SMS spreads unverified information.
+  - id: ps17
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate payment security, fraud controls and reconciliation for an SME
+    marks: 25
+    prompt: Critically evaluate the payment security and fraud risks in the case and propose a prioritised, justified control and reconciliation plan.
+    case: |
+      Illustrative scenario: Sankofa Gadgets is a hypothetical Accra electronics retailer that sells through Instagram, WhatsApp and a simple website. Customers pay by mobile money to the owner's personal wallet, by bank transfer or by card through a PSP payment link. Staff confirm mobile money payments by looking at SMS alerts. Orders are recorded in a spreadsheet, and reconciliation is done "when there is time". In the last quarter the business suffered three incidents: a customer whose phone number was SIM-swapped had a fraudulent order paid from her wallet; staff dispatched two phones after receiving forged SMS payment alerts; and several card customers disputed purchases claiming non-delivery although couriers say they delivered.
+    structure:
+      - Identify and classify the fraud types present
+      - Analyse control weaknesses in authentication, confirmation and record-keeping
+      - Propose preventive, detective and corrective controls with priorities
+      - Design a daily reconciliation process across channels
+      - Evaluate costs, friction and residual risks
+    rubric:
+      - criterion: Identification and classification of risks
+        marks: 5
+        descriptor: Correctly identifies SIM swap, social engineering via forged SMS and friendly fraud, and the structural risk of using a personal wallet.
+      - criterion: Analysis of control weaknesses
+        marks: 6
+        descriptor: Explains why SMS confirmation, personal wallets, spreadsheets and irregular reconciliation create exposure, linking each to specific incidents.
+      - criterion: Quality and justification of proposed controls
+        marks: 7
+        descriptor: Proposes layered, proportionate controls such as merchant collection accounts, PSP-verified confirmation, delivery evidence and staff training, justified against risk.
+      - criterion: Reconciliation design
+        marks: 4
+        descriptor: Specifies a daily three-way match with break classification and root-cause logging.
+      - criterion: Critical evaluation
+        marks: 3
+        descriptor: Discusses cost, customer friction and residual risk, noting that the analysis is educational rather than professional advice.
+    modelAnswer: |
+      A strong answer begins by classifying the incidents. The fraudulent wallet payment arises from SIM swap fraud, a failure of the possession factor outside the merchant's control, though the merchant can still reduce exposure by flagging unusual first-time orders. The forged SMS alerts are social engineering exploiting the shop's reliance on an unverifiable confirmation channel. The non-delivery disputes are likely friendly fraud, made worse by weak delivery evidence.
+
+      The analysis should then show how structural weaknesses magnify these risks. Collecting into a personal wallet mixes business and personal funds, gives no merchant reference on payments and leaves no settlement report to reconcile against. SMS confirmation can be forged. A spreadsheet without order references and irregular reconciliation means errors and fraud are discovered late, if at all.
+
+      The prioritised plan should start with a merchant collection service through a licensed PSP that supports mobile money across networks and cards, with every payment tied to an order reference and orders released only on a verified server notification or a balance check in the dashboard. Staff should be trained never to accept SMS as proof and never to request PINs. For high-value or first-time orders, step-up verification such as a call-back to a known number or a waiting period can be applied. For disputes, signed or photographed proof of delivery and clear billing descriptors provide evidence. Daily reconciliation should match the order log, PSP settlement reports and bank credits, classify each break and record root causes.
+
+      Finally, the answer should weigh friction: extra checks may lose some impulse buyers, so controls should be targeted at risky orders. Residual risks remain, for example sophisticated SIM swaps, and the plan should be reviewed regularly.
+    explanation: Examiners look for accurate classification of fraud types, explicit links between weaknesses and incidents, layered and proportionate controls, a concrete reconciliation process and critical discussion of trade-offs.
+  - id: ps18
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the trade-off between payment security and customer friction
+    marks: 20
+    prompt: '"Every additional authentication step costs a sale." Critically evaluate this statement with reference to 3-D Secure, risk-based authentication and mobile money PIN approval.'
+    structure:
+      - Define friction and explain its effect on conversion
+      - Explain static versus risk-based authentication
+      - Analyse 3-D Secure 2.x frictionless and challenge flows and liability shift
+      - Discuss mobile money PIN approval as low-friction possession plus knowledge
+      - Conclude with a reasoned position on proportionate security
+    rubric:
+      - criterion: Conceptual accuracy
+        marks: 6
+        descriptor: Correctly explains authentication factors, 3DS flows, RBA and PIN approval.
+      - criterion: Critical analysis
+        marks: 7
+        descriptor: Weighs fraud losses, chargebacks and abandonment rather than accepting the statement uncritically.
+      - criterion: Use of examples and context
+        marks: 4
+        descriptor: Uses Ghanaian and international examples such as PSD2 SCA exemptions.
+      - criterion: Structure and conclusion
+        marks: 3
+        descriptor: Clear argument leading to a justified conclusion.
+    modelAnswer: |
+      The statement contains a truth: each step in checkout risks abandonment, and early 3-D Secure implementations with static passwords were widely criticised for this. However, it overlooks the costs of insufficient security, namely fraud losses, chargeback fees, reputational damage and, under some card-scheme rules, the loss of liability shift that 3DS-authenticated transactions can provide.
+
+      A strong essay explains that the real question is how to apply friction proportionately. EMV 3-D Secure 2.x exchanges rich data so that issuers can authenticate most low-risk transactions in a frictionless flow and challenge only risky ones. Risk-based authentication generalises this by scoring each transaction and stepping up only above a threshold. The EU's Strong Customer Authentication regime illustrates the same logic: it mandates two-factor authentication but allows exemptions for low-value and low-risk transactions identified through transaction risk analysis.
+
+      Mobile money PIN approval provides a useful contrast. A merchant-initiated prompt on the customer's own handset combines possession of the registered SIM with knowledge of the PIN in one familiar action, so strong authentication need not feel burdensome. Its weaknesses are SIM swap and social engineering, which require controls beyond the checkout.
+
+      The conclusion should be that the statement is partly true for poorly designed, uniform friction, but false as a general rule: well-targeted authentication can increase overall revenue by reducing fraud and disputes while leaving most customers unaffected.
+    explanation: Examiners reward a balanced argument that recognises friction costs but shows how data-driven, proportionate authentication reconciles security and conversion.

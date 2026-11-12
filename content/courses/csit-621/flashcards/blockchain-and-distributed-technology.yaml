@@ -1,0 +1,38 @@
+module: blockchain-and-distributed-technology
+cards:
+  - lesson: distributed-ledgers-and-consensus
+    front: Why is a blockchain described as tamper-evident rather than immutable?
+    back: Changing a block changes its hash and breaks the link to the next block, so tampering is detectable; but a controlling majority of work, stake or validators, or a social-consensus fork, could still change history.
+  - lesson: distributed-ledgers-and-consensus
+    front: What two problems must consensus mechanisms solve in a distributed ledger?
+    back: The Byzantine generals problem (agreement despite faulty or malicious participants) and the double-spending problem (one agreed order of transactions so the same digital asset is not spent twice).
+  - lesson: distributed-ledgers-and-consensus
+    front: Compare finality in proof of work and PBFT.
+    back: PoW finality is probabilistic and strengthens with each additional block; PBFT finality is deterministic once a quorum of 2f + 1 validators agrees.
+  - lesson: distributed-ledgers-and-consensus
+    front: How many validators does a BFT protocol need to tolerate f faulty nodes?
+    back: At least 3f + 1 validators, with decisions requiring 2f + 1; for example, 7 validators tolerate 2 faults.
+  - lesson: distributed-ledgers-and-consensus
+    front: What is the oracle (garbage-in) problem?
+    back: A ledger faithfully preserves whatever is entered, including false data; accuracy depends on measurement, inspection and trusted data sources outside the chain.
+  - lesson: distributed-ledgers-and-consensus
+    front: Why is the permissioned versus permissionless choice a governance decision?
+    back: It determines who may participate, validate and read data, and who is trusted to admit members and resolve disputes - not merely a technical setting.
+  - lesson: smart-contracts-and-enterprise-blockchain
+    front: What is a smart contract, and what analogy did Nick Szabo use?
+    back: Code stored on a ledger that executes automatically when conditions are met and is verified by the network; Szabo compared it to a vending machine.
+  - lesson: smart-contracts-and-enterprise-blockchain
+    front: What lessons does The DAO incident (2016) teach?
+    back: Smart contract bugs such as reentrancy can be costly; "code is law" can clash with fairness; and immutability can be overridden by social consensus, as the hard fork and Ethereum Classic showed.
+  - lesson: smart-contracts-and-enterprise-blockchain
+    front: Summarise the key steps of the "do you need a blockchain?" decision tree.
+    back: Shared state needed? Multiple writers? Is an always-online trusted third party acceptable? Are writers known? Are they trusted? Is public verifiability needed? Blockchain fits only with multiple untrusted writers and no acceptable central operator.
+  - lesson: smart-contracts-and-enterprise-blockchain
+    front: Which Hyperledger Fabric features address enterprise confidentiality and accountability?
+    back: Identity-based membership, channels and private data collections, and endorsement policies specifying which organisations must approve transactions.
+  - lesson: smart-contracts-and-enterprise-blockchain
+    front: Why did Walmart's food traceability succeed where TradeLens failed?
+    back: Walmart's buying power created participation incentives for a clear food-safety problem; TradeLens struggled to win full industry collaboration, as rivals were reluctant to join a platform led by a competitor.
+  - lesson: smart-contracts-and-enterprise-blockchain
+    front: Do smart contracts remove the need for trust?
+    back: No - trust shifts to code authors, auditors, oracles and whoever controls upgrades, and legal agreements are still needed for exceptions and disputes.

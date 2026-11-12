@@ -1,0 +1,257 @@
+module: practical-projects
+questions:
+  - id: pp01
+    lesson: business-model-and-payment-process-projects
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Calculate contribution margin per order
+    prompt: An order of GHS 180 has cost of goods of GHS 70, packaging of GHS 8, a delivery subsidy of GHS 15 and a 2% payment fee. What is the contribution margin before marketing, in GHS?
+    answers: ["83.40", "83.4", "GHS 83.40", "GHS 83.4"]
+    explanation: The payment fee is 2% × 180 = 3.60, so contribution = 180 − 70 − 8 − 15 − 3.60 = 83.40. Counting payment fees and delivery subsidies is essential, because they can turn a healthy gross margin into a loss per order.
+  - id: pp02
+    lesson: business-model-and-payment-process-projects
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Apply break-even analysis to unit economics
+    prompt: Each order contributes GHS 43.40 after acquisition costs, and monthly fixed costs are GHS 6,500. Approximately how many orders a month are needed to break even?
+    options:
+      - About 43
+      - About 150
+      - About 485
+      - About 6,500
+    answer: 1
+    explanation: Break-even volume = fixed costs ÷ contribution per order = 6,500 ÷ 43.40 ≈ 150. About 485 would apply if contribution fell to GHS 13.40, which shows how sensitive the result is to acquisition cost. The other options misapply the formula.
+  - id: pp03
+    lesson: business-model-and-payment-process-projects
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Identify the source of truth for payment status
+    prompt: In a well-designed online payment process, an order should be marked as paid when the customer's browser is redirected to the success page.
+    answer: false
+    explanation: Redirect parameters can be altered or lost if the browser closes. The source of truth is a verified, signed PSP webhook or a server-side status query, checked against amount and reference.
+  - id: pp04
+    lesson: business-model-and-payment-process-projects
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match payment design features to the problems they solve
+    prompt: Match each payment design feature to the problem it addresses.
+    pairs:
+      - left: Idempotency key
+        right: Duplicate charges when a customer clicks pay twice
+      - left: Hosted checkout fields
+        right: Card data entering the merchant's servers
+      - left: Handset PIN prompt
+        right: Customers revealing PINs to merchants
+      - left: EXPIRED state with retry
+        right: Payments that never receive a confirmation
+    explanation: Each feature targets a specific failure mode. Linking design choices to the problems they solve is what turns a flow diagram into a robust design.
+  - id: pp05
+    lesson: business-model-and-payment-process-projects
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse a missing path in a payment state model
+    scenario: |
+      A student's payment state model contains only CREATED, PENDING and PAID. During testing, a customer approves a mobile money prompt but the PSP reports that the customer's wallet had insufficient funds, and another customer never responds to the prompt.
+    prompt: What is the most important improvement to the state model?
+    options:
+      - Remove the PENDING state to simplify the model
+      - Add FAILED and EXPIRED states with transitions that allow a retry
+      - Mark both orders as PAID and follow up by phone
+      - Add a FULFILLED state only
+    answer: 1
+    explanation: The model needs explicit states for failure and timeout, with defined transitions back to a retry, so that orders are neither left in limbo nor dispatched unpaid. Removing PENDING hides real states; marking unpaid orders as paid is a serious control failure; and FULFILLED alone does not handle the problem.
+  - id: pp06
+    lesson: business-model-and-payment-process-projects
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate evidence quality in a business model report
+    prompt: Which approach to market assumptions best meets the evaluation criteria for Project A?
+    options:
+      - Quote precise national market-size figures from memory to make the report persuasive
+      - State assumptions explicitly, label them as estimates, support them with observation or credible sources and test their sensitivity
+      - Avoid numbers entirely so that no assumption can be challenged
+      - Use the most optimistic figures to show the model's potential
+    answer: 1
+    explanation: Good project reports make assumptions transparent and test them. Invented or unsourced statistics breach academic integrity, avoiding numbers prevents viability testing, and optimistic figures bias the conclusion.
+  - id: pp07
+    lesson: business-model-and-payment-process-projects
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for server-to-server payment notifications
+    prompt: What is the common term for the server-to-server notification a PSP sends to a merchant when a payment's status changes?
+    answers: [webhook, webhooks, callback, payment callback]
+    explanation: Webhooks, or callbacks, notify the merchant's server of status changes. The merchant must verify their signature, amount and reference before acting on them.
+  - id: pp08
+    lesson: ecosystem-strategy-and-solution-design-projects
+    type: matching
+    bloom: apply
+    difficulty: medium
+    objective: Apply PESTEL categories to a Ghanaian payments context
+    prompt: Match each factor affecting a Ghanaian distributor's payment strategy to its PESTEL category.
+    pairs:
+      - left: Taxes or levies on electronic transfers
+        right: Political
+      - left: Inflation raising the cost of working capital
+        right: Economic
+      - left: Retailers' habit of paying in cash
+        right: Social
+      - left: Mobile money interoperability and GhQR
+        right: Technological
+      - left: Data protection obligations under Act 843
+        right: Legal
+    explanation: Classifying factors is only the first step; a good analysis then explains the implications of each for the organisation. Tax policy can be treated as political or economic, but here it reflects government policy choices.
+  - id: pp09
+    lesson: ecosystem-strategy-and-solution-design-projects
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish functional from non-functional requirements
+    prompt: Which of the following is a non-functional requirement?
+    options:
+      - The system must send a payment request to the retailer's wallet
+      - The system must tag each payment with an invoice number
+      - The system must be available during business hours, with a manual fallback during outages
+      - The system must produce a daily reconciliation report
+    answer: 2
+    explanation: Availability describes how well the system performs, so it is non-functional. Sending payment requests, tagging payments and producing reports describe what the system does, so they are functional requirements.
+  - id: pp10
+    lesson: ecosystem-strategy-and-solution-design-projects
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Calculate a payback period
+    prompt: A payment solution costs GHS 18,000 and produces a net benefit of GHS 1,400 per month. To the nearest whole month, what is the payback period?
+    answers: ["13", "13 months", "about 13 months"]
+    explanation: Payback = 18,000 ÷ 1,400 ≈ 12.9, about 13 months. Payback is simple to communicate but ignores benefits after the payback point, so it should be combined with sensitivity analysis.
+  - id: pp11
+    lesson: ecosystem-strategy-and-solution-design-projects
+    type: true_false
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the sensitivity of a business case
+    prompt: In the Nkabom business case, if benefits fall to 70% of the estimate while costs stay the same, the payback period roughly triples.
+    answer: true
+    explanation: Benefits of GHS 2,100 less GHS 600 of subscriptions and GHS 1,000 of fees leave GHS 500 a month, so payback becomes 36 months instead of about 13. Because net benefit is a small difference between larger numbers, payback is highly sensitive to adoption.
+  - id: pp12
+    lesson: ecosystem-strategy-and-solution-design-projects
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply MoSCoW prioritisation
+    scenario: |
+      Nkabom Provisions has a limited budget for its first two phases. Its core problems are cash losses on delivery routes, slow collections and disputes about retailer balances.
+    prompt: Which requirement should be classified as a Must have?
+    options:
+      - Cryptocurrency acceptance for international customers
+      - Tagging every payment with a retailer ID and invoice number
+      - An augmented-reality product catalogue
+      - A custom-built mobile wallet
+    answer: 1
+    explanation: Payment tagging directly addresses balance disputes and enables reconciliation, so it is essential. Cryptocurrency, AR catalogues and a custom wallet do not address the core problems and would be Won't have in this phase.
+  - id: pp13
+    lesson: ecosystem-strategy-and-solution-design-projects
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a change management approach
+    prompt: Which change approach is most likely to succeed for a distributor moving small retailers from cash to digital payment?
+    options:
+      - Stop accepting cash immediately so retailers have no choice
+      - Run a transition period with cash as a fallback, onboarding sessions, instant receipts and incentives for digital payers
+      - Change systems silently and inform retailers later
+      - Require all retailers to buy smartphones
+    answer: 1
+    explanation: A phased transition builds trust, effort expectancy and habit, consistent with adoption theory. Abrupt removal of cash risks losing customers, silent changes damage trust, and requiring smartphones is unnecessary because prompts and USSD work on basic phones.
+  - id: pp14
+    lesson: ecosystem-strategy-and-solution-design-projects
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate KPI design
+    prompt: A KPI such as "increase the share of collections received digitally" is fully specified once the target is written down, even without a measured baseline.
+    answer: false
+    explanation: Without a baseline, progress cannot be measured and the target cannot be judged realistic. A good KPI has a definition, a measured baseline, a target, a time frame and an owner.
+  - id: pp15
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Design and evaluate a digital payment solution for a Ghanaian SME
+    marks: 30
+    prompt: Using the case, produce a structured solution design outline and critically evaluate its business case and risks.
+    case: |
+      Illustrative scenario: Tamale Grains Hub is a hypothetical aggregator of maize and soya from about three hundred smallholder farmers in the Northern Region. It pays farmers in cash at collection points and sells to feed mills that pay by bank transfer. Cash payments require staff to travel with large sums, there have been disputes about weights and prices, and farmers have asked to be paid by mobile money. The business proposes a solution in which weights are recorded on a tablet at collection, farmers receive SMS receipts and are paid by bulk mobile money disbursement through a licensed PSP, and feed-mill receipts are reconciled automatically. Estimated investment is GHS 24,000, with net monthly benefits estimated at GHS 2,000.
+    structure:
+      - Analyse stakeholders and ecosystem factors
+      - Specify prioritised functional and non-functional requirements
+      - Outline architecture, controls and reconciliation
+      - Evaluate the business case with payback and sensitivity
+      - Identify risks and a phased implementation plan
+    rubric:
+      - criterion: Stakeholder and ecosystem analysis
+        marks: 5
+        descriptor: Identifies farmers, staff, feed mills, PSP, e-money issuers, agents for cash-out and the regulator, and relevant ecosystem factors such as agent liquidity in rural areas.
+      - criterion: Requirements quality
+        marks: 6
+        descriptor: Testable, MoSCoW-prioritised requirements including non-functional needs such as offline capture and usability.
+      - criterion: Architecture and controls
+        marks: 7
+        descriptor: Sound design with segregation of duties, approval of disbursement batches, audit trails, verified callbacks and reconciliation.
+      - criterion: Business case evaluation
+        marks: 7
+        descriptor: Correctly calculates payback of 12 months, tests sensitivity and recognises unquantified benefits and costs, including farmers' cash-out fees.
+      - criterion: Risks and implementation
+        marks: 5
+        descriptor: Realistic phased plan with risks such as connectivity, agent cash shortages and fraud, noting that the analysis is educational.
+    modelAnswer: |
+      A strong answer begins with stakeholders: farmers, who value prompt, transparent payment; collection staff; feed mills; the PSP and e-money issuers; rural agents who must supply cash when farmers withdraw; and the Bank of Ghana as regulator. Ecosystem factors include patchy connectivity, agent liquidity in rural areas and farmers' trust in digital payments.
+
+      Must-have requirements include recording weight, grade and agreed price per delivery, linked to a farmer ID verified at onboarding; instant SMS receipts; bulk disbursement through a licensed PSP; and reconciliation of disbursements and feed-mill receipts. Non-functional requirements include offline data capture with later synchronisation, simple interfaces for staff, role-based access and audit logs. Card acceptance or farmer credit could be later options.
+
+      The architecture links the tablet app to a central ledger, which prepares disbursement batches. Controls should separate recording from approval, require a second person to approve each batch, verify PSP callbacks and reconcile daily against PSP and bank reports. Disputes about weights are reduced by printed or SMS receipts showing weight and price.
+
+      The payback period is 24,000 ÷ 2,000 = 12 months. Sensitivity analysis should test lower benefits, for example if half the farmers prefer cash, and higher fees. The answer should note who pays the cash-out fee: if farmers bear it, their real payment falls, which may harm adoption and fairness, so the business might absorb it. Unquantified benefits include staff safety and better data on farmer supply.
+
+      Implementation should begin with a pilot at one collection point, keep cash as a fallback, check agent liquidity near collection points, and be reviewed before rollout.
+    explanation: Examiners look for traceability from problem to requirements and design, proportionate controls, a correct and critically tested business case, attention to farmers' interests and a realistic phased plan.
+  - id: pp16
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the relationship between business model design and payment process design
+    marks: 20
+    prompt: '"A business model is only as strong as the payment process that supports it." Critically discuss this statement with reference to a Ghanaian SME e-commerce context.'
+    structure:
+      - Explain business model components and unit economics
+      - Explain how payment design affects conversion, cost, trust and cash flow
+      - Analyse examples where payment design undermines or strengthens a model
+      - Consider factors beyond payments such as logistics and product quality
+      - Reach a balanced conclusion
+    rubric:
+      - criterion: Understanding of business models and payments
+        marks: 5
+        descriptor: Accurately explains the canvas, unit economics and payment process elements.
+      - criterion: Critical analysis
+        marks: 7
+        descriptor: Shows how payment choices affect revenue, costs, trust and risk, while recognising other success factors.
+      - criterion: Ghanaian context and examples
+        marks: 5
+        descriptor: Uses relevant local factors such as multi-network mobile money, COD and delivery.
+      - criterion: Argument and conclusion
+        marks: 3
+        descriptor: Coherent argument with a justified conclusion.
+    modelAnswer: |
+      The statement captures an important dependency. A business model specifies how value is created, delivered and captured, and the payment process is where value capture actually happens. Payment design affects conversion (customers abandon checkouts that do not support their wallet or are confusing), costs (PSP fees and failed-payment handling enter unit economics), trust (instant receipts and buyer protection reduce perceived risk) and cash flow (settlement speed determines working capital).
+
+      In Ghana, an SME that accepts only one mobile money network or relies on personal wallets may lose customers, struggle to reconcile and face disputes. Conversely, an aggregator that supports all networks and cards, with merchant-initiated PIN prompts and verified confirmations, can increase conversion and reduce fraud. COD illustrates the link clearly: it supports trust but shifts failed-delivery and cash-handling costs to the seller, changing the model's economics.
+
+      However, the statement overstates the case. A flawless payment process cannot rescue a model with weak demand, poor product quality, unreliable delivery or acquisition costs that exceed contribution. Logistics, addressing and customer service are equally important in Ghanaian e-commerce.
+
+      A balanced conclusion is that payment design is a necessary but not sufficient condition: a weak payment process can undermine a strong model, but a strong payment process cannot compensate for a weak value proposition or poor unit economics.
+    explanation: Examiners reward essays that link payment design explicitly to business model components and unit economics, use Ghanaian context, and challenge the statement rather than simply agreeing.

@@ -1,0 +1,261 @@
+module: responsible-ai
+questions:
+  - id: q01
+    lesson: bias-fairness-and-explainability
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match types of bias to examples
+    prompt: Match each type of bias to the example that best illustrates it.
+    pairs:
+      - left: Historical bias
+        right: Past hiring favoured men, so "successful employee" labels skew male
+      - left: Representation bias
+        right: A speech model trained mainly on one accent performs poorly on others
+      - left: Measurement bias
+        right: Healthcare spending is used as a proxy for health need
+      - left: Feedback loop bias
+        right: Model decisions determine where future data is collected
+      - left: Deployment bias
+        right: A screening tool is used as the final decision-maker
+    explanation: Historical bias reflects an unequal world, representation bias under-samples groups, measurement bias uses flawed proxies, feedback loops let models shape their own future data, and deployment bias arises when a system is used beyond its design.
+  - id: q02
+    lesson: bias-fairness-and-explainability
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Calculate demographic parity
+    scenario: |
+      An illustrative scenario recruitment tool shortlists 90 of 300 applicants from group A and 40 of 200 applicants from group B.
+    prompt: What is the demographic parity ratio (group B selection rate divided by group A selection rate)?
+    options:
+      - "0.20"
+      - "0.67"
+      - "0.80"
+      - "1.50"
+    answer: 1
+    explanation: Selection rate A = 90/300 = 0.30; B = 40/200 = 0.20. The ratio is 0.20/0.30 = 0.67, below the 0.8 four-fifths benchmark, indicating possible adverse impact. 0.20 is B's rate alone, and 1.50 is the inverse ratio.
+  - id: q03
+    lesson: bias-fairness-and-explainability
+    type: scenario
+    bloom: apply
+    difficulty: hard
+    objective: Calculate equal opportunity difference
+    scenario: |
+      In an illustrative scenario lending test set, group X has 200 applicants who would repay, of whom 180 are approved. Group Y has 100 applicants who would repay, of whom 60 are approved.
+    prompt: What is the equal opportunity difference (TPR of X minus TPR of Y)?
+    options:
+      - "0.10"
+      - "0.20"
+      - "0.30"
+      - "0.60"
+    answer: 2
+    explanation: TPR X = 180/200 = 0.90 and TPR Y = 60/100 = 0.60, so the difference is 0.30. Creditworthy members of group Y are approved far less often. 0.60 is Y's TPR, not the difference.
+  - id: q04
+    lesson: bias-fairness-and-explainability
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Understand proxy discrimination
+    prompt: Removing a protected attribute such as ethnicity from the model's features guarantees the model cannot discriminate on that attribute.
+    answer: false
+    explanation: Other features such as location, language or school can act as proxies and reproduce the same pattern. Fairness must be checked by measuring outcomes and errors across groups.
+  - id: q05
+    lesson: bias-fairness-and-explainability
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish LIME and SHAP conceptually
+    prompt: Which statement correctly describes SHAP?
+    options:
+      - It fits a simple surrogate model to random perturbations around one instance
+      - It distributes the difference between an individual prediction and the average prediction among features using Shapley values from game theory
+      - It is an intrinsically interpretable model like a scorecard
+      - It guarantees that a model is fair
+    answer: 1
+    explanation: SHAP attributes each prediction's deviation from the average to features using Shapley values, with contributions summing to that difference. The first option describes LIME; SHAP is post-hoc rather than an interpretable model; and no explanation method guarantees fairness.
+  - id: q06
+    lesson: bias-fairness-and-explainability
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name the explanation type that states the smallest change needed for a different outcome
+    prompt: What type of explanation tells a person the smallest change to their inputs that would have changed the decision?
+    answers: [counterfactual explanation, counterfactual, counterfactual explanations]
+    explanation: Counterfactual explanations, such as "with GHS 300 more monthly inflow you would have been approved", are often the most actionable for customers, provided the suggested changes are realistic and lawful.
+  - id: q07
+    lesson: bias-fairness-and-explainability
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the implications of fairness impossibility results
+    prompt: Because calibration and equal error rates generally cannot all hold when base rates differ, what should an organisation do?
+    options:
+      - Ignore fairness metrics, since they are contradictory
+      - Choose the metric that makes the model look best
+      - Make an explicit, documented normative choice of fairness criterion suited to the context, with stakeholder input, and monitor it
+      - Always use demographic parity, as it is the legal standard everywhere
+    answer: 2
+    explanation: The impossibility results make the choice of fairness criterion a value judgement that must be justified for the context and documented. Ignoring fairness or cherry-picking metrics is irresponsible, and demographic parity is not a universal legal standard.
+  - id: q08
+    lesson: bias-fairness-and-explainability
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the Obermeyer et al. case
+    scenario: |
+      A health system's algorithm predicts future healthcare costs to select patients for extra care. It does not use race, yet equally sick Black patients receive lower scores than white patients.
+    prompt: What is the root cause identified by Obermeyer et al. (2019)?
+    options:
+      - The model was overfitted to a small dataset
+      - Race was included as a hidden feature
+      - The label (cost) was a biased proxy for health need, because less had historically been spent on Black patients with the same illness
+      - The model used an inappropriate deep learning architecture
+    answer: 2
+    explanation: The disparity came from measurement bias in the target variable. Costs reflected unequal access to care rather than need, so accurately predicting cost reproduced the inequity. Changing the label to a more direct health measure reduced the disparity.
+  - id: q09
+    lesson: privacy-security-governance-and-deployment
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Match NIST AI RMF functions to activities
+    prompt: Match each NIST AI RMF 1.0 function to a typical activity.
+    pairs:
+      - left: Govern
+        right: Assign roles and approve an organisational AI policy
+      - left: Map
+        right: Identify intended use, affected groups and potential harms
+      - left: Measure
+        right: Test accuracy, fairness and robustness and track metrics
+      - left: Manage
+        right: Prioritise risks, apply mitigations and respond to incidents
+    explanation: Govern is cross-cutting accountability and culture; Map establishes context and identifies risks; Measure assesses and tracks them; Manage prioritises and acts on them.
+  - id: q10
+    lesson: privacy-security-governance-and-deployment
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Identify indirect prompt injection
+    prompt: An AI assistant summarising supplier invoices reads a PDF containing hidden text instructing it to change the supplier's bank details. What type of attack is this?
+    options:
+      - Data poisoning
+      - Indirect prompt injection
+      - Model extraction
+      - Membership inference
+    answer: 1
+    explanation: Malicious instructions hidden in content the model reads are indirect prompt injection. Data poisoning corrupts training data, model extraction copies the model through queries, and membership inference reveals whether a record was in the training set.
+  - id: q11
+    lesson: privacy-security-governance-and-deployment
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Understand the status of pseudonymised data
+    prompt: Pseudonymised data, where names are replaced by codes but a key exists to re-identify people, is still personal data.
+    answer: true
+    explanation: Because individuals can be re-identified using additional information, pseudonymised data remains personal data and data protection obligations continue to apply. Only effectively anonymised data falls outside, and anonymisation is hard to achieve.
+  - id: q12
+    lesson: privacy-security-governance-and-deployment
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the regulator established by Act 843
+    prompt: Which body was established by Ghana's Data Protection Act, 2012 (Act 843) to regulate the processing of personal information?
+    answers: [Data Protection Commission, the Data Protection Commission, DPC]
+    explanation: Act 843 established the Data Protection Commission, with which data controllers must register, and which oversees compliance with the Act's principles.
+  - id: q13
+    lesson: privacy-security-governance-and-deployment
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Classify AI uses under EU AI Act risk tiers
+    scenario: |
+      A Ghanaian fintech (illustrative scenario) plans to offer, in an EU country, an AI system that assesses the creditworthiness of individual loan applicants.
+    prompt: Under the EU AI Act's risk-based approach, this use is most likely classified as
+    options:
+      - unacceptable risk and prohibited
+      - high risk, subject to requirements such as risk management, data governance, documentation and human oversight
+      - limited risk, requiring only a chatbot disclosure
+      - minimal risk with no specific obligations
+    answer: 1
+    explanation: Creditworthiness assessment of natural persons is listed among high-risk uses, which are permitted but subject to strict obligations. It is not a prohibited practice like social scoring by public authorities, and it carries more than transparency or minimal obligations.
+  - id: q14
+    lesson: privacy-security-governance-and-deployment
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse controls for model extraction
+    prompt: A competitor is suspected of systematically querying a lender's public credit-scoring API to replicate the model. Which set of controls is most appropriate?
+    options:
+      - Retrain the model weekly
+      - Authentication, rate limiting, monitoring of unusual query patterns and returning less granular outputs
+      - Adding more features to the model
+      - Publishing the model weights to remove the incentive
+    answer: 1
+    explanation: Model extraction relies on many queries and detailed outputs, so limiting and monitoring access and reducing output granularity raise the cost of copying. Retraining or adding features do not prevent extraction, and publishing weights gives away the asset.
+  - id: q15
+    lesson: privacy-security-governance-and-deployment
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Recognise the nature of the UNESCO Recommendation
+    prompt: The UNESCO Recommendation on the Ethics of Artificial Intelligence (2021) is a global normative instrument adopted by member states rather than a binding national statute.
+    answer: true
+    explanation: The Recommendation sets out values, principles and policy action areas agreed by UNESCO member states; it guides national policy but is not itself a national law such as Act 843.
+  - id: q16
+    lesson: privacy-security-governance-and-deployment
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a data minimisation decision
+    scenario: |
+      A telecoms provider (illustrative scenario) wants to add customers' full contact lists and the content of SMS messages to its churn model "in case they improve accuracy".
+    prompt: Which evaluation best reflects data protection principles?
+    options:
+      - Acceptable, because more data generally improves models
+      - Acceptable if the data is pseudonymised
+      - Not justified; it conflicts with data minimisation and purpose limitation, is highly intrusive and should be rejected unless a clear necessity and lawful basis can be shown
+      - Acceptable as long as the model is accurate
+    answer: 2
+    explanation: Collecting highly intrusive data speculatively conflicts with minimisation and purpose specification. Pseudonymisation does not remove these obligations, and accuracy gains do not justify disproportionate processing.
+  - id: q17
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Apply fairness, privacy, security and governance frameworks to an AI deployment
+    prompt: Evaluate the responsible AI risks in this case and recommend a governance and deployment plan.
+    marks: 25
+    case: |
+      Illustrative scenario. A fictional Ghanaian microfinance institution has built a model that approves small business loans automatically within minutes using mobile money histories, phone metadata and location. Testing shows a selection rate of 0.55 for urban applicants and 0.33 for rural applicants, and a true positive rate of 0.88 for urban and 0.68 for rural applicants who repaid in a pilot. The institution also plans an LLM chatbot that explains decisions and can "update customer details" on request. There is no AI policy, no register of models and no named owner for the system, and the privacy notice does not mention automated decisions.
+    structure:
+      - Brief summary of the system and stakeholders
+      - Fairness analysis using the metrics provided
+      - Explainability and contestability
+      - Privacy analysis under Act 843
+      - Security analysis of the chatbot
+      - Governance using the NIST AI RMF
+      - Prioritised recommendations and deployment conditions
+    rubric:
+      - criterion: Fairness analysis
+        marks: 6
+        descriptor: Correctly computes the parity ratio (about 0.60) and TPR gap (0.20), interprets them and identifies plausible proxy causes and mitigations
+      - criterion: Privacy and Act 843
+        marks: 5
+        descriptor: Applies minimisation, purpose, openness and data subject rights, including automated decision transparency
+      - criterion: Security
+        marks: 4
+        descriptor: Identifies prompt injection and excessive agency risks of the update tool and proposes least privilege and verification
+      - criterion: Governance and deployment
+        marks: 6
+        descriptor: Uses Govern, Map, Measure, Manage to propose ownership, register, testing, staged rollout, human review and appeals
+      - criterion: Critical judgement and communication
+        marks: 4
+        descriptor: Prioritises actions, justifies trade-offs and writes clearly
+    modelAnswer: |
+      A strong answer first quantifies the disparities. The demographic parity ratio is 0.33 / 0.55 = 0.60, well below the four-fifths benchmark, and the equal opportunity gap is 0.88 - 0.68 = 0.20, meaning creditworthy rural applicants are refused far more often. Because the gap persists among people who repaid, it cannot be explained only by different base rates. Likely causes include proxies such as transaction frequency, phone type or location that measure connectivity rather than creditworthiness, and under-representation of rural repayers. Remedies include collecting rural outcome data, reviewing proxy features, considering threshold adjustment where lawful, and adding human review for borderline rural cases, with re-measurement.
+
+      On privacy, Act 843 principles of specification of purpose, compatibility, minimisation and openness are engaged: phone metadata and precise location may be excessive; the privacy notice must disclose automated decision-making; and customers need routes to access and correct data and to contest decisions, including the Act's provisions on automated decisions. Registration with the Data Protection Commission should be confirmed.
+
+      The chatbot's ability to update customer details is a serious security risk: prompt injection or social engineering could change phone numbers and enable account takeover. It should not hold that tool; changes require authenticated, verified workflows with human or strong-authentication checks. Explanations must be grounded in actual decision reasons.
+
+      Governance should follow the NIST AI RMF: Govern (board-approved AI policy, named owner, register); Map (intended use, affected groups, legal duties); Measure (fairness, accuracy, robustness and red-team tests); Manage (conditional go-live, appeals, monitoring by region, incident response). Deployment should be paused for rural applicants or moved to human-in-the-loop approval until the disparity is addressed.
+    explanation: Examiners reward accurate calculation and interpretation, specific application of Act 843 principles, recognition of the chatbot's excessive agency, and a structured, prioritised governance plan rather than generic statements.

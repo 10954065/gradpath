@@ -1,0 +1,65 @@
+module: machine-learning
+cards:
+  - lesson: learning-paradigms
+    front: How do supervised, unsupervised and reinforcement learning differ?
+    back: By feedback. Supervised learning uses known labels, unsupervised learning has no labels and finds structure, and reinforcement learning learns a policy from rewards received while acting over time.
+  - lesson: learning-paradigms
+    front: What is selection bias in supervised labels? Give a lending example.
+    back: Labels exist only for cases the past process allowed, so the model cannot learn about others. A lender that only observes repayment for approved applicants learns nothing about those it rejected.
+  - lesson: learning-paradigms
+    front: Why is exploration risky in business reinforcement learning?
+    back: Trying uncertain actions on real customers, such as extreme prices, can damage revenue and reputation, so business RL is often trained in simulators or on logs and deployed with constraints.
+  - lesson: learning-paradigms
+    front: What is reward hacking?
+    back: An agent maximising a mis-specified reward in unintended ways, such as a recommender rewarded only for clicks promoting sensational content.
+  - lesson: learning-paradigms
+    front: How did AlphaGo combine learning paradigms?
+    back: It used supervised learning to predict strong human players' moves, then improved through reinforcement learning by playing against itself, combined with tree search.
+  - lesson: classification-and-regression
+    front: What decides whether a problem is classification or regression?
+    back: The type of label. Categories mean classification; continuous numbers mean regression. The framing should follow the business decision.
+  - lesson: classification-and-regression
+    front: How does logistic regression turn a score into a probability?
+    back: It computes a linear score z and applies the sigmoid p = 1 / (1 + e^(−z)). z = 0 gives 0.5; large positive z approaches 1.
+  - lesson: classification-and-regression
+    front: Why is a 0.5 threshold rarely optimal in business?
+    back: The costs of false positives and false negatives usually differ. If missing fraud is costly, a lower threshold catches more fraud at the price of more false alarms.
+  - lesson: classification-and-regression
+    front: How does a decision tree choose a split?
+    back: It evaluates candidate splits and picks the one with the largest reduction in impurity, such as size-weighted Gini of the child nodes compared with the parent.
+  - lesson: classification-and-regression
+    front: What is the main lesson of the Zillow Offers case for regression?
+    back: Small systematic prediction errors become large losses when predictions drive many purchases, especially when market conditions shift and counterparties accept only overpriced offers.
+  - lesson: clustering
+    front: What are the four steps of k-means?
+    back: Initialise k centroids, assign each point to the nearest centroid, recompute each centroid as the mean of its points, and repeat until assignments stop changing.
+  - lesson: clustering
+    front: Why standardise features before k-means?
+    back: Distances are dominated by features with large units. Standardising each feature to mean 0 and standard deviation 1 gives every feature comparable influence.
+  - lesson: clustering
+    front: Why run k-means several times with different starting centroids?
+    back: k-means can converge to a local optimum depending on initialisation; keeping the run with the lowest WCSS improves the solution.
+  - lesson: clustering
+    front: How should the number of clusters k be chosen?
+    back: Combine the elbow method and silhouette scores with business constraints such as how many distinct actions the organisation can run, and check stability over time.
+  - lesson: clustering
+    front: What makes a customer segment useful in practice?
+    back: It is measurable, substantial, accessible, differentiable and actionable, and it remains stable when the analysis is repeated on new data.
+  - lesson: training-and-evaluation
+    front: What are the roles of training, validation and test sets?
+    back: Training fits parameters, validation compares models and tunes hyperparameters, and the test set is used once at the end for an unbiased estimate.
+  - lesson: training-and-evaluation
+    front: How do you diagnose overfitting?
+    back: Training performance is much better than validation performance. Underfitting shows poor performance on both.
+  - lesson: training-and-evaluation
+    front: State the formulas for precision, recall and F1.
+    back: Precision = TP / (TP + FP); recall = TP / (TP + FN); F1 = 2 × precision × recall / (precision + recall).
+  - lesson: training-and-evaluation
+    front: What is the accuracy paradox?
+    back: With imbalanced classes, a model predicting only the majority class can score high accuracy while being useless, for example 95 per cent accuracy and zero fraud caught.
+  - lesson: training-and-evaluation
+    front: What is data leakage and how do you test for it?
+    back: Information unavailable at prediction time entering training, inflating results. For each feature ask whether its value would genuinely be known when the prediction is made.
+  - lesson: training-and-evaluation
+    front: What did Google Flu Trends teach about evaluation?
+    back: A model selected from many search terms fitted past seasons but overestimated flu in 2012–2013, showing the dangers of spurious correlation, drift and weak out-of-time validation.

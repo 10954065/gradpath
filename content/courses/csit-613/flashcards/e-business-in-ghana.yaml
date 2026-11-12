@@ -1,0 +1,47 @@
+module: e-business-in-ghana
+cards:
+  - lesson: ghana-mobile-money-ecosystem
+    front: How does e-money differ from a bank deposit?
+    back: E-money is backed by funds held in trust at banks equal to outstanding balances and is not lent out; a bank deposit is a bank liability that the bank can lend.
+  - lesson: ghana-mobile-money-ecosystem
+    front: What happens to an agent's liquidity during cash-in and cash-out transactions?
+    back: Cash-in reduces e-float and increases cash; cash-out does the reverse. Total liquidity stays the same, but its mix changes, so agents must rebalance.
+  - lesson: ghana-mobile-money-ecosystem
+    front: What is the difference between the roles of the Bank of Ghana and GhIPSS?
+    back: The Bank of Ghana licenses, regulates and supervises payment providers; GhIPSS operates national payment infrastructure, including the mobile money interoperability switch.
+  - lesson: ghana-mobile-money-ecosystem
+    front: How did interoperability change competition among mobile money providers?
+    back: It partly shared network effects across providers, shifting competition from network size towards price, reliability, user experience and value-added services.
+  - lesson: ghana-mobile-money-ecosystem
+    front: Which laws, besides Act 987, are relevant to Ghana's mobile money ecosystem?
+    back: The Anti-Money Laundering Act, 2020 (Act 1044), the Data Protection Act, 2012 (Act 843) and the Cybersecurity Act, 2020 (Act 1038).
+  - lesson: digital-payment-adoption-and-online-retail
+    front: What are the four core determinants in UTAUT?
+    back: Performance expectancy, effort expectancy, social influence and facilitating conditions, moderated by gender, age, experience and voluntariness.
+  - lesson: digital-payment-adoption-and-online-retail
+    front: Which three constructs did UTAUT2 add for consumer contexts?
+    back: Hedonic motivation, price value and habit.
+  - lesson: digital-payment-adoption-and-online-retail
+    front: Why does cash on delivery remain popular in Ghanaian online retail?
+    back: It lowers the customer's risk where trust between strangers is low, shifting the cost of failed deliveries, cash handling and delayed settlement to the seller.
+  - lesson: digital-payment-adoption-and-online-retail
+    front: Why can a discount for prepaying destroy value?
+    back: PSP fees replace cash-handling costs, so the savings from fewer failed deliveries may not cover the discount plus fees; the incentive must be modelled.
+  - lesson: digital-payment-adoption-and-online-retail
+    front: What factors explain the rapid adoption of India's UPI?
+    back: Low user cost, interoperability across banks and apps, widespread merchant QR codes, smartphone growth and the shock of demonetisation in 2016.
+  - lesson: sme-commerce-psps-and-financial-inclusion
+    front: Why is an aggregator especially valuable for SMEs in Ghana?
+    back: One integration gives access to mobile money on several networks, cards and bank transfers, matching the payment methods customers actually use.
+  - lesson: sme-commerce-psps-and-financial-inclusion
+    front: What three elements should accompany a weighted PSP scoring model?
+    back: Evidence for each score, hard constraints such as licensing and reconciliation reports, and sensitivity analysis on the weights.
+  - lesson: sme-commerce-psps-and-financial-inclusion
+    front: What are the three dimensions of financial inclusion?
+    back: Access to services, regular usage, and quality — affordable, suitable and well-protected services.
+  - lesson: sme-commerce-psps-and-financial-inclusion
+    front: How can digital payments help SMEs access credit?
+    back: Merchant collections create transaction histories that show cash flow, enabling alternative data credit scoring without traditional collateral.
+  - lesson: sme-commerce-psps-and-financial-inclusion
+    front: What risks accompany digital financial inclusion for small firms?
+    back: Expensive or poorly disclosed digital credit, over-indebtedness, data misuse and continued exclusion of firms without digital records.

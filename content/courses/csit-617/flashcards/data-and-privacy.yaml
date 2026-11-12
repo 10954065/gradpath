@@ -1,0 +1,38 @@
+module: data-and-privacy
+cards:
+  - lesson: privacy-consent-and-data-protection
+    front: What are Westin's four states of privacy?
+    back: Solitude (freedom from observation), intimacy (close relationships in a small group), anonymity (being unidentified in public) and reserve (limiting disclosure about oneself).
+  - lesson: privacy-consent-and-data-protection
+    front: What is contextual integrity and what are its five parameters?
+    back: Nissenbaum's view that privacy is respected when information flows match the norms of their context; the parameters are sender, recipient, subject, information type and transmission principle.
+  - lesson: privacy-consent-and-data-protection
+    front: What conditions must consent meet to be meaningful?
+    back: It must be freely given, specific, informed, unambiguous and revocable.
+  - lesson: privacy-consent-and-data-protection
+    front: Why is the notice-and-consent model often inadequate?
+    back: Policies are too long to read, terms are take-it-or-leave-it, power is unequal, future uses are unforeseeable, one person's consent can expose others, and dark patterns nudge acceptance.
+  - lesson: privacy-consent-and-data-protection
+    front: Summarise the data protection principles commonly identified in Ghana's Act 843.
+    back: Accountability, lawfulness of processing, specification of purpose, compatibility of further processing, quality of information, openness, data security safeguards and data subject participation.
+  - lesson: privacy-consent-and-data-protection
+    front: Name two institutional differences between Act 843 and the GDPR.
+    back: Act 843 requires data controllers to register with Ghana's Data Protection Commission, whereas the GDPR has no general registration duty; the GDPR also has explicit extraterritorial reach to non-EU organisations targeting people in the EU.
+  - lesson: data-ownership-surveillance-and-confidentiality
+    front: Compare the property, rights-based and stewardship models of data governance.
+    back: Property lets individuals own and sell data; rights-based models give inalienable rights over processing; stewardship makes organisations trustees with duties of care towards data subjects and society.
+  - lesson: data-ownership-surveillance-and-confidentiality
+    front: How does Foucault use Bentham's panopticon?
+    back: As a metaphor for disciplinary power, in which people who know they may be observed come to regulate their own behaviour, producing conformity and chilling effects.
+  - lesson: data-ownership-surveillance-and-confidentiality
+    front: What does Zuboff mean by surveillance capitalism?
+    back: An economic logic in which human experience is captured as behavioural data, analysed to predict behaviour and used to influence it for profit, creating large asymmetries of knowledge and power.
+  - lesson: data-ownership-surveillance-and-confidentiality
+    front: List the seven points of the surveillance assessment checklist.
+    back: Legal basis, legitimate aim, necessity and targeting, proportionality, independent oversight, transparency and remedy, and security and retention limits.
+  - lesson: data-ownership-surveillance-and-confidentiality
+    front: What are the recognised limits of confidentiality?
+    back: Legal requirements such as court orders, the consent of the person concerned and, exceptionally, disclosure to prevent serious harm in the public interest, usually after internal channels have been tried.
+  - lesson: data-ownership-surveillance-and-confidentiality
+    front: Which controls help enforce confidentiality for IT staff with privileged access?
+    back: Role-based need-to-know access, audit logs, alerts on unusual access, regular access reviews, training and clear disciplinary consequences.

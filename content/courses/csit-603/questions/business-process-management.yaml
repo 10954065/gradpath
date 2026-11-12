@@ -1,0 +1,447 @@
+module: business-process-management
+questions:
+  # ---------- Lesson: business-processes-and-identification ----------
+  - id: q01
+    lesson: business-processes-and-identification
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish a process from a function, task and project
+    prompt: Which of the following is best described as a business process?
+    options:
+      - The finance department
+      - Approving a single invoice
+      - Order-to-cash, from receipt of a customer order to receipt of payment
+      - Implementing a new ERP system over eighteen months
+    answer: 2
+    explanation: >
+      Order-to-cash is repeatable, has a trigger and outcome, crosses functions and delivers value to a customer. The
+      finance department is a function, approving one invoice is a task and an ERP implementation is a one-off project.
+  - id: q02
+    lesson: business-processes-and-identification
+    type: matching
+    bloom: apply
+    difficulty: medium
+    objective: Classify processes in a hospital
+    prompt: Match each hospital process to its category.
+    pairs:
+      - left: Admission-to-discharge
+        right: Core process
+      - left: Medical equipment maintenance
+        right: Support process
+      - left: Annual budgeting
+        right: Management process
+    explanation: >
+      Core processes create value directly for patients; support processes enable them; management processes plan,
+      direct and control. Classification depends on the organisation's value proposition: maintenance would be core for
+      an equipment servicing company.
+  - id: q03
+    lesson: business-processes-and-identification
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the first phase of the BPM lifecycle
+    prompt: What is the name of the first phase of the BPM lifecycle, in which processes are delineated and prioritised?
+    answers: [process identification, identification]
+    explanation: >
+      The lifecycle described by Dumas et al. (2018) runs identification, discovery, analysis, redesign, implementation,
+      and monitoring and controlling. Identification produces the process architecture and priorities.
+  - id: q04
+    lesson: business-processes-and-identification
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Recognise the role of the process owner
+    prompt: A process owner is accountable for end-to-end process performance even when several departments perform the activities.
+    answer: true
+    explanation: >
+      Process owners address the "white space" between departments that Rummler and Brache (1990) identified. Without an
+      end-to-end owner, each department optimises its own part and nobody is accountable for hand-offs.
+  - id: q05
+    lesson: business-processes-and-identification
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply weighted prioritisation criteria
+    scenario: |
+      Illustrative scenario. A logistics firm in Tema scores two processes from 1 to 5 using weights of importance 0.5,
+      dysfunction 0.3 and feasibility 0.2. Shipment tracking scores importance 4, dysfunction 4, feasibility 3. Staff
+      expense claims score importance 2, dysfunction 5, feasibility 5.
+    prompt: What are the weighted scores, and which process ranks higher?
+    options:
+      - Tracking 3.8, expenses 3.5; tracking ranks higher
+      - Tracking 3.5, expenses 3.8; expenses ranks higher
+      - Both score 4.0
+      - Tracking 4.0, expenses 3.0; tracking ranks higher
+    answer: 0
+    explanation: >
+      Tracking = 0.5×4 + 0.3×4 + 0.2×3 = 2.0 + 1.2 + 0.6 = 3.8. Expenses = 0.5×2 + 0.3×5 + 0.2×5 = 1.0 + 1.5 + 1.0 = 3.5.
+      Tracking ranks higher because importance carries the most weight. The scores structure discussion; evidence is
+      still needed to support them.
+  - id: q06
+    lesson: business-processes-and-identification
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse trade-offs among performance dimensions
+    prompt: A pharmacy adds a second pharmacist check before every dispensing. In terms of the Devil's Quadrangle, what is the most likely effect?
+    options:
+      - Quality improves while time and cost worsen
+      - Time, cost, quality and flexibility all improve
+      - Cost falls because fewer errors occur, with no other effects
+      - Flexibility improves while quality worsens
+    answer: 0
+    explanation: >
+      The Devil's Quadrangle highlights trade-offs among time, cost, quality and flexibility. An extra check reduces
+      dispensing errors but adds labour and waiting time. Improvement on every dimension at once is rare, and fewer
+      errors do not usually offset the cost of an additional check entirely.
+  - id: q07
+    lesson: business-processes-and-identification
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate prioritisation logic
+    prompt: The most dysfunctional process should always be improved first, regardless of its strategic importance or feasibility.
+    answer: false
+    explanation: >
+      Prioritisation balances importance, health and feasibility. A badly performing but strategically minor process may
+      not justify investment, while a highly important process with moderate problems may offer greater value.
+
+  # ---------- Lesson: process-mapping-and-documentation ----------
+  - id: q08
+    lesson: process-mapping-and-documentation
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Recall the components of SIPOC
+    prompt: Match each SIPOC letter to its meaning in a pharmacy dispensing process.
+    pairs:
+      - left: Supplier
+        right: The prescribing clinic
+      - left: Input
+        right: The prescription
+      - left: Process
+        right: Verify, price, take payment and dispense
+      - left: Output
+        right: Dispensed medicine and receipt
+      - left: Customer
+        right: The patient
+    explanation: >
+      SIPOC scopes a process at a high level before detailed mapping, forcing agreement on boundaries, sources and
+      recipients.
+  - id: q09
+    lesson: process-mapping-and-documentation
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain the diagnostic value of swimlanes
+    prompt: Why are swimlane maps particularly useful for diagnosing process problems?
+    options:
+      - They show the organisation's reporting lines
+      - They make hand-offs between roles visible, which are common sources of delay and error
+      - They automatically calculate cycle time
+      - They are required by law for process documentation
+    answer: 1
+    explanation: >
+      Each lane crossing is a hand-off where work may wait or information may be lost. Swimlanes do not show reporting
+      lines, do not calculate time on their own and are not legally required.
+  - id: q10
+    lesson: process-mapping-and-documentation
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Select discovery methods
+    scenario: |
+      Illustrative scenario. An analyst mapping a hospital's laboratory test process has interviewed the laboratory
+      manager. The resulting map is neat and simple, but nurses complain that results often go missing.
+    prompt: What is the best next step in discovery?
+    options:
+      - Finalise the map, since the manager knows the process best
+      - Triangulate by observing cases end to end, interviewing nurses and technicians, and checking system logs
+      - Ask the manager to redraw the map in more detail
+      - Skip discovery and move straight to redesign
+    answer: 1
+    explanation: >
+      A single manager's view often reflects intended rather than actual practice. Observation, interviews with other
+      roles and log analysis reveal workarounds and missing hand-offs. Redrawing from the same source or skipping
+      discovery would carry the blind spot forward.
+  - id: q11
+    lesson: process-mapping-and-documentation
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Apply RACI rules
+    prompt: In a well-formed RACI matrix, each activity should normally have exactly one Accountable role.
+    answer: true
+    explanation: >
+      Several people may be Responsible, Consulted or Informed, but a single Accountable role avoids ambiguity about who
+      answers for the outcome and signs off the work.
+  - id: q12
+    lesson: process-mapping-and-documentation
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the three minimum attributes of an event log
+    prompt: Besides a case identifier and an activity name, which attribute must every event in a process mining log have?
+    answers: [timestamp, a timestamp, time stamp, time]
+    explanation: >
+      Case ID, activity and timestamp allow tools to reconstruct the sequence of activities for each case and measure
+      waiting times. Without timestamps, ordering and timing analysis is impossible.
+  - id: q13
+    lesson: process-mapping-and-documentation
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse a process map for problems
+    prompt: In an as-is pharmacy map, the pharmacist verifies the prescription only after the patient has paid. What problem does this sequence most likely create?
+    options:
+      - It reduces the pharmacist's workload
+      - Queries with the prescriber require refunds and rework, adding delay
+      - It speeds up the cashier
+      - It improves stock accuracy
+    answer: 1
+    explanation: >
+      Late verification means invalid or queried prescriptions are found after payment, forcing refunds and repeated
+      queuing. Moving verification earlier is a classic redesign of task order. The other options do not follow from the
+      sequence.
+  - id: q14
+    lesson: process-mapping-and-documentation
+    type: mcq
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate the choice between value stream mapping and swimlanes
+    prompt: A courier firm's main goal is to reduce the total time from parcel collection to delivery. Which mapping technique is most suitable as the main tool?
+    options:
+      - An organisation chart
+      - A value stream map recording process and waiting times between steps
+      - A SIPOC alone
+      - A RACI matrix
+    answer: 1
+    explanation: >
+      Value stream mapping (Rother & Shook, 1999) emphasises flow and time, including waiting between steps, which is
+      what drives total lead time. SIPOC is only a scoping tool, RACI shows responsibilities and an organisation chart
+      shows reporting lines.
+
+  # ---------- Lesson: bpmn-modelling ----------
+  - id: q15
+    lesson: bpmn-modelling
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Recall BPMN element shapes
+    prompt: Match each BPMN element to its shape.
+    pairs:
+      - left: Event
+        right: Circle
+      - left: Activity
+        right: Rounded rectangle
+      - left: Gateway
+        right: Diamond
+      - left: Message flow
+        right: Dashed arrow between pools
+      - left: Data store
+        right: Cylinder
+    explanation: >
+      Recognising shapes is the foundation of reading BPMN. Border styles distinguish start, intermediate and end events,
+      and inner markers distinguish gateway and event types.
+  - id: q16
+    lesson: bpmn-modelling
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain parallel gateway behaviour
+    prompt: What does a parallel (AND) gateway do when it is used to merge flows?
+    options:
+      - Passes the first token that arrives and discards the rest
+      - Waits until a token has arrived on every incoming flow, then continues with one token
+      - Chooses one incoming flow based on a condition
+      - Ends the process instance
+    answer: 1
+    explanation: >
+      A parallel join synchronises: it waits for all incoming branches. An exclusive merge passes each token through
+      separately; the first-token behaviour describes neither; ending the instance is the job of end events.
+  - id: q17
+    lesson: bpmn-modelling
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Apply the rule for sequence flows and pools
+    prompt: In BPMN, a sequence flow may connect an activity in the hospital's pool directly to an activity in the insurer's pool.
+    answer: false
+    explanation: >
+      Sequence flows must stay within one pool. Communication between participants is shown with message flows. Lanes
+      within the same pool can be crossed by sequence flows.
+  - id: q18
+    lesson: bpmn-modelling
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Choose the correct gateway type
+    scenario: |
+      Illustrative scenario. A restaurant's order process must prepare food and drinks for every order at the same time,
+      and serve the order only when both are ready.
+    prompt: Which gateways should model the split and join?
+    options:
+      - Exclusive split and exclusive join
+      - Parallel split and parallel join
+      - Parallel split and exclusive join
+      - Event-based split and parallel join
+    answer: 1
+    explanation: >
+      Both branches always run, so a parallel split is needed, and serving must wait for both, so a parallel join is
+      needed. Merging with an exclusive gateway would let each branch pass separately, causing "Serve order" to run twice.
+  - id: q19
+    lesson: bpmn-modelling
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the event used for time-outs on an activity
+    prompt: What type of event, attached to the edge of an activity, is used to escalate when an insurer has not responded within 30 minutes?
+    answers: [timer boundary event, boundary timer event, timer event, boundary event]
+    explanation: >
+      A timer boundary event fires after a defined duration while the activity is active. It may be interrupting
+      (cancelling the activity) or non-interrupting (dashed border, the activity continues).
+  - id: q20
+    lesson: bpmn-modelling
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse a modelling error with token semantics
+    prompt: A model splits into two branches with a parallel gateway and merges them with an exclusive gateway before the task "Send invoice". What happens when one instance runs?
+    options:
+      - '"Send invoice" runs once, after both branches complete'
+      - '"Send invoice" runs twice, once for each branch''s token'
+      - The process deadlocks and never reaches "Send invoice"
+      - Only the first branch is executed
+    answer: 1
+    explanation: >
+      The parallel split creates two tokens. An exclusive merge passes each token through as it arrives without
+      synchronising, so "Send invoice" is triggered twice. The fix is to merge with a parallel gateway. A deadlock arises
+      in the opposite error, when a parallel join waits for a branch that was never activated.
+  - id: q21
+    lesson: bpmn-modelling
+    type: mcq
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate descriptive versus executable modelling
+    prompt: A team wants to run a BPMN model in a process engine such as Camunda. Which additional detail is most essential compared with a descriptive model?
+    options:
+      - Brighter colours for lanes
+      - Task assignments, form data, service connections and data mappings
+      - More text annotations explaining the history of the process
+      - Removing all gateways
+    answer: 1
+    explanation: >
+      Executable models need technical detail so that the engine can assign user tasks, collect data, call services and
+      evaluate conditions. Colours and annotations do not affect execution, and gateways are needed to route tokens.
+
+  # ---------- Module-level extended questions ----------
+  - id: q22
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Discover, document and model a process in BPMN for a Ghanaian business
+    marks: 20
+    case: |
+      Illustrative scenario. Coastline Couriers is a hypothetical logistics firm in Tema. Customers book pickups by phone
+      or messaging app. A dispatcher writes bookings in a notebook, telephones a driver, and the driver collects the parcel
+      and returns it to the depot. A depot clerk weighs the parcel and calculates the charge; the customer pays by mobile
+      money, and only then is the parcel scanned and loaded for delivery. Customers complain about missed pickups and
+      receive no confirmation; management cannot tell how long each stage takes.
+    prompt: >
+      Plan the discovery of this process, produce a SIPOC, describe a BPMN 2.0 collaboration model of the as-is process
+      (participants, lanes, key events, activities, gateways and message flows) and evaluate what the model reveals.
+    structure:
+      - Discovery plan with triangulated methods
+      - SIPOC with a clear process boundary
+      - BPMN collaboration model with pools, lanes, events, tasks, gateways and message flows
+      - Evaluation of hand-offs, missing information and measurement gaps
+      - Recommendations for documentation and next BPM lifecycle steps
+    rubric:
+      - criterion: Discovery plan
+        marks: 4
+        descriptor: Combines interviews, observation, document review and any available logs, with validation.
+      - criterion: SIPOC
+        marks: 3
+        descriptor: Correct and specific suppliers, inputs, steps, outputs and customers.
+      - criterion: BPMN model
+        marks: 7
+        descriptor: Correct use of pools, lanes, message flows, labelled gateways and start and end events; no sequence flows across pools.
+      - criterion: Evaluation
+        marks: 4
+        descriptor: Identifies hand-offs, missing confirmations, informal capture and lack of timestamps.
+      - criterion: Recommendations
+        marks: 2
+        descriptor: Sensible documentation (RACI, measures) and next steps.
+    modelAnswer: |
+      Discovery should combine interviews with dispatchers, drivers and clerks; observation of several bookings end to
+      end; review of the notebook and mobile money records; and a validation workshop. Because bookings are not in a
+      system, process mining is not yet possible.
+
+      SIPOC: suppliers are customers and the mobile money provider; inputs are booking requests, parcels and payments;
+      steps are take booking, assign driver, collect parcel, weigh and charge, receive payment, scan and load; outputs
+      are a collected, paid and loaded parcel; customers are the sender and recipient.
+
+      The BPMN collaboration has a Customer pool and a Coastline Couriers pool with lanes for dispatcher, driver and depot
+      clerk, plus a black-box Mobile money provider pool. A message start event "Booking request received" starts the
+      firm's process. Tasks include "Record booking", "Assign driver", "Collect parcel", "Weigh parcel and calculate
+      charge", "Request payment" and "Scan and load parcel". An exclusive gateway "Driver available?" routes to
+      "Reschedule pickup". Message flows connect the customer (booking, payment request and payment) and the mobile money
+      provider (payment confirmation). End event: "Parcel loaded for delivery".
+
+      The model reveals that no confirmation message is sent to the customer, the booking exists only on paper, there are
+      several hand-offs between lanes and no timestamps, so delays cannot be measured. Documentation should add a RACI
+      matrix and measures such as booking-to-pickup time. Next steps are quantitative analysis and redesign, for example
+      digital booking capture with automatic confirmation.
+    explanation: >
+      Examiners look for correct BPMN rules applied to the case, a triangulated discovery approach and insight drawn from
+      the model, not just a description of symbols.
+  - id: q23
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Critically evaluate BPMN as a common language for business and IT
+    marks: 20
+    prompt: >
+      "BPMN 2.0 succeeds as a common language between business and IT only when modellers follow disciplined style
+      rules." Critically evaluate this statement with reference to BPMN's elements and semantics, the difference between
+      descriptive and executable models, and practical modelling guidelines.
+    structure:
+      - Purpose and standardisation of BPMN 2.0
+      - Core elements and token semantics
+      - Descriptive versus executable models and their audiences
+      - Role of style guidelines and common errors
+      - Conclusion on the conditions for BPMN to bridge business and IT
+    rubric:
+      - criterion: Knowledge of BPMN
+        marks: 6
+        descriptor: Accurate account of events, activities, gateways, pools, lanes and flows with their behaviour.
+      - criterion: Critical analysis
+        marks: 8
+        descriptor: Weighs BPMN's precision and interoperability against complexity and readability problems, with examples.
+      - criterion: Style and practice
+        marks: 4
+        descriptor: Applies guidelines such as verb–noun labels, matching gateways and layered models.
+      - criterion: Conclusion
+        marks: 2
+        descriptor: A justified position on the statement.
+    modelAnswer: |
+      BPMN 2.0, standardised by the OMG in 2011, defines a graphical notation with precise semantics and an XML interchange
+      format, allowing models to move between tools and be executed by engines such as Camunda. Its core elements are
+      events, activities and gateways connected by sequence flows within pools and by message flows between pools.
+
+      The statement is largely supported. BPMN's vocabulary is large, and models that use obscure event types, implicit
+      gateways or inconsistent levels of detail confuse business readers. Errors such as merging parallel branches with an
+      exclusive gateway produce models that mean something different from what the author intended. Style guidelines from
+      Silver (2011) and Dumas et al. (2018), such as verb–noun labels, explicit start and end events, labelled gateway
+      conditions and small layered models, make diagrams readable and correct.
+
+      However, style is not the only condition. Descriptive and executable models serve different audiences; one diagram
+      rarely serves both well without layering. Organisations also need shared conventions, training and governance of
+      model repositories, and business stakeholders must be involved in validation.
+
+      A balanced conclusion accepts that disciplined style is necessary but not sufficient: BPMN bridges business and IT
+      when models are stylistically disciplined, layered for their audience and governed as shared organisational assets.
+    explanation: >
+      Examiners reward accurate BPMN knowledge, critical weighing of the notation's strengths and limitations and concrete
+      style guidance, rather than a list of symbols.

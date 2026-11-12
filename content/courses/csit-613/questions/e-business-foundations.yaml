@@ -1,0 +1,257 @@
+module: e-business-foundations
+questions:
+  - id: q01
+    lesson: e-business-and-e-commerce
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish e-business from e-commerce
+    prompt: Which statement best describes the relationship between e-commerce and e-business?
+    options:
+      - They are two names for the same set of activities
+      - E-commerce is a subset of e-business concerned with digitally enabled exchanges of value
+      - E-business is a subset of e-commerce concerned only with internal processes
+      - E-commerce covers all processes, while e-business covers only selling
+    answer: 1
+    explanation: E-commerce is the digitally enabled exchange of value across organisational boundaries; e-business is broader, covering buy-side, internal and sell-side processes. Treating them as synonyms ignores procurement, operations and HR, and the other two options reverse the nesting.
+
+  - id: q02
+    lesson: e-business-and-e-commerce
+    type: true_false
+    bloom: recall
+    difficulty: easy
+    objective: Recall the concept of reintermediation
+    prompt: The dominant effect of the internet on retail value chains has been the permanent elimination of intermediaries.
+    answer: false
+    explanation: Some disintermediation occurred, but the dominant pattern has been reintermediation, as marketplaces, payment providers, review sites and delivery platforms became powerful new intermediaries that reduce search costs and build trust.
+
+  - id: q03
+    lesson: e-business-and-e-commerce
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Classify a digital initiative as digitisation, digitalisation or transformation
+    scenario: |
+      Illustrative scenario. A private clinic in Takoradi moves its paper appointment book into an online booking system that sends SMS reminders and updates the doctors' schedules automatically. Its services, prices and revenue model are unchanged.
+    prompt: How should this initiative best be classified?
+    options:
+      - Digitisation, because information has been converted into digital form only
+      - Digitalisation, because an existing process has been redesigned using digital technology
+      - Digital transformation, because the clinic now uses an online system
+      - Disintermediation, because a receptionist is no longer needed
+    answer: 1
+    explanation: The booking process itself has changed (automation, reminders, schedule integration), which is digitalisation. It goes beyond digitisation (mere format change) but does not alter the value proposition or business model, so it is not transformation. Disintermediation concerns removing intermediaries from a market value chain, not internal staffing.
+
+  - id: q04
+    lesson: e-business-and-e-commerce
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match unique features of e-commerce technology to their business effects
+    prompt: Match each unique feature of e-commerce technology to the business effect it most directly produces.
+    pairs:
+      - left: Information density
+        right: Greater price transparency and richer customer data
+      - left: Ubiquity
+        right: Lower search and transaction costs at any time and place
+      - left: Social technology
+        right: Customers create reviews and share content
+      - left: Universal standards
+        right: Lower cost of entering the market
+      - left: Personalisation
+        right: Messages and offers tailored to individuals
+    explanation: Each feature changes market behaviour in a specific way. Information density both empowers buyers (transparency) and sellers (data); ubiquity reduces cost of shopping; shared standards such as TCP/IP lower entry costs; social technology turns users into content creators; personalisation enables tailoring.
+
+  - id: q05
+    lesson: e-business-and-e-commerce
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for converting analogue information into digital form
+    prompt: What term describes converting analogue information, such as paper invoices, into digital format without changing the underlying process?
+    answers: [digitisation, digitization]
+    explanation: Digitisation changes the format of information only. Digitalisation changes processes, and digital transformation changes value creation, structure and culture.
+
+  - id: q06
+    lesson: e-business-and-e-commerce
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the conditions for successful digital transformation
+    prompt: According to Westerman, Bonnet and McAfee, which combination best explains why some organisations become "digital masters"?
+    options:
+      - The largest technology budget in their industry
+      - Strong digital capability combined with strong leadership capability
+      - Outsourcing all IT to cloud providers
+      - Being the first firm in the market to launch a mobile app
+    answer: 1
+    explanation: Leading Digital argues that transformation requires both digital capability (customer experience, operations, business models) and leadership capability (vision, governance, engagement). Spending, outsourcing or being first do not on their own produce transformation.
+
+  - id: q07
+    lesson: e-business-and-e-commerce
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse whether a social-commerce SME is an e-business
+    scenario: |
+      Illustrative scenario. A Kumasi shoe seller takes orders through Instagram and WhatsApp and accepts mobile money. Stock is counted by hand weekly, orders are tracked in chat history, and suppliers are contacted by phone.
+    prompt: Which analysis is most accurate?
+    options:
+      - The firm is a fully developed e-business because it sells online
+      - The firm practises e-commerce on the sell-side but has little e-business integration of internal and buy-side processes
+      - The firm is not engaged in e-commerce because it has no website
+      - The firm has undergone digital transformation because it accepts mobile money
+    answer: 1
+    explanation: Selling and taking payment digitally is e-commerce, with or without a website. However, inventory, order management and procurement are not digitally enabled, so e-business integration is weak. Accepting mobile money does not change the business model, so it is not transformation.
+
+  - id: q08
+    lesson: online-business-models-and-digital-value
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish a business model from a revenue model
+    prompt: Which statement correctly distinguishes a business model from a revenue model?
+    options:
+      - A revenue model is broader and includes the business model
+      - A business model covers how value is created, delivered and captured, while a revenue model describes only how income is earned
+      - They are identical concepts in e-commerce
+      - A business model refers only to costs, and a revenue model refers only to customers
+    answer: 1
+    explanation: The revenue model (for example subscription or commission) is one component of the business model, which also includes segments, value propositions, channels, resources, activities, partners and costs.
+
+  - id: q09
+    lesson: online-business-models-and-digital-value
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match revenue models to examples
+    prompt: Match each revenue model to the example that best illustrates it.
+    pairs:
+      - left: Subscription
+        right: Monthly fee for unlimited access to a streaming library
+      - left: Transaction fee
+        right: Payment gateway charging a percentage of each successful payment
+      - left: Advertising
+        right: Free social media service paid for by brands seeking user attention
+      - left: Freemium
+        right: Free basic cloud storage with paid extra capacity
+      - left: Affiliate
+        right: Review website earning commission when readers buy through its links
+    explanation: Each model monetises a different element of value. Recognising them in combination, for example a marketplace earning commission and advertising, is a frequent analytical task.
+
+  - id: q10
+    lesson: online-business-models-and-digital-value
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the number of building blocks in the Business Model Canvas
+    prompt: How many building blocks make up Osterwalder and Pigneur's Business Model Canvas?
+    answers: ["9", nine]
+    explanation: The nine blocks are customer segments, value propositions, channels, customer relationships, revenue streams, key resources, key activities, key partnerships and cost structure.
+
+  - id: q11
+    lesson: online-business-models-and-digital-value
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Calculate contribution per order to test unit economics
+    scenario: |
+      Illustrative scenario. An online grocery start-up has an average order value of GHS 200 and a gross margin of 30 per cent. Delivery costs GHS 35 per order and payment fees plus packaging cost GHS 8 per order.
+    prompt: What is the contribution per order?
+    options:
+      - GHS 60
+      - GHS 17
+      - GHS 25
+      - GHS 157
+    answer: 1
+    explanation: Gross margin = 200 × 0.30 = GHS 60. Contribution = 60 − 35 − 8 = GHS 17. GHS 60 ignores variable costs; GHS 25 subtracts only delivery; GHS 157 wrongly subtracts costs from revenue rather than from margin.
+
+  - id: q12
+    lesson: online-business-models-and-digital-value
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Understand cost structures of digital goods
+    prompt: Because digital goods have near-zero marginal cost, digital businesses are guaranteed to be profitable once they have customers.
+    answer: false
+    explanation: Near-zero marginal cost is usually accompanied by high fixed costs for development, content and marketing. Profit depends on recovering those fixed costs, managing churn and pricing by customer value.
+
+  - id: q13
+    lesson: online-business-models-and-digital-value
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse sources of digital value creation
+    prompt: A ride-hailing app integrates maps, in-app payment and two-way rating so that passengers and drivers obtain more value than from each feature separately. Which source of value creation identified by Amit and Zott does this primarily illustrate?
+    options:
+      - Efficiency
+      - Complementarities
+      - Lock-in
+      - Novelty
+    answer: 1
+    explanation: Complementarities arise when bundled elements are worth more together than apart. The app may also create efficiency and lock-in, but the defining feature here is the combination of components.
+
+  - id: q14
+    lesson: online-business-models-and-digital-value
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the coherence of a business model
+    scenario: |
+      Illustrative scenario. A start-up offers free same-day delivery on all orders of any size across Greater Accra, earns a 10 per cent margin on low-priced household goods, and plans to grow rapidly through social media advertising.
+    prompt: Which is the most important weakness in this business model?
+    options:
+      - It uses social media advertising
+      - Its cost structure is inconsistent with its revenue stream, since free delivery on small low-margin orders produces negative unit economics
+      - It operates in Greater Accra rather than nationally
+      - It sells household goods rather than electronics
+    answer: 1
+    explanation: Coherence requires revenue and cost blocks to fit. Free delivery on small baskets with a 10 per cent margin almost certainly loses money per order, and rapid growth would magnify losses. The other options are strategic choices, not structural incoherence.
+
+  - id: q15
+    lesson: online-business-models-and-digital-value
+    type: true_false
+    bloom: recall
+    difficulty: easy
+    objective: Recall the purpose of the canvas's left side
+    prompt: In the Business Model Canvas, key partnerships, key activities and key resources primarily drive the cost structure.
+    answer: true
+    explanation: The left-hand side of the canvas describes the operational infrastructure that delivers the value proposition and therefore generates most costs; the right-hand side concerns customers and revenue.
+
+  - id: q16
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Apply the Business Model Canvas and transformation concepts to a Ghanaian SME
+    prompt: Using the Business Model Canvas and the distinction between digitalisation and digital transformation, analyse KenteCraft's current position and recommend a business model for its next stage of growth.
+    marks: 20
+    case: |
+      Illustrative scenario. KenteCraft is a hypothetical family business in the Volta Region that weaves and sells kente cloth. It sells mainly to walk-in customers and resellers, but over the past year it has started posting products on Instagram, receiving orders from the Ghanaian diaspora in the United Kingdom and the United States, and accepting mobile money from local buyers. International customers currently pay by bank transfer, which is slow, and deliveries are arranged ad hoc through courier companies. Orders are tracked in a notebook. The owner is considering three options: (a) a website with card payments and international shipping; (b) listing on an established international marketplace for handmade goods; (c) offering custom-woven pieces for weddings and graduations booked online with a deposit.
+    structure:
+      - Brief diagnosis of current level (digitisation, digitalisation, e-commerce, e-business)
+      - Business Model Canvas of the current model, highlighting weak blocks
+      - Comparison of options (a), (b) and (c) against customer segments, channels, revenue streams and costs
+      - Recommendation with justification and risks
+      - Implementation priorities, including back-office e-business improvements
+    rubric:
+      - criterion: Diagnosis using lesson concepts
+        marks: 4
+        descriptor: Correctly identifies sell-side e-commerce with weak e-business integration and explains why the firm has not yet transformed.
+      - criterion: Application of the canvas
+        marks: 6
+        descriptor: Completes relevant blocks with case evidence and identifies weaknesses in channels, payments, logistics and order management.
+      - criterion: Evaluation of options
+        marks: 6
+        descriptor: Compares the three options on value proposition, revenue, cost and risk, showing trade-offs such as marketplace fees versus control.
+      - criterion: Recommendation and implementation
+        marks: 4
+        descriptor: Makes a justified, realistic recommendation with priorities and acknowledges risks.
+    modelAnswer: |
+      A strong answer begins by diagnosing KenteCraft as a business practising early sell-side e-commerce (Instagram, mobile money) with almost no e-business integration: orders sit in a notebook, international payments are slow and logistics are improvised. Its activity is digitalisation of marketing and some payments, not transformation, because the value proposition and revenue model are unchanged.
+
+      The canvas should show two clear segments (local walk-in and reseller buyers; diaspora buyers with high willingness to pay for authenticity), a value proposition built on authentic handmade cloth, channels that are fragmented, and revenue from one-off sales. Weak blocks are channels (no structured storefront), key activities (order management, international fulfilment) and partnerships (no reliable payment or shipping partner).
+
+      Option (a) gives control and margin but requires investment in a storefront, payment integration and marketing to attract traffic. Option (b) offers immediate reach and trust but involves commission fees, less control over customer data and competition on the same platform. Option (c) creates a novel, higher-value proposition with deposits that improve cash flow, and suits both diaspora and local ceremonies, but requires capacity planning.
+
+      A reasonable recommendation is to combine (b) as a low-cost test of diaspora demand with (c) as a differentiated premium service, while fixing the back office: a simple order and inventory system, a payment service provider that accepts cards and mobile money, and a negotiated courier arrangement. Risks include fees, delivery damage, currency issues and capacity constraints. Examiners reward linking each recommendation to specific canvas blocks.
+    explanation: Examiners look for correct use of e-business and transformation concepts, a canvas grounded in case evidence, a balanced comparison of options and a justified, realistic recommendation.

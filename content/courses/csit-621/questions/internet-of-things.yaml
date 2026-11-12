@@ -1,0 +1,308 @@
+module: internet-of-things
+questions:
+  - id: q01
+    lesson: iot-architecture-sensors-and-connectivity
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Recall the layers of IoT architecture
+    prompt: Match each component to the IoT architecture layer it belongs to.
+    pairs:
+      - left: Soil-moisture sensor
+        right: Perception layer
+      - left: LoRaWAN gateway and backhaul link
+        right: Network layer
+      - left: Farm manager's alert dashboard
+        right: Application layer
+      - left: Device management and stream processing platform
+        right: Processing (middleware) layer
+    explanation: The three-layer model has perception, network and application layers; five-layer variants add processing and business layers. Placing components correctly helps analysts locate where value can leak along the chain.
+  - id: q02
+    lesson: iot-architecture-sensors-and-connectivity
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish sensors from actuators
+    prompt: Which of the following is an actuator?
+    options:
+      - A thermometer probe in a cold room
+      - A motorised valve that opens an irrigation line on command
+      - A GPS receiver on a truck
+      - A vibration sensor on a pump
+    answer: 1
+    explanation: Actuators act on the physical world in response to commands; the valve opens or closes. The other three devices measure physical quantities and are therefore sensors.
+  - id: q03
+    lesson: iot-architecture-sensors-and-connectivity
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish LoRaWAN from NB-IoT
+    prompt: LoRaWAN operates in unlicensed spectrum and can be deployed privately, whereas NB-IoT uses licensed spectrum operated by mobile network operators.
+    answer: true
+    explanation: This licensing difference drives business choices. LoRaWAN lets an organisation build coverage where none exists by owning gateways; NB-IoT relies on operator coverage and subscriptions but offers managed quality of service.
+  - id: q04
+    lesson: iot-architecture-sensors-and-connectivity
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply the connectivity selection framework
+    scenario: |
+      A water utility wants to read meters installed in basements of apartment blocks in Accra once a day. The meters run on batteries that should last many years, and mobile operators in the area offer NB-IoT coverage.
+    prompt: Which connectivity option is most appropriate?
+    options:
+      - Wi-Fi provided by each tenant
+      - NB-IoT
+      - 4G cellular broadband
+      - Bluetooth Low Energy with no gateway
+    answer: 1
+    explanation: Small daily readings, battery power, indoor or underground locations and existing operator coverage all favour NB-IoT, which offers good building penetration and very low power. Tenant Wi-Fi is unreliable and outside the utility's control; 4G broadband uses more power than needed; BLE alone lacks range.
+  - id: q05
+    lesson: iot-architecture-sensors-and-connectivity
+    type: mcq
+    bloom: apply
+    difficulty: hard
+    objective: Calculate the effect of duty cycle on battery life
+    prompt: A sensor uses 0.05 mAh per hour on average and has a 2,500 mAh battery. Approximately how long will the battery last?
+    options:
+      - About 50 days
+      - About 5.7 years
+      - About 2 years
+      - About 500 days
+    answer: 1
+    explanation: 2,500 / 0.05 = 50,000 hours; 50,000 / 24 is about 2,083 days, or roughly 5.7 years. Small reductions in average current from less frequent or shorter transmissions have large effects on battery life and maintenance visits.
+  - id: q06
+    lesson: iot-architecture-sensors-and-connectivity
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall a lightweight IoT messaging protocol
+    prompt: Name the lightweight publish/subscribe messaging protocol widely used to send IoT data through a broker.
+    answers:
+      - MQTT
+    explanation: MQTT uses a broker to which devices publish messages on topics and to which applications subscribe. Its low overhead suits constrained devices and unreliable networks.
+  - id: q07
+    lesson: iot-architecture-sensors-and-connectivity
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate total cost of ownership in IoT design
+    prompt: For 500 battery-powered sensors across scattered farms, which cost is most likely to dominate total cost of ownership if Wi-Fi is chosen instead of LPWAN?
+    options:
+      - The purchase price of the sensors
+      - Field visits to replace batteries
+      - Cloud storage for the small readings
+      - Licence fees for unlicensed spectrum
+    answer: 1
+    explanation: Wi-Fi's higher energy use can shorten battery life from years to months, multiplying field visits whose labour and transport costs exceed hardware costs. Storage for a few kilobytes per day is trivial, and unlicensed spectrum carries no licence fee.
+  - id: q08
+    lesson: iot-security
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Recall the main propagation method of Mirai
+    prompt: How did the Mirai malware primarily gain access to IoT devices?
+    options:
+      - Exploiting a zero-day flaw in device encryption chips
+      - Logging in to exposed Telnet services using common factory default credentials
+      - Phishing emails sent to device owners
+      - Physically tampering with devices in shops
+    answer: 1
+    explanation: Antonakakis et al. (2017) documented that Mirai scanned for exposed Telnet services and tried a short list of default usernames and passwords. Its success came from widespread unchanged defaults, not sophisticated exploits.
+  - id: q09
+    lesson: iot-security
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the purpose of network segmentation
+    prompt: The main purpose of network segmentation for IoT is to increase the network speed of devices.
+    answer: false
+    explanation: Segmentation limits which systems a device can communicate with, so that a compromised camera or sensor cannot be used to move laterally to sensitive systems such as finance servers.
+  - id: q10
+    lesson: iot-security
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match lifecycle stages to security controls
+    prompt: Match each lifecycle stage to an appropriate security control.
+    pairs:
+      - left: Design and manufacture
+        right: Unique per-device credentials and signed firmware
+      - left: Procurement
+        right: Tender requirements for a stated security update period
+      - left: Provisioning
+        right: Registering the device in the inventory and placing it in a segmented zone
+      - left: Operation
+        right: Monitoring outbound traffic and applying signed updates
+      - left: Decommissioning
+        right: Revoking certificates and wiping stored data
+    explanation: Device lifecycle security means controls at every stage, not just after installation. Procurement and decommissioning are frequently neglected stages.
+  - id: q11
+    lesson: iot-security
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse risk priorities in an IoT estate
+    scenario: |
+      An audit of an office building finds IP cameras with default passwords, door access readers, a building management system that contractors access remotely with a shared password, and smart TVs. All are on the same network as staff laptops.
+    prompt: Which action would most reduce the risk that one compromised device leads to compromise of critical systems?
+    options:
+      - Buying a faster internet connection
+      - Segmenting the network into zones with firewall rules allowing only required flows
+      - Turning off the smart TVs during weekends
+      - Installing antivirus software on the cameras
+    answer: 1
+    explanation: The flat network is the systemic weakness that allows lateral movement. Segmentation contains incidents; it should be combined with credential changes and MFA for contractor access. Cameras usually cannot run antivirus, and the other options do not address the root problem.
+  - id: q12
+    lesson: iot-security
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the European consumer IoT security baseline
+    prompt: Give the ETSI standard number for the consumer IoT cyber security baseline.
+    answers:
+      - EN 303 645
+      - ETSI EN 303 645
+      - 303 645
+    explanation: ETSI EN 303 645 includes provisions such as no universal default passwords, managing vulnerability reports and keeping software updated. It is a useful reference for procurement requirements.
+  - id: q13
+    lesson: iot-security
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate the externality problem in IoT security
+    prompt: One reason regulation is argued to be necessary for IoT security is that owners of insecure devices often do not bear the main costs when their devices are used to attack others.
+    answer: true
+    explanation: In the Mirai attacks, harm fell largely on third parties such as Dyn and its customers. This externality weakens market incentives for buyers to pay for security, supporting arguments for baselines and legislation.
+  - id: q14
+    lesson: iot-security
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate controls for a smart metering system
+    scenario: |
+      A utility contractor's head-end system can send remote disconnection commands to thousands of prepaid smart meters. Managers worry about an attacker gaining access to the head-end.
+    prompt: Which control most directly limits the impact of such a compromise?
+    options:
+      - Requiring additional authorisation and rate limits for commands affecting many meters
+      - Changing the meter casing colour
+      - Publishing the head-end address so customers can check it
+      - Allowing any staff member to issue bulk commands for faster response
+    answer: 0
+    explanation: Bulk-command authorisation and rate limits restrict how much harm an attacker or insider can cause quickly, complementing segmentation and strong authentication. Publishing addresses increases exposure, and broad staff permissions violate least privilege.
+  - id: q15
+    lesson: industrial-iot-and-smart-systems
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain IIoT security priorities
+    prompt: Compared with consumer IoT, which security property is typically given the highest priority in Industrial IoT?
+    options:
+      - Anonymity of users
+      - Availability and safety of the physical process
+      - Speed of app updates
+      - Aesthetic design of devices
+    answer: 1
+    explanation: Industrial systems control physical processes where downtime or incorrect commands can cause production loss, injury or environmental harm. Availability and safety, followed by integrity, usually outrank confidentiality.
+  - id: q16
+    lesson: industrial-iot-and-smart-systems
+    type: matching
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish maintenance strategies
+    prompt: Match each maintenance strategy to its description.
+    pairs:
+      - left: Reactive
+        right: Repair only after the asset fails
+      - left: Preventive
+        right: Service at fixed time or usage intervals
+      - left: Condition-based
+        right: Act when a monitored indicator crosses a threshold
+      - left: Predictive
+        right: Use data models to forecast failure and intervene just before it
+    explanation: The strategies differ in what triggers maintenance. Predictive maintenance needs data and models; condition-based maintenance needs monitoring and thresholds; reactive maintenance may be rational for cheap, non-critical assets.
+  - id: q17
+    lesson: industrial-iot-and-smart-systems
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Calculate a payback period for predictive maintenance
+    prompt: A predictive maintenance system costs GHS 300,000 upfront and saves GHS 120,000 a year compared with the current preventive approach. What is the simple payback period?
+    options:
+      - 1.5 years
+      - 2.5 years
+      - 4 years
+      - 0.4 years
+    answer: 1
+    explanation: Simple payback = investment / annual saving = 300,000 / 120,000 = 2.5 years. Simple payback ignores the time value of money and benefits beyond the payback period, so it should be complemented by NPV and sensitivity analysis.
+  - id: q18
+    lesson: industrial-iot-and-smart-systems
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse readiness for predictive maintenance
+    scenario: |
+      A Ghanaian manufacturer wants to adopt predictive maintenance using machine learning. It has no historical records of when and why machines failed, and its older machines lack digital interfaces.
+    prompt: What is the most sensible first step?
+    options:
+      - Buy a predictive AI platform and expect accurate forecasts immediately
+      - Retrofit sensors on critical machines, begin condition-based monitoring and record failures systematically to build training data
+      - Abandon digital maintenance entirely
+      - Replace all machines with new ones before collecting any data
+    answer: 1
+    explanation: Predictive models need labelled historical data. Retrofit sensors and condition-based monitoring deliver value immediately while building the data needed for prediction. Full replacement is costly and unnecessary; expecting immediate AI accuracy ignores the data gap.
+  - id: q19
+    lesson: industrial-iot-and-smart-systems
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for selling outcomes rather than products
+    prompt: What term describes manufacturers shifting from selling products to selling services or outcomes, such as paying per flying hour?
+    answers:
+      - servitisation
+      - servitization
+    explanation: Servitisation, as in Rolls-Royce's flying-hours arrangements, depends on IIoT data from assets and shifts reliability risk to the supplier, aligning incentives with uptime.
+  - id: q20
+    lesson: industrial-iot-and-smart-systems
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate when predictive maintenance is justified
+    prompt: Predictive maintenance is the best strategy for every asset in a plant, including cheap non-critical items such as office fans.
+    answer: false
+    explanation: Monitoring costs must be justified by failure consequences and detectability. For cheap, non-critical assets with no safety implications, run-to-failure can be rational.
+  - id: q21
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate an IoT programme design for a Ghanaian cold chain
+    case: |
+      Illustrative scenario. Coastal Fresh Fish Ltd (hypothetical) distributes frozen fish from cold stores in Tema to retailers in Kumasi, Tamale and Ho using refrigerated trucks. Spoilage from temperature excursions and generator failures is a major cost. Management proposes installing temperature sensors in cold rooms and trucks, GPS trackers on trucks, and vibration sensors on compressors. A vendor offers cheap cameras and sensors with fixed default passwords and no update commitment. The IT manager warns that all devices would join the company's office network.
+    prompt: Critically evaluate the proposal and recommend an IoT architecture, connectivity choices, security controls and a business case approach.
+    marks: 25
+    structure:
+      - Describe the proposed system using a layered IoT architecture
+      - Select and justify connectivity for cold rooms, trucks and compressors
+      - Identify security weaknesses in the vendor offer and network design, drawing lessons from Mirai
+      - Propose lifecycle security controls including procurement, segmentation and updates
+      - Outline a business case, including predictive maintenance for compressors and sensitivity analysis
+      - Conclude with a phased implementation recommendation
+    rubric:
+      - criterion: Architecture
+        marks: 5
+        descriptor: Clear layered description from sensors to business decisions
+      - criterion: Connectivity selection
+        marks: 5
+        descriptor: Justified choices reflecting mobility, power, data volume and coverage, such as LTE-M or cellular for trucks and Wi-Fi or wired links in cold stores
+      - criterion: Security analysis
+        marks: 7
+        descriptor: Identifies default credentials, lack of updates and flat network as critical risks with lifecycle controls and reference to baselines
+      - criterion: Business case
+        marks: 5
+        descriptor: Sound reasoning on spoilage reduction and maintenance savings with explicit assumptions and sensitivity testing
+      - criterion: Recommendation and coherence
+        marks: 3
+        descriptor: Phased, realistic plan with clear priorities and logical structure
+    modelAnswer: |
+      A strong answer maps the system across layers: temperature sensors, GPS trackers and compressor vibration sensors in the perception layer; connectivity in the network layer; an IoT platform for storage, rules and analytics; and applications such as real-time excursion alerts, route tracking and maintenance work orders, all linked to the business goal of reducing spoilage. For trucks, a mobile cellular IoT option such as LTE-M or standard cellular suits moving assets across regions, with local buffering when coverage drops. Cold stores have mains power, so wired or Wi-Fi links to a local gateway are feasible, with battery-backed loggers so that data survives power cuts. Compressor sensors can feed an edge gateway that runs condition-based alerts locally.
+      Security is the decisive issue. Fixed default passwords and no update commitment reproduce the conditions exploited by Mirai, and joining all devices to the office network allows lateral movement. The company should reject the offer or require unique credentials, a stated update period and a vulnerability disclosure process, referencing ETSI EN 303 645. Devices should sit in segmented zones with outbound-only connections to the platform, an asset inventory and monitoring. The business case should quantify current spoilage and compressor failure costs, estimate reductions under explicit assumptions, include connectivity and platform costs and test sensitivity to detection rates. A phased pilot on one route and one cold store, with measured results, should precede rollout.
+    explanation: Examiners reward a layered architecture, justified connectivity, strong lifecycle security analysis linked to documented cases, a realistic business case with assumptions and a phased recommendation.

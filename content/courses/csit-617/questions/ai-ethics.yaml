@@ -1,0 +1,234 @@
+module: ai-ethics
+questions:
+  # ---------- ai-ethics-bias-and-discrimination ----------
+  - id: ai01
+    lesson: ai-ethics-bias-and-discrimination
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain why removing sensitive attributes does not ensure fairness
+    prompt: A recruitment model is retrained after the gender field is deleted from all CVs, yet it still ranks women lower. What is the most likely explanation?
+    options:
+      - The model is malfunctioning and should be reinstalled
+      - Other features, such as names of clubs or schools, act as proxies for gender
+      - Deleting a field always increases bias
+      - Gender bias cannot occur in machine learning
+    answer: 1
+    explanation: Correlated features can stand in for a removed sensitive attribute, allowing the model to reproduce the same pattern (proxy discrimination). Deletion does not always increase bias, and bias is clearly possible in machine learning; reinstalling does nothing about learned patterns.
+  - id: ai02
+    lesson: ai-ethics-bias-and-discrimination
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Classify sources of bias across the machine-learning life cycle
+    prompt: Match each example to the type of bias it illustrates.
+    pairs:
+      - left: A face data set contains very few images of darker-skinned women
+        right: Representation bias
+      - left: Arrest records are used as a stand-in for actual crime levels
+        right: Measurement bias
+      - left: Past hiring decisions favoured men, so "good hire" labels reflect this
+        right: Historical bias
+      - left: A predictive policing tool keeps sending patrols to the same districts, generating more records there
+        right: Feedback-loop bias
+      - left: A decision-support score is used to reject applicants automatically
+        right: Deployment bias
+    explanation: Locating each bias in the life cycle helps choose an appropriate mitigation — better sampling, better targets, re-labelling, monitoring or changes to how the tool is used.
+  - id: ai03
+    lesson: ai-ethics-bias-and-discrimination
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Recognise the conflict between fairness criteria
+    prompt: When groups have different base rates of the outcome, a classifier can generally satisfy calibration and equal false-positive rates across groups at the same time.
+    answer: false
+    explanation: Research following the COMPAS debate showed that, except in special cases, calibration and equal error rates cannot both be achieved when base rates differ. Choosing between them is an ethical decision about which errors matter most.
+  - id: ai04
+    lesson: ai-ethics-bias-and-discrimination
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Identify indirect discrimination in a Ghanaian credit model
+    scenario: |
+      Illustrative scenario. A Ghanaian digital lender's model gives heavy weight to "months of continuous formal salary payments". The criterion never mentions gender, region or ethnicity, but applicants working in the informal sector — including many market traders and farmers — receive much lower scores even when they have strong mobile-money repayment histories.
+    prompt: Which concept best describes this problem?
+    options:
+      - Direct discrimination
+      - Indirect discrimination (disparate impact) from a facially neutral criterion
+      - Representational harm
+      - Overfitting
+    answer: 1
+    explanation: A neutral-seeming criterion disproportionately disadvantages a group without adequate justification, which is indirect discrimination or disparate impact. It is not direct, because no protected characteristic is used explicitly; it concerns allocation of credit rather than representation; and overfitting is a technical generalisation problem, not the issue described.
+  - id: ai05
+    lesson: ai-ethics-bias-and-discrimination
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the fairness criterion requiring equal positive-outcome rates
+    prompt: Which fairness criterion requires that each group receives positive outcomes at the same rate?
+    answers: ["demographic parity", "statistical parity", "demographic parity criterion"]
+    explanation: Demographic (statistical) parity compares rates of positive outcomes across groups, regardless of differences in qualifications or base rates. It differs from equal opportunity, which compares rates only among those who truly qualify.
+  - id: ai06
+    lesson: ai-ethics-bias-and-discrimination
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the lesson of the Gender Shades study
+    prompt: What is the most important methodological lesson of Buolamwini and Gebru's Gender Shades study (2018)?
+    options:
+      - Facial analysis systems should never be used
+      - Overall accuracy can conceal much poorer performance for intersectional groups, so evaluation must be disaggregated using representative benchmarks
+      - Commercial systems are always less accurate than academic ones
+      - Gender classification is accurate for everyone once enough data is collected
+    answer: 1
+    explanation: The study showed large accuracy gaps for darker-skinned women hidden by aggregate figures, highlighting representation and evaluation bias. It did not show that the technology can never be used, did not compare commercial with academic systems, and did not suggest that more data automatically solves the problem.
+  - id: ai07
+    lesson: ai-ethics-bias-and-discrimination
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a utilitarian defence of a biased model
+    prompt: A bank argues that its new model should be deployed because it raises overall prediction accuracy, even though its errors are concentrated on rural women. Which critique is strongest?
+    options:
+      - Utilitarianism forbids using any model
+      - Aggregate welfare reasoning can justify concentrating harm on a vulnerable minority; justice-based theories such as Rawls' difference principle require attention to the least advantaged
+      - Accuracy is irrelevant to ethics
+      - Rural women are not stakeholders in banking
+    answer: 1
+    explanation: The weakness of simple aggregate reasoning is that it can tolerate unfair distributions of harm. Rawlsian justice and deontological respect for persons challenge this. Utilitarianism does not forbid models, accuracy does matter ethically, and affected applicants are clearly stakeholders.
+
+  # ---------- transparency-accountability-and-oversight ----------
+  - id: ai08
+    lesson: transparency-accountability-and-oversight
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish explainability from transparency
+    prompt: Which example is best described as explainability rather than general transparency?
+    options:
+      - A notice telling customers that the bank uses AI in lending
+      - Publishing a model card describing the training data and limitations
+      - Telling a rejected applicant that the main factors were a short repayment history and high existing debt, and what would change the outcome
+      - Naming the executive accountable for the system
+    answer: 2
+    explanation: Explainability concerns understandable reasons for a particular decision. Disclosure notices and model cards are system-level transparency, and naming an accountable executive concerns accountability.
+  - id: ai09
+    lesson: transparency-accountability-and-oversight
+    type: true_false
+    bloom: recall
+    difficulty: easy
+    objective: Recognise the legal status of the UNESCO Recommendation
+    prompt: The UNESCO Recommendation on the Ethics of Artificial Intelligence (2021) is a binding treaty that imposes penalties on member states that do not comply.
+    answer: false
+    explanation: The Recommendation is a non-binding, standard-setting instrument adopted by UNESCO's General Conference. Member states are invited to implement it through their own policies and laws, supported by tools such as the Readiness Assessment Methodology.
+  - id: ai10
+    lesson: transparency-accountability-and-oversight
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Diagnose failure of meaningful human oversight
+    scenario: |
+      Illustrative scenario. A Ghanaian telecoms company uses an AI system to flag SIM registrations as suspicious. Each flagged case goes to a reviewer, who must clear 200 cases per hour and whose performance rating depends on throughput. Reviewers agree with the system in almost every case.
+    prompt: What is the main weakness of this oversight arrangement?
+    options:
+      - There is no human in the loop
+      - Reviewers lack the time and incentives to exercise real judgement, so automation bias turns review into a rubber stamp
+      - The system should operate with no humans at all
+      - The review rate is too slow
+    answer: 1
+    explanation: A human is nominally in the loop, but high throughput targets and incentives make meaningful scrutiny impossible, reinforcing automation bias. Removing humans would worsen the problem, and the issue is not that review is too slow.
+  - id: ai11
+    lesson: transparency-accountability-and-oversight
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match oversight models to their descriptions
+    prompt: Match each oversight model to its description.
+    pairs:
+      - left: Human-in-the-loop
+        right: A person must approve each decision before it takes effect
+      - left: Human-on-the-loop
+        right: The system acts automatically while people monitor and can intervene
+      - left: Human-in-command
+        right: People decide whether and how the system is used at all and can switch it off
+    explanation: Choosing an oversight model should depend on the stakes and volume of decisions. High-stakes adverse decisions about individuals usually warrant human-in-the-loop review.
+  - id: ai12
+    lesson: transparency-accountability-and-oversight
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall Nissenbaum's barrier to accountability
+    prompt: Nissenbaum described the "problem of many ___", in which responsibility is diffused because many people contribute to a system. Supply the missing word.
+    answers: ["hands"]
+    explanation: The problem of many hands describes how responsibility becomes diffuse when data suppliers, developers, vendors and deployers each contribute to a system, so that no one feels answerable. Clear role allocation, documentation and contracts address it.
+  - id: ai13
+    lesson: transparency-accountability-and-oversight
+    type: mcq
+    bloom: recall
+    difficulty: medium
+    objective: Identify a principle of the UNESCO Recommendation
+    prompt: Which of the following is one of the ten principles in the UNESCO Recommendation on the Ethics of AI?
+    options:
+      - Maximisation of shareholder value
+      - Human oversight and determination
+      - Freedom from all regulation
+      - Mandatory open-sourcing of all models
+    answer: 1
+    explanation: Human oversight and determination is one of the ten principles, alongside proportionality and do no harm, safety and security, privacy, governance, accountability, transparency, sustainability, awareness and literacy, and fairness. The other options are not principles of the Recommendation.
+  - id: ai14
+    lesson: transparency-accountability-and-oversight
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse failures in the Dutch childcare benefits scandal
+    prompt: Which combination of failures best characterises the Dutch childcare benefits scandal?
+    options:
+      - A single programming bug that was quickly fixed
+      - Opacity, diffuse accountability, inadequate individual review and the use of nationality as a risk factor
+      - Excessive transparency that helped fraudsters
+      - A data breach by external hackers
+    answer: 1
+    explanation: Investigations found that families could not understand or contest decisions, responsibility was spread across institutions, risk flags drove harsh outcomes without meaningful review, and nationality data were processed unlawfully and discriminatorily. It was not a single bug, a transparency excess or an external breach.
+
+  # ---------- module-level ----------
+  - id: ai15
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Design and justify responsible AI governance for a Ghanaian organisation
+    prompt: |
+      "Responsible AI is mainly a technical challenge of removing bias from data." Critically evaluate this statement and propose a responsible-AI governance approach for a Ghanaian bank planning to use AI for loan decisions. Refer to the UNESCO Recommendation on the Ethics of AI (2021), at least two ethical theories and the ACM Code of Ethics.
+    marks: 20
+    structure:
+      - Introduction defining responsible AI and stating your position
+      - Why bias is a life-cycle and socio-technical problem, not only a data problem
+      - Role of transparency, explainability, accountability and human oversight
+      - UNESCO values and principles relevant to lending in Ghana
+      - Ethical theories and ACM principles supporting the approach
+      - A proportionate governance process with concrete controls
+      - Conclusion with limitations
+    rubric:
+      - criterion: Critical evaluation of the statement
+        marks: 5
+        descriptor: Shows that bias arises from targets, design, evaluation and deployment as well as data, and that governance matters as much as technique.
+      - criterion: Use of safeguards and UNESCO framework
+        marks: 5
+        descriptor: Accurately applies transparency, accountability and oversight concepts and correctly summarises relevant UNESCO principles.
+      - criterion: Ethical theory and ACM Code
+        marks: 5
+        descriptor: Applies two theories accurately and relevant ACM principles such as 1.2, 1.4, 2.5 and 3.7.
+      - criterion: Governance proposal
+        marks: 4
+        descriptor: Proposes specific, proportionate controls suited to a Ghanaian bank, including data protection under Act 843.
+      - criterion: Structure and expression
+        marks: 1
+        descriptor: Clear, well-organised academic writing.
+    modelAnswer: |
+      A strong essay rejects the statement as incomplete. Bias can arise from historical patterns, representation, measurement and label choices, but also from the choice of target variable, aggregated models, unrepresentative evaluation, deployment beyond intended use and feedback loops. Even a "clean" data set cannot settle which fairness criterion should apply, because criteria such as calibration and equal error rates conflict; this is an ethical choice that requires governance, stakeholder input and transparency.
+
+      The essay should explain that responsible AI combines technical work with safeguards: transparency (telling applicants AI is used and documenting the model), explainability (giving rejected applicants actionable reasons), accountability (a named owner, vendor contracts with audit rights, logs and appeal channels) and meaningful human oversight (human review of adverse decisions, with time, authority and training to counter automation bias).
+
+      The UNESCO Recommendation supports this through principles such as proportionality and do no harm, fairness and non-discrimination, transparency and explainability, responsibility and accountability, human oversight and determination, and privacy, and through ethical impact assessment. For a Ghanaian bank, inclusiveness is relevant: AI could widen access to credit for people without formal histories but could also automate exclusion of informal-sector workers.
+
+      Deontology supports explanation and contestability as respect for persons; Rawlsian or utilitarian reasoning supports monitoring outcomes for the least advantaged and minimising expected harm. ACM 1.4 and 2.5 require fairness and thorough risk evaluation. A governance process would include an impact assessment, disaggregated testing by region and gender, compliance with the Data Protection Act, 2012 (Act 843), human review of rejections and continuous monitoring. Limitations, such as vendor opacity and cost, should be acknowledged.
+    explanation: Examiners reward a critical stance that goes beyond data cleaning, accurate use of UNESCO and ACM principles, genuine application of ethical theory and practical, context-sensitive governance proposals.

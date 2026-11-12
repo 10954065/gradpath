@@ -1,0 +1,47 @@
+module: business-adoption
+cards:
+  - lesson: technology-evaluation-and-cost-benefit
+    front: State the NPV formula and decision rule.
+    back: NPV = Σ [CF_t / (1 + r)^t] − initial investment. Accept projects with positive NPV at an appropriate discount rate; prefer higher NPV among mutually exclusive options, other things being equal.
+  - lesson: technology-evaluation-and-cost-benefit
+    front: What are the two weaknesses of simple payback?
+    back: It ignores the time value of money and ignores all cash flows after the payback point. Discounted payback fixes only the first.
+  - lesson: technology-evaluation-and-cost-benefit
+    front: Why is sensitivity analysis essential for emerging-technology business cases?
+    back: Forecasts are uncertain, so a single NPV gives false precision. Varying key assumptions (discount rate, benefits, adoption, costs) shows which drive the result and whether the decision is robust.
+  - lesson: technology-evaluation-and-cost-benefit
+    front: How can a pilot with negative NPV still be justified?
+    back: Through real options reasoning — it buys information and the right, but not the obligation, to scale up later or exit cheaply, reducing uncertainty for a larger decision.
+  - lesson: technology-evaluation-and-cost-benefit
+    front: Name six cost categories in total cost of ownership.
+    back: Acquisition, implementation, people (training, skills, change), operation, governance and compliance, and retirement or exit — plus opportunity cost and, in Ghana, FX exposure on dollar-priced items.
+  - lesson: adoption-risks-and-organisational-readiness
+    front: What are the three contexts of the TOE framework and who proposed it?
+    back: Technological, organisational and environmental contexts, proposed by Tornatzky and Fleischer (1990) in The Processes of Technological Innovation.
+  - lesson: adoption-risks-and-organisational-readiness
+    front: List the columns of a good risk register.
+    back: ID, description, category, likelihood, impact, score, owner, response (avoid, reduce, transfer, accept), residual score and status — reviewed regularly.
+  - lesson: adoption-risks-and-organisational-readiness
+    front: How does Weiner (2009) define organisational readiness?
+    back: As members' change commitment (shared resolve to implement a change) and change efficacy (shared belief in their collective capability to do so).
+  - lesson: adoption-risks-and-organisational-readiness
+    front: How do TOE and TAM differ?
+    back: TOE explains organisation-level adoption through technology, organisation and environment factors; TAM explains individual acceptance through perceived usefulness and ease of use.
+  - lesson: adoption-risks-and-organisational-readiness
+    front: What Ghana-specific environmental factors often affect technology readiness?
+    back: Power reliability, uneven broadband, skills scarcity, high borrowing costs and FX volatility, evolving sector regulation (Bank of Ghana, NCA, NIC, Data Protection Commission) — and strengths such as mobile money and the Ghana Card.
+  - lesson: innovation-management-and-technology-strategy
+    front: What decisions can be made at a Stage-Gate gate?
+    back: Go, kill, hold or recycle — made by cross-functional gatekeepers reviewing deliverables against criteria such as fit, feasibility, return and risk.
+  - lesson: innovation-management-and-technology-strategy
+    front: Name the three modes of open innovation.
+    back: Outside-in (bringing external ideas in), inside-out (taking internal ideas to market through others) and coupled (co-creation with partners), following Chesbrough (2003).
+  - lesson: innovation-management-and-technology-strategy
+    front: What are the four layers of a classic technology roadmap?
+    back: Market and business (why), products and services (what), technology (how) and resources (with what), linked over time.
+  - lesson: innovation-management-and-technology-strategy
+    front: What are the three horizons of an innovation portfolio?
+    back: Horizon 1 defends and extends the core; horizon 2 builds emerging adjacent businesses; horizon 3 creates options for future transformational businesses.
+  - lesson: innovation-management-and-technology-strategy
+    front: What is the core lesson of Kodak for technology strategy?
+    back: Owning a technology (an early digital camera prototype in 1975) is not enough; the business model, strategy and organisation must change with it, or disruption follows.

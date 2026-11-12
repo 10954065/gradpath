@@ -1,0 +1,314 @@
+module: ethical-foundations
+questions:
+  # ---- ethics-morality-and-relativism ----
+  - id: q01
+    lesson: ethics-morality-and-relativism
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish ethics from morality
+    prompt: Which statement best captures the analytical distinction between morality and ethics?
+    options:
+      - Morality applies to individuals and ethics applies only to organisations
+      - Morality is the set of norms a community lives by, while ethics is the systematic critical study of those norms
+      - Morality is written down in law, while ethics is unwritten
+      - There is no distinction; the words always mean exactly the same thing
+    answer: 1
+    explanation: Morality refers to lived norms, often learned informally; ethics is reflective examination of whether those norms are justified and how they apply. Neither is restricted to organisations, and law is a third, distinct category. The words are often used interchangeably in everyday speech, but analysis benefits from the distinction.
+  - id: q02
+    lesson: ethics-morality-and-relativism
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Recognise that legality does not settle ethical questions
+    prompt: If an IT practice is legal in Ghana, it follows that the practice is ethical.
+    answer: false
+    explanation: Law and ethics overlap but diverge. Laws lag behind technology, vary between jurisdictions and can be unjust. Manipulative interface design may be legal yet ethically questionable, and professional codes deliberately set standards above legal minimums.
+  - id: q03
+    lesson: ethics-morality-and-relativism
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall Moor's term for situations without clear guidance created by new technology
+    prompt: What term did James Moor use for situations in which new technology leaves no clear policies or norms for conduct?
+    answers: [policy vacuum, policy vacuums]
+    explanation: Moor argued that computers are logically malleable and so constantly create policy vacuums. Filling them often first requires resolving a conceptual muddle about how to classify the new phenomenon.
+  - id: q04
+    lesson: ethics-morality-and-relativism
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Identify the logical flaw in the cultural relativist argument
+    prompt: The argument "Cultures disagree about morality; therefore there is no objective moral truth" is criticised mainly because
+    options:
+      - its premise is false, since all cultures share identical moral codes
+      - it moves from a descriptive claim about beliefs to a normative claim about what is actually right, which does not follow
+      - it is a form of utilitarianism
+      - it was rejected by every African philosopher
+    answer: 1
+    explanation: The premise (descriptive relativism) is largely true, so the first option is wrong. The problem is the inference, because disagreement about a question does not show there is no correct answer. The argument is not utilitarian, and the final option overstates the position of any group of thinkers.
+  - id: q05
+    lesson: ethics-morality-and-relativism
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply critiques of relativism to an IT workplace claim
+    scenario: |
+      Illustrative scenario. At a fictional Accra software firm, staff routinely log in with a colleague's credentials to finish urgent work. When the new security manager objects, a team leader says: "This is how we do things here. Your rules come from foreign companies."
+    prompt: Which response best applies the lesson's analysis?
+    options:
+      - Accept the argument, because local practice determines what is right
+      - Acknowledge the real pressures, point out that common practice does not establish rightness, and explain the widely shared values (accountability, security, fairness) that justify individual logins
+      - Dismiss local culture as irrelevant to ethics
+      - Report the team leader to the police immediately
+    answer: 1
+    explanation: The team leader's claim moves from descriptive to normative relativism and appeals to common practice. A pluralist response respects context while explaining that accountability and security are widely shared values, not foreign impositions. Dismissing culture is disrespectful and unpersuasive, and police involvement is disproportionate.
+  - id: q06
+    lesson: ethics-morality-and-relativism
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match relativism-related concepts to their descriptions
+    prompt: Match each concept to its description.
+    pairs:
+      - left: Subjective relativism
+        right: Each individual decides what is right for themselves
+      - left: Cultural relativism
+        right: An action is right if the culture in which it occurs approves of it
+      - left: Descriptive relativism
+        right: Moral beliefs and practices in fact vary between people and cultures
+      - left: Ethical pluralism
+        right: There are several genuine values that may be weighed differently, without concluding that anything goes
+      - left: Reformer's dilemma
+        right: If culture defines right, those who changed their culture's morality were wrong by definition
+    explanation: Keeping these concepts distinct is essential. Descriptive relativism is an empirical observation; subjective and cultural relativism are normative theories; pluralism is the defensible middle position; and the reformer's dilemma is a key critique of cultural relativism.
+  - id: q07
+    lesson: ethics-morality-and-relativism
+    type: true_false
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the claim that cultural relativism supports universal tolerance
+    prompt: Cultural relativism can consistently claim that everyone ought to be tolerant of other cultures.
+    answer: false
+    explanation: The statement that everyone ought to be tolerant is a universal moral claim. If rightness is relative to each culture, an intolerant culture's intolerance would be right for it, so cultural relativism cannot consistently assert tolerance as a universal duty. This is the tolerance paradox.
+
+  # ---- utilitarianism-deontology-and-virtue-ethics ----
+  - id: q08
+    lesson: utilitarianism-deontology-and-virtue-ethics
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Recall Mill's contribution to utilitarianism
+    prompt: Which idea is most closely associated with John Stuart Mill's refinement of utilitarianism?
+    options:
+      - Pleasures differ in quality as well as quantity
+      - Morality depends on the categorical imperative
+      - Virtue lies in a mean between two vices
+      - Principles of justice are chosen behind a veil of ignorance
+    answer: 0
+    explanation: Mill argued in Utilitarianism (1863) that higher intellectual and moral pleasures are more valuable than lower ones. The categorical imperative is Kant's, the doctrine of the mean is Aristotle's and the veil of ignorance is Rawls's.
+  - id: q09
+    lesson: utilitarianism-deontology-and-virtue-ethics
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Associate key concepts with ethical theorists
+    prompt: Match each concept to the thinker most associated with it.
+    pairs:
+      - left: Felicific calculus
+        right: Jeremy Bentham
+      - left: Formula of Humanity
+        right: Immanuel Kant
+      - left: Eudaimonia and practical wisdom
+        right: Aristotle
+      - left: Veil of ignorance
+        right: John Rawls
+      - left: Technomoral virtues
+        right: Shannon Vallor
+    explanation: Bentham proposed measuring pleasures along dimensions; Kant's Formula of Humanity forbids treating people merely as means; Aristotle grounded ethics in flourishing and phronesis; Rawls used the veil of ignorance to derive principles of justice; Vallor adapted virtue ethics to emerging technologies.
+  - id: q10
+    lesson: utilitarianism-deontology-and-virtue-ethics
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Interpret Kant's Formula of Humanity correctly
+    prompt: Kant's Formula of Humanity forbids all situations in which one person uses another's skills or services.
+    answer: false
+    explanation: The formula forbids treating people merely as means. Ordinary cooperation, such as a client using a developer's skills, is acceptable when the other person's consent and rational agency are respected. Omitting "merely" is a common examination mistake.
+  - id: q11
+    lesson: utilitarianism-deontology-and-virtue-ethics
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Distinguish act from rule utilitarian reasoning in an IT case
+    scenario: |
+      Illustrative scenario. The IT director of a fictional Kumasi manufacturer suspects one employee of leaking designs. She considers secretly reading all of that employee's emails. A colleague argues that if employers generally read staff email secretly whenever they had suspicions, workplace trust would collapse and overall outcomes would be worse.
+    prompt: The colleague's argument is best classified as
+    options:
+      - act utilitarian reasoning
+      - rule utilitarian reasoning
+      - Aristotelian virtue reasoning
+      - subjective relativism
+    answer: 1
+    explanation: The colleague evaluates the general rule ("employers read email secretly whenever suspicious") by its consequences if widely adopted, which is rule utilitarianism. An act utilitarian would ask only whether this particular act maximises well-being. The argument does not appeal to character or to personal opinion.
+  - id: q12
+    lesson: utilitarianism-deontology-and-virtue-ethics
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse why a dark pattern is wrong under Kantian ethics
+    prompt: A subscription app uses a confusing cancellation flow designed to make users give up trying to cancel. Why would a Kantian object even if no user suffered measurable financial harm?
+    options:
+      - Because it fails to maximise total happiness
+      - Because it bypasses users' rational agency, treating them merely as means to revenue, and the maxim of manipulating customers could not be universalised without undermining trust
+      - Because it is not the mean between two vices
+      - Because the law of every country prohibits it
+    answer: 1
+    explanation: Kantian objections do not depend on measured harm. Manipulation disrespects persons as rational agents, and a universalised maxim of deceiving customers would be self-defeating. The first option is a utilitarian objection, the third an Aristotelian framing, and the fourth is factually unsupported.
+  - id: q13
+    lesson: utilitarianism-deontology-and-virtue-ethics
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall Aristotle's term for practical wisdom
+    prompt: What Greek term did Aristotle use for practical wisdom, the capacity to perceive what a situation requires and act well?
+    answers: [phronesis]
+    explanation: Phronesis allows a virtuous person to identify the mean appropriate to each situation. It explains why virtue ethics fits professional judgement in cases rules cannot fully anticipate.
+  - id: q14
+    lesson: utilitarianism-deontology-and-virtue-ethics
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the main weakness of act utilitarianism in data ethics
+    prompt: Which criticism is most significant when act utilitarianism is used to justify sharing a small group's sensitive health data to produce modest benefits for a large population?
+    options:
+      - It ignores consequences
+      - It can justify sacrificing the rights and interests of a minority when aggregate welfare is increased
+      - It relies too heavily on character
+      - It cannot be applied to technology
+    answer: 1
+    explanation: Aggregating welfare can override individual rights, which is the classic justice objection. Utilitarianism is centrally about consequences, does not rely on character, and is widely used in technology risk assessment, so the other options are incorrect.
+
+  # ---- ethical-decision-making ----
+  - id: q15
+    lesson: ethical-decision-making
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain the purpose of generating multiple options
+    prompt: Why does the seven-step framework ask decision-makers to generate at least three options?
+    options:
+      - Because examiners award marks for length
+      - To avoid the false dilemma of simply complying or refusing and to identify creative alternatives that meet legitimate goals with less harm
+      - Because ethical theories require exactly three options
+      - To delay making any decision
+    answer: 1
+    explanation: Many poor decisions result from framing only two options. Creative middle-ground options often satisfy legitimate business goals while avoiding ethical costs. The framework has no fixed number derived from theory and is designed to improve, not delay, decisions.
+  - id: q16
+    lesson: ethical-decision-making
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish validity from soundness
+    prompt: A valid ethical argument always has a true conclusion.
+    answer: false
+    explanation: Validity means the conclusion follows if the premises are true. If a premise is false, a valid argument can have a false conclusion. A sound argument is valid and has true premises, and only soundness guarantees the conclusion.
+  - id: q17
+    lesson: ethical-decision-making
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Name the fallacy of attacking a weak version of an opposing view
+    prompt: What is the name of the fallacy in which one rebuts a weak or distorted version of an opposing argument rather than its strongest form?
+    answers: [straw man, strawman, straw man fallacy]
+    explanation: A defensible argument must address the strongest objection. Defeating a straw man leaves the real objection unanswered and undermines credibility.
+  - id: q18
+    lesson: ethical-decision-making
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Identify a missing normative premise
+    scenario: |
+      Illustrative scenario. A manager at a fictional Cape Coast hotel group argues: "Our booking app collects guests' location continuously. Our competitors do the same. Therefore we should keep doing it."
+    prompt: Which unstated premise is needed to make the argument valid, and why is it weak?
+    options:
+      - The premise that location data is useful, which is weak because location data is never useful
+      - The premise that whatever competitors do is ethically acceptable, which is weak because it is an appeal to common practice that does not establish rightness
+      - The premise that guests have read the privacy policy, which is weak because it is a normative premise
+      - The premise that apps should be free, which is weak because it is irrelevant
+    answer: 1
+    explanation: The argument moves from what competitors do to what the hotel should do, so it needs the normative premise that common practice is acceptable. Making it explicit exposes an appeal to common practice. The other options either do not connect the premises to the conclusion or are mischaracterised.
+  - id: q19
+    lesson: ethical-decision-making
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match decision tests to the questions they ask
+    prompt: Match each test or concept to the question it poses.
+    pairs:
+      - left: Publicity test
+        right: Would I be comfortable if this decision and my reasons were reported in the news?
+      - left: Reversibility test
+        right: Would I accept this decision if I were the most affected stakeholder?
+      - left: Professional test
+        right: Could I justify this decision to a respected peer by reference to my code?
+      - left: Stakeholder power analysis
+        right: Who has high impact but little ability to influence the decision?
+    explanation: Each test exposes a different weakness. Publicity tests transparency, reversibility tests fairness from others' perspective, the professional test checks alignment with codes, and power analysis directs attention to vulnerable stakeholders.
+  - id: q20
+    lesson: ethical-decision-making
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the quality of a rebuttal
+    prompt: In the SikaLend example, a critic objects that without contact-shaming, defaults will rise and poorer borrowers will lose access to credit. Which rebuttal is strongest?
+    options:
+      - The objection is irrelevant because ethics ignores consequences
+      - The objection has some force, but the effect is unproven, the harm of shaming falls on the same vulnerable borrowers, alternatives can reduce defaults, and the recommendation can include a monitored trial
+      - The critic is a manager, so their view should be ignored
+      - Defaults are the borrowers' fault, so consequences do not matter
+    answer: 1
+    explanation: A strong rebuttal concedes what is right in the objection, questions its factual basis, shows the harm it overlooks and modifies the recommendation. The other options dismiss consequences, attack the person (ad hominem) or ignore the stakeholders' interests.
+  - id: q21
+    lesson: ethical-decision-making
+    type: true_false
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse who counts as a stakeholder
+    prompt: In a stakeholder analysis, the people whose contact details are uploaded by a lending app are stakeholders even though they have no relationship with the lender.
+    answer: true
+    explanation: Stakeholders include anyone affected by a decision. Third parties whose personal data is processed are directly affected and highly vulnerable because they have no knowledge or power. Overlooking absent stakeholders is a common analytical failure.
+
+  # ---- module-level ----
+  - id: q22
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the use of multiple ethical theories in IT decision-making
+    prompt: "\"No single ethical theory is adequate for IT decision-making, but together they provide a reliable guide.\" Critically evaluate this statement with reference to utilitarianism, Kantian deontology, virtue ethics and social contract theory, illustrating your answer with at least one IT example relevant to Ghana."
+    marks: 20
+    structure:
+      - Introduction defining the claim and stating your position
+      - Brief account of each theory and its distinctive contribution
+      - Weaknesses of each theory when used alone, with IT examples
+      - How the theories complement one another; the value of convergence
+      - Limits of the pluralist approach when theories conflict, and how to resolve conflicts
+      - Conclusion with a justified judgement
+    rubric:
+      - criterion: Accurate explanation of theories
+        marks: 5
+        descriptor: Correctly explains utility, act/rule distinction, categorical imperative formulations, virtue and the mean, and the veil of ignorance
+      - criterion: Critical evaluation
+        marks: 6
+        descriptor: Identifies weaknesses of each theory in context and assesses whether combining them overcomes them
+      - criterion: Application to IT and Ghana
+        marks: 5
+        descriptor: Uses at least one well-developed IT example relevant to Ghana, applying several theories to it
+      - criterion: Argument and structure
+        marks: 4
+        descriptor: Clear thesis, logical structure, addresses the objection that pluralism gives no guidance when theories conflict
+    modelAnswer: |
+      A strong answer accepts the first half of the statement and qualifies the second. Utilitarianism contributes attention to consequences for everyone affected, which is vital when technologies scale, but it struggles to measure well-being and can justify sacrificing minorities. Kantian ethics contributes respect for persons, consent and honesty, explaining why manipulative design and covert data use are wrong, but it is rigid and offers little guidance when duties conflict. Virtue ethics directs attention to character and practical wisdom, which suits professional judgement in novel situations, but gives less precise guidance to novices. Rawlsian contract theory supplies a test of fairness from the standpoint of the least advantaged, which is valuable for designing credit scoring or digital public services, though it may overlook those who cannot bargain.
+      Applied to a Ghanaian example such as a mobile network operator sharing location data during a health emergency, the theories converge: aggregated, anonymised sharing with transparency and a lawful basis is justified, while individual-level sharing is not. Convergence of this kind makes a recommendation robust and persuasive to regulators and the public.
+      The answer should then evaluate the claim that the theories together are "reliable". Where they diverge, for example a utilitarian case for covert monitoring to prevent fraud against a Kantian case for transparency, pluralism requires a further judgement about weighting. Good answers explain how a structured framework, professional codes, stakeholder analysis and the search for creative options reduce, but do not eliminate, this indeterminacy. The conclusion should be that combined theories are a reliable guide to the relevant considerations, not an algorithm that produces answers.
+    explanation: Examiners reward accurate theory, genuine evaluation of weaknesses, a developed Ghanaian IT example and a nuanced conclusion about how conflicts between theories are handled.

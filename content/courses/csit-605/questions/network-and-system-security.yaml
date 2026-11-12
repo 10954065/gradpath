@@ -1,0 +1,326 @@
+module: network-and-system-security
+questions:
+  - id: ns01
+    lesson: network-security-and-firewalls
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish stateless and stateful firewalls
+    prompt: What is the main advantage of a stateful inspection firewall over a stateless packet filter?
+    options:
+      - It inspects the full content of every web page
+      - It tracks connections, so return traffic for established sessions is allowed automatically while unsolicited inbound packets are blocked
+      - It does not need any rules
+      - It encrypts traffic between zones
+    answer: 1
+    explanation: Stateful firewalls maintain a connection state table. Content inspection is the role of application-layer firewalls, every firewall needs a policy, and firewalls do not by themselves encrypt traffic.
+  - id: ns02
+    lesson: network-security-and-firewalls
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Identify shadowed rules in a first-match rule set
+    scenario: |
+      Illustrative scenario. A firewall processes rules top-down, first match wins.
+      Rule 1 - Allow any source to any destination on TCP 22.
+      Rule 2 - Allow 10.1.99.0/24 to 10.1.5.20 on TCP 22.
+      Rule 3 - Allow any source to 203.0.113.10 on TCP 443.
+      Rule 4 - Deny all.
+    prompt: What is the main problem with this rule set?
+    options:
+      - Rule 3 is shadowed by rule 4
+      - Rule 1 permits SSH from anywhere and shadows rule 2, making the intended restriction ineffective
+      - Rule 4 should be placed first
+      - There is no problem; the rules are in the correct order
+    answer: 1
+    explanation: Under first match, rule 1 matches all SSH traffic, so rule 2 never takes effect and SSH is open to the internet. Rule 3 is evaluated before rule 4, so it is not shadowed. Placing deny-all first would block everything.
+  - id: ns03
+    lesson: network-security-and-firewalls
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the importance of egress filtering
+    prompt: Allowing all outbound traffic from internal hosts is low risk because attacks always come from outside the network.
+    answer: false
+    explanation: Unrestricted egress lets malware contact command-and-control servers and lets attackers exfiltrate data, as in the Target breach. Egress filtering and monitoring are important detective and preventive controls.
+  - id: ns04
+    lesson: network-security-and-firewalls
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the name of the zone for internet-facing services
+    prompt: What is the name of the network segment that hosts internet-facing services separately from both the internet and the internal network?
+    answers: [DMZ, demilitarised zone, demilitarized zone]
+    explanation: A DMZ contains public services such as web servers, so a compromise there does not give direct access to internal systems.
+  - id: ns05
+    lesson: network-security-and-firewalls
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match firewall types to their capabilities
+    prompt: Match each firewall type to its best description.
+    pairs:
+      - left: Stateless packet filter
+        right: Decides on header fields only, packet by packet
+      - left: Web application firewall
+        right: Filters HTTP requests to a specific web application for attack patterns
+      - left: Next-generation firewall
+        right: Combines stateful inspection with application and user awareness and intrusion prevention
+      - left: Host-based firewall
+        right: Runs on an individual endpoint and protects it wherever it is connected
+    explanation: Each type operates at a different layer or location; real designs combine them in defence in depth.
+  - id: ns06
+    lesson: network-security-and-firewalls
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the Target breach from a segmentation perspective
+    prompt: Which network design change would most directly have broken the path used in the 2013 Target breach?
+    options:
+      - Faster internet connectivity at stores
+      - Strong segmentation preventing vendor-access systems from reaching the point-of-sale environment
+      - Replacing POS terminals with newer models
+      - Blocking all inbound HTTPS traffic to the corporate website
+    answer: 1
+    explanation: Attackers used an HVAC contractor's credentials and moved from vendor-facing systems towards POS terminals. Segmenting vendor access from the cardholder data environment breaks that path. The other options do not address lateral movement.
+  - id: ns07
+    lesson: network-security-and-firewalls
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate zero trust relative to perimeter security
+    prompt: Which statement best evaluates zero trust architecture as described in NIST SP 800-207?
+    options:
+      - It removes the need for any network controls
+      - It grants no implicit trust based on network location and verifies each access request using identity, device and context, complementing network controls
+      - It trusts all devices on the corporate VPN
+      - It is only applicable to military networks
+    answer: 1
+    explanation: Zero trust shifts the main control point to per-request identity and policy decisions while keeping network controls as a layer. Trusting VPN devices is the opposite of zero trust, and the model applies broadly.
+  - id: ns08
+    lesson: secure-protocols
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain the role of CertificateVerify in TLS 1.3
+    prompt: In the TLS 1.3 handshake, what does the server's CertificateVerify message achieve?
+    options:
+      - It encrypts the session key with the server's public key
+      - It proves the server holds the private key matching its certificate by signing the handshake transcript
+      - It lists the cipher suites the server supports
+      - It ends the TLS session
+    answer: 1
+    explanation: CertificateVerify is a signature over the handshake so far, binding the ephemeral key exchange to the certified identity. TLS 1.3 does not use RSA key transport, cipher suites are chosen in ServerHello and Finished messages authenticate the transcript rather than ending the session.
+  - id: ns09
+    lesson: secure-protocols
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain what DNSSEC protects
+    prompt: DNSSEC encrypts DNS queries so that eavesdroppers cannot see which websites a user looks up.
+    answer: false
+    explanation: DNSSEC signs DNS data to provide authenticity and integrity; it does not encrypt queries. Confidentiality of DNS requires DNS over TLS or DNS over HTTPS.
+  - id: ns10
+    lesson: secure-protocols
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the property protecting past sessions after key compromise
+    prompt: What property ensures that stealing a server's long-term private key does not allow decryption of previously recorded sessions?
+    answers: [forward secrecy, perfect forward secrecy, PFS]
+    explanation: Forward secrecy comes from ephemeral Diffie–Hellman key exchange; TLS 1.3 makes it mandatory.
+  - id: ns11
+    lesson: secure-protocols
+    type: matching
+    bloom: apply
+    difficulty: medium
+    objective: Select appropriate secure protocols for business needs
+    prompt: Match each business need to the most appropriate protocol.
+    pairs:
+      - left: Administering a Linux server remotely
+        right: SSH with key-based authentication
+      - left: Linking a branch office network to head office over the internet
+        right: IPsec site-to-site VPN
+      - left: Protecting customer logins to a web portal
+        right: HTTPS using TLS 1.2 or 1.3
+      - left: Allowing resolvers to verify DNS answers have not been forged
+        right: DNSSEC
+    explanation: Each protocol fits a layer and purpose; choosing the wrong one, such as relying on a VPN for public website security, leaves gaps.
+  - id: ns12
+    lesson: secure-protocols
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply protocol configuration recommendations
+    scenario: |
+      Illustrative scenario. A fictional Kumasi e-commerce company's web server accepts SSL 3.0, TLS 1.0, TLS 1.1, TLS 1.2 and TLS 1.3. Its routers are managed using Telnet from the office network.
+    prompt: Which recommendation is most appropriate?
+    options:
+      - Keep all TLS versions for compatibility and continue using Telnet inside the office
+      - Allow only TLS 1.2 and 1.3 with modern cipher suites and replace Telnet with SSH using key-based authentication
+      - Disable TLS 1.3 because it is too new
+      - Replace HTTPS with a VPN for all customers
+    answer: 1
+    explanation: SSL 3.0 and TLS 1.0/1.1 are deprecated and Telnet sends credentials in clear text. TLS 1.3 is the current standard, and customers cannot reasonably be required to use a VPN to shop.
+  - id: ns13
+    lesson: secure-protocols
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the lessons of Heartbleed
+    prompt: Which conclusion is best supported by the 2014 Heartbleed vulnerability?
+    options:
+      - The TLS protocol design was fundamentally broken
+      - A coding error in a widely used implementation can undermine a sound protocol, and recovery required key replacement and certificate revocation as well as patching
+      - Only websites using TLS 1.3 were affected
+      - Heartbleed was a denial-of-service attack against DNS
+    answer: 1
+    explanation: Heartbleed was a missing bounds check in OpenSSL's heartbeat code that leaked memory, possibly including private keys. TLS 1.3 did not exist yet, and it was not a DNS attack.
+  - id: ns14
+    lesson: secure-protocols
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate VPN security for remote access
+    prompt: A company argues that its TLS VPN makes remote access fully secure. Which response is most defensible?
+    options:
+      - Agree, because VPN traffic is encrypted
+      - Disagree; the VPN protects traffic in transit, but weak credentials without MFA and unpatched gateways create direct attack paths, so MFA, patching and least-privilege access are also needed
+      - Agree, as long as the VPN uses TLS 1.0
+      - Disagree, because VPNs never encrypt traffic
+    answer: 1
+    explanation: Encryption in transit does not prevent an attacker with valid credentials logging in, as the Colonial Pipeline case showed. TLS 1.0 is deprecated, and VPNs do encrypt traffic.
+  - id: ns15
+    lesson: os-endpoint-and-access-control
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Compare access control models
+    prompt: Match each access control model to its description.
+    pairs:
+      - left: Discretionary access control
+        right: Resource owners decide who may access their resources
+      - left: Mandatory access control
+        right: A central policy based on security labels that users cannot override
+      - left: Role-based access control
+        right: Permissions assigned to job roles and users assigned to roles
+      - left: Attribute-based access control
+        right: Decisions evaluate attributes of user, resource, action and environment
+    explanation: The models differ in who sets policy and how expressive it is. RBAC is common in business; ABAC adds context such as time, device and location.
+  - id: ns16
+    lesson: os-endpoint-and-access-control
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply segregation of duties to role design
+    scenario: |
+      Illustrative scenario. In a fictional savings and loans company, the proposed Teller role can post deposits and withdrawals and also reverse transactions without approval.
+    prompt: Why does this role design violate good access control practice?
+    options:
+      - Tellers should not be able to view customer records
+      - One person could post and then reverse transactions to conceal theft, violating segregation of duties
+      - Reversals should be done only by the system administrator
+      - Tellers should have local administrator rights instead
+    answer: 1
+    explanation: Combining the ability to initiate and to reverse transactions lets a single person conceal fraud. Reversals should need a manager, preferably with a recorded reason. Administrators should not hold business permissions.
+  - id: ns17
+    lesson: os-endpoint-and-access-control
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Apply Linux permission notation
+    prompt: Which three-digit Linux permission gives the owner read and write, the group read only, and others no access?
+    answers: ["640"]
+    explanation: Owner rw = 6, group r = 4, others none = 0, giving 640 or rw-r-----. 777 would grant everyone full access.
+  - id: ns18
+    lesson: os-endpoint-and-access-control
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the limits of full-disk encryption
+    prompt: Full-disk encryption prevents malware running on an unlocked laptop from reading the user's files.
+    answer: false
+    explanation: Full-disk encryption protects data at rest when a device is off or locked, for example if it is stolen. Once unlocked, files are decrypted for legitimate use and malware running as the user can read them.
+  - id: ns19
+    lesson: os-endpoint-and-access-control
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Recall the purpose of the Biba model
+    prompt: Which security property is the Biba model primarily designed to protect?
+    options:
+      - Confidentiality
+      - Integrity
+      - Availability
+      - Non-repudiation
+    answer: 1
+    explanation: Biba enforces "no read down, no write up" to protect integrity. Bell–LaPadula enforces "no read up, no write down" for confidentiality.
+  - id: ns20
+    lesson: os-endpoint-and-access-control
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate privileged access controls after an insider case
+    prompt: Following the 2013 Snowden disclosures, which control would best reduce the risk of a single systems administrator gathering large volumes of sensitive data unnoticed?
+    options:
+      - Giving all administrators identical, broad access for efficiency
+      - Partitioned privileged access with two-person control for sensitive operations and monitoring of privileged activity
+      - Relying on annual background checks alone
+      - Allowing administrators to disable logging during maintenance
+    answer: 1
+    explanation: Partitioning, two-person control and monitoring limit and expose misuse of privilege; NSA publicly announced a two-person rule for administrators afterwards. Background checks alone do not detect behaviour, and disabling logs removes accountability.
+  - id: ns21
+    lesson: os-endpoint-and-access-control
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain why removing local administrator rights is effective
+    prompt: Why is removing local administrator rights from everyday user accounts considered a highly cost-effective endpoint control?
+    options:
+      - It makes computers run faster
+      - Much malware needs administrative privileges to install persistently, disable defences or spread, so standard accounts limit its impact
+      - It removes the need for patching
+      - It encrypts the hard disk automatically
+    answer: 1
+    explanation: Running as a standard user applies least privilege at the operating system level. It does not replace patching or encryption, and its benefit is security, not speed.
+  - id: ns22
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the network and system security of a Ghanaian organisation
+    marks: 25
+    case: |
+      Illustrative scenario. Ridge Medical Diagnostics is a fictional laboratory chain with a head office in Accra and four collection centres. All sites connect to head office over the public internet without tunnels. Every PC is on one flat network with the laboratory information system and its database. The edge firewall's first rule allows all traffic from the internet to TCP 3389 (remote desktop) so the IT contractor can work remotely. Staff log in to PCs using a shared account with local administrator rights. The patient results portal accepts TLS 1.0 and above. Logs are kept only on each PC and are never reviewed.
+    prompt: Evaluate the main network and system security weaknesses at Ridge Medical Diagnostics and recommend a prioritised improvement plan, justifying each recommendation with reference to concepts and cases from this module.
+    structure:
+      - Identification of the critical assets and CIA priorities
+      - Analysis of network weaknesses (perimeter rule, flat network, untunnelled sites)
+      - Analysis of protocol weaknesses (TLS versions, remote access)
+      - Analysis of endpoint and access control weaknesses (shared admin account, logging)
+      - Prioritised plan with justification and links to cases
+    rubric:
+      - criterion: Identification of weaknesses
+        marks: 6
+        descriptor: Identifies at least five distinct weaknesses across network, protocol, endpoint and access control areas
+      - criterion: Technical accuracy
+        marks: 6
+        descriptor: Correctly explains why each weakness creates risk using module concepts such as first-match rules, segmentation, forward secrecy, least privilege and accountability
+      - criterion: Recommendations
+        marks: 6
+        descriptor: Proposes specific, feasible controls such as VPN with MFA, segmentation, TLS 1.2/1.3 only, individual standard accounts and central logging
+      - criterion: Prioritisation and justification
+        marks: 4
+        descriptor: Orders actions by risk reduction and cost and justifies the order
+      - criterion: Use of cases and context
+        marks: 3
+        descriptor: Links appropriately to cases such as Target, Colonial Pipeline or WannaCry and to Ghanaian data protection obligations
+    modelAnswer: |
+      The critical assets are patient results and personal data (confidentiality, under the Data Protection Act, 2012), result accuracy (integrity, since wrong results harm patients) and laboratory system availability.
+      The most urgent weakness is internet-exposed remote desktop. Password attacks against exposed RDP are a common ransomware entry route, and credential-based remote access caused the Colonial Pipeline incident. Remove the rule, provide access through a VPN with MFA, and restrict the contractor to named systems with time-limited, logged accounts.
+      Second, the shared local administrator account destroys accountability and lets malware run with full privileges. Introduce individual standard accounts, unique local administrator passwords held by IT and MFA for privileged actions.
+      Third, the flat network means one compromised collection-centre PC can reach the database, like the lateral movement seen in the Target breach and the spread of WannaCry. Segment users, the laboratory system, the database and management interfaces, and allow only required flows with a logged default deny.
+      Fourth, untunnelled site links expose results in transit. Deploy IPsec site-to-site VPNs.
+      Fifth, the portal should accept only TLS 1.2 and 1.3 with modern cipher suites providing forward secrecy.
+      Sixth, centralise logs and review alerts, so attacks are detected during the window before impact.
+      Priority follows risk and cost: close RDP and enforce MFA immediately, then fix accounts and TLS, then segmentation and VPN links, then central logging. Residual risks should be documented and accepted by management.
+    explanation: Examiners look for accurate diagnosis across layers, specific controls, sensible prioritisation and well-chosen links to cases and Ghanaian obligations.

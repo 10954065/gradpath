@@ -1,0 +1,286 @@
+module: advanced-computing
+questions:
+  - id: ac01
+    lesson: quantum-computing-fundamentals
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain superposition in terms of amplitudes and measurement
+    prompt: Which statement most accurately describes a single qubit in superposition?
+    options:
+      - It stores both 0 and 1 and returns both values when read
+      - It is described by amplitudes that determine the probabilities of obtaining 0 or 1 when measured
+      - It is a classical bit whose value is unknown to the programmer
+      - It switches rapidly between 0 and 1 many times per second
+    answer: 1
+    explanation: A qubit state a|0> + b|1> is described by amplitudes; measurement yields 0 with probability |a|² and 1 with probability |b|². It never returns both values. It is not merely an unknown classical bit, because amplitudes can interfere (cancel or reinforce), which classical uncertainty cannot. Nor is it oscillating between values over time.
+
+  - id: ac02
+    lesson: quantum-computing-fundamentals
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the limits of entanglement
+    prompt: Entanglement allows two parties to send messages to each other instantaneously, faster than light.
+    answer: false
+    explanation: Entangled qubits show strong correlations, but each individual measurement outcome is random, so neither party can choose what the other observes. Without a classical communication channel no information is transferred, so entanglement cannot be used for faster-than-light signalling.
+
+  - id: ac03
+    lesson: quantum-computing-fundamentals
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Match NIST post-quantum standards to their functions
+    prompt: Match each NIST standard or algorithm to its description.
+    pairs:
+      - left: FIPS 203 (ML-KEM)
+        right: Lattice-based key-encapsulation mechanism for establishing shared keys
+      - left: FIPS 204 (ML-DSA)
+        right: Lattice-based digital signature algorithm
+      - left: FIPS 205 (SLH-DSA)
+        right: Stateless hash-based digital signature algorithm
+      - left: Shor's algorithm
+        right: Quantum algorithm that threatens RSA and elliptic-curve cryptography
+      - left: Grover's algorithm
+        right: Quantum search giving a quadratic speed-up against symmetric keys
+    explanation: NIST published FIPS 203, 204 and 205 in August 2024. ML-KEM (from CRYSTALS-Kyber) establishes keys; ML-DSA (from CRYSTALS-Dilithium) and SLH-DSA (from SPHINCS+) provide signatures, the latter based on hash functions as a hedge against weaknesses in lattice assumptions. Shor and Grover are the quantum algorithms that motivate the migration.
+
+  - id: ac04
+    lesson: quantum-computing-fundamentals
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply Grover's algorithm implications to symmetric cryptography
+    scenario: |
+      A Ghanaian insurer encrypts its stored claim files with AES-128 and protects key exchange for its customer portal with RSA-2048. Its CISO asks which change most directly addresses the threat from Grover's algorithm.
+    prompt: What should the insurer do about Grover's algorithm specifically?
+    options:
+      - Replace AES with RSA-4096 for file encryption
+      - Move from AES-128 to AES-256 for stored data
+      - Stop encrypting stored data until quantum-safe hardware is available
+      - Do nothing, because Grover's algorithm breaks all symmetric ciphers regardless of key length
+    answer: 1
+    explanation: Grover gives a quadratic speed-up, roughly halving the effective security of a symmetric key, so moving to AES-256 restores a large margin. RSA is a public-key scheme threatened by Shor, so switching to it would make matters worse. Stopping encryption is reckless. Grover does not break symmetric ciphers regardless of key length; longer keys counter it. The RSA key exchange needs a separate PQC migration.
+
+  - id: ac05
+    lesson: quantum-computing-fundamentals
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Identify the term for the current era of noisy quantum devices
+    prompt: What acronym, introduced by John Preskill in 2018, describes today's era of noisy quantum devices without full error correction?
+    answers: [NISQ, noisy intermediate-scale quantum]
+    explanation: NISQ stands for Noisy Intermediate-Scale Quantum. Preskill used it to describe devices with tens to hundreds (now sometimes thousands) of noisy qubits that can run only shallow circuits; their practical business value remains uncertain.
+
+  - id: ac06
+    lesson: quantum-computing-fundamentals
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate urgency of PQC migration using Mosca's inequality
+    scenario: |
+      Illustrative scenario. A land administration agency must keep digitised title records confidential for 25 years. Its consultants estimate that replacing public-key cryptography across all systems and vendors will take 7 years. Expert opinion on when a cryptographically relevant quantum computer might exist ranges widely, with some estimates within 15 to 20 years.
+    prompt: Which conclusion is best supported by Mosca's inequality (x + y > z)?
+    options:
+      - No action is needed until a quantum computer is publicly demonstrated
+      - Action is urgent, because x + y equals 32 years, which exceeds plausible values of z
+      - Only the symmetric encryption needs upgrading, so migration can wait
+      - The agency should buy a quantum computer to protect its records
+    answer: 1
+    explanation: With x = 25 and y = 7, x + y = 32 years, exceeding even generous estimates for z, so data encrypted today could be harvested and decrypted while still sensitive. Waiting for a public demonstration ignores harvest-now-decrypt-later. Upgrading only symmetric encryption leaves public-key key exchange exposed to Shor. PQC runs on classical computers, so buying quantum hardware is irrelevant.
+
+  - id: ac07
+    lesson: quantum-computing-fundamentals
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Distinguish problem types with expected quantum advantage
+    prompt: Which business workload is LEAST likely to benefit from quantum computing in the foreseeable future?
+    options:
+      - Simulating a new catalyst molecule for fertiliser production
+      - Running a supermarket's point-of-sale and ERP transaction processing
+      - Factoring large integers used in RSA keys
+      - Researching heuristic algorithms for complex optimisation
+    answer: 1
+    explanation: Routine transaction processing involves large data movement and simple logic that classical computers do cheaply and reliably; there is no known quantum speed-up. Molecular simulation is a natural fit for quantum computers, factoring has a proven exponential speed-up via Shor, and optimisation is an active, if uncertain, research area.
+
+  - id: ac08
+    lesson: hpc-and-advanced-data-processing
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply Amdahl's law to estimate speed-up
+    scenario: |
+      A bank's overnight risk job runs for 8 hours on one server. Profiling shows 80% of the work is parallelisable and 20% is sequential.
+    prompt: Using Amdahl's law, what is the approximate run time on 8 servers?
+    options:
+      - 1 hour
+      - About 2.4 hours
+      - About 4 hours
+      - About 6.4 hours
+    answer: 1
+    explanation: Speed-up = 1 / (0.2 + 0.8/8) = 1 / (0.2 + 0.1) = 1 / 0.3 ≈ 3.33, so run time ≈ 8 / 3.33 ≈ 2.4 hours. One hour wrongly assumes a perfect eightfold speed-up, ignoring the sequential 20%. Four hours and 6.4 hours misapply the formula. Note the ceiling is 1 / 0.2 = 5, so the job can never run in less than 1.6 hours.
+
+  - id: ac09
+    lesson: hpc-and-advanced-data-processing
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Explain the role of batch processing alongside streaming
+    prompt: Once an organisation adopts stream processing, batch processing becomes unnecessary.
+    answer: false
+    explanation: Stream processing suits low-latency decisions on unbounded events, but batch processing remains efficient for large historical analysis, model training, reconciliation and periodic reporting. Most organisations run both, sometimes on unified platforms.
+
+  - id: ac10
+    lesson: hpc-and-advanced-data-processing
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match workloads to appropriate processing approaches
+    prompt: Match each workload to the most suitable processing approach.
+    pairs:
+      - left: Tightly coupled weather simulation
+        right: HPC cluster with fast interconnect and MPI
+      - left: Training a deep neural network
+        right: GPU cluster
+      - left: Scoring each card payment for fraud within milliseconds
+        right: Stream processing on an event log
+      - left: Monthly customer segmentation on historical data
+        right: Batch processing on a data lake
+      - left: Occasional large simulation once a quarter
+        right: Rented cloud HPC capacity
+    explanation: Coupled simulations need low-latency communication between nodes; neural networks are dominated by matrix operations suited to GPUs; millisecond fraud scoring requires streaming; historical segmentation is a bounded batch job; and infrequent peaks are cheaper to rent than to own.
+
+  - id: ac11
+    lesson: hpc-and-advanced-data-processing
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Identify the term for grouping streaming events into finite chunks
+    prompt: What term describes grouping unbounded streaming events into finite time-based chunks so that aggregates such as counts per minute can be computed?
+    answers: [windowing, windows, time windowing]
+    explanation: Windowing (tumbling, sliding or session windows) turns an infinite stream into finite groups so that totals, averages and counts can be calculated, for example transfers per account in the last ten minutes.
+
+  - id: ac12
+    lesson: hpc-and-advanced-data-processing
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the trade-off between Lambda and Kappa architectures
+    prompt: What is the main weakness of the Lambda architecture that the Kappa architecture seeks to remove?
+    options:
+      - Lambda cannot process historical data
+      - Lambda requires maintaining equivalent processing logic in separate batch and speed layers
+      - Lambda only works with relational databases
+      - Lambda does not support real-time results
+    answer: 1
+    explanation: Lambda runs a batch layer and a speed layer in parallel, so the same business logic must be implemented and kept consistent in two systems. Kappa treats everything as a stream and recomputes history by replaying the event log through one code base. Lambda does process history (its batch layer), does give real-time results (its speed layer) and is not tied to relational databases.
+
+  - id: ac13
+    lesson: hpc-and-advanced-data-processing
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a hardware investment using Amdahl's law
+    scenario: |
+      Illustrative scenario. A Ghanaian analytics firm's reporting job is 95% parallelisable. On 20 servers it already finishes well before its deadline. A vendor proposes upgrading to 100 servers "to make it five times faster".
+    prompt: Which response best evaluates the vendor's claim?
+    options:
+      - Accept, because five times as many servers gives five times the speed
+      - Reject the claim, because Amdahl's law caps the speed-up at 20 and the extra servers add little business value when the deadline is already met
+      - Accept, because the sequential part disappears with more servers
+      - Reject, because parallel computing never improves performance
+    answer: 1
+    explanation: Speed-up on 20 servers = 1/(0.05 + 0.95/20) ≈ 10.3; on 100 servers ≈ 1/(0.05 + 0.0095) ≈ 16.8, so the job becomes about 1.6 times faster, not five, and the ceiling is 1/0.05 = 20. Since the deadline is already met, the business value is low. Speed does not scale linearly, the sequential part never disappears, and parallelism clearly does help up to the ceiling.
+
+  - id: ac14
+    lesson: hpc-and-advanced-data-processing
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain why GPUs suit machine learning
+    prompt: Why are GPUs particularly well suited to training neural networks?
+    options:
+      - They have a higher clock speed than any CPU
+      - They contain thousands of simpler cores and high memory bandwidth that perform the same operation on many data elements in parallel
+      - They store more data than hard disks
+      - They eliminate the need for training data
+    answer: 1
+    explanation: Neural network training is dominated by large matrix and vector multiplications that can be executed in parallel; GPUs are designed for exactly this data-parallel pattern. Their advantage is not clock speed or storage capacity, and they certainly do not remove the need for data.
+
+  - id: ac15
+    module: advanced-computing
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a post-quantum migration and data-processing strategy for a financial firm
+    prompt: Critically evaluate the firm's position and recommend a prioritised plan covering both its post-quantum cryptography risk and its data-processing architecture.
+    marks: 20
+    case: |
+      Illustrative scenario. Sika Mobile Finance is a fictional Ghanaian fintech offering wallets, micro-loans and merchant payments. Its systems use RSA certificates for its APIs, elliptic-curve signatures on transactions, and a nightly batch job that scores loan applications and detects fraud using the previous day's data. Fraud losses from account takeovers have risen, and the board has read headlines claiming "quantum computers will break all encryption next year". A vendor offers a "quantum-powered fraud engine" subscription. The CTO has a limited budget and a small engineering team.
+    structure:
+      - Separate hype from evidence about quantum computing and the vendor offer
+      - Assess cryptographic exposure using Shor, Grover and harvest-now-decrypt-later
+      - Propose PQC migration steps aligned with NIST FIPS 203, 204 and 205
+      - Diagnose the fraud problem as a latency issue and propose stream processing
+      - Prioritise actions given budget and skills, with risks and governance
+    rubric:
+      - criterion: Accurate quantum concepts and critique of hype
+        marks: 5
+        descriptor: Correctly explains what quantum computers can and cannot do, challenges the "next year" claim and the vendor offer with reasoned argument
+      - criterion: Cryptographic risk analysis
+        marks: 5
+        descriptor: Distinguishes public-key from symmetric exposure, applies harvest-now-decrypt-later and Mosca's inequality to the firm's data
+      - criterion: PQC migration plan
+        marks: 4
+        descriptor: Inventory, crypto-agility, vendor engagement, hybrid pilots, reference to NIST standards
+      - criterion: Data-processing architecture
+        marks: 4
+        descriptor: Recognises nightly batch as the cause of late detection and proposes an event-log and stream-scoring design while retaining batch for training and reporting
+      - criterion: Prioritisation and justification
+        marks: 2
+        descriptor: Realistic sequencing given budget and team, with clear justification
+    modelAnswer: |
+      A strong answer first deflates the hype. No publicly known quantum computer can break RSA or elliptic-curve cryptography; that requires thousands of error-corrected logical qubits, far beyond today's NISQ devices. The claim of "next year" is unsupported. The "quantum-powered fraud engine" should be challenged: fraud detection is not a problem with a demonstrated quantum advantage, and the firm's real fraud issue is latency.
+
+      The cryptographic risk is nonetheless real over the longer term. Shor's algorithm would break RSA certificates and elliptic-curve signatures; Grover only weakens symmetric keys, addressed by AES-256. Because customer identity and loan data must remain confidential for years, harvest-now-decrypt-later means traffic captured today could be decrypted later. Applying Mosca's inequality, a long confidentiality period plus a multi-year migration may exceed the time to a capable machine. The firm should build a cryptographic inventory, demand crypto-agility and PQC roadmaps from vendors, plan for ML-KEM (FIPS 203) for key establishment and ML-DSA or SLH-DSA (FIPS 204/205) for signatures, and pilot hybrid modes, largely through its cloud and library providers given its small team.
+
+      On fraud, a nightly batch means account takeovers are detected a day late. Publishing each transaction to an event log and scoring it in a stream processor using velocity, SIM-change and device features would allow holds within seconds; batch would remain for model retraining and regulatory reporting, possibly on rented cloud GPUs. Managed cloud streaming services reduce the skills burden.
+
+      Priority: stream-based fraud detection first (immediate losses), then PQC inventory and vendor requirements (low cost, long lead time), with board reporting on both.
+    explanation: Examiners look for accurate quantum concepts, rejection of hype with reasons, correct distinction between Shor and Grover impacts, a credible PQC plan referencing NIST standards, and recognition that the fraud problem is solved by stream processing rather than quantum technology.
+
+  - id: ac16
+    module: advanced-computing
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the business relevance of quantum and high-performance computing
+    prompt: '"For most businesses in Ghana, quantum computing is irrelevant, but high-performance computing is essential." Critically discuss this statement.'
+    marks: 15
+    structure:
+      - Define quantum computing and HPC and their maturity
+      - Identify where quantum is irrelevant and where it is relevant (notably cryptography)
+      - Discuss HPC, GPUs, batch and stream processing as accessible through the cloud
+      - Consider constraints such as cost, skills, power and connectivity
+      - Reach a nuanced conclusion
+    rubric:
+      - criterion: Conceptual accuracy
+        marks: 4
+        descriptor: Correct explanation of quantum computing capabilities and HPC concepts
+      - criterion: Critical evaluation of the statement
+        marks: 5
+        descriptor: Shows that quantum hardware is largely irrelevant for operations but quantum risk to cryptography is relevant now; questions whether HPC is "essential" for all
+      - criterion: Ghanaian context and examples
+        marks: 4
+        descriptor: Uses relevant illustrative or documented examples such as mobile money, banking, agriculture and weather
+      - criterion: Structure and conclusion
+        marks: 2
+        descriptor: Coherent argument ending in a justified, balanced conclusion
+    modelAnswer: |
+      A good essay agrees in part. Quantum computers are specialised machines in the NISQ era with no demonstrated advantage for routine business workloads, so very few Ghanaian firms should invest in quantum hardware or services today. However, calling quantum "irrelevant" is wrong in one crucial respect: Shor's algorithm threatens RSA and elliptic-curve cryptography, and harvest-now-decrypt-later attacks mean that banks, mobile money operators, insurers, hospitals and government agencies with long-lived confidential data must begin PQC planning now, guided by NIST's FIPS 203, 204 and 205. This is a governance and procurement task rather than a technology purchase.
+
+      The claim that HPC is "essential" also needs nuance. Few Ghanaian SMEs need supercomputers, but many need capabilities derived from HPC: GPU-based AI services, distributed batch analytics, and stream processing for fraud detection and IoT monitoring. Cloud provision has made these accessible on a pay-per-use basis, although cost, foreign-exchange exposure, data transfer, data-protection obligations under Act 843, skills shortages and power reliability shape what is feasible. Examples include near-real-time fraud scoring in mobile money, crop and weather modelling for agriculture, and risk calculation in banking.
+
+      A balanced conclusion is that quantum hardware is largely irrelevant for operations but quantum risk is relevant now, while HPC-derived capabilities are increasingly important but should be adopted selectively according to latency, scale and value.
+    explanation: Examiners reward nuance — rejecting both extremes — accurate concepts, explicit recognition of the cryptographic dimension of quantum risk, and grounded Ghanaian examples.

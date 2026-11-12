@@ -1,0 +1,56 @@
+module: enterprise-systems-foundations
+cards:
+  - lesson: enterprise-and-business-information-systems
+    front: What makes a system an enterprise system rather than a departmental application?
+    back: It integrates cross-functional processes on a shared database, so an event recorded once (such as a sale) is available to every function that needs it.
+  - lesson: enterprise-and-business-information-systems
+    front: Why do functional silos persist even after new software is bought?
+    back: Silos are organisational as well as technical; departmental budgets, targets and habits keep data and processes isolated unless they also change.
+  - lesson: enterprise-and-business-information-systems
+    front: List four typical costs of functional silos.
+    back: Duplicate and inconsistent data, manual re-keying, slow cross-functional processes, poor end-to-end visibility and conflicting reports.
+  - lesson: enterprise-and-business-information-systems
+    front: What is Davenport's (1998) main warning about enterprise systems?
+    back: They embody the vendor's business logic and can shape strategy and organisation by default; managers should decide their strategic direction first and configure the system to support it.
+  - lesson: enterprise-and-business-information-systems
+    front: How does Porter's value chain help explain the value of enterprise systems?
+    back: Porter located advantage in the linkages between activities; enterprise systems manage those linkages by sharing data across primary and support activities.
+  - lesson: enterprise-and-business-information-systems
+    front: What is the main lesson of the FoxMeyer case for enterprise system projects?
+    back: Integration magnifies both benefits and failures; combining high-risk changes and relying on untested capacity at go-live can endanger the whole enterprise.
+  - lesson: organisational-information-flows
+    front: Distinguish vertical, horizontal and external information flows.
+    back: Vertical flows move up (reports) and down (instructions) the hierarchy; horizontal flows move between functions at the same level; external flows cross the boundary to customers, suppliers and regulators.
+  - lesson: organisational-information-flows
+    front: What are the stages of the transaction processing cycle?
+    back: Capture, validate, process, store, output, then inquiry and reporting, with controls at every stage.
+  - lesson: organisational-information-flows
+    front: When is batch processing a better choice than real-time processing?
+    back: When the process is naturally periodic (such as payroll), when decisions do not need current data, or when connectivity and cost make real-time processing impractical.
+  - lesson: organisational-information-flows
+    front: How does an exception report differ from a summary report?
+    back: A summary report aggregates all data (sales by branch); an exception report shows only items outside defined limits (stock below reorder level), directing attention to action.
+  - lesson: organisational-information-flows
+    front: How does information differ across Anthony's levels of management activity?
+    back: Operational control needs detailed, frequent, internal data; management control needs summaries and exceptions; strategic planning needs aggregated, forward-looking and often external information.
+  - lesson: organisational-information-flows
+    front: How is a reorder level calculated?
+    back: "Reorder level = average daily usage × supplier lead time (days) + safety stock."
+  - lesson: enterprise-architecture-and-integration
+    front: Name the four TOGAF architecture domains.
+    back: Business, data, application and technology architecture; technology serves applications, which manage data, and all serve business capabilities.
+  - lesson: enterprise-architecture-and-integration
+    front: What happens in TOGAF ADM phases E and F?
+    back: Phase E (Opportunities and Solutions) groups gaps into projects and work packages; Phase F (Migration Planning) sequences them into a prioritised roadmap of transition architectures.
+  - lesson: enterprise-architecture-and-integration
+    front: What are Hohpe and Woolf's four integration styles?
+    back: File transfer, shared database, remote procedure invocation (for example web APIs) and messaging.
+  - lesson: enterprise-architecture-and-integration
+    front: Why does point-to-point integration scale poorly?
+    back: "Interfaces grow as n × (n − 1) / 2, so ten systems can need 45 interfaces, each to be built, monitored and changed; a hub needs only n connections."
+  - lesson: enterprise-architecture-and-integration
+    front: What is the difference between Zachman and TOGAF?
+    back: Zachman is a classification matrix for architecture descriptions; TOGAF is a framework with a method (the ADM) for developing and governing architecture.
+  - lesson: enterprise-architecture-and-integration
+    front: When is messaging preferable to a synchronous API call?
+    back: When systems must be decoupled in time, for example when the receiving system may be offline and no event may be lost, or when volumes are high.

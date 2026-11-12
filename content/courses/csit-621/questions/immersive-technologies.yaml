@@ -1,0 +1,254 @@
+module: immersive-technologies
+questions:
+  - id: q01
+    lesson: ar-vr-mr-and-xr
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Recall positions on the reality-virtuality continuum
+    prompt: Match each term to its description on Milgram and Kishino's reality-virtuality continuum.
+    pairs:
+      - left: Augmented reality
+        right: Virtual content added to a predominantly real environment
+      - left: Augmented virtuality
+        right: Real elements added to a predominantly virtual environment
+      - left: Virtual environment
+        right: Entirely computer-generated surroundings
+      - left: Mixed reality (original definition)
+        right: Any environment between the fully real and fully virtual extremes
+    explanation: Milgram and Kishino (1994) treat real and virtual as ends of a continuum. Industry now often uses mixed reality more narrowly for anchored, interactive AR, so definitions should be stated explicitly.
+  - id: q02
+    lesson: ar-vr-mr-and-xr
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Apply Azuma's definition of augmented reality
+    prompt: According to Azuma (1997), which of the following is NOT a defining characteristic of augmented reality?
+    options:
+      - Combines real and virtual content
+      - Is interactive in real time
+      - Is registered in three dimensions
+      - Requires a head-mounted display
+    answer: 3
+    explanation: Azuma's three characteristics are combining real and virtual, real-time interactivity and 3D registration. AR can be delivered on smartphones, tablets, projection systems or headsets, so a head-mounted display is not required.
+  - id: q03
+    lesson: ar-vr-mr-and-xr
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish immersion from presence
+    prompt: In VR research, immersion refers to the objective capabilities of the system, while presence refers to the user's subjective sense of being in the virtual environment.
+    answer: true
+    explanation: Immersion covers properties such as field of view, tracking and display quality; presence is the psychological experience of being there. High presence underpins the value of VR for rehearsing dangerous situations.
+  - id: q04
+    lesson: ar-vr-mr-and-xr
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply the task-matching framework to choose an immersive technology
+    scenario: |
+      A generator service company in Ghana sends technicians to remote sites. Technicians must work on the real machine with both hands while a senior engineer in Accra guides them.
+    prompt: Which approach best fits the task?
+    options:
+      - Fully immersive VR simulation used on site during the repair
+      - Head-mounted AR with remote expert annotation of the technician's view
+      - A printed manual only
+      - A 360-degree marketing video
+    answer: 1
+    explanation: The task requires awareness of the real environment and hands-free operation with remote guidance, which suits head-mounted AR. VR would block the technician's view of the real machine; a manual lacks live expert input; marketing video is irrelevant.
+  - id: q05
+    lesson: ar-vr-mr-and-xr
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Calculate payback for an immersive training investment
+    prompt: A VR training programme costs GHS 600,000 upfront and saves GHS 400,000 a year net of running costs. What is the simple payback period?
+    options:
+      - 0.67 years
+      - 1.5 years
+      - 2.4 years
+      - 6 years
+    answer: 1
+    explanation: Payback = 600,000 / 400,000 = 1.5 years. The result depends on assumptions about training effectiveness and trainee numbers, which should be tested through a controlled pilot.
+  - id: q06
+    lesson: ar-vr-mr-and-xr
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the umbrella term for AR, MR and VR
+    prompt: What umbrella term is used for the whole family of AR, MR and VR technologies?
+    answers:
+      - extended reality
+      - XR
+    explanation: Extended reality (XR) is an industry umbrella term covering technologies across the reality-virtuality continuum.
+  - id: q07
+    lesson: ar-vr-mr-and-xr
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the main cost drivers of immersive projects
+    scenario: |
+      A Ghanaian bank's innovation team proposes buying 50 VR headsets for staff training and argues the project is cheap because headsets cost relatively little each. No training content exists yet, and the bank has no 3D development skills.
+    prompt: Which critique is most important?
+    options:
+      - Headsets will become obsolete in a week
+      - Content creation, integration and device management are likely to cost more than the hardware and have not been budgeted
+      - VR cannot be used for any training
+      - The bank should buy 500 headsets instead
+    answer: 1
+    explanation: Immersive business cases are often dominated by content development, maintenance and device management. Without content or skills, the headset price says little about total cost. VR can be valuable for training when the task suits it.
+  - id: q08
+    lesson: ar-vr-mr-and-xr
+    type: true_false
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the role of scale in immersive business cases
+    prompt: Reducing the number of trainees from 400 to 100 a year would normally strengthen the business case for custom VR training content.
+    answer: false
+    explanation: Content development costs are largely fixed, so fewer users means a higher cost per trainee and smaller total savings. Scale and frequency of use are key drivers of immersive business cases.
+  - id: q09
+    lesson: digital-twins
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish digital models, shadows and twins
+    prompt: Match each type to its data-flow pattern according to Kritzinger et al. (2018).
+    pairs:
+      - left: Digital model
+        right: Manual data flows in both directions
+      - left: Digital shadow
+        right: Automatic physical-to-virtual flow, manual virtual-to-physical flow
+      - left: Digital twin
+        right: Automatic data flows in both directions
+    explanation: The classification is based on automation of data integration. Many systems marketed as digital twins are digital shadows, which may still deliver most of the value with less risk.
+  - id: q10
+    lesson: digital-twins
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Recall the components of Grieves' digital twin model
+    prompt: Which set describes the three components of a digital twin in Grieves' model?
+    options:
+      - Sensors, cloud and dashboards
+      - The physical entity, the virtual entity and the data and information connections between them
+      - Hardware, software and users
+      - Design, manufacture and disposal
+    answer: 1
+    explanation: Grieves describes a physical product in real space, a virtual product in virtual space and the connections of data and information that tie them together. Sensors and dashboards are enabling technologies, not the conceptual components.
+  - id: q11
+    lesson: digital-twins
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Classify a system using the model/shadow/twin distinction
+    scenario: |
+      A Kumasi hospital installs temperature sensors in its vaccine cold rooms. Readings appear on a live dashboard and staff receive alarms on their phones, after which they manually adjust or repair the refrigeration units.
+    prompt: How should this system be classified?
+    options:
+      - Digital model
+      - Digital shadow
+      - Digital twin
+      - Not a digital representation at all
+    answer: 1
+    explanation: Data flows automatically from the physical cold rooms to the virtual representation, but actions flow back manually through staff. That is a digital shadow. It would be a twin only if the system automatically adjusted the refrigeration.
+  - id: q12
+    lesson: digital-twins
+    type: mcq
+    bloom: apply
+    difficulty: hard
+    objective: Apply a sensitivity test to a digital twin business case
+    prompt: A water utility twin costs GHS 1,500,000 a year to run. Each 1,000 cubic metres per day of reduced losses saves GHS 730,000 a year at marginal cost. What minimum daily reduction is needed to cover running costs?
+    options:
+      - About 1,000 cubic metres per day
+      - About 2,050 cubic metres per day
+      - About 5,000 cubic metres per day
+      - About 730 cubic metres per day
+    answer: 1
+    explanation: 1,500,000 / 730,000 is about 2.05, so roughly 2,050 cubic metres per day must be saved just to cover running costs, before recovering the upfront investment. Such break-even tests reveal how sensitive twin business cases are to performance.
+  - id: q13
+    lesson: digital-twins
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Explain the role of fidelity
+    prompt: A digital twin should always be built at the highest possible visual and physical fidelity.
+    answer: false
+    explanation: Fidelity should match the decisions the twin supports. Higher fidelity increases cost and complexity; a mathematical model with a simple dashboard is often sufficient.
+  - id: q14
+    lesson: digital-twins
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the highest maturity level of a digital twin
+    prompt: What is the highest maturity level of a digital twin, in which it acts automatically within guardrails?
+    answers:
+      - autonomous
+      - autonomy
+    explanation: Maturity progresses from descriptive, diagnostic, predictive and prescriptive to autonomous. Autonomous twins close the loop to physical assets and require strong guardrails and security.
+  - id: q15
+    lesson: digital-twins
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the risks of automated virtual-to-physical control
+    scenario: |
+      A container terminal's twin can automatically change truck appointment slots and crane allocations. A vendor proposes extending it to directly control gate barriers and yard lighting through the same internet-connected platform, with no human approval step.
+    prompt: Which response is most appropriate?
+    options:
+      - Approve immediately, because more automation always increases value
+      - Require segmentation, authenticated commands, limits on high-impact actions and human approval where safety is affected
+      - Reject all digital twin use at the terminal
+      - Allow the vendor to manage all security without oversight
+    answer: 1
+    explanation: Automated control paths create cyber-physical risk; compromising the twin could manipulate real assets. Security principles from IoT, including segmentation, least privilege, authenticated commands and human approval for high-impact actions, apply. Rejecting all use discards proven benefits; abdicating oversight ignores accountability.
+  - id: q16
+    lesson: digital-twins
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the most common barrier to digital twin value
+    prompt: A logistics firm buys an advanced simulation platform, but its twin produces unreliable results because container identifiers and time stamps differ across its systems. Which layer of the twin architecture is the weakest?
+    options:
+      - Visualisation
+      - Integration and context (consistent asset model and data alignment)
+      - Physical sensors only
+      - Cloud elasticity
+    answer: 1
+    explanation: Without consistent identifiers and aligned time stamps, data cannot be linked to the right entities, and the models produce misleading results. Data integration is frequently the hardest and most important part of a twin programme.
+  - id: q17
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate an immersive technology and digital twin proposal
+    case: |
+      Illustrative scenario. Korle Bu Regional Health Services (hypothetical) runs a large teaching hospital group in Ghana. The board is considering two proposals. Proposal A is a VR training programme for nurses and junior doctors covering emergency procedures and rare clinical scenarios. Proposal B is a "digital twin of the hospital" that would combine bed management data, patient flow, equipment sensors and a 3D model of the buildings, eventually allowing automatic allocation of beds and theatre slots. A vendor has presented an impressive 3D visualisation and claims both projects will "transform patient care". Budgets are tight and data systems are fragmented across departments.
+    prompt: Critically evaluate both proposals and advise the board on priorities, design and safeguards.
+    marks: 25
+    structure:
+      - Define the relevant concepts using the reality-virtuality continuum and the model/shadow/twin distinction
+      - Assess Proposal A using task matching, effectiveness evidence, scale and human factors
+      - Assess Proposal B using scope and maturity levels, data readiness and integration needs
+      - Construct an outline business case for each with key assumptions and sensitivity tests
+      - Analyse risks, including patient safety, data protection under Act 843 and cyber security of automated control
+      - Recommend priorities and a phased plan
+    rubric:
+      - criterion: Conceptual accuracy
+        marks: 5
+        descriptor: Correct use of Milgram and Kishino, Azuma, and Kritzinger et al. classifications
+      - criterion: Evaluation of Proposal A
+        marks: 5
+        descriptor: Task-focused assessment of VR training, including effectiveness measurement, content costs, scale and cybersickness
+      - criterion: Evaluation of Proposal B
+        marks: 6
+        descriptor: Realistic assessment of scope, maturity and data readiness, identifying that the vendor's offer may be a model or shadow and that integration is the main challenge
+      - criterion: Business case and risk
+        marks: 6
+        descriptor: Explicit assumptions, sensitivity reasoning, data protection and safety and security safeguards for automated decisions
+      - criterion: Recommendation
+        marks: 3
+        descriptor: Clear, phased and justified priorities
+    modelAnswer: |
+      A strong answer begins by noting that a 3D visualisation alone is a digital model, not a twin, and that the hospital's fragmented data means Proposal B currently lacks the integration layer on which any twin depends. Proposal A is assessed through task matching: emergency procedures and rare scenarios are high-stakes and hard to practise safely, which suits VR's presence and repeatability. Its business case rests on measured improvements in competence and on scale across training cohorts; content costs, device management, infection control for shared headsets and cybersickness must be included. A pilot comparing VR-supported and conventional training on assessed performance would provide evidence.
+      For Proposal B, the answer recommends starting at system scope with a digital shadow of bed occupancy and patient flow, which needs consistent patient and bed identifiers, timely data entry and integration across departmental systems. Descriptive and predictive capabilities, such as forecasting bed demand from admissions data, can deliver value before any automation. Automatic allocation of beds or theatre slots raises patient-safety and accountability concerns and should remain prescriptive, with clinicians approving decisions. Patient data processing must comply with the Data Protection Act, 2012 (Act 843), with access controls, minimisation and security, and any control paths must be segmented and authenticated.
+      The recommendation prioritises a modest VR pilot and a data integration programme leading to a digital shadow, deferring the full twin and treating vendor claims of transformation with scepticism until evidence is gathered.
+    explanation: Examiners reward precise concepts, task-focused evaluation of VR, realistic assessment of twin maturity and data readiness, explicit business-case assumptions, attention to safety, data protection and security, and a phased recommendation.

@@ -1,0 +1,38 @@
+module: advanced-computing
+cards:
+  - lesson: quantum-computing-fundamentals
+    front: Why is "a qubit is both 0 and 1 at once" an incomplete description of superposition?
+    back: A qubit is described by amplitudes, which can be negative or complex and can interfere. Measurement returns only one result, with probabilities given by the squared magnitudes of the amplitudes. The power comes from interference, not from reading out both values.
+  - lesson: quantum-computing-fundamentals
+    front: What does entanglement provide, and what does it NOT provide?
+    back: It provides correlations between qubits that cannot be described qubit by qubit, a resource for algorithms, error correction and quantum communication. It does not allow faster-than-light messaging, because individual outcomes are random.
+  - lesson: quantum-computing-fundamentals
+    front: Contrast the cryptographic impact of Shor's and Grover's algorithms.
+    back: Shor gives an exponential speed-up for factoring and discrete logarithms, breaking RSA and elliptic-curve cryptography. Grover gives only a quadratic speed-up for search, roughly halving symmetric key strength, which is countered by longer keys such as AES-256.
+  - lesson: quantum-computing-fundamentals
+    front: What are FIPS 203, 204 and 205?
+    back: NIST's first post-quantum cryptography standards (August 2024) — ML-KEM for key encapsulation, ML-DSA for lattice-based signatures and SLH-DSA for hash-based signatures. They are classical algorithms that run on ordinary computers.
+  - lesson: quantum-computing-fundamentals
+    front: State Mosca's inequality and its business meaning.
+    back: If x (how long data must stay secret) + y (migration time) > z (time until a cryptographically relevant quantum computer), the organisation is already exposed, because of harvest-now-decrypt-later attacks.
+  - lesson: quantum-computing-fundamentals
+    front: Why do headline qubit counts mislead decision-makers?
+    back: Useful capability depends on error rates, coherence, connectivity and error correction. Many noisy physical qubits are needed per reliable logical qubit; breaking RSA needs thousands of logical qubits running deep circuits.
+  - lesson: hpc-and-advanced-data-processing
+    front: State Amdahl's law and its key managerial lesson.
+    back: Speed-up = 1 / ((1 − p) + p / N). The sequential fraction caps speed-up at 1 / (1 − p), so reduce the bottleneck before buying more processors.
+  - lesson: hpc-and-advanced-data-processing
+    front: Distinguish data parallelism from task parallelism.
+    back: Data parallelism applies the same operation to different chunks of data simultaneously; task parallelism runs different operations at the same time. Independent ("embarrassingly parallel") work scales best.
+  - lesson: hpc-and-advanced-data-processing
+    front: When is stream processing preferable to batch processing?
+    back: When value depends on acting within seconds or milliseconds on continuous, unbounded events — fraud detection, sensor alerts, dynamic pricing. Batch suits bounded historical analysis, training and periodic reports.
+  - lesson: hpc-and-advanced-data-processing
+    front: What are the four main components of a streaming architecture?
+    back: Producers that emit events; a durable event log or broker (e.g. Kafka); a stream processing engine that enriches, aggregates and windows events; and sinks such as alerts, dashboards or databases.
+  - lesson: hpc-and-advanced-data-processing
+    front: Why does the difference between event time and processing time matter?
+    back: Events may arrive late or out of order (for example with intermittent mobile connectivity). Aggregates based on processing time can then be wrong; robust systems compute by event time and handle late data.
+  - lesson: hpc-and-advanced-data-processing
+    front: Compare the Lambda and Kappa architectures.
+    back: Lambda runs parallel batch and speed layers and merges results, at the cost of duplicated logic. Kappa uses a single streaming path and recomputes history by replaying the event log.

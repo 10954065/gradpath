@@ -1,0 +1,56 @@
+module: ai-engineering
+cards:
+  - lesson: data-quality-training-and-inference
+    front: What does "fitness for use" mean in data quality?
+    back: Data is high quality if it is good enough for a specific decision; the same dataset may be adequate for monthly reporting but inadequate for real-time credit scoring.
+  - lesson: data-quality-training-and-inference
+    front: Why are representativeness and label quality especially important for machine learning?
+    back: A model performs poorly on groups it has not seen and can be no better than the definition and accuracy of the outcome it learns.
+  - lesson: data-quality-training-and-inference
+    front: What is data leakage, and give one example.
+    back: Training data containing information unavailable at prediction time, such as an "account closure reason" feature in a churn model, which inflates offline scores.
+  - lesson: data-quality-training-and-inference
+    front: How do training and inference differ in their key metrics?
+    back: Training focuses on validation loss and offline metrics; inference focuses on latency, throughput, availability, cost per prediction and business outcomes.
+  - lesson: data-quality-training-and-inference
+    front: Why can offline evaluation fail to predict online results?
+    back: Acting on predictions changes behaviour and future data (customers, fraudsters, markets respond), so only online tests such as shadow, canary or A/B measure real impact.
+  - lesson: data-quality-training-and-inference
+    front: What is the selective labels problem in lending?
+    back: Repayment outcomes are observed only for approved applicants, so the model cannot be directly evaluated on people who were rejected.
+  - lesson: deployment-and-pipelines
+    front: When is batch scoring preferable to a real-time API?
+    back: When decisions are periodic (weekly orders, monthly churn lists), because batch is cheaper, simpler and sufficient.
+  - lesson: deployment-and-pipelines
+    front: List the main stages of an MLOps pipeline.
+    back: Ingest and validate data, engineer features, train and track, evaluate and approve, register, deploy with a rollout strategy, monitor, then retrain or roll back.
+  - lesson: deployment-and-pipelines
+    front: Distinguish data drift, concept drift and prediction drift.
+    back: Data drift is a change in input distributions; concept drift is a change in the input–outcome relationship; prediction drift is a change in the distribution of model outputs.
+  - lesson: deployment-and-pipelines
+    front: State the PSI formula and a common interpretation.
+    back: PSI = Σ (A − E) × ln(A/E). By rule of thumb, below about 0.1 is little change, 0.1–0.25 moderate, above 0.25 significant.
+  - lesson: deployment-and-pipelines
+    front: What is the main managerial lesson of "hidden technical debt in machine learning systems"?
+    back: Model code is a small part of the system; data pipelines, configuration, serving and monitoring dominate lifetime cost and must be budgeted and maintained.
+  - lesson: deployment-and-pipelines
+    front: Why must a real-time model service have a fallback?
+    back: Outages, power or connectivity failures would otherwise halt business decisions; a rule-based or cached fallback keeps the process running safely.
+  - lesson: agents-prompting-and-workflow-automation
+    front: Describe the basic LLM agent loop.
+    back: Receive a goal, reason about the next step, call a permitted tool, observe the result, repeat until done, then respond or hand over to a human.
+  - lesson: agents-prompting-and-workflow-automation
+    front: What are the five elements of a structured business prompt?
+    back: Role, context, examples, constraints and output format.
+  - lesson: agents-prompting-and-workflow-automation
+    front: Why should untrusted user content be placed inside delimiters in a prompt?
+    back: It signals that the content is data, not instructions, reducing the chance the model follows injected commands; it should be combined with least-privilege tools.
+  - lesson: agents-prompting-and-workflow-automation
+    front: What does "use the least autonomy that achieves the goal" mean?
+    back: Prefer fixed workflows with narrow AI steps and human approval over open-ended agents unless the extra flexibility is necessary and well evaluated.
+  - lesson: agents-prompting-and-workflow-automation
+    front: How should prompts and agents be evaluated?
+    back: With a test set of realistic and adversarial inputs, measuring task success, format validity, policy compliance and escalation correctness, re-run whenever prompts, models or tools change.
+  - lesson: agents-prompting-and-workflow-automation
+    front: How does RPA differ from AI workflow automation?
+    back: RPA replays scripted clicks and keystrokes on fixed screens; AI workflow automation interprets unstructured inputs probabilistically within governed workflows.

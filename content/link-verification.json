@@ -1,0 +1,1124 @@
+{
+  "https://about.citiprogram.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:51.643Z",
+    "httpStatus": 200
+  },
+  "https://academy.hubspot.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:51.677Z",
+    "httpStatus": 200
+  },
+  "https://academy.uipath.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:51.679Z",
+    "httpStatus": 200
+  },
+  "https://ai.google/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:51.679Z",
+    "httpStatus": 200
+  },
+  "https://aisel.aisnet.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:51.680Z",
+    "httpStatus": 200
+  },
+  "https://apastyle.apa.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:51.681Z",
+    "httpStatus": 200
+  },
+  "https://arxiv.org/abs/1301.3781": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:51.682Z",
+    "httpStatus": 200
+  },
+  "https://attack.mitre.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:51.682Z",
+    "httpStatus": 200
+  },
+  "https://aws.amazon.com/compliance/shared-responsibility-model/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:52.749Z",
+    "httpStatus": 200
+  },
+  "https://baymard.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:52.755Z",
+    "httpStatus": 200
+  },
+  "https://bitcoin.org/bitcoin.pdf": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:52.925Z",
+    "httpStatus": 200
+  },
+  "https://camunda.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:52.961Z",
+    "httpStatus": 200
+  },
+  "https://cheatsheetseries.owasp.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:53.133Z",
+    "httpStatus": 200
+  },
+  "https://choosealicense.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:53.249Z",
+    "httpStatus": 200
+  },
+  "https://christophm.github.io/interpretable-ml-book/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:53.349Z",
+    "httpStatus": 200
+  },
+  "https://cloud.google.com/learn": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:53.493Z",
+    "httpStatus": 200
+  },
+  "https://cloud.google.com/learn/training": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:53.653Z",
+    "httpStatus": 200
+  },
+  "https://cloudsecurityalliance.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:53.930Z",
+    "httpStatus": 200
+  },
+  "https://core.ac.uk/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:54.059Z",
+    "httpStatus": 200
+  },
+  "https://csrc.nist.gov/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:54.093Z",
+    "httpStatus": 200
+  },
+  "https://csrc.nist.gov/projects/post-quantum-cryptography": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:54.181Z",
+    "httpStatus": 200
+  },
+  "https://csrc.nist.gov/projects/ssdf": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:54.441Z",
+    "httpStatus": 200
+  },
+  "https://csrc.nist.gov/pubs/sp/800/115/final": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:54.649Z",
+    "httpStatus": 200
+  },
+  "https://csrc.nist.gov/pubs/sp/800/145/final": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:54.941Z",
+    "httpStatus": 200
+  },
+  "https://csrc.nist.gov/pubs/sp/800/207/final": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:54.961Z",
+    "httpStatus": 200
+  },
+  "https://csrc.nist.gov/pubs/sp/800/218/final": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:55.097Z",
+    "httpStatus": 200
+  },
+  "https://csrc.nist.gov/pubs/sp/800/30/r1/final": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:55.173Z",
+    "httpStatus": 200
+  },
+  "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:55.349Z",
+    "httpStatus": 200
+  },
+  "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:55.389Z",
+    "httpStatus": 200
+  },
+  "https://csrc.nist.gov/pubs/sp/800/61/r2/final": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:55.577Z",
+    "httpStatus": 200
+  },
+  "https://dataprotection.org.gh/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:55.602Z",
+    "httpStatus": 200
+  },
+  "https://developers.google.com/machine-learning/crash-course": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:55.693Z",
+    "httpStatus": 200
+  },
+  "https://doaj.org/": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:49:55.705Z",
+    "httpStatus": 403
+  },
+  "https://docs.camunda.io/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:55.753Z",
+    "httpStatus": 200
+  },
+  "https://docs.streamlit.io/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:55.817Z",
+    "httpStatus": 200
+  },
+  "https://docs.stripe.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:56.009Z",
+    "httpStatus": 200
+  },
+  "https://doi.org/10.1016/j.jbusres.2019.07.039": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:56.026Z",
+    "httpStatus": 200
+  },
+  "https://doi.org/10.1016/j.jsis.2019.01.003": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:56.193Z",
+    "httpStatus": 200
+  },
+  "https://doi.org/10.1016/j.lrp.2009.07.003": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:56.661Z",
+    "httpStatus": 200
+  },
+  "https://doi.org/10.1080/00031305.2016.1154108": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:49:57.321Z",
+    "httpStatus": 403
+  },
+  "https://doi.org/10.1126/science.aac4716": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:49:57.654Z",
+    "httpStatus": 403
+  },
+  "https://doi.org/10.1126/science.aah5309": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:49:57.713Z",
+    "httpStatus": 403
+  },
+  "https://doi.org/10.1136/bmj.n71": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:49:57.818Z",
+    "httpStatus": 403
+  },
+  "https://doi.org/10.1145/3313831.3376718": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:49:58.253Z",
+    "httpStatus": 403
+  },
+  "https://doi.org/10.1162/154247603322493212": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:49:58.261Z",
+    "httpStatus": 403
+  },
+  "https://doi.org/10.1177/2345678906292462": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:49:58.285Z",
+    "httpStatus": 403
+  },
+  "https://doi.org/10.1186/1748-5908-4-67": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:59.034Z",
+    "httpStatus": 200
+  },
+  "https://doi.org/10.1191/1478088706qp063oa": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:49:59.242Z",
+    "httpStatus": 403
+  },
+  "https://doi.org/10.1257/aer.104.1.183": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:49:59.249Z",
+    "httpStatus": 403
+  },
+  "https://doi.org/10.1371/journal.pone.0118432": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:49:59.685Z",
+    "httpStatus": 200
+  },
+  "https://doi.org/10.22331/q-2018-08-06-79": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:00.146Z",
+    "httpStatus": 200
+  },
+  "https://doi.org/10.2307/249008": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:50:00.306Z",
+    "httpStatus": 403
+  },
+  "https://doi.org/10.2307/30036540": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:50:00.494Z",
+    "httpStatus": 403
+  },
+  "https://doi.org/10.6028/NIST.AI.100-1": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:01.146Z",
+    "httpStatus": 200
+  },
+  "https://doi.org/10.6028/NIST.CSWP.29": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:01.358Z",
+    "httpStatus": 200
+  },
+  "https://doi.org/10.6028/NIST.SP.800-145": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:01.537Z",
+    "httpStatus": 200
+  },
+  "https://doi.org/10.6028/NIST.SP.800-207": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:02.002Z",
+    "httpStatus": 200
+  },
+  "https://doi.org/10.6028/NIST.SP.800-30r1": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:02.030Z",
+    "httpStatus": 200
+  },
+  "https://doi.org/10.6028/NIST.SP.800-41r1": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:02.213Z",
+    "httpStatus": 200
+  },
+  "https://doi.org/10.6028/NIST.SP.800-57pt1r5": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:02.989Z",
+    "httpStatus": 200
+  },
+  "https://doi.org/10.6028/NIST.SP.800-63b": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:03.030Z",
+    "httpStatus": 200
+  },
+  "https://education.oracle.com/": {
+    "status": "unreachable",
+    "checkedAt": "2026-11-12T21:50:03.429Z"
+  },
+  "https://ethereum.org/developers/docs/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:03.510Z",
+    "httpStatus": 200
+  },
+  "https://ethereum.org/en/developers/docs/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:03.654Z",
+    "httpStatus": 200
+  },
+  "https://ethereum.org/en/developers/docs/smart-contracts/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:04.097Z",
+    "httpStatus": 200
+  },
+  "https://ethereum.org/en/whitepaper/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:04.109Z",
+    "httpStatus": 200
+  },
+  "https://ethics-of-ai.mooc.fi/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:04.111Z",
+    "httpStatus": 200
+  },
+  "https://eur-lex.europa.eu/eli/reg/2016/679/oj": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:04.470Z",
+    "httpStatus": 200
+  },
+  "https://fairmlbook.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:04.598Z",
+    "httpStatus": 200
+  },
+  "https://ghgprotocol.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:05.189Z",
+    "httpStatus": 200
+  },
+  "https://ghipss.net/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:05.194Z",
+    "httpStatus": 200
+  },
+  "https://help.shopify.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:05.260Z",
+    "httpStatus": 200
+  },
+  "https://hl7.org/fhir/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:05.261Z",
+    "httpStatus": 200
+  },
+  "https://hubtel.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:05.981Z",
+    "httpStatus": 200
+  },
+  "https://huggingface.co/learn": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:06.013Z",
+    "httpStatus": 200
+  },
+  "https://ico.org.uk/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:06.278Z",
+    "httpStatus": 200
+  },
+  "https://id4d.worldbank.org/": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:50:06.537Z",
+    "httpStatus": 403
+  },
+  "https://ifr.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:06.553Z",
+    "httpStatus": 200
+  },
+  "https://justiceharvard.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:06.653Z",
+    "httpStatus": 200
+  },
+  "https://kafka.apache.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:07.002Z",
+    "httpStatus": 200
+  },
+  "https://learn.microsoft.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:07.014Z",
+    "httpStatus": 200
+  },
+  "https://learn.microsoft.com/en-us/dynamics365/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:07.077Z",
+    "httpStatus": 200
+  },
+  "https://learn.microsoft.com/en-us/training/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:07.617Z",
+    "httpStatus": 200
+  },
+  "https://learn.microsoft.com/power-automate/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:07.813Z",
+    "httpStatus": 200
+  },
+  "https://learn.microsoft.com/power-bi/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:07.821Z",
+    "httpStatus": 200
+  },
+  "https://learn.microsoft.com/training/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:08.133Z",
+    "httpStatus": 200
+  },
+  "https://learn.microsoft.com/training/dynamics365/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:08.297Z",
+    "httpStatus": 200
+  },
+  "https://learning.sap.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:08.317Z",
+    "httpStatus": 200
+  },
+  "https://mermaid.js.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:08.637Z",
+    "httpStatus": 200
+  },
+  "https://methods.sagepub.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:08.961Z",
+    "httpStatus": 200
+  },
+  "https://mlflow.org/docs/latest/index.html": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:09.213Z",
+    "httpStatus": 200
+  },
+  "https://nca.org.gh/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:09.218Z",
+    "httpStatus": 200
+  },
+  "https://ocw.mit.edu/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:09.345Z",
+    "httpStatus": 200
+  },
+  "https://ocw.mit.edu/courses/15-s12-blockchain-and-money-fall-2018/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:09.785Z",
+    "httpStatus": 200
+  },
+  "https://oecd.ai/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:09.849Z",
+    "httpStatus": 200
+  },
+  "https://oecd.ai/en/ai-principles": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:10.217Z",
+    "httpStatus": 200
+  },
+  "https://openid.net/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:10.273Z",
+    "httpStatus": 200
+  },
+  "https://opensource.org/licenses": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:10.521Z",
+    "httpStatus": 200
+  },
+  "https://opensource.org/osd": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:10.617Z",
+    "httpStatus": 200
+  },
+  "https://openstax.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:10.641Z",
+    "httpStatus": 200
+  },
+  "https://otexts.com/fpp3/": {
+    "status": "unreachable",
+    "checkedAt": "2026-11-12T21:50:10.937Z"
+  },
+  "https://owasp.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:11.185Z",
+    "httpStatus": 200
+  },
+  "https://owasp.org/Top10/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:11.281Z",
+    "httpStatus": 200
+  },
+  "https://owasp.org/www-community/Threat_Modeling": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:11.305Z",
+    "httpStatus": 200
+  },
+  "https://owasp.org/www-project-application-security-verification-standard/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:11.321Z",
+    "httpStatus": 200
+  },
+  "https://owasp.org/www-project-juice-shop/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:11.573Z",
+    "httpStatus": 200
+  },
+  "https://owasp.org/www-project-threat-dragon/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:11.966Z",
+    "httpStatus": 200
+  },
+  "https://owasp.org/www-project-top-10-for-large-language-model-applications/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:12.814Z",
+    "httpStatus": 200
+  },
+  "https://owasp.org/www-project-top-ten/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:13.037Z",
+    "httpStatus": 200
+  },
+  "https://owl.purdue.edu/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:13.261Z",
+    "httpStatus": 200
+  },
+  "https://pages.nist.gov/800-63-3/sp800-63b.html": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:13.297Z",
+    "httpStatus": 200
+  },
+  "https://paystack.com/": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:50:13.513Z",
+    "httpStatus": 403
+  },
+  "https://paystack.com/docs/": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:50:13.529Z",
+    "httpStatus": 403
+  },
+  "https://plato.stanford.edu/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:14.078Z",
+    "httpStatus": 200
+  },
+  "https://plato.stanford.edu/entries/ethics-computer/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:14.169Z",
+    "httpStatus": 200
+  },
+  "https://plato.stanford.edu/entries/ethics-virtue/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:14.274Z",
+    "httpStatus": 200
+  },
+  "https://plato.stanford.edu/entries/it-privacy/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:14.278Z",
+    "httpStatus": 200
+  },
+  "https://plato.stanford.edu/entries/kant-moral/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:14.389Z",
+    "httpStatus": 200
+  },
+  "https://plato.stanford.edu/entries/moral-relativism/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:14.825Z",
+    "httpStatus": 200
+  },
+  "https://portswigger.net/web-security": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:15.309Z",
+    "httpStatus": 200
+  },
+  "https://publicationethics.org/": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:50:15.330Z",
+    "httpStatus": 403
+  },
+  "https://retractionwatch.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:15.334Z",
+    "httpStatus": 200
+  },
+  "https://rework.withgoogle.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:15.449Z",
+    "httpStatus": 200
+  },
+  "https://scholar.google.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:15.458Z",
+    "httpStatus": 200
+  },
+  "https://scholar.google.com/intl/en/scholar/help.html": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:15.749Z",
+    "httpStatus": 200
+  },
+  "https://scikit-learn.org/stable/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:15.985Z",
+    "httpStatus": 200
+  },
+  "https://scikit-learn.org/stable/user_guide.html": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:16.330Z",
+    "httpStatus": 200
+  },
+  "https://skillbuilder.aws/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:16.406Z",
+    "httpStatus": 200
+  },
+  "https://skillsforall.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:16.570Z",
+    "httpStatus": 200
+  },
+  "https://skillshop.withgoogle.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:16.890Z",
+    "httpStatus": 200
+  },
+  "https://spark.apache.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:16.891Z",
+    "httpStatus": 200
+  },
+  "https://support.google.com/analytics/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:16.917Z",
+    "httpStatus": 200
+  },
+  "https://threeminutethesis.uq.edu.au/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:17.170Z",
+    "httpStatus": 200
+  },
+  "https://training.cochrane.org/handbook": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:17.378Z",
+    "httpStatus": 200
+  },
+  "https://unctad.org/topic/ecommerce-and-digital-economy": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:17.390Z",
+    "httpStatus": 200
+  },
+  "https://web.stanford.edu/~jurafsky/slp3/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:17.893Z",
+    "httpStatus": 200
+  },
+  "https://www.3gpp.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:18.430Z",
+    "httpStatus": 200
+  },
+  "https://www.acm.org/code-of-ethics": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:50:18.656Z",
+    "httpStatus": 403
+  },
+  "https://www.acm.org/code-of-ethics/case-studies": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:50:18.902Z",
+    "httpStatus": 403
+  },
+  "https://www.bcb.gov.br/en": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:19.523Z",
+    "httpStatus": 200
+  },
+  "https://www.bis.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:19.558Z",
+    "httpStatus": 200
+  },
+  "https://www.bizagi.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:19.905Z",
+    "httpStatus": 200
+  },
+  "https://www.bog.gov.gh/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:20.006Z",
+    "httpStatus": 200
+  },
+  "https://www.cgap.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:20.102Z",
+    "httpStatus": 200
+  },
+  "https://www.cisa.gov/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:20.130Z",
+    "httpStatus": 200
+  },
+  "https://www.cisa.gov/known-exploited-vulnerabilities-catalog": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:20.218Z",
+    "httpStatus": 200
+  },
+  "https://www.cisa.gov/resources-tools/services/cisa-tabletop-exercise-packages": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:21.055Z",
+    "httpStatus": 200
+  },
+  "https://www.cisa.gov/stopransomware": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:21.097Z",
+    "httpStatus": 200
+  },
+  "https://www.cisecurity.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:21.977Z",
+    "httpStatus": 200
+  },
+  "https://www.cisecurity.org/cis-benchmarks": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:22.246Z",
+    "httpStatus": 200
+  },
+  "https://www.coe.int/en/web/cybercrime": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:50:22.503Z",
+    "httpStatus": 403
+  },
+  "https://www.coursera.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:22.826Z",
+    "httpStatus": 200
+  },
+  "https://www.coursera.org/learn/cryptocurrency": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:23.117Z",
+    "httpStatus": 200
+  },
+  "https://www.csa.gov.gh/": {
+    "status": "unreachable",
+    "checkedAt": "2026-11-12T21:50:23.211Z"
+  },
+  "https://www.deeplearning.ai/short-courses/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:23.249Z",
+    "httpStatus": 200
+  },
+  "https://www.deeplearningbook.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:23.354Z",
+    "httpStatus": 200
+  },
+  "https://www.elementsofai.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:23.706Z",
+    "httpStatus": 200
+  },
+  "https://www.ellenmacarthurfoundation.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:23.978Z",
+    "httpStatus": 200
+  },
+  "https://www.emvco.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:24.381Z",
+    "httpStatus": 200
+  },
+  "https://www.equator-network.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:24.785Z",
+    "httpStatus": 200
+  },
+  "https://www.europeansocialsurvey.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:25.665Z",
+    "httpStatus": 200
+  },
+  "https://www.first.org/cvss/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:25.982Z",
+    "httpStatus": 200
+  },
+  "https://www.first.org/cvss/v4.0/specification-document": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:26.193Z",
+    "httpStatus": 200
+  },
+  "https://www.ftc.gov/enforcement/refunds/equifax-data-breach-settlement": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:50:26.469Z",
+    "httpStatus": 403
+  },
+  "https://www.gartner.com/en/research/methodologies/gartner-hype-cycle": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:50:26.999Z",
+    "httpStatus": 403
+  },
+  "https://www.gnu.org/gnu/manifesto.html": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:27.062Z",
+    "httpStatus": 200
+  },
+  "https://www.gnu.org/philosophy/free-sw.html": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:27.144Z",
+    "httpStatus": 200
+  },
+  "https://www.gs1.org/standards": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:50:27.600Z",
+    "httpStatus": 403
+  },
+  "https://www.gsma.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:27.676Z",
+    "httpStatus": 200
+  },
+  "https://www.ibm.com/products/spss-statistics": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:28.090Z",
+    "httpStatus": 200
+  },
+  "https://www.ibm.com/quantum": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:28.139Z",
+    "httpStatus": 200
+  },
+  "https://www.ibm.com/think": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:29.128Z",
+    "httpStatus": 200
+  },
+  "https://www.ibm.com/think/topics/artificial-intelligence": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:29.453Z",
+    "httpStatus": 200
+  },
+  "https://www.ibm.com/think/topics/enterprise-resource-planning": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:29.959Z",
+    "httpStatus": 200
+  },
+  "https://www.iea.org/": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:50:30.330Z",
+    "httpStatus": 403
+  },
+  "https://www.ieee.org/about/corporate/governance/p7-8.html": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:30.725Z",
+    "httpStatus": 202
+  },
+  "https://www.ifm.eng.cam.ac.uk/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:31.047Z",
+    "httpStatus": 200
+  },
+  "https://www.iso.org/iso-31000-risk-management.html": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:50:31.101Z",
+    "httpStatus": 403
+  },
+  "https://www.iso.org/standard/27001": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:50:31.286Z",
+    "httpStatus": 403
+  },
+  "https://www.itl.nist.gov/div898/handbook/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:31.341Z",
+    "httpStatus": 200
+  },
+  "https://www.itu.int/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:32.144Z",
+    "httpStatus": 200
+  },
+  "https://www.kaggle.com/learn": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:32.155Z",
+    "httpStatus": 200
+  },
+  "https://www.khanacademy.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:32.770Z",
+    "httpStatus": 200
+  },
+  "https://www.khanacademy.org/math/statistics-probability": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:32.772Z",
+    "httpStatus": 200
+  },
+  "https://www.kotterinc.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:33.285Z",
+    "httpStatus": 200
+  },
+  "https://www.lfdecentralizedtrust.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:33.395Z",
+    "httpStatus": 200
+  },
+  "https://www.nist.gov/cyberframework": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:33.553Z",
+    "httpStatus": 200
+  },
+  "https://www.nist.gov/itl/ai-risk-management-framework": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:34.493Z",
+    "httpStatus": 200
+  },
+  "https://www.npci.org.in/": {
+    "status": "unverified",
+    "checkedAt": "2026-11-12T21:50:34.651Z",
+    "httpStatus": 403
+  },
+  "https://www.odoo.com/documentation/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:34.683Z",
+    "httpStatus": 200
+  },
+  "https://www.omg.org/spec/BPMN/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:34.923Z",
+    "httpStatus": 200
+  },
+  "https://www.opengroup.org/togaf": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:35.036Z",
+    "httpStatus": 200
+  },
+  "https://www.pcisecuritystandards.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:35.163Z",
+    "httpStatus": 200
+  },
+  "https://www.postgresql.org/docs/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:35.771Z",
+    "httpStatus": 200
+  },
+  "https://www.postofficehorizoninquiry.org.uk/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:35.993Z",
+    "httpStatus": 200
+  },
+  "https://www.prisma-statement.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:36.014Z",
+    "httpStatus": 200
+  },
+  "https://www.prosci.com/methodology/adkar": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:36.368Z",
+    "httpStatus": 200
+  },
+  "https://www.rfc-editor.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:36.438Z",
+    "httpStatus": 200
+  },
+  "https://www.rfc-editor.org/rfc/rfc4033": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:36.842Z",
+    "httpStatus": 200
+  },
+  "https://www.rfc-editor.org/rfc/rfc4253": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:37.009Z",
+    "httpStatus": 200
+  },
+  "https://www.rfc-editor.org/rfc/rfc5280": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:37.184Z",
+    "httpStatus": 200
+  },
+  "https://www.rfc-editor.org/rfc/rfc6749": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:38.303Z",
+    "httpStatus": 200
+  },
+  "https://www.rfc-editor.org/rfc/rfc8446": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:38.368Z",
+    "httpStatus": 200
+  },
+  "https://www.rfc-editor.org/rfc/rfc9106": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:38.680Z",
+    "httpStatus": 200
+  },
+  "https://www.sae.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:39.418Z",
+    "httpStatus": 200
+  },
+  "https://www.scu.edu/ethics/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:39.489Z",
+    "httpStatus": 200
+  },
+  "https://www.stage-gate.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:39.794Z",
+    "httpStatus": 200
+  },
+  "https://www.statlearning.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:40.068Z",
+    "httpStatus": 200
+  },
+  "https://www.strategyzer.com/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:40.342Z",
+    "httpStatus": 200
+  },
+  "https://www.thegreengrid.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:41.364Z",
+    "httpStatus": 200
+  },
+  "https://www.top500.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:41.424Z",
+    "httpStatus": 200
+  },
+  "https://www.un.org/development/desa/disabilities/convention-on-the-rights-of-persons-with-disabilities.html": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:41.483Z",
+    "httpStatus": 200
+  },
+  "https://www.un.org/en/about-us/universal-declaration-of-human-rights": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:41.999Z",
+    "httpStatus": 200
+  },
+  "https://www.unep.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:42.047Z",
+    "httpStatus": 200
+  },
+  "https://www.unesco.org/en/artificial-intelligence/recommendation-ethics": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:42.417Z",
+    "httpStatus": 200
+  },
+  "https://www.w3.org/TR/WCAG22/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:42.850Z",
+    "httpStatus": 200
+  },
+  "https://www.w3.org/WAI/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:43.331Z",
+    "httpStatus": 200
+  },
+  "https://www.w3.org/WAI/perspective-videos/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:43.383Z",
+    "httpStatus": 200
+  },
+  "https://www.wipo.int/about-ip/en/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:43.431Z",
+    "httpStatus": 200
+  },
+  "https://www.wipo.int/academy/en/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:43.739Z",
+    "httpStatus": 200
+  },
+  "https://www.wired.com/story/notpetya-cyberattack-ukraine-russia-code-crashed-the-world/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:43.843Z",
+    "httpStatus": 200
+  },
+  "https://www.worldbank.org/en/publication/globalfindex": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:43.904Z",
+    "httpStatus": 200
+  },
+  "https://www.youtube.com/@crashcourse": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:44.023Z",
+    "httpStatus": 200
+  },
+  "https://www.zotero.org/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:44.126Z",
+    "httpStatus": 200
+  },
+  "https://www.zotero.org/support/": {
+    "status": "verified",
+    "checkedAt": "2026-11-12T21:50:44.175Z",
+    "httpStatus": 200
+  }
+}

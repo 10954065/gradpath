@@ -32,9 +32,21 @@ const ResetPasswordPage = lazyNamed(auth, 'ResetPasswordPage')
 const AuthCallbackPage = lazyNamed(auth, 'AuthCallbackPage')
 const OnboardingPage = lazy(() => import('@/pages/OnboardingPage'))
 const SettingsPage = lazy(() => import('@/pages/SettingsPage'))
+const CoursesPage = lazy(() => import('@/pages/CoursesPage'))
+const CoursePage = lazy(() => import('@/pages/CoursePage'))
+const LessonPage = lazy(() => import('@/pages/LessonPage'))
+const LibraryPage = lazy(() => import('@/pages/LibraryPage'))
+const ResourcesPage = lazy(() => import('@/pages/ResourcesPage'))
 
 /** Screens rendered inside the authenticated application shell. */
-const shellRoutes: { path: string; element: ReactNode }[] = [{ path: 'settings', element: <SettingsPage /> }]
+const shellRoutes: { path: string; element: ReactNode }[] = [
+  { path: 'courses', element: <CoursesPage /> },
+  { path: 'courses/:courseSlug', element: <CoursePage /> },
+  { path: 'courses/:courseSlug/lessons/:lessonSlug', element: <LessonPage /> },
+  { path: 'library', element: <LibraryPage /> },
+  { path: 'resources', element: <ResourcesPage /> },
+  { path: 'settings', element: <SettingsPage /> },
+]
 
 export const router = createBrowserRouter([
   {

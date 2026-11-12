@@ -1,0 +1,56 @@
+module: application-and-database-security
+cards:
+  - lesson: web-application-security-sqli-and-xss
+    front: What single root cause do SQL injection and cross-site scripting share?
+    back: Untrusted data is mixed with code and parsed by an interpreter (the database or the browser), so attacker input changes what the interpreter executes.
+  - lesson: web-application-security-sqli-and-xss
+    front: Why does a parameterised query defeat SQL injection?
+    back: The SQL structure is parsed first with placeholders, and user values are bound afterwards purely as data, so no input can alter the query's grammar.
+  - lesson: web-application-security-sqli-and-xss
+    front: How do stored, reflected and DOM-based XSS differ?
+    back: Stored is saved on the server and served to viewers; reflected is echoed back from the request; DOM-based occurs entirely in client-side JavaScript writing untrusted data to a dangerous sink such as innerHTML.
+  - lesson: web-application-security-sqli-and-xss
+    front: Why is Content Security Policy described as a backstop rather than a fix for XSS?
+    back: CSP limits what injected script can run or load, but the encoding flaw that allowed injection still exists and must be fixed; weak policies such as allowing unsafe-inline give little protection.
+  - lesson: web-application-security-sqli-and-xss
+    front: What changed about XSS and access control in the OWASP Top 10:2021?
+    back: Broken Access Control rose to A01, and cross-site scripting was merged into the A03 Injection category.
+  - lesson: web-application-security-sqli-and-xss
+    front: What role should a web application firewall play in remediating injection flaws?
+    back: A compensating control that buys time and blocks common patterns while code is fixed; it can be bypassed and is not a substitute for parameterisation and encoding.
+  - lesson: authentication-and-authorisation
+    front: Why are two passwords not multi-factor authentication?
+    back: MFA requires factors from different categories (knowledge, possession, inherence); two passwords are both knowledge factors and fail the same way.
+  - lesson: authentication-and-authorisation
+    front: What makes FIDO2/WebAuthn phishing resistant when SMS and TOTP codes are not?
+    back: The authenticator signs a challenge bound to the genuine site's origin, so a look-alike site cannot obtain a usable signature, whereas typed codes can be relayed in real time.
+  - lesson: authentication-and-authorisation
+    front: Summarise the core NIST SP 800-63B password recommendations.
+    back: Allow long passphrases, screen against common and breached passwords, no arbitrary composition rules, no forced periodic changes (change on compromise), no security questions, allow paste, rate-limit attempts, store with salted slow hashing.
+  - lesson: authentication-and-authorisation
+    front: OAuth 2.0 versus OpenID Connect?
+    back: OAuth 2.0 delegates authorisation via access tokens; OpenID Connect adds authentication through a signed ID token describing the user, enabling single sign-on.
+  - lesson: authentication-and-authorisation
+    front: When would you choose ABAC over RBAC?
+    back: When access depends on context such as branch, data sensitivity, time or device, and pure roles would cause role explosion; RBAC remains simpler to audit for coarse entitlements.
+  - lesson: authentication-and-authorisation
+    front: List four session management controls.
+    back: Cryptographically random session IDs, regeneration at login (prevents fixation), Secure/HttpOnly/SameSite cookie flags, idle and absolute timeouts with invalidation at logout and re-authentication for risky actions.
+  - lesson: secure-development-and-database-protection
+    front: What does "shift left" mean in a secure SDLC?
+    back: Moving security activities earlier (requirements, design, coding) where defects are cheaper to fix, while still testing and monitoring later phases.
+  - lesson: secure-development-and-database-protection
+    front: Compare SAST, DAST and SCA in one line each.
+    back: SAST analyses code without running it; DAST tests the running application from outside; SCA identifies third-party components with known vulnerabilities.
+  - lesson: secure-development-and-database-protection
+    front: What is threat-informed testing?
+    back: Deriving test cases from the system's threat model and documented attacker techniques, so each test links to a realistic threat and coverage can be justified.
+  - lesson: secure-development-and-database-protection
+    front: What does row-level security add beyond application-layer filtering?
+    back: The database itself enforces which rows a session may access, so an application query missing a filter cannot expose rows outside the user's scope.
+  - lesson: secure-development-and-database-protection
+    front: What does transparent data encryption protect against, and what not?
+    back: It protects data files and backups if stolen; it does not protect data returned through legitimate or injected queries, which the engine decrypts automatically.
+  - lesson: secure-development-and-database-protection
+    front: What was the central lifecycle failure in the Equifax 2017 breach?
+    back: A known Apache Struts vulnerability (CVE-2017-5638) with an available patch was not identified and fixed on an internet-facing portal, compounded by monitoring gaps.

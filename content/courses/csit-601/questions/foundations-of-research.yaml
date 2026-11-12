@@ -1,0 +1,387 @@
+module: foundations-of-research
+questions:
+  # Lesson 1: meaning-purpose-and-characteristics
+  - id: q01
+    lesson: meaning-purpose-and-characteristics
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish research methodology from research methods
+    prompt: Which statement best describes research methodology?
+    options:
+      - The specific tools, such as questionnaires and interviews, used to collect data
+      - The reasoned justification linking philosophy, questions and design choices
+      - The statistical software used to analyse survey data
+      - The list of references cited in the literature review
+    answer: 1
+    explanation: >
+      Methodology is the overall strategy and justification explaining why a study is designed as it is.
+      Questionnaires and interviews are methods (techniques), software is a tool used within methods, and a
+      reference list is part of academic presentation, not methodology.
+  - id: q02
+    lesson: meaning-purpose-and-characteristics
+    type: true_false
+    bloom: recall
+    difficulty: easy
+    objective: Recognise that research can use secondary data
+    prompt: A study can only count as research if it collects new primary data from participants.
+    answer: false
+    explanation: >
+      Research is defined by systematic, evidence-based enquiry directed at a clear question, not by the data
+      source. Analysis of secondary datasets, company records or documents is legitimate research when it is
+      systematic and transparent.
+  - id: q03
+    lesson: meaning-purpose-and-characteristics
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Identify the purpose of a research question
+    scenario: |
+      A district health directorate in Ghana introduced an electronic patient records system in three
+      hospitals a year ago. It now asks a researcher to judge whether the system has reduced the time taken
+      to retrieve patient files and whether it should be extended to other facilities.
+    prompt: Which research purpose best describes this study?
+    options:
+      - Exploration
+      - Description
+      - Evaluation
+      - Prediction
+    answer: 2
+    explanation: >
+      The directorate wants a judgement about the effectiveness of an existing intervention, which is
+      evaluation. Exploration suits poorly understood phenomena; description would only profile current use;
+      prediction would forecast future outcomes rather than assess the intervention's effect.
+  - id: q04
+    lesson: meaning-purpose-and-characteristics
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match characteristics of good research to their meaning
+    prompt: Match each characteristic of good research to its description.
+    pairs:
+      - left: Transparency
+        right: Procedures are reported fully enough to be scrutinised or repeated
+      - left: Empirical grounding
+        right: Conclusions rest on collected or existing evidence
+      - left: Contribution
+        right: The study adds to knowledge, theory or practice
+      - left: Critical self-awareness
+        right: Limitations and alternative explanations are acknowledged
+    explanation: >
+      These characteristics jointly distinguish research from opinion. Transparency enables checking,
+      empirical grounding links claims to evidence, contribution justifies the study, and critical
+      self-awareness prevents overclaiming.
+  - id: q05
+    lesson: meaning-purpose-and-characteristics
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name the type of research aimed at solving a practical problem
+    prompt: What term describes research whose main aim is to solve a practical problem for an organisation or sector?
+    answers: [applied research, applied]
+    explanation: >
+      Applied research addresses practical problems, while basic research mainly extends theory. Most MSc
+      IT-for-business studies are applied but should still engage with theory so findings can be interpreted
+      beyond one setting.
+  - id: q06
+    lesson: meaning-purpose-and-characteristics
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate whether a proposed study meets the characteristics of research
+    prompt: >
+      A student plans to survey 600 friends and classmates on social media about cybersecurity habits and
+      generalise the results to all Ghanaian university students. What is the most serious weakness?
+    options:
+      - The sample is too large to analyse
+      - The sample is not representative, so the generalisation lacks rigour
+      - Social media cannot be used for any research purpose
+      - Cybersecurity is not a researchable topic
+    answer: 1
+    explanation: >
+      Size does not compensate for bias. A convenience sample of friends cannot support generalisation to a
+      national population, so the conclusion lacks rigour. A large sample is analysable, social media can be
+      a legitimate recruitment channel with appropriate design, and cybersecurity is clearly researchable.
+  - id: q07
+    lesson: meaning-purpose-and-characteristics
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Understand the role of replicability
+    prompt: >
+      The reproducibility project published by the Open Science Collaboration in 2015 showed that publication
+      in a journal guarantees that a finding is robust.
+    answer: false
+    explanation: >
+      The project found that many published psychology findings replicated with weaker effects or not at all,
+      demonstrating that publication does not guarantee robustness and highlighting the importance of
+      transparency and replication.
+
+  # Lesson 2: research-paradigms
+  - id: q08
+    lesson: research-paradigms
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Identify the core assumption of interpretivism
+    prompt: Which assumption is most characteristic of interpretivism?
+    options:
+      - Social reality is objective and best studied through large-sample measurement
+      - Social reality is constructed through meanings, so research must understand participants' perspectives
+      - Only research that produces immediate practical solutions is valid
+      - Reality cannot be studied at all
+    answer: 1
+    explanation: >
+      Interpretivism holds that people attach meanings to their actions and that these meanings must be
+      understood. The first option describes positivism, the third caricatures pragmatism, and the fourth is
+      an extreme scepticism that no mainstream paradigm adopts.
+  - id: q09
+    lesson: research-paradigms
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Select a paradigm that fits a research question
+    scenario: |
+      A researcher wants to understand how women traders in a Kumasi market make sense of accepting mobile
+      money from customers, including concerns about privacy, family obligations and trust in agents.
+    prompt: Which paradigm best fits this research question?
+    options:
+      - Positivism, because mobile money transactions can be counted
+      - Interpretivism, because the question concerns meanings and lived experience
+      - Pragmatism, because all studies should use mixed methods
+      - Positivism, because women traders form a clear population
+    answer: 1
+    explanation: >
+      The phrase "make sense of" signals a focus on meanings and experience, which interpretivism addresses.
+      Countable transactions or a definable population do not make a meaning-focused question positivist,
+      and pragmatism does not require mixed methods for every study.
+  - id: q10
+    lesson: research-paradigms
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Associate paradigms with typical features
+    prompt: Match each paradigm to its typical feature.
+    pairs:
+      - left: Positivism
+        right: Deductive testing of hypotheses using structured data
+      - left: Interpretivism
+        right: Inductive understanding of meanings through rich data
+      - left: Pragmatism
+        right: Choosing methods according to what best answers the research question
+      - left: Critical realism
+        right: Seeking underlying mechanisms that generate observable events
+    explanation: >
+      Each paradigm has a characteristic logic. Remember that these are tendencies, not rigid rules, and the
+      decisive factor is fit with the research question.
+  - id: q11
+    lesson: research-paradigms
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish paradigms from data types
+    prompt: Positivism and quantitative research are exactly the same thing.
+    answer: false
+    explanation: >
+      Positivism is a set of philosophical assumptions; quantitative research is a type of data and analysis.
+      Positivist studies usually use quantitative data, but the concepts are distinct and qualitative data
+      can be coded and analysed in positivist ways.
+  - id: q12
+    lesson: research-paradigms
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall who popularised the term paradigm
+    prompt: Which author popularised the term "paradigm" in The Structure of Scientific Revolutions (1962)?
+    answers: [Kuhn, Thomas Kuhn, Thomas S. Kuhn, T. S. Kuhn]
+    explanation: >
+      Thomas Kuhn described how scientific communities work within shared frameworks that can shift when
+      anomalies accumulate. Social science later adopted the term for competing philosophical traditions.
+  - id: q13
+    lesson: research-paradigms
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the justification for pragmatism
+    prompt: Which justification for adopting pragmatism would an examiner find strongest?
+    options:
+      - "I could not decide between positivism and interpretivism, so I chose pragmatism."
+      - "Pragmatism lets me avoid discussing philosophy."
+      - "My question requires interviews to identify merchants' problems and a survey to estimate how widespread they are, so integrating both answers the question best."
+      - "Pragmatism is the newest paradigm and therefore the most advanced."
+    answer: 2
+    explanation: >
+      A strong justification links the paradigm to the research question and explains how different data
+      will be integrated. Indecision, avoidance of philosophy and novelty are not reasons; they suggest the
+      student has not understood the paradigm.
+  - id: q14
+    lesson: research-paradigms
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse lessons from the Hawthorne studies
+    prompt: What is the most important methodological lesson from the Hawthorne studies for an IT researcher?
+    options:
+      - Lighting levels determine productivity
+      - Measuring outcomes may show that something happens, but understanding why may require attention to meanings and social context
+      - Interviews are always more accurate than measurements
+      - Productivity cannot be researched
+    answer: 1
+    explanation: >
+      The early experiments produced puzzling results that later phases interpreted with attention to social
+      relationships and attitudes. The studies do not show that lighting determines output, that interviews
+      always beat measurement, or that productivity is unresearchable.
+
+  # Lesson 3: ontology-and-epistemology
+  - id: q15
+    lesson: ontology-and-epistemology
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Define epistemology
+    prompt: Epistemology is primarily concerned with which question?
+    options:
+      - What is the nature of reality?
+      - What counts as valid knowledge and how can it be obtained?
+      - What role do values play in research?
+      - How large should a sample be?
+    answer: 1
+    explanation: >
+      Epistemology concerns knowledge and how it is justified. The nature of reality is ontology, the role of
+      values is axiology, and sample size is a technical design decision, not a philosophical branch.
+  - id: q16
+    lesson: ontology-and-epistemology
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match philosophical branches to their concerns
+    prompt: Match each term to its concern.
+    pairs:
+      - left: Ontology
+        right: The nature of reality and what exists
+      - left: Epistemology
+        right: What counts as acceptable knowledge
+      - left: Axiology
+        right: The role of values in research
+      - left: Reflexivity
+        right: Critical reflection on the researcher's own influence
+    explanation: >
+      The three branches answer different questions, and reflexivity is the practical response to axiology
+      in interpretive work. Confusing ontology and epistemology is a common examination error.
+  - id: q17
+    lesson: ontology-and-epistemology
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Detect incoherence between philosophy and methods
+    scenario: |
+      A proposal states: "This study adopts an interpretivist philosophy. A structured questionnaire with
+      Likert-scale items will be sent to 400 students and hypotheses will be tested using regression."
+    prompt: What is the main problem with this proposal?
+    options:
+      - Regression cannot be used with Likert-scale data under any circumstances
+      - The stated philosophy contradicts the deductive, structured, statistical design
+      - 400 students is too few for any study
+      - Questionnaires cannot be used in university settings
+    answer: 1
+    explanation: >
+      Interpretivism seeks in-depth understanding of meanings, while hypothesis testing with structured data
+      is deductive and positivist. The fix is to realign either the philosophy or the methods. The other
+      options are false generalisations about techniques and samples.
+  - id: q18
+    lesson: ontology-and-epistemology
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Understand axiology in quantitative research
+    prompt: Axiology is irrelevant to quantitative research because quantitative researchers are value-neutral.
+    answer: false
+    explanation: >
+      Values influence topic selection, the wording of questionnaire items, the choice of constructs and the
+      interpretation of results. Quantitative researchers aspire to minimise bias but cannot eliminate the
+      influence of values, so axiology remains relevant.
+  - id: q19
+    lesson: ontology-and-epistemology
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name the ontological position that social phenomena are created through interaction
+    prompt: Which ontological position holds that social phenomena are created and revised through social interaction?
+    answers: [constructionism, constructivism, social constructionism]
+    explanation: >
+      Constructionism contrasts with objectivism, which treats social entities as existing independently of
+      social actors. Some texts use "constructivism" for a closely related position.
+  - id: q20
+    lesson: ontology-and-epistemology
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Apply the research onion to choose a coherent approach
+    prompt: >
+      A researcher adopts an objectivist ontology and positivist epistemology to test whether UTAUT
+      constructs predict nurses' use of an electronic records system. Which approach to theory development
+      is most coherent?
+    options:
+      - Inductive, building theory from interview themes
+      - Deductive, testing hypotheses derived from existing theory
+      - Abductive, because all health research must be abductive
+      - No approach to theory is needed
+    answer: 1
+    explanation: >
+      Testing hypotheses derived from an established model such as UTAUT is deductive and coheres with
+      positivism. Induction suits theory-building from data, abduction is not mandatory for health research,
+      and every study involves some relationship to theory.
+
+  # Module-level essay
+  - id: q21
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    marks: 20
+    objective: Justify a coherent philosophical position for a Ghanaian technology adoption study
+    prompt: >
+      "The choice of research paradigm should be determined by the research question rather than by the
+      researcher's preference for particular methods." Critically discuss this statement with reference to a
+      study of artificial intelligence adoption among Ghanaian SMEs.
+    structure:
+      - Introduce paradigms and the claim being evaluated
+      - Explain positivism, interpretivism and pragmatism with their ontological and epistemological assumptions
+      - Show how different research questions on AI adoption in SMEs imply different paradigms
+      - Discuss practical constraints and researcher preferences, and when they legitimately matter
+      - Conclude with a reasoned position on the statement
+    rubric:
+      - criterion: Understanding of paradigms and philosophical assumptions
+        marks: 6
+        descriptor: Accurate, precise explanation of at least three paradigms with ontology, epistemology and axiology.
+      - criterion: Application to the Ghanaian SME context
+        marks: 6
+        descriptor: Develops contrasting, well-formed research questions and links each to a paradigm and design.
+      - criterion: Critical evaluation
+        marks: 5
+        descriptor: Weighs the claim against counterarguments such as skills, access and supervisor expectations.
+      - criterion: Structure and academic writing
+        marks: 3
+        descriptor: Logical argument, clear conclusion and correct APA 7 citation of credible sources.
+    modelAnswer: |
+      A strong answer accepts the statement in principle while recognising its practical limits. It opens by
+      defining a paradigm as a set of assumptions about reality, knowledge and values (Guba and Lincoln's
+      framing via ontology, epistemology and methodology is useful). It then contrasts positivism, which
+      assumes an objective, measurable reality and suits deductive testing; interpretivism, which assumes
+      socially constructed meanings and suits inductive understanding; and pragmatism, which judges knowledge
+      by its usefulness and supports mixed methods.
+
+      The core of the answer applies these to AI adoption in Ghanaian SMEs. A question such as "To what extent
+      do perceived usefulness, cost and skills availability predict AI adoption intention among SMEs in
+      Accra?" implies measurable constructs and a positivist survey, perhaps using TAM or UTAUT. A question
+      such as "How do owner-managers of family businesses make sense of AI tools in their decision-making?"
+      implies interpretivism and interviews. A question asking "What adoption barriers exist and how
+      widespread are they?" supports pragmatism with sequential qualitative then quantitative phases.
+
+      The evaluation should then acknowledge that researcher skills, access to a sampling frame, time and
+      ethical constraints legitimately influence design, but argue that these should refine, not replace,
+      question-led reasoning. Choosing a paradigm merely because one prefers statistics risks incoherence and
+      weak claims. A good conclusion states that the question should lead, with practical constraints
+      prompting reformulation of the question rather than a mismatch between philosophy and methods.
+    explanation: >
+      Examiners look for accurate philosophical understanding, genuine application to the Ghanaian SME
+      context through contrasting research questions, and a balanced judgement rather than description.

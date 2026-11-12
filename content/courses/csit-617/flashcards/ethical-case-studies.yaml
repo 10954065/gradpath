@@ -1,0 +1,56 @@
+module: ethical-case-studies
+cards:
+  - lesson: ai-recruitment-and-employee-monitoring
+    front: What are the seven steps of the case analysis method?
+    back: Facts, stakeholders, ethical issues, analysis through theories and the ACM Code, options, recommendation, counter-arguments.
+  - lesson: ai-recruitment-and-employee-monitoring
+    front: What does the Amazon recruiting tool case (Reuters, 2018) illustrate?
+    back: Historical bias — a model trained on male-dominated CVs learned to favour men and penalise terms like "women's"; patching terms gave no guarantee of fairness, and the tool was abandoned.
+  - lesson: ai-recruitment-and-employee-monitoring
+    front: Why is validity an ethical issue in AI recruitment?
+    back: If features such as facial expressions or accents do not predict job performance, using them excludes people for irrelevant reasons while appearing objective.
+  - lesson: ai-recruitment-and-employee-monitoring
+    front: Why is employee consent a weak justification for intrusive monitoring?
+    back: The power imbalance in employment means consent is rarely free, and consent does not make a disproportionate intrusion necessary or fair.
+  - lesson: ai-recruitment-and-employee-monitoring
+    front: What principles does Bărbulescu v Romania (2017) illustrate for workplace monitoring?
+    back: Employees should have prior notice of the nature and extent of monitoring, and monitoring needs legitimate reasons, proportionality and safeguards.
+  - lesson: ai-recruitment-and-employee-monitoring
+    front: What is function creep in employee monitoring?
+    back: Using data collected for one purpose, such as quality assurance, for other purposes, such as disciplining staff over private messages.
+  - lesson: data-misuse-and-breaches
+    front: How does data misuse differ from a data breach?
+    back: Misuse is deliberate use beyond legitimate purposes or expectations; a breach is a security failure that allows unauthorised access, disclosure or loss.
+  - lesson: data-misuse-and-breaches
+    front: What made the Cambridge Analytica case ethically distinctive?
+    back: A quiz app installed by relatively few users harvested data about their friends, so millions of people who never consented were affected and profiled.
+  - lesson: data-misuse-and-breaches
+    front: What were the key failures in the 2017 Equifax breach?
+    back: A known Apache Struts vulnerability left unpatched, weak asset inventory and monitoring, and a delayed, poorly executed response to roughly 147 million affected people.
+  - lesson: data-misuse-and-breaches
+    front: Why is "no proof of harm" not a reason to withhold breach notification?
+    back: Incomplete evidence is not proof of safety; affected people need information to protect themselves, and legal notification duties may apply.
+  - lesson: data-misuse-and-breaches
+    front: Why should organisations avoid scapegoating individuals after a breach?
+    back: Breaches usually reflect missing organisational controls; blame discourages reporting, while blameless reviews fix root causes.
+  - lesson: data-misuse-and-breaches
+    front: When do "anonymised" data remain personal data?
+    back: When individuals can be re-identified, for example by combining the data with other sources.
+  - lesson: piracy-unauthorised-ai-and-exclusion
+    front: Why does the affordability defence of software piracy usually fail?
+    back: Lawful alternatives — open-source tools, education licences, free web tools — usually provide most of the benefit without infringement or malware risk.
+  - lesson: piracy-unauthorised-ai-and-exclusion
+    front: What risks does shadow AI create?
+    back: Leakage of confidential and personal data, loss of trade secrets, fabricated or inaccurate content, and unclear accountability.
+  - lesson: piracy-unauthorised-ai-and-exclusion
+    front: Why is a total ban on generative AI often ineffective?
+    back: It drives use underground; approved tools, data rules, verification and training reduce risk more effectively.
+  - lesson: piracy-unauthorised-ai-and-exclusion
+    front: How does the capability approach apply to digital exclusion?
+    back: It asks whether people have real freedom to use a service, not merely formal availability; lack of devices, skills, language or accessibility can deny real access.
+  - lesson: piracy-unauthorised-ai-and-exclusion
+    front: Give three design measures that reduce digital exclusion in a Ghanaian public service.
+    back: USSD or agent-based alternatives, assisted help desks, and local-language and accessible interfaces tested with disabled and low-literacy users.
+  - lesson: piracy-unauthorised-ai-and-exclusion
+    front: Which ACM principle places a duty on leaders to provide policies such as an AI acceptable-use policy?
+    back: Principle 3.4 — articulate, apply and support policies and processes that reflect the principles of the Code.

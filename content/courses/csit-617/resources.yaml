@@ -1,0 +1,91 @@
+resources:
+  - title: ACM Code of Ethics and Professional Conduct
+    description: The official 2018 code of the Association for Computing Machinery, with guidance on applying each principle to computing practice.
+    provider: Association for Computing Machinery
+    url: https://www.acm.org/code-of-ethics
+    category: standard
+    module: it-professionalism
+    difficulty: introductory
+    stage: foundation
+    accessType: free
+  - title: IEEE Code of Ethics
+    description: The IEEE's code of ethics for members, setting out commitments on public safety, integrity, fair treatment and upholding the code.
+    provider: IEEE
+    url: https://www.ieee.org/about/corporate/governance/p7-8.html
+    category: standard
+    module: it-professionalism
+    difficulty: introductory
+    stage: foundation
+    accessType: free
+  - title: OpenStax
+    description: Free, peer-reviewed open textbooks, including introductory philosophy and ethics titles useful for revising moral theories.
+    provider: OpenStax, Rice University
+    url: https://openstax.org/
+    category: course
+    module: ethical-foundations
+    difficulty: introductory
+    stage: foundation
+    accessType: free
+  - title: UNESCO Recommendation on the Ethics of Artificial Intelligence
+    description: UNESCO's global standard on AI ethics, covering human rights, fairness, transparency, oversight and policy action areas.
+    provider: UNESCO
+    url: https://www.unesco.org/en/artificial-intelligence/recommendation-ethics
+    category: standard
+    module: ai-ethics
+    difficulty: intermediate
+    stage: core
+    accessType: unknown
+  - title: Data Protection Commission, Ghana
+    description: Official site of the regulator established under the Data Protection Act, 2012 (Act 843), with information on registration and data subject rights.
+    provider: Data Protection Commission, Ghana
+    url: https://dataprotection.org.gh/
+    category: organisation
+    module: data-and-privacy
+    difficulty: introductory
+    stage: core
+    accessType: unknown
+  - title: Stanford Encyclopedia of Philosophy
+    description: Authoritative, peer-reviewed reference entries on ethical theories, relativism, privacy and computer and information ethics.
+    provider: Stanford University
+    url: https://plato.stanford.edu/
+    category: reference
+    module: ethical-foundations
+    difficulty: advanced
+    stage: core
+    accessType: free
+  - title: Markkula Center for Applied Ethics
+    description: Resources on applied and technology ethics, including a widely used framework for ethical decision-making and case studies.
+    provider: Santa Clara University
+    url: https://www.scu.edu/ethics/
+    category: guide
+    module: ethical-foundations
+    difficulty: intermediate
+    stage: core
+    accessType: unknown
+  - title: W3C Web Accessibility Initiative
+    description: Official home of WCAG and introductory guidance on designing accessible digital services.
+    provider: World Wide Web Consortium
+    url: https://www.w3.org/WAI/
+    category: documentation
+    module: technology-and-society
+    difficulty: intermediate
+    stage: core
+    accessType: free
+  - title: General Data Protection Regulation (EUR-Lex)
+    description: Official text of Regulation (EU) 2016/679, useful for comparing EU data protection principles and rights with Ghana's Act 843.
+    provider: Publications Office of the European Union
+    url: https://eur-lex.europa.eu/eli/reg/2016/679/oj
+    category: standard
+    module: data-and-privacy
+    difficulty: advanced
+    stage: advanced
+    accessType: free
+  - title: UK Information Commissioner's Office
+    description: Guidance from the UK data protection regulator explaining data protection principles, lawful bases and workplace monitoring in accessible language.
+    provider: Information Commissioner's Office
+    url: https://ico.org.uk/
+    category: guide
+    module: data-and-privacy
+    difficulty: intermediate
+    stage: revision
+    accessType: unknown

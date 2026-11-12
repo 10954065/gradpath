@@ -1,0 +1,38 @@
+module: sustainable-technology
+cards:
+  - lesson: green-computing-and-energy-efficiency
+    front: Define PUE and state its ideal value.
+    back: PUE = total facility energy ÷ IT equipment energy. The theoretical ideal is 1.0 (no overhead); a PUE of 2.0 means one unit of overhead for every unit delivered to IT.
+  - lesson: green-computing-and-energy-efficiency
+    front: What does PUE fail to measure?
+    back: Whether IT equipment does useful work, the carbon intensity of the electricity and water consumption. Consolidation can cut total energy yet raise PUE, so report absolute energy and carbon too (and companion metrics such as CUE and WUE).
+  - lesson: green-computing-and-energy-efficiency
+    front: How do you convert an average power load into annual energy?
+    back: Multiply average kW by 8,760 hours per year. For example, 400 kW × 8,760 = 3,504,000 kWh.
+  - lesson: green-computing-and-energy-efficiency
+    front: What are Murugesan's four areas of green IT?
+    back: Green use, green disposal, green design and green manufacturing — a lifecycle view rather than a focus on electricity alone.
+  - lesson: green-computing-and-energy-efficiency
+    front: Why are efficiency measures especially valuable for Ghanaian data centres?
+    back: High electricity tariffs, supply interruptions that drive diesel generator use, and a hot, humid climate that raises cooling loads and limits free cooling.
+  - lesson: green-computing-and-energy-efficiency
+    front: How should Agbogbloshie be described accurately?
+    back: As a complex informal scrap recycling hub in Accra that processed much locally generated material and supported many livelihoods, where open cable burning caused serious harm; often mislabelled the "world's largest e-waste dump"; the scrapyard was demolished in 2021.
+  - lesson: sustainable-innovation-and-environmental-impact
+    front: Distinguish direct, enabling and systemic environmental effects of technology.
+    back: Direct — the technology's own footprint; enabling — changes it causes elsewhere (e.g. fuel saved by route optimisation); systemic — long-run behavioural and market changes, including rebound effects.
+  - lesson: sustainable-innovation-and-environmental-impact
+    front: Define scopes 1, 2 and 3 under the GHG Protocol.
+    back: Scope 1 — direct emissions from owned or controlled sources; scope 2 — purchased electricity, heat, steam or cooling; scope 3 — all other value-chain emissions, upstream and downstream.
+  - lesson: sustainable-innovation-and-environmental-impact
+    front: What happens to emissions, in scope terms, when a firm moves servers to the cloud?
+    back: They shift from scope 2 (its own purchased electricity) to scope 3 (purchased services). They may fall if the provider is more efficient or cleaner, but they do not disappear.
+  - lesson: sustainable-innovation-and-environmental-impact
+    front: Summarise AI's environmental footprint qualitatively.
+    back: Energy for training and, in aggregate, for large-scale inference; manufacturing of accelerators; water for cooling; impact varies with grid carbon intensity. Mitigate with efficient or smaller models, clean power and high utilisation.
+  - lesson: sustainable-innovation-and-environmental-impact
+    front: What is the Jevons paradox?
+    back: The observation that efficiency improvements can increase total resource consumption because lower costs stimulate more use — a classic rebound effect.
+  - lesson: sustainable-innovation-and-environmental-impact
+    front: Why is Fairphone a good example of sustainable innovation?
+    back: It designs modular, repairable phones with long support and fairer sourcing, tackling embodied emissions and e-waste through product and business model design.

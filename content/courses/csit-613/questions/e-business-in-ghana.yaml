@@ -1,0 +1,304 @@
+module: e-business-in-ghana
+questions:
+  - id: gh01
+    lesson: ghana-mobile-money-ecosystem
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain how e-money is backed
+    prompt: What primarily protects mobile money customers' balances if an e-money issuer fails?
+    options:
+      - The issuer lends out balances and holds the loans as security
+      - Funds equal to outstanding e-money are held in trust accounts at banks
+      - Agents guarantee all balances from their own cash
+      - The MNO's airtime revenue is pledged to customers
+    answer: 1
+    explanation: E-money must be backed by funds held in trust at banks, ring-fenced from the issuer's own assets. Unlike bank deposits, these funds are not lent out. Agents hold only their own float, and airtime revenue is not a customer safeguard.
+  - id: gh02
+    lesson: ghana-mobile-money-ecosystem
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Understand the effect of cash-in transactions
+    prompt: When an agent performs a cash-in transaction, new money is created because the customer's wallet balance increases.
+    answer: false
+    explanation: The agent transfers e-float they already own in exchange for the customer's cash. Total money is unchanged; the agent's liquidity simply shifts from e-float to cash.
+  - id: gh03
+    lesson: ghana-mobile-money-ecosystem
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Calculate an agent's e-float after transactions
+    prompt: An agent opens with GHS 2,000 e-float and GHS 1,500 cash, then processes cash-ins of GHS 1,200 and cash-outs of GHS 900. What is the agent's e-float balance in GHS?
+    answers: ["1700", "1,700", "GHS 1,700", "GHS 1700"]
+    explanation: Cash-ins reduce e-float (2,000 − 1,200 = 800) and cash-outs increase it (800 + 900 = 1,700). Cash moves the opposite way, ending at 1,800, and total liquidity stays at 3,500.
+  - id: gh04
+    lesson: ghana-mobile-money-ecosystem
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Match ecosystem actors to their roles
+    prompt: Match each actor to its main role in Ghana's mobile money ecosystem.
+    pairs:
+      - left: Bank of Ghana
+        right: Licenses and supervises payment and e-money providers
+      - left: GhIPSS
+        right: Operates the national interoperability switch
+      - left: Agents
+        right: Convert cash to e-value and back for customers
+      - left: Banks
+        right: Hold trust accounts backing e-money
+    explanation: Confusing the regulator (Bank of Ghana) with the switch operator (GhIPSS) is a common error. Agents provide the cash interface, and banks hold the trust funds that back outstanding e-money.
+  - id: gh05
+    lesson: ghana-mobile-money-ecosystem
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse agent liquidity patterns
+    scenario: |
+      An agent in a busy market area regularly runs out of e-float in the late afternoon, when traders arrive to deposit the day's takings, and has to turn customers away.
+    prompt: What is the most appropriate response?
+    options:
+      - Raise cash-in fees to discourage deposits
+      - Rebalance before the afternoon peak by converting surplus cash to e-float, anticipating the pattern
+      - Stop offering cash-out services
+      - Ask traders to share their PINs so deposits can be processed later
+    answer: 1
+    explanation: The shortage is predictable, so proactive rebalancing through a bank or master agent before the peak solves it. Raising fees damages trust and may breach rules, stopping cash-outs removes the flow that replenishes e-float, and requesting PINs is a serious security breach.
+  - id: gh06
+    lesson: ghana-mobile-money-ecosystem
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the strategic impact of interoperability
+    prompt: Which statement best evaluates the effect of mobile money interoperability on competition in Ghana?
+    options:
+      - It ends competition because all wallets become identical
+      - It partly shares network effects across providers, shifting competition towards price, reliability and value-added services
+      - It benefits only the largest provider
+      - It has no effect because customers never send money across networks
+    answer: 1
+    explanation: When wallets connect, the value of a provider's large user base is partly shared with rivals, so providers compete on other dimensions. Wallets do not become identical, effects on providers are mixed rather than favouring only the largest, and cross-network transfers are a key use case.
+  - id: gh07
+    lesson: ghana-mobile-money-ecosystem
+    type: true_false
+    bloom: recall
+    difficulty: easy
+    objective: Recall the main payment systems law
+    prompt: The Payment Systems and Services Act, 2019 (Act 987) provides the legal framework for licensing and supervising payment systems and electronic money issuers in Ghana.
+    answer: true
+    explanation: Act 987 is the core statute for payment systems and e-money oversight by the Bank of Ghana, alongside related laws on AML, data protection and cybersecurity.
+  - id: gh08
+    lesson: digital-payment-adoption-and-online-retail
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match UTAUT constructs to examples
+    prompt: Match each UTAUT or UTAUT2 construct to the statement that illustrates it.
+    pairs:
+      - left: Performance expectancy
+        right: Paying by wallet saves me a trip to the bank
+      - left: Effort expectancy
+        right: Scanning the QR code takes only a few seconds
+      - left: Social influence
+        right: My suppliers expect me to accept mobile money
+      - left: Facilitating conditions
+        right: Network coverage is reliable and an agent is nearby
+      - left: Habit
+        right: I always pay cash without thinking about it
+    explanation: Performance expectancy concerns gains, effort expectancy ease, social influence the expectations of others, facilitating conditions available resources and habit automatic behaviour. Accurate mapping is the first step in applying the model.
+  - id: gh09
+    lesson: digital-payment-adoption-and-online-retail
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Recall the two core constructs of TAM
+    prompt: Which two beliefs are central to Davis's (1989) Technology Acceptance Model?
+    options:
+      - Social influence and habit
+      - Perceived usefulness and perceived ease of use
+      - Price value and hedonic motivation
+      - Trust and perceived risk
+    answer: 1
+    explanation: TAM centres on perceived usefulness and perceived ease of use. Social influence comes from UTAUT; price value, hedonic motivation and habit from UTAUT2; trust and risk are common extensions.
+  - id: gh10
+    lesson: digital-payment-adoption-and-online-retail
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply a cost model to a cash-on-delivery incentive
+    scenario: |
+      An online retailer converts 300 cash-on-delivery orders a month to prepaid by offering a discount. The conversion produces savings of GHS 1,875 per month from fewer failed deliveries and less cash handling. PSP fees on the converted orders are GHS 1,200 per month, and the average order value is GHS 200.
+    prompt: What is the highest discount per order (as a percentage) at which the conversion still does not lose money?
+    options:
+      - About 1.1%
+      - About 3%
+      - About 5%
+      - Any discount, because prepaid orders are always cheaper
+    answer: 0
+    explanation: The room left for discounts is 1,875 − 1,200 = 675 a month. Spread over 300 orders this is GHS 2.25 per order, which is 1.125% of GHS 200. A 3% or 5% discount would lose money, and the scenario shows that prepaid is not automatically cheaper once PSP fees are counted.
+  - id: gh11
+    lesson: digital-payment-adoption-and-online-retail
+    type: true_false
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the risk allocation of cash on delivery
+    prompt: Cash on delivery shifts the risk of non-performance from the customer to the seller.
+    answer: true
+    explanation: With cash on delivery the customer pays only on receipt, so the seller bears the cost of failed or refused deliveries, rider cash handling and delayed settlement. This is why COD remains popular where trust between strangers is low.
+  - id: gh12
+    lesson: digital-payment-adoption-and-online-retail
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the Ghanaian digital addressing system
+    prompt: What is the name of Ghana's national digital address system used to support deliveries?
+    answers: [GhanaPostGPS, Ghana Post GPS, GhanaPost GPS]
+    explanation: GhanaPostGPS assigns digital address codes to locations. It supports last-mile delivery, although many deliveries still rely on landmarks and phone calls to riders.
+  - id: gh13
+    lesson: digital-payment-adoption-and-online-retail
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate adoption levers for an SME
+    prompt: An SME finds that customers are aware of its mobile money checkout but still choose cash on delivery because they fear paying for goods that never arrive. Which intervention most directly addresses the main barrier?
+    options:
+      - An advertising campaign explaining that mobile money exists
+      - Visible buyer protection, instant order confirmation and a clear refund policy
+      - Removing the cash-on-delivery option immediately
+      - A larger product catalogue
+    answer: 1
+    explanation: The barrier is trust and perceived risk, not awareness, so trust-building measures are the most direct lever. Awareness campaigns target the wrong problem, removing COD abruptly risks losing customers, and a larger catalogue does not reduce perceived risk.
+  - id: gh14
+    lesson: digital-payment-adoption-and-online-retail
+    type: matching
+    bloom: apply
+    difficulty: medium
+    objective: Apply diffusion of innovations attributes
+    prompt: Match each diffusion of innovations attribute to its illustration for QR code payments in a Ghanaian market.
+    pairs:
+      - left: Relative advantage
+        right: No need to carry change or count notes
+      - left: Compatibility
+        right: Works with the wallet the trader already uses
+      - left: Trialability
+        right: A trader can test it with a few customers first
+      - left: Observability
+        right: Neighbouring stalls display QR codes and customers see them used
+    explanation: Rogers' attributes explain why some innovations spread faster than others. Applying them to a concrete case turns a list of terms into an analytical tool.
+  - id: gh15
+    lesson: sme-commerce-psps-and-financial-inclusion
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish PSP roles
+    prompt: Match each payment role to its description.
+    pairs:
+      - left: Payment gateway
+        right: Captures payment details at checkout and routes them for authorisation
+      - left: Aggregator
+        right: One integration connecting a merchant to many payment methods
+      - left: Acquirer
+        right: Holds the card acceptance contract and settles card funds to the merchant
+      - left: Payment facilitator
+        right: Onboards many small merchants under its own master account
+    explanation: Many providers bundle these roles, but analysing them separately clarifies who does what, who carries which risk and what an SME actually needs.
+  - id: gh16
+    lesson: sme-commerce-psps-and-financial-inclusion
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Calculate a weighted PSP score
+    prompt: A PSP scores 5, 4, 3, 4, 5 and 3 on criteria weighted 0.25, 0.15, 0.20, 0.15, 0.15 and 0.10. What is its weighted score?
+    answers: ["4.1", "4.10"]
+    explanation: 5×0.25 + 4×0.15 + 3×0.20 + 4×0.15 + 5×0.15 + 3×0.10 = 1.25 + 0.60 + 0.60 + 0.60 + 0.75 + 0.30 = 4.10. Weighted scoring turns qualitative judgements into a comparable figure, but it must be backed by evidence and tested for sensitivity.
+  - id: gh17
+    lesson: sme-commerce-psps-and-financial-inclusion
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Understand the dimensions of financial inclusion
+    prompt: A person who has opened a mobile money account but never uses it is fully financially included.
+    answer: false
+    explanation: Financial inclusion covers access, usage and quality. An unused account shows access only; inclusion also requires regular use of affordable, suitable and well-protected services.
+  - id: gh18
+    lesson: sme-commerce-psps-and-financial-inclusion
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the effect of weight changes on PSP selection
+    scenario: |
+      An SME's weighted scoring model ranks Provider A first, with Provider B close behind. The owner then decides to rely on payment links rather than website plugins, which lowers the weight on APIs and raises the weight on fees. Provider B has lower fees but weaker APIs than A.
+    prompt: What is the most likely effect, and what does it show?
+    options:
+      - A stays first, because rankings do not change when weights change
+      - B may overtake A, showing that the decision is sensitive to weights that reflect business priorities
+      - Both providers must be rejected
+      - The model becomes invalid and should be abandoned
+    answer: 1
+    explanation: Moving weight from a criterion where A is stronger to one where B is stronger can reverse a close ranking, as the lesson's sensitivity test showed. This is why weights must reflect real priorities and why sensitivity analysis is essential. It does not invalidate the model or require rejecting both providers.
+  - id: gh19
+    lesson: sme-commerce-psps-and-financial-inclusion
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate alternative data credit for SMEs
+    prompt: Which statement gives the most balanced evaluation of using mobile money transaction histories to lend to SMEs?
+    options:
+      - It removes all credit risk because transaction data is accurate
+      - It can extend credit to firms without collateral, but needs transparent pricing, fair collection, data protection and attention to firms without digital histories
+      - It should be banned because data must never be used for credit
+      - It only benefits large firms
+    answer: 1
+    explanation: Transaction data can demonstrate cash flow and widen access, but risks include costly or poorly disclosed loans, over-indebtedness, privacy concerns and continued exclusion of firms without data. Credit risk is reduced, not eliminated; outright bans ignore the benefits; and the main beneficiaries are often small firms.
+  - id: gh20
+    lesson: sme-commerce-psps-and-financial-inclusion
+    type: true_false
+    bloom: apply
+    difficulty: easy
+    objective: Apply hard constraints in PSP selection
+    prompt: A PSP that is not licensed or authorised by the Bank of Ghana should be excluded from an SME's shortlist even if it achieves the highest weighted score.
+    answer: true
+    explanation: Licensing is a hard constraint, not a scoring criterion. Weighted scores rank only providers that already meet essential requirements such as regulatory authorisation and adequate reconciliation reporting.
+  - id: gh21
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a digital payments strategy for a Ghanaian SME using ecosystem and adoption theory
+    marks: 25
+    prompt: Analyse the case using ecosystem, adoption and inclusion concepts, and recommend a justified digital payment strategy for the business.
+    case: |
+      Illustrative scenario: Adom Foods is a hypothetical Kumasi-based producer of packaged gari and spices. It sells to market traders in Kejetia, to two supermarkets and, recently, to individual customers through Instagram and WhatsApp. Traders pay mostly in cash; supermarkets pay by bank transfer after 30 days; online customers pay by cash on delivery or by sending mobile money to the owner's personal number. The owner wants to grow online sales, reduce cash handling and qualify for a working-capital loan, but several traders say they distrust digital payments after hearing about fraud, and some worry about fees and taxes.
+    structure:
+      - Map the relevant ecosystem actors and payment flows
+      - Apply UTAUT2 and trust to explain traders' and online customers' behaviour
+      - Evaluate PSP and acceptance options with selection criteria
+      - Link the strategy to records, reconciliation and access to credit
+      - Identify risks, safeguards and a phased plan
+    rubric:
+      - criterion: Ecosystem analysis
+        marks: 5
+        descriptor: Accurately maps customers, traders, supermarkets, issuers, PSPs, banks and the regulator, and the flows between them.
+      - criterion: Application of adoption theory
+        marks: 6
+        descriptor: Applies UTAUT2 constructs and trust to each customer segment with specific reasoning.
+      - criterion: Payment option evaluation
+        marks: 6
+        descriptor: Compares merchant wallets, aggregators, QR codes and payment links with clear criteria and hard constraints.
+      - criterion: Inclusion and credit linkage
+        marks: 5
+        descriptor: Explains how structured records support credit while noting risks of costly digital credit.
+      - criterion: Risks and implementation plan
+        marks: 3
+        descriptor: Presents a realistic phased plan with safeguards, noting the analysis is educational, not financial advice.
+    modelAnswer: |
+      A strong answer first maps the ecosystem: traders and online customers paying through cash or wallets on different networks; supermarkets paying by bank transfer; e-money issuers and banks; a possible PSP or aggregator; and the Bank of Ghana as regulator. The key structural problem is that online receipts go to a personal wallet, mixing funds and leaving no records for reconciliation or lenders.
+
+      Applying UTAUT2, the traders' reluctance reflects low trust and high perceived risk, price value concerns about fees and taxes, and strong cash habit; performance expectancy is modest because cash already works for them. Online customers face a different barrier: fear of paying for goods that never arrive, which COD resolves at the seller's expense.
+
+      The strategy should therefore differ by segment. For online sales, a licensed aggregator offering payment links, prompts and cards across networks, with instant confirmation and a clear refund policy, addresses trust and effort. For traders, a merchant wallet and a universal QR code, introduced gradually with demonstrations, increases trialability and observability; Adom should never ask for PINs and should explain fees transparently. Supermarket transfers already create records. PSP choice should apply weighted criteria with hard constraints such as licensing and reconciliation reports.
+
+      Linking to inclusion, consolidated merchant collections and daily reconciliation produce a transaction history that can support a working-capital loan application, but the owner should compare loan costs carefully and avoid expensive short-term digital credit.
+
+      Risks include fraud, platform outages and customer loss if cash is withdrawn too quickly; a phased plan keeps cash and COD available while digital channels grow.
+    explanation: Examiners look for segment-specific application of adoption theory, a clear ecosystem map, evidence-based PSP selection, an explicit link between records and credit, and a realistic, phased plan.

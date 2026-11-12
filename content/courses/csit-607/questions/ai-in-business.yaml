@@ -1,0 +1,306 @@
+module: ai-in-business
+questions:
+  - id: q01
+    lesson: bi-predictive-analytics-and-forecasting
+    type: matching
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish the four types of analytics
+    prompt: Match each type of analytics to the question it answers.
+    pairs:
+      - left: Descriptive
+        right: What happened?
+      - left: Diagnostic
+        right: Why did it happen?
+      - left: Predictive
+        right: What is likely to happen?
+      - left: Prescriptive
+        right: What should we do?
+    explanation: Traditional BI mainly covers descriptive and diagnostic analytics; predictive and prescriptive analytics use models to estimate outcomes and recommend actions. Each stage depends on trustworthy data from the earlier ones.
+
+  - id: q02
+    lesson: bi-predictive-analytics-and-forecasting
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Compute a moving-average forecast
+    prompt: Weekly sales are 140, 135 and 150 for the three most recent weeks. What is the three-week moving-average forecast for next week?
+    options:
+      - "150.00"
+      - "141.67"
+      - "135.00"
+      - "425.00"
+    answer: 1
+    explanation: (140 + 135 + 150) / 3 = 425 / 3 ≈ 141.67. Using only the last value (150) is a naive forecast, 135 is one observation, and 425 is the unaveraged sum.
+
+  - id: q03
+    lesson: bi-predictive-analytics-and-forecasting
+    type: short_answer
+    bloom: apply
+    difficulty: hard
+    objective: Apply simple exponential smoothing
+    prompt: With α = 0.3, last week's forecast was 123.6 and last week's actual sales were 140. What is the forecast for this week? Give two decimal places.
+    answers:
+      - "128.52"
+    explanation: F = 0.3 × 140 + 0.7 × 123.6 = 42 + 86.52 = 128.52. The latest actual is weighted by α and the previous forecast by 1 − α.
+
+  - id: q04
+    lesson: bi-predictive-analytics-and-forecasting
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the limitation of simple smoothing methods with trends
+    prompt: Moving averages and simple exponential smoothing tend to under-forecast when demand is rising steadily.
+    answer: true
+    explanation: Both methods average past values, so their forecasts lag behind an upward trend. Methods with an explicit trend component, such as Holt's method, address this.
+
+  - id: q05
+    lesson: bi-predictive-analytics-and-forecasting
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the adoption of machine learning forecasting
+    scenario: |
+      Illustrative scenario. A Ghanaian pharmaceutical distributor's sales data are spread across spreadsheets with inconsistent product codes. A vendor proposes a deep learning forecasting platform that will "eliminate stock-outs".
+    prompt: What should the distributor do first?
+    options:
+      - Buy the platform immediately because AI forecasts are always better
+      - Integrate and clean the data into a BI layer, establish baseline forecasts and error measures, then pilot advanced models against those benchmarks
+      - Stop forecasting and rely on intuition
+      - Use MAPE only for products that sell zero units
+    answer: 1
+    explanation: Reliable integrated data and simple benchmarks must come first; any advanced model should prove it beats them out of sample. Vendor claims to eliminate stock-outs are unrealistic, abandoning forecasting loses value, and MAPE is undefined for zero sales.
+
+  - id: q06
+    lesson: bi-predictive-analytics-and-forecasting
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the role of event-specific drivers in forecasting
+    prompt: What is the main forecasting lesson from Walmart's analysis of pre-hurricane purchases?
+    options:
+      - Weather never affects retail demand
+      - Event-specific drivers can cause demand changes, including unexpected products, that ordinary weekly forecasts miss
+      - Forecasting should only use the previous week's sales
+      - Only perishable goods respond to events
+    answer: 1
+    explanation: Historical analysis showed demand rising for items such as strawberry Pop-Tarts as well as emergency supplies. Including event drivers, such as festive seasons or school terms in Ghana, improves forecasts. The other options contradict the case.
+
+  - id: q07
+    lesson: customer-analytics-and-fraud-detection
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Apply RFM scoring
+    prompt: Among five customers, C4 bought 90 days ago, made 1 purchase and spent the least. What RFM code should C4 receive on a 1–5 scale where 5 is best?
+    options:
+      - "555"
+      - "111"
+      - "511"
+      - "151"
+    answer: 1
+    explanation: C4 is the least recent, least frequent and lowest-spending customer, so it scores 1 on each dimension. A score of 5 for recency would wrongly reward a long gap since the last purchase.
+
+  - id: q08
+    lesson: customer-analytics-and-fraud-detection
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Compute a z-score anomaly measure
+    prompt: A customer's transfers have mean GHS 150 and standard deviation GHS 50. What is the z-score of a new GHS 900 transfer?
+    answers:
+      - "15"
+      - "15.0"
+    explanation: z = (900 − 150) / 50 = 15, far outside normal variation for this customer. It is a signal for verification, not proof of fraud.
+
+  - id: q09
+    lesson: customer-analytics-and-fraud-detection
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain correct use of resampling
+    prompt: Oversampling the fraud class should be applied to the whole dataset before splitting into training and test sets.
+    answer: false
+    explanation: Resampling before splitting lets copies or synthetic versions of test cases appear in training, leaking information and inflating results. Resampling must be applied to the training data only.
+
+  - id: q10
+    lesson: customer-analytics-and-fraud-detection
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse retention targeting using propensity and uplift
+    scenario: |
+      Illustrative scenario. A bank sends fee waivers to all customers its model predicts are likely to churn. Churn among them falls slightly, but costs rise sharply. A test later shows many recipients would have stayed anyway.
+    prompt: What would most improve the programme?
+    options:
+      - Send waivers to every customer
+      - Target customers who are both likely to churn and likely to respond to the offer, identified through controlled testing
+      - Stop measuring churn
+      - Use accuracy as the only evaluation metric
+    answer: 1
+    explanation: Predicting churn is not the same as preventing it. Uplift-oriented targeting, learned from control groups, focuses spending where the intervention changes behaviour. Blanket offers waste money, and abandoning measurement or relying on accuracy hides the problem.
+
+  - id: q11
+    lesson: customer-analytics-and-fraud-detection
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match fraud detection approaches to characteristics
+    prompt: Match each fraud detection approach to its characteristic.
+    pairs:
+      - left: Expert rules
+        right: Transparent and quick to deploy, but fraudsters learn to evade them
+      - left: Supervised classifier
+        right: Learns complex patterns from labelled history, but labels are delayed and incomplete
+      - left: Anomaly detection
+        right: Flags unusual behaviour without labels, helping to catch new schemes
+      - left: Graph analysis
+        right: Links accounts, devices and numbers to uncover mule networks
+    explanation: Mature systems layer these approaches because each covers weaknesses of the others in an adversarial, imbalanced environment.
+
+  - id: q12
+    lesson: customer-analytics-and-fraud-detection
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the ethical lesson of the Target case
+    prompt: What is the main lesson of the Target pregnancy-prediction case for customer analytics?
+    options:
+      - Retail purchase data contain no useful information
+      - Accurate inference of sensitive characteristics can itself be intrusive and harmful, so organisations must set limits on acceptable inferences
+      - Models should always be made less accurate
+      - Personalised marketing is illegal in all countries
+    answer: 1
+    explanation: The case shows that a correct prediction about something sensitive can breach customer expectations of privacy. The response is governance over which inferences are made and how they are used, not deliberately poor models or blanket claims about legality.
+
+  - id: q13
+    lesson: support-automation-and-decision-support
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Compute containment and resolution
+    prompt: A chatbot handled 10,000 conversations, 6,000 without transfer, and 900 of those customers re-contacted within 48 hours about the same issue. What is the verified resolution rate by the bot?
+    options:
+      - "60%"
+      - "51%"
+      - "69%"
+      - "9%"
+    answer: 1
+    explanation: Resolution = (6,000 − 900) / 10,000 = 51%. 60% is containment, which ignores repeat contacts; 69% wrongly adds the repeats; 9% is the repeat-contact proportion.
+
+  - id: q14
+    lesson: support-automation-and-decision-support
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply escalation rules
+    scenario: |
+      Illustrative scenario. A customer writes to a mobile money chatbot that someone phoned pretending to be staff and the customer shared their PIN. The intent classifier returns "fraud report" with confidence 0.88.
+    prompt: What should the system do?
+    options:
+      - Answer automatically with a generic FAQ because confidence exceeds 0.80
+      - Escalate immediately to the fraud team with conversation context and guide the customer through urgent security steps
+      - Ask the customer to try again tomorrow
+      - Close the conversation because the customer made the mistake
+    answer: 1
+    explanation: Fraud and PIN compromise are sensitive topics that should always trigger human escalation regardless of confidence, with context passed on and immediate protective guidance. The other options increase harm and liability.
+
+  - id: q15
+    lesson: support-automation-and-decision-support
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Explain organisational accountability for chatbots
+    prompt: In Moffatt v. Air Canada (2024), the tribunal accepted the airline's argument that it was not responsible for information given by its chatbot.
+    answer: false
+    explanation: The tribunal rejected that argument, holding the airline responsible for all information on its website, including the chatbot's, and ordered compensation. Organisations should treat bot answers as their own statements.
+
+  - id: q16
+    lesson: support-automation-and-decision-support
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall Simon's decision-making phases
+    prompt: Simon's model describes decision-making as intelligence, design and which third phase?
+    answers:
+      - choice
+      - the choice phase
+    explanation: Intelligence identifies the problem, design develops alternatives and choice selects among them. AI can support each phase, from anomaly alerts to optimisation.
+
+  - id: q17
+    lesson: support-automation-and-decision-support
+    type: mcq
+    bloom: apply
+    difficulty: hard
+    objective: Compute expected value in a payoff table
+    prompt: An order option yields GHS 2,750 with probability 0.3, GHS 6,000 with probability 0.5 and GHS 6,000 with probability 0.2. What is its expected value?
+    options:
+      - "GHS 4,916"
+      - "GHS 5,025"
+      - "GHS 6,000"
+      - "GHS 14,750"
+    answer: 1
+    explanation: 0.3 × 2,750 + 0.5 × 6,000 + 0.2 × 6,000 = 825 + 3,000 + 1,200 = 5,025. A simple unweighted mean gives about 4,917, the best-case payoff is 6,000, and 14,750 is the unweighted sum.
+
+  - id: q18
+    lesson: support-automation-and-decision-support
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate DSS design against automation bias
+    scenario: |
+      Illustrative scenario. Loan officers at a savings and loans company approve almost every application the DSS marks "recommended", including some with obvious documentation problems.
+    prompt: Which design change best addresses this?
+    options:
+      - Hide the recommendation entirely and remove the DSS
+      - Show the key factors and uncertainty behind each recommendation, require officers to record reasons for decisions, and audit agreement patterns
+      - Make the recommendation appear in larger font
+      - Automate approvals fully so officers are not involved
+    answer: 1
+    explanation: This is automation bias. Explanations, uncertainty display, recorded reasoning and audits encourage critical engagement while retaining the DSS's value. Removing the DSS loses benefits, emphasis worsens over-reliance, and full automation removes the human safeguard.
+
+  - id: q19
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Design an integrated AI-enabled customer and operations strategy
+    marks: 25
+    case: |
+      Illustrative scenario. A supermarket chain with twelve branches in Accra, Kumasi and Takoradi has a loyalty programme, point-of-sale data for four years and a growing mobile money payment channel. Managers report frequent stock-outs of staples before festive periods, high waste of fresh produce, rising complaints about long call-centre waits, and a small number of suspicious refunds processed at tills. The board asks for an AI roadmap for the next eighteen months.
+    prompt: Critically evaluate and prioritise AI applications for this chain across forecasting, customer analytics, fraud detection and customer support, recommending a phased roadmap with appropriate methods, metrics and safeguards.
+    structure:
+      - Diagnose the data foundation and BI needs before advanced AI
+      - Propose demand forecasting with benchmarks, festive drivers and an expected-value ordering DSS
+      - Propose RFM segmentation and retention targeting with privacy limits
+      - Propose refund-fraud analytics handling imbalance and investigator feedback
+      - Propose support automation with escalation and balanced metrics
+      - Prioritise into phases with KPIs, risks and governance including Act 843
+    rubric:
+      - criterion: Data and BI foundation
+        marks: 4
+        descriptor: Recognises integration, data quality and dashboards as prerequisites
+      - criterion: Forecasting and decision support
+        marks: 6
+        descriptor: Appropriate methods, benchmarks, event drivers, error metrics and link to ordering decisions
+      - criterion: Customer analytics and fraud
+        marks: 6
+        descriptor: Correct use of RFM/CLV and anomaly or supervised fraud methods with imbalance handling and ethics
+      - criterion: Support automation
+        marks: 4
+        descriptor: Suitable chatbot architecture, escalation and resolution-based metrics
+      - criterion: Prioritisation and governance
+        marks: 5
+        descriptor: Justified phasing, measurable KPIs, risks, accountability and data protection
+    modelAnswer: |
+      A strong answer begins with the data foundation. Four years of POS and loyalty data are valuable only if product codes, branches and customer identifiers are integrated in a warehouse with reliable dashboards for stock-outs, waste and refunds. This should be phase one, because it also yields quick descriptive wins.
+
+      Forecasting is the highest-value application, as stock-outs and waste are direct costs. The chain should forecast at product–branch–week level, start with seasonal exponential smoothing benchmarks, then pilot gradient-boosted models including festive periods, paydays, school terms and promotions. Evaluation should use MAE or RMSE on held-out festive seasons. Forecasts should feed an ordering DSS using expected-value or newsvendor-style logic, especially for perishables where unsold stock is costly, with buyers able to adjust for local knowledge.
+
+      Customer analytics via RFM gives transparent segments for promotions; CLV helps decide retention spending; controlled tests should show which offers change behaviour. Limits on sensitive inferences, consent and purpose specification are required under the Data Protection Act, 2012 (Act 843).
+
+      Refund fraud is rare and adversarial. Rules (for example, refunds without matching sales), anomaly scores by cashier and till, and later a supervised model trained on investigated cases are appropriate, with precision and recall rather than accuracy and with investigator outcomes fed back as labels. Staff fairness and due process matter.
+
+      For support, a WhatsApp bot handling store hours, stock queries and loyalty balances via APIs, with a grounded knowledge base, clear human escalation and resolution-based metrics, would reduce waits.
+
+      A phased roadmap might be: months 0–6 data and BI plus a forecasting pilot; months 6–12 ordering DSS, RFM and refund rules; months 12–18 support automation and supervised fraud models, each with KPIs, owners and review.
+    explanation: Examiners reward prioritisation grounded in business value and data readiness, correct method choices with matching metrics, and explicit safeguards rather than a list of fashionable tools.

@@ -1,0 +1,53 @@
+module: advanced-ai
+cards:
+  - lesson: neural-networks-and-deep-learning
+    front: What does an artificial neuron compute?
+    back: An activation function applied to the weighted sum of its inputs plus a bias, output = f(Σ wi xi + b). With a sigmoid activation, a single neuron is equivalent to logistic regression.
+  - lesson: neural-networks-and-deep-learning
+    front: Why are non-linear activation functions essential?
+    back: Without them, stacked layers collapse into one linear model. Non-linearity lets networks learn complex functions and hierarchical representations.
+  - lesson: neural-networks-and-deep-learning
+    front: What is the gradient-descent update rule?
+    back: New weight = old weight − learning rate × gradient. For a sigmoid neuron with log loss, the gradient for each weight is (output − true label) × input.
+  - lesson: neural-networks-and-deep-learning
+    front: What does backpropagation contribute to training?
+    back: It applies the chain rule backwards through the layers to compute the gradient of the loss for every weight efficiently, so all layers can learn.
+  - lesson: neural-networks-and-deep-learning
+    front: What three factors drove the deep learning resurgence around 2012?
+    back: Large labelled datasets such as ImageNet, GPU computing, and algorithmic advances such as ReLU, dropout and better initialisation.
+  - lesson: neural-networks-and-deep-learning
+    front: When is deep learning not the best choice for a business?
+    back: For structured tabular data, small datasets or decisions needing clear explanations, where gradient-boosted trees or logistic regression often perform as well at lower cost.
+  - lesson: computer-vision-and-nlp
+    front: How does a convolution filter detect a pattern?
+    back: It slides across the image, multiplying its values with each window of pixels and summing them; high outputs mark where the pattern, such as a vertical edge, occurs.
+  - lesson: computer-vision-and-nlp
+    front: Distinguish image classification, object detection and segmentation.
+    back: Classification gives one label per image, detection locates and labels multiple objects with boxes, and segmentation labels every pixel to outline exact shapes.
+  - lesson: computer-vision-and-nlp
+    front: Why do modern NLP models use subword tokenisation?
+    back: It represents any word, including rare names, slang and misspellings, with a fixed vocabulary by splitting unfamiliar words into smaller known pieces.
+  - lesson: computer-vision-and-nlp
+    front: What is cosine similarity and why does it matter for business search?
+    back: (a · b) / (|a| × |b|), measuring how closely two embeddings point in the same direction. It lets semantic search match "borrow money" with a loan FAQ without shared words.
+  - lesson: computer-vision-and-nlp
+    front: Why is NLP harder for Ghanaian customer messages?
+    back: Languages such as Twi, Ewe, Ga and Dagbani are low-resource and messages often mix them with English, so English-trained models misread them; local data and per-language evaluation are needed.
+  - lesson: generative-ai-and-llms
+    front: What are the main steps of a transformer LLM generating text?
+    back: Tokenise, embed with positional information, pass through transformer blocks with self-attention and feed-forward layers, compute next-token probabilities by softmax, select a token, append and repeat.
+  - lesson: generative-ai-and-llms
+    front: What do queries, keys and values do in self-attention?
+    back: Each token's query is compared with other tokens' keys to produce scores; softmax turns scores into weights; the token's new representation is the weighted sum of values.
+  - lesson: generative-ai-and-llms
+    front: How does temperature change LLM output?
+    back: Scores are divided by the temperature before softmax. Low temperature concentrates probability on the top token, giving consistent output; high temperature flattens it, giving varied, less reliable output.
+  - lesson: generative-ai-and-llms
+    front: Why do LLMs hallucinate?
+    back: They are trained to produce plausible continuations, not verified facts, and lack a built-in truth check, so data gaps, cut-off dates and pressure to answer yield confident fabrications.
+  - lesson: generative-ai-and-llms
+    front: How does retrieval-augmented generation reduce hallucination, and what are its limits?
+    back: It retrieves trusted passages and instructs the model to answer from them with citations. Retrieval can still fetch the wrong passage and models can misread sources, so evaluation remains essential.
+  - lesson: generative-ai-and-llms
+    front: What is the business lesson of Mata v. Avianca (2023)?
+    back: Lawyers were sanctioned after filing ChatGPT-generated citations to non-existent cases. Outputs relied upon must be verified against authoritative sources, and accountability stays with the professional.

@@ -1,0 +1,56 @@
+module: enterprise-technology
+cards:
+  - lesson: workflow-automation-and-cloud-erp
+    front: What does a workflow engine do when it executes a process model?
+    back: It creates and routes tasks to the right roles, applies business rules, enforces deadlines with reminders and escalations, handles delegation and records a full audit trail.
+  - lesson: workflow-automation-and-cloud-erp
+    front: List the five suitability criteria for an RPA candidate.
+    back: Rule-based, high volume or frequent, stable screens and rules, structured digital inputs, and a mature documented process with known exceptions.
+  - lesson: workflow-automation-and-cloud-erp
+    front: Why is RPA often described as a tactical bridge?
+    back: It automates quickly without changing systems, but bots break when screens change; where stable APIs exist or can be built, direct integration is more robust long term.
+  - lesson: workflow-automation-and-cloud-erp
+    front: What drives the benefit in an RPA business case, and what erodes it?
+    back: Volume, time per case, straight-through processing rate and redeployment of saved time drive it; exceptions, licences, maintenance and screen changes erode it.
+  - lesson: workflow-automation-and-cloud-erp
+    front: What is the "clean core" approach in cloud ERP?
+    back: Keeping the vendor's standard code unmodified and extending it only through configuration and published APIs, so that frequent upgrades remain possible.
+  - lesson: workflow-automation-and-cloud-erp
+    front: What is two-tier ERP?
+    back: A large ERP at corporate level combined with simpler, often cloud, ERP at subsidiaries or branches, integrated for consolidation and intercompany trading.
+  - lesson: enterprise-security
+    front: What four activities does segregation of duties separate?
+    back: Authorising a transaction, having custody of the asset, recording the transaction and reconciling or reviewing it.
+  - lesson: enterprise-security
+    front: Why is role-based access control easier to govern than user-by-user permissions?
+    back: Permissions are grouped into job-based roles that can be checked for SoD at design time, provisioned consistently and reviewed by managers in business terms.
+  - lesson: enterprise-security
+    front: Why must SoD be checked at user level as well as role level?
+    back: Two individually conflict-free roles assigned to the same user can combine into a conflict, such as posting invoices plus releasing payments.
+  - lesson: enterprise-security
+    front: Give three examples of compensating controls for an unavoidable SoD conflict.
+    back: Independent manager review of payment runs or reports, system-enforced approval thresholds, and exception reports or alerts on sensitive changes such as supplier bank details.
+  - lesson: enterprise-security
+    front: How should privileged or emergency access be managed?
+    back: Granted temporarily under approval, fully logged, and reviewed after use; never held permanently by administrators.
+  - lesson: enterprise-security
+    front: What control failure lies at the heart of the Barings collapse (1995)?
+    back: One person controlled both trading and the settlement operations that recorded and reconciled trades, allowing losses to be concealed, with weak management oversight.
+  - lesson: bi-reporting-and-digital-transformation
+    front: Name the five layers of a typical BI architecture.
+    back: Sources, integration (ETL or ELT), storage (data warehouse or lakehouse), semantic layer, and presentation (reports, dashboards, alerts).
+  - lesson: bi-reporting-and-digital-transformation
+    front: Why not run all analysis directly on the ERP?
+    back: Heavy analytical queries can slow transactions, ERP structures are designed for recording not analysis, and decisions often need data integrated from several systems.
+  - lesson: bi-reporting-and-digital-transformation
+    front: What should a KPI definition card contain?
+    back: Name, objective, formula and data sources, inclusion rules, unit, frequency, level of detail, targets and thresholds, an accountable owner and a data steward.
+  - lesson: bi-reporting-and-digital-transformation
+    front: How are stock turnover and days of inventory calculated?
+    back: Stock turnover = COGS / average inventory at cost; days of inventory = 365 / stock turnover.
+  - lesson: bi-reporting-and-digital-transformation
+    front: Distinguish digitisation, digitalisation and digital transformation.
+    back: Digitisation converts information to digital form; digitalisation changes processes with digital tools; digital transformation changes customer value, operations or the business model.
+  - lesson: bi-reporting-and-digital-transformation
+    front: Why is M-Pesa considered digital transformation rather than digitalisation?
+    back: It created a new mobile financial services platform and moved the operator's business model beyond voice and data, reshaping an ecosystem rather than just digitising a process.

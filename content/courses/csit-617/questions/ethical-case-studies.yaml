@@ -1,0 +1,327 @@
+module: ethical-case-studies
+questions:
+  # ---------- ai-recruitment-and-employee-monitoring ----------
+  - id: cs01
+    lesson: ai-recruitment-and-employee-monitoring
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Recall the facts of the Amazon recruiting tool case
+    prompt: According to Reuters' 2018 report, why did Amazon's experimental recruiting tool favour male candidates?
+    options:
+      - It was explicitly programmed to prefer men
+      - It was trained on roughly ten years of CVs submitted to the company, most of which came from men
+      - It used candidates' photographs
+      - It relied on salary history
+    answer: 1
+    explanation: The model learned from historical CVs dominated by men — historical bias — and reportedly penalised terms such as "women's". There was no reported explicit rule favouring men, and the report did not describe photographs or salary history as the cause.
+  - id: cs02
+    lesson: ai-recruitment-and-employee-monitoring
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Understand why removing specific terms does not cure bias
+    prompt: Once Amazon's engineers made the model neutral to the specific gendered terms identified, it could be guaranteed not to discriminate.
+    answer: false
+    explanation: Reuters reported that there was no guarantee the system would not find other ways to discriminate. Proxies can carry the same pattern, which is why outcome testing — not just term removal — is required.
+  - id: cs03
+    lesson: ai-recruitment-and-employee-monitoring
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply proportionality to employee monitoring
+    scenario: |
+      Illustrative scenario. A contact centre in Accra records keystrokes, captures screenshots every five minutes and checks webcam presence during remote shifts. Staff were told only that "systems are monitored for quality". The company's legitimate concern is protecting client data.
+    prompt: Which response best applies the principle of proportionality?
+    options:
+      - Keep all monitoring, because company laptops are company property
+      - Remove all monitoring, because any monitoring violates privacy
+      - Retain targeted security monitoring of client-data systems and quality sampling, drop keystroke logging, routine screenshots and webcam checks, and publish a specific policy
+      - Keep all monitoring but ask staff to sign a consent form
+    answer: 2
+    explanation: Proportionality keeps only what is necessary for the legitimate aim, using the least intrusive effective means, with transparency. Ownership of devices does not remove privacy interests; removing all monitoring ignores genuine security needs; and consent in employment is weakened by power imbalance.
+  - id: cs04
+    lesson: ai-recruitment-and-employee-monitoring
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match monitoring concepts to examples
+    prompt: Match each concept to the example that illustrates it.
+    pairs:
+      - left: Function creep
+        right: Data collected for quality assurance are used to discipline staff for private messages
+      - left: Chilling effect
+        right: Staff stop raising pay concerns because they know their messages are read
+      - left: Proportionality
+        right: Monitoring is limited to what is necessary for a legitimate aim
+      - left: Transparency
+        right: A policy states exactly what is monitored, why and who can see it
+    explanation: These concepts structure analysis of monitoring cases. Function creep and chilling effects are harms; proportionality and transparency are safeguards.
+  - id: cs05
+    lesson: ai-recruitment-and-employee-monitoring
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Identify the ACM principle on discrimination
+    prompt: Which ACM Code principle number states "Be fair and take action not to discriminate"?
+    answers: ["1.4", "principle 1.4"]
+    explanation: Principle 1.4 is central to AI recruitment cases. Related principles include 1.2 (avoid harm), 1.3 (honesty about capabilities and limitations) and 2.5 (thorough evaluation of risks).
+  - id: cs06
+    lesson: ai-recruitment-and-employee-monitoring
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a counter-argument in the recruitment case
+    prompt: A vendor argues that its AI screening should be used without audit because "human recruiters are biased too". Which response is strongest?
+    options:
+      - Agree, since any reduction in human involvement reduces bias
+      - Human bias is real, but replacing it with unaudited algorithmic bias at scale is not an improvement; data should be used to detect bias in both, with humans remaining accountable
+      - Reject AI entirely because humans are perfect
+      - The argument is irrelevant because only legal compliance matters
+    answer: 1
+    explanation: The best response concedes the valid point while showing that the conclusion does not follow. AI does not automatically reduce bias, humans are not perfect, and ethics is not limited to legal compliance.
+  - id: cs07
+    lesson: ai-recruitment-and-employee-monitoring
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse a monitoring case using Kantian ethics
+    prompt: Which statement best expresses a Kantian objection to an employer secretly reading employees' private messages on work laptops?
+    options:
+      - It reduces productivity overall
+      - It treats employees merely as means to productivity, disregarding their autonomy and dignity, and could not be accepted as a universal law by those subject to it
+      - It is expensive to implement
+      - It might be discovered by the media
+    answer: 1
+    explanation: Kantian ethics focuses on respect for persons and universalisability. Productivity, cost and reputational risk are consequentialist or prudential considerations, not Kantian ones.
+
+  # ---------- data-misuse-and-breaches ----------
+  - id: cs08
+    lesson: data-misuse-and-breaches
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish data misuse from a data breach
+    prompt: Which statement correctly distinguishes data misuse from a data breach?
+    options:
+      - Misuse always involves hackers; breaches never do
+      - Misuse is use of data beyond legitimate purposes or expectations; a breach is a security failure allowing unauthorised access
+      - They are the same thing
+      - Misuse is legal; breaches are illegal
+    answer: 1
+    explanation: Misuse can occur with no break-in, as when an organisation repurposes data; breaches involve failures of protection. Both can be unlawful and unethical, so the final option is wrong.
+  - id: cs09
+    lesson: data-misuse-and-breaches
+    type: true_false
+    bloom: recall
+    difficulty: medium
+    objective: Recall the cause of the Equifax breach
+    prompt: The 2017 Equifax breach exploited a known vulnerability in the Apache Struts framework for which a patch had already been released.
+    answer: true
+    explanation: Attackers exploited an Apache Struts vulnerability in an online dispute portal months after a patch was available. The case shows that many breaches arise from basic failures in patch and asset management.
+  - id: cs10
+    lesson: data-misuse-and-breaches
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply breach-response principles
+    scenario: |
+      Illustrative scenario. A Ghanaian health insurer finds that a test database containing members' names, Ghana Card numbers and claim histories was exposed online without a password for months. Logs are incomplete. The marketing director says members should not be told because there is "no proof of harm".
+    prompt: What is the most defensible response?
+    options:
+      - Close the database and say nothing
+      - Notify members only if fraud is later reported
+      - Secure the database, preserve evidence, notify regulators as required and inform members clearly with practical guidance, then fix the test-data process
+      - Dismiss the developer publicly and close the matter
+    answer: 2
+    explanation: Incomplete logs mean absence of proof is not proof of absence; members need information to protect themselves, and notification duties may apply. Silence and delayed notification compound harm, and scapegoating ignores the organisational failure to control test data.
+  - id: cs11
+    lesson: data-misuse-and-breaches
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match data-protection principles to violations
+    prompt: Match each practice to the principle it violates.
+    pairs:
+      - left: A lending app uses contact lists collected for credit checks to shame borrowers
+        right: Purpose limitation
+      - left: An app requests access to photos and messages it does not need
+        right: Data minimisation
+      - left: A test database of real customer records is left without a password
+        right: Security safeguards
+      - left: A privacy notice says only that data are used "to improve services"
+        right: Transparency
+    explanation: Mapping practices to principles shows precise understanding of why they are wrong and points to the correct remedy.
+  - id: cs12
+    lesson: data-misuse-and-breaches
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Identify the firm at the centre of the 2018 Facebook data scandal
+    prompt: Which political consultancy obtained data derived from millions of Facebook users through a personality-quiz app, as revealed in 2018?
+    answers: ["Cambridge Analytica"]
+    explanation: Cambridge Analytica obtained data collected by Aleksandr Kogan's app, which — because of Facebook's platform rules at the time — reached the friends of users who installed it. The case illustrates harm to non-consenting third parties.
+  - id: cs13
+    lesson: data-misuse-and-breaches
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse third-party harm in data misuse
+    prompt: What is the most significant ethical feature shared by the Cambridge Analytica case and the illustrative lending app that messages borrowers' contacts?
+    options:
+      - Both involved ransomware
+      - Both harmed people who had no relationship with the organisation and never consented — friends or contacts of the users
+      - Both were caused by unpatched software
+      - Both were lawful because users clicked "accept"
+    answer: 1
+    explanation: In both, data about people beyond the consenting user were collected and used. Neither involved ransomware or unpatched software, and click-through acceptance by one user cannot consent on behalf of others.
+  - id: cs14
+    lesson: data-misuse-and-breaches
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the claim that anonymised data may be sold freely
+    prompt: A company claims it may sell "behavioural segments" because they are anonymised. A marketing firm can re-identify individuals by combining them with other data. Which evaluation is correct?
+    options:
+      - The sale is acceptable, because the company removed names
+      - Because individuals can be re-identified, the segments remain personal data and the sale is misuse inconsistent with purpose limitation and fairness
+      - The sale is acceptable if the price is low
+      - Only the marketing firm acts wrongly
+    answer: 1
+    explanation: Re-identifiable data remain personal data. Removing names is not effective anonymisation if linkage is possible. Price is irrelevant, and the seller shares responsibility for foreseeable re-identification.
+
+  # ---------- piracy-unauthorised-ai-and-exclusion ----------
+  - id: cs15
+    lesson: piracy-unauthorised-ai-and-exclusion
+    type: mcq
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate the affordability defence of piracy
+    prompt: A school argues that pirating commercial software is justified because licences are unaffordable. What is the strongest response?
+    options:
+      - The argument succeeds because education is important
+      - The argument fails because lawful alternatives, such as open-source tools and education licensing, provide most of the benefit without infringement or malware risk
+      - The argument succeeds if the vendor is a large multinational
+      - The argument fails only because piracy might be detected
+    answer: 1
+    explanation: The affordability defence presents a false dilemma when lawful options exist. The owner's wealth does not change the wrongness of using work without permission, and fear of detection is prudential, not ethical, reasoning.
+  - id: cs16
+    lesson: piracy-unauthorised-ai-and-exclusion
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Recognise the security risk of pirated software
+    prompt: Cracked software obtained from file-sharing sites is a common route for malware, so piracy can harm users as well as copyright holders.
+    answer: true
+    explanation: Beyond infringement, pirated software frequently carries malware and receives no security updates, which is why ACM principle 2.9 on secure systems is relevant to piracy cases.
+  - id: cs17
+    lesson: piracy-unauthorised-ai-and-exclusion
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Recommend a response to shadow AI
+    scenario: |
+      Illustrative scenario. At a Ghanaian bank with no AI policy, an analyst pastes customer loan files into a free public chatbot, a developer pastes proprietary code into another tool, and a report sent to the regulator contains an AI-invented statistic.
+    prompt: Which response is most defensible?
+    options:
+      - Ban all AI tools and dismiss the staff involved
+      - Ignore the incidents because productivity improved
+      - Treat the customer-data disclosure as a potential incident, correct the regulatory report, and introduce an AI policy with approved tools, data rules, verification, disclosure and training
+      - Let staff use any tool if they sign a disclaimer
+    answer: 2
+    explanation: The response must contain harm, correct the record and fix the organisational gap. Bans drive use underground and scapegoat staff for a leadership failure (ACM 3.4); ignoring the incidents leaves the breaches unaddressed; disclaimers do not protect customers.
+  - id: cs18
+    lesson: piracy-unauthorised-ai-and-exclusion
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name unapproved AI use in organisations
+    prompt: What two-word term describes staff use of AI tools without organisational approval or oversight?
+    answers: ["shadow AI", "shadow artificial intelligence"]
+    explanation: Shadow AI, like shadow IT, arises when staff adopt tools faster than organisations provide guidance, creating confidentiality, accuracy and accountability risks.
+  - id: cs19
+    lesson: piracy-unauthorised-ai-and-exclusion
+    type: matching
+    bloom: analyse
+    difficulty: medium
+    objective: Match ethical frameworks to their use in the digital exclusion case
+    prompt: Match each framework to the question it asks about the app-only market permit system.
+    pairs:
+      - left: Rawlsian justice
+        right: Does the policy benefit the least advantaged traders?
+      - left: Capability approach
+        right: Do traders have real freedom to use the service, not just formal access?
+      - left: Utilitarianism
+        right: Do the overall benefits outweigh the harms concentrated on excluded traders?
+      - left: ACM principle 3.7
+        right: Is special care taken with a system integrated into public infrastructure?
+    explanation: Using several frameworks shows that the case can be analysed from distributive, capability-based, consequentialist and professional perspectives, all pointing to inclusive multi-channel design.
+  - id: cs20
+    lesson: piracy-unauthorised-ai-and-exclusion
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Understand that digital availability is not access
+    prompt: Making a public service available through an app means it is accessible to all citizens.
+    answer: false
+    explanation: Cost, devices, connectivity, literacy, language and disability can all prevent effective use. Inclusive design requires assisted and alternative channels and accessibility testing.
+  - id: cs21
+    lesson: piracy-unauthorised-ai-and-exclusion
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Identify the common theme across the three cases
+    prompt: Which theme is common to the piracy, shadow AI and digital exclusion cases?
+    options:
+      - All three are caused only by individual wrongdoing
+      - Individual choices or design decisions are shaped by organisational gaps, so responses must fix policies and design as well as individual behaviour
+      - All three are solved by banning technology
+      - None involves the ACM Code
+    answer: 1
+    explanation: In each case a missing policy, budget plan or inclusive design requirement enabled the harm. Purely individual blame or bans miss the root cause, and the ACM Code applies throughout.
+
+  # ---------- module-level ----------
+  - id: cs22
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Produce a complete seven-step case analysis
+    prompt: Using the seven-step case method, analyse the case and recommend what the company should do. Apply at least two ethical theories and the ACM Code.
+    marks: 30
+    case: |
+      Illustrative scenario. "Afia Retail", a Ghanaian e-commerce company, introduces an AI system that predicts which customers are likely to return goods and automatically restricts their access to "pay on delivery". The model uses purchase history, delivery location and phone type. Customers in certain low-income districts and those using older phones are restricted far more often. Customer-service staff have begun pasting complaint emails, with customer names and addresses, into a public chatbot to draft replies. A data analyst who raised concerns about the model was told that "the numbers speak for themselves".
+    structure:
+      - Facts, separating known facts from assumptions
+      - Stakeholders and their interests
+      - Ethical issues (bias and exclusion, transparency, shadow AI and confidentiality, treatment of the analyst)
+      - Analysis using at least two ethical theories and ACM principles
+      - Options
+      - Recommendation with implementation steps
+      - Counter-arguments and responses
+    rubric:
+      - criterion: Facts and stakeholders
+        marks: 5
+        descriptor: Accurately states facts, notes uncertainties and identifies customers, staff, the analyst, the company and regulators.
+      - criterion: Ethical issues
+        marks: 6
+        descriptor: Identifies proxy discrimination via location and phone type, digital exclusion, lack of transparency and appeal, shadow AI data leakage and suppression of internal concerns.
+      - criterion: Theory and ACM analysis
+        marks: 8
+        descriptor: Applies two theories correctly to the facts and cites relevant principles such as 1.4, 1.6, 1.7, 2.5 and 3.4.
+      - criterion: Options and recommendation
+        marks: 7
+        descriptor: Compares realistic options and gives a staged, practical recommendation.
+      - criterion: Counter-arguments
+        marks: 4
+        descriptor: Addresses at least two strong objections persuasively.
+    modelAnswer: |
+      Facts: the model restricts payment options automatically; restrictions fall disproportionately on low-income districts and older-phone users; staff share personal data with a public chatbot; an analyst's concern was dismissed. Unknown: whether the model's predictions are accurate for these groups and what the chatbot provider does with inputs.
+
+      Stakeholders include affected customers (many of whom may lack cards or trust in online payment, so pay on delivery is their main route to e-commerce), other customers, customer-service staff, the analyst, the company and the Data Protection Commission.
+
+      Issues: delivery location and phone type act as proxies for income, producing indirect discrimination and digital exclusion; customers receive no explanation or appeal; the automated decision lacks human oversight; pasting complaint emails into a public chatbot discloses personal data without safeguards, raising issues under Act 843; and dismissing the analyst discourages internal challenge.
+
+      A utilitarian analysis weighs reduced return costs against lost sales, exclusion of poorer customers and reputational and regulatory risk, and notes that the model's accuracy for the affected groups is unverified. A Rawlsian analysis condemns a rule that burdens the least advantaged without justification; a Kantian analysis objects to judging individuals by group correlates without explanation. ACM 1.4, 2.5, 1.6, 1.7 and 3.4 apply.
+
+      Options: continue; abandon the model; keep it with safeguards. Recommendation: suspend automatic restrictions; audit outcomes by district and device; remove or justify proxy features; use the model only to trigger human review or alternative assurances (such as confirmation calls); give customers reasons and an appeal route; stop pasting personal data into public tools and provide an approved tool and policy; and formally invite the analyst to lead the audit. Counter-arguments — that "the numbers speak for themselves" and that returns are costly — are answered by showing that unvalidated proxies are not neutral numbers and that safeguards can control returns without blanket exclusion.
+    explanation: Examiners reward complete use of the seven-step method, recognition of both AI bias and shadow-AI issues, accurate theory application and a staged, practical recommendation that answers objections.

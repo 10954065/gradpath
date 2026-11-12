@@ -1,0 +1,56 @@
+module: cryptography
+cards:
+  - lesson: symmetric-and-asymmetric-encryption
+    front: What is Kerckhoffs's principle and why does it matter in business?
+    back: A cryptosystem should stay secure even if everything except the key is public; organisations should use published, vetted algorithms such as AES rather than proprietary secret schemes.
+  - lesson: symmetric-and-asymmetric-encryption
+    front: What is the main weakness of symmetric encryption and how is it solved?
+    back: Key distribution - parties must share a secret key securely. Asymmetric key exchange such as (EC)DH solves this in hybrid systems.
+  - lesson: symmetric-and-asymmetric-encryption
+    front: Work through toy RSA with p = 5, q = 11, e = 3.
+    back: n = 55, φ(n) = 40, d = 27 (3 × 27 = 81 ≡ 1 mod 40). Encrypt 7 - 7^3 mod 55 = 13. Decrypt - 13^27 mod 55 = 7.
+  - lesson: symmetric-and-asymmetric-encryption
+    front: In toy Diffie–Hellman with p = 23, g = 5, a = 6, b = 15, what is exchanged and what is shared?
+    back: Public values A = 5^6 mod 23 = 8 and B = 5^15 mod 23 = 19 are exchanged; both compute the shared secret 2 without sending it.
+  - lesson: symmetric-and-asymmetric-encryption
+    front: Why should ECB mode not be used to encrypt data?
+    back: Identical plaintext blocks produce identical ciphertext blocks, revealing patterns; authenticated modes such as AES-GCM should be used instead.
+  - lesson: symmetric-and-asymmetric-encryption
+    front: Why does post-quantum cryptography matter today?
+    back: Large quantum computers would break RSA, DH and ECC, and data recorded now could be decrypted later; NIST published ML-KEM (FIPS 203) in 2024 to support migration.
+  - lesson: hashing-and-digital-signatures
+    front: Why does collision resistance require only about 2^(n/2) work to break by brute force?
+    back: Because of the birthday paradox, among many random inputs a matching pair appears much sooner than a match to one specific digest.
+  - lesson: hashing-and-digital-signatures
+    front: Hash, MAC or signature - which provides non-repudiation, and why?
+    back: Only a digital signature, because only the signer holds the private key; anyone can compute a hash, and both parties share a MAC key.
+  - lesson: hashing-and-digital-signatures
+    front: Why is SHA-256 unsuitable for storing passwords?
+    back: It is designed to be fast, so attackers can test billions of guesses per second; password storage needs slow, salted, ideally memory-hard functions such as Argon2id or bcrypt.
+  - lesson: hashing-and-digital-signatures
+    front: What does a salt achieve in password storage?
+    back: It makes each stored hash unique, so identical passwords differ, precomputed tables fail and each hash must be cracked separately.
+  - lesson: hashing-and-digital-signatures
+    front: Outline the steps to verify a digital signature.
+    back: Validate the signer's certificate, recompute the document hash, and verify the signature against that hash with the signer's public key; a match proves integrity and authenticity.
+  - lesson: hashing-and-digital-signatures
+    front: What did the 2012 LinkedIn leak teach about password hashing?
+    back: Unsalted SHA-1 hashes were cracked in bulk, and password reuse turned the leak into years of credential stuffing elsewhere.
+  - lesson: certificates-and-key-management
+    front: Describe the PKI chain of trust.
+    back: An offline root CA in the trust store signs intermediate CA certificates, which sign leaf certificates; clients verify each signature up to the trusted root.
+  - lesson: certificates-and-key-management
+    front: List the main checks in certificate path validation.
+    back: Signatures, validity dates, CA constraints, key usage, hostname match with the SAN, revocation status, CT evidence and proof of private key possession.
+  - lesson: certificates-and-key-management
+    front: Why are short-lived certificates increasingly favoured?
+    back: Revocation checking is unreliable, so short lifetimes limit how long a compromised certificate can be abused; automation makes frequent renewal practical.
+  - lesson: certificates-and-key-management
+    front: What is envelope encryption?
+    back: Data is encrypted with a data encryption key, which is itself encrypted by a key encryption key held in a KMS or HSM, so rotating the KEK needs only re-wrapping of data keys.
+  - lesson: certificates-and-key-management
+    front: Name the stages of the key management lifecycle.
+    back: Generation, storage, distribution, use, rotation, backup or escrow, revocation and destruction, all with access control and audit.
+  - lesson: certificates-and-key-management
+    front: Why did DigiNotar collapse after 2011?
+    back: Attackers used its systems to issue fraudulent certificates, including *.google.com used for interception; browsers removed its roots, making its certificates worthless.

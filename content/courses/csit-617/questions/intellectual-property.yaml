@@ -1,0 +1,305 @@
+module: intellectual-property
+questions:
+  # ---------- copyright-patents-and-trademarks ----------
+  - id: ip01
+    lesson: copyright-patents-and-trademarks
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Apply the idea–expression distinction to software
+    prompt: A competitor studies a popular Ghanaian ride-hailing app and independently writes new code that reproduces its main features. Which statement best describes the copyright position?
+    options:
+      - The competitor infringes copyright because the features are the same
+      - The competitor does not infringe copyright, because copyright protects expression rather than functionality, provided no code was copied
+      - The competitor infringes only if the original app was registered with the Copyright Office
+      - Copyright does not apply to software at all
+    answer: 1
+    explanation: Copyright protects the expression of a program (its code and some structural elements), not ideas, methods or functionality. Independent creation is a defence. Registration is not required for copyright to arise, and software is protected as a literary work under TRIPS and Act 690, so the other options are wrong.
+  - id: ip02
+    lesson: copyright-patents-and-trademarks
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Match IP regimes to their characteristic features
+    prompt: Match each form of intellectual property to the feature that best characterises it.
+    pairs:
+      - left: Copyright
+        right: Arises automatically on creation of an original work
+      - left: Patent
+        right: Requires novelty, an inventive step and public disclosure
+      - left: Trademark
+        right: Distinguishes the commercial origin of goods or services
+      - left: Trade secret
+        right: Lasts only as long as the information is kept confidential
+    explanation: Each regime protects a different kind of intangible asset under different conditions. Mixing them up is a common examination error; the comparison table in the lesson summarises subject matter, requirements and duration.
+  - id: ip03
+    lesson: copyright-patents-and-trademarks
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish patents from copyright regarding independent creation
+    prompt: Independent creation is a defence to patent infringement in the same way as it is to copyright infringement.
+    answer: false
+    explanation: Patents protect the claimed invention itself, so someone who independently arrives at the same invention can still infringe. Copyright, by contrast, is infringed only by copying, so independent creation is a defence.
+  - id: ip04
+    lesson: copyright-patents-and-trademarks
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Select appropriate protection for a confidential algorithm
+    scenario: |
+      An Accra-based credit-scoring start-up has developed a set of unpublished rules that combine mobile-money transaction patterns to predict loan default. The rules give it a competitive advantage. The founders do not want to publish the method, and it is unclear whether it would satisfy patentability requirements.
+    prompt: Which protection strategy is most appropriate for the scoring rules?
+    options:
+      - Rely on trademark registration of the rules
+      - Protect the rules as a trade secret using access controls and confidentiality agreements
+      - Publish the rules on the company website to establish copyright
+      - Do nothing, because copyright automatically protects the underlying method
+    answer: 1
+    explanation: Trade-secret protection suits valuable information the owner wishes to keep confidential, and does not require disclosure or examination. Trademarks protect brand signs, not methods. Publishing would destroy secrecy, and copyright would not protect the method itself, only its written expression.
+  - id: ip05
+    lesson: copyright-patents-and-trademarks
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Identify Ghana's principal copyright statute
+    prompt: Give the year of Ghana's Copyright Act that is designated Act 690.
+    answers: ["2005", "Copyright Act 2005", "Copyright Act, 2005"]
+    explanation: Ghana's principal copyright statute is the Copyright Act, 2005 (Act 690). It protects computer software among other works and provides for the Copyright Office.
+  - id: ip06
+    lesson: copyright-patents-and-trademarks
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate arguments in the software patent debate
+    prompt: Which argument against software patents is best grounded in utilitarian reasoning?
+    options:
+      - Software patents violate the inventor's natural right to the fruits of labour
+      - Broad, long-lasting software patents may reduce overall innovation and welfare by blocking incremental, fast-moving development
+      - Software is mathematics, and mathematics is sacred
+      - Patents are unfair because only large firms can read patent claims
+    answer: 1
+    explanation: Utilitarian reasoning judges IP by its consequences for overall welfare; the claim that software patents may reduce net innovation is a consequentialist argument. The first option invokes Lockean labour theory (and argues for, not against, protection). The third is not an ethical argument, and the fourth is a fairness/access claim stated as an overgeneralisation.
+  - id: ip07
+    lesson: copyright-patents-and-trademarks
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Interpret the outcome of Google v. Oracle
+    prompt: In Google LLC v. Oracle America (2021), the US Supreme Court held that APIs are never protected by copyright.
+    answer: false
+    explanation: The Court assumed, without deciding, that the Java API declaring code was copyrightable and held that Google's copying was fair use. It did not rule on copyrightability, and the decision applies US fair use law, not the law of other jurisdictions.
+
+  # ---------- software-licensing-and-open-source ----------
+  - id: ip08
+    lesson: software-licensing-and-open-source
+    type: mcq
+    bloom: recall
+    difficulty: easy
+    objective: Identify the main obligation of the MIT License
+    prompt: What is the principal condition a developer must meet when redistributing MIT-licensed code?
+    options:
+      - Release all of their own source code under the MIT License
+      - Include the original copyright notice and the licence text
+      - Pay a royalty to the original author
+      - Obtain approval from the Open Source Initiative
+    answer: 1
+    explanation: The MIT License is permissive; its key condition is preserving the copyright notice and licence text in copies or substantial portions. It does not require releasing your own code (that is copyleft), payment or OSI approval.
+  - id: ip09
+    lesson: software-licensing-and-open-source
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match licences to their distinctive obligations
+    prompt: Match each licence to its most distinctive feature.
+    pairs:
+      - left: MIT
+        right: Minimal conditions; keep the notice and licence text
+      - left: Apache 2.0
+        right: Express patent grant with a patent retaliation clause
+      - left: GPL
+        right: Distributed derivative works must be released under the same licence with source
+      - left: LGPL
+        right: Proprietary programs may link to the library under conditions
+      - left: AGPL
+        right: Source obligations extend to modified software offered over a network
+    explanation: These distinctions drive compliance decisions. Apache 2.0's patent terms, GPL's strong copyleft, LGPL's linking exception and AGPL's network clause are the features examiners most often test.
+  - id: ip10
+    lesson: software-licensing-and-open-source
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply GPL obligations to a distributed product
+    scenario: |
+      A developer at a Ghanaian fintech copies a GPL-licensed encryption routine directly into the source code of the company's proprietary mobile wallet app, which is distributed to customers through app stores. The company does not want to release its source code.
+    prompt: What is the most appropriate course of action?
+    options:
+      - Nothing; GPL obligations apply only to non-commercial software
+      - Rename the variables in the copied code so that it is no longer GPL code
+      - Replace the GPL code with a compatibly licensed or proprietary alternative, or obtain a separate licence from the copyright holder
+      - Add the author's name in a comment, which satisfies the GPL
+    answer: 2
+    explanation: Distributing an app incorporating GPL code generally requires licensing the combined work under the GPL with source. If the company will not do that, it must remove the code or obtain different licence terms. The GPL applies to commercial software, superficial changes still create a derivative work, and attribution alone does not satisfy copyleft.
+  - id: ip11
+    lesson: software-licensing-and-open-source
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Interpret "free" in free software
+    prompt: In the Free Software Foundation's sense, "free software" means software that is given away at no cost.
+    answer: false
+    explanation: The word free refers to freedom — to run, study and change, redistribute and distribute modified versions — not price. Free software may be sold, and no-cost software can be proprietary.
+  - id: ip12
+    lesson: software-licensing-and-open-source
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Name the licensing technique that keeps derivatives free
+    prompt: What term describes the licensing technique that requires distributed modified versions of a work to remain under the same free licence?
+    answers: ["copyleft", "copy left", "copyleft licensing"]
+    explanation: Copyleft uses copyright law to require that freedoms granted by the licence are preserved in distributed derivative works. The GPL is the best-known copyleft licence.
+  - id: ip13
+    lesson: software-licensing-and-open-source
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse when GPL obligations are triggered
+    prompt: A bank modifies a GPL-licensed reporting tool and runs it only on its own internal servers for staff use. It never distributes the software outside the organisation. Which statement is most accurate?
+    options:
+      - The bank must publish its modified source code immediately
+      - Under the standard GPL, internal use without distribution generally does not trigger the obligation to release source code
+      - The bank's use is illegal because GPL software cannot be modified
+      - The bank must switch to the LGPL version
+    answer: 1
+    explanation: The GPL's source-release obligations are tied mainly to distribution (conveying copies). Purely internal use generally does not trigger them. Modification is expressly permitted. The AGPL was created precisely because network use is not covered by the ordinary GPL.
+  - id: ip14
+    lesson: software-licensing-and-open-source
+    type: true_false
+    bloom: apply
+    difficulty: medium
+    objective: Recognise the legal status of unlicensed code
+    prompt: Source code published on a public repository without any licence may generally be reused freely because it is in the public domain.
+    answer: false
+    explanation: Copyright arises automatically. Without a licence granting permission, the default position is that others may not copy, modify or distribute the code. Visibility does not equal permission.
+
+  # ---------- plagiarism-and-academic-integrity ----------
+  - id: ip15
+    lesson: plagiarism-and-academic-integrity
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish plagiarism from copyright infringement
+    prompt: Which statement best describes the relationship between plagiarism and copyright infringement?
+    options:
+      - They are identical concepts with different names
+      - Plagiarism concerns misrepresenting the origin of work; copyright infringement concerns unauthorised copying of protected expression, and the two can occur independently
+      - Plagiarism is only possible with copyrighted works
+      - Citing a source always prevents copyright infringement
+    answer: 1
+    explanation: You can plagiarise a public-domain work (no copyright, but false attribution), and you can infringe copyright while citing the author (attribution without permission). They overlap but are distinct. Citation does not grant reproduction rights.
+  - id: ip16
+    lesson: plagiarism-and-academic-integrity
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply integrity principles to generative AI use
+    scenario: |
+      An MSc student's assignment brief does not mention generative AI. The student uses an AI tool to draft the literature review, edits it lightly, and submits it without mention of the tool. Two of the references cannot be found in any database.
+    prompt: Which is the most defensible assessment of the student's conduct?
+    options:
+      - Acceptable, because the brief did not prohibit AI
+      - Acceptable, because no human author's words were copied
+      - Problematic, because the student did not confirm the institution's policy, did not disclose the use and submitted unverified, apparently fabricated references
+      - Problematic only because of grammar errors in AI output
+    answer: 2
+    explanation: Silence in a brief does not authorise use; students must check their institution's policy and ask when unclear. Undisclosed AI-generated text can misrepresent authorship, and submitting non-existent references is fabrication regardless of intention. The permit–disclose–verify–own model captures each failure.
+  - id: ip17
+    lesson: plagiarism-and-academic-integrity
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish forms of academic misconduct
+    prompt: Match each behaviour to the form of misconduct it represents.
+    pairs:
+      - left: Paying a freelancer to write an assignment
+        right: Contract cheating
+      - left: Two students writing an individual report together without permission
+        right: Collusion
+      - left: Inventing survey responses to complete a data set
+        right: Fabrication
+      - left: Resubmitting last year's essay for a new module
+        right: Self-plagiarism or duplicate submission
+    explanation: Each behaviour misrepresents something different — who did the work, whether it was individual, whether the data are real, or whether the effort is new. Precise classification shows understanding.
+  - id: ip18
+    lesson: plagiarism-and-academic-integrity
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Interpret similarity-checking results
+    prompt: A low similarity score from text-matching software proves that a submission contains no plagiarism.
+    answer: false
+    explanation: Similarity tools detect textual overlap with indexed sources; they can miss idea plagiarism, translated or paraphrased material, contract cheating and AI-generated text. Scores require human judgement in both directions.
+  - id: ip19
+    lesson: plagiarism-and-academic-integrity
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall a fundamental value of academic integrity
+    prompt: The ICAI's fundamental values are honesty, trust, fairness, respect, responsibility and which sixth value?
+    answers: ["courage"]
+    explanation: Courage — acting with integrity when it is difficult or unpopular — completes the six values described by the International Center for Academic Integrity.
+  - id: ip20
+    lesson: plagiarism-and-academic-integrity
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate why AI tools are not accepted as authors
+    prompt: What is the strongest reason publication-ethics bodies such as COPE give for not accepting AI tools as authors?
+    options:
+      - AI tools write poorly
+      - AI tools cannot take responsibility or be accountable for the work
+      - AI tools are too expensive for most researchers
+      - AI tools are protected by trademark law
+    answer: 1
+    explanation: Authorship entails accountability — answering for the work, correcting errors and attesting to its integrity — which a tool cannot do. Writing quality and cost are irrelevant to the principle, and trademark law has nothing to do with authorship.
+
+  # ---------- module-level ----------
+  - id: ip21
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Construct a defensible recommendation on an IP and licensing dilemma
+    prompt: Analyse the case and recommend how the company should proceed. Use at least two ethical theories and the ACM Code of Ethics.
+    marks: 25
+    case: |
+      Illustrative scenario. "Tema Smart Ports Ltd", a Ghanaian software firm, is about to ship a container-tracking system to clients in three West African countries. A pre-release audit finds that (a) a senior developer copied a GPL-licensed scheduling module into the product, (b) the user interface uses icons downloaded from a website with no licence information, and (c) the project report submitted to a client funder contains several paragraphs copied from a vendor white paper without citation. The CEO wants to ship on schedule and "fix things later".
+    structure:
+      - Identify the facts and the IP and integrity issues in each of (a), (b) and (c)
+      - Identify stakeholders and their interests
+      - Apply relevant legal concepts (copyleft obligations, default copyright, plagiarism vs infringement)
+      - Analyse using at least two ethical theories and relevant ACM Code principles
+      - Set out options and evaluate them
+      - Make a defensible recommendation and address counter-arguments
+    rubric:
+      - criterion: Issue identification and legal concepts
+        marks: 6
+        descriptor: Correctly explains GPL obligations on distribution, the no-licence position for icons, and plagiarism versus infringement in the report.
+      - criterion: Stakeholder analysis
+        marks: 4
+        descriptor: Identifies clients, funder, original authors, developers, the firm and end users, with their interests.
+      - criterion: Ethical analysis
+        marks: 7
+        descriptor: Applies at least two theories accurately and cites relevant ACM principles such as 1.3, 1.5 and 2.3.
+      - criterion: Options and recommendation
+        marks: 6
+        descriptor: Evaluates realistic options and gives a clear, justified recommendation with practical steps.
+      - criterion: Counter-arguments and communication
+        marks: 2
+        descriptor: Addresses the CEO's schedule argument and writes clearly.
+    modelAnswer: |
+      A strong answer separates the three problems. (a) Because the system will be distributed to clients, incorporating GPL code generally obliges the firm to license the combined work under the GPL and provide source. If it wants to remain proprietary, it must replace the module or negotiate a separate licence; renaming or modifying the code does not avoid the obligation. (b) Icons without licence information are protected by default copyright, so the firm lacks permission; it should replace them with properly licensed assets or obtain permission. (c) The report misrepresents vendor material as the firm's own analysis — plagiarism — and may also infringe copyright; it must be corrected and the funder informed.
+
+      Stakeholders include clients (who may inherit legal risk), the funder (misled), original authors (whose conditions are ignored), staff and the firm's reputation. A utilitarian analysis weighs short-term delay against risks of injunctions, client losses and reputational damage, and the wider harm to the open-source commons; it favours remediation before shipping. A Kantian analysis rejects shipping knowingly non-compliant software because it treats authors merely as means and relies on deception. ACM principles 1.3 (honesty), 1.5 (respect and credit creators' work) and 2.3 (know and respect rules) point the same way.
+
+      Options: ship now and fix later; delay to remediate; ship GPL-compliant. The recommended course is a short delay to replace the GPL module and icons, correct and disclose the report, and introduce SBOM scanning and a licence policy. The schedule counter-argument is acknowledged, but knowingly distributing infringing software converts an internal error into deliberate wrongdoing.
+    explanation: Examiners look for accurate licence reasoning, clear distinction between plagiarism and infringement, genuine use of two ethical theories with ACM principles, and a practical, justified recommendation.

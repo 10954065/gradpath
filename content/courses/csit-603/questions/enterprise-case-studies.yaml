@@ -1,0 +1,428 @@
+module: enterprise-case-studies
+questions:
+  # pharmacy-and-hospital-systems
+  - id: q01
+    lesson: pharmacy-and-hospital-systems
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name the stock-rotation rule for perishable medicines
+    prompt: Which stock-rotation rule issues the batch with the earliest expiry date first? (Give the acronym.)
+    answers: [FEFO, first expired first out, first expired, first out]
+    explanation: >-
+      FEFO (first expired, first out) reduces expiry write-offs and patient-safety risk. It differs from FIFO, which
+      issues the oldest received stock first regardless of expiry date.
+
+  - id: q02
+    lesson: pharmacy-and-hospital-systems
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain the order of the six-step case method
+    prompt: In the six-step case method, at which point should the enterprise technology be specified?
+    options:
+      - First, so that the process can be designed around the product
+      - After the as-is process has been diagnosed and the redesign justified
+      - Only after go-live, during the post-implementation review
+      - It is not needed if the process is redesigned
+    answer: 1
+    explanation: >-
+      Technology is step four: describe, diagnose and redesign first, then choose technology to enable the redesign.
+      Starting with a product risks automating existing weaknesses; leaving it until after go-live is illogical; and
+      most redesigns depend on enabling technology.
+
+  - id: q03
+    lesson: pharmacy-and-hospital-systems
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply redesign principles to pharmacy replenishment
+    scenario: |
+      Illustrative scenario. A pharmacy chain's branches each phone wholesalers when they notice low stock. Head office
+      cannot see branch stock, and one branch often runs out of a medicine that another branch holds in surplus.
+    prompt: Which redesign best addresses the problem?
+    options:
+      - Ask branch pharmacists to phone each other before ordering
+      - Generate replenishment proposals from POS-driven reorder points, consolidated at head office, with inter-branch transfers considered first
+      - Double the safety stock at every branch
+      - Allow each branch to choose its own wholesaler without approval
+    answer: 1
+    explanation: >-
+      System-driven proposals based on real-time sales and stock, consolidated centrally, give visibility, leverage
+      volume and allow surplus to be transferred. Phoning is unreliable; doubling stock raises cost and expiry risk; and
+      unapproved independent buying worsens fragmentation and control.
+
+  - id: q04
+    lesson: pharmacy-and-hospital-systems
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain batch traceability
+    prompt: Batch traceability allows a pharmacy chain to identify which branches received and sold a recalled batch.
+    answer: true
+    explanation: >-
+      True. Capturing batch numbers at receipt and deducting by batch at sale links each batch to its supplier,
+      location and sales, so recalls can be targeted quickly.
+
+  - id: q05
+    lesson: pharmacy-and-hospital-systems
+    type: matching
+    bloom: analyse
+    difficulty: medium
+    objective: Link hospital weaknesses to redesign steps
+    prompt: Match each as-is hospital weakness to the redesign step that addresses it.
+    pairs:
+      - left: Handwritten prescriptions misread at the pharmacy
+        right: Electronic prescribing with allergy checks
+      - left: Services provided but never billed
+        right: Automatic charge posting at the point of care
+      - left: Patients queuing repeatedly at each department
+        right: Electronic orders and a single payment point
+      - left: Doctors unable to see previous results
+        right: Results flowing into a shared electronic medical record
+    explanation: >-
+      A good redesign links each diagnosed weakness to a specific change. This traceability from weakness to redesign
+      to KPI is what examiners look for in case analyses.
+
+  - id: q06
+    lesson: pharmacy-and-hospital-systems
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Identify a control weakness in an as-is process
+    prompt: In the illustrative pharmacy's as-is process, which weakness creates the greatest fraud risk?
+    options:
+      - Expiry dates checked monthly by visual inspection
+      - The same person ordering, receiving and paying small suppliers
+      - Sales recorded by value rather than batch
+      - Claims compiled at month-end
+    answer: 1
+    explanation: >-
+      Combining ordering, receipt and payment in one person is a segregation of duties conflict allowing fictitious or
+      inflated purchases to be paid. The other weaknesses cause waste, poor traceability or claim errors, but are not
+      primarily fraud enablers.
+
+  - id: q07
+    lesson: pharmacy-and-hospital-systems
+    type: true_false
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate lessons from NPfIT
+    prompt: A key lesson commonly drawn from England's National Programme for IT is that central technology procurement should precede engagement with clinicians and local organisations.
+    answer: false
+    explanation: >-
+      False. Criticism of the programme highlighted weak engagement with clinicians and local organisations. The lesson
+      is that understanding local processes and involving the people who deliver care must come first.
+
+  # grocery-pos-and-restaurant-systems
+  - id: q08
+    lesson: grocery-pos-and-restaurant-systems
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Calculate actual food cost
+    prompt: Opening ingredient stock is GHS 10,000, purchases GHS 15,000 and closing stock GHS 9,000. What is the actual food cost in GHS? (Number only.)
+    answers: ["16000", "16,000"]
+    explanation: >-
+      Actual food cost = opening + purchases − closing = 10,000 + 15,000 − 9,000 = 16,000. Dividing by food sales gives
+      the food cost percentage, which is compared with theoretical cost from recipes.
+
+  - id: q09
+    lesson: grocery-pos-and-restaurant-systems
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Calculate a shrinkage rate
+    prompt: A category's system stock value is GHS 40,000 and the physical count is GHS 38,800. What is the shrinkage rate?
+    options:
+      - "1.2%"
+      - "3.0%"
+      - "3.1%"
+      - "97.0%"
+    answer: 1
+    explanation: >-
+      Shrinkage = 40,000 − 38,800 = 1,200; rate = 1,200 / 40,000 = 3.0%. Dividing by the physical value gives about 3.1%,
+      which uses the wrong base; 97% is the accuracy ratio, not the loss.
+
+  - id: q10
+    lesson: grocery-pos-and-restaurant-systems
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Interpret theoretical versus actual food cost
+    scenario: |
+      Illustrative scenario. A restaurant's recipe-based theoretical food cost is 30% of sales, but its actual food cost
+      over four weeks is consistently 36%.
+    prompt: What is the most appropriate first response?
+    options:
+      - Raise menu prices by 6% immediately
+      - Investigate waste, portion sizes, unrecorded staff meals, theft and recipe accuracy
+      - Ignore the variance because recipes are never accurate
+      - Stop recording ingredient purchases
+    answer: 1
+    explanation: >-
+      A persistent variance signals operational losses or inaccurate recipes, which must be diagnosed before acting.
+      Raising prices treats the symptom, ignoring the variance wastes the control, and stopping recording removes the
+      data needed to manage cost.
+
+  - id: q11
+    lesson: grocery-pos-and-restaurant-systems
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the role of a kitchen display system
+    prompt: The main value of a kitchen display system is that it routes orders to stations, tracks preparation times and helps synchronise dishes for a table.
+    answer: true
+    explanation: >-
+      True. A KDS does more than replace paper: it routes items, shows order age, coordinates timing and records
+      performance data, enabling KPIs such as ticket time per station.
+
+  - id: q12
+    lesson: grocery-pos-and-restaurant-systems
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match retail controls to the risks they address
+    prompt: Match each supermarket control to the risk it mainly addresses.
+    pairs:
+      - left: Supervisor authorisation for price overrides
+        right: Cashiers under-charging friends or keying wrong prices
+      - left: Weekly cycle counts of high-risk categories
+        right: Shrinkage discovered months too late
+      - left: Three-way match by accounts payable
+        right: Paying for goods not received
+      - left: Daily automatic payment matching
+        right: Electronic payment errors going undetected
+    explanation: >-
+      Each control is designed into the to-be process to address a diagnosed risk, with the system enforcing and logging
+      it. Controls without a linked risk add friction without value.
+
+  - id: q13
+    lesson: grocery-pos-and-restaurant-systems
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the lesson of Target Canada
+    prompt: Which conclusion is best supported by widely reported accounts of Target's Canadian expansion?
+    options:
+      - POS hardware choice was the decisive factor
+      - Product master data quality and rapid scaling on new systems undermined replenishment
+      - Canadian customers did not want to shop at Target
+      - The failure had nothing to do with enterprise systems
+    answer: 1
+    explanation: >-
+      Press accounts described problems with supply chain processes and inaccurate product data in new systems, which
+      disrupted replenishment while many stores opened rapidly. The other options are unsupported by the documented
+      accounts.
+
+  # logistics-and-distribution-systems
+  - id: q14
+    lesson: logistics-and-distribution-systems
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Calculate OTIF correctly
+    prompt: Of 2,000 orders, 1,860 were on time, 1,900 were in full and 1,780 were both on time and in full. What is OTIF?
+    options:
+      - "88.4%"
+      - "89.0%"
+      - "93.0%"
+      - "95.0%"
+    answer: 1
+    explanation: >-
+      OTIF counts orders meeting both conditions: 1,780 / 2,000 = 89.0%. Multiplying 93% by 95% gives about 88.4%, which
+      wrongly assumes independent failures; 93% and 95% are the separate on-time and in-full rates.
+
+  - id: q15
+    lesson: logistics-and-distribution-systems
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match WMS functions to descriptions
+    prompt: Match each warehouse management function to its description.
+    pairs:
+      - left: Putaway
+        right: Moving received goods to a system-directed storage location
+      - left: Slotting
+        right: Assigning products to locations to minimise travel
+      - left: Wave picking
+        right: Picking batches of orders aligned with vehicle departures
+      - left: Cycle counting
+        right: Regularly counting a subset of locations to keep stock accurate
+    explanation: >-
+      These functions together turn a warehouse from memory-based searching into directed, measurable work, each
+      targeting a specific as-is weakness.
+
+  - id: q16
+    lesson: logistics-and-distribution-systems
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply technology to shorten the cash cycle
+    scenario: |
+      Illustrative scenario. A distributor raises invoices only when drivers return paper delivery notes, often several
+      days after delivery. Customers then dispute deliveries for which no clear evidence exists.
+    prompt: Which redesign best addresses both problems?
+    options:
+      - Ask drivers to return paper notes more quickly
+      - Electronic proof of delivery on a driver app that triggers the invoice automatically
+      - Invoice customers before goods are picked
+      - Hire an extra clerk to file delivery notes
+    answer: 1
+    explanation: >-
+      Electronic POD with signature, photo, timestamp and location provides dispute evidence and triggers invoicing at
+      delivery, shortening the cash cycle. Faster paper handling helps marginally; pre-invoicing causes credit notes when
+      deliveries change; and extra filing staff do not address delay or evidence.
+
+  - id: q17
+    lesson: logistics-and-distribution-systems
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the limits of route optimisation
+    prompt: Route planning software produces good routes regardless of the accuracy of customer addresses and time-per-drop estimates.
+    answer: false
+    explanation: >-
+      False. Route plans depend on the constraints and data supplied. Poor addresses or unrealistic drop times lead to
+      plans that drivers cannot execute; digital addresses and historic delivery data improve them.
+
+  - id: q18
+    lesson: logistics-and-distribution-systems
+    type: short_answer
+    bloom: apply
+    difficulty: easy
+    objective: Calculate pick accuracy
+    prompt: Out of 20,000 order lines, 19,800 were picked correctly. What is the pick accuracy percentage? (Number only.)
+    answers: ["99", "99%", "99.0"]
+    explanation: >-
+      19,800 / 20,000 = 99%. Even at 99%, 200 lines were wrong, each a potential complaint or credit note, which is why
+      scanned picking and good slotting matter.
+
+  - id: q19
+    lesson: logistics-and-distribution-systems
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the lessons of FoxMeyer
+    prompt: What is the most defensible lesson from FoxMeyer's mid-1990s experience?
+    options:
+      - Warehouse automation should never be used by distributors
+      - Combining a new ERP with warehouse automation at once multiplies risk and must be proven at realistic volumes
+      - SAP software is unsuitable for distribution firms
+      - Projects should be justified by the most optimistic savings possible
+    answer: 1
+    explanation: >-
+      FoxMeyer combined an ERP implementation with highly automated warehouses and encountered serious integration and
+      volume problems before its 1996 bankruptcy. The defensible lesson concerns risk concentration and testing at
+      scale, not a blanket rejection of automation or a particular vendor; optimistic savings assumptions were part of
+      the problem.
+
+  # module-level
+  - id: q20
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Conduct a full process redesign case analysis
+    marks: 30
+    case: |
+      Illustrative scenario. FreshWay is a Ghanaian business with a central kitchen in Accra that supplies ten small
+      restaurant outlets and a growing delivery service. Outlets order ingredients and prepared items from the central
+      kitchen by WhatsApp each evening. The central kitchen plans production on paper, and its two vans follow routes
+      chosen by the drivers. Outlets frequently receive the wrong quantities, food is wasted when outlets over-order,
+      and delivery customers complain about late orders. Each outlet uses a different till, so head office cannot see
+      sales or food cost by outlet. The owner has asked you to recommend an enterprise systems solution.
+    prompt: Using the six-step case method, analyse FreshWay's as-is process, propose a redesigned process and supporting enterprise technology, define KPIs, and evaluate the main risks and change-management needs.
+    structure:
+      - As-is process description and diagnosis of weaknesses
+      - Redesigned process across outlets, central kitchen and transport
+      - Enabling technology - POS and KDS, central ERP with recipes and production planning, routing and POD, BI
+      - KPIs with baselines and targets
+      - Risks, mitigation and implementation strategy
+      - Change management using a recognised model
+    rubric:
+      - criterion: As-is diagnosis
+        marks: 6
+        descriptor: Accurately identifies information, waste, control and service weaknesses and links them to business impact.
+      - criterion: Redesigned process
+        marks: 7
+        descriptor: Proposes a coherent to-be process with demand-driven ordering, production planning, routing and electronic POD.
+      - criterion: Technology specification
+        marks: 6
+        descriptor: Specifies integrated POS, KDS, ERP recipes and inventory, routing tools and BI, justified by the redesign.
+      - criterion: KPIs
+        marks: 5
+        descriptor: Defines relevant KPIs such as food cost variance, waste, OTIF to outlets and delivery time, with baselines.
+      - criterion: Risks and change management
+        marks: 6
+        descriptor: Evaluates data, integration and adoption risks, proposes a pilot strategy and applies Kotter or ADKAR meaningfully.
+    modelAnswer: |
+      A strong answer begins by describing the as-is flow: outlets send WhatsApp orders, the central kitchen plans on
+      paper, drivers choose routes, and outlets use unconnected tills. Weaknesses include ordering based on guesswork
+      rather than sales, re-keying and misread messages, over-production and waste, no visibility of outlet sales or food
+      cost, unplanned routes causing late deliveries, and no evidence when quantities are disputed.
+
+      The redesign standardises all outlets on one integrated POS with KDS, so that sales are captured by menu item.
+      Recipes deduct ingredients and prepared items at each outlet, and the system proposes next-day orders from par
+      levels and sales forecasts, which outlet managers review rather than create from scratch. The central kitchen's
+      ERP consolidates orders into a production plan using recipes for prepared items, and generates picking lists by
+      route. A routing tool plans van routes with outlet time windows, and drivers capture electronic POD with quantities
+      received, so discrepancies are recorded immediately. Delivery-platform orders flow into the outlet POS and KDS.
+
+      KPIs include food cost variance (actual against theoretical) by outlet, waste value, in-full rate of outlet
+      deliveries, on-time arrival at outlets, delivery customer order-to-door time and stock-outs, each baselined for at
+      least a month before go-live.
+
+      Risks are inaccurate recipes, poor connectivity at outlets, staff resistance, and over-reliance on forecasts for a
+      growing business. A pilot with the central kitchen and two outlets, offline-capable POS, and a recipe costing
+      exercise led by the head chef reduce risk. Using Kotter, the owner creates urgency with waste data, builds a
+      coalition of the head chef and outlet managers, and publicises early wins such as reduced waste at pilot outlets.
+    explanation: >-
+      Examiners look for systematic use of the six-step method, explicit links between weaknesses, redesign steps,
+      technology and KPIs, realistic risk mitigation and meaningful rather than generic use of change models.
+
+  - id: q21
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the role of master data across sector cases
+    marks: 20
+    prompt: '"In every sector case, the enterprise system succeeds or fails on the quality of its master data." Critically evaluate this statement with reference to pharmacy, retail and distribution scenarios and at least one documented international case.'
+    structure:
+      - Introduction defining master data and its role in integrated processes
+      - Pharmacy - product, batch and supplier data
+      - Retail and restaurants - product master and recipes
+      - Distribution - customer addresses, locations and product dimensions
+      - Counter-argument - process design, controls and people
+      - Conclusion
+    rubric:
+      - criterion: Argument and judgement
+        marks: 6
+        descriptor: Develops a clear, balanced position on the centrality of master data.
+      - criterion: Application to sector scenarios
+        marks: 6
+        descriptor: Shows concretely how master data supports each redesigned process.
+      - criterion: Use of documented cases
+        marks: 5
+        descriptor: Uses Target Canada or similar cases accurately without invented details.
+      - criterion: Structure and expression
+        marks: 3
+        descriptor: Clear structure, academic tone and correct referencing.
+    modelAnswer: |
+      A strong essay defines master data as the shared reference records (products, customers, suppliers, locations,
+      recipes) on which every transaction depends. In the pharmacy case, accurate product codes, units, batch rules and
+      shelf-life thresholds are preconditions for FEFO, replenishment and claims. In retail, barcodes, prices and units
+      drive scanning, perpetual inventory and pricing controls; in restaurants, recipes are the master data that make
+      theoretical food cost meaningful. In distribution, customer addresses, time windows, product dimensions and
+      warehouse locations feed routing, slotting and load planning.
+
+      The essay uses widely reported accounts of Target's Canadian expansion, where inaccurate product data disrupted
+      replenishment, as evidence that poor master data can undermine an entire operation.
+
+      A balanced answer then argues that master data is necessary but not sufficient. Process redesign, segregation of
+      duties, testing at realistic volumes (as FoxMeyer illustrates), training and change management also determine
+      outcomes; perfect data cannot rescue a poorly designed process or a workforce that bypasses the system. The
+      conclusion might state that master data quality is the most common single point of failure, but success requires
+      data, process and people together.
+    explanation: >-
+      Examiners reward precise examples of how master data enables specific process steps across sectors, accurate use of
+      documented cases and a balanced conclusion that recognises process and people factors.

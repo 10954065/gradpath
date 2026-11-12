@@ -1,0 +1,56 @@
+module: enterprise-case-studies
+cards:
+  - lesson: pharmacy-and-hospital-systems
+    front: What are the six steps of the case analysis method used in this module?
+    back: Describe the as-is process, diagnose weaknesses, redesign the process, specify enabling technology, define KPIs, and plan for risks and change management.
+  - lesson: pharmacy-and-hospital-systems
+    front: Why does a pharmacy chain need batch and expiry data at the point of sale?
+    back: To issue stock by FEFO, reduce expired stock, trace recalled batches to branches and sales, and support accurate claims from dispensing records.
+  - lesson: pharmacy-and-hospital-systems
+    front: How does central replenishment improve a multi-branch pharmacy?
+    back: POS-driven reorder points generate proposals that head office consolidates into supplier orders or inter-branch transfers, improving visibility, prices and stock balance.
+  - lesson: pharmacy-and-hospital-systems
+    front: How does electronic prescribing improve both safety and flow in a hospital?
+    back: It removes handwriting errors, enables allergy checks and sends prescriptions straight to the pharmacy queue so medicines are prepared while the patient completes the visit.
+  - lesson: pharmacy-and-hospital-systems
+    front: What is revenue leakage and how does point-of-care charging reduce it?
+    back: Services provided but not billed or claimed; posting charges automatically when a service is ordered or delivered ensures every service is captured.
+  - lesson: pharmacy-and-hospital-systems
+    front: What is the main lesson of England's National Programme for IT?
+    back: Central technology procurement ahead of understanding local processes and engaging clinicians led to delays and criticism; healthcare redesign must start with the people delivering care.
+  - lesson: grocery-pos-and-restaurant-systems
+    front: Why is the product master the foundation of a supermarket redesign?
+    back: Scanning, pricing, perpetual inventory, replenishment, receiving and analytics all depend on accurate barcodes, units, costs and prices for every product.
+  - lesson: grocery-pos-and-restaurant-systems
+    front: How is shrinkage rate calculated?
+    back: (System stock value − physical stock value) / system stock value, measured by category through regular cycle counts.
+  - lesson: grocery-pos-and-restaurant-systems
+    front: How do you calculate actual food cost percentage?
+    back: Actual food cost = opening stock + purchases − closing stock; divide by food sales revenue.
+  - lesson: grocery-pos-and-restaurant-systems
+    front: What does a gap between theoretical and actual food cost indicate?
+    back: Waste, over-portioning, unrecorded staff meals, theft or inaccurate recipes, each of which should be investigated before changing prices.
+  - lesson: grocery-pos-and-restaurant-systems
+    front: Name three things a kitchen display system adds beyond replacing paper tickets.
+    back: Routing items to stations, showing order age with timers, synchronising dishes for a table, and recording preparation-time data for KPIs.
+  - lesson: grocery-pos-and-restaurant-systems
+    front: What does Target's Canadian expansion (2013–2015) teach about retail systems?
+    back: Inaccurate product data in new systems, combined with rapid scaling, can disrupt replenishment and leave shelves empty; data must be stabilised before scaling.
+  - lesson: logistics-and-distribution-systems
+    front: List the core WMS functions in order of goods flow.
+    back: Receiving, putaway, slotting (location design), picking (often in waves), packing, shipping verification, with cycle counting throughout.
+  - lesson: logistics-and-distribution-systems
+    front: Why should waves be aligned with planned routes?
+    back: So that picking and loading follow vehicle departures and drop sequence (last drop loaded first), reducing dock congestion and loading errors.
+  - lesson: logistics-and-distribution-systems
+    front: How is OTIF calculated, and what common error should be avoided?
+    back: Orders delivered both on time and in full divided by total orders; do not multiply the separate on-time and in-full rates, because failures overlap.
+  - lesson: logistics-and-distribution-systems
+    front: What constraints must route planning respect?
+    back: Vehicle weight and volume capacity, customer time windows, driver working hours, road restrictions and expected traffic, using accurate addresses and drop times.
+  - lesson: logistics-and-distribution-systems
+    front: How does electronic proof of delivery improve a distributor's cash cycle?
+    back: Captured POD triggers the invoice immediately and provides signature, photo, time and location evidence that reduces disputes.
+  - lesson: logistics-and-distribution-systems
+    front: What does the FoxMeyer case (bankruptcy in 1996) teach distribution firms?
+    back: Implementing a new ERP together with warehouse automation concentrates risk; integration must be proven at realistic volumes and phased where possible.

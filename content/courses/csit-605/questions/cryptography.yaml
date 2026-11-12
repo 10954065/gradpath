@@ -1,0 +1,320 @@
+module: cryptography
+questions:
+  - id: cr01
+    lesson: symmetric-and-asymmetric-encryption
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Compare symmetric and asymmetric encryption
+    prompt: Why do real systems such as TLS use asymmetric cryptography to establish keys but symmetric ciphers to encrypt the data?
+    options:
+      - Asymmetric algorithms are faster for bulk data
+      - Symmetric ciphers are fast for bulk data, while asymmetric methods solve the problem of agreeing keys with parties never met before
+      - Symmetric ciphers cannot encrypt data longer than one block
+      - Asymmetric algorithms provide no confidentiality
+    answer: 1
+    explanation: This is hybrid encryption. Asymmetric operations are much slower, so they are used for key establishment and signatures. Modes of operation let symmetric ciphers handle long messages, and asymmetric encryption can provide confidentiality, though it is impractical for bulk data.
+  - id: cr02
+    lesson: symmetric-and-asymmetric-encryption
+    type: short_answer
+    bloom: apply
+    difficulty: medium
+    objective: Apply RSA key generation with small primes
+    prompt: In toy RSA with p = 5 and q = 11, what is the value of φ(n)?
+    answers: ["40", forty]
+    explanation: φ(n) = (p − 1)(q − 1) = 4 × 10 = 40. A common error is to use n = 55 instead. With e = 3, the private exponent d = 27 because 3 × 27 = 81 ≡ 1 mod 40.
+  - id: cr03
+    lesson: symmetric-and-asymmetric-encryption
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply RSA encryption to a small message
+    scenario: |
+      A toy RSA public key is (e, n) = (3, 55) and the private key is (d, n) = (27, 55). A student encrypts the message m = 7.
+    prompt: What ciphertext c does the student obtain?
+    options:
+      - "21"
+      - "13"
+      - "7"
+      - "343"
+    answer: 1
+    explanation: c = 7^3 mod 55 = 343 mod 55. Since 55 × 6 = 330, the remainder is 13. 343 is the unreduced power, 7 is the plaintext and 21 is 7 × 3, which confuses exponentiation with multiplication. Decryption 13^27 mod 55 returns 7.
+  - id: cr04
+    lesson: symmetric-and-asymmetric-encryption
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the limitation of basic Diffie–Hellman
+    prompt: Basic Diffie–Hellman key exchange, on its own, protects against a man-in-the-middle who intercepts and replaces the public values.
+    answer: false
+    explanation: Unauthenticated Diffie–Hellman lets an attacker run separate exchanges with each party. Authentication, such as the server's signature over the handshake in TLS 1.3, is needed to bind the exchange to an identity.
+  - id: cr05
+    lesson: symmetric-and-asymmetric-encryption
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match block cipher modes to their properties
+    prompt: Match each mode of operation to its key property.
+    pairs:
+      - left: ECB
+        right: Identical plaintext blocks produce identical ciphertext blocks, leaking patterns
+      - left: CBC
+        right: Chains each block to the previous ciphertext and needs a random IV, but gives no integrity alone
+      - left: GCM
+        right: Authenticated encryption providing confidentiality and integrity, requiring unique nonces
+      - left: CTR
+        right: Turns a block cipher into a stream of keystream blocks generated from a counter
+    explanation: Mode choice matters as much as algorithm choice. Prefer authenticated modes such as GCM, never use ECB for data and never reuse nonces.
+  - id: cr06
+    lesson: symmetric-and-asymmetric-encryption
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse an encryption design for weaknesses
+    prompt: A fintech encrypts customer ID numbers in its database with AES-256-GCM, but the key is stored in a configuration file on the same database server. Which statement best analyses the design?
+    options:
+      - It is fully secure because AES-256 cannot be brute-forced
+      - It gives little protection against an attacker who compromises the server, because the key and data are obtained together; keys should be held in a KMS or HSM with separate access control
+      - It is insecure because GCM is a deprecated mode
+      - It is secure only if the database is also backed up
+    answer: 1
+    explanation: Encryption is only as strong as key management. Co-locating the key with the data defeats the control against server compromise. AES-256 brute force is not the realistic threat, GCM is recommended and backups do not affect confidentiality here.
+  - id: cr07
+    lesson: symmetric-and-asymmetric-encryption
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate algorithm choices against Kerckhoffs's principle
+    prompt: A developer proposes a proprietary encryption algorithm for a payment API, arguing that attackers cannot break what they cannot see. What is the best evaluation?
+    options:
+      - Accept it, because secrecy of the algorithm adds strong protection
+      - Reject it; Kerckhoffs's principle holds that security should depend only on the key, and public, extensively analysed algorithms such as AES-GCM in vetted libraries are far more trustworthy
+      - Accept it if it uses a longer key than AES
+      - Reject it only because it will be slower
+    answer: 1
+    explanation: Secret algorithms are usually reverse-engineered and rarely receive the scrutiny that exposes flaws. Key length does not compensate for an unanalysed design, and speed is not the main concern.
+  - id: cr08
+    lesson: hashing-and-digital-signatures
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish hash function security properties
+    prompt: Match each hash property to its meaning.
+    pairs:
+      - left: Preimage resistance
+        right: Given a digest, it is infeasible to find any input that produces it
+      - left: Second-preimage resistance
+        right: Given one input, it is infeasible to find a different input with the same digest
+      - left: Collision resistance
+        right: It is infeasible to find any two different inputs with the same digest
+      - left: Avalanche effect
+        right: A tiny change in input changes roughly half of the output bits
+    explanation: Collision resistance is the hardest property to achieve and is the one broken in MD5 and SHA-1; birthday attacks need about 2^(n/2) work.
+  - id: cr09
+    lesson: hashing-and-digital-signatures
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Select the right primitive for a requirement
+    prompt: A bank must be able to prove to a court that a corporate customer, not a bank employee, approved a bulk payment file. Which mechanism should the customer apply to the file?
+    options:
+      - A SHA-256 hash sent alongside the file
+      - An HMAC computed with a key shared between the bank and the customer
+      - A digital signature made with the customer's private key
+      - AES encryption with a shared key
+    answer: 2
+    explanation: Only a digital signature provides non-repudiation, because only the customer holds the private key. Anyone can recompute a plain hash, a shared HMAC key means either party could create the tag, and encryption provides confidentiality rather than proof of origin.
+  - id: cr10
+    lesson: hashing-and-digital-signatures
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain the role of salts
+    prompt: Password salts must be kept secret, otherwise they provide no protection.
+    answer: false
+    explanation: Salts are stored alongside hashes; their purpose is to make each hash unique so that identical passwords differ and precomputed tables fail. A secret value stored elsewhere is called a pepper.
+  - id: cr11
+    lesson: hashing-and-digital-signatures
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall a recommended password hashing function
+    prompt: Name the memory-hard password hashing function that won the 2015 Password Hashing Competition and is specified in RFC 9106.
+    answers: [Argon2, Argon2id]
+    explanation: Argon2 (with Argon2id commonly recommended) is slow and memory-hard, raising the cost of large-scale guessing. bcrypt and scrypt are other acceptable choices.
+  - id: cr12
+    lesson: hashing-and-digital-signatures
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse a password storage scheme
+    scenario: |
+      Illustrative scenario. A fictional Ghanaian e-commerce site stores each password as SHA-256(password) with no salt. After a database leak, analysts notice that 2,000 rows share the same hash value.
+    prompt: What does this observation reveal, and what is the best remediation?
+    options:
+      - The hash function is broken; switch to MD5
+      - Unsalted hashes let identical passwords produce identical values, so one crack reveals all 2,000 accounts; migrate to salted Argon2id or bcrypt and prompt users to change passwords
+      - The database is corrupted; restore from backup
+      - Nothing is wrong, because SHA-256 is a secure hash
+    answer: 1
+    explanation: SHA-256 is fine as a general hash but is fast and here unsalted, so common passwords cluster and are cracked at scale. MD5 is worse, restoring from backup does not fix the design and the claim that nothing is wrong ignores how passwords are attacked.
+  - id: cr13
+    lesson: hashing-and-digital-signatures
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain the steps of signature verification
+    prompt: When verifying a digital signature on a document, what does the verifier do?
+    options:
+      - Decrypts the document with the signer's private key
+      - Recomputes the document's hash and checks the signature against it using the signer's public key, after validating the signer's certificate
+      - Encrypts the document with its own public key
+      - Compares the document's length with the signature's length
+    answer: 1
+    explanation: Signing uses the private key and verification uses the public key. The verifier never has the signer's private key, and length comparison proves nothing.
+  - id: cr14
+    lesson: hashing-and-digital-signatures
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the consequences of deprecated hash functions
+    prompt: Which conclusion is best supported by the 2012 Flame malware's forged Microsoft code-signing certificate?
+    options:
+      - Digital signatures are inherently unreliable and should be abandoned
+      - Deprecated hashes such as MD5 enable real forgeries when combined with weak CA processes, so they must be withdrawn from signature and certificate use
+      - MD5 remains acceptable as long as RSA keys are long
+      - Only encryption, not signatures, depends on hash functions
+    answer: 1
+    explanation: Flame combined an MD5 collision with a weakness in a Microsoft licensing CA to obtain a certificate chaining to a Microsoft root. Signatures remain sound with strong hashes; key length cannot compensate for hash collisions, because the signature covers the hash.
+  - id: cr15
+    lesson: certificates-and-key-management
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain why root CA keys are kept offline
+    prompt: Why are root CA private keys normally kept offline in hardware security modules?
+    options:
+      - Offline storage makes certificates load faster
+      - Roots are used rarely, and keeping them offline means a compromise of online issuing systems does not expose the key on which all trust in the hierarchy depends
+      - Browsers cannot read online root keys
+      - Offline keys never expire
+    answer: 1
+    explanation: Intermediates do day-to-day issuing, so the root can stay offline and be used only in controlled ceremonies. Performance, browser behaviour and expiry are not the reasons.
+  - id: cr16
+    lesson: certificates-and-key-management
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match PKI mechanisms to their purpose
+    prompt: Match each PKI mechanism to its purpose.
+    pairs:
+      - left: Certificate revocation list
+        right: A signed list of serial numbers of certificates revoked by a CA
+      - left: OCSP stapling
+        right: The server attaches a recent signed status response to the handshake
+      - left: Certificate Transparency
+        right: Public append-only logs that let domain owners detect mis-issued certificates
+      - left: Subject Alternative Name
+        right: Certificate extension listing the domain names the certificate is valid for
+    explanation: Revocation mechanisms tell clients a certificate should no longer be trusted, transparency exposes mis-issuance and the SAN is checked during hostname matching.
+  - id: cr17
+    lesson: certificates-and-key-management
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain what a certificate does and does not prove
+    prompt: Receiving a server's valid certificate is sufficient on its own to prove that you are communicating with that server.
+    answer: false
+    explanation: Certificates are public and can be copied. The server must also prove possession of the matching private key, as in the TLS 1.3 CertificateVerify signature.
+  - id: cr18
+    lesson: certificates-and-key-management
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply key management principles to a leaked key
+    scenario: |
+      Illustrative scenario. During a review, a fictional Accra fintech finds that its mobile money API signing key has been committed to a shared source code repository for six months, accessible to all developers and two former contractors.
+    prompt: What is the most appropriate response?
+    options:
+      - Delete the file in the next commit and continue using the key
+      - Treat the key as compromised - revoke and replace it, remove it from repository history, review logs for misuse, and add secret scanning and a key management service
+      - Change the repository to private and keep the key
+      - Ask the former contractors to confirm they did not copy it
+    answer: 1
+    explanation: Once exposed, a key must be presumed compromised; deleting it from the latest commit leaves it in history and anyone may already have copied it. Assurances from former contractors are not a control.
+  - id: cr19
+    lesson: certificates-and-key-management
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the standard certificate format
+    prompt: What is the name of the standard format for public-key certificates on the internet, profiled in RFC 5280?
+    answers: [X.509, X509, X 509]
+    explanation: X.509 version 3 certificates carry the subject, public key, issuer, validity, extensions and the CA's signature.
+  - id: cr20
+    lesson: certificates-and-key-management
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the systemic lesson of DigiNotar
+    prompt: What is the most important systemic lesson of the 2011 DigiNotar compromise?
+    options:
+      - Wildcard certificates should never be issued
+      - Because any trusted CA can issue certificates for any domain, the whole web's security depends on the weakest trusted CA, motivating Certificate Transparency and stricter CA oversight
+      - Users in Iran should not use Google services
+      - Certificates should be valid for longer to reduce issuance
+    answer: 1
+    explanation: The fraudulent google.com certificate was trusted because DigiNotar was trusted. Wildcards were incidental, the geographical point misses the lesson, and longer validity would make compromise worse.
+  - id: cr21
+    lesson: certificates-and-key-management
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate certificate lifecycle controls
+    prompt: A bank suffered an outage when an API certificate expired. Which control combination best prevents recurrence?
+    options:
+      - Buy certificates with the longest possible validity period
+      - A central certificate inventory with named owners, automated renewal and expiry alerting
+      - Disable certificate validation in the mobile app
+      - Switch the API to plain HTTP
+    answer: 1
+    explanation: Inventory, ownership, automation and alerting address the root cause. Longer validity only postpones the problem and conflicts with industry trends, and disabling validation or TLS destroys security.
+  - id: cr22
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the cryptographic design of a Ghanaian digital service
+    marks: 25
+    case: |
+      Illustrative scenario. AgroLink Ghana is a fictional platform connecting farmers with buyers and paying farmers through mobile money. Its current design: the Android app talks to the server over HTTPS, but developers disabled certificate validation in the app to fix a test error. User passwords are stored as unsalted MD5 hashes. Buyers' payment instructions are protected with an HMAC using one key shared by all buyers and the platform. The database is encrypted with AES in ECB mode, using a key stored in the application's configuration file. The website's TLS certificate is renewed manually by one engineer, who is leaving the company next month.
+    prompt: Critically evaluate AgroLink's cryptographic design and recommend a corrected design, justifying each change with reference to cryptographic principles and relevant case studies.
+    structure:
+      - Overview of assets and security goals (confidentiality, integrity, authenticity, non-repudiation, availability)
+      - Evaluation of each weakness and its consequences
+      - Corrected design for transport, passwords, payment instructions, data at rest and certificates
+      - Key management and governance recommendations
+      - Conclusion with priorities
+    rubric:
+      - criterion: Identification and explanation of weaknesses
+        marks: 7
+        descriptor: Correctly explains the risks of disabled validation, unsalted MD5, a shared HMAC key, ECB mode, co-located keys and manual single-person renewal
+      - criterion: Corrected design
+        marks: 7
+        descriptor: Proposes appropriate replacements such as enforced validation, Argon2id or bcrypt with salts, per-buyer digital signatures, AES-GCM with envelope encryption in a KMS or HSM, and automated renewal
+      - criterion: Use of principles
+        marks: 5
+        descriptor: Applies principles such as Kerckhoffs, non-repudiation, forward secrecy, key separation and the certificate chain of trust
+      - criterion: Use of cases and context
+        marks: 3
+        descriptor: Uses relevant cases such as LinkedIn 2012, Flame or DigiNotar and Ghanaian legal context such as the Data Protection Act, 2012
+      - criterion: Prioritisation and clarity
+        marks: 3
+        descriptor: Orders recommendations by risk and presents them clearly
+    modelAnswer: |
+      AgroLink's assets are farmer and buyer credentials, payment instructions (integrity, authenticity and non-repudiation) and personal data (confidentiality, a Data Protection Act, 2012 obligation). Platform availability matters because farmers depend on timely payment.
+      Disabled certificate validation is the most urgent flaw: any attacker on the network, for example on public Wi-Fi, can impersonate the server, so HTTPS gives no authentication. Validation must be restored, with pinning considered for the platform's own API. Unsalted MD5 password hashes are fast and identical for identical passwords; as LinkedIn's 2012 unsalted SHA-1 leak showed, such hashes are cracked at scale. Migrate to Argon2id or bcrypt with unique salts, wrapping existing hashes immediately.
+      A single HMAC key shared by all buyers means any buyer, or the platform, could forge any instruction, so there is neither per-buyer authenticity nor non-repudiation. Each buyer should sign instructions with their own private key, held on their device, with certificates from a platform-run PKI.
+      ECB leaks patterns, and a key in the configuration file is exposed by any server compromise. Use AES-GCM with envelope encryption: data keys wrapped by key encryption keys in a cloud KMS or HSM, separated by purpose and rotated.
+      Manual single-person certificate renewal threatens availability and violates separation of duties. Automate renewal, keep an inventory with owners and alerts, and monitor Certificate Transparency logs for lookalike domains, mindful that DigiNotar showed how mis-issuance can undermine trust.
+      Priorities are restoring validation and fixing password storage first, then payment signatures, then encryption at rest and key management, then certificate automation before the engineer leaves.
+    explanation: Examiners look for accurate diagnosis of each flaw, correct replacement primitives, sound key management and well-chosen links to cases and Ghanaian context.
