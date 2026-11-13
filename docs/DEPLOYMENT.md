@@ -4,6 +4,9 @@ GradPath is a static React app hosted on Vercel and backed by Supabase (Postgres
 Function (`api/verify-link.ts`, served at `/api/verify-link`) checks resource links for administrators. No paid AI
 service is used.
 
+The current production site is https://gradpath-000-6c1c.vercel.app. Pushing to `main` redeploys it; apply new
+migrations with `npx supabase db push --linked` before pushing code that depends on them.
+
 This guide takes you from an empty Supabase account and an empty Vercel account to a working site.
 Do the steps in order.
 

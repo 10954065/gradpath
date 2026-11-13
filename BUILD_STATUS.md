@@ -29,7 +29,7 @@ _Last updated: 2026-11-13_
 | 9. Administration | Done | Admin console (overview, content publish/edit/Markdown import, assessment settings + question-bank import, resources CRUD + server-side link check, announcements, private course-material uploads, platform settings); `/api/verify-link` Netlify Function (admin-only, SSRF-guarded, rate-limited); published materials shown on course pages via signed URLs |
 | 10. PWA | Done | Installable manifest (standalone, 192/512/maskable icons); service worker precaches the app shell and all route chunks (97 entries, ~2.2 MB) while Mermaid renderers and non-Latin font subsets are cached on first use; offline reading, offline note writes via the outbox, sync on reconnect; offline fixes: queries run in `networkMode: 'always'`, Supabase requests fail fast when offline, profile cached per user, stale-session sign-out only on an explicit auth rejection |
 | 11. Quality assurance | Done | Playwright E2E suite (16 tests: registration/onboarding, sign-in errors, route protection, catalogue, lesson completion, notes, search, quiz scoring, timetable/planner, assignments, admin denial, offline reading + outbox sync, phone layout); security review below |
-| 12. Deployment preparation | Done | `README.md`, `docs/DEPLOYMENT.md` (Supabase project, migrations, seed, auth URLs, Netlify env vars, first admin, security checks, free-tier limits); curriculum status regenerated; final verification gate passed. Not deployed: no Supabase cloud or Netlify credentials were provided |
+| 12. Deployment preparation | Done | `README.md`, `docs/DEPLOYMENT.md` (Supabase project, migrations, seed, auth URLs, Netlify env vars, first admin, security checks, free-tier limits); curriculum status regenerated; final verification gate passed. Deployed on Vercel with a Supabase cloud project (see Deployment status below) |
 
 ## Tests executed
 
@@ -85,10 +85,11 @@ _Last updated: 2026-11-13_
 
 ## Deployment readiness
 
-**Ready to deploy; not deployed.** The production build, all automated tests and the browser checks pass against
-a local Supabase stack running the same migrations and seed. Nothing has been deployed to Vercel or a Supabase
-cloud project, because no credentials for either were provided — deployment success has therefore **not** been
-verified. Follow `docs/DEPLOYMENT.md`, then run the checks in its section 8 on the live site.
+**Deployed.** Live at https://gradpath-000-6c1c.vercel.app (Vercel, Node.js 24, auto-deploys from `main`), backed by
+a Supabase cloud project with all migrations applied and the curriculum seed loaded (7 courses, 159 lessons,
+1,161 questions, 919 flashcards). Verified on the live site: pages, security headers, the `/api/verify-link`
+function, sign-up with email confirmation, and the Auth site and redirect URLs. The production build, all
+automated tests and the browser checks also pass against a local Supabase stack running the same migrations.
 
 Known follow-ups (not blockers):
 * `zod` 4 migration and Mermaid 12 upgrade to clear the two `npm audit` findings (see the security review).
