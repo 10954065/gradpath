@@ -89,7 +89,7 @@ export default function RevisionPage() {
         title="Revision Centre"
         description="Spaced repetition and active recall: retrieve what you know before checking, rate how well you remembered, and GradPath schedules the next review."
       />
-      <div className="mb-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mb-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <StatTile label="Due today" value={due.length} icon={<RefreshCcw className="size-4" aria-hidden />} />
         <StatTile label="Overdue" value={overdue.length} hint="Due more than a day ago" />
         <StatTile label="Upcoming" value={upcoming.length} />

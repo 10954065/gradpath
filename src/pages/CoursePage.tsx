@@ -72,7 +72,7 @@ export default function CoursePage() {
         <h1 className="mt-2 text-2xl font-semibold tracking-tight text-balance sm:text-3xl">{c.title}</h1>
         <p className="mt-3 max-w-3xl text-muted-foreground">{c.description}</p>
         {c.status_note ? <p className="mt-2 text-xs text-muted-foreground">{c.status_note}</p> : null}
-        <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
+        <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
           <div className="max-w-md">
             <div className="mb-1.5 flex justify-between text-sm">
               <span className="font-medium">Course progress</span>
@@ -84,10 +84,12 @@ export default function CoursePage() {
           </div>
           <div className="flex flex-wrap gap-2">
             {upNext ? (
-              <Button asChild>
+              <Button asChild className="max-w-full">
                 <Link to={`/courses/${c.slug}/lessons/${upNext.slug}`}>
-                  <PlayCircle /> {summary.completed || summary.inProgress ? 'Continue' : 'Start'}: {upNext.title.slice(0, 40)}
-                  {upNext.title.length > 40 ? '…' : ''}
+                  <PlayCircle />
+                  <span className="truncate">
+                    {summary.completed || summary.inProgress ? 'Continue' : 'Start'}: {upNext.title}
+                  </span>
                 </Link>
               </Button>
             ) : null}
@@ -98,7 +100,7 @@ export default function CoursePage() {
         </div>
       </header>
 
-      <div className="grid gap-8 xl:grid-cols-[minmax(0,1fr)_20rem]">
+      <div className="grid grid-cols-1 gap-8 xl:grid-cols-[minmax(0,1fr)_20rem]">
         <div>
           <Section title={`Modules (${c.modules.length})`}>
             <ol className="flex flex-col gap-3">

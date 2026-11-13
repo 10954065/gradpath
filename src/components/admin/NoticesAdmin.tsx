@@ -6,7 +6,8 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogFooter } from '@/components/ui/dialog'
 import { EmptyState, ErrorState, Skeleton } from '@/components/ui/feedback'
-import { Field, Input, Select, Switch, Textarea } from '@/components/ui/form-controls'
+import { Field, Input, Switch, Textarea } from '@/components/ui/form-controls'
+import { Select, SelectItem } from '@/components/ui/select'
 import { toUserMessage } from '@/lib/errors'
 import { openMaterial } from '@/services/courses'
 import {
@@ -105,12 +106,12 @@ function AnnouncementDialog({ announcement, onClose }: { announcement: Announcem
             <Input id="ann-title" value={title} onChange={(e) => setTitle(e.target.value)} required minLength={3} maxLength={200} />
           </Field>
           <Field label="Audience" htmlFor="ann-course">
-            <Select id="ann-course" value={courseId} onChange={(e) => setCourseId(e.target.value)}>
-              <option value="">All students</option>
+            <Select id="ann-course" value={courseId} onValueChange={(next) => setCourseId(next)}>
+              <SelectItem value="">All students</SelectItem>
               {(catalogue.data ?? []).map((c) => (
-                <option key={c.id} value={c.id}>
+                <SelectItem key={c.id} value={c.id}>
                   {c.code} — {c.title}
-                </option>
+                </SelectItem>
               ))}
             </Select>
           </Field>
@@ -219,23 +220,23 @@ function UploadForm() {
     <form key={formKey} onSubmit={handleSubmit} className="rounded-xl border bg-surface p-4 shadow-card">
       <h3 className="font-semibold">Upload course material</h3>
       <p className="mt-1 text-sm text-muted-foreground">PDF, DOCX, PPTX or TXT up to 25 MB. Files are private; students receive a short-lived link only after you publish.</p>
-      <div className="mt-3 grid gap-3 sm:grid-cols-3">
+      <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-3">
         <Field label="Course" htmlFor="mat-course">
           <Select
             id="mat-course"
             value={courseId}
             required
-            onChange={(e) => {
-              setCourseId(e.target.value)
+            onValueChange={(next) => {
+              setCourseId(next)
               setModuleId('')
               setLessonId('')
             }}
           >
-            <option value="">Choose…</option>
+            <SelectItem value="">Choose…</SelectItem>
             {(catalogue.data ?? []).map((c) => (
-              <option key={c.id} value={c.id}>
+              <SelectItem key={c.id} value={c.id}>
                 {c.code}
-              </option>
+              </SelectItem>
             ))}
           </Select>
         </Field>
@@ -244,26 +245,26 @@ function UploadForm() {
             id="mat-module"
             value={moduleId}
             disabled={!course}
-            onChange={(e) => {
-              setModuleId(e.target.value)
+            onValueChange={(next) => {
+              setModuleId(next)
               setLessonId('')
             }}
           >
-            <option value="">Whole course</option>
+            <SelectItem value="">Whole course</SelectItem>
             {(course?.modules ?? []).map((m) => (
-              <option key={m.id} value={m.id}>
+              <SelectItem key={m.id} value={m.id}>
                 {m.title}
-              </option>
+              </SelectItem>
             ))}
           </Select>
         </Field>
         <Field label="Lesson (optional)" htmlFor="mat-lesson">
-          <Select id="mat-lesson" value={lessonId} disabled={!module} onChange={(e) => setLessonId(e.target.value)}>
-            <option value="">Whole module</option>
+          <Select id="mat-lesson" value={lessonId} disabled={!module} onValueChange={(next) => setLessonId(next)}>
+            <SelectItem value="">Whole module</SelectItem>
             {(module?.lessons ?? []).map((l) => (
-              <option key={l.id} value={l.id}>
+              <SelectItem key={l.id} value={l.id}>
                 {l.title}
-              </option>
+              </SelectItem>
             ))}
           </Select>
         </Field>
@@ -271,10 +272,10 @@ function UploadForm() {
           <Input id="mat-title" value={title} onChange={(e) => setTitle(e.target.value)} maxLength={200} />
         </Field>
         <Field label="Source" htmlFor="mat-source">
-          <Select id="mat-source" value={source} onChange={(e) => setSource(e.target.value as UploadedMaterial['source'])}>
-            <option value="lecturer">Lecturer</option>
-            <option value="institutional">Institutional</option>
-            <option value="supplementary">Supplementary</option>
+          <Select id="mat-source" value={source} onValueChange={(next) => setSource(next as UploadedMaterial['source'])}>
+            <SelectItem value="lecturer">Lecturer</SelectItem>
+            <SelectItem value="institutional">Institutional</SelectItem>
+            <SelectItem value="supplementary">Supplementary</SelectItem>
           </Select>
         </Field>
         <Field label="File" htmlFor="mat-file">

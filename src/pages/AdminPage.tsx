@@ -81,7 +81,7 @@ function Overview() {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <StatTile label="Courses" value={catalogue.data.length} hint={`${catalogue.data.filter((c) => !c.is_published).length} hidden`} />
         <StatTile label="Modules" value={catalogue.data.reduce((sum, c) => sum + c.modules.length, 0)} />
         <StatTile label="Lessons" value={lessons.length} hint={`${hiddenLessons} hidden · ${Math.round(words / 1000)}k words`} />

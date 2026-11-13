@@ -8,7 +8,8 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogFooter } from '@/components/ui/dialog'
 import { Alert, EmptyState, ErrorState, Skeleton } from '@/components/ui/feedback'
-import { Field, Input, Select, Textarea } from '@/components/ui/form-controls'
+import { Field, Input, Textarea } from '@/components/ui/form-controls'
+import { Select, SelectItem } from '@/components/ui/select'
 import { PageHeader } from '@/components/ui/page'
 import { useAuth } from '@/contexts/AuthContext'
 import { toUserMessage } from '@/lib/errors'
@@ -102,7 +103,7 @@ export default function TimetablePage() {
       ) : list.length === 0 ? (
         <EmptyState icon={CalendarDays} title="Your timetable is empty" description="Add your lectures and study blocks to plan your week." action={<Button onClick={() => open('new')}>Add event</Button>} />
       ) : (
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
           {ORDER.map((dow) => {
             const day = list.filter((e) => e.recurrence === 'weekly' && e.day_of_week === dow)
             return (
@@ -169,38 +170,38 @@ export default function TimetablePage() {
             <Field label="Title" htmlFor="t-title" error={form.formState.errors.title?.message}>
               <Input id="t-title" {...form.register('title')} />
             </Field>
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               <Field label="Type" htmlFor="t-kind">
-                <Select id="t-kind" {...form.register('kind')}>
-                  <option value="lecture">Lecture (official)</option>
-                  <option value="study">Independent study</option>
-                  <option value="revision">Revision</option>
-                  <option value="other">Other</option>
+                <Select id="t-kind" value={form.watch('kind')} onValueChange={(next) => form.setValue('kind', next as EventInput['kind'], { shouldDirty: true })}>
+                  <SelectItem value="lecture">Lecture (official)</SelectItem>
+                  <SelectItem value="study">Independent study</SelectItem>
+                  <SelectItem value="revision">Revision</SelectItem>
+                  <SelectItem value="other">Other</SelectItem>
                 </Select>
               </Field>
               <Field label="Course" htmlFor="t-course">
-                <Select id="t-course" {...form.register('course_id', { setValueAs: (v: string) => v || null })}>
-                  <option value="">None</option>
+                <Select id="t-course" value={form.watch('course_id') ?? ''} onValueChange={(next) => form.setValue('course_id', next || null, { shouldDirty: true })}>
+                  <SelectItem value="">None</SelectItem>
                   {(courses.data ?? []).map((c) => (
-                    <option key={c.id} value={c.id}>
+                    <SelectItem key={c.id} value={c.id}>
                       {c.code}
-                    </option>
+                    </SelectItem>
                   ))}
                 </Select>
               </Field>
               <Field label="Repeats" htmlFor="t-recurrence">
-                <Select id="t-recurrence" {...form.register('recurrence')}>
-                  <option value="weekly">Every week</option>
-                  <option value="once">Once</option>
+                <Select id="t-recurrence" value={form.watch('recurrence')} onValueChange={(next) => form.setValue('recurrence', next as EventInput['recurrence'], { shouldDirty: true })}>
+                  <SelectItem value="weekly">Every week</SelectItem>
+                  <SelectItem value="once">Once</SelectItem>
                 </Select>
               </Field>
               {recurrence === 'weekly' ? (
                 <Field label="Day" htmlFor="t-day">
-                  <Select id="t-day" {...form.register('day_of_week', { valueAsNumber: true })}>
+                  <Select id="t-day" value={String(form.watch('day_of_week') ?? '')} onValueChange={(next) => form.setValue('day_of_week', Number(next), { shouldDirty: true })}>
                     {ORDER.map((d) => (
-                      <option key={d} value={d}>
+                      <SelectItem key={d} value={String(d)}>
                         {DAYS[d]}
-                      </option>
+                      </SelectItem>
                     ))}
                   </Select>
                 </Field>

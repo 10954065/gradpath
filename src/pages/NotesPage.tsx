@@ -8,7 +8,8 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogFooter } from '@/components/ui/dialog'
 import { EmptyState, ErrorState, Skeleton } from '@/components/ui/feedback'
-import { Field, Input, Select, Textarea } from '@/components/ui/form-controls'
+import { Field, Input, Textarea } from '@/components/ui/form-controls'
+import { Select, SelectItem } from '@/components/ui/select'
 import { PageHeader } from '@/components/ui/page'
 import { useAuth } from '@/contexts/AuthContext'
 import { toUserMessage } from '@/lib/errors'
@@ -128,17 +129,17 @@ export default function NotesPage() {
           </>
         }
       />
-      <div className="mb-5 grid gap-2 sm:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
+      <div className="mb-5 grid grid-cols-1 gap-2 sm:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
         <div className="relative">
           <Search className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" aria-hidden />
           <Input aria-label="Search notes" placeholder="Search notes, tags…" value={query} onChange={(e) => setQuery(e.target.value)} className="pl-9" />
         </div>
-        <Select aria-label="Filter by course" value={courseFilter} onChange={(e) => setCourseFilter(e.target.value)}>
-          <option value="">All courses</option>
+        <Select aria-label="Filter by course" value={courseFilter} onValueChange={(next) => setCourseFilter(next)}>
+          <SelectItem value="">All courses</SelectItem>
           {(catalogue.data ?? []).map((c) => (
-            <option key={c.id} value={c.id}>
+            <SelectItem key={c.id} value={c.id}>
               {c.code} {c.title}
-            </option>
+            </SelectItem>
           ))}
         </Select>
       </div>
@@ -154,7 +155,7 @@ export default function NotesPage() {
           action={<Button onClick={() => openEditor('new')}>Create a note</Button>}
         />
       ) : (
-        <ul className="grid gap-3 md:grid-cols-2">
+        <ul className="grid grid-cols-1 gap-3 md:grid-cols-2">
           {visible.map((n) => {
             const l = n.lesson_id ? lessonIndex.get(n.lesson_id) : undefined
             return (
@@ -214,18 +215,18 @@ export default function NotesPage() {
             <Field label="Note" htmlFor="note-body" hint="Markdown is supported: **bold**, lists, tables.">
               <Textarea id="note-body" rows={10} value={draft.body} onChange={(e) => setDraft({ ...draft, body: e.target.value })} />
             </Field>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <Field label="Course" htmlFor="note-course">
                 <Select
                   id="note-course"
                   value={draft.course_id ?? ''}
-                  onChange={(e) => setDraft({ ...draft, course_id: e.target.value || null, module_id: null, lesson_id: null })}
+                  onValueChange={(next) => setDraft({ ...draft, course_id: next || null, module_id: null, lesson_id: null })}
                 >
-                  <option value="">Not linked</option>
+                  <SelectItem value="">Not linked</SelectItem>
                   {(catalogue.data ?? []).map((c) => (
-                    <option key={c.id} value={c.id}>
+                    <SelectItem key={c.id} value={c.id}>
                       {c.code} {c.title}
-                    </option>
+                    </SelectItem>
                   ))}
                 </Select>
               </Field>
@@ -234,18 +235,18 @@ export default function NotesPage() {
                   id="note-lesson"
                   value={draft.lesson_id ?? ''}
                   disabled={!course}
-                  onChange={(e) => {
-                    const lessonId = e.target.value || null
+                  onValueChange={(next) => {
+                    const lessonId = next || null
                     setDraft({ ...draft, lesson_id: lessonId, module_id: lessonId ? (lessonIndex.get(lessonId)?.moduleId ?? null) : null })
                   }}
                 >
-                  <option value="">Not linked to a lesson</option>
+                  <SelectItem value="">Not linked to a lesson</SelectItem>
                   {course?.modules.map((m) => (
                     <optgroup key={m.id} label={m.title}>
                       {m.lessons.map((l) => (
-                        <option key={l.id} value={l.id}>
+                        <SelectItem key={l.id} value={l.id}>
                           {l.title}
-                        </option>
+                        </SelectItem>
                       ))}
                     </optgroup>
                   ))}

@@ -1,16 +1,44 @@
 import { expect, test, type Page } from '@playwright/test'
 
-async function expectNoHorizontalOverflow(page: Page) {
-  const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
-  expect(overflow).toBeLessThanOrEqual(1)
+// Compare against the layout width (clientWidth): under mobile emulation window.innerWidth grows with the content,
+// which would hide exactly the overflow this test is meant to catch.
+async function expectNoHorizontalOverflow(page: Page, path: string) {
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)
+  expect(overflow, `${path} scrolls sideways by ${overflow}px`).toBeLessThanOrEqual(1)
 }
 
 test('key screens fit a phone screen without sideways scrolling', async ({ page }) => {
-  for (const path of ['/dashboard', '/courses', '/courses/csit-601/lessons/meaning-purpose-and-characteristics', '/planner', '/assessments', '/notes']) {
+  const paths = [
+    '/dashboard',
+    '/courses',
+    '/courses/csit-601',
+    '/courses/csit-601/lessons/meaning-purpose-and-characteristics',
+    '/planner',
+    '/timetable',
+    '/assignments',
+    '/assessments',
+    '/notes',
+    '/resources',
+    '/settings',
+  ]
+  for (const path of paths) {
     await page.goto(path)
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
-    await expectNoHorizontalOverflow(page)
+    await expectNoHorizontalOverflow(page, path)
   }
+})
+
+test('dropdowns open as designed lists and fit the phone screen', async ({ page }) => {
+  await page.goto('/assignments')
+  const sort = page.getByRole('combobox', { name: 'Sort' })
+  await sort.click()
+  const list = page.getByRole('listbox')
+  await expect(list).toBeVisible()
+  const box = await list.boundingBox()
+  const width = await page.evaluate(() => document.documentElement.clientWidth)
+  expect(box && box.x >= 0 && box.x + box.width <= width).toBe(true)
+  await page.getByRole('option', { name: 'Sort by priority' }).click()
+  await expect(sort).toHaveText('Sort by priority')
 })
 
 test('the navigation menu opens on a phone and links to My Courses', async ({ page }) => {

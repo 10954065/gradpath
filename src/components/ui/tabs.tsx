@@ -2,7 +2,10 @@ import { Tabs as TabsPrimitive } from 'radix-ui'
 import type { ComponentProps } from 'react'
 import { cn } from '@/lib/utils'
 
-export const Tabs = TabsPrimitive.Root
+/** Constrained to its container so a long tab list scrolls inside itself instead of widening the page. */
+export function Tabs({ className, ...props }: ComponentProps<typeof TabsPrimitive.Root>) {
+  return <TabsPrimitive.Root className={cn('max-w-full min-w-0', className)} {...props} />
+}
 
 export function TabsList({ className, ...props }: ComponentProps<typeof TabsPrimitive.List>) {
   return (

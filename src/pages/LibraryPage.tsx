@@ -4,7 +4,8 @@ import { useMemo } from 'react'
 import { Link, useSearchParams } from 'react-router'
 import { Badge } from '@/components/ui/badge'
 import { EmptyState, ErrorState, Skeleton } from '@/components/ui/feedback'
-import { Input, Select } from '@/components/ui/form-controls'
+import { Input } from '@/components/ui/form-controls'
+import { Select, SelectItem } from '@/components/ui/select'
 import { PageHeader } from '@/components/ui/page'
 import { toUserMessage } from '@/lib/errors'
 import { getCatalogue } from '@/services/courses'
@@ -50,31 +51,31 @@ export default function LibraryPage() {
   return (
     <>
       <PageHeader title="Learning Library" description="Every published lesson across all seven courses. Search by title, topic or module." />
-      <div className="mb-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-[minmax(0,2fr)_repeat(3,minmax(0,1fr))]">
+      <div className="mb-5 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-[minmax(0,2fr)_repeat(3,minmax(0,1fr))]">
         <div className="relative">
           <Search className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" aria-hidden />
           <Input aria-label="Search lessons" placeholder="Search lessons and topics…" value={q} onChange={(e) => set('q', e.target.value)} className="pl-9" />
         </div>
-        <Select aria-label="Course" value={course} onChange={(e) => set('course', e.target.value)}>
-          <option value="">All courses</option>
+        <Select aria-label="Course" value={course} onValueChange={(next) => set('course', next)}>
+          <SelectItem value="">All courses</SelectItem>
           {(catalogue.data ?? []).map((c) => (
-            <option key={c.id} value={c.id}>
+            <SelectItem key={c.id} value={c.id}>
               {c.code} {c.title}
-            </option>
+            </SelectItem>
           ))}
         </Select>
-        <Select aria-label="Difficulty" value={difficulty} onChange={(e) => set('difficulty', e.target.value)}>
-          <option value="">Any difficulty</option>
-          <option value="introductory">Introductory</option>
-          <option value="intermediate">Intermediate</option>
-          <option value="advanced">Advanced</option>
+        <Select aria-label="Difficulty" value={difficulty} onValueChange={(next) => set('difficulty', next)}>
+          <SelectItem value="">Any difficulty</SelectItem>
+          <SelectItem value="introductory">Introductory</SelectItem>
+          <SelectItem value="intermediate">Intermediate</SelectItem>
+          <SelectItem value="advanced">Advanced</SelectItem>
         </Select>
-        <Select aria-label="Status" value={status} onChange={(e) => set('status', e.target.value)}>
-          <option value="">Any status</option>
-          <option value="not_started">Not started</option>
-          <option value="in_progress">In progress</option>
-          <option value="completed">Completed</option>
-          <option value="bookmarked">Bookmarked</option>
+        <Select aria-label="Status" value={status} onValueChange={(next) => set('status', next)}>
+          <SelectItem value="">Any status</SelectItem>
+          <SelectItem value="not_started">Not started</SelectItem>
+          <SelectItem value="in_progress">In progress</SelectItem>
+          <SelectItem value="completed">Completed</SelectItem>
+          <SelectItem value="bookmarked">Bookmarked</SelectItem>
         </Select>
       </div>
       {catalogue.isError ? <ErrorState message={toUserMessage(catalogue.error)} onRetry={() => void catalogue.refetch()} /> : null}
@@ -87,7 +88,7 @@ export default function LibraryPage() {
           <p className="mb-3 text-xs text-muted-foreground" aria-live="polite">
             {lessons.length} lesson{lessons.length === 1 ? '' : 's'}
           </p>
-          <ul className="grid gap-3 md:grid-cols-2">
+          <ul className="grid grid-cols-1 gap-3 md:grid-cols-2">
             {lessons.map((l) => (
               <li key={l.id}>
                 <Link to={`/courses/${l.course.slug}/lessons/${l.slug}`} className="flex h-full flex-col rounded-xl border bg-surface p-4 shadow-card hover:border-primary/40">

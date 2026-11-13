@@ -7,7 +7,8 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogFooter } from '@/components/ui/dialog'
 import { EmptyState, ErrorState, Skeleton } from '@/components/ui/feedback'
-import { Field, Input, Select, Textarea } from '@/components/ui/form-controls'
+import { Field, Input, Textarea } from '@/components/ui/form-controls'
+import { Select, SelectItem } from '@/components/ui/select'
 import { PageHeader } from '@/components/ui/page'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { useAuth } from '@/contexts/AuthContext'
@@ -144,18 +145,18 @@ export default function AssignmentsPage() {
           </TabsList>
         </Tabs>
         <div className="flex gap-2">
-          <Select aria-label="Filter by course" value={course} onChange={(e) => setCourse(e.target.value)}>
-            <option value="">All courses</option>
+          <Select aria-label="Filter by course" value={course} onValueChange={(next) => setCourse(next)}>
+            <SelectItem value="">All courses</SelectItem>
             {(courses.data ?? []).map((c) => (
-              <option key={c.id} value={c.id}>
+              <SelectItem key={c.id} value={c.id}>
                 {c.code}
-              </option>
+              </SelectItem>
             ))}
           </Select>
-          <Select aria-label="Sort" value={sort} onChange={(e) => setSort(e.target.value as typeof sort)}>
-            <option value="due">Sort by due date</option>
-            <option value="priority">Sort by priority</option>
-            <option value="created">Newest first</option>
+          <Select aria-label="Sort" value={sort} onValueChange={(next) => setSort(next as typeof sort)}>
+            <SelectItem value="due">Sort by due date</SelectItem>
+            <SelectItem value="priority">Sort by priority</SelectItem>
+            <SelectItem value="created">Newest first</SelectItem>
           </Select>
         </div>
       </div>
@@ -223,14 +224,14 @@ export default function AssignmentsPage() {
             <Field label="Title" htmlFor="a-title">
               <Input id="a-title" value={draft.title} maxLength={200} onChange={(e) => setDraft({ ...draft, title: e.target.value })} />
             </Field>
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               <Field label="Course" htmlFor="a-course">
-                <Select id="a-course" value={draft.course_id ?? ''} onChange={(e) => setDraft({ ...draft, course_id: e.target.value || null })}>
-                  <option value="">None</option>
+                <Select id="a-course" value={draft.course_id ?? ''} onValueChange={(next) => setDraft({ ...draft, course_id: next || null })}>
+                  <SelectItem value="">None</SelectItem>
                   {(courses.data ?? []).map((c) => (
-                    <option key={c.id} value={c.id}>
+                    <SelectItem key={c.id} value={c.id}>
                       {c.code} {c.title}
-                    </option>
+                    </SelectItem>
                   ))}
                 </Select>
               </Field>
@@ -243,18 +244,18 @@ export default function AssignmentsPage() {
                 />
               </Field>
               <Field label="Priority" htmlFor="a-priority">
-                <Select id="a-priority" value={draft.priority} onChange={(e) => setDraft({ ...draft, priority: e.target.value as AssignmentInput['priority'] })}>
-                  <option value="high">High</option>
-                  <option value="medium">Medium</option>
-                  <option value="low">Low</option>
+                <Select id="a-priority" value={draft.priority} onValueChange={(next) => setDraft({ ...draft, priority: next as AssignmentInput['priority'] })}>
+                  <SelectItem value="high">High</SelectItem>
+                  <SelectItem value="medium">Medium</SelectItem>
+                  <SelectItem value="low">Low</SelectItem>
                 </Select>
               </Field>
               <Field label="Status" htmlFor="a-status">
-                <Select id="a-status" value={draft.status} onChange={(e) => setDraft({ ...draft, status: e.target.value as AssignmentInput['status'] })}>
+                <Select id="a-status" value={draft.status} onValueChange={(next) => setDraft({ ...draft, status: next as AssignmentInput['status'] })}>
                   {Object.entries(STATUS_LABEL).map(([v, l]) => (
-                    <option key={v} value={v}>
+                    <SelectItem key={v} value={v}>
                       {l}
-                    </option>
+                    </SelectItem>
                   ))}
                 </Select>
               </Field>

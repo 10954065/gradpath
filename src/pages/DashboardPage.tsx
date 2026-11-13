@@ -68,7 +68,7 @@ export default function DashboardPage() {
         <Skeleton className="h-[60vh]" />
       ) : (
         <>
-          <div className="mb-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mb-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <StatTile label="Overall course progress" value={`${overall.percent}%`} hint={`${overall.completed} of ${overall.total} lessons completed`} icon={<GraduationCap className="size-4" aria-hidden />} />
             <StatTile label="Study this week" value={minutesToHours(data.current.completedMinutes)} hint={`Target ${targetHours} h · ${Math.min(100, Math.round((data.current.completedMinutes / (targetHours * 60)) * 100))}%`} icon={<Timer className="size-4" aria-hidden />} />
             <StatTile label="Study streak" value={`${data.streak} day${data.streak === 1 ? '' : 's'}`} hint="Days in a row with recorded learning" icon={<Flame className="size-4" aria-hidden />} />
@@ -89,7 +89,7 @@ export default function DashboardPage() {
             </Card>
           ) : null}
 
-          <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_22rem]">
+          <div className="grid grid-cols-1 gap-6 xl:grid-cols-[minmax(0,1fr)_22rem]">
             <div className="flex min-w-0 flex-col gap-6">
               <Card>
                 <CardHeader>
@@ -104,7 +104,7 @@ export default function DashboardPage() {
                 <CardHeader>
                   <CardTitle>Course progress</CardTitle>
                 </CardHeader>
-                <CardContent className="grid gap-3 sm:grid-cols-2">
+                <CardContent className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                   {data.courses.map((c) => {
                     const s = summariseProgress(courseLessonIds(c), data.progress)
                     return (
@@ -122,7 +122,7 @@ export default function DashboardPage() {
                 </CardContent>
               </Card>
 
-              <div className="grid gap-6 lg:grid-cols-2">
+              <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
                 <Card>
                   <CardHeader>
                     <CardTitle>Weekly study activity</CardTitle>

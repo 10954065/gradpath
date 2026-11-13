@@ -1,7 +1,4 @@
 import { expect, test, type Page } from '@playwright/test'
-import { handleOfflineReadyNotice } from './support'
-
-test.beforeEach(({ page }) => handleOfflineReadyNotice(page))
 
 const LESSON = '/courses/csit-601/lessons/meaning-purpose-and-characteristics'
 

@@ -8,7 +8,8 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogFooter } from '@/components/ui/dialog'
 import { ErrorState, ProgressBar, Skeleton } from '@/components/ui/feedback'
-import { Field, Input, Select, Textarea } from '@/components/ui/form-controls'
+import { Field, Input, Textarea } from '@/components/ui/form-controls'
+import { Select, SelectItem } from '@/components/ui/select'
 import { PageHeader, StatTile } from '@/components/ui/page'
 import { useAuth } from '@/contexts/AuthContext'
 import { toUserMessage } from '@/lib/errors'
@@ -134,7 +135,7 @@ export default function PlannerPage() {
           </Button>
         }
       />
-      <div className="mb-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mb-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <StatTile label="Studied this week" value={minutesToHours(weekTotals.completedMinutes)} hint={`Target ${profile?.weekly_study_target_hours ?? 15} h`} />
         <StatTile label="Planned this week" value={minutesToHours(weekTotals.plannedMinutes)} hint={`${weekTotals.completedSessions} sessions completed`} />
         <StatTile label={`Studied in ${format(anchor, 'MMMM')}`} value={minutesToHours(monthTotals.completedMinutes)} hint={`${monthTotals.completedSessions} sessions`} />
@@ -169,7 +170,7 @@ export default function PlannerPage() {
       {events.isPending || sessions.isPending ? (
         <Skeleton className="h-96" />
       ) : (
-        <ol className="grid gap-3 lg:grid-cols-7">
+        <ol className="grid grid-cols-1 gap-3 lg:grid-cols-7">
           {weekDays(anchor).map((day) => {
             const date = isoDate(day)
             const items = week.filter((e) => e.date === date)
@@ -265,12 +266,12 @@ export default function PlannerPage() {
                 <Input id="s-title" value={editor.title} maxLength={200} onChange={(e) => setEditor({ ...editor, title: e.target.value })} />
               </Field>
               <Field label="Course" htmlFor="s-course">
-                <Select id="s-course" value={editor.courseId} onChange={(e) => setEditor({ ...editor, courseId: e.target.value })}>
-                  <option value="">General study</option>
+                <Select id="s-course" value={editor.courseId} onValueChange={(next) => setEditor({ ...editor, courseId: next })}>
+                  <SelectItem value="">General study</SelectItem>
                   {(courses.data ?? []).map((c) => (
-                    <option key={c.id} value={c.id}>
+                    <SelectItem key={c.id} value={c.id}>
                       {c.code} {c.title}
-                    </option>
+                    </SelectItem>
                   ))}
                 </Select>
               </Field>

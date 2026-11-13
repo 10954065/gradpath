@@ -98,7 +98,7 @@ export default function OnboardingPage() {
                   These courses make up GradPath's initial curriculum. Confirm each one against your official registration — not every
                   course is necessarily compulsory for you.
                 </p>
-                <ul className="mt-5 grid gap-2 sm:grid-cols-2">
+                <ul className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-2">
                   {courses.isPending
                     ? Array.from({ length: 6 }, (_, i) => <Skeleton key={i} className="h-16" />)
                     : (courses.data ?? []).map((c) => (
@@ -157,7 +157,7 @@ export default function OnboardingPage() {
                 <h1 id="onboarding-title" className="text-xl font-semibold tracking-tight">
                   How learning works here
                 </h1>
-                <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div className="rounded-lg border p-4">
                     <BookOpenCheck className="size-5 text-primary" aria-hidden />
                     <h2 className="mt-2 text-sm font-semibold">Completing lessons</h2>

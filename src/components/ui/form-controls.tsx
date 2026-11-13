@@ -13,14 +13,6 @@ export function Textarea({ className, ...props }: ComponentProps<'textarea'>) {
   return <textarea className={cn(fieldBase, 'min-h-24 py-2 leading-relaxed', className)} {...props} />
 }
 
-export function Select({ className, children, ...props }: ComponentProps<'select'>) {
-  return (
-    <select className={cn(fieldBase, 'h-9 appearance-none bg-[length:1rem] bg-[right_0.6rem_center] bg-no-repeat pr-8', className)} {...props}>
-      {children}
-    </select>
-  )
-}
-
 export function Label({ className, ...props }: ComponentProps<'label'>) {
   return <label className={cn('text-sm font-medium text-foreground', className)} {...props} />
 }

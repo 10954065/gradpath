@@ -29,7 +29,7 @@ export default function MockExamsPage() {
       {quizzes.isPending ? (
         <Skeleton className="h-80" />
       ) : (
-        <ul className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
           {(quizzes.data ?? []).map((exam) => {
             const mine = (attempts.data ?? []).filter((a) => a.quiz_id === exam.id && a.status === 'submitted')
             const best = mine.reduce<number | null>((m, a) => (a.percent === null ? m : Math.max(m ?? 0, Number(a.percent))), null)

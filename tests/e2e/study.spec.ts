@@ -1,7 +1,4 @@
 import { expect, test } from '@playwright/test'
-import { handleOfflineReadyNotice } from './support'
-
-test.beforeEach(({ page }) => handleOfflineReadyNotice(page))
 
 test('a student takes a lesson quiz and gets a server-scored result', async ({ page }) => {
   await page.goto('/courses/csit-601/lessons/meaning-purpose-and-characteristics')
@@ -41,7 +38,11 @@ test('a student adds an assignment with a due date', async ({ page }) => {
   await page.goto('/assignments')
   await page.getByRole('button', { name: 'Add assignment' }).first().click()
   await page.locator('#a-title').fill(title)
-  await page.locator('#a-course').selectOption({ index: 1 })
+  await page.locator('#a-course').click()
+  await page.getByRole('option', { name: /CSIT 601/ }).click()
+  await expect(page.locator('#a-course')).toContainText('CSIT 601')
+  await page.locator('#a-priority').click()
+  await page.getByRole('option', { name: 'High' }).click()
   const due = new Date(Date.now() + 7 * 24 * 3600 * 1000)
   const local = new Date(due.getTime() - due.getTimezoneOffset() * 60_000).toISOString().slice(0, 16)
   await page.locator('#a-due').fill(local)

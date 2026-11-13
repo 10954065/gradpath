@@ -43,7 +43,7 @@ export default function ProgressPage() {
         predict your GPA or final results.
       </Alert>
 
-      <div className="mb-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mb-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <StatTile label="Lessons completed" value={completed} hint={`${masteredLessons} with quiz mastery`} icon={<Award className="size-4" aria-hidden />} />
         <StatTile label="Assessments submitted" value={submitted.length} hint={`${submitted.filter((a) => a.passed).length} at or above mastery`} icon={<Target className="size-4" aria-hidden />} />
         <StatTile label="Study time (8 weeks)" value={minutesToHours(studied)} hint={`Weekly target ${profile?.weekly_study_target_hours ?? 15} h`} icon={<BarChart3 className="size-4" aria-hidden />} />
@@ -59,7 +59,7 @@ export default function ProgressPage() {
         />
       ) : null}
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <Card>
           <CardHeader>
             <CardTitle>Course progress</CardTitle>

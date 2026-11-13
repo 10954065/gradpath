@@ -4,7 +4,8 @@ import { useState, type FormEvent } from 'react'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogFooter } from '@/components/ui/dialog'
 import { ErrorState, Skeleton } from '@/components/ui/feedback'
-import { Field, Input, Select, Textarea } from '@/components/ui/form-controls'
+import { Field, Input, Textarea } from '@/components/ui/form-controls'
+import { Select, SelectItem } from '@/components/ui/select'
 import { VerificationBadge } from '@/components/courses/badges'
 import { toUserMessage } from '@/lib/errors'
 import { deleteRow, insertRow, listAllResources, setPublished, updateRow, verifyResource } from '@/services/admin'
@@ -39,12 +40,12 @@ export function ResourceAdmin() {
   return (
     <div className="flex flex-col gap-3">
       <div className="flex flex-wrap items-center gap-2">
-        <Select aria-label="Course" value={courseId} onChange={(e) => setCourseId(e.target.value)} className="w-auto">
-          <option value="">All courses ({resources.data.length})</option>
+        <Select aria-label="Course" value={courseId} onValueChange={(next) => setCourseId(next)} className="w-auto">
+          <SelectItem value="">All courses ({resources.data.length})</SelectItem>
           {(catalogue.data ?? []).map((c) => (
-            <option key={c.id} value={c.id}>
+            <SelectItem key={c.id} value={c.id}>
               {c.code}
-            </option>
+            </SelectItem>
           ))}
         </Select>
         <span className="flex-1" />
@@ -129,14 +130,14 @@ function ResourceDialog({ resource, defaultCourseId, onClose }: { resource: Less
   return (
     <Dialog open onOpenChange={(open) => !open && onClose()}>
       <DialogContent title={resource ? 'Edit resource' : 'Add resource'} size="lg">
-        <form onSubmit={handleSubmit} className="grid gap-4 sm:grid-cols-2">
+        <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <Field label="Course" htmlFor="res-course">
-            <Select id="res-course" value={form.course_id} onChange={(e) => set('course_id', e.target.value)} required>
-              <option value="">Choose…</option>
+            <Select id="res-course" value={form.course_id} onValueChange={(next) => set('course_id', next)} required>
+              <SelectItem value="">Choose…</SelectItem>
               {(catalogue.data ?? []).map((c) => (
-                <option key={c.id} value={c.id}>
+                <SelectItem key={c.id} value={c.id}>
                   {c.code} — {c.title}
-                </option>
+                </SelectItem>
               ))}
             </Select>
           </Field>
@@ -153,30 +154,30 @@ function ResourceDialog({ resource, defaultCourseId, onClose }: { resource: Less
             <Textarea id="res-description" value={form.description} onChange={(e) => set('description', e.target.value)} maxLength={2000} />
           </Field>
           <Field label="Category" htmlFor="res-category">
-            <Select id="res-category" value={form.category} onChange={(e) => set('category', e.target.value as ResourceCategory)}>
+            <Select id="res-category" value={form.category} onValueChange={(next) => set('category', next as ResourceCategory)}>
               {CATEGORIES.map((c) => (
-                <option key={c}>{c}</option>
+                <SelectItem key={c} value={c}>{c}</SelectItem>
               ))}
             </Select>
           </Field>
           <Field label="Difficulty" htmlFor="res-difficulty">
-            <Select id="res-difficulty" value={form.difficulty} onChange={(e) => set('difficulty', e.target.value as LessonResource['difficulty'])}>
-              <option>introductory</option>
-              <option>intermediate</option>
-              <option>advanced</option>
+            <Select id="res-difficulty" value={form.difficulty} onValueChange={(next) => set('difficulty', next as LessonResource['difficulty'])}>
+              <SelectItem value="introductory">introductory</SelectItem>
+              <SelectItem value="intermediate">intermediate</SelectItem>
+              <SelectItem value="advanced">advanced</SelectItem>
             </Select>
           </Field>
           <Field label="Stage" htmlFor="res-stage">
-            <Select id="res-stage" value={form.stage} onChange={(e) => set('stage', e.target.value as LessonResource['stage'])}>
+            <Select id="res-stage" value={form.stage} onValueChange={(next) => set('stage', next as LessonResource['stage'])}>
               {STAGES.map((s) => (
-                <option key={s}>{s}</option>
+                <SelectItem key={s} value={s}>{s}</SelectItem>
               ))}
             </Select>
           </Field>
           <Field label="Access" htmlFor="res-access">
-            <Select id="res-access" value={form.access_type} onChange={(e) => set('access_type', e.target.value as LessonResource['access_type'])}>
+            <Select id="res-access" value={form.access_type} onValueChange={(next) => set('access_type', next as LessonResource['access_type'])}>
               {ACCESS.map((a) => (
-                <option key={a}>{a}</option>
+                <SelectItem key={a} value={a}>{a}</SelectItem>
               ))}
             </Select>
           </Field>

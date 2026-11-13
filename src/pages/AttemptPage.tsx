@@ -114,7 +114,7 @@ export default function AttemptPage() {
         </Alert>
       ) : null}
 
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_14rem]">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_14rem]">
         <div className="rounded-xl border bg-surface p-5 shadow-card sm:p-6">
           {question ? <QuestionView question={question} index={current} response={answers[question.id]} onChange={(r) => setAnswer(question.id, r)} /> : null}
           <div className="mt-6 flex items-center justify-between gap-2 border-t pt-4">

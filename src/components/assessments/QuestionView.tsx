@@ -3,6 +3,7 @@ import { CheckCircle2, CircleSlash, XCircle } from 'lucide-react'
 import { RichText } from '@/components/lessons/RichText'
 import { Badge } from '@/components/ui/badge'
 import { Input, Textarea } from '@/components/ui/form-controls'
+import { Select, SelectItem } from '@/components/ui/select'
 import { choiceOptions, describeCorrectAnswer, isObjective, matchingOptions } from '@/lib/assessment'
 import { cn } from '@/lib/utils'
 import type { AnswerResponse, AttemptQuestion } from '@/types/database'
@@ -144,24 +145,23 @@ export function QuestionView({ question: q, index, response, onChange, review = 
             const keyPairs = (correct?.pairs ?? {}) as Record<string, string>
             const ok = review && chosen === keyPairs[l.id]
             return (
-              <div key={l.id} className={cn('grid gap-2 rounded-lg border p-3 text-sm sm:grid-cols-2 sm:items-center', review && (ok ? 'border-success' : 'border-danger'))}>
+              <div key={l.id} className={cn('grid grid-cols-1 gap-2 rounded-lg border p-3 text-sm sm:grid-cols-2 sm:items-center', review && (ok ? 'border-success' : 'border-danger'))}>
                 <span className="font-medium">
                   <RichText markdown={l.text} inline />
                 </span>
-                <select
+                <Select
                   aria-label={`Match for ${l.text}`}
                   value={chosen}
                   disabled={review}
-                  onChange={(e) => onChange?.({ pairs: { ...pairs, [l.id]: e.target.value } })}
-                  className="h-9 w-full rounded-md border bg-surface px-2 text-sm"
+                  placeholder="Choose a match…"
+                  onValueChange={(next) => onChange?.({ pairs: { ...pairs, [l.id]: next } })}
                 >
-                  <option value="">Choose a match…</option>
                   {matchingOptions(q).right.map((r) => (
-                    <option key={r.id} value={r.id}>
+                    <SelectItem key={r.id} value={r.id}>
                       {r.text}
-                    </option>
+                    </SelectItem>
                   ))}
-                </select>
+                </Select>
               </div>
             )
           })}

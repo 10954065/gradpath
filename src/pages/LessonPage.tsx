@@ -179,7 +179,7 @@ export default function LessonPage() {
         </Alert>
       ) : null}
 
-      <div className="grid gap-8 xl:grid-cols-[minmax(0,1fr)_17rem]">
+      <div className="grid grid-cols-1 gap-8 xl:grid-cols-[minmax(0,1fr)_17rem]">
         <div className={cn('min-w-0 rounded-2xl', readerDark && 'reader-dark p-4 sm:p-6')} style={{ ['--reader-scale' as string]: scale }}>
           <header className="mb-8">
             <p className="text-xs font-semibold tracking-wide text-primary uppercase">
@@ -250,7 +250,7 @@ export default function LessonPage() {
 
             {content.keyTerms?.length ? (
               <SectionBlock id="key-terms" title="Key terminology">
-                <dl className="grid gap-3 sm:grid-cols-2">
+                <dl className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                   {content.keyTerms.map((k) => (
                     <div key={k.term} className="rounded-lg border bg-surface p-3">
                       <dt className="text-sm font-semibold">{k.term}</dt>
@@ -325,7 +325,7 @@ export default function LessonPage() {
                   </ul>
                 ) : null}
                 {content.videos?.length ? (
-                  <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+                  <ul className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
                     {content.videos.map((v) => (
                       <li key={v.url}>
                         <a
@@ -352,7 +352,7 @@ export default function LessonPage() {
             ) : null}
 
             <SectionBlock id="complete" title="Check your understanding and complete">
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div className="rounded-xl border bg-surface p-4">
                   <ClipboardCheck className="size-5 text-primary" aria-hidden />
                   <h3 className="mt-2 font-sans text-sm font-semibold">Lesson quiz</h3>
@@ -399,7 +399,7 @@ export default function LessonPage() {
             </SectionBlock>
           </article>
 
-          <nav aria-label="Lesson navigation" className="mt-12 grid max-w-3xl gap-3 border-t pt-6 sm:grid-cols-2">
+          <nav aria-label="Lesson navigation" className="mt-12 grid grid-cols-1 max-w-3xl gap-3 border-t pt-6 sm:grid-cols-2">
             {previous ? (
               <Link to={`/courses/${course.slug}/lessons/${previous.slug}`} className="group rounded-xl border bg-surface p-4 hover:border-primary/40">
                 <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">

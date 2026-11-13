@@ -259,3 +259,24 @@
     }
   }
 }
+
+/* Popover entrance (select lists). Kept subtle; disabled for reduced motion. */
+@keyframes gp-pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.gp-popover[data-state='open'] {
+  transform-origin: var(--radix-select-content-transform-origin, top);
+  animation: gp-pop-in 120ms ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .gp-popover[data-state='open'] {
+    animation: none;
+  }
+}

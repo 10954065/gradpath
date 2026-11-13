@@ -10,7 +10,8 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Alert, Skeleton } from '@/components/ui/feedback'
-import { Field, Input, Select, Switch } from '@/components/ui/form-controls'
+import { Field, Input, Switch } from '@/components/ui/form-controls'
+import { Select, SelectItem } from '@/components/ui/select'
 import { PageHeader } from '@/components/ui/page'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { useAuth } from '@/contexts/AuthContext'
@@ -91,7 +92,7 @@ function ProfileTab() {
             <input type="file" accept="image/png,image/jpeg,image/webp" className="sr-only" onChange={(e) => void onPhoto(e.target.files?.[0])} />
           </label>
         </div>
-        <form onSubmit={onSubmit} noValidate className="grid gap-4 sm:grid-cols-2">
+        <form onSubmit={onSubmit} noValidate className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <Field label="Full name" htmlFor="full_name" error={formState.errors.full_name?.message} className="sm:col-span-2">
             <Input id="full_name" {...register('full_name')} />
           </Field>
@@ -116,11 +117,11 @@ function ProfileTab() {
             <Input id="weekly_study_target_hours" type="number" min={1} max={80} step={0.5} {...register('weekly_study_target_hours')} />
           </Field>
           <Field label="Time zone" htmlFor="time_zone">
-            <Select id="time_zone" {...register('time_zone')}>
+            <Select id="time_zone" value={watch('time_zone') ?? ''} onValueChange={(next) => setValue('time_zone', next, { shouldDirty: true })}>
               {TIME_ZONES.map((tz) => (
-                <option key={tz} value={tz}>
+                <SelectItem key={tz} value={tz}>
                   {tz}
-                </option>
+                </SelectItem>
               ))}
             </Select>
           </Field>
@@ -184,20 +185,20 @@ function PreferencesTab() {
         <CardHeader>
           <CardTitle>Appearance and reading</CardTitle>
         </CardHeader>
-        <CardContent className="grid gap-4 sm:grid-cols-2">
+        <CardContent className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <Field label="Theme" htmlFor="theme">
             <Select
               id="theme"
               value={theme}
-              onChange={(e) => {
-                const next = e.target.value as ThemePreference
+              onValueChange={(value) => {
+                const next = value as ThemePreference
                 setTheme(next)
                 save.mutate({ theme: next })
               }}
             >
-              <option value="system">Match my device</option>
-              <option value="light">Light</option>
-              <option value="dark">Dark</option>
+              <SelectItem value="system">Match my device</SelectItem>
+              <SelectItem value="light">Light</SelectItem>
+              <SelectItem value="dark">Dark</SelectItem>
             </Select>
           </Field>
           <Field label={`Lesson text size (${Math.round(prefs.data.reader_font_scale * 100)}%)`} htmlFor="scale">
@@ -237,22 +238,22 @@ function PreferencesTab() {
               onCheckedChange={(v) => void toggleBrowserNotifications(v)}
             />
           </div>
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <Field label="Remind me before study sessions" htmlFor="lead">
-              <Select id="lead" value={prefs.data.reminder_lead_minutes} onChange={(e) => save.mutate({ reminder_lead_minutes: Number(e.target.value) })}>
+              <Select id="lead" value={String(prefs.data.reminder_lead_minutes)} onValueChange={(next) => save.mutate({ reminder_lead_minutes: Number(next) })}>
                 {[0, 10, 15, 30, 60, 120].map((m) => (
-                  <option key={m} value={m}>
+                  <SelectItem key={m} value={String(m)}>
                     {m === 0 ? 'No reminder' : `${m} minutes before`}
-                  </option>
+                  </SelectItem>
                 ))}
               </Select>
             </Field>
             <Field label="Daily revision limit" htmlFor="limit">
-              <Select id="limit" value={prefs.data.daily_review_limit} onChange={(e) => save.mutate({ daily_review_limit: Number(e.target.value) })}>
+              <Select id="limit" value={String(prefs.data.daily_review_limit)} onValueChange={(next) => save.mutate({ daily_review_limit: Number(next) })}>
                 {[10, 20, 30, 50, 100].map((n) => (
-                  <option key={n} value={n}>
+                  <SelectItem key={n} value={String(n)}>
                     {n} reviews per day
-                  </option>
+                  </SelectItem>
                 ))}
               </Select>
             </Field>
@@ -296,11 +297,11 @@ function CoursesTab() {
                 aria-label={`Registration status for ${c.code}`}
                 className="sm:w-56"
                 value={status}
-                onChange={(e) => update.mutate({ courseId: c.id, status: e.target.value as CourseEnrolment['status'] })}
+                onValueChange={(next) => update.mutate({ courseId: c.id, status: next as CourseEnrolment['status'] })}
               >
-                <option value="enrolled">Registered</option>
-                <option value="pending_confirmation">Pending confirmation</option>
-                <option value="dropped">Not taking</option>
+                <SelectItem value="enrolled">Registered</SelectItem>
+                <SelectItem value="pending_confirmation">Pending confirmation</SelectItem>
+                <SelectItem value="dropped">Not taking</SelectItem>
               </Select>
             </div>
           )

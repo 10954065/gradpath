@@ -15,6 +15,9 @@ export default defineConfig({
     baseURL,
     // The app honours reduced motion, which keeps step transitions deterministic for tests.
     reducedMotion: 'reduce',
+    // No service worker by default: each test gets a fresh context, and the worker's one-off "ready to work
+    // offline" notice would otherwise appear mid-test. offline.spec.ts opts back in.
+    serviceWorkers: 'block',
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
   },
@@ -35,7 +38,8 @@ export default defineConfig({
     : {
         command: 'npm run build && npm run preview',
         url: baseURL,
-        reuseExistingServer: true,
+        // Never reuse: a leftover preview server would silently serve an old build.
+        reuseExistingServer: false,
         timeout: 240_000,
       },
 })

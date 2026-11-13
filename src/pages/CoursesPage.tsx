@@ -26,7 +26,7 @@ export default function CoursesPage() {
       />
       {catalogue.isError ? <ErrorState message={toUserMessage(catalogue.error)} onRetry={() => void catalogue.refetch()} /> : null}
       {catalogue.isPending ? (
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
           {Array.from({ length: 6 }, (_, i) => (
             <Skeleton key={i} className="h-56" />
           ))}
@@ -34,7 +34,7 @@ export default function CoursesPage() {
       ) : catalogue.data?.length === 0 ? (
         <EmptyState icon={GraduationCap} title="No courses published yet" description="Courses will appear here once an administrator publishes them." />
       ) : (
-        <ul className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
           {catalogue.data?.map((course) => {
             const ids = courseLessonIds(course)
             const summary = summariseProgress(ids, progress.data ?? [])

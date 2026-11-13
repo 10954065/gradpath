@@ -4,7 +4,7 @@ import { Link, useSearchParams } from 'react-router'
 import { QuizList } from '@/components/assessments/QuizList'
 import { Badge } from '@/components/ui/badge'
 import { Alert, EmptyState, ErrorState, Skeleton } from '@/components/ui/feedback'
-import { Select } from '@/components/ui/form-controls'
+import { Select, SelectItem } from '@/components/ui/select'
 import { PageHeader, Section } from '@/components/ui/page'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { toUserMessage } from '@/lib/errors'
@@ -50,12 +50,12 @@ export default function AssessmentsPage() {
             <TabsTrigger value="lessons">Lesson quizzes</TabsTrigger>
             <TabsTrigger value="history">History</TabsTrigger>
           </TabsList>
-          <Select aria-label="Filter by course" value={course} onChange={(e) => set('course', e.target.value)} className="w-full sm:w-64">
-            <option value="">All courses</option>
+          <Select aria-label="Filter by course" value={course} onValueChange={(next) => set('course', next)} className="w-full sm:w-64">
+            <SelectItem value="">All courses</SelectItem>
             {(catalogue.data ?? []).map((c) => (
-              <option key={c.id} value={c.id}>
+              <SelectItem key={c.id} value={c.id}>
                 {c.code} {c.title}
-              </option>
+              </SelectItem>
             ))}
           </Select>
         </div>

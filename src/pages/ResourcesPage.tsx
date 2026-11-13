@@ -7,7 +7,8 @@ import { VerificationBadge } from '@/components/courses/badges'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { EmptyState, ErrorState, Skeleton } from '@/components/ui/feedback'
-import { Input, Select } from '@/components/ui/form-controls'
+import { Input } from '@/components/ui/form-controls'
+import { Select, SelectItem } from '@/components/ui/select'
 import { PageHeader } from '@/components/ui/page'
 import { useAuth } from '@/contexts/AuthContext'
 import { toUserMessage } from '@/lib/errors'
@@ -83,30 +84,30 @@ export default function ResourcesPage() {
         title="Resources"
         description="Curated external learning resources. Links are checked automatically; access terms are shown only when confirmed."
       />
-      <div className="mb-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-[minmax(0,2fr)_repeat(3,minmax(0,1fr))]">
+      <div className="mb-5 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-[minmax(0,2fr)_repeat(3,minmax(0,1fr))]">
         <div className="relative">
           <Search className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" aria-hidden />
           <Input aria-label="Search resources" placeholder="Search resources…" value={q} onChange={(e) => set('q', e.target.value)} className="pl-9" />
         </div>
-        <Select aria-label="Course" value={course} onChange={(e) => set('course', e.target.value)}>
-          <option value="">All courses</option>
+        <Select aria-label="Course" value={course} onValueChange={(next) => set('course', next)}>
+          <SelectItem value="">All courses</SelectItem>
           {(courses.data ?? []).map((c) => (
-            <option key={c.id} value={c.id}>
+            <SelectItem key={c.id} value={c.id}>
               {c.code} {c.title}
-            </option>
+            </SelectItem>
           ))}
         </Select>
-        <Select aria-label="Category" value={category} onChange={(e) => set('category', e.target.value)}>
-          <option value="">All categories</option>
+        <Select aria-label="Category" value={category} onValueChange={(next) => set('category', next)}>
+          <SelectItem value="">All categories</SelectItem>
           {Object.entries(CATEGORY_LABEL).map(([value, label]) => (
-            <option key={value} value={value}>
+            <SelectItem key={value} value={value}>
               {label}
-            </option>
+            </SelectItem>
           ))}
         </Select>
-        <Select aria-label="Saved" value={saved ? '1' : ''} onChange={(e) => set('saved', e.target.value)}>
-          <option value="">All resources</option>
-          <option value="1">Bookmarked only</option>
+        <Select aria-label="Saved" value={saved ? '1' : ''} onValueChange={(next) => set('saved', next)}>
+          <SelectItem value="">All resources</SelectItem>
+          <SelectItem value="1">Bookmarked only</SelectItem>
         </Select>
       </div>
       {resources.isError ? <ErrorState message={toUserMessage(resources.error)} onRetry={() => void resources.refetch()} /> : null}
@@ -115,7 +116,7 @@ export default function ResourcesPage() {
       ) : filtered.length === 0 ? (
         <EmptyState icon={BookMarked} title="No resources match" description="Try another search or clear the filters." />
       ) : (
-        <ul className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+        <ul className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
           {filtered.map((r) => {
             const isSaved = Boolean(bookmarks.data?.some((b) => b.resource_id === r.id))
             return (

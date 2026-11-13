@@ -8,7 +8,8 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogFooter } from '@/components/ui/dialog'
 import { EmptyState, ErrorState, Skeleton } from '@/components/ui/feedback'
-import { Field, Select, Textarea } from '@/components/ui/form-controls'
+import { Field, Textarea } from '@/components/ui/form-controls'
+import { Select, SelectItem } from '@/components/ui/select'
 import { PageHeader } from '@/components/ui/page'
 import { useAuth } from '@/contexts/AuthContext'
 import { toUserMessage } from '@/lib/errors'
@@ -79,17 +80,17 @@ export default function FlashcardsPage() {
         }
       />
       <div className="mb-5 flex flex-wrap gap-2">
-        <Select aria-label="Course" value={course} onChange={(e) => (setCourse(e.target.value), setIndex(0), setOrder(null))} className="w-full sm:w-72">
-          <option value="">All courses</option>
+        <Select aria-label="Course" value={course} onValueChange={(next) => (setCourse(next), setIndex(0), setOrder(null))} className="w-full sm:w-72">
+          <SelectItem value="">All courses</SelectItem>
           {(courses.data ?? []).map((c) => (
-            <option key={c.id} value={c.id}>
+            <SelectItem key={c.id} value={c.id}>
               {c.code} {c.title}
-            </option>
+            </SelectItem>
           ))}
         </Select>
-        <Select aria-label="Deck" value={deck} onChange={(e) => (setDeck(e.target.value as 'all' | 'mine'), setIndex(0), setOrder(null))} className="w-full sm:w-48">
-          <option value="all">All cards</option>
-          <option value="mine">My cards</option>
+        <Select aria-label="Deck" value={deck} onValueChange={(next) => (setDeck(next as 'all' | 'mine'), setIndex(0), setOrder(null))} className="w-full sm:w-48">
+          <SelectItem value="all">All cards</SelectItem>
+          <SelectItem value="mine">My cards</SelectItem>
         </Select>
         <Button
           variant="secondary"
@@ -174,12 +175,12 @@ export default function FlashcardsPage() {
               <Textarea id="f-back" rows={4} value={draft.back} onChange={(e) => setDraft({ ...draft, back: e.target.value })} />
             </Field>
             <Field label="Course" htmlFor="f-course">
-              <Select id="f-course" value={draft.course_id} onChange={(e) => setDraft({ ...draft, course_id: e.target.value })}>
-                <option value="">None</option>
+              <Select id="f-course" value={draft.course_id} onValueChange={(next) => setDraft({ ...draft, course_id: next })}>
+                <SelectItem value="">None</SelectItem>
                 {(courses.data ?? []).map((c) => (
-                  <option key={c.id} value={c.id}>
+                  <SelectItem key={c.id} value={c.id}>
                     {c.code} {c.title}
-                  </option>
+                  </SelectItem>
                 ))}
               </Select>
             </Field>

@@ -74,7 +74,7 @@ export default function AttemptResultPage() {
           <p className="text-xs text-muted-foreground">Submitted {attempt.submittedAt ? formatDateTime(attempt.submittedAt) : ''}</p>
           <CardTitle className="text-xl">{quiz.title}</CardTitle>
         </CardHeader>
-        <CardContent className="grid gap-6 sm:grid-cols-[auto_1fr] sm:items-center">
+        <CardContent className="grid grid-cols-1 gap-6 sm:grid-cols-[auto_1fr] sm:items-center">
           <div className="text-center sm:pr-6">
             <p className="text-5xl font-semibold tracking-tight tabular-nums">{percent === null ? '—' : `${Math.round(percent)}%`}</p>
             <p className="mt-1 text-xs text-muted-foreground">
@@ -120,7 +120,7 @@ export default function AttemptResultPage() {
           <h2 id="by-topic" className="mb-3 text-sm font-semibold">
             Performance by lesson
           </h2>
-          <ul className="grid gap-2 sm:grid-cols-2">
+          <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
             {attempt.lessonBreakdown.map((l) => (
               <li key={l.lessonId} className="rounded-lg border bg-surface p-3 text-sm">
                 <div className="flex items-center justify-between gap-2">

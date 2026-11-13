@@ -4,7 +4,8 @@ import { useState, type FormEvent } from 'react'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogFooter } from '@/components/ui/dialog'
 import { ErrorState, Skeleton } from '@/components/ui/feedback'
-import { Field, Input, Select, Switch } from '@/components/ui/form-controls'
+import { Field, Input, Switch } from '@/components/ui/form-controls'
+import { Select, SelectItem } from '@/components/ui/select'
 import { toUserMessage } from '@/lib/errors'
 import { importQuestionBank, listAllQuizzes, setPublished, updateRow } from '@/services/admin'
 import type { Quiz, QuizKind } from '@/types/database'
@@ -36,19 +37,19 @@ export function AssessmentAdmin() {
       <QuestionBankImport />
       <section className="flex flex-col gap-3">
         <div className="flex flex-wrap gap-2">
-          <Select aria-label="Assessment type" value={kind} onChange={(e) => setKind(e.target.value as QuizKind)} className="w-auto">
+          <Select aria-label="Assessment type" value={kind} onValueChange={(next) => setKind(next as QuizKind)} className="w-auto">
             {Object.entries(KIND_LABEL).map(([value, label]) => (
-              <option key={value} value={value}>
+              <SelectItem key={value} value={value}>
                 {label}
-              </option>
+              </SelectItem>
             ))}
           </Select>
-          <Select aria-label="Course" value={courseId} onChange={(e) => setCourseId(e.target.value)} className="w-auto">
-            <option value="">All courses</option>
+          <Select aria-label="Course" value={courseId} onValueChange={(next) => setCourseId(next)} className="w-auto">
+            <SelectItem value="">All courses</SelectItem>
             {(catalogue.data ?? []).map((c) => (
-              <option key={c.id} value={c.id}>
+              <SelectItem key={c.id} value={c.id}>
                 {c.code}
-              </option>
+              </SelectItem>
             ))}
           </Select>
         </div>
@@ -121,7 +122,7 @@ function QuizDialog({ quiz, onClose }: { quiz: Quiz; onClose: () => void }) {
   return (
     <Dialog open onOpenChange={(open) => !open && onClose()}>
       <DialogContent title="Assessment settings" description={quiz.title}>
-        <form onSubmit={handleSubmit} className="grid gap-4 sm:grid-cols-2">
+        <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <Field label="Questions drawn" htmlFor="q-count" hint="Blank = every eligible question.">
             <Input id="q-count" type="number" min={1} value={questionCount} onChange={(e) => setQuestionCount(e.target.value)} />
           </Field>
@@ -178,27 +179,27 @@ function QuestionBankImport() {
       <p className="mt-1 text-sm text-muted-foreground">
         YAML in the GradPath authoring format. Questions are matched to lessons by slug and stored as supplementary practice; answer keys stay server-side.
       </p>
-      <div className="mt-3 grid gap-3 sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end">
+      <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end">
         <Field label="Course" htmlFor="bank-course">
-          <Select id="bank-course" value={courseId} onChange={(e) => {
-              setCourseId(e.target.value)
+          <Select id="bank-course" value={courseId} onValueChange={(next) => {
+              setCourseId(next)
               setModuleId('')
             }} required>
-            <option value="">Choose…</option>
+            <SelectItem value="">Choose…</SelectItem>
             {(catalogue.data ?? []).map((c) => (
-              <option key={c.id} value={c.id}>
+              <SelectItem key={c.id} value={c.id}>
                 {c.code}
-              </option>
+              </SelectItem>
             ))}
           </Select>
         </Field>
         <Field label="Module" htmlFor="bank-module">
-          <Select id="bank-module" value={moduleId} onChange={(e) => setModuleId(e.target.value)} required disabled={!course}>
-            <option value="">Choose…</option>
+          <Select id="bank-module" value={moduleId} onValueChange={(next) => setModuleId(next)} required disabled={!course}>
+            <SelectItem value="">Choose…</SelectItem>
             {(course?.modules ?? []).map((m) => (
-              <option key={m.id} value={m.id}>
+              <SelectItem key={m.id} value={m.id}>
                 {m.title}
-              </option>
+              </SelectItem>
             ))}
           </Select>
         </Field>
