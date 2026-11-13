@@ -1,5 +1,5 @@
 /**
- * POST /api/verify-link  { url }  → { status, httpStatus }
+ * POST /api/verify-link  { url }  → { status, httpStatus }   (Vercel Function, Node.js runtime)
  *
  * Server-side link check for administrators (browsers cannot read cross-origin status codes).
  * - Requires a valid Supabase session token whose user is an administrator (checked with is_admin()).
@@ -48,8 +48,7 @@ async function isAdmin(token: string): Promise<boolean> {
   return res.ok && (await res.json()) === true
 }
 
-export default async (request: Request): Promise<Response> => {
-  if (request.method !== 'POST') return json(405, { error: 'Method not allowed' })
+export async function POST(request: Request): Promise<Response> {
   const token = (request.headers.get('authorization') ?? '').replace(/^Bearer\s+/i, '')
   if (!token) return json(401, { error: 'Sign in required' })
 

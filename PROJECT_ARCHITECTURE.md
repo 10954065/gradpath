@@ -1,7 +1,7 @@
 # GradPath — Project Architecture
 
 GradPath is a single-page React application backed by Supabase (PostgreSQL, Auth, Storage, Row Level
-Security) and hosted on Netlify, with an offline-capable PWA shell. There is no custom application
+Security) and hosted on Vercel, with an offline-capable PWA shell. There is no custom application
 server: every privileged rule is enforced inside PostgreSQL (RLS policies, `SECURITY DEFINER` functions
 and triggers), so the browser only ever holds the public anon key.
 
@@ -19,7 +19,7 @@ flowchart LR
     PG[("PostgreSQL: RLS + definer functions")]
     ST["Storage (private buckets)"]
   end
-  NF["Netlify Functions (link verification)"]
+  NF["Vercel Function (link verification)"]
   UI --> Q --> REST --> PG
   UI --> AUTH
   UI --> ST
@@ -39,7 +39,7 @@ flowchart LR
 | Server state | TanStack Query 5 | Query keys per domain; optimistic updates for notes/planner |
 | Forms | React Hook Form + Zod | Same Zod schemas validate service inputs |
 | Backend | Supabase Postgres, Auth, Storage | Migrations in `supabase/migrations`, seed in `supabase/seed.sql` |
-| Serverless | Netlify Functions | Only for work a browser cannot do (cross-origin link checks) |
+| Serverless | Vercel Functions (`api/`) | Only for work a browser cannot do (cross-origin link checks) |
 | PWA | vite-plugin-pwa (Workbox), IndexedDB via `idb` | Prompt-to-update service worker |
 | Tests | Vitest + Testing Library (unit), Vitest + supabase-js against local Supabase (integration/RLS), Playwright (E2E) | |
 
@@ -64,7 +64,7 @@ src/
 content/          Curriculum source files (Markdown + YAML) — see docs/CONTENT_AUTHORING.md
 scripts/          Content compiler, link verifier, icon generator
 supabase/         config.toml, migrations, generated seed.sql
-netlify/functions Serverless functions
+api/              Vercel Functions
 tests/            unit / integration / e2e
 ```
 

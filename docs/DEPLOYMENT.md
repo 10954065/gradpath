@@ -1,18 +1,19 @@
 # Deploying GradPath
 
-GradPath is a static React app (Netlify) backed by Supabase (Postgres, Auth, Storage). One small Netlify
-Function (`/api/verify-link`) checks resource links for administrators. No paid AI service is used.
+GradPath is a static React app hosted on Vercel and backed by Supabase (Postgres, Auth, Storage). One small Vercel
+Function (`api/verify-link.ts`, served at `/api/verify-link`) checks resource links for administrators. No paid AI
+service is used.
 
-This guide takes you from an empty Supabase account and an empty Netlify account to a working site.
+This guide takes you from an empty Supabase account and an empty Vercel account to a working site.
 Do the steps in order.
 
 ---
 
 ## 1. Prerequisites
 
-* Node.js 20 or newer (Netlify builds with Node 22, set in `netlify.toml`).
+* Node.js 20 or newer (`package.json` declares `"engines": { "node": ">=20" }`; Vercel uses a current LTS).
 * The repository cloned locally and `npm ci` run once.
-* A Supabase account and a Netlify account. The free tiers of both are enough to start.
+* A Supabase account and a Vercel account (sign in to Vercel with GitHub). The free plans are enough to start.
 * The Supabase CLI runs through `npx supabase …` (installed as a dev dependency). You do **not** need Docker for a
   cloud-only deployment; Docker is only needed for the local stack and the integration/E2E tests.
 
@@ -27,7 +28,7 @@ Do the steps in order.
    * **Project URL** → becomes `VITE_SUPABASE_URL`
    * **anon / publishable key** → becomes `VITE_SUPABASE_ANON_KEY`
    * The **service_role / secret key** is *not* needed by GradPath. Never put it in a `VITE_` variable, in
-     Netlify's build environment or in git.
+     Vercel's environment variables or in git.
 4. Note the **project reference** (the `abcd1234…` part of the project URL).
 
 ## 3. Apply the database schema
@@ -68,8 +69,8 @@ In **Authentication → URL Configuration**:
 
 | Setting | Value |
 |---|---|
-| Site URL | `https://<your-site>.netlify.app` (or your custom domain) |
-| Redirect URLs | `https://<your-site>.netlify.app/**` and, if you use one, `https://<custom-domain>/**` |
+| Site URL | `https://<your-project>.vercel.app` (or your custom domain) |
+| Redirect URLs | `https://<your-project>.vercel.app/**`, `https://<your-project>-*-<your-team>.vercel.app/**` (preview deployments) and, if you use one, `https://<custom-domain>/**` |
 
 The app sends students to `/auth/callback` after email confirmation and to `/reset-password` from reset emails;
 both are covered by the `/**` pattern. Add `http://localhost:5173/**` too if you develop against the cloud project.
@@ -82,29 +83,35 @@ In **Authentication → Providers → Email**:
   configure custom SMTP under **Authentication → Emails → SMTP Settings** (any transactional email provider works).
 * Optionally raise the minimum password length (the app already requires 8 characters with letters and numbers).
 
-## 6. Create the Netlify site
+## 6. Create the Vercel project
 
-1. In Netlify choose **Add new site → Import an existing project → GitHub** and pick this repository.
-2. Netlify reads `netlify.toml`, so the defaults are already correct:
+1. In Vercel choose **Add New… → Project**, import the `gradpath` GitHub repository and keep the root directory.
+2. Vercel reads `vercel.json`, so the build settings are already correct:
+   * Framework preset: **Vite**
    * Build command: `npm run build`
-   * Publish directory: `dist`
-   * Functions directory: `netlify/functions`
-3. Under **Site configuration → Environment variables** add:
+   * Output directory: `dist`
+   * Functions: every file in `api/` (here only `api/verify-link.ts`, Node.js runtime)
+3. Before the first deploy, open **Environment Variables** and add, for **Production** and **Preview**:
 
-   | Key | Value | Scopes |
-   |---|---|---|
-   | `VITE_SUPABASE_URL` | Project URL from step 2 | All (builds **and** functions) |
-   | `VITE_SUPABASE_ANON_KEY` | anon / publishable key from step 2 | All (builds **and** functions) |
-   | `VITE_SITE_URL` | `https://<your-site>.netlify.app` (optional) | Builds |
+   | Key | Value |
+   |---|---|
+   | `VITE_SUPABASE_URL` | Project URL from step 2 |
+   | `VITE_SUPABASE_ANON_KEY` | anon / publishable key from step 2 |
+   | `VITE_SITE_URL` | `https://<your-project>.vercel.app` (optional; Production only) |
 
-   The link-checking function reads the same URL and anon key and forwards the administrator's own session token,
-   so it needs no privileged key.
-4. Trigger a deploy. When it finishes, open the site: you should see the sign-in page. If you see
-   "GradPath needs configuration", the two `VITE_` variables were missing at build time — add them and redeploy.
+   `VITE_` variables are baked into the browser bundle at build time, so changing them needs a redeploy. The link
+   checker reads the same URL and anon key at run time and forwards the administrator's own session token, so it needs
+   no privileged key. (If you connect Supabase through the Vercel Marketplace integration instead, it creates its own
+   variables; still add the two `VITE_` ones above, because the browser build only reads `VITE_`-prefixed names.)
+4. Click **Deploy**. When it finishes, open the site: you should see the sign-in page. If you see
+   "GradPath needs configuration", the `VITE_` variables were missing at build time — add them and redeploy
+   (**Deployments → … → Redeploy**).
 
-`netlify.toml` already sets the security headers (Content-Security-Policy, HSTS, `nosniff`, frame denial),
-long-term caching for hashed assets, the `/api/*` → Functions route and the single-page-app fallback.
-If you put the app on a custom domain, add the domain to the Supabase Site URL and Redirect URLs (step 5).
+`vercel.json` sets the security headers (Content-Security-Policy, HSTS, `nosniff`, frame denial), long-term caching
+for hashed assets, no caching for the service worker, the HTML shell and `/api/*`, and the single-page-app fallback
+(every path except `/api/` serves `index.html`). Every push to `main` deploys to production; other branches and pull
+requests get preview URLs. If you add a custom domain (**Settings → Domains**), add it to the Supabase Site URL and
+Redirect URLs (step 5).
 
 ## 7. Create the first administrator
 
@@ -153,14 +160,14 @@ Upload only material you have permission to share.
 1. Edit Markdown/YAML in `content/` (see `docs/CONTENT_AUTHORING.md`).
 2. `npm run content:validate` — must report 0 errors.
 3. `npm run content:build` — regenerates `supabase/seed.sql` and `CURRICULUM_STATUS.md`.
-4. Commit, push (Netlify redeploys), then load the new seed into the cloud database with `psql … -f supabase/seed.sql`.
+4. Commit, push (Vercel redeploys), then load the new seed into the cloud database with `psql … -f supabase/seed.sql`.
 
 Small fixes (publishing, a single lesson, a question bank, links) can also be done in the Admin console without a
 redeploy.
 
 ## 11. Free-tier limits to be aware of
 
-Plans change, so confirm current limits on the Supabase and Netlify pricing pages before you rely on them.
+Plans change, so confirm current limits on the Supabase and Vercel pricing pages before you rely on them.
 
 * **Supabase free projects are paused after a period of inactivity** (about a week at the time of writing). A
   paused project returns errors until you restore it from the dashboard. During a semester, regular student use
@@ -168,8 +175,9 @@ Plans change, so confirm current limits on the Supabase and Netlify pricing page
 * Database size, storage, bandwidth and monthly active users are capped on the free plan. GradPath's content is
   small (the seed is ~7 MB), so the main growth areas are uploaded course materials and assignment attachments.
 * The built-in auth email sender is heavily rate-limited — use custom SMTP for real cohorts (step 5).
-* Netlify's free plan limits build minutes, bandwidth and function invocations. The site is static and the only
-  function is the admin link checker, so normal student use costs no function invocations.
+* Vercel's free **Hobby** plan is for personal, non-commercial projects and limits bandwidth, builds and function
+  usage. The site is static and the only function is the admin link checker, so normal student use costs no function
+  invocations. If GradPath is run by an organisation or charges students, use a paid team plan.
 
 ## 12. Troubleshooting
 
@@ -178,6 +186,7 @@ Plans change, so confirm current limits on the Supabase and Netlify pricing page
 | "GradPath needs configuration" screen | `VITE_SUPABASE_URL` / `VITE_SUPABASE_ANON_KEY` were not set for the build. Add them and redeploy. |
 | Confirmation or reset email link goes to localhost or shows an error | Set the Site URL and Redirect URLs in Supabase (step 5). |
 | Courses page is empty | The seed was not loaded (step 4), or courses are hidden in the Admin console. |
-| "Check link" says the checker only runs on the deployed site | Expected in local development; it runs as a Netlify Function in production. |
+| "Check link" says the checker only runs on the deployed site | Expected with `npm run dev`: the checker is a Vercel Function. It works on the deployed site, or locally with `npx vercel dev`. |
+| Opening or refreshing a page such as `/courses` gives a 404 | `vercel.json` is missing from the deployment, or the project root directory is not the repository root. |
 | Students see an old version | The app shows "A new version of GradPath is available — Reload". Closing all tabs also updates it. |
 | Every request fails after a quiet period | The free Supabase project was paused; restore it in the dashboard. |

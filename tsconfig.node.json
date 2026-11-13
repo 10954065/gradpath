@@ -26,7 +26,7 @@
     "vitest.config.ts",
     "playwright.config.ts",
     "scripts",
-    "netlify/functions",
+    "api",
     "tests/e2e"
   ]
 }

@@ -62,7 +62,7 @@ export default defineConfig({
           },
         ],
         navigateFallback: '/index.html',
-        navigateFallbackDenylist: [/^\/\.netlify\//, /^\/api\//],
+        navigateFallbackDenylist: [/^\/api\//],
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
         cleanupOutdatedCaches: true,
       },

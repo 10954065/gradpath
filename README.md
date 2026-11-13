@@ -27,8 +27,8 @@ Curriculum coverage per module: [CURRICULUM_STATUS.md](CURRICULUM_STATUS.md).
 ## Tech stack
 
 React 19 · TypeScript (strict) · Vite 7 · Tailwind CSS 4 · Radix UI · TanStack Query · React Router 7 ·
-Supabase (Postgres, Auth, Row Level Security, Storage) · vite-plugin-pwa / Workbox · IndexedDB · Netlify (+ one
-Netlify Function) · Vitest · Playwright.
+Supabase (Postgres, Auth, Row Level Security, Storage) · vite-plugin-pwa / Workbox · IndexedDB · Vercel (+ one
+Vercel Function) · Vitest · Playwright.
 
 No paid AI service is used. Recommendations and scheduling are deterministic, rule-based algorithms.
 
@@ -77,9 +77,9 @@ Local emails (password reset) are visible in Mailpit at http://127.0.0.1:54324.
 ## Project layout
 
 ```
+api/                Vercel Function: server-side link checker for administrators
 content/            Course content as Markdown + YAML (the source of truth for the curriculum)
 docs/               Content authoring spec and deployment guide
-netlify/functions/  Server-side link checker for administrators
 scripts/            Content build/validation, link verification, icon generation
 src/                React application (pages, components, services, offline layer, algorithms)
 supabase/           Migrations (schema, RLS, functions, storage) and the generated seed
@@ -92,7 +92,7 @@ More detail: [PROJECT_ARCHITECTURE.md](PROJECT_ARCHITECTURE.md) · [docs/CONTENT
 ## Deploying
 
 See **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)** for the step-by-step guide: Supabase project, migrations, seed,
-auth redirect URLs, Netlify environment variables, creating the first administrator, security checks and free-tier
+auth redirect URLs, Vercel environment variables, creating the first administrator, security checks and free-tier
 limits.
 
 ## Security and privacy
@@ -101,7 +101,7 @@ limits.
   for students, and only administrators (granted from the database) can change it.
 * Assessment answer keys live in a table students cannot read; attempts are scored by database functions.
 * Only the public Supabase URL and anon key reach the browser. No service-role key is used by the app.
-* Lesson and note content is sanitised before rendering; a strict Content-Security-Policy is set in `netlify.toml`.
+* Lesson and note content is sanitised before rendering; a strict Content-Security-Policy is set in `vercel.json`.
 * Offline data is stored per student on the device and removed on sign-out.
 
 ## Content accuracy

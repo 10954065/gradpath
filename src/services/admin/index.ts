@@ -217,7 +217,7 @@ export async function deleteMaterial(material: UploadedMaterial): Promise<void> 
   await deleteRow('uploaded_course_materials', material.id)
 }
 
-/** Ask the server-side link checker (Netlify Function) to verify a resource URL. */
+/** Ask the server-side link checker (Vercel Function at /api/verify-link) to verify a resource URL. */
 export async function verifyResource(resource: LessonResource): Promise<'verified' | 'unverified' | 'unreachable'> {
   const { data } = await supabase.auth.getSession()
   const token = data.session?.access_token
@@ -227,7 +227,7 @@ export async function verifyResource(resource: LessonResource): Promise<'verifie
     headers: { 'content-type': 'application/json', authorization: `Bearer ${token}` },
     body: JSON.stringify({ url: resource.url }),
   })
-  if (!response.ok) throw new AppError(response.status === 404 ? 'The link checker runs only on the deployed site (Netlify Functions).' : 'The link check failed.')
+  if (!response.ok) throw new AppError(response.status === 404 ? 'The link checker runs only on the deployed site (Vercel Functions).' : 'The link check failed.')
   const result = (await response.json()) as { status: 'verified' | 'unverified' | 'unreachable'; httpStatus?: number }
   await updateRow('lesson_resources', resource.id, {
     verification_status: result.status,

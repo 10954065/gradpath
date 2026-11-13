@@ -11,6 +11,7 @@ dev-dist/
 .env.*
 !.env.example
 .netlify/
+.vercel/
 
 # Supabase local state
 supabase/.temp/

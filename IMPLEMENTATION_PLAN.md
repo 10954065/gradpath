@@ -20,7 +20,7 @@ commit. Progress is recorded in `BUILD_STATUS.md`; curriculum progress in `CURRI
 
 ## Key decisions
 
-1. **Scoring in PostgreSQL** rather than in a Netlify Function: one trust boundary (RLS), no service-role
+1. **Scoring in PostgreSQL** rather than in a serverless function: one trust boundary (RLS), no service-role
    key needed anywhere, and works against any Supabase project.
 2. **Content as files compiled to SQL**: reviewable in git, validated automatically, and still editable in
    the admin console afterwards.

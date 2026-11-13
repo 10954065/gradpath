@@ -25,7 +25,7 @@ export default tseslint.config(
     },
   },
   {
-    files: ['scripts/**/*.ts', 'tests/**/*.ts', 'netlify/**/*.ts'],
+    files: ['scripts/**/*.ts', 'tests/**/*.ts', 'api/**/*.ts'],
     rules: { 'no-console': 'off' },
   },
 )

@@ -2,6 +2,9 @@
 
 _Last updated: 2026-11-13_
 
+> **Hosting:** switched from Netlify to Vercel on 2026-11-13 (`vercel.json`, function in `api/`). Earlier phase notes that
+> mention Netlify describe what was built at the time.
+
 ## Initial audit (Phase 1)
 
 * The workspace `E:\onion\gradpath` was **empty**: no Vite/React setup, PWA or Netlify configuration,
@@ -44,6 +47,7 @@ _Last updated: 2026-11-13_
 | 2026-11-13 | `npm test`, `npm run typecheck`, `npm run lint` (Phase 10) | 42/42 unit tests pass (adds offline fetch tests); typecheck clean; lint 0 errors (29 react-refresh dev-only warnings) |
 | 2026-11-13 | `npm run test:e2e` (production build via `vite preview`, local Supabase; desktop Chrome + Pixel 7) | 16/16 pass, twice in a row (44 s, 39 s). Throwaway accounts are created through the admin API and deleted by the teardown project |
 | 2026-11-13 | Full gate: typecheck, lint, unit, integration, content validation, build | Pass: 42 unit, 34 integration, 0 content errors/warnings, lint 0 errors (29 dev-only react-refresh warnings), production build OK |
+| 2026-11-13 | Vercel switch: typecheck, lint, unit tests, production build, link-checker smoke test | Pass. `api/verify-link.ts` called directly: no token → 401, non-admin → 403, private address → 400, public URL → 200 `verified`. Not yet run on Vercel itself (no Vercel project connected) |
 
 ## Security review (2026-11-13)
 
@@ -55,7 +59,7 @@ _Last updated: 2026-11-13_
 * **XSS:** all lesson/note Markdown is sanitised with DOMPurify (unit-tested); Mermaid runs with
   `securityLevel: 'strict'`; external links use `rel="noopener noreferrer"` and a URL scheme allow-list.
 * **CSP and headers:** `script-src 'self'`, `object-src 'none'`, `frame-ancestors 'none'`, HSTS, nosniff,
-  referrer policy and permissions policy in `netlify.toml`.
+  referrer policy and permissions policy in `vercel.json` (moved from `netlify.toml` when hosting switched to Vercel).
 * **Link checker (`/api/verify-link`):** admin token required (checked with `is_admin()`), http(s) only, every
   resolved address must be public (blocks private, loopback, link-local, CGNAT, multicast and IPv4-mapped IPv6),
   redirects are not followed, 15 s timeout, 30 checks per minute per token. Residual risk: DNS rebinding between
@@ -75,14 +79,14 @@ _Last updated: 2026-11-13_
 ## Credentials still required (owner action)
 
 * A Supabase cloud project (URL and anon/publishable key) — see `docs/DEPLOYMENT.md` steps 2–5.
-* A Netlify site linked to `https://github.com/10954065/gradpath` with `VITE_SUPABASE_URL` and
-  `VITE_SUPABASE_ANON_KEY` set — step 6.
+* A Vercel project importing `https://github.com/10954065/gradpath` with `VITE_SUPABASE_URL` and
+  `VITE_SUPABASE_ANON_KEY` set for Production and Preview — step 6.
 * Custom SMTP for auth emails before inviting a full cohort (Supabase's built-in sender is rate-limited).
 
 ## Deployment readiness
 
 **Ready to deploy; not deployed.** The production build, all automated tests and the browser checks pass against
-a local Supabase stack running the same migrations and seed. Nothing has been deployed to Netlify or a Supabase
+a local Supabase stack running the same migrations and seed. Nothing has been deployed to Vercel or a Supabase
 cloud project, because no credentials for either were provided — deployment success has therefore **not** been
 verified. Follow `docs/DEPLOYMENT.md`, then run the checks in its section 8 on the live site.
 

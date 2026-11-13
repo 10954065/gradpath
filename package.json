@@ -52,7 +52,6 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",
-    "@netlify/functions": "^3.1.10",
     "@playwright/test": "^1.65.0",
     "@tailwindcss/vite": "^4.3.5",
     "@testing-library/jest-dom": "^7.0.1",
