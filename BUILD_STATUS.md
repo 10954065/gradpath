@@ -88,7 +88,7 @@ _Last updated: 2026-11-13_
 **Deployed.** Live at https://gradpath-000-6c1c.vercel.app (Vercel, Node.js 24, auto-deploys from `main`), backed by
 a Supabase cloud project with all migrations applied and the curriculum seed loaded (7 courses, 159 lessons,
 1,161 questions, 919 flashcards). Verified on the live site: pages, security headers, the `/api/verify-link`
-function, sign-up with email confirmation, and the Auth site and redirect URLs. The production build, all
+function, and sign-up (a real account completed email confirmation). The production build, all
 automated tests and the browser checks also pass against a local Supabase stack running the same migrations.
 
 Known follow-ups (not blockers):
