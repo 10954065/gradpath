@@ -10,7 +10,7 @@ export const profileSchema = z.object({
   semester: z.string().trim().min(1, 'Enter your semester').max(40),
   programme: z.string().trim().min(2, 'Enter your programme').max(120),
   institution: z.string().trim().min(2, 'Enter your institution').max(120),
-  weekly_study_target_hours: z.coerce.number().min(1, 'At least 1 hour').max(80, 'At most 80 hours'),
+  weekly_study_target_hours: z.coerce.number<number>().min(1, 'At least 1 hour').max(80, 'At most 80 hours'),
   preferred_study_times: z.array(z.string().max(40)).max(8),
   time_zone: z.string().trim().min(3).max(64),
 })

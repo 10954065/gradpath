@@ -188,6 +188,7 @@ export interface LessonProgress {
   reading_percent: number
   time_spent_seconds: number
   last_section: string | null
+  last_read_at?: string | null
   quiz_best_percent: number | null
   mastered_at: string | null
   started_at: string

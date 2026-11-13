@@ -30,6 +30,8 @@ export async function saveReading(update: ReadingUpdate): Promise<{ queued: bool
       reading_percent: Math.round(update.readingPercent),
       time_spent_seconds: Math.round(update.timeSpentSeconds),
       last_section: update.lastSection,
+      // When the reading happened, so reading saved offline counts towards the streak on the day it was done.
+      last_read_at: new Date().toISOString(),
     },
   })
 }

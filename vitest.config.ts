@@ -31,8 +31,9 @@ export default defineConfig({
           include: ['tests/integration/**/*.test.ts'],
           testTimeout: 30000,
           hookTimeout: 60000,
+          // One file at a time: the files share the local database.
           pool: 'forks',
-          poolOptions: { forks: { singleFork: true } },
+          fileParallelism: false,
         },
       },
     ],

@@ -13,7 +13,7 @@ export const eventSchema = z
     course_id: z.string().uuid().nullable(),
     kind: z.enum(['study', 'lecture', 'revision', 'other']),
     recurrence: z.enum(['weekly', 'once']),
-    day_of_week: z.coerce.number().int().min(0).max(6).nullable(),
+    day_of_week: z.coerce.number<number>().int().min(0).max(6).nullable(),
     event_date: z.string().nullable(),
     start_time: z.string().regex(/^\d{2}:\d{2}/, 'Choose a start time'),
     end_time: z.string().regex(/^\d{2}:\d{2}/, 'Choose an end time'),

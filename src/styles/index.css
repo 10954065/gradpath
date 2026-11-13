@@ -257,6 +257,13 @@
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
+    /* Mermaid measures labels while drawing in a temporary container ("d" + the diagram id); a running
+       transition, however short, makes it measure them wrongly and spread the diagram far too wide. */
+    [id^='dgp-diagram'],
+    [id^='dgp-diagram'] *,
+    .mermaid-block svg * {
+      transition-duration: 0s !important;
+    }
   }
 }
 

@@ -10,8 +10,8 @@ let lessonIds: string[]
 beforeAll(async () => {
   a = await createStudent('streak-a')
   b = await createStudent('streak-b')
-  const { data } = await a.client.from('lessons').select('id').limit(2)
-  if (!data || data.length < 2) throw new Error('Seed data missing: run `npm run content:build` and `npx supabase db reset`')
+  const { data } = await a.client.from('lessons').select('id').limit(6)
+  if (!data || data.length < 6) throw new Error('Seed data missing: run `npm run content:build` and `npx supabase db reset`')
   lessonIds = data.map((l) => l.id as string)
 })
 
@@ -52,5 +52,25 @@ describe('lesson days behind the streak flame', () => {
     const { data } = await a.client.from('lesson_days').delete().eq('user_id', a.id).select()
     expect(data ?? []).toEqual([])
     expect(await daysOf(a)).toHaveLength(2)
+  })
+
+  it('records reading on the day it happened, trusting the device time only within the last 7 days', async () => {
+    const day = (offsetDays: number) => new Date(Date.now() + offsetDays * 86_400_000).toISOString().slice(0, 10)
+    const at = (offsetDays: number) => new Date(Date.now() + offsetDays * 86_400_000).toISOString()
+    await a.client.from('lesson_progress').insert({ lesson_id: lessonIds[2], reading_percent: 20, last_read_at: at(-2) })
+    await a.client.from('lesson_progress').insert({ lesson_id: lessonIds[3], reading_percent: 20, last_read_at: at(-30) })
+    await a.client.from('lesson_progress').insert({ lesson_id: lessonIds[4], reading_percent: 20, last_read_at: at(3) })
+    const days = await daysOf(a)
+    const dayOf = (lessonId: string | undefined) => days.find((d) => d.lesson_id === lessonId)?.day
+    expect(dayOf(lessonIds[2])).toBe(day(-2))
+    expect(dayOf(lessonIds[3])).toBe(day(0))
+    expect(dayOf(lessonIds[4])).toBe(day(0))
+  })
+
+  it('does not reuse an old reading time when a later write leaves it unchanged', async () => {
+    await a.client.from('lesson_progress').insert({ lesson_id: lessonIds[5], reading_percent: 0, last_read_at: new Date(Date.now() - 3 * 86_400_000).toISOString() })
+    await a.client.from('lesson_progress').update({ reading_percent: 40 }).eq('lesson_id', lessonIds[5])
+    const days = await daysOf(a)
+    expect(days.filter((d) => d.lesson_id === lessonIds[5]).map((d) => d.day)).toEqual([new Date().toISOString().slice(0, 10)])
   })
 })

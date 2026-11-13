@@ -27,6 +27,7 @@
     "playwright.config.ts",
     "scripts",
     "api",
-    "tests/e2e"
+    "tests/e2e",
+    "tests/integration"
   ]
 }

@@ -66,10 +66,9 @@ _Last updated: 2026-11-13_
   the lookup and the fetch; mitigated by the admin-only access and no redirect following.
 * **Offline data:** cached per user in IndexedDB and cleared on sign-out; a network failure no longer signs the
   student out (which previously wiped their saved data).
-* **Dependencies (`npm audit --omit=dev`):** `zod` <4.6.6 (high, memory exhaustion on oversized collections) — only
-  used for client-side form validation and the build-time content parser, so the exposure is a student's own
-  tab; fixing needs the zod 4 migration (breaking). `katex` via `mermaid` (low, requires existing prototype
-  pollution) — fix needs Mermaid 12 (breaking). Both recorded as follow-ups, not silently forced.
+* **Dependencies (`npm audit --omit=dev`):** 0 vulnerabilities. Resolved by moving to `zod` 4.6.7 (the high
+  advisory on oversized collections; zod only validates forms in the browser) and Mermaid 12.2.0, which brings a
+  fixed `katex`. The dev-only test runner moved to Vitest 5.0.5, which drops the vulnerable `tinypool`.
 
 ## Errors encountered
 
@@ -92,7 +91,6 @@ function, and sign-up (a real account completed email confirmation). The product
 automated tests and the browser checks also pass against a local Supabase stack running the same migrations.
 
 Known follow-ups (not blockers):
-* `zod` 4 migration and Mermaid 12 upgrade to clear the two `npm audit` findings (see the security review).
 * 29 dev-only `react-refresh/only-export-components` lint warnings (no runtime effect).
 * Of 225 checked links, 3 were unreachable and 26 could not be verified automatically (sites that block bots) at the
   last check; they are labelled for students and can be reviewed on Admin console → Resources.

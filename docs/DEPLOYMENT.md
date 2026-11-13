@@ -173,14 +173,16 @@ redeploy.
 Plans change, so confirm current limits on the Supabase and Vercel pricing pages before you rely on them.
 
 * **Supabase free projects are paused after a period of inactivity** (about a week at the time of writing). A
-  paused project returns errors until you restore it from the dashboard. During a semester, regular student use
-  keeps it active; between semesters, check it before students return or move to a paid plan.
+  paused project returns errors until you restore it from the dashboard. GradPath prevents this with a daily Vercel
+  cron (`vercel.json` → `/api/keep-alive`, 06:00 UTC) that makes one tiny database request. To restrict that
+  endpoint to Vercel's cron, add a `CRON_SECRET` environment variable in Vercel (optional; the request uses only
+  the public key, so it reveals nothing). If the project ever does pause, restore it from the Supabase dashboard.
 * Database size, storage, bandwidth and monthly active users are capped on the free plan. GradPath's content is
   small (the seed is ~7 MB), so the main growth areas are uploaded course materials and assignment attachments.
 * The built-in auth email sender is heavily rate-limited — use custom SMTP for real cohorts (step 5).
 * Vercel's free **Hobby** plan is for personal, non-commercial projects and limits bandwidth, builds and function
-  usage. The site is static and the only function is the admin link checker, so normal student use costs no function
-  invocations. If GradPath is run by an organisation or charges students, use a paid team plan.
+  usage. The site is static; the functions are the admin link checker and the daily keep-alive, so normal
+  student use costs almost no function invocations. If GradPath is run by an organisation or charges students, use a paid team plan.
 
 ## 12. Troubleshooting
 
