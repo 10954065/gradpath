@@ -5,6 +5,7 @@ import { useEffect, useState, type ReactNode } from 'react'
 import { useForm } from 'react-hook-form'
 import { Link, useLocation, useNavigate } from 'react-router'
 import { z } from 'zod'
+import { BuiltBy } from '@/components/layout/BuiltBy'
 import { Logo } from '@/components/layout/Logo'
 import { Button } from '@/components/ui/button'
 import { Alert, Spinner } from '@/components/ui/feedback'
@@ -54,16 +55,19 @@ function AuthLayout({ title, description, children, footer }: { title: string; d
           </p>
         </div>
       </aside>
-      <main className="flex items-center justify-center px-5 py-10 sm:px-10">
-        <div className="w-full max-w-sm">
-          <Link to="/" className="mb-8 inline-flex lg:hidden">
-            <Logo />
-          </Link>
-          <h1 className="text-2xl font-semibold tracking-tight">{title}</h1>
-          {description ? <p className="mt-1.5 text-sm text-muted-foreground">{description}</p> : null}
-          <div className="mt-7">{children}</div>
-          {footer ? <div className="mt-6 text-sm text-muted-foreground">{footer}</div> : null}
+      <main className="flex flex-col px-5 pt-10 pb-6 sm:px-10">
+        <div className="flex flex-1 items-center justify-center">
+          <div className="w-full max-w-sm">
+            <Link to="/" className="mb-8 inline-flex lg:hidden">
+              <Logo />
+            </Link>
+            <h1 className="text-2xl font-semibold tracking-tight">{title}</h1>
+            {description ? <p className="mt-1.5 text-sm text-muted-foreground">{description}</p> : null}
+            <div className="mt-7">{children}</div>
+            {footer ? <div className="mt-6 text-sm text-muted-foreground">{footer}</div> : null}
+          </div>
         </div>
+        <BuiltBy className="mt-10" />
       </main>
     </div>
   )

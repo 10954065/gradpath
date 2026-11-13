@@ -4,6 +4,7 @@ import { Suspense, useState } from 'react'
 import { NavLink, Outlet } from 'react-router'
 import { Spinner } from '@/components/ui/feedback'
 import { cn } from '@/lib/utils'
+import { BuiltBy } from './BuiltBy'
 import { Logo } from './Logo'
 import { MOBILE_PRIMARY } from './nav'
 import { SidebarNav, Sidebar } from './Sidebar'
@@ -73,7 +74,7 @@ export function AppShell() {
       <MobileDrawer open={menuOpen} onOpenChange={setMenuOpen} />
       <div className="lg:pl-64">
         <TopBar onOpenMenu={() => setMenuOpen(true)} />
-        <main id="main" tabIndex={-1} className="mx-auto w-full max-w-7xl px-4 pt-6 pb-24 focus:outline-none sm:px-6 lg:px-8 lg:pb-12">
+        <main id="main" tabIndex={-1} className="mx-auto w-full max-w-7xl px-4 pt-6 pb-8 focus:outline-none sm:px-6 lg:px-8">
           <Suspense
             fallback={
               <div className="grid min-h-[40vh] place-items-center">
@@ -84,6 +85,9 @@ export function AppShell() {
             <Outlet />
           </Suspense>
         </main>
+        <footer className="mx-auto w-full max-w-7xl border-t px-4 pt-4 pb-24 sm:px-6 lg:px-8 lg:pb-6">
+          <BuiltBy />
+        </footer>
       </div>
       <BottomNav onOpenMenu={() => setMenuOpen(true)} />
       <UpdatePrompt />
