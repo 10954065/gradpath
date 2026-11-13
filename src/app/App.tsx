@@ -14,10 +14,14 @@ const queryClient = new QueryClient({
       staleTime: 60 * 1000,
       gcTime: 30 * 60 * 1000,
       refetchOnWindowFocus: false,
+      // Always run query functions, even offline: they fall back to the student's IndexedDB copy
+      // (withOfflineCache). The default 'online' mode would pause them and leave screens loading forever.
+      networkMode: 'always',
       // Do not hammer the network while offline; cached data is served by the offline layer.
       retry: (count, error) => !isOfflineError(error) && count < 2,
     },
-    mutations: { retry: false },
+    // Offline-capable writes queue themselves in the outbox; others fail fast with a clear message.
+    mutations: { retry: false, networkMode: 'always' },
   },
 })
 

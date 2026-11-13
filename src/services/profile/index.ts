@@ -1,6 +1,7 @@
 import { z } from 'zod'
 import { AppError, ensureOk } from '@/lib/errors'
 import { supabase } from '@/lib/supabase'
+import { withOfflineCache } from '@/services/offline/cache'
 import type { Profile, StudentPreferences } from '@/types/database'
 
 export const profileSchema = z.object({
@@ -15,9 +16,12 @@ export const profileSchema = z.object({
 })
 export type ProfileInput = z.infer<typeof profileSchema>
 
-export async function getProfile(userId: string): Promise<Profile> {
-  const result = await supabase.from('profiles').select('*').eq('id', userId).single()
-  return ensureOk(result, 'We could not load your profile.') as Profile
+export function getProfile(userId: string): Promise<Profile> {
+  // Cached per user so the signed-in app shell (and saved lessons) still open offline.
+  return withOfflineCache(`profile:${userId}`, async () => {
+    const result = await supabase.from('profiles').select('*').eq('id', userId).single()
+    return ensureOk(result, 'We could not load your profile.') as Profile
+  })
 }
 
 export async function updateProfile(

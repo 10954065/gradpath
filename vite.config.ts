@@ -38,6 +38,29 @@ export default defineConfig({
         // App shell and static assets only. Authenticated API responses are never cached by the
         // service worker; private data is stored per-user in IndexedDB and cleared on sign-out.
         globPatterns: ['**/*.{js,css,html,svg,png,woff2,webmanifest}'],
+        // Keep the install light on mobile data: Mermaid's diagram renderers (and the font subsets for
+        // non-Latin scripts) are not precached. They are cached at runtime the first time a lesson uses them.
+        globIgnores: [
+          '**/assets/*-[A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9][A-Z0-9]-*.js',
+          '**/assets/mermaid.core-*.js',
+          '**/assets/cytoscape*.js',
+          '**/assets/katex-*.js',
+          '**/assets/*cyrillic*.woff2',
+          '**/assets/*greek*.woff2',
+          '**/assets/*vietnamese*.woff2',
+        ],
+        runtimeCaching: [
+          {
+            // Build assets have content-hashed names, so a cached copy never goes stale.
+            urlPattern: ({ sameOrigin, url }) => sameOrigin && url.pathname.startsWith('/assets/'),
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'gradpath-lazy-assets',
+              expiration: { maxEntries: 150, maxAgeSeconds: 60 * 60 * 24 * 60 },
+              cacheableResponse: { statuses: [200] },
+            },
+          },
+        ],
         navigateFallback: '/index.html',
         navigateFallbackDenylist: [/^\/\.netlify\//, /^\/api\//],
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,

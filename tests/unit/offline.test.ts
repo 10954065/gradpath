@@ -52,3 +52,24 @@ describe('note search', () => {
     expect(filterNotes(notes, '  ')).toHaveLength(2)
   })
 })
+
+describe('offline-aware fetch for the Supabase client', () => {
+  it('rejects immediately with an AbortError while the browser is offline, so client retries stop', async () => {
+    const { offlineAwareFetch } = await vi.importActual<typeof import('@/lib/supabase')>('@/lib/supabase')
+    const fetchSpy = vi.spyOn(globalThis, 'fetch')
+    const onLine = vi.spyOn(navigator, 'onLine', 'get').mockReturnValue(false)
+    await expect(offlineAwareFetch('http://localhost/rest/v1/lessons')).rejects.toMatchObject({ name: 'AbortError' })
+    expect(fetchSpy).not.toHaveBeenCalled()
+    onLine.mockRestore()
+    fetchSpy.mockRestore()
+  })
+
+  it('passes requests through to fetch when online', async () => {
+    const { offlineAwareFetch } = await vi.importActual<typeof import('@/lib/supabase')>('@/lib/supabase')
+    const fetchSpy = vi.spyOn(globalThis, 'fetch').mockResolvedValue(new Response('[]', { status: 200 }))
+    const res = await offlineAwareFetch('http://localhost/rest/v1/lessons')
+    expect(res.status).toBe(200)
+    expect(fetchSpy).toHaveBeenCalledOnce()
+    fetchSpy.mockRestore()
+  })
+})

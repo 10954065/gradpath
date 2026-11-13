@@ -1,10 +1,12 @@
-import type { Session, User } from '@supabase/supabase-js'
+import { isAuthApiError, type Session, type User } from '@supabase/supabase-js'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
 import { supabase } from '@/lib/supabase'
 import { clearUserOfflineData } from '@/services/offline/db'
 import { getProfile, isAdmin as fetchIsAdmin } from '@/services/profile'
 import type { Profile } from '@/types/database'
+
+const STALE_SESSION_STATUSES = [401, 403, 404]
 
 interface AuthState {
   session: Session | null
@@ -69,7 +71,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (!profileQuery.isError || !userId) return
     void supabase.auth.getUser().then(({ data, error }) => {
-      if (error || !data.user) void supabase.auth.signOut({ scope: 'local' })
+      // Only an explicit rejection from the auth server means the session is stale. A network failure
+      // (offline) must never sign the student out, which would also wipe their saved offline data.
+      const isRejected = isAuthApiError(error) && STALE_SESSION_STATUSES.includes(error.status ?? 0)
+      if (isRejected || (!error && !data.user)) void supabase.auth.signOut({ scope: 'local' })
     })
   }, [profileQuery.isError, userId])
 
