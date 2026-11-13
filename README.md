@@ -18,7 +18,7 @@ keeps working offline.
 | Courses | 7 courses, 56 modules, 159 lessons (~430,000 words) in a consistent format: objectives, key terms, worked explanations, misconceptions, exam mistakes, critical questions, exercises, revision summary, further reading. CSIT 613 is labelled a *recommended elective pending confirmation*. |
 | Assessment | 1,161 supplementary practice questions (7 question types), lesson quizzes, module assessments, course and mixed mock exams. Scoring happens on the server; answer keys are never sent to the browser before submission. Mastery threshold 80% (configurable). |
 | Study tools | Weekly planner and provisional timetable (Africa/Accra), assignments with attachments, private notes and bookmarks, SM-2 spaced repetition and 919 flashcards, search, notifications, rule-based study recommendations. |
-| Progress | Dashboard, streaks, time studied, course and module mastery, weak-topic detection. |
+| Progress | Dashboard, a daily lesson streak shown as a flame (lit, fading or out), today's lessons guided by the timetable, time studied, course and module mastery, weak-topic detection. |
 | Admin | Publish/hide content, edit completion rules and assessment settings, import lessons (Markdown) and question banks (YAML), manage resources (with a server-side link checker), announcements and private lecturer/institutional uploads. |
 | Offline | Installable PWA. Lessons you open are saved on your device; notes, progress and planner changes made offline are queued and synced when you reconnect. |
 

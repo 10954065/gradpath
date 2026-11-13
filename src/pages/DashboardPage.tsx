@@ -1,10 +1,12 @@
 import { format } from 'date-fns'
-import { CalendarClock, CheckCircle2, ClipboardList, Flame, GraduationCap, Megaphone, RefreshCcw, Target, Timer } from 'lucide-react'
+import { CalendarClock, CheckCircle2, ClipboardList, GraduationCap, Megaphone, RefreshCcw, Target, Timer } from 'lucide-react'
 import { useEffect, useMemo } from 'react'
 import { Link } from 'react-router'
 import { accentClass } from '@/components/courses/badges'
 import { RecommendationList } from '@/components/dashboard/Recommendations'
+import { StreakFlame } from '@/components/dashboard/StreakFlame'
 import { CoursePerformanceChart, WeeklyStudyChart } from '@/components/dashboard/StudyCharts'
+import { TodayLessons } from '@/components/dashboard/TodayLessons'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -12,7 +14,7 @@ import { EmptyState, ErrorState, ProgressBar, Skeleton } from '@/components/ui/f
 import { StatTile } from '@/components/ui/page'
 import { useAuth } from '@/contexts/AuthContext'
 import { useStudyOverview } from '@/hooks/useStudyOverview'
-import { bestScoreAverage } from '@/lib/analytics'
+import { bestScoreAverage, streakMessage } from '@/lib/analytics'
 import { toUserMessage } from '@/lib/errors'
 import { courseLessonIds, summariseProgress } from '@/lib/progress'
 import { generateDueNotifications } from '@/services/notifications'
@@ -49,6 +51,7 @@ export default function DashboardPage() {
   const next = data.upcoming[0]
   const firstName = (profile?.full_name ?? '').split(' ')[0] || 'there'
   const isNew = data.progress.length === 0 && data.attempts.length === 0
+  const startedLessonIds = useMemo(() => new Set(data.progress.filter((p) => p.reading_percent > 0).map((p) => p.lesson_id)), [data.progress])
 
   if (data.error) return <ErrorState message={toUserMessage(data.error)} />
 
@@ -71,7 +74,16 @@ export default function DashboardPage() {
           <div className="mb-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <StatTile label="Overall course progress" value={`${overall.percent}%`} hint={`${overall.completed} of ${overall.total} lessons completed`} icon={<GraduationCap className="size-4" aria-hidden />} />
             <StatTile label="Study this week" value={minutesToHours(data.current.completedMinutes)} hint={`Target ${targetHours} h · ${Math.min(100, Math.round((data.current.completedMinutes / (targetHours * 60)) * 100))}%`} icon={<Timer className="size-4" aria-hidden />} />
-            <StatTile label="Study streak" value={`${data.streak} day${data.streak === 1 ? '' : 's'}`} hint="Days in a row with recorded learning" icon={<Flame className="size-4" aria-hidden />} />
+            <StatTile
+              label="Study streak"
+              value={
+                <span className="flex items-center gap-2">
+                  <StreakFlame state={data.streak.state} className="size-7" />
+                  {data.streak.current} day{data.streak.current === 1 ? '' : 's'}
+                </span>
+              }
+              hint={streakMessage(data.streak)}
+            />
             <StatTile label="Revision due" value={due.length} hint={due.length ? 'Open the Revision Centre' : 'Nothing due right now'} icon={<RefreshCcw className="size-4" aria-hidden />} />
           </div>
 
@@ -91,6 +103,8 @@ export default function DashboardPage() {
 
           <div className="grid grid-cols-1 gap-6 xl:grid-cols-[minmax(0,1fr)_22rem]">
             <div className="flex min-w-0 flex-col gap-6">
+              <TodayLessons plan={data.todayPlan} flame={data.streak.state} startedLessonIds={startedLessonIds} />
+
               <Card>
                 <CardHeader>
                   <CardTitle>Recommended next</CardTitle>

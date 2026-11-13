@@ -2,14 +2,15 @@ import { useQuery } from '@tanstack/react-query'
 import { addDays, endOfWeek, subWeeks } from 'date-fns'
 import { useMemo } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
-import { currentStreak } from '@/lib/analytics'
+import { useLessonStreak } from '@/hooks/useLessonStreak'
+import { planToday } from '@/lib/dailyPlan'
 import { recommend, type LessonRef } from '@/lib/recommendations'
 import { buildPlanner, studyTotals } from '@/lib/timetable'
 import { listMyAttempts, listQuizzes } from '@/services/assessments'
-import { getCatalogue } from '@/services/courses'
+import { getCatalogue, listEnrolments } from '@/services/courses'
 import { listMyProgress } from '@/services/progress'
 import { listAssignments } from '@/services/study/assignments'
-import { listActivityDays, getPlatformSettings, listAnnouncements } from '@/services/study/overview'
+import { getPlatformSettings, listAnnouncements } from '@/services/study/overview'
 import { listEvents, listSessions } from '@/services/study/planner'
 import { listReviews, listRevisionItems } from '@/services/study/revision'
 import { isoDate, weekStart } from '@/utils/dates'
@@ -35,7 +36,8 @@ export function useStudyOverview() {
     queryKey: ['sessions', isoDate(historyStart), isoDate(weekEnd)],
     queryFn: () => listSessions(historyStart.toISOString(), addDays(weekEnd, 1).toISOString()),
   })
-  const activity = useQuery({ queryKey: ['activity', isoDate(historyStart)], queryFn: () => listActivityDays(isoDate(subWeeks(historyStart, 8))) })
+  const enrolments = useQuery({ queryKey: ['enrolments'], queryFn: listEnrolments })
+  const streak = useLessonStreak()
   const announcements = useQuery({ queryKey: ['announcements'], queryFn: listAnnouncements })
   const settings = useQuery({ queryKey: ['platform-settings'], queryFn: getPlatformSettings })
 
@@ -68,9 +70,20 @@ export function useStudyOverview() {
       studiedMinutesThisWeek: current.completedMinutes,
       weeklyTargetHours: Number(profile?.weekly_study_target_hours ?? 15),
     })
-    const streak = currentStreak((activity.data ?? []).map((d) => d.day))
-    return { courses, lessons, weeks, current, upcoming, threshold, recommendations, streak }
-  }, [catalogue.data, events.data, sessions.data, progress.data, attempts.data, quizzes.data, revision.data, assignments.data, activity.data, settings.data, profile, historyStart, thisWeek])
+    const todayPlan = planToday({
+      todayEntries: buildPlanner(events.data ?? [], sessions.data ?? [], new Date(), new Date()),
+      courses: courses.map((c) => ({
+        id: c.id,
+        code: c.code,
+        title: c.title,
+        lessons: c.modules.flatMap((m) => m.lessons.map((l) => ({ id: l.id, title: l.title, href: `/courses/${c.slug}/lessons/${l.slug}` }))),
+      })),
+      droppedCourseIds: (enrolments.data ?? []).filter((e) => e.status === 'dropped').map((e) => e.course_id),
+      progress: progress.data ?? [],
+      lessonIdsToday: streak.lessonIdsToday,
+    })
+    return { courses, lessons, weeks, current, upcoming, threshold, recommendations, todayPlan }
+  }, [catalogue.data, events.data, sessions.data, progress.data, attempts.data, quizzes.data, revision.data, assignments.data, enrolments.data, streak.lessonIdsToday, settings.data, profile, historyStart, thisWeek])
 
   const isLoading = catalogue.isPending || progress.isPending
   return {
@@ -83,6 +96,7 @@ export function useStudyOverview() {
     reviews: reviews.data ?? [],
     assignments: assignments.data ?? [],
     announcements: announcements.data ?? [],
+    streak,
     ...derived,
   }
 }

@@ -1,4 +1,6 @@
+import { useQueryClient } from '@tanstack/react-query'
 import { useEffect, useRef, useState, type RefObject } from 'react'
+import { LESSON_DAYS_KEY } from '@/hooks/useLessonStreak'
 import { readingPercentFromScroll } from '@/lib/progress'
 import { saveReading } from '@/services/progress'
 
@@ -23,6 +25,7 @@ export function useReadingTracker(articleRef: RefObject<HTMLElement | null>, opt
   const seconds = useRef(initialSeconds)
   const lastSaved = useRef({ percent: initialPercent, seconds: initialSeconds })
   const section = useRef<string | null>(null)
+  const queryClient = useQueryClient()
 
   useEffect(() => {
     maxPercent.current = Math.max(maxPercent.current, initialPercent)
@@ -46,7 +49,8 @@ export function useReadingTracker(articleRef: RefObject<HTMLElement | null>, opt
     }
 
     const save = () => {
-      const changed = maxPercent.current !== lastSaved.current.percent || seconds.current - lastSaved.current.seconds >= 10
+      const readMore = maxPercent.current > lastSaved.current.percent
+      const changed = readMore || seconds.current - lastSaved.current.seconds >= 10
       if (!changed) return
       lastSaved.current = { percent: maxPercent.current, seconds: seconds.current }
       void saveReading({
@@ -55,7 +59,12 @@ export function useReadingTracker(articleRef: RefObject<HTMLElement | null>, opt
         readingPercent: maxPercent.current,
         timeSpentSeconds: seconds.current,
         lastSection: section.current,
-      }).catch(() => undefined)
+      })
+        // Reading further counts as today's lesson, so the streak flame may have just lit.
+        .then(({ queued }) => {
+          if (readMore && !queued) void queryClient.invalidateQueries({ queryKey: LESSON_DAYS_KEY })
+        })
+        .catch(() => undefined)
     }
 
     const headings = Array.from(article.querySelectorAll<HTMLElement>('[data-section]'))
@@ -95,7 +104,7 @@ export function useReadingTracker(articleRef: RefObject<HTMLElement | null>, opt
       document.removeEventListener('visibilitychange', onHide)
       window.removeEventListener('pagehide', save)
     }
-  }, [articleRef, userId, lessonId])
+  }, [articleRef, userId, lessonId, queryClient])
 
   return { percent, activeSection }
 }

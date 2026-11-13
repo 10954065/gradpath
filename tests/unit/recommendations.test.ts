@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { bestScoreAverage, currentStreak } from '@/lib/analytics'
+import { bestScoreAverage, currentStreak, streakStatus } from '@/lib/analytics'
 import { recommend, type RecommendationInput } from '@/lib/recommendations'
 import type { LessonProgress, QuizAttemptRow, RevisionItem } from '@/types/database'
 
@@ -72,6 +72,15 @@ describe('analytics helpers', () => {
     expect(currentStreak(['2026-11-10', '2026-11-11', '2026-11-12'], today)).toBe(3)
     expect(currentStreak(['2026-11-10', '2026-11-11'], today)).toBe(2)
     expect(currentStreak(['2026-11-09'], today)).toBe(0)
+  })
+
+  it('lights the flame only on days with a lesson, fades it overnight and puts it out after a missed day', () => {
+    const today = new Date('2026-11-12T12:00:00')
+    expect(streakStatus(['2026-11-11', '2026-11-12'], today)).toEqual({ current: 2, state: 'lit', best: 2 })
+    expect(streakStatus(['2026-11-10', '2026-11-11'], today)).toEqual({ current: 2, state: 'fading', best: 2 })
+    expect(streakStatus(['2026-11-01', '2026-11-02', '2026-11-03', '2026-11-09'], today)).toEqual({ current: 0, state: 'out', best: 3 })
+    expect(streakStatus(['2026-11-01', '2026-11-12'], today)).toEqual({ current: 1, state: 'lit', best: 1 })
+    expect(streakStatus([], today)).toEqual({ current: 0, state: 'out', best: 0 })
   })
 
   it('averages the best score per quiz within each group', () => {

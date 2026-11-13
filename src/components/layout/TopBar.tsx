@@ -2,14 +2,34 @@ import { useQuery } from '@tanstack/react-query'
 import { Bell, LogOut, Menu, Monitor, Moon, Search, Settings, Sun, UserRound, WifiOff } from 'lucide-react'
 import { useState, type FormEvent } from 'react'
 import { Link, useNavigate } from 'react-router'
+import { StreakFlame } from '@/components/dashboard/StreakFlame'
 import { Button } from '@/components/ui/button'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/menu'
 import { useAuth } from '@/contexts/AuthContext'
 import { useTheme } from '@/contexts/ThemeContext'
+import { useLessonStreak } from '@/hooks/useLessonStreak'
 import { useOnlineStatus } from '@/hooks/useOnlineStatus'
 import { useSyncStatus } from '@/hooks/useSyncStatus'
+import { streakMessage } from '@/lib/analytics'
 import { initials } from '@/lib/utils'
 import { unreadCount } from '@/services/notifications'
+
+function StreakPill() {
+  const streak = useLessonStreak()
+  if (streak.isPending) return null
+  const message = streakMessage(streak)
+  return (
+    <Link
+      to="/dashboard"
+      title={message}
+      aria-label={`Study streak: ${streak.current} day${streak.current === 1 ? '' : 's'}. ${message}`}
+      className="inline-flex h-8 items-center gap-1 rounded-full border bg-surface px-2.5 text-xs font-semibold tabular-nums hover:border-primary/40 focus-visible:outline-2 focus-visible:outline-ring"
+    >
+      <StreakFlame state={streak.state} decorative className="size-4" />
+      {streak.current}
+    </Link>
+  )
+}
 
 function ThemeMenu() {
   const { theme, setTheme, resolved } = useTheme()
@@ -89,6 +109,7 @@ export function TopBar({ onOpenMenu }: { onOpenMenu: () => void }) {
       </form>
       <div className="ml-auto flex items-center gap-1">
         <ConnectivityIndicator />
+        <StreakPill />
         <ThemeMenu />
         <Button variant="ghost" size="icon" asChild>
           <Link to="/notifications" aria-label={unread ? `Notifications, ${unread} unread` : 'Notifications'} className="relative">

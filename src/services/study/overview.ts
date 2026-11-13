@@ -23,12 +23,11 @@ export function getPlatformSettings(): Promise<PlatformSettings> {
   })
 }
 
-/** Days (Accra time) with recorded learning activity — used for streaks and activity charts. */
-export function listActivityDays(sinceIso: string): Promise<{ day: string; activities: number }[]> {
-  return withOfflineCache(`activity:${sinceIso}`, async () => {
-    const { data, error } = await supabase.rpc('activity_days', { p_since: sinceIso })
-    ensureOk({ data, error }, 'We could not load your activity.')
-    return (data ?? []) as { day: string; activities: number }[]
+/** Days (Accra time) with lesson progress, one row per lesson per day. The study streak counts these days only. */
+export function listLessonDays(sinceIso: string): Promise<{ day: string; lesson_id: string }[]> {
+  return withOfflineCache(`lesson-days:${sinceIso}`, async () => {
+    const result = await supabase.from('lesson_days').select('day, lesson_id').gte('day', sinceIso).order('day').limit(5000)
+    return ensureOk(result, 'We could not load your study streak.') as { day: string; lesson_id: string }[]
   })
 }
 

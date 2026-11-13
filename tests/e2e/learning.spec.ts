@@ -36,6 +36,12 @@ test('a student reads a lesson, marks it complete and sees progress', async ({ p
   await page.goto('/courses/csit-601')
   await expect(page.getByText(/^1\/\d+ lessons · \d+%$/)).toBeVisible()
   await expect(page.getByLabel('Completed').first()).toBeVisible()
+
+  // Taking a lesson today lights the streak flame.
+  await page.goto('/dashboard')
+  await expect(page.getByRole('link', { name: /^Study streak: 1 day\. Today’s lesson is done/ })).toBeVisible()
+  await expect(page.getByRole('img', { name: /^Flame lit/ }).first()).toBeVisible()
+  await expect(page.getByText('Today’s lessons')).toBeVisible()
 })
 
 test('a private lesson note is saved and listed on My Notes', async ({ page }) => {

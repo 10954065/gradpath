@@ -280,3 +280,45 @@
     animation: none;
   }
 }
+
+/* Study-streak flame: flickers when lit, breathes low while fading, grey and still when out. */
+@keyframes gp-flicker {
+  0%,
+  100% {
+    transform: scale(1, 1) skewX(0deg);
+  }
+  30% {
+    transform: scale(0.97, 1.05) skewX(-1.5deg);
+  }
+  60% {
+    transform: scale(1.02, 0.97) skewX(1deg);
+  }
+}
+@keyframes gp-ember {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+.gp-flame {
+  transform-origin: 50% 90%;
+}
+.gp-flame-lit {
+  filter: drop-shadow(0 0 6px rgb(249 115 22 / 0.45));
+  animation: gp-flicker 1.8s ease-in-out infinite;
+}
+.gp-flame-fading {
+  animation: gp-ember 2.6s ease-in-out infinite;
+}
+.gp-flame-out {
+  color: var(--color-muted-foreground);
+}
+@media (prefers-reduced-motion: reduce) {
+  .gp-flame-lit,
+  .gp-flame-fading {
+    animation: none;
+  }
+}
