@@ -5,7 +5,7 @@
   "type": "module",
   "description": "GradPath — academic learning, assessment, revision and performance platform for MSc IT for Business students.",
   "engines": {
-    "node": ">=20"
+    "node": "24.x"
   },
   "scripts": {
     "dev": "vite",
