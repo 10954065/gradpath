@@ -1,5 +1,9 @@
+import { useEffect } from 'react'
 import { useRegisterSW } from 'virtual:pwa-register/react'
 import { Button } from '@/components/ui/button'
+
+/** The "ready to work offline" notice is informational, so it clears itself instead of covering controls. */
+const OFFLINE_READY_NOTICE_MS = 6000
 
 /** Shows a prompt when a new version of the app has been downloaded, and confirms offline readiness. */
 export function UpdatePrompt() {
@@ -8,6 +12,12 @@ export function UpdatePrompt() {
     offlineReady: [offlineReady, setOfflineReady],
     updateServiceWorker,
   } = useRegisterSW({ immediate: true })
+
+  useEffect(() => {
+    if (!offlineReady || needRefresh) return
+    const timer = window.setTimeout(() => setOfflineReady(false), OFFLINE_READY_NOTICE_MS)
+    return () => window.clearTimeout(timer)
+  }, [offlineReady, needRefresh, setOfflineReady])
 
   if (!needRefresh && !offlineReady) return null
 

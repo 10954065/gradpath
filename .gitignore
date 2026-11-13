@@ -40,3 +40,6 @@ CLAUDE.local.md
 
 # Browser automation output
 .playwright-mcp/
+
+# E2E saved sessions (test accounts only)
+tests/e2e/.auth/

@@ -25,7 +25,7 @@ _Last updated: 2026-11-12_
 | 8. Analytics | Done | Personalised dashboard (progress, weekly hours vs target, streak, revision due, recommendations, course progress, weekly study + course performance charts, next session, deadlines, results, weak topics, announcements), Academic Progress centre, rule-based explainable recommendations, announcements, global search; browser-verified with real data |
 | 9. Administration | Done | Admin console (overview, content publish/edit/Markdown import, assessment settings + question-bank import, resources CRUD + server-side link check, announcements, private course-material uploads, platform settings); `/api/verify-link` Netlify Function (admin-only, SSRF-guarded, rate-limited); published materials shown on course pages via signed URLs |
 | 10. PWA | Done | Installable manifest (standalone, 192/512/maskable icons); service worker precaches the app shell and all route chunks (97 entries, ~2.2 MB) while Mermaid renderers and non-Latin font subsets are cached on first use; offline reading, offline note writes via the outbox, sync on reconnect; offline fixes: queries run in `networkMode: 'always'`, Supabase requests fail fast when offline, profile cached per user, stale-session sign-out only on an explicit auth rejection |
-| 11. QA | Pending | |
+| 11. Quality assurance | Done | Playwright E2E suite (16 tests: registration/onboarding, sign-in errors, route protection, catalogue, lesson completion, notes, search, quiz scoring, timetable/planner, assignments, admin denial, offline reading + outbox sync, phone layout); security review below |
 | 12. Deployment preparation | Pending | |
 
 ## Tests executed
@@ -42,6 +42,30 @@ _Last updated: 2026-11-12_
 | 2026-11-12 | Browser check of admin console (Playwright MCP, local stack) | Overview counts; announcement create → publish; settings save; assessment edit; TXT material upload → publish → student opens it from the course page via signed URL; two-step delete; non-admin sees “Administrators only”. Test data removed afterwards |
 | 2026-11-13 | `npm run build` + `npm run preview`, browser check (Playwright, Chromium offline emulation) | Service worker installs and controls the page; manifest valid. Saved lesson reloads offline in 0.9 s with its Mermaid diagram (was 21.6 s before the fail-fast fix, and before the auth fix an offline reload signed the student out). Dashboard opens offline. Note written offline shows “Offline · 1 pending” and reached the database after reconnecting |
 | 2026-11-13 | `npm test`, `npm run typecheck`, `npm run lint` (Phase 10) | 42/42 unit tests pass (adds offline fetch tests); typecheck clean; lint 0 errors (29 react-refresh dev-only warnings) |
+| 2026-11-13 | `npm run test:e2e` (production build via `vite preview`, local Supabase; desktop Chrome + Pixel 7) | 16/16 pass, twice in a row (44 s, 39 s). Throwaway accounts are created through the admin API and deleted by the teardown project |
+| 2026-11-13 | Full gate: typecheck, lint, unit, integration, content validation, build | Pass: 42 unit, 34 integration, 0 content errors/warnings, lint 0 errors (29 dev-only react-refresh warnings), production build OK |
+
+## Security review (2026-11-13)
+
+* **Secrets:** no keys or tokens in tracked files; the service-role key is never referenced by browser code and
+  does not appear in the built bundle. Tests read it from the running local stack at run time.
+* **Authorisation:** every table has RLS; admin writes require `is_admin()`; `grant_admin` is not executable by
+  `anon`/`authenticated`. Verified by integration tests (students cannot edit content, settings or quizzes, post
+  announcements, upload materials, read hidden lessons/files, read answer keys or self-grant admin).
+* **XSS:** all lesson/note Markdown is sanitised with DOMPurify (unit-tested); Mermaid runs with
+  `securityLevel: 'strict'`; external links use `rel="noopener noreferrer"` and a URL scheme allow-list.
+* **CSP and headers:** `script-src 'self'`, `object-src 'none'`, `frame-ancestors 'none'`, HSTS, nosniff,
+  referrer policy and permissions policy in `netlify.toml`.
+* **Link checker (`/api/verify-link`):** admin token required (checked with `is_admin()`), http(s) only, every
+  resolved address must be public (blocks private, loopback, link-local, CGNAT, multicast and IPv4-mapped IPv6),
+  redirects are not followed, 15 s timeout, 30 checks per minute per token. Residual risk: DNS rebinding between
+  the lookup and the fetch; mitigated by the admin-only access and no redirect following.
+* **Offline data:** cached per user in IndexedDB and cleared on sign-out; a network failure no longer signs the
+  student out (which previously wiped their saved data).
+* **Dependencies (`npm audit --omit=dev`):** `zod` <4.6.6 (high, memory exhaustion on oversized collections) — only
+  used for client-side form validation and the build-time content parser, so the exposure is a student's own
+  tab; fixing needs the zod 4 migration (breaking). `katex` via `mermaid` (low, requires existing prototype
+  pollution) — fix needs Mermaid 12 (breaking). Both recorded as follow-ups, not silently forced.
 
 ## Errors encountered
 

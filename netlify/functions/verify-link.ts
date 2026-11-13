@@ -70,8 +70,9 @@ export default async (request: Request): Promise<Response> => {
   if (target.protocol !== 'https:' && target.protocol !== 'http:') return json(400, { error: 'Only http(s) URLs can be checked' })
 
   try {
-    const { address } = await lookup(target.hostname)
-    if (isPrivateAddress(address)) return json(400, { error: 'This address cannot be checked' })
+    // Reject the host if any of its addresses is internal (not just the first one returned).
+    const addresses = await lookup(target.hostname, { all: true })
+    if (addresses.length === 0 || addresses.some((a) => isPrivateAddress(a.address))) return json(400, { error: 'This address cannot be checked' })
   } catch {
     return json(200, { status: 'unreachable' })
   }
