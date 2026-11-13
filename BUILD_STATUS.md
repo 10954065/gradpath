@@ -1,6 +1,6 @@
 # GradPath — Build Status
 
-_Last updated: 2026-11-12_
+_Last updated: 2026-11-13_
 
 ## Initial audit (Phase 1)
 
@@ -26,7 +26,7 @@ _Last updated: 2026-11-12_
 | 9. Administration | Done | Admin console (overview, content publish/edit/Markdown import, assessment settings + question-bank import, resources CRUD + server-side link check, announcements, private course-material uploads, platform settings); `/api/verify-link` Netlify Function (admin-only, SSRF-guarded, rate-limited); published materials shown on course pages via signed URLs |
 | 10. PWA | Done | Installable manifest (standalone, 192/512/maskable icons); service worker precaches the app shell and all route chunks (97 entries, ~2.2 MB) while Mermaid renderers and non-Latin font subsets are cached on first use; offline reading, offline note writes via the outbox, sync on reconnect; offline fixes: queries run in `networkMode: 'always'`, Supabase requests fail fast when offline, profile cached per user, stale-session sign-out only on an explicit auth rejection |
 | 11. Quality assurance | Done | Playwright E2E suite (16 tests: registration/onboarding, sign-in errors, route protection, catalogue, lesson completion, notes, search, quiz scoring, timetable/planner, assignments, admin denial, offline reading + outbox sync, phone layout); security review below |
-| 12. Deployment preparation | Pending | |
+| 12. Deployment preparation | Done | `README.md`, `docs/DEPLOYMENT.md` (Supabase project, migrations, seed, auth URLs, Netlify env vars, first admin, security checks, free-tier limits); curriculum status regenerated; final verification gate passed. Not deployed: no Supabase cloud or Netlify credentials were provided |
 
 ## Tests executed
 
@@ -74,21 +74,30 @@ _Last updated: 2026-11-12_
 
 ## Credentials still required (owner action)
 
-* Supabase cloud project URL and anon key (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`).
-* Netlify site linked to the GitHub repository.
+* A Supabase cloud project (URL and anon/publishable key) — see `docs/DEPLOYMENT.md` steps 2–5.
+* A Netlify site linked to `https://github.com/10954065/gradpath` with `VITE_SUPABASE_URL` and
+  `VITE_SUPABASE_ANON_KEY` set — step 6.
+* Custom SMTP for auth emails before inviting a full cohort (Supabase's built-in sender is rate-limited).
 
 ## Deployment readiness
 
-Not ready — application build in progress.
+**Ready to deploy; not deployed.** The production build, all automated tests and the browser checks pass against
+a local Supabase stack running the same migrations and seed. Nothing has been deployed to Netlify or a Supabase
+cloud project, because no credentials for either were provided — deployment success has therefore **not** been
+verified. Follow `docs/DEPLOYMENT.md`, then run the checks in its section 8 on the live site.
+
+Known follow-ups (not blockers):
+* `zod` 4 migration and Mermaid 12 upgrade to clear the two `npm audit` findings (see the security review).
+* 29 dev-only `react-refresh/only-export-components` lint warnings (no runtime effect).
+* Of 225 checked links, 3 were unreachable and 26 could not be verified automatically (sites that block bots) at the
+  last check; they are labelled for students and can be reviewed on Admin console → Resources.
 
 ## Continuation instructions
 
-1. `npx supabase start` (Studio/analytics/realtime/edge runtime are disabled in config.toml), then
-   `npx supabase db reset` to apply migrations and `supabase/seed.sql`.
-2. Write `.env.local` from `npx supabase status -o json` (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`).
-3. `npm run dev`. Content changes: edit `content/`, run `npm run content:build`, then `npx supabase db reset`.
-4. Remaining routes to build are listed in `src/routes/router.tsx` (`shellRoutes`): dashboard, planner,
-   timetable, assignments, assessments (+ runner/results), mock exams, revision, flashcards, notes,
-   progress, announcements, notifications, search, admin. Services for courses, progress, notes,
-   assessments, notifications and offline sync already exist in `src/services/`.
-5. Continue with the first phase above marked Pending.
+1. Local development: `npx supabase start`, `npx supabase db reset`, write `.env.local` from
+   `npx supabase status -o json`, then `npm run dev` (details in `README.md`).
+2. Before committing: `npm run typecheck`, `npm run lint`, `npm test`, `npm run test:integration`,
+   `npm run build`; for UI changes also `npm run test:e2e`.
+3. Content changes: edit `content/`, `npm run content:validate`, `npm run content:build`, then reload the seed
+   (locally `npx supabase db reset`; in the cloud `psql … -f supabase/seed.sql`).
+4. Deployment: follow `docs/DEPLOYMENT.md`.
