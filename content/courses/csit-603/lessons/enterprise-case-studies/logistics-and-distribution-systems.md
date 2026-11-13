@@ -199,14 +199,14 @@ The case is widely taught alongside Hershey as a cautionary tale. Its lessons fo
 
 - Monk, E., & Wagner, B. (2013). *Concepts in enterprise resource planning* (4th ed.). Cengage Learning.
 - Dumas, M., La Rosa, M., Mendling, J., & Reijers, H. A. (2018). *Fundamentals of business process management* (2nd ed.). Springer.
-- Scott, J. E., & Vessey, I. (2002). Managing risks in enterprise systems implementations. *Communications of the ACM, 45*(4), 74–81.
+- Scott, J. E., & Vessey, I. (2002). Managing risks in enterprise systems implementations. *Communications of the ACM, 45*(4), 74-81.
 - Kotter, J. P. (1996). *Leading change*. Harvard Business School Press.
 
 ## Video Resources
 
-- [SAP Learning](https://learning.sap.com/) — SAP. Free learning journeys including warehouse and transportation management topics.
-- [Microsoft Learn: Dynamics 365 training](https://learn.microsoft.com/training/dynamics365/) — Microsoft. Self-paced modules including warehouse management and supply chain processes.
-- [Camunda documentation](https://docs.camunda.io/) — Camunda. Official guides for modelling cross-organisational processes with pools and message flows.
+- [SAP Learning](https://learning.sap.com/): SAP. Free learning journeys including warehouse and transportation management topics.
+- [Microsoft Learn: Dynamics 365 training](https://learn.microsoft.com/training/dynamics365/): Microsoft. Self-paced modules including warehouse management and supply chain processes.
+- [Camunda documentation](https://docs.camunda.io/): Camunda. Official guides for modelling cross-organisational processes with pools and message flows.
 
 ## Revision Summary
 

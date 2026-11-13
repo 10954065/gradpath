@@ -224,8 +224,8 @@ flowchart LR
 
 ## Video Resources
 
-- [OWASP](https://owasp.org/) — OWASP Foundation. Official site of the open community, whose cheat sheet series includes guidance on password storage and cryptographic practice.
-- [NIST Computer Security Resource Center](https://csrc.nist.gov/) — National Institute of Standards and Technology. Official source for hash function and digital signature standards.
+- [OWASP](https://owasp.org/): OWASP Foundation. Official site of the open community, whose cheat sheet series includes guidance on password storage and cryptographic practice.
+- [NIST Computer Security Resource Center](https://csrc.nist.gov/): National Institute of Standards and Technology. Official source for hash function and digital signature standards.
 
 ## Revision Summary
 

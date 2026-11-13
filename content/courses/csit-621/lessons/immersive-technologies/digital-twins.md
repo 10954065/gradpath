@@ -242,15 +242,15 @@ flowchart LR
 
 ## Further Reading
 
-- Grieves, M., & Vickers, J. (2017). Digital twin: Mitigating unpredictable, undesirable emergent behavior in complex systems. In F.-J. Kahlen, S. Flumerfelt, & A. Alves (Eds.), *Transdisciplinary perspectives on complex systems* (pp. 85–113). Springer.
-- Kritzinger, W., Karner, M., Traar, G., Henjes, J., & Sihn, W. (2018). Digital twin in manufacturing: A categorical literature review and classification. *IFAC-PapersOnLine, 51*(11), 1016–1022.
-- Tao, F., Zhang, H., Liu, A., & Nee, A. Y. C. (2019). Digital twin in industry: State-of-the-art. *IEEE Transactions on Industrial Informatics, 15*(4), 2405–2415.
+- Grieves, M., & Vickers, J. (2017). Digital twin: Mitigating unpredictable, undesirable emergent behavior in complex systems. In F.-J. Kahlen, S. Flumerfelt, & A. Alves (Eds.), *Transdisciplinary perspectives on complex systems* (pp. 85-113). Springer.
+- Kritzinger, W., Karner, M., Traar, G., Henjes, J., & Sihn, W. (2018). Digital twin in manufacturing: A categorical literature review and classification. *IFAC-PapersOnLine, 51*(11), 1016-1022.
+- Tao, F., Zhang, H., Liu, A., & Nee, A. Y. C. (2019). Digital twin in industry: State-of-the-art. *IEEE Transactions on Industrial Informatics, 15*(4), 2405-2415.
 
 ## Video Resources
 
-- [IBM Think](https://www.ibm.com/think) — IBM. Explainers on digital twins, asset management and simulation.
-- [Microsoft Learn](https://learn.microsoft.com/) — Microsoft. Documentation and learning paths on building digital twin solutions with cloud services.
-- [Google Cloud Learn](https://cloud.google.com/learn) — Google Cloud. Introductions to data integration and analytics underpinning digital twins.
+- [IBM Think](https://www.ibm.com/think): IBM. Explainers on digital twins, asset management and simulation.
+- [Microsoft Learn](https://learn.microsoft.com/): Microsoft. Documentation and learning paths on building digital twin solutions with cloud services.
+- [Google Cloud Learn](https://cloud.google.com/learn): Google Cloud. Introductions to data integration and analytics underpinning digital twins.
 
 ## Revision Summary
 

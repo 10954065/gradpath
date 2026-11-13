@@ -10,7 +10,7 @@ source: supplementary
 
 Most ethical failures in IT do not begin with dramatic choices. They begin with ordinary decisions taken under pressure: a project manager reports a schedule as "green" when it is clearly slipping; a systems administrator browses a colleague's mailbox out of curiosity; a procurement officer accepts an expensive "thank-you" gift from a vendor; a developer quietly reuses a former employer's code. Each act may seem minor in isolation, but together they erode trust, expose organisations to legal risk and can ultimately harm customers and the public.
 
-IT professionals occupy positions of unusual trust. They hold privileged access to systems and data, often understand technical risks better than their managers or clients, and influence costly purchasing decisions. This lesson examines the ethical obligations that arise in the IT workplace — honesty, loyalty, confidentiality, fairness and competence — and then focuses on **conflicts of interest**, one of the most common and most misunderstood sources of professional misconduct. You will learn to recognise actual, potential and perceived conflicts and to manage them through disclosure, recusal and organisational controls.
+IT professionals occupy positions of unusual trust. They hold privileged access to systems and data, often understand technical risks better than their managers or clients, and influence costly purchasing decisions. This lesson examines the ethical obligations that arise in the IT workplace (honesty, loyalty, confidentiality, fairness and competence) and then focuses on **conflicts of interest**, one of the most common and most misunderstood sources of professional misconduct. You will learn to recognise actual, potential and perceived conflicts and to manage them through disclosure, recusal and organisational controls.
 
 ## Learning Objectives
 
@@ -44,7 +44,7 @@ IT professionals owe overlapping duties to several parties.
 
 **To employers and clients**
 
-- **Honesty** in reporting progress, costs, risks and defects. Misreporting project status — sometimes called "watermelon reporting" (green outside, red inside) — denies decision-makers the information they need.
+- **Honesty** in reporting progress, costs, risks and defects. Misreporting project status (sometimes called "watermelon reporting" (green outside, red inside)) denies decision-makers the information they need.
 - **Competence**: undertaking only work one is competent to do, or being transparent about learning needs (ACM principle 2.6).
 - **Confidentiality** of business information, customer data and trade secrets (ACM 1.7).
 - **Diligence and loyalty**: acting in the organisation's legitimate interests rather than one's own.
@@ -68,7 +68,7 @@ Loyalty to an employer is a genuine moral value: it sustains co-operative relati
 
 ### Conflicts of interest
 
-A conflict of interest exists when a person's private interests — financial, personal, family or other professional commitments — could improperly influence their judgement in a role where others rely on them. The key insight is that a conflict is a **situation**, not a wrongdoing. Having a conflict is often unavoidable; the ethical failure lies in **concealing it or failing to manage it**.
+A conflict of interest exists when a person's private interests (financial, personal, family or other professional commitments) could improperly influence their judgement in a role where others rely on them. The key insight is that a conflict is a **situation**, not a wrongdoing. Having a conflict is often unavoidable; the ethical failure lies in **concealing it or failing to manage it**.
 
 Three categories are commonly distinguished:
 
@@ -96,7 +96,7 @@ Gifts are a culturally sensitive area. In many Ghanaian business settings, gift-
 ### Ethical analysis of conflicts of interest
 
 - **Deontology.** Accepting a role in which others rely on your judgement implies a promise to exercise it impartially. Concealing a conflict breaks that implicit promise and deceives those who trust you.
-- **Utilitarianism.** Undisclosed conflicts lead to poorer decisions (inferior systems, inflated prices) and erode trust, which raises costs across the organisation and society. Even if one decision turns out well, a rule permitting concealment would produce worse outcomes overall — a rule-utilitarian argument for disclosure.
+- **Utilitarianism.** Undisclosed conflicts lead to poorer decisions (inferior systems, inflated prices) and erode trust, which raises costs across the organisation and society. Even if one decision turns out well, a rule permitting concealment would produce worse outcomes overall: a rule-utilitarian argument for disclosure.
 - **Virtue ethics.** Integrity, fairness and practical wisdom lead a good professional to avoid compromising situations and to be transparent when they occur.
 - **Agency theory.** In management studies, employees and consultants act as *agents* for *principals* (employers and clients). Conflicts of interest are a classic agency problem, addressed through monitoring, incentives and disclosure.
 
@@ -107,7 +107,7 @@ ACM principle **1.3 (Be honest and trustworthy)** explicitly asks computing prof
 ### A conflict-of-interest management process
 
 1. **Recognise.** Ask regularly: Do I, or someone close to me, have an interest that could be affected by this decision?
-2. **Disclose promptly and in writing** to the appropriate person — usually a line manager, compliance officer or procurement committee.
+2. **Disclose promptly and in writing** to the appropriate person, usually a line manager, compliance officer or procurement committee.
 3. **Assess.** The organisation, not the conflicted person alone, judges how serious the conflict is.
 4. **Manage.** Options include recusal from the decision, reassignment, additional independent review, divestment of the interest, or declining the gift or outside work.
 5. **Record.** Keep a register of declarations and decisions.
@@ -136,7 +136,7 @@ Many Ghanaian developers supplement salaries with freelance work. This is not in
 
 ### The Volkswagen emissions scandal
 
-In 2015 the US Environmental Protection Agency issued a notice of violation alleging that Volkswagen had installed software in certain diesel vehicles that could detect when the car was being tested and change its emissions performance accordingly — a so-called "defeat device". In normal driving, the vehicles emitted nitrogen oxides at levels far above permitted limits. Volkswagen admitted the use of such software, and the scandal led to criminal and civil proceedings in several countries, very large financial penalties and vehicle recalls. Individual employees and executives were also prosecuted.
+In 2015 the US Environmental Protection Agency issued a notice of violation alleging that Volkswagen had installed software in certain diesel vehicles that could detect when the car was being tested and change its emissions performance accordingly: a so-called "defeat device". In normal driving, the vehicles emitted nitrogen oxides at levels far above permitted limits. Volkswagen admitted the use of such software, and the scandal led to criminal and civil proceedings in several countries, very large financial penalties and vehicle recalls. Individual employees and executives were also prosecuted.
 
 The case is primarily about fraud, but it is a powerful illustration of workplace ethics for technologists. Engineers wrote and maintained code whose purpose was deception. It raises questions examined throughout this lesson: How do organisational pressure and targets push employees towards misconduct? What is the limit of loyalty when an employer's instructions require deceiving regulators and the public? What should an engineer do when asked to implement a feature they believe is unlawful? The ACM Code's principles 1.2 (avoid harm), 1.3 (honesty) and 2.3 (know and respect rules) point clearly to refusal and escalation.
 
@@ -158,11 +158,11 @@ flowchart TD
 
 ## Common Misconceptions
 
-- "Having a conflict of interest means I have done something wrong." — Conflicts are situations that often cannot be avoided; wrongdoing lies in concealing or failing to manage them.
-- "If my judgement is not actually affected, there is no problem." — Perceived conflicts damage trust and decision legitimacy, so they must also be disclosed.
-- "Administrator access means I am entitled to look at any data." — Access is granted for specific purposes; using it beyond them is a breach of trust and may be unlawful.
-- "Loyalty to my employer means doing whatever I am told." — Loyalty is limited by law and duties to the public; employees should not deceive or endanger others on instruction.
-- "Gifts are always bribes." — Token gifts may be acceptable under policy; the test is whether a gift could influence or appear to influence decisions.
+- "Having a conflict of interest means I have done something wrong." Conflicts are situations that often cannot be avoided; wrongdoing lies in concealing or failing to manage them.
+- "If my judgement is not actually affected, there is no problem." Perceived conflicts damage trust and decision legitimacy, so they must also be disclosed.
+- "Administrator access means I am entitled to look at any data." Access is granted for specific purposes; using it beyond them is a breach of trust and may be unlawful.
+- "Loyalty to my employer means doing whatever I am told." Loyalty is limited by law and duties to the public; employees should not deceive or endanger others on instruction.
+- "Gifts are always bribes." Token gifts may be acceptable under policy; the test is whether a gift could influence or appear to influence decisions.
 
 ## Common Examination Mistakes
 
@@ -202,8 +202,8 @@ flowchart TD
 
 ## Video Resources
 
-- [ACM Code of Ethics and Professional Conduct](https://www.acm.org/code-of-ethics) — Association for Computing Machinery. Official Code with guidance, including principle 1.3 on honesty and conflicts of interest.
-- [ACM Code of Ethics – Case Studies](https://www.acm.org/code-of-ethics/case-studies) — Association for Computing Machinery. Official case studies applying the Code to realistic workplace dilemmas.
+- [ACM Code of Ethics and Professional Conduct](https://www.acm.org/code-of-ethics): Association for Computing Machinery. Official Code with guidance, including principle 1.3 on honesty and conflicts of interest.
+- [ACM Code of Ethics: Case Studies](https://www.acm.org/code-of-ethics/case-studies): Association for Computing Machinery. Official case studies applying the Code to realistic workplace dilemmas.
 
 ## Revision Summary
 
@@ -211,7 +211,7 @@ Workplace ethics in IT centres on honesty in reporting, competence, confidential
 
 - Access for a purpose, used only for that purpose (ACM 2.8).
 - Conflicts are situations; concealment is the wrong.
-- Actual, potential, perceived — all require attention.
+- Actual, potential, perceived: all require attention.
 - Recognise → disclose → assess → manage → record → review.
 - Gift test: could it influence, or appear to influence, a decision?
 - ACM 1.3: be forthright about real or perceived conflicts.

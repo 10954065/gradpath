@@ -207,16 +207,16 @@ flowchart TD
 
 ## Video Resources
 
-- [Smart contracts introduction](https://ethereum.org/en/developers/docs/smart-contracts/) — ethereum.org. Official documentation explaining how smart contracts work on Ethereum.
-- [Bitcoin and Cryptocurrency Technologies](https://www.coursera.org/learn/cryptocurrency) — Princeton University on Coursera. Lectures covering keys, wallets, transactions and the limits of cryptocurrency.
-- [Bank for International Settlements](https://www.bis.org/) — BIS. Official site with research, speeches and videos on central bank digital currencies.
+- [Smart contracts introduction](https://ethereum.org/en/developers/docs/smart-contracts/): ethereum.org. Official documentation explaining how smart contracts work on Ethereum.
+- [Bitcoin and Cryptocurrency Technologies](https://www.coursera.org/learn/cryptocurrency): Princeton University on Coursera. Lectures covering keys, wallets, transactions and the limits of cryptocurrency.
+- [Bank for International Settlements](https://www.bis.org/): BIS. Official site with research, speeches and videos on central bank digital currencies.
 
 ## Revision Summary
 
 Cryptocurrency transactions are signed with private keys and verified by nodes; custody of keys determines control and risk. Stablecoins seek price stability through fiat reserves, crypto collateral or algorithms, each with distinct failure modes. Smart contracts execute deterministically on-chain but inherit code defects, oracle dependence and governance questions, as The DAO showed. Digital identity, including national systems such as the Ghana Card, supports KYC and inclusion but demands strong privacy protection. CBDCs are central bank money in digital form, and pilots such as the eCedi explore inclusion and offline use.
 
-- Not your keys, not your coins — but self-custody means self-responsibility.
+- Not your keys, not your coins, but self-custody means self-responsibility.
 - Oracle problem: contracts cannot see the real world.
 - Ask: whose liability, who controls, who can reverse?
 - Mobile money ≠ CBDC ≠ cryptocurrency.
-- eCedi: a pilot — check official sources for status.
+- eCedi: a pilot, check official sources for status.

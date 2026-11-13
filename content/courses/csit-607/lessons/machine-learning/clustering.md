@@ -84,7 +84,7 @@ Because k-means uses distances, features measured in large units dominate. If on
 
 Choose k = 2 and, to illustrate reassignment, initialise the centroids at A (1, 1) and B (2, 1). Squared Euclidean distance is enough for comparing which centroid is nearer.
 
-**Iteration 1 – assignment.**
+**Iteration 1: assignment.**
 
 | Customer | Distance² to c1 (1, 1) | Distance² to c2 (2, 1) | Assigned |
 |---|---|---|---|
@@ -95,11 +95,11 @@ Choose k = 2 and, to illustrate reassignment, initialise the centroids at A (1, 
 | E | 61 | 50 | c2 |
 | F | 50 | 41 | c2 |
 
-**Iteration 1 – update.** Cluster 1 = {A, C}: centroid = ((1 + 1) / 2, (1 + 2) / 2) = (1, 1.5). Cluster 2 = {B, D, E, F}: centroid = ((2 + 6 + 7 + 6) / 4, (1 + 5 + 6 + 6) / 4) = (5.25, 4.5).
+**Iteration 1: update.** Cluster 1 = {A, C}: centroid = ((1 + 1) / 2, (1 + 2) / 2) = (1, 1.5). Cluster 2 = {B, D, E, F}: centroid = ((2 + 6 + 7 + 6) / 4, (1 + 5 + 6 + 6) / 4) = (5.25, 4.5).
 
-**Iteration 2 – assignment.** Customer B is now at distance² `(2 − 1)² + (1 − 1.5)² = 1.25` from c1 and `(2 − 5.25)² + (1 − 4.5)² ≈ 22.81` from c2, so B moves to cluster 1. A and C stay in cluster 1; D (0.81 from c2), E (5.31) and F (2.81) stay in cluster 2.
+**Iteration 2: assignment.** Customer B is now at distance² `(2 − 1)² + (1 − 1.5)² = 1.25` from c1 and `(2 − 5.25)² + (1 − 4.5)² ≈ 22.81` from c2, so B moves to cluster 1. A and C stay in cluster 1; D (0.81 from c2), E (5.31) and F (2.81) stay in cluster 2.
 
-**Iteration 2 – update.** Cluster 1 = {A, B, C}: centroid ≈ (1.33, 1.33). Cluster 2 = {D, E, F}: centroid ≈ (6.33, 5.67).
+**Iteration 2: update.** Cluster 1 = {A, B, C}: centroid ≈ (1.33, 1.33). Cluster 2 = {D, E, F}: centroid ≈ (6.33, 5.67).
 
 **Iteration 3.** Reassigning with the new centroids changes nothing, so the algorithm has converged.
 
@@ -127,7 +127,7 @@ A useful segmentation is commonly judged against criteria drawn from marketing p
 
 Clustering suits several Ghanaian contexts. Supermarkets can segment loyalty-card customers by frequency, spend and category mix. Mobile money operators can cluster users by transaction patterns (for example, frequent small peer-to-peer transfers versus occasional bill payments) to design products and agent support. Telecom operators can cluster prepaid users by voice, data and time-of-day usage. Hospitals can cluster patients by service usage to plan capacity.
 
-**Illustrative scenario.** A mobile money operator clusters active wallets using standardised features: number of transfers per month, average transfer value, proportion of cash-outs, number of merchant payments and number of distinct counterparties. The analysis yields five clusters, which the business team names: "remittance receivers" (mostly incoming transfers followed by cash-out), "small traders" (many small incoming payments), "salaried digital payers" (bill and merchant payments), "occasional users" and a small cluster with very many counterparties and rapid in–out flows. The first four guide product design, such as savings prompts for remittance receivers. The fifth is passed to the risk team, because unusual network behaviour can indicate agent abuse or fraud. The operator processes these data in line with Ghana's Data Protection Act, 2012 (Act 843), using pseudonymised identifiers for analysis.
+**Illustrative scenario.** A mobile money operator clusters active wallets using standardised features: number of transfers per month, average transfer value, proportion of cash-outs, number of merchant payments and number of distinct counterparties. The analysis yields five clusters, which the business team names: "remittance receivers" (mostly incoming transfers followed by cash-out), "small traders" (many small incoming payments), "salaried digital payers" (bill and merchant payments), "occasional users" and a small cluster with very many counterparties and rapid in-out flows. The first four guide product design, such as savings prompts for remittance receivers. The fifth is passed to the risk team, because unusual network behaviour can indicate agent abuse or fraud. The operator processes these data in line with Ghana's Data Protection Act, 2012 (Act 843), using pseudonymised identifiers for analysis.
 
 ## International Case Study
 
@@ -191,15 +191,15 @@ flowchart TD
 ## Further Reading
 
 - James, G., Witten, D., Hastie, T., & Tibshirani, R. (2013). *An introduction to statistical learning: With applications in R*. Springer. <https://www.statlearning.com/>
-- Lloyd, S. (1982). Least squares quantization in PCM. *IEEE Transactions on Information Theory, 28*(2), 129–137.
+- Lloyd, S. (1982). Least squares quantization in PCM. *IEEE Transactions on Information Theory, 28*(2), 129-137.
 - Provost, F., & Fawcett, T. (2013). *Data science for business*. O'Reilly Media.
 - Géron, A. (2019). *Hands-on machine learning with Scikit-Learn, Keras, and TensorFlow* (2nd ed.). O'Reilly Media.
 
 ## Video Resources
 
-- [scikit-learn documentation](https://scikit-learn.org/stable/) — scikit-learn. The official user guide includes a detailed clustering section comparing k-means, DBSCAN and hierarchical methods.
-- [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) — Google for Developers. Free Google course; related Google materials cover clustering concepts.
-- [Kaggle Learn](https://www.kaggle.com/learn) — Kaggle. Free courses including feature engineering with clustering.
+- [scikit-learn documentation](https://scikit-learn.org/stable/): scikit-learn. The official user guide includes a detailed clustering section comparing k-means, DBSCAN and hierarchical methods.
+- [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course): Google for Developers. Free Google course; related Google materials cover clustering concepts.
+- [Kaggle Learn](https://www.kaggle.com/learn): Kaggle. Free courses including feature engineering with clustering.
 
 ## Revision Summary
 

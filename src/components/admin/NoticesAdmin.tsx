@@ -92,7 +92,7 @@ function AnnouncementDialog({ announcement, onClose }: { announcement: Announcem
       const row = { title: title.trim(), body: body.trim(), course_id: courseId || null, is_pinned: isPinned }
       return announcement ? updateRow('announcements', announcement.id, row) : insertRow('announcements', { ...row, is_published: false })
     },
-    { success: announcement ? 'Announcement saved' : 'Draft created — publish it when ready', invalidate: [ANNOUNCEMENTS_KEY, ['announcements']] },
+    { success: announcement ? 'Announcement saved' : 'Draft created. Publish it when you are ready.', invalidate: [ANNOUNCEMENTS_KEY, ['announcements']] },
   )
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
@@ -110,7 +110,7 @@ function AnnouncementDialog({ announcement, onClose }: { announcement: Announcem
               <SelectItem value="">All students</SelectItem>
               {(catalogue.data ?? []).map((c) => (
                 <SelectItem key={c.id} value={c.id}>
-                  {c.code} — {c.title}
+                  {c.code}: {c.title}
                 </SelectItem>
               ))}
             </Select>
@@ -203,7 +203,7 @@ function UploadForm() {
       if (!course || !file) throw new Error('Choose a course and a file.')
       return uploadMaterial({ course, moduleId: moduleId || null, lessonId: lessonId || null, title: title.trim(), description: description.trim(), source, file })
     },
-    { success: 'Uploaded — it stays hidden until you publish it', invalidate: [MATERIALS_KEY] },
+    { success: 'Uploaded. It stays hidden until you publish it.', invalidate: [MATERIALS_KEY] },
   )
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()

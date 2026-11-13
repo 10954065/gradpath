@@ -51,7 +51,7 @@ Hyperparameters, such as tree depth, number of trees, learning rate or regularis
 
 ### Overfitting and underfitting
 
-The **bias–variance trade-off** describes the tension at the heart of model selection. A very simple model has high bias: it makes systematic errors because it cannot represent the true pattern (underfitting). A very flexible model has high variance: it changes greatly with small changes in training data and fits noise (overfitting). The goal is the level of complexity that minimises error on new data.
+The **bias-variance trade-off** describes the tension at the heart of model selection. A very simple model has high bias: it makes systematic errors because it cannot represent the true pattern (underfitting). A very flexible model has high variance: it changes greatly with small changes in training data and fits noise (overfitting). The goal is the level of complexity that minimises error on new data.
 
 The diagnosis is straightforward when you compare training and validation performance:
 
@@ -63,7 +63,7 @@ The diagnosis is straightforward when you compare training and validation perfor
 
 ### Splitting data correctly
 
-The standard practice is to divide data into three parts: a **training set** (often around 60–80 per cent) to fit parameters, a **validation set** to choose among models and hyperparameters, and a **test set** used once, at the end, to estimate real-world performance. If the test set is used repeatedly to make choices, it effectively becomes part of training and its estimate becomes optimistic.
+The standard practice is to divide data into three parts: a **training set** (often around 60-80 per cent) to fit parameters, a **validation set** to choose among models and hyperparameters, and a **test set** used once, at the end, to estimate real-world performance. If the test set is used repeatedly to make choices, it effectively becomes part of training and its estimate becomes optimistic.
 
 Three refinements matter in business:
 
@@ -156,7 +156,7 @@ Every model must be compared with a baseline: the majority class for classificat
 
 ### Google Flu Trends
 
-Google Flu Trends, launched in 2008, estimated influenza activity in the United States from the volume of flu-related search queries. It was initially presented as a way to track outbreaks faster than official surveillance. However, in an article in *Science* in 2014, Lazer, Kennedy, King and Vespignani showed that it had substantially overestimated flu prevalence in the 2012–2013 season and had performed poorly for extended periods.
+Google Flu Trends, launched in 2008, estimated influenza activity in the United States from the volume of flu-related search queries. It was initially presented as a way to track outbreaks faster than official surveillance. However, in an article in *Science* in 2014, Lazer, Kennedy, King and Vespignani showed that it had substantially overestimated flu prevalence in the 2012-2013 season and had performed poorly for extended periods.
 
 The authors identified issues that map directly onto this lesson. The model was selected from a very large number of candidate search terms against a limited number of observed flu seasons, risking overfitting to spurious correlations. The relationship between searches and illness also changed over time, partly because the search engine itself changed, so a model validated on past seasons did not generalise. The case shows that impressive historical fit, without robust out-of-time validation and ongoing monitoring, is not evidence of reliable future performance.
 
@@ -214,16 +214,16 @@ flowchart LR
 
 ## Further Reading
 
-- Lazer, D., Kennedy, R., King, G., & Vespignani, A. (2014). The parable of Google Flu: Traps in big data analysis. *Science, 343*(6176), 1203–1205.
+- Lazer, D., Kennedy, R., King, G., & Vespignani, A. (2014). The parable of Google Flu: Traps in big data analysis. *Science, 343*(6176), 1203-1205.
 - James, G., Witten, D., Hastie, T., & Tibshirani, R. (2013). *An introduction to statistical learning: With applications in R*. Springer. <https://www.statlearning.com/>
 - Provost, F., & Fawcett, T. (2013). *Data science for business*. O'Reilly Media.
 - Géron, A. (2019). *Hands-on machine learning with Scikit-Learn, Keras, and TensorFlow* (2nd ed.). O'Reilly Media.
 
 ## Video Resources
 
-- [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) — Google for Developers. Covers loss, gradient descent, overfitting, data splitting and classification metrics with interactive exercises.
-- [scikit-learn documentation](https://scikit-learn.org/stable/) — scikit-learn. The user guide on model selection and evaluation explains cross-validation and metrics.
-- [Kaggle Learn](https://www.kaggle.com/learn) — Kaggle. Free micro-courses including model validation, underfitting and overfitting, and data leakage.
+- [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course): Google for Developers. Covers loss, gradient descent, overfitting, data splitting and classification metrics with interactive exercises.
+- [scikit-learn documentation](https://scikit-learn.org/stable/): scikit-learn. The user guide on model selection and evaluation explains cross-validation and metrics.
+- [Kaggle Learn](https://www.kaggle.com/learn): Kaggle. Free micro-courses including model validation, underfitting and overfitting, and data leakage.
 
 ## Revision Summary
 

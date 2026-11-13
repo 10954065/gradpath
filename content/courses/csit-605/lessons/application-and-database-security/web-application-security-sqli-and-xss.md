@@ -76,7 +76,7 @@ XSS repeats the pattern with a different interpreter: the victim's browser. If a
 
 ## Theories, Frameworks and Models
 
-### Data–code separation as a design principle
+### Data-code separation as a design principle
 
 The most useful model for injection is the *confused interpreter*: any time an application builds a string that another component will parse (SQL, HTML, shell commands, LDAP filters, XML), there is a risk that data will be parsed as instructions. The robust defences are therefore those that use an API in which structure and data are passed separately: prepared statements for SQL, templating engines with automatic contextual escaping for HTML, argument arrays rather than shell strings for operating-system calls.
 
@@ -202,9 +202,9 @@ Three lessons follow. *Asset inventory matters*: forgotten legacy pages remained
 
 ## Video Resources
 
-- [PortSwigger Web Security Academy](https://portswigger.net/web-security) — PortSwigger. Free official learning portal with explanations and legal hands-on labs for SQL injection, XSS and other web vulnerabilities.
-- [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/) — OWASP Foundation. Official project page for a deliberately insecure training application you can run locally, with links to its companion guide.
-- [OWASP Top 10](https://owasp.org/Top10/) — OWASP Foundation. Official pages describing each risk category with examples and prevention guidance.
+- [PortSwigger Web Security Academy](https://portswigger.net/web-security): PortSwigger. Free official learning portal with explanations and legal hands-on labs for SQL injection, XSS and other web vulnerabilities.
+- [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/): OWASP Foundation. Official project page for a deliberately insecure training application you can run locally, with links to its companion guide.
+- [OWASP Top 10](https://owasp.org/Top10/): OWASP Foundation. Official pages describing each risk category with examples and prevention guidance.
 
 ## Revision Summary
 

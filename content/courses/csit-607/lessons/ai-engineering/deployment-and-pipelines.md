@@ -18,11 +18,11 @@ Deployment is also where many projects stall. Sculley et al. (2015) famously arg
 - Explain the stages of an MLOps pipeline and the purpose of components such as a model registry and feature store.
 - Distinguish data drift, concept drift and prediction drift, and explain how each is detected.
 - Apply the population stability index to quantify drift in a feature.
-- Evaluate rollout strategies such as shadow, canary and blue–green deployment in terms of risk.
+- Evaluate rollout strategies such as shadow, canary and blue-green deployment in terms of risk.
 
 ## Prerequisite Knowledge
 
-- Training versus inference, offline versus online evaluation and training–serving skew (previous lesson).
+- Training versus inference, offline versus online evaluation and training-serving skew (previous lesson).
 - A general idea of web APIs and databases.
 
 ## Key Terminology
@@ -56,14 +56,14 @@ A model behind a real-time API is typically packaged with its dependencies (ofte
 
 A mature pipeline automates the path from data to monitored service.
 
-1. **Data ingestion and validation** – data is pulled from source systems and checked against expectations (schema, ranges, missingness).
-2. **Feature engineering** – features are computed with code shared between training and serving, ideally via a feature store.
-3. **Training and tuning** – experiments are tracked with parameters, data versions and metrics.
-4. **Evaluation and approval** – the candidate is compared with the current production model on a fixed test set and on fairness and robustness checks; a human approver signs off high-impact models.
-5. **Registration** – the approved model is stored in a model registry with its documentation, for example a model card.
-6. **Deployment** – the model is released with a rollout strategy.
-7. **Monitoring** – inputs, outputs, performance, latency and business metrics are tracked, with alerts.
-8. **Retraining or rollback** – drift or degradation triggers investigation, retraining or rollback.
+1. **Data ingestion and validation**: data is pulled from source systems and checked against expectations (schema, ranges, missingness).
+2. **Feature engineering**: features are computed with code shared between training and serving, ideally via a feature store.
+3. **Training and tuning**: experiments are tracked with parameters, data versions and metrics.
+4. **Evaluation and approval**: the candidate is compared with the current production model on a fixed test set and on fairness and robustness checks; a human approver signs off high-impact models.
+5. **Registration**: the approved model is stored in a model registry with its documentation, for example a model card.
+6. **Deployment**: the model is released with a rollout strategy.
+7. **Monitoring**: inputs, outputs, performance, latency and business metrics are tracked, with alerts.
+8. **Retraining or rollback**: drift or degradation triggers investigation, retraining or rollback.
 
 Software engineering practices carry over: version control for code, **continuous integration** (automated tests on every change), and **continuous delivery** (automated packaging and deployment). MLOps adds versioning of *data* and *models* and **continuous training**. Free and open-source tools such as Git, MLflow for experiment tracking and model registry, and scikit-learn pipelines are enough for a student or small business to practise these ideas.
 
@@ -71,25 +71,25 @@ Software engineering practices carry over: version control for code, **continuou
 
 - **Shadow deployment**: the new model scores live traffic, but only the old model's decisions are used. It is the lowest-risk way to test live behaviour.
 - **Canary release**: a small percentage of traffic goes to the new model; metrics are compared, and traffic is increased stepwise.
-- **Blue–green deployment**: two identical environments run side by side; traffic is switched from the old (blue) to the new (green) at once, enabling instant rollback.
+- **Blue-green deployment**: two identical environments run side by side; traffic is switched from the old (blue) to the new (green) at once, enabling instant rollback.
 - **A/B test**: randomised allocation designed to measure a business effect, not only technical health.
 
 ### Monitoring and drift
 
 Monitoring covers four layers:
 
-1. **Service health** – uptime, latency, error rates, cost.
-2. **Data quality and drift** – are inputs missing, out of range or differently distributed?
-3. **Model performance** – once labels arrive, are precision, recall or forecast error deteriorating?
-4. **Business and fairness outcomes** – are losses, complaints or segment gaps changing?
+1. **Service health**: uptime, latency, error rates, cost.
+2. **Data quality and drift**: are inputs missing, out of range or differently distributed?
+3. **Model performance**: once labels arrive, are precision, recall or forecast error deteriorating?
+4. **Business and fairness outcomes**: are losses, complaints or segment gaps changing?
 
 Three kinds of drift are commonly distinguished:
 
 - **Data (covariate) drift**: input distributions shift. A lender expands to a new region and applicant incomes change.
-- **Concept drift**: the input–outcome relationship changes. After inflation rises, the same income level implies a higher default risk; fraudsters change tactics so old patterns stop indicating fraud.
+- **Concept drift**: the input-outcome relationship changes. After inflation rises, the same income level implies a higher default risk; fraudsters change tactics so old patterns stop indicating fraud.
 - **Prediction drift**: the distribution of model outputs changes, for example a sudden rise in the share of transactions flagged.
 
-Because labels often arrive late (a loan defaults months after approval), teams monitor input and prediction drift as early warnings and confirm with performance metrics when labels become available. Statistical tools include the **population stability index (PSI)**, the Kolmogorov–Smirnov test for continuous features, and the chi-squared test for categorical features.
+Because labels often arrive late (a loan defaults months after approval), teams monitor input and prediction drift as early warnings and confirm with performance metrics when labels become available. Statistical tools include the **population stability index (PSI)**, the Kolmogorov-Smirnov test for continuous features, and the chi-squared test for categorical features.
 
 ## Theories, Frameworks and Models
 
@@ -103,9 +103,9 @@ Practitioners often describe maturity in levels:
 
 | Level | Characteristics |
 |---|---|
-| 0 – Manual | Notebooks, manual hand-over of model files, no monitoring |
-| 1 – Pipeline automation | Automated training pipeline, continuous training, model registry, basic monitoring |
-| 2 – CI/CD for ML | Automated testing and deployment of pipelines themselves, systematic monitoring and governance |
+| 0: Manual | Notebooks, manual hand-over of model files, no monitoring |
+| 1: Pipeline automation | Automated training pipeline, continuous training, model registry, basic monitoring |
+| 2: CI/CD for ML | Automated testing and deployment of pipelines themselves, systematic monitoring and governance |
 
 An organisation should aim for the level justified by the number and criticality of its models, not the highest level by default.
 
@@ -129,7 +129,7 @@ flowchart LR
     C --> H
 ```
 
-The arrow from the feature store directly to deployment emphasises that serving must use the same feature logic as training, preventing training–serving skew.
+The arrow from the feature store directly to deployment emphasises that serving must use the same feature logic as training, preventing training-serving skew.
 
 ## Worked Example
 
@@ -152,7 +152,7 @@ Note that each contribution is positive, because `A − E` and `ln(A/E)` always 
 
 `PSI = 0.0337 + 0.0091 + 0.0112 + 0.0511 = 0.1051`
 
-A rule of thumb used in credit-risk practice treats a PSI below about 0.1 as little change, 0.1–0.25 as moderate change worth investigating, and above 0.25 as a significant shift. These are conventions, not statistical laws. Here the PSI of about 0.105 signals a moderate shift towards lower-income applicants. The team should check whether performance on lower-income applicants was validated, monitor early repayment indicators by band, and consider whether the approval threshold or the model needs recalibration. Drift alone does not prove the model is wrong; it tells the team where to look.
+A rule of thumb used in credit-risk practice treats a PSI below about 0.1 as little change, 0.1-0.25 as moderate change worth investigating, and above 0.25 as a significant shift. These are conventions, not statistical laws. Here the PSI of about 0.105 signals a moderate shift towards lower-income applicants. The team should check whether performance on lower-income applicants was validated, monitor early repayment indicators by band, and consider whether the approval threshold or the model needs recalibration. Drift alone does not prove the model is wrong; it tells the team where to look.
 
 ## Ghanaian Business Application
 
@@ -189,7 +189,7 @@ The case matters for business students because it reframes AI investment. A prop
 ## Critical Thinking Questions
 
 1. For a model whose outcomes take six months to observe, how would you design monitoring to detect problems early?
-2. When might a blue–green deployment be preferable to a canary release, and what risks does it carry?
+2. When might a blue-green deployment be preferable to a canary release, and what risks does it carry?
 3. How can feedback loops arise in a fraud or credit model, and what design choices reduce them?
 4. Who in an organisation should have authority to roll back a model, and how quickly should they be able to act?
 
@@ -211,13 +211,13 @@ The case matters for business students because it reframes AI investment. A prop
 
 - Sculley, D., Holt, G., Golovin, D., Davydov, E., Phillips, T., Ebner, D., Chaudhary, V., Young, M., Crespo, J.-F., & Dennison, D. (2015). Hidden technical debt in machine learning systems. In *Advances in Neural Information Processing Systems 28*.
 - Huyen, C. (2022). *Designing machine learning systems*. O'Reilly Media.
-- Kreuzberger, D., Kühl, N., & Hirschl, S. (2023). Machine learning operations (MLOps): Overview, definition, and architecture. *IEEE Access, 11*, 31866–31879.
-- Mitchell, M., Wu, S., Zaldivar, A., Barnes, P., Vasserman, L., Hutchinson, B., Spitzer, E., Raji, I. D., & Gebru, T. (2019). Model cards for model reporting. In *Proceedings of the Conference on Fairness, Accountability, and Transparency* (pp. 220–229). ACM.
+- Kreuzberger, D., Kühl, N., & Hirschl, S. (2023). Machine learning operations (MLOps): Overview, definition, and architecture. *IEEE Access, 11*, 31866-31879.
+- Mitchell, M., Wu, S., Zaldivar, A., Barnes, P., Vasserman, L., Hutchinson, B., Spitzer, E., Raji, I. D., & Gebru, T. (2019). Model cards for model reporting. In *Proceedings of the Conference on Fairness, Accountability, and Transparency* (pp. 220-229). ACM.
 
 ## Video Resources
 
-- [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) — Google for Developers. Includes material on production ML systems, deployment and monitoring.
-- [MLflow Documentation](https://mlflow.org/docs/latest/index.html) — MLflow project. Official documentation and tutorials for experiment tracking and the model registry.
+- [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course): Google for Developers. Includes material on production ML systems, deployment and monitoring.
+- [MLflow Documentation](https://mlflow.org/docs/latest/index.html): MLflow project. Official documentation and tutorials for experiment tracking and the model registry.
 
 ## Revision Summary
 
@@ -225,7 +225,7 @@ Deployment connects models to decisions through batch, real-time API, streaming 
 
 - Batch for periodic decisions; API for instant decisions; edge for low latency or poor connectivity.
 - Pipeline: ingest, validate, features, train, evaluate, approve, register, deploy, monitor, retrain.
-- Shadow, canary and blue–green reduce release risk.
-- PSI = Σ (A − E) × ln(A/E); about 0.1–0.25 is commonly treated as moderate drift.
+- Shadow, canary and blue-green reduce release risk.
+- PSI = Σ (A − E) × ln(A/E); about 0.1-0.25 is commonly treated as moderate drift.
 - Hidden technical debt means maintenance dominates lifetime cost.
 - Always define a fallback when the model is unavailable.

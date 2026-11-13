@@ -192,15 +192,15 @@ flowchart LR
 
 ## Further Reading
 
-- Shi, W., Cao, J., Zhang, Q., Li, Y., & Xu, L. (2016). Edge computing: Vision and challenges. *IEEE Internet of Things Journal, 3*(5), 637–646.
-- Satyanarayanan, M. (2017). The emergence of edge computing. *Computer, 50*(1), 30–39.
+- Shi, W., Cao, J., Zhang, Q., Li, Y., & Xu, L. (2016). Edge computing: Vision and challenges. *IEEE Internet of Things Journal, 3*(5), 637-646.
+- Satyanarayanan, M. (2017). The emergence of edge computing. *Computer, 50*(1), 30-39.
 - Mell, P., & Grance, T. (2011). *The NIST definition of cloud computing* (NIST Special Publication 800-145). National Institute of Standards and Technology. <https://csrc.nist.gov/pubs/sp/800/145/final>
 
 ## Video Resources
 
-- [Microsoft Learn](https://learn.microsoft.com/) — Microsoft. Learning paths on hybrid cloud management and edge deployments.
-- [IBM Think](https://www.ibm.com/think) — IBM. Explainers on edge computing, hybrid cloud and data sovereignty.
-- [Google Cloud Learn](https://cloud.google.com/learn) — Google Cloud. Introductions to hybrid, multi-cloud and edge concepts.
+- [Microsoft Learn](https://learn.microsoft.com/): Microsoft. Learning paths on hybrid cloud management and edge deployments.
+- [IBM Think](https://www.ibm.com/think): IBM. Explainers on edge computing, hybrid cloud and data sovereignty.
+- [Google Cloud Learn](https://cloud.google.com/learn): Google Cloud. Introductions to hybrid, multi-cloud and edge concepts.
 
 ## Revision Summary
 

@@ -56,14 +56,14 @@ E-business is broader. Chaffey and colleagues describe it as the use of digital 
 
 Laudon and Traver identify several unique features of e-commerce technology. These features explain why online markets behave differently from physical ones:
 
-1. **Ubiquity** – the market is available almost everywhere and at any time, reducing the cost for customers of searching and transacting.
-2. **Global reach** – a seller can, in principle, reach customers across national borders.
-3. **Universal standards** – shared internet standards (TCP/IP, HTTP, HTML) lower the cost of entering the market.
-4. **Richness** – complex messages, video and interactive content can be delivered.
-5. **Interactivity** – two-way communication between firm and customer.
-6. **Information density** – the amount and quality of information available rises, while its cost falls, which makes prices more transparent.
-7. **Personalisation and customisation** – messages and products can be tailored to individuals.
-8. **Social technology** – users create and share content, turning customers into marketers and reviewers.
+1. **Ubiquity**: the market is available almost everywhere and at any time, reducing the cost for customers of searching and transacting.
+2. **Global reach**: a seller can, in principle, reach customers across national borders.
+3. **Universal standards**: shared internet standards (TCP/IP, HTTP, HTML) lower the cost of entering the market.
+4. **Richness**: complex messages, video and interactive content can be delivered.
+5. **Interactivity**: two-way communication between firm and customer.
+6. **Information density**: the amount and quality of information available rises, while its cost falls, which makes prices more transparent.
+7. **Personalisation and customisation**: messages and products can be tailored to individuals.
+8. **Social technology**: users create and share content, turning customers into marketers and reviewers.
 
 Information density deserves emphasis. When prices and product details are easy to compare, sellers lose some of the advantage that information asymmetry gave them. At the same time, firms gain detailed data about customers, enabling *price discrimination* and personalisation. The internet therefore shifts power in both directions.
 
@@ -87,7 +87,7 @@ Vial's (2019) review of the literature defines digital transformation as a proce
 
 ### Westerman, Bonnet and McAfee's view
 
-In *Leading Digital* (2014), Westerman, Bonnet and McAfee argue that successful digital transformation depends on two capabilities: **digital capability** (what the organisation does with technology across customer experience, operations and business models) and **leadership capability** (vision, governance, engagement and IT–business relationships). Organisations strong in both are described as "digital masters". The practical lesson is that buying technology without leadership, governance and staff engagement rarely transforms anything.
+In *Leading Digital* (2014), Westerman, Bonnet and McAfee argue that successful digital transformation depends on two capabilities: **digital capability** (what the organisation does with technology across customer experience, operations and business models) and **leadership capability** (vision, governance, engagement and IT-business relationships). Organisations strong in both are described as "digital masters". The practical lesson is that buying technology without leadership, governance and staff engagement rarely transforms anything.
 
 ### Drivers and barriers
 
@@ -166,7 +166,7 @@ The case illustrates all three levels. Selling books online was *e-commerce*. Ru
 ## Practical Exercises
 
 1. **Classify initiatives.** Choose a Ghanaian organisation you know (a bank, hospital, retailer or university office). List six digital initiatives it has undertaken and classify each as digitisation, digitalisation or digital transformation, and as e-commerce or wider e-business. *Expected output:* a six-row table with classifications and a one-sentence justification for each.
-2. **Feature analysis.** Take an online marketplace operating in Ghana and explain how at least four of the eight unique features of e-commerce technology appear in its design. *Expected output:* a short report (300–400 words) linking each feature to a specific design element and its business effect.
+2. **Feature analysis.** Take an online marketplace operating in Ghana and explain how at least four of the eight unique features of e-commerce technology appear in its design. *Expected output:* a short report (300-400 words) linking each feature to a specific design element and its business effect.
 3. **Barrier map.** For a hypothetical SME in a regional town, identify three drivers and three barriers to e-business adoption and propose one mitigation for each barrier. *Expected output:* a structured list with mitigations that are realistic and low-cost.
 
 ## Key Takeaways
@@ -182,13 +182,13 @@ The case illustrates all three levels. Selling books online was *e-commerce*. Ru
 - Laudon, K. C., & Traver, C. G. *E-commerce: Business, technology, society*. Pearson. (Consult the most recent edition available in your library.)
 - Chaffey, D., Hemphill, T., & Edmundson-Bird, D. (2019). *Digital business and e-commerce management* (7th ed.). Pearson.
 - Westerman, G., Bonnet, D., & McAfee, A. (2014). *Leading digital: Turning technology into business transformation*. Harvard Business Review Press.
-- Vial, G. (2019). Understanding digital transformation: A review and a research agenda. *The Journal of Strategic Information Systems, 28*(2), 118–144. <https://doi.org/10.1016/j.jsis.2019.01.003>
+- Vial, G. (2019). Understanding digital transformation: A review and a research agenda. *The Journal of Strategic Information Systems, 28*(2), 118-144. <https://doi.org/10.1016/j.jsis.2019.01.003>
 - UNCTAD. E-commerce and the digital economy. <https://unctad.org/topic/ecommerce-and-digital-economy>
 
 ## Video Resources
 
-- [UNCTAD E-commerce and Digital Economy](https://unctad.org/topic/ecommerce-and-digital-economy) — UNCTAD. Official topic page with publications and multimedia on e-commerce in developing economies.
-- [MIT OpenCourseWare](https://ocw.mit.edu/) — Massachusetts Institute of Technology. Official open learning portal; search for digital business and information technology strategy materials.
+- [UNCTAD E-commerce and Digital Economy](https://unctad.org/topic/ecommerce-and-digital-economy): UNCTAD. Official topic page with publications and multimedia on e-commerce in developing economies.
+- [MIT OpenCourseWare](https://ocw.mit.edu/): Massachusetts Institute of Technology. Official open learning portal; search for digital business and information technology strategy materials.
 
 ## Revision Summary
 

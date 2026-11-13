@@ -186,9 +186,9 @@ flowchart LR
 
 ## Video Resources
 
-- [SAP Learning](https://learning.sap.com/) — SAP. Free learning journeys including material on data migration and integration for SAP S/4HANA.
-- [Microsoft Learn: Power Automate documentation](https://learn.microsoft.com/power-automate/) — Microsoft. Official guidance on connectors and automated data flows between business applications.
-- [Camunda documentation](https://docs.camunda.io/) — Camunda. Guides to modelling and orchestrating processes that span several systems.
+- [SAP Learning](https://learning.sap.com/): SAP. Free learning journeys including material on data migration and integration for SAP S/4HANA.
+- [Microsoft Learn: Power Automate documentation](https://learn.microsoft.com/power-automate/): Microsoft. Official guidance on connectors and automated data flows between business applications.
+- [Camunda documentation](https://docs.camunda.io/): Camunda. Guides to modelling and orchestrating processes that span several systems.
 
 ## Revision Summary
 

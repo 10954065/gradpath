@@ -105,7 +105,7 @@ export default function AttemptPage() {
 
       {!online ? (
         <Alert tone="warning" className="mb-4">
-          You are offline. Keep answering — your answers are saved on this device — and submit when your connection returns.
+          You are offline. Keep answering. Your answers are saved on this device, so submit when your connection returns.
         </Alert>
       ) : null}
       {submit.isError ? (

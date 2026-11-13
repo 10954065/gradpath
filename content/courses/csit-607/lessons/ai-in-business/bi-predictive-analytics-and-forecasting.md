@@ -69,7 +69,7 @@ Forecasting methods range from simple to complex:
 - **Moving average**: the average of the last n periods. Smooths noise but lags behind trends.
 - **Weighted moving average**: recent periods receive larger weights.
 - **Simple exponential smoothing (SES)**: `F(t+1) = α × A(t) + (1 − α) × F(t)`, where A is actual and F is forecast, and α (between 0 and 1) controls responsiveness. High α reacts quickly to change but is noisier; low α is smoother but slower.
-- **Holt's method** adds a trend component, and **Holt–Winters** adds seasonality.
+- **Holt's method** adds a trend component, and **Holt-Winters** adds seasonality.
 - **Regression and machine learning models** incorporate drivers such as price, promotions, holidays, weather and local events, and can learn patterns across many products and stores simultaneously. Gradient-boosted trees and neural networks are widely used for large retail forecasting problems.
 
 The choice depends on data length, the presence of trend and seasonality, the number of items to forecast and the availability of explanatory variables. A widely accepted principle in forecasting practice is to compare any sophisticated model against simple benchmarks on out-of-sample data before adopting it.
@@ -99,7 +99,7 @@ Initialise the forecast for week 2 as the week-1 actual, F2 = 120.
 - F6 = 0.3 × 135 + 0.7 × 128.52 = 40.5 + 89.96 = **130.46**
 - F7 = 0.3 × 150 + 0.7 × 130.46 = 45 + 91.32 = **136.32**
 
-### 3. Comparing errors over weeks 4–6
+### 3. Comparing errors over weeks 4-6
 
 | Week | Actual | MA forecast | MA absolute error | SES forecast | SES absolute error |
 |---|---|---|---|---|---|
@@ -124,7 +124,7 @@ Suppose the branch adopts the moving-average forecast of about 142 bags for week
 |---|---|
 | Short history, stable demand | Naive, moving average, simple exponential smoothing |
 | Clear trend | Holt's method or regression on time |
-| Strong seasonality (festive periods, school terms) | Holt–Winters or seasonal models |
+| Strong seasonality (festive periods, school terms) | Holt-Winters or seasonal models |
 | Many products and stores, rich drivers (price, promotions, holidays) | Machine learning models across series, compared with statistical benchmarks |
 | New products with no history | Analogous products, judgement, market research |
 
@@ -190,7 +190,7 @@ flowchart LR
 
 ## Practical Exercises
 
-1. **Forecast by hand.** Using the rice data, compute SES forecasts with α = 0.6 for weeks 3–7 and the MAE over weeks 4–6. *Expected output*: a table and a comparison with α = 0.3 and the moving average, with a recommendation.
+1. **Forecast by hand.** Using the rice data, compute SES forecasts with α = 0.6 for weeks 3-7 and the MAE over weeks 4-6. *Expected output*: a table and a comparison with α = 0.3 and the moving average, with a recommendation.
 2. **Dashboard design.** Sketch a one-page BI dashboard for a Ghanaian supermarket's branch manager showing five KPIs (for example, sales versus target, stock-outs, waste of fresh produce, average basket value, forecast error). *Expected output*: a labelled sketch with a definition and data source for each KPI.
 3. **Hands-on forecasting.** Using a free notebook and any public retail sales dataset available through Kaggle Learn or Kaggle datasets, compare a naive forecast, a moving average and a machine learning model on the last eight weeks held out. *Expected output*: an error table (MAE and RMSE) and a 150-word conclusion.
 
@@ -210,9 +210,9 @@ flowchart LR
 
 ## Video Resources
 
-- [Forecasting: Principles and Practice](https://otexts.com/fpp3/) — OTexts. Free online forecasting textbook covering exponential smoothing and evaluation.
-- [Google Cloud Training](https://cloud.google.com/learn/training) — Google Cloud. Official training catalogue including data analytics and BI learning paths.
-- [Kaggle Learn](https://www.kaggle.com/learn) — Kaggle. Free micro-courses including time series and data visualisation.
+- [Forecasting: Principles and Practice](https://otexts.com/fpp3/): OTexts. Free online forecasting textbook covering exponential smoothing and evaluation.
+- [Google Cloud Training](https://cloud.google.com/learn/training): Google Cloud. Official training catalogue including data analytics and BI learning paths.
+- [Kaggle Learn](https://www.kaggle.com/learn): Kaggle. Free micro-courses including time series and data visualisation.
 
 ## Revision Summary
 

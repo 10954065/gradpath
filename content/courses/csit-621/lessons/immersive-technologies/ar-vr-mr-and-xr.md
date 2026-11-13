@@ -10,11 +10,11 @@ source: supplementary
 
 Immersive technologies change how people perceive and interact with information. Instead of reading a manual, a technician can see repair instructions overlaid on the machine in front of them. Instead of travelling to a training centre, a new mine worker can rehearse an emergency evacuation in a safe virtual environment. Instead of imagining whether a sofa will fit, a shopper can place a true-to-scale digital model in their living room using a phone. These experiences are grouped under the labels augmented reality (AR), virtual reality (VR), mixed reality (MR) and extended reality (XR), terms that vendors and the media often use loosely and interchangeably.
 
-This lesson gives these terms precise meanings using the reality–virtuality continuum proposed by Milgram and Kishino (1994) and Azuma's (1997) widely cited definition of AR. It then examines the main business applications, the costs and limitations that frequently derail projects, and a structured way to evaluate an investment. Immersive technology is a good test of the analytical skills developed in Module 1: it has passed through several cycles of hype, and its value depends heavily on the specific task and context.
+This lesson gives these terms precise meanings using the reality-virtuality continuum proposed by Milgram and Kishino (1994) and Azuma's (1997) widely cited definition of AR. It then examines the main business applications, the costs and limitations that frequently derail projects, and a structured way to evaluate an investment. Immersive technology is a good test of the analytical skills developed in Module 1: it has passed through several cycles of hype, and its value depends heavily on the specific task and context.
 
 ## Learning Objectives
 
-- Explain Milgram and Kishino's reality–virtuality continuum and use it to define AR, augmented virtuality, VR, MR and XR.
+- Explain Milgram and Kishino's reality-virtuality continuum and use it to define AR, augmented virtuality, VR, MR and XR.
 - Describe Azuma's three characteristics of augmented reality and the concepts of immersion and presence in VR.
 - Analyse business applications of immersive technologies in training, remote assistance, design, retail and healthcare.
 - Apply a cost-benefit analysis to an immersive training proposal.
@@ -27,7 +27,7 @@ This lesson gives these terms precise meanings using the reality–virtuality co
 
 ## Key Terminology
 
-- **Reality–virtuality continuum**: A scale proposed by Milgram and Kishino (1994) running from a completely real environment to a completely virtual one, with mixed environments in between.
+- **Reality-virtuality continuum**: A scale proposed by Milgram and Kishino (1994) running from a completely real environment to a completely virtual one, with mixed environments in between.
 - **Augmented reality (AR)**: Technology that overlays computer-generated content onto a view of the real world, combining real and virtual content, interactive in real time and registered in three dimensions (Azuma, 1997).
 - **Virtual reality (VR)**: A fully computer-generated environment that replaces the user's view of the physical world, typically experienced through a head-mounted display.
 - **Mixed reality (MR)**: In Milgram and Kishino's sense, any environment between the fully real and fully virtual extremes; in current industry usage, often AR in which virtual objects are anchored to and interact with the physical environment.
@@ -38,7 +38,7 @@ This lesson gives these terms precise meanings using the reality–virtuality co
 
 ## Detailed Explanation
 
-### The reality–virtuality continuum
+### The reality-virtuality continuum
 
 Milgram and Kishino (1994) proposed that, rather than treating real and virtual as opposites, we should think of a continuum.
 
@@ -176,7 +176,7 @@ flowchart LR
 
 ## Common Misconceptions
 
-- **"AR, MR and VR are interchangeable terms."** They occupy different positions on the reality–virtuality continuum and suit different tasks.
+- **"AR, MR and VR are interchangeable terms."** They occupy different positions on the reality-virtuality continuum and suit different tasks.
 - **"Any image with digital additions is AR."** Azuma's definition requires real-time interaction and 3D registration.
 - **"Hardware is the main cost of immersive projects."** Content creation, integration and device management frequently cost more than headsets.
 - **"Immersive training is always better than traditional training."** Effectiveness depends on the task and must be measured; some skills still require real practice.
@@ -184,7 +184,7 @@ flowchart LR
 
 ## Common Examination Mistakes
 
-- Defining AR, VR and MR without reference to the reality–virtuality continuum or Azuma's characteristics.
+- Defining AR, VR and MR without reference to the reality-virtuality continuum or Azuma's characteristics.
 - Listing applications without explaining the value mechanism (safety, travel reduction, spatial understanding, reduced uncertainty).
 - Presenting cost-benefit figures without testing assumptions about training effectiveness or scale.
 - Ignoring human factors such as cybersickness and accessibility.
@@ -214,20 +214,20 @@ flowchart LR
 
 ## Further Reading
 
-- Milgram, P., & Kishino, F. (1994). A taxonomy of mixed reality visual displays. *IEICE Transactions on Information and Systems, E77-D*(12), 1321–1329.
-- Azuma, R. T. (1997). A survey of augmented reality. *Presence: Teleoperators and Virtual Environments, 6*(4), 355–385.
-- Porter, M. E., & Heppelmann, J. E. (2017). Why every organization needs an augmented reality strategy. *Harvard Business Review, 95*(6), 46–57.
-- Slater, M., & Wilbur, S. (1997). A framework for immersive virtual environments (FIVE): Speculations on the role of presence in virtual environments. *Presence: Teleoperators and Virtual Environments, 6*(6), 603–616.
+- Milgram, P., & Kishino, F. (1994). A taxonomy of mixed reality visual displays. *IEICE Transactions on Information and Systems, E77-D*(12), 1321-1329.
+- Azuma, R. T. (1997). A survey of augmented reality. *Presence: Teleoperators and Virtual Environments, 6*(4), 355-385.
+- Porter, M. E., & Heppelmann, J. E. (2017). Why every organization needs an augmented reality strategy. *Harvard Business Review, 95*(6), 46-57.
+- Slater, M., & Wilbur, S. (1997). A framework for immersive virtual environments (FIVE): Speculations on the role of presence in virtual environments. *Presence: Teleoperators and Virtual Environments, 6*(6), 603-616.
 
 ## Video Resources
 
-- [Microsoft Learn](https://learn.microsoft.com/) — Microsoft. Learning paths and documentation on mixed reality concepts and development.
-- [Google Cloud Learn](https://cloud.google.com/learn) — Google Cloud. Explainers on emerging technologies, including the cloud services that support immersive applications.
-- [IBM Think](https://www.ibm.com/think) — IBM. Articles and videos on augmented and virtual reality in business.
+- [Microsoft Learn](https://learn.microsoft.com/): Microsoft. Learning paths and documentation on mixed reality concepts and development.
+- [Google Cloud Learn](https://cloud.google.com/learn): Google Cloud. Explainers on emerging technologies, including the cloud services that support immersive applications.
+- [IBM Think](https://www.ibm.com/think): IBM. Articles and videos on augmented and virtual reality in business.
 
 ## Revision Summary
 
-Milgram and Kishino's (1994) reality–virtuality continuum runs from the real environment through augmented reality and augmented virtuality to fully virtual environments, with mixed reality originally meaning everything between the extremes; XR is an umbrella term. Azuma (1997) defined AR by three characteristics: combining real and virtual, real-time interactivity and 3D registration. VR replaces the physical environment and depends on immersion and presence. Business uses include training, remote assistance, design review, retail visualisation and healthcare, but content cost, integration, device management, human factors and privacy often limit value, so business cases must be tested for effectiveness and scale.
+Milgram and Kishino's (1994) reality-virtuality continuum runs from the real environment through augmented reality and augmented virtuality to fully virtual environments, with mixed reality originally meaning everything between the extremes; XR is an umbrella term. Azuma (1997) defined AR by three characteristics: combining real and virtual, real-time interactivity and 3D registration. VR replaces the physical environment and depends on immersion and presence. Business uses include training, remote assistance, design review, retail visualisation and healthcare, but content cost, integration, device management, human factors and privacy often limit value, so business cases must be tested for effectiveness and scale.
 
 - Continuum: real, AR, AV, virtual.
 - Azuma: real plus virtual, real-time, registered in 3D.

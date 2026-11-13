@@ -47,13 +47,13 @@ AI challenges traditional privacy practice in several ways. Models are trained o
 
 Core privacy-by-design practices for AI include:
 
-- **Data minimisation** – use only the features needed; question whether, for example, a churn model really needs customers' exact locations or full names.
-- **Purpose specification and compatibility** – document why data is processed and check that model training is compatible with the purpose for which data was collected.
-- **Retention limits** – delete raw data and prompts when no longer needed.
-- **De-identification** – pseudonymise identifiers for modelling, recognising that pseudonymised data is still personal data and that truly anonymised data is hard to achieve when many attributes are combined.
-- **Privacy-enhancing technologies** – *differential privacy* adds carefully calibrated noise so that outputs reveal little about any individual; *federated learning* trains models across devices or organisations without centralising raw data; synthetic data can support testing.
-- **Transparency** – tell people when AI is used and how their data contributes.
-- **Generative AI controls** – prevent staff from pasting confidential or personal data into external AI tools without approved agreements, and configure retention and training settings for enterprise tools.
+- **Data minimisation**: use only the features needed; question whether, for example, a churn model really needs customers' exact locations or full names.
+- **Purpose specification and compatibility**: document why data is processed and check that model training is compatible with the purpose for which data was collected.
+- **Retention limits**: delete raw data and prompts when no longer needed.
+- **De-identification**: pseudonymise identifiers for modelling, recognising that pseudonymised data is still personal data and that truly anonymised data is hard to achieve when many attributes are combined.
+- **Privacy-enhancing technologies**: *differential privacy* adds carefully calibrated noise so that outputs reveal little about any individual; *federated learning* trains models across devices or organisations without centralising raw data; synthetic data can support testing.
+- **Transparency**: tell people when AI is used and how their data contributes.
+- **Generative AI controls**: prevent staff from pasting confidential or personal data into external AI tools without approved agreements, and configure retention and training settings for enterprise tools.
 
 ### Ghana's Data Protection Act, 2012 (Act 843)
 
@@ -105,10 +105,10 @@ The US National Institute of Standards and Technology published the AI RMF 1.0 i
 
 The EU's Artificial Intelligence Act (Regulation (EU) 2024/1689) entered into force in August 2024 with obligations applying in phases. It adopts a risk-based approach:
 
-- **Unacceptable risk** – prohibited practices, such as social scoring by public authorities and certain manipulative or exploitative techniques.
-- **High risk** – permitted subject to strict requirements (risk management, data governance, documentation, human oversight, accuracy and robustness, conformity assessment). Examples include AI used for creditworthiness assessment of individuals, recruitment, access to education and certain safety components of products.
-- **Limited risk (transparency obligations)** – for example, people must be told when they are interacting with a chatbot, and certain AI-generated content must be labelled.
-- **Minimal risk** – most other applications, such as spam filters, with no specific new obligations.
+- **Unacceptable risk**: prohibited practices, such as social scoring by public authorities and certain manipulative or exploitative techniques.
+- **High risk**: permitted subject to strict requirements (risk management, data governance, documentation, human oversight, accuracy and robustness, conformity assessment). Examples include AI used for creditworthiness assessment of individuals, recruitment, access to education and certain safety components of products.
+- **Limited risk (transparency obligations)**: for example, people must be told when they are interacting with a chatbot, and certain AI-generated content must be labelled.
+- **Minimal risk**: most other applications, such as spam filters, with no specific new obligations.
 
 The Act also sets obligations for general-purpose AI model providers. It matters to Ghanaian firms serving the EU market and is a useful reference model elsewhere.
 
@@ -120,7 +120,7 @@ Adopted by UNESCO's member states in November 2021, the Recommendation is a glob
 
 **Illustrative scenario.** A fictional Ghanaian insurer plans to deploy an AI model that recommends motor premium levels and a chatbot that answers policy questions. Using the NIST AI RMF, the governance team builds a short risk register.
 
-| Risk | NIST function where identified | Likelihood (1–5) | Impact (1–5) | Score | Control (Manage) |
+| Risk | NIST function where identified | Likelihood (1-5) | Impact (1-5) | Score | Control (Manage) |
 |---|---|---|---|---|---|
 | Premium model uses location features that act as proxies for ethnicity | Map | 3 | 4 | 12 | Fairness testing by region (Measure), feature review, human review of outliers |
 | Chatbot gives wrong cover information | Map | 4 | 3 | 12 | RAG on approved policy text, test suite, escalation, disclaimer that does not contradict answers |
@@ -210,13 +210,13 @@ flowchart TD
 - Republic of Ghana. (2012). *Data Protection Act, 2012 (Act 843)*.
 - Regulation (EU) 2024/1689 of the European Parliament and of the Council laying down harmonised rules on artificial intelligence (Artificial Intelligence Act). (2024). *Official Journal of the European Union*.
 - Greshake, K., Abdelnabi, S., Mishra, S., Endres, C., Holz, T., & Fritz, M. (2023). Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection. In *Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security*. ACM.
-- Tramèr, F., Zhang, F., Juels, A., Reiter, M. K., & Ristenpart, T. (2016). Stealing machine learning models via prediction APIs. In *25th USENIX Security Symposium* (pp. 601–618).
+- Tramèr, F., Zhang, F., Juels, A., Reiter, M. K., & Ristenpart, T. (2016). Stealing machine learning models via prediction APIs. In *25th USENIX Security Symposium* (pp. 601-618).
 
 ## Video Resources
 
-- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) — National Institute of Standards and Technology. Official page with the framework, playbook and supporting resources.
-- [UNESCO Ethics of Artificial Intelligence](https://www.unesco.org/en/artificial-intelligence/recommendation-ethics) — UNESCO. Official page for the Recommendation, with explanatory material and implementation tools.
-- [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — OWASP Foundation. Official project page describing major LLM security risks and mitigations.
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework): National Institute of Standards and Technology. Official page with the framework, playbook and supporting resources.
+- [UNESCO Ethics of Artificial Intelligence](https://www.unesco.org/en/artificial-intelligence/recommendation-ethics): UNESCO. Official page for the Recommendation, with explanatory material and implementation tools.
+- [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/): OWASP Foundation. Official project page describing major LLM security risks and mitigations.
 
 ## Revision Summary
 

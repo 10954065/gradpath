@@ -108,17 +108,17 @@ flowchart TD
 
 **Illustrative scenario.** Kwame is an MSc student interested in AI adoption among SMEs in Greater Accra. His draft question is: *"How does AI adoption affect SME operational efficiency?"* Work through the choice of approach.
 
-**Step 1 – Clarify what the question asks.** "How does" could mean "to what extent" (a measurable relationship) or "through what processes" (an explanation of mechanisms). Kwame decides he wants both: whether adoption is associated with efficiency gains, and how owners experience those gains.
+**Step 1: Clarify what the question asks.** "How does" could mean "to what extent" (a measurable relationship) or "through what processes" (an explanation of mechanisms). Kwame decides he wants both: whether adoption is associated with efficiency gains, and how owners experience those gains.
 
-**Step 2 – Check existing knowledge.** His literature review shows that validated scales exist for AI use and perceived efficiency, but few studies examine Ghanaian SMEs, and none explain *how* efficiency gains arise in informal or family-run firms.
+**Step 2: Check existing knowledge.** His literature review shows that validated scales exist for AI use and perceived efficiency, but few studies examine Ghanaian SMEs, and none explain *how* efficiency gains arise in informal or family-run firms.
 
-**Step 3 – Match approach to need.** A purely quantitative survey would estimate associations but not explain mechanisms. A purely qualitative study would explain mechanisms in a few firms but not show how widespread the pattern is. A mixed-methods design is justified.
+**Step 3: Match approach to need.** A purely quantitative survey would estimate associations but not explain mechanisms. A purely qualitative study would explain mechanisms in a few firms but not show how widespread the pattern is. A mixed-methods design is justified.
 
-**Step 4 – Choose the design.** Because validated measures exist, he chooses an **explanatory sequential design** (`QUAN → qual`): a survey of SMEs followed by interviews with selected owners.
+**Step 4: Choose the design.** Because validated measures exist, he chooses an **explanatory sequential design** (`QUAN → qual`): a survey of SMEs followed by interviews with selected owners.
 
-**Step 5 – Specify integration.** Survey results will be used to select interviewees, for example firms with high AI use but low reported efficiency (surprising cases) and firms with high use and high efficiency (typical cases). Interview themes will be reported alongside survey results in a joint display.
+**Step 5: Specify integration.** Survey results will be used to select interviewees, for example firms with high AI use but low reported efficiency (surprising cases) and firms with high use and high efficiency (typical cases). Interview themes will be reported alongside survey results in a joint display.
 
-**Step 6 – Write the justification.** A concise methodology statement might read: *"A pragmatist, explanatory sequential mixed-methods design was adopted because the first objective requires estimating the relationship between AI use and efficiency across SMEs, while the second requires understanding the mechanisms behind that relationship, which existing measures do not capture."*
+**Step 6: Write the justification.** A concise methodology statement might read: *"A pragmatist, explanatory sequential mixed-methods design was adopted because the first objective requires estimating the relationship between AI use and efficiency across SMEs, while the second requires understanding the mechanisms behind that relationship, which existing measures do not capture."*
 
 The expected output is a design statement that names the approach, the specific design, the reason for its sequence and the point of integration.
 
@@ -189,8 +189,8 @@ Later scholars have criticised aspects of the original experiments and debated t
 
 ## Video Resources
 
-- [SAGE Research Methods](https://methods.sagepub.com/) — SAGE Publishing. Official research methods platform (access may depend on institutional subscription) with explanatory material on quantitative, qualitative and mixed-methods design.
-- [MIT OpenCourseWare](https://ocw.mit.edu/) — Massachusetts Institute of Technology. Official open learning portal; search for research design and qualitative methods course materials.
+- [SAGE Research Methods](https://methods.sagepub.com/): SAGE Publishing. Official research methods platform (access may depend on institutional subscription) with explanatory material on quantitative, qualitative and mixed-methods design.
+- [MIT OpenCourseWare](https://ocw.mit.edu/): Massachusetts Institute of Technology. Official open learning portal; search for research design and qualitative methods course materials.
 
 ## Revision Summary
 

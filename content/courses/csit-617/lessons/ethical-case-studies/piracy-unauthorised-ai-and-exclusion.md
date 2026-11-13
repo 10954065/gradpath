@@ -1,6 +1,6 @@
 ---
 title: "Case Studies: Software Piracy, Unauthorised AI Use and Digital Exclusion"
-summary: Analyse three contemporary dilemmas — software piracy, unauthorised staff use of generative AI and digital exclusion — using stakeholder analysis, two or more ethical theories and the ACM Code, and construct defensible recommendations.
+summary: Analyse three contemporary dilemmas (software piracy, unauthorised staff use of generative AI and digital exclusion) using stakeholder analysis, two or more ethical theories and the ACM Code, and construct defensible recommendations.
 estimatedMinutes: 55
 difficulty: advanced
 source: supplementary
@@ -8,7 +8,7 @@ source: supplementary
 
 ## Introduction
 
-This final case-study lesson examines three dilemmas that Ghanaian organisations face regularly but often discuss only informally. **Software piracy** — using unlicensed copies of commercial software — is sometimes defended as a practical necessity where licences are expensive. **Unauthorised AI use** — staff pasting confidential information into public generative-AI tools without approval — is a new and fast-growing risk. **Digital exclusion** — designing services that some people cannot use — can occur without anyone intending harm, simply because designers assume that every user has a smartphone, data, literacy in English and a reliable connection.
+This final case-study lesson examines three dilemmas that Ghanaian organisations face regularly but often discuss only informally. **Software piracy**: using unlicensed copies of commercial software: is sometimes defended as a practical necessity where licences are expensive. **Unauthorised AI use**: staff pasting confidential information into public generative-AI tools without approval: is a new and fast-growing risk. **Digital exclusion**: designing services that some people cannot use, can occur without anyone intending harm, simply because designers assume that every user has a smartphone, data, literacy in English and a reliable connection.
 
 Each case uses the seven-step method: facts, stakeholders, ethical issues, analysis through at least two ethical theories and the ACM Code, options, a recommendation and counter-arguments. Two cases are Ghanaian illustrative scenarios; the unauthorised-AI case also draws on widely reported international events. Legal references are general and educational, not legal advice.
 
@@ -61,7 +61,7 @@ Each case uses the seven-step method: facts, stakeholders, ethical issues, analy
 
 ### Analysis
 
-**Utilitarian analysis.** Piracy appears to produce benefits (access at no cost) with diffuse costs (lost vendor revenue). But a fuller account includes malware risks to students' data, potential legal penalties and reputational damage, and the long-term effect of normalising rule-breaking. Crucially, alternatives exist — open-source office and design tools, education licensing schemes and free web-based tools — that provide most of the benefit without the harms, so piracy is not the welfare-maximising option.
+**Utilitarian analysis.** Piracy appears to produce benefits (access at no cost) with diffuse costs (lost vendor revenue). But a fuller account includes malware risks to students' data, potential legal penalties and reputational damage, and the long-term effect of normalising rule-breaking. Crucially, alternatives exist (open-source office and design tools, education licensing schemes and free web-based tools) that provide most of the benefit without the harms, so piracy is not the welfare-maximising option.
 
 **Kantian analysis.** Using software in breach of the only conditions on which its creators offered it treats them merely as means. The maxim "use others' work without permission whenever paying is inconvenient" cannot be universalised without undermining the practice of software creation the school depends on.
 
@@ -84,7 +84,7 @@ Option 3. It ends the infringement and the security risk while preserving studen
 
 - *"Licences are unaffordable, so piracy is the only way to give students access."* Affordable or free lawful alternatives exist, so the dilemma is a false one.
 - *"Vendors are large multinationals that will not miss the revenue."* The wrongness of using work without permission does not depend on the owner's wealth, and Ghanaian software developers depend on the same respect for licences.
-- *"Everyone does it."* Widespread practice is not ethical justification — an instance of the bandwagon fallacy.
+- *"Everyone does it."* Widespread practice is not ethical justification: an instance of the bandwagon fallacy.
 
 ## Case Study 2: Unauthorised AI Use
 
@@ -92,7 +92,7 @@ Option 3. It ends the infringement and the security risk while preserving studen
 
 In 2023, media outlets widely reported that Samsung restricted employees' use of generative-AI tools after staff were reported to have entered confidential information, including source code, into ChatGPT. The episode became a frequently cited example of the risks of "shadow AI".
 
-*Illustrative scenario.* At "Tamale Commercial Bank", a credit analyst pastes customer loan files — names, Ghana Card numbers, income details — into a free public chatbot to generate summaries for a credit committee. A developer pastes proprietary code into another tool to fix a bug. A junior officer uses AI to draft a regulatory report, which includes an invented statistic. None of these uses has been approved, and the bank has no AI policy.
+*Illustrative scenario.* At "Tamale Commercial Bank", a credit analyst pastes customer loan files (names, Ghana Card numbers, income details) into a free public chatbot to generate summaries for a credit committee. A developer pastes proprietary code into another tool to fix a bug. A junior officer uses AI to draft a regulatory report, which includes an invented statistic. None of these uses has been approved, and the bank has no AI policy.
 
 ### Stakeholders
 
@@ -107,12 +107,12 @@ In 2023, media outlets widely reported that Samsung restricted employees' use of
 - **Confidentiality and data protection**: customer data were transferred outside the bank's control without a lawful basis or safeguards, raising issues under Ghana's Data Protection Act, 2012 (Act 843).
 - **Intellectual property and trade secrets**: proprietary code may lose protection or be exposed.
 - **Accuracy and honesty**: AI-generated content containing a fabricated statistic was submitted to a regulator.
-- **Accountability**: who is responsible — the employees, their managers, or leadership that provided no policy or approved tools?
+- **Accountability**: who is responsible, the employees, their managers, or leadership that provided no policy or approved tools?
 - **Fairness to employees**: staff used AI to cope with workload in the absence of guidance.
 
 ### Analysis
 
-**Utilitarian analysis.** AI tools can save significant time. But the expected harms from unmanaged use — data protection breaches affecting many customers, regulatory sanctions, loss of trade secrets and decisions based on fabricated information — are large. The greatest overall benefit comes from enabling AI under controls, not from prohibition or from uncontrolled use.
+**Utilitarian analysis.** AI tools can save significant time. But the expected harms from unmanaged use: data protection breaches affecting many customers, regulatory sanctions, loss of trade secrets and decisions based on fabricated information, are large. The greatest overall benefit comes from enabling AI under controls, not from prohibition or from uncontrolled use.
 
 **Kantian analysis.** Customers entrusted their data to the bank for a specific purpose; disclosing them to an external tool without their knowledge disregards their autonomy. Submitting unverified, invented figures to a regulator is deception, regardless of whether a tool produced them.
 
@@ -129,7 +129,7 @@ In 2023, media outlets widely reported that Samsung restricted employees' use of
 
 ### Recommendation
 
-Option 3. The bank should first treat the customer-data disclosure as a potential data incident — assessing what was shared and the provider's data handling, and taking advice on notification obligations — and correct the report to the regulator. It should then publish an AI policy: which tools are approved, which data must never be entered into external tools, requirements to verify outputs and disclose AI assistance, and named accountability. Employee responses should be proportionate, recognising that the lack of policy was a leadership failure; training is more effective than scapegoating.
+Option 3. The bank should first treat the customer-data disclosure as a potential data incident: assessing what was shared and the provider's data handling, and taking advice on notification obligations, and correct the report to the regulator. It should then publish an AI policy: which tools are approved, which data must never be entered into external tools, requirements to verify outputs and disclose AI assistance, and named accountability. Employee responses should be proportionate, recognising that the lack of policy was a leadership failure; training is more effective than scapegoating.
 
 ### Counter-arguments
 
@@ -164,9 +164,9 @@ Option 3. The bank should first treat the customer-data disclosure as a potentia
 
 **Rawlsian justice.** The difference principle asks whether a policy benefits the least advantaged. An app-only system that works well for the digitally connected but penalises older, disabled and low-literacy traders fails this test unless alternatives are provided.
 
-**Capability approach.** Associated with Amartya Sen, it asks whether people have real freedom to do what they value. Formal access — "the app is available to everyone" — is not real access if people lack devices, skills or accessible design.
+**Capability approach.** Associated with Amartya Sen, it asks whether people have real freedom to do what they value. Formal access, "the app is available to everyone", is not real access if people lack devices, skills or accessible design.
 
-**ACM Code.** Principles **1.4** (be fair and take action not to discriminate — the guidance refers to accessibility and inclusion), **1.1** (contribute to human well-being, acknowledging all people as stakeholders) and **3.7** (special care for systems integrated into the infrastructure of society) apply.
+**ACM Code.** Principles **1.4** (be fair and take action not to discriminate: the guidance refers to accessibility and inclusion), **1.1** (contribute to human well-being, acknowledging all people as stakeholders) and **3.7** (special care for systems integrated into the infrastructure of society) apply.
 
 ### Options
 
@@ -207,10 +207,10 @@ flowchart LR
 
 ## Common Misconceptions
 
-- "Piracy is victimless." — It infringes creators' rights, exposes users to malware and undermines the software ecosystem, including local developers.
-- "If the AI tool is free and public, using it at work is harmless." — Entering confidential or personal data can breach confidentiality and data protection obligations.
-- "Making a service digital makes it accessible to everyone." — Cost, skills, disability, language and connectivity can all exclude people.
-- "Banning AI solves the risk." — Bans often drive use underground; approved tools and clear rules are more effective.
+- "Piracy is victimless." It infringes creators' rights, exposes users to malware and undermines the software ecosystem, including local developers.
+- "If the AI tool is free and public, using it at work is harmless." Entering confidential or personal data can breach confidentiality and data protection obligations.
+- "Making a service digital makes it accessible to everyone." Cost, skills, disability, language and connectivity can all exclude people.
+- "Banning AI solves the risk." Bans often drive use underground; approved tools and clear rules are more effective.
 
 ## Common Examination Mistakes
 
@@ -251,8 +251,8 @@ flowchart LR
 
 ## Video Resources
 
-- [W3C Web Accessibility Initiative](https://www.w3.org/WAI/) — World Wide Web Consortium. Official resources on web accessibility, including introductions to accessibility principles and guidelines.
-- [ACM Code of Ethics – Case Studies](https://www.acm.org/code-of-ethics/case-studies) — Association for Computing Machinery. Official case studies applying the Code to ethical dilemmas in computing.
+- [W3C Web Accessibility Initiative](https://www.w3.org/WAI/): World Wide Web Consortium. Official resources on web accessibility, including introductions to accessibility principles and guidelines.
+- [ACM Code of Ethics: Case Studies](https://www.acm.org/code-of-ethics/case-studies): Association for Computing Machinery. Official case studies applying the Code to ethical dilemmas in computing.
 
 ## Revision Summary
 

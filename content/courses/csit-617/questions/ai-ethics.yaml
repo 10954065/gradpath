@@ -33,7 +33,7 @@ questions:
         right: Feedback-loop bias
       - left: A decision-support score is used to reject applicants automatically
         right: Deployment bias
-    explanation: Locating each bias in the life cycle helps choose an appropriate mitigation — better sampling, better targets, re-labelling, monitoring or changes to how the tool is used.
+    explanation: Locating each bias in the life cycle helps choose an appropriate mitigation, better sampling, better targets, re-labelling, monitoring or changes to how the tool is used.
   - id: ai03
     lesson: ai-ethics-bias-and-discrimination
     type: true_false
@@ -50,7 +50,7 @@ questions:
     difficulty: medium
     objective: Identify indirect discrimination in a Ghanaian credit model
     scenario: |
-      Illustrative scenario. A Ghanaian digital lender's model gives heavy weight to "months of continuous formal salary payments". The criterion never mentions gender, region or ethnicity, but applicants working in the informal sector — including many market traders and farmers — receive much lower scores even when they have strong mobile-money repayment histories.
+      Illustrative scenario. A Ghanaian digital lender's model gives heavy weight to "months of continuous formal salary payments". The criterion never mentions gender, region or ethnicity, but applicants working in the informal sector, including many market traders and farmers, receive much lower scores even when they have strong mobile-money repayment histories.
     prompt: Which concept best describes this problem?
     options:
       - Direct discrimination

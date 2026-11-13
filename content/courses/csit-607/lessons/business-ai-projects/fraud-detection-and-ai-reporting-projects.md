@@ -98,13 +98,13 @@ Fraudsters adapt (concept drift); labels are delayed and incomplete; insiders ma
 
 **Illustrative scenario.** A fictional Ghanaian fintech offers wallet-to-wallet transfers and merchant payments and has seen a rise in social-engineering fraud following SIM swaps.
 
-1. **Weeks 1–2 – Scope and costs.** Agree with the risk team on fraud definitions, cost assumptions and analyst capacity; inventory existing rules.
-2. **Weeks 2–4 – Data.** Extract twelve months of transactions and confirmed fraud cases; build behavioural features and SIM-swap and device-change indicators; split by time.
-3. **Week 5 – Baseline.** Measure current rules' precision, recall and alert rate on the test period.
-4. **Weeks 6–7 – Models.** Train gradient boosting with class weights and an isolation forest in Google Colab with scikit-learn; compare PR-AUC and cost at capacity-feasible thresholds.
-5. **Week 8 – Fairness and explanation review.** Check false positive rates by region and customer type; design reason codes and appeal steps.
-6. **Weeks 9–12 – Shadow deployment.** Score live transactions without acting; compare with analyst outcomes.
-7. **Weeks 13–16 – Canary and scale.** Act on a small share of traffic with challenge flows; monitor and scale; set retraining cadence.
+1. **Weeks 1-2: Scope and costs.** Agree with the risk team on fraud definitions, cost assumptions and analyst capacity; inventory existing rules.
+2. **Weeks 2-4: Data.** Extract twelve months of transactions and confirmed fraud cases; build behavioural features and SIM-swap and device-change indicators; split by time.
+3. **Week 5: Baseline.** Measure current rules' precision, recall and alert rate on the test period.
+4. **Weeks 6-7: Models.** Train gradient boosting with class weights and an isolation forest in Google Colab with scikit-learn; compare PR-AUC and cost at capacity-feasible thresholds.
+5. **Week 8: Fairness and explanation review.** Check false positive rates by region and customer type; design reason codes and appeal steps.
+6. **Weeks 9-12: Shadow deployment.** Score live transactions without acting; compare with analyst outcomes.
+7. **Weeks 13-16: Canary and scale.** Act on a small share of traffic with challenge flows; monitor and scale; set retraining cadence.
 
 ## Project 2: AI-Powered Business Reporting
 
@@ -156,13 +156,13 @@ A monthly batch pipeline produces drafts; analysts review and approve before dis
 
 **Illustrative scenario.** A fictional building-materials distributor with depots in Accra, Kumasi and Tamale produces a monthly management pack that takes analysts about a week.
 
-1. **Weeks 1–2 – Requirements.** Interview managers about decisions the report supports; agree 15 KPIs and write the metric dictionary.
-2. **Weeks 3–4 – Pipeline.** Extract ERP exports to DuckDB; write tested SQL or pandas code for each KPI; reconcile with last month's manual report.
-3. **Week 5 – Analytics.** Add budget variance tables, prior-year comparison and a simple anomaly flag for KPIs outside expected ranges.
-4. **Weeks 6–7 – Narrative.** Build the constrained prompt with JSON facts; implement automatic number-matching checks.
-5. **Week 8 – Dashboard.** Build a Streamlit app with charts, tables and the approved commentary.
-6. **Weeks 9–12 – Parallel run.** Produce AI-assisted reports alongside manual ones for two cycles; compare accuracy, time and manager feedback.
-7. **Week 13 – Go-live.** Switch to the AI-assisted process with mandatory analyst sign-off; review prompts and KPI definitions quarterly.
+1. **Weeks 1-2: Requirements.** Interview managers about decisions the report supports; agree 15 KPIs and write the metric dictionary.
+2. **Weeks 3-4: Pipeline.** Extract ERP exports to DuckDB; write tested SQL or pandas code for each KPI; reconcile with last month's manual report.
+3. **Week 5: Analytics.** Add budget variance tables, prior-year comparison and a simple anomaly flag for KPIs outside expected ranges.
+4. **Weeks 6-7: Narrative.** Build the constrained prompt with JSON facts; implement automatic number-matching checks.
+5. **Week 8: Dashboard.** Build a Streamlit app with charts, tables and the approved commentary.
+6. **Weeks 9-12: Parallel run.** Produce AI-assisted reports alongside manual ones for two cycles; compare accuracy, time and manager feedback.
+7. **Week 13: Go-live.** Switch to the AI-assisted process with mandatory analyst sign-off; review prompts and KPI definitions quarterly.
 
 ## International Case Study
 
@@ -170,7 +170,7 @@ A monthly batch pipeline produces drafts; analysts review and approve before dis
 
 A widely used public dataset for fraud research, released by the Machine Learning Group of the Université Libre de Bruxelles in collaboration with a payments company and distributed through Kaggle, contains card transactions made by European cardholders over two days, with features transformed by principal component analysis to protect confidentiality. Fraud makes up well under one per cent of transactions, which is why it is often used to teach imbalance-aware evaluation, and associated research examined how undersampling affects probability calibration (Dal Pozzolo, Caelen, Johnson & Bontempi, 2015).
 
-The dataset is instructive for its limitations as much as its strengths. Because features are anonymised components, students cannot practise designing behavioural features; the two-day window hides concept drift; and random train–test splits are tempting but unrealistic. A Ghanaian project should use it only to practise metrics and threshold selection, then design features, time-based splits and drift monitoring around local transaction data.
+The dataset is instructive for its limitations as much as its strengths. Because features are anonymised components, students cannot practise designing behavioural features; the two-day window hides concept drift; and random train-test splits are tempting but unrealistic. A Ghanaian project should use it only to practise metrics and threshold selection, then design features, time-based splits and drift monitoring around local transaction data.
 
 ## Diagram
 
@@ -221,7 +221,7 @@ flowchart TD
 ## Practical Exercises
 
 1. **Threshold costing.** Repeat the worked fraud example with a review cost of GHS 5 per alert. *Expected output:* total costs (A: GHS 54,650; B: GHS 52,075) and a discussion of why the preferred threshold changes and whether capacity still rules out B.
-2. **Imbalance metrics.** Using the public anonymised credit-card fraud dataset in Google Colab, train logistic regression and an isolation forest, and report precision, recall and PR-AUC. *Expected output:* a metrics table and precision–recall curve with a chosen threshold justified by cost.
+2. **Imbalance metrics.** Using the public anonymised credit-card fraud dataset in Google Colab, train logistic regression and an isolation forest, and report precision, recall and PR-AUC. *Expected output:* a metrics table and precision-recall curve with a chosen threshold justified by cost.
 3. **Grounded narrative.** Build a small pandas table of monthly KPIs, convert it to JSON, write a constrained prompt and check the output's numbers automatically. *Expected output:* the prompt, the generated commentary and a script that flags any number not in the facts.
 
 ## Key Takeaways
@@ -235,15 +235,15 @@ flowchart TD
 ## Further Reading
 
 - Saito, T., & Rehmsmeier, M. (2015). The precision-recall plot is more informative than the ROC plot when evaluating binary classifiers on imbalanced datasets. *PLOS ONE, 10*(3), e0118432. <https://doi.org/10.1371/journal.pone.0118432>
-- Liu, F. T., Ting, K. M., & Zhou, Z.-H. (2008). Isolation forest. In *2008 Eighth IEEE International Conference on Data Mining* (pp. 413–422). IEEE.
-- Dal Pozzolo, A., Caelen, O., Johnson, R. A., & Bontempi, G. (2015). Calibrating probability with undersampling for unbalanced classification. In *2015 IEEE Symposium Series on Computational Intelligence* (pp. 159–166). IEEE.
+- Liu, F. T., Ting, K. M., & Zhou, Z.-H. (2008). Isolation forest. In *2008 Eighth IEEE International Conference on Data Mining* (pp. 413-422). IEEE.
+- Dal Pozzolo, A., Caelen, O., Johnson, R. A., & Bontempi, G. (2015). Calibrating probability with undersampling for unbalanced classification. In *2015 IEEE Symposium Series on Computational Intelligence* (pp. 159-166). IEEE.
 - Knaflic, C. N. (2015). *Storytelling with data: A data visualization guide for business professionals*. Wiley.
 - Provost, F., & Fawcett, T. (2013). *Data science for business: What you need to know about data mining and data-analytic thinking*. O'Reilly Media.
 
 ## Video Resources
 
-- [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) — Google for Developers. Covers classification thresholds, precision and recall, and imbalanced datasets.
-- [Streamlit Documentation](https://docs.streamlit.io/) — Streamlit. Official documentation and tutorials for building data apps and dashboards in Python.
+- [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course): Google for Developers. Covers classification thresholds, precision and recall, and imbalanced datasets.
+- [Streamlit Documentation](https://docs.streamlit.io/): Streamlit. Official documentation and tutorials for building data apps and dashboards in Python.
 
 ## Revision Summary
 

@@ -54,10 +54,10 @@ Davis (1989) proposed that two beliefs shape whether people accept an informatio
 
 Venkatesh, Morris, Davis and Davis (2003) reviewed and empirically compared eight models of technology acceptance and integrated them into UTAUT. It proposes four core determinants:
 
-- **Performance expectancy** – the belief that using the system will help attain gains in job performance (related to perceived usefulness).
-- **Effort expectancy** – the ease associated with using the system (related to perceived ease of use).
-- **Social influence** – the degree to which important others believe the individual should use the system.
-- **Facilitating conditions** – the belief that organisational and technical infrastructure exists to support use.
+- **Performance expectancy**: the belief that using the system will help attain gains in job performance (related to perceived usefulness).
+- **Effort expectancy**: the ease associated with using the system (related to perceived ease of use).
+- **Social influence**: the degree to which important others believe the individual should use the system.
+- **Facilitating conditions**: the belief that organisational and technical infrastructure exists to support use.
 
 The first three influence behavioural intention; intention and facilitating conditions influence use behaviour. **Gender, age, experience and voluntariness of use** moderate key relationships. Venkatesh, Thong and Xu (2012) later proposed UTAUT2 for consumer contexts, adding hedonic motivation, price value and habit.
 
@@ -67,11 +67,11 @@ The first three influence behavioural intention; intention and facilitating cond
 
 Everett Rogers' *Diffusion of Innovations* explains how innovations spread through social systems over time. Rogers identified five perceived attributes of innovations that influence their rate of adoption:
 
-- **Relative advantage** – the degree to which an innovation is perceived as better than what it replaces.
-- **Compatibility** – consistency with existing values, experiences and needs.
-- **Complexity** – the perceived difficulty of understanding and using it.
-- **Trialability** – the extent to which it can be experimented with on a limited basis.
-- **Observability** – the visibility of its results to others.
+- **Relative advantage**: the degree to which an innovation is perceived as better than what it replaces.
+- **Compatibility**: consistency with existing values, experiences and needs.
+- **Complexity**: the perceived difficulty of understanding and using it.
+- **Trialability**: the extent to which it can be experimented with on a limited basis.
+- **Observability**: the visibility of its results to others.
 
 Rogers also categorised adopters by the timing of adoption as innovators, early adopters, early majority, late majority and laggards, and described an innovation-decision process moving from knowledge through persuasion, decision and implementation to confirmation. Communication channels and social networks are central to diffusion.
 
@@ -126,7 +126,7 @@ flowchart LR
 - **Question:** What factors influence SMEs' adoption of AI-based tools?
 - **Level of analysis:** organisation, because the owner or management decides on adoption for the firm.
 - **Theory choice:** TOE combined with DOI, rather than UTAUT, because the decision concerns the firm rather than individual employee use.
-- **Constructs:** *Technology* – relative advantage and complexity (from DOI); *Organisation* – top management support and digital skills availability; *Environment* – competitive pressure and vendor support.
+- **Constructs:** *Technology*, relative advantage and complexity (from DOI); *Organisation*, top management support and digital skills availability; *Environment*: competitive pressure and vendor support.
 - **Hypotheses:** for example, H1 relative advantage positively influences adoption; H2 complexity negatively influences adoption; H3 top management support positively influences adoption.
 - **Justification:** her synthesis showed that organisational resources and skills feature prominently in SME studies from developing economies, supporting the TOE organisational dimension.
 
@@ -191,17 +191,17 @@ The study illustrates several of Rogers' concepts: the S-shaped pattern of adopt
 
 ## Further Reading
 
-- Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319–340. <https://doi.org/10.2307/249008>
-- Venkatesh, V., Morris, M. G., Davis, G. B., & Davis, F. D. (2003). User acceptance of information technology: Toward a unified view. *MIS Quarterly, 27*(3), 425–478. <https://doi.org/10.2307/30036540>
-- Venkatesh, V., Thong, J. Y. L., & Xu, X. (2012). Consumer acceptance and use of information technology: Extending the unified theory of acceptance and use of technology. *MIS Quarterly, 36*(1), 157–178.
+- Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319-340. <https://doi.org/10.2307/249008>
+- Venkatesh, V., Morris, M. G., Davis, G. B., & Davis, F. D. (2003). User acceptance of information technology: Toward a unified view. *MIS Quarterly, 27*(3), 425-478. <https://doi.org/10.2307/30036540>
+- Venkatesh, V., Thong, J. Y. L., & Xu, X. (2012). Consumer acceptance and use of information technology: Extending the unified theory of acceptance and use of technology. *MIS Quarterly, 36*(1), 157-178.
 - Rogers, E. M. (2003). *Diffusion of innovations* (5th ed.). Free Press.
 - Tornatzky, L. G., & Fleischer, M. (1990). *The processes of technological innovation*. Lexington Books.
-- Ajzen, I. (1991). The theory of planned behavior. *Organizational Behavior and Human Decision Processes, 50*(2), 179–211.
+- Ajzen, I. (1991). The theory of planned behavior. *Organizational Behavior and Human Decision Processes, 50*(2), 179-211.
 
 ## Video Resources
 
-- [SAGE Research Methods](https://methods.sagepub.com/) — SAGE Publishing. Official platform (institutional access may be required) with material on theoretical and conceptual frameworks.
-- [Coursera](https://www.coursera.org/) — Coursera. Official learning platform; search for university courses on information systems and technology adoption.
+- [SAGE Research Methods](https://methods.sagepub.com/): SAGE Publishing. Official platform (institutional access may be required) with material on theoretical and conceptual frameworks.
+- [Coursera](https://www.coursera.org/): Coursera. Official learning platform; search for university courses on information systems and technology adoption.
 
 ## Revision Summary
 

@@ -8,7 +8,7 @@ source: supplementary
 
 ## Introduction
 
-As Ghana's economy becomes increasingly digital — through mobile money, online banking, e-government services, the Ghana Card identity system and e-commerce — the opportunities for crime committed through or against information systems have grown accordingly. Mobile-money fraud, phishing, SIM-swap attacks, business email compromise, ransomware and online romance scams are familiar concerns for Ghanaian businesses and households. At the same time, not all misuse comes from outside. Employees and contractors with legitimate access sometimes abuse it — browsing customer records, selling data, sabotaging systems or using company resources for personal gain.
+As Ghana's economy becomes increasingly digital (through mobile money, online banking, e-government services, the Ghana Card identity system and e-commerce) the opportunities for crime committed through or against information systems have grown accordingly. Mobile-money fraud, phishing, SIM-swap attacks, business email compromise, ransomware and online romance scams are familiar concerns for Ghanaian businesses and households. At the same time, not all misuse comes from outside. Employees and contractors with legitimate access sometimes abuse it: browsing customer records, selling data, sabotaging systems or using company resources for personal gain.
 
 For IT professionals, cybercrime is both a legal and an ethical subject. Legally, professionals need to know, in general terms, what conduct the law prohibits, what duties organisations have and which institutions are responsible for enforcement. Ethically, they hold powerful skills and privileged access that can be used to protect or to harm. This lesson classifies forms of cybercrime and system misuse, outlines Ghana's main legal framework, and examines the ethical issues around insider misuse, security research and professional responsibility. Legal summaries are general and educational; they are not legal advice, and the current text of each statute should be consulted for detail.
 
@@ -57,17 +57,17 @@ Insider misuse deserves particular attention because insiders already have acces
 
 Organisations reduce insider risk through:
 
-- **least privilege** — granting only the access each role needs;
-- **separation of duties** — so that no single person can initiate and approve sensitive transactions;
+- **least privilege**: granting only the access each role needs;
+- **separation of duties**: so that no single person can initiate and approve sensitive transactions;
 - **logging and monitoring** of privileged activity, with transparent policies;
-- **joiner–mover–leaver processes** — promptly changing and removing access when roles change or staff leave;
+- **joiner-mover-leaver processes**: promptly changing and removing access when roles change or staff leave;
 - **acceptable-use policies**, training and a culture in which misuse is taken seriously.
 
 Monitoring itself raises ethical questions about employee privacy, which are examined in the case-study module. The key principle is **proportionality**: monitoring should be transparent, targeted at genuine risks and compliant with data protection law.
 
 ### Hacking, security testing and disclosure
 
-Not all "hacking" is malicious. Security professionals conduct **authorised penetration testing**, and independent researchers discover vulnerabilities that vendors have missed. The ethical and legal dividing line is **authorisation**. Accessing a system without permission is generally unlawful even if the intent is benign, and ACM principle 2.8 states that computing professionals should access computing resources only when authorised or when compelled by the public good — and the Code's guidance makes clear that the public-good exception is narrow.
+Not all "hacking" is malicious. Security professionals conduct **authorised penetration testing**, and independent researchers discover vulnerabilities that vendors have missed. The ethical and legal dividing line is **authorisation**. Accessing a system without permission is generally unlawful even if the intent is benign, and ACM principle 2.8 states that computing professionals should access computing resources only when authorised or when compelled by the public good, and the Code's guidance makes clear that the public-good exception is narrow.
 
 Ethical security practice therefore involves:
 
@@ -81,7 +81,7 @@ Ethical security practice therefore involves:
 Different ethical theories converge in condemning most cybercrime but help analyse harder cases:
 
 - **Deontology**: unauthorised access violates others' rights and autonomy over their systems and data, regardless of whether harm results.
-- **Utilitarianism**: cybercrime causes direct financial losses and wider harms — loss of trust in digital services, which is especially damaging in an economy that depends on mobile money for financial inclusion.
+- **Utilitarianism**: cybercrime causes direct financial losses and wider harms, loss of trust in digital services, which is especially damaging in an economy that depends on mobile money for financial inclusion.
 - **Social contract theory**: digital systems function only if participants respect shared rules; each act of misuse weakens the trust on which everyone depends.
 - **"Hacktivism" and grey areas**: some argue that unauthorised access to expose wrongdoing can be justified; most professional codes reject this as a general principle, emphasising lawful alternatives such as whistleblowing to regulators.
 
@@ -124,7 +124,7 @@ Students should consult the official texts and guidance from the Cyber Security 
 1. **Detect and report** internally through the defined channel.
 2. **Contain** the incident to limit harm, while preserving evidence.
 3. **Assess** the impact on systems, data and people, including whether personal data are affected.
-4. **Notify** as required — to regulators, sectoral CERTs, law enforcement and affected individuals — in line with applicable law and guidance.
+4. **Notify** as required (to regulators, sectoral CERTs, law enforcement and affected individuals) in line with applicable law and guidance.
 5. **Eradicate and recover**, restoring services securely.
 6. **Learn** through a post-incident review without scapegoating.
 
@@ -136,7 +136,7 @@ Students should consult the official texts and guidance from the Cyber Security 
 
 Ethical and legal analysis:
 
-- The officer's conduct involves **misuse of authorised access** and facilitation of fraud — conduct of the kind addressed by cyber and fraud offences under Ghanaian law — and is a clear breach of confidentiality (ACM 1.7) and of authorised use (ACM 2.8).
+- The officer's conduct involves **misuse of authorised access** and facilitation of fraud, conduct of the kind addressed by cyber and fraud offences under Ghanaian law, and is a clear breach of confidentiality (ACM 1.7) and of authorised use (ACM 2.8).
 - PrimeCash has obligations as a **data controller** under Act 843 to secure personal data, and may have reporting obligations under sector regulation and cybersecurity guidance.
 - Organisational weaknesses enabled the misuse: broad look-up access without business justification, no monitoring of unusual query volumes and weak verification in the SIM-replacement process.
 
@@ -148,7 +148,7 @@ A defensible response would involve preserving logs as evidence, suspending the 
 
 In the United Kingdom, a senior internal auditor at the supermarket chain Morrisons, who held a grudge after disciplinary action, copied payroll data relating to around 100,000 employees and published it online. He was convicted and imprisoned. Employees then sued Morrisons, arguing that the company was vicariously liable for his actions. The UK Supreme Court held in 2020 that Morrisons was not vicariously liable, because the employee was pursuing a personal vendetta rather than acting in the course of his employment in the relevant legal sense.
 
-Although the company escaped vicarious liability on these facts, the case remains a powerful illustration of insider risk. A trusted employee with legitimate access to sensitive data deliberately misused it; the harm fell on thousands of colleagues; and the organisation faced years of litigation and reputational damage. It shows why least privilege, monitoring of bulk data extraction, and attention to disgruntled insiders are essential — and that the legal outcome in one jurisdiction does not reduce an organisation's ethical responsibility to protect the data entrusted to it.
+Although the company escaped vicarious liability on these facts, the case remains a powerful illustration of insider risk. A trusted employee with legitimate access to sensitive data deliberately misused it; the harm fell on thousands of colleagues; and the organisation faced years of litigation and reputational damage. It shows why least privilege, monitoring of bulk data extraction, and attention to disgruntled insiders are essential, and that the legal outcome in one jurisdiction does not reduce an organisation's ethical responsibility to protect the data entrusted to it.
 
 ## Diagram
 
@@ -165,11 +165,11 @@ flowchart LR
 
 ## Common Misconceptions
 
-- "Hacking is only illegal if you steal or damage something." — Unauthorised access itself is generally an offence and an ethical violation, regardless of intent or damage.
-- "Cybercrime is a technical problem for the IT department alone." — Many attacks exploit people and processes, so awareness, procedures and management accountability are essential.
-- "Insiders with legitimate access cannot misuse systems unlawfully." — Exceeding authorised purposes, such as selling or browsing data without business need, can be unlawful and is a breach of trust.
-- "Finding a vulnerability gives me the right to publish it immediately." — Responsible practice is coordinated disclosure that allows the organisation to fix the problem first.
-- "Ghana has no specific cybersecurity law." — The Cybersecurity Act, 2020 (Act 1038) established the Cyber Security Authority, and the Electronic Transactions Act, 2008 (Act 772) contains cyber offences.
+- "Hacking is only illegal if you steal or damage something." Unauthorised access itself is generally an offence and an ethical violation, regardless of intent or damage.
+- "Cybercrime is a technical problem for the IT department alone." Many attacks exploit people and processes, so awareness, procedures and management accountability are essential.
+- "Insiders with legitimate access cannot misuse systems unlawfully." Exceeding authorised purposes, such as selling or browsing data without business need, can be unlawful and is a breach of trust.
+- "Finding a vulnerability gives me the right to publish it immediately." Responsible practice is coordinated disclosure that allows the organisation to fix the problem first.
+- "Ghana has no specific cybersecurity law." The Cybersecurity Act, 2020 (Act 1038) established the Cyber Security Authority, and the Electronic Transactions Act, 2008 (Act 772) contains cyber offences.
 
 ## Common Examination Mistakes
 
@@ -177,7 +177,7 @@ flowchart LR
 - Confusing the roles of the two Acts: Act 772 primarily concerns electronic transactions and contains cyber offences; Act 1038 regulates cybersecurity and established the CSA.
 - Focusing only on external hackers and ignoring insider misuse.
 - Recommending punitive responses to individuals without addressing organisational control failures.
-- Omitting the ethical analysis — the question is rarely only "is this legal?"
+- Omitting the ethical analysis: the question is rarely only "is this legal?"
 
 ## Critical Thinking Questions
 
@@ -210,8 +210,8 @@ flowchart LR
 
 ## Video Resources
 
-- [Cyber Security Authority, Ghana](https://www.csa.gov.gh/) — Cyber Security Authority. Official site of Ghana's cybersecurity regulator with guidance, alerts and awareness materials.
-- [Council of Europe – Cybercrime](https://www.coe.int/en/web/cybercrime) — Council of Europe. Official pages on the Budapest Convention and capacity-building on cybercrime.
+- [Cyber Security Authority, Ghana](https://www.csa.gov.gh/): Cyber Security Authority. Official site of Ghana's cybersecurity regulator with guidance, alerts and awareness materials.
+- [Council of Europe: Cybercrime](https://www.coe.int/en/web/cybercrime): Council of Europe. Official pages on the Budapest Convention and capacity-building on cybercrime.
 
 ## Revision Summary
 

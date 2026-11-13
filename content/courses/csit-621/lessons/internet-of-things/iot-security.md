@@ -216,9 +216,9 @@ flowchart LR
 
 ## Video Resources
 
-- [ITU](https://www.itu.int/) — International Telecommunication Union. Resources on cybersecurity and IoT standardisation.
-- [IBM Think](https://www.ibm.com/think) — IBM. Explainers on IoT security, botnets and network segmentation.
-- [Microsoft Learn](https://learn.microsoft.com/) — Microsoft. Learning paths on securing IoT and operational technology environments.
+- [ITU](https://www.itu.int/): International Telecommunication Union. Resources on cybersecurity and IoT standardisation.
+- [IBM Think](https://www.ibm.com/think): IBM. Explainers on IoT security, botnets and network segmentation.
+- [Microsoft Learn](https://learn.microsoft.com/): Microsoft. Learning paths on securing IoT and operational technology environments.
 
 ## Revision Summary
 

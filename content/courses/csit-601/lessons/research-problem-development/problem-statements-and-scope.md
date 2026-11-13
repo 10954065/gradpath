@@ -60,10 +60,10 @@ Some writers summarise this as "ideal, reality, consequences, proposal". The fin
 
 Scope describes what the study covers. It usually specifies:
 
-- **Content scope** – the variables, constructs or themes examined (for example, perceived usefulness, perceived risk and adoption intention).
-- **Geographical scope** – the location (for example, the Greater Accra Region).
-- **Population or unit of analysis** – who or what is studied (for example, registered SMEs with between 5 and 99 employees, or individual nurses).
-- **Time scope** – the period covered by data collection, which affects whether results capture a moment or a trend.
+- **Content scope**: the variables, constructs or themes examined (for example, perceived usefulness, perceived risk and adoption intention).
+- **Geographical scope**: the location (for example, the Greater Accra Region).
+- **Population or unit of analysis**: who or what is studied (for example, registered SMEs with between 5 and 99 employees, or individual nurses).
+- **Time scope**: the period covered by data collection, which affects whether results capture a moment or a trend.
 
 ### Delimitations
 
@@ -178,14 +178,14 @@ The case illustrates why scope and limitations matter. Davis's measurement work 
 ## Further Reading
 
 - Creswell, J. W., & Creswell, J. D. (2018). *Research design: Qualitative, quantitative, and mixed methods approaches* (5th ed.). SAGE.
-- Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319–340. <https://doi.org/10.2307/249008>
-- Venkatesh, V., & Davis, F. D. (2000). A theoretical extension of the technology acceptance model: Four longitudinal field studies. *Management Science, 46*(2), 186–204.
+- Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319-340. <https://doi.org/10.2307/249008>
+- Venkatesh, V., & Davis, F. D. (2000). A theoretical extension of the technology acceptance model: Four longitudinal field studies. *Management Science, 46*(2), 186-204.
 - Saunders, M., Lewis, P., & Thornhill, A. (2019). *Research methods for business students* (8th ed.). Pearson.
 
 ## Video Resources
 
-- [Purdue Online Writing Lab](https://owl.purdue.edu/) — Purdue University. Official writing resource with guidance on academic writing, including research proposals.
-- [SAGE Research Methods](https://methods.sagepub.com/) — SAGE Publishing. Official platform (institutional access may be required) covering problem statements and research proposals.
+- [Purdue Online Writing Lab](https://owl.purdue.edu/): Purdue University. Official writing resource with guidance on academic writing, including research proposals.
+- [SAGE Research Methods](https://methods.sagepub.com/): SAGE Publishing. Official platform (institutional access may be required) covering problem statements and research proposals.
 
 ## Revision Summary
 

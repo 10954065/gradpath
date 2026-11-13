@@ -182,16 +182,16 @@ Cochrane's approach, together with reporting guidelines such as PRISMA, influenc
 
 ## Further Reading
 
-- Webster, J., & Watson, R. T. (2002). Analyzing the past to prepare for the future: Writing a literature review. *MIS Quarterly, 26*(2), xiii–xxiii.
-- Snyder, H. (2019). Literature review as a research methodology: An overview and guidelines. *Journal of Business Research, 104*, 333–339. <https://doi.org/10.1016/j.jbusres.2019.07.039>
-- Tranfield, D., Denyer, D., & Smart, P. (2003). Towards a methodology for developing evidence-informed management knowledge by means of systematic review. *British Journal of Management, 14*(3), 207–222.
+- Webster, J., & Watson, R. T. (2002). Analyzing the past to prepare for the future: Writing a literature review. *MIS Quarterly, 26*(2), xiii-xxiii.
+- Snyder, H. (2019). Literature review as a research methodology: An overview and guidelines. *Journal of Business Research, 104*, 333-339. <https://doi.org/10.1016/j.jbusres.2019.07.039>
+- Tranfield, D., Denyer, D., & Smart, P. (2003). Towards a methodology for developing evidence-informed management knowledge by means of systematic review. *British Journal of Management, 14*(3), 207-222.
 - Page, M. J., McKenzie, J. E., Bossuyt, P. M., Boutron, I., Hoffmann, T. C., Mulrow, C. D., Shamseer, L., Tetzlaff, J. M., Akl, E. A., Brennan, S. E., Chou, R., Glanville, J., Grimshaw, J. M., Hróbjartsson, A., Lalu, M. M., Li, T., Loder, E. W., Mayo-Wilson, E., McDonald, S., … Moher, D. (2021). The PRISMA 2020 statement: An updated guideline for reporting systematic reviews. *BMJ, 372*, n71. <https://doi.org/10.1136/bmj.n71>
 - Hart, C. (1998). *Doing a literature review: Releasing the social science research imagination*. SAGE.
 
 ## Video Resources
 
-- [Google Scholar Search Help](https://scholar.google.com/intl/en/scholar/help.html) — Google. Official help page explaining search operators, "Cited by" and library links.
-- [Purdue Online Writing Lab](https://owl.purdue.edu/) — Purdue University. Official writing resource with guidance on conducting research and writing literature reviews.
+- [Google Scholar Search Help](https://scholar.google.com/intl/en/scholar/help.html): Google. Official help page explaining search operators, "Cited by" and library links.
+- [Purdue Online Writing Lab](https://owl.purdue.edu/): Purdue University. Official writing resource with guidance on conducting research and writing literature reviews.
 
 ## Revision Summary
 

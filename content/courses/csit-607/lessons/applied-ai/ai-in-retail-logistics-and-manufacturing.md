@@ -10,13 +10,13 @@ source: supplementary
 
 Retail, logistics and manufacturing form the physical backbone of an economy: goods are made, moved and sold. In these sectors AI rarely makes headlines by talking to customers; it creates value quietly by predicting how much stock to order, which route a delivery van should take, when a machine is likely to fail and whether a product on a conveyor belt is defective. Because the value is measured in reduced waste, fewer stock-outs, lower fuel costs and less downtime, these sectors are good places to practise building an evidence-based business case for AI.
 
-This lesson continues the opportunity–risk–readiness lens from the previous lesson. You will examine the main applications in each sector, learn the maintenance strategy continuum that frames predictive maintenance, work through a cost–benefit calculation, and consider how a Ghanaian retailer, logistics operator or manufacturer could adopt AI incrementally.
+This lesson continues the opportunity-risk-readiness lens from the previous lesson. You will examine the main applications in each sector, learn the maintenance strategy continuum that frames predictive maintenance, work through a cost-benefit calculation, and consider how a Ghanaian retailer, logistics operator or manufacturer could adopt AI incrementally.
 
 ## Learning Objectives
 
 - Explain the main AI applications in retail, logistics and manufacturing.
 - Compare reactive, preventive, predictive and prescriptive maintenance strategies.
-- Apply a cost–benefit calculation to decide whether predictive maintenance or automated quality inspection is worthwhile.
+- Apply a cost-benefit calculation to decide whether predictive maintenance or automated quality inspection is worthwhile.
 - Analyse the data and infrastructure requirements of each application in a Ghanaian context.
 - Evaluate the operational, workforce and ethical risks of AI in physical operations.
 
@@ -97,20 +97,20 @@ Many operations problems combine **prediction** (how much will sell; how long wi
 
 **Illustrative scenario.** A fictional Ghanaian bottling plant operates eight filling machines. Records over the past two years show that each machine suffers on average two unplanned breakdowns per year. Each breakdown costs GHS 40,000 in lost production, overtime and emergency parts. A predictive maintenance pilot (sensors, software and staff time) would cost GHS 150,000 per year for all eight machines. In a trial, the model detected 70% of impending failures early enough to schedule a planned repair costing GHS 8,000 instead. It also produced false alarms that cost an estimated GHS 20,000 per year in unnecessary inspections. All figures are hypothetical.
 
-**Step 1 – Current annual cost of breakdowns.**
+**Step 1: Current annual cost of breakdowns.**
 `8 machines × 2 breakdowns × GHS 40,000 = GHS 640,000`
 
-**Step 2 – Failures caught and missed with the model.**
+**Step 2: Failures caught and missed with the model.**
 Total failures `= 16`. Caught `= 0.70 × 16 = 11.2`; missed `= 4.8`.
 
-**Step 3 – Cost with predictive maintenance.**
+**Step 3: Cost with predictive maintenance.**
 - Caught failures repaired in a planned way: `11.2 × 8,000 = GHS 89,600`
 - Missed failures still break down: `4.8 × 40,000 = GHS 192,000`
 - False alarms: `GHS 20,000`
 - Programme cost: `GHS 150,000`
 - Total: `89,600 + 192,000 + 20,000 + 150,000 = GHS 451,600`
 
-**Step 4 – Net annual benefit.**
+**Step 4: Net annual benefit.**
 `640,000 − 451,600 = GHS 188,400`
 
 The pilot appears worthwhile. A sensitivity check is essential, however. If the true detection rate in production is only 40%, then caught `= 6.4` (cost `51,200`), missed `= 9.6` (cost `384,000`), and the total becomes `51,200 + 384,000 + 20,000 + 150,000 = GHS 605,200`, leaving a benefit of only GHS 34,800. The business case is sensitive to recall, so the decision should be staged: pilot on the two most critical machines first, measure recall in production, and scale only if performance holds.
@@ -197,13 +197,13 @@ The diagram shows how the sectors connect along a supply chain: retail forecasts
 
 - Hyndman, R. J., & Athanasopoulos, G. (2021). *Forecasting: Principles and practice* (3rd ed.). OTexts. <https://otexts.com/fpp3/>
 - Agrawal, A., Gans, J., & Goldfarb, A. (2018). *Prediction machines: The simple economics of artificial intelligence*. Harvard Business Review Press.
-- Davenport, T. H., & Ronanki, R. (2018). Artificial intelligence for the real world. *Harvard Business Review, 96*(1), 108–116.
+- Davenport, T. H., & Ronanki, R. (2018). Artificial intelligence for the real world. *Harvard Business Review, 96*(1), 108-116.
 - Russell, S., & Norvig, P. (2020). *Artificial intelligence: A modern approach* (4th ed.). Pearson.
 
 ## Video Resources
 
-- [Kaggle Learn](https://www.kaggle.com/learn) — Kaggle. Free micro-courses, including time series and computer vision, with notebooks that run in the browser.
-- [MIT OpenCourseWare](https://ocw.mit.edu/) — Massachusetts Institute of Technology. Official open learning portal; search for supply chain and operations management course materials.
+- [Kaggle Learn](https://www.kaggle.com/learn): Kaggle. Free micro-courses, including time series and computer vision, with notebooks that run in the browser.
+- [MIT OpenCourseWare](https://ocw.mit.edu/): Massachusetts Institute of Technology. Official open learning portal; search for supply chain and operations management course materials.
 
 ## Revision Summary
 

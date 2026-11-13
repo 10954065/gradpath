@@ -8,7 +8,7 @@ source: supplementary
 
 ## Introduction
 
-Almost no modern software is written from scratch. A typical web or mobile application depends on dozens or hundreds of third-party libraries, frameworks and tools, many of them open source. Every one of those components comes with a **licence** — a legal permission from the copyright holder that sets out what users may and may not do. Developers who ignore licences can expose their employers to legal claims, forced disclosure of source code, product withdrawals and reputational damage. Conversely, organisations that understand licences can benefit enormously from the shared work of global developer communities.
+Almost no modern software is written from scratch. A typical web or mobile application depends on dozens or hundreds of third-party libraries, frameworks and tools, many of them open source. Every one of those components comes with a **licence**: a legal permission from the copyright holder that sets out what users may and may not do. Developers who ignore licences can expose their employers to legal claims, forced disclosure of source code, product withdrawals and reputational damage. Conversely, organisations that understand licences can benefit enormously from the shared work of global developer communities.
 
 Licensing is also an ethical subject. The free software movement, launched by Richard Stallman in the 1980s, argued that software freedom is a moral matter, not merely a technical or commercial one. The open-source movement later reframed similar practices in terms of development efficiency and business value. This lesson explains how software licences work, compares proprietary and open-source models, sets out the obligations of the most common licences, and considers the ethical responsibilities of IT professionals who use and contribute to shared code. It is educational, not legal advice.
 
@@ -30,7 +30,7 @@ Licensing is also an ethical subject. The free software movement, launched by Ri
 - **Software licence**: A legal permission granted by a copyright holder that defines the conditions under which software may be used, copied, modified and distributed.
 - **End-user licence agreement (EULA)**: A proprietary licence that grants a user limited rights to use software, usually prohibiting copying, modification and reverse engineering.
 - **Open-source software**: Software distributed under a licence that permits users to view, use, modify and redistribute the source code, consistent with the Open Source Definition.
-- **Free software**: Software that respects the four freedoms defined by the Free Software Foundation — to run, study and change, redistribute, and distribute modified versions.
+- **Free software**: Software that respects the four freedoms defined by the Free Software Foundation, to run, study and change, redistribute, and distribute modified versions.
 - **Permissive licence**: An open-source licence, such as MIT or Apache 2.0, that allows reuse in proprietary products with minimal conditions such as preserving notices.
 - **Copyleft**: A licensing technique that uses copyright to require that distributed modified versions remain under the same free licence.
 - **Derivative work**: A work based on an existing work, such as modified source code, which may be subject to the original licence's conditions.
@@ -40,7 +40,7 @@ Licensing is also an ethical subject. The free software movement, launched by Ri
 
 ### Why licences exist
 
-Because software is protected by copyright, the default legal position is that nobody may copy, modify or distribute it without the owner's permission. A licence is that permission. It does not usually transfer ownership; it grants defined rights under defined conditions. If a user breaches the conditions, the permission may terminate, and continued use may then be copyright infringement. Courts have treated open-source licence terms as enforceable conditions — for example, the US Court of Appeals for the Federal Circuit in *Jacobsen v. Katzer* (2008) treated the conditions of an open-source licence (the Artistic License) as enforceable through copyright law.
+Because software is protected by copyright, the default legal position is that nobody may copy, modify or distribute it without the owner's permission. A licence is that permission. It does not usually transfer ownership; it grants defined rights under defined conditions. If a user breaches the conditions, the permission may terminate, and continued use may then be copyright infringement. Courts have treated open-source licence terms as enforceable conditions, for example, the US Court of Appeals for the Federal Circuit in *Jacobsen v. Katzer* (2008) treated the conditions of an open-source licence (the Artistic License) as enforceable through copyright law.
 
 ### Proprietary licensing
 
@@ -89,7 +89,7 @@ Apache 2.0 includes an **express patent licence** from contributors to users, an
 
 GPLv3 added provisions on patents, on "anti-tivoisation" (requiring installation information for certain consumer devices so that users can run modified versions) and on compatibility. Purely internal use without distribution generally does not trigger the obligation to release source code, which is why the GNU Affero GPL (AGPL) was created to extend source-sharing obligations to software offered to users over a network.
 
-**GNU Lesser General Public License (LGPL).** The LGPL is a weaker copyleft licence designed mainly for libraries. A proprietary program may **link** to an LGPL library without itself becoming subject to the LGPL, provided certain conditions are met — notably that modifications to the library itself are released under the LGPL and that users are able to replace or relink the library with a modified version. This makes LGPL libraries usable in closed-source products while keeping improvements to the library open.
+**GNU Lesser General Public License (LGPL).** The LGPL is a weaker copyleft licence designed mainly for libraries. A proprietary program may **link** to an LGPL library without itself becoming subject to the LGPL, provided certain conditions are met: notably that modifications to the library itself are released under the LGPL and that users are able to replace or relink the library with a modified version. This makes LGPL libraries usable in closed-source products while keeping improvements to the library open.
 
 ## Theories, Frameworks and Models
 
@@ -109,14 +109,14 @@ GPLv3 added provisions on patents, on "anti-tivoisation" (requiring installation
 1. **Inventory dependencies.** Generate a software bill of materials (SBOM) listing every component and its licence.
 2. **Classify licences.** Group them as permissive, weak copyleft, strong copyleft, proprietary or unknown.
 3. **Map to the distribution model.** Ask: Is the product distributed to customers (app, installer, device firmware), or only run as an internal or hosted service?
-4. **Check compatibility.** Some combinations — for example, certain licences with GPLv2 — are incompatible and cannot be distributed together.
+4. **Check compatibility.** Some combinations (for example, certain licences with GPLv2) are incompatible and cannot be distributed together.
 5. **Fulfil obligations.** Bundle notices, publish source where required, and document changes.
 6. **Treat "no licence" as "no permission".** Code without a licence should not be reused without explicit permission.
 7. **Record decisions** in a policy and review new dependencies before adoption.
 
 ### Ethical lenses
 
-- **Deontology and fairness.** Using someone's code while ignoring the only conditions they set — attribution or reciprocity — treats the author merely as a means. Principle 1.5 of the ACM Code of Ethics asks professionals to respect the work required to produce new ideas and computing artefacts and to credit creators.
+- **Deontology and fairness.** Using someone's code while ignoring the only conditions they set, attribution or reciprocity, treats the author merely as a means. Principle 1.5 of the ACM Code of Ethics asks professionals to respect the work required to produce new ideas and computing artefacts and to credit creators.
 - **Utilitarianism.** Open-source ecosystems produce large social value: shared infrastructure, lower costs and faster innovation. Compliance sustains the trust that keeps contributors contributing.
 - **Virtue ethics.** Honesty and reciprocity are virtues of a good professional; contributing fixes upstream and acknowledging sources reflect them.
 - **The sustainability problem.** Many critical projects are maintained by small groups of volunteers. Organisations that profit heavily from such projects without supporting them raise questions of justice even when they comply with the licence.
@@ -125,7 +125,7 @@ GPLv3 added provisions on patents, on "anti-tivoisation" (requiring installation
 
 ### Illustrative scenario: a Ghanaian fintech's mobile app
 
-*Illustrative scenario.* "SikaPay", a start-up in Accra, is preparing to release a mobile wallet app. Its development team used an MIT-licensed charting library, an Apache 2.0 networking library, an LGPL image-processing library dynamically linked into the app, and — copied by one developer — a GPL-licensed encryption utility pasted directly into the app's source.
+*Illustrative scenario.* "SikaPay", a start-up in Accra, is preparing to release a mobile wallet app. Its development team used an MIT-licensed charting library, an Apache 2.0 networking library, an LGPL image-processing library dynamically linked into the app, and, copied by one developer, a GPL-licensed encryption utility pasted directly into the app's source.
 
 Analysis:
 
@@ -164,11 +164,11 @@ flowchart TD
 
 ## Common Misconceptions
 
-- "Open source means no conditions." — Most open-source licences impose conditions, such as preserving notices (MIT, Apache 2.0) or releasing source code of distributed derivatives (GPL).
-- "Using any GPL software forces my whole company to publish its code." — Copyleft obligations attach mainly to distributing works based on GPL code; merely using GPL tools such as compilers or running GPL software internally generally does not.
-- "Free software means software that costs nothing." — "Free" refers to users' freedoms; free software can be sold, and gratis software can be proprietary.
-- "MIT and Apache 2.0 are identical." — Apache 2.0 adds an express patent licence, a patent retaliation clause, NOTICE-file and change-marking obligations.
-- "Code without a licence is in the public domain." — Without a licence, default copyright applies, so reuse is generally not permitted.
+- "Open source means no conditions." Most open-source licences impose conditions, such as preserving notices (MIT, Apache 2.0) or releasing source code of distributed derivatives (GPL).
+- "Using any GPL software forces my whole company to publish its code." Copyleft obligations attach mainly to distributing works based on GPL code; merely using GPL tools such as compilers or running GPL software internally generally does not.
+- "Free software means software that costs nothing." "Free" refers to users' freedoms; free software can be sold, and gratis software can be proprietary.
+- "MIT and Apache 2.0 are identical." Apache 2.0 adds an express patent licence, a patent retaliation clause, NOTICE-file and change-marking obligations.
+- "Code without a licence is in the public domain." Without a licence, default copyright applies, so reuse is generally not permitted.
 
 ## Common Examination Mistakes
 
@@ -187,7 +187,7 @@ flowchart TD
 
 ## Practical Exercises
 
-1. **Licence scan.** Take a small open-source project you own or have permission to examine and list its direct dependencies and their licences (for example, from the package manifest). Classify each as permissive, weak copyleft or strong copyleft. Expected output: a dependency–licence table with a compliance note for each.
+1. **Licence scan.** Take a small open-source project you own or have permission to examine and list its direct dependencies and their licences (for example, from the package manifest). Classify each as permissive, weak copyleft or strong copyleft. Expected output: a dependency-licence table with a compliance note for each.
 2. **Obligation checklist.** For a proprietary Android app that uses one MIT, one Apache 2.0 and one LGPL component, write a checklist of every obligation the release team must fulfil. Expected output: a checklist of at least eight specific items.
 3. **Policy memo.** Write a one-page open-source usage policy for an illustrative Ghanaian software house, covering approval, prohibited licence types for distributed products, attribution and contribution back. Expected output: a policy memo with clear rules and rationale.
 
@@ -209,8 +209,8 @@ flowchart TD
 
 ## Video Resources
 
-- [Choose an Open Source License](https://choosealicense.com/) — GitHub. Official guide comparing common licences such as MIT, Apache 2.0 and GPL, with plain-language summaries of permissions, conditions and limitations.
-- [Open Source Initiative – Licenses](https://opensource.org/licenses) — Open Source Initiative. Official list of OSI-approved licences with their full texts.
+- [Choose an Open Source License](https://choosealicense.com/): GitHub. Official guide comparing common licences such as MIT, Apache 2.0 and GPL, with plain-language summaries of permissions, conditions and limitations.
+- [Open Source Initiative: Licenses](https://opensource.org/licenses): Open Source Initiative. Official list of OSI-approved licences with their full texts.
 
 ## Revision Summary
 

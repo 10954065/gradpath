@@ -1,6 +1,6 @@
 ---
 title: Symmetric and Asymmetric Encryption
-summary: Compare symmetric and asymmetric encryption, work through toy RSA and Diffie–Hellman examples by hand, explain block cipher modes and hybrid encryption, and select appropriate algorithms for business systems.
+summary: Compare symmetric and asymmetric encryption, work through toy RSA and Diffie-Hellman examples by hand, explain block cipher modes and hybrid encryption, and select appropriate algorithms for business systems.
 estimatedMinutes: 55
 difficulty: advanced
 source: supplementary
@@ -10,13 +10,13 @@ source: supplementary
 
 Encryption is the technical heart of data protection. It lets a bank send balances to a customer's phone across networks it does not control, lets a hospital store patient records so that a stolen disk reveals nothing, and lets two strangers on opposite sides of the world agree a secret key without ever meeting. Yet encryption is also widely misunderstood: managers assume that "encrypted" means "secure", while developers sometimes invent their own schemes or misuse sound algorithms.
 
-This lesson explains the two great families of encryption. **Symmetric** encryption uses one shared secret key and is fast enough to protect bulk data. **Asymmetric** (public-key) encryption uses mathematically linked key pairs and solves the problem of distributing keys among people who have never met. You will work through small-number examples of Diffie–Hellman key agreement and RSA encryption by hand, so that the mathematics is concrete rather than mysterious, and then see how real systems combine both families in hybrid designs such as TLS and end-to-end encrypted messaging.
+This lesson explains the two great families of encryption. **Symmetric** encryption uses one shared secret key and is fast enough to protect bulk data. **Asymmetric** (public-key) encryption uses mathematically linked key pairs and solves the problem of distributing keys among people who have never met. You will work through small-number examples of Diffie-Hellman key agreement and RSA encryption by hand, so that the mathematics is concrete rather than mysterious, and then see how real systems combine both families in hybrid designs such as TLS and end-to-end encrypted messaging.
 
 ## Learning Objectives
 
 - Explain the goals of encryption and Kerckhoffs's principle.
 - Compare symmetric and asymmetric encryption in terms of keys, speed, key distribution and typical uses.
-- Apply the RSA and Diffie–Hellman algorithms to small-number examples and verify the results.
+- Apply the RSA and Diffie-Hellman algorithms to small-number examples and verify the results.
 - Explain why block cipher modes matter, contrasting ECB, CBC and GCM.
 - Evaluate algorithm and key-length choices for a business system, including hybrid encryption and the transition to post-quantum cryptography.
 
@@ -73,9 +73,9 @@ The practical lesson is to prefer **authenticated encryption** (AES-GCM or ChaCh
 
 In 1976 Whitfield Diffie and Martin Hellman published "New Directions in Cryptography", which introduced public-key cryptography and a method for two parties to agree a shared secret over a public channel. In 1978 Ron Rivest, Adi Shamir and Leonard Adleman published the RSA algorithm, which supports both encryption and digital signatures.
 
-Each party has a **public key**, which can be shared freely, and a **private key**, which must be kept secret. Asymmetric schemes rely on mathematical problems that are easy in one direction and believed hard to reverse: RSA relies on the difficulty of factoring the product of two large primes; Diffie–Hellman and elliptic-curve cryptography (ECC) rely on the difficulty of discrete logarithms.
+Each party has a **public key**, which can be shared freely, and a **private key**, which must be kept secret. Asymmetric schemes rely on mathematical problems that are easy in one direction and believed hard to reverse: RSA relies on the difficulty of factoring the product of two large primes; Diffie-Hellman and elliptic-curve cryptography (ECC) rely on the difficulty of discrete logarithms.
 
-Asymmetric operations are far slower than symmetric ones and are therefore used for **key establishment** and **digital signatures**, not bulk data. ECC achieves comparable security to RSA with much shorter keys, which is why modern TLS commonly uses elliptic-curve Diffie–Hellman (such as X25519) and ECDSA or Ed25519 signatures.
+Asymmetric operations are far slower than symmetric ones and are therefore used for **key establishment** and **digital signatures**, not bulk data. ECC achieves comparable security to RSA with much shorter keys, which is why modern TLS commonly uses elliptic-curve Diffie-Hellman (such as X25519) and ECDSA or Ed25519 signatures.
 
 | Feature | Symmetric | Asymmetric |
 |---|---|---|
@@ -83,7 +83,7 @@ Asymmetric operations are far slower than symmetric ones and are therefore used 
 | Speed | Fast | Much slower |
 | Key distribution | Hard: secret must be shared securely | Easier: public key can be published |
 | Typical uses | Bulk data, disk and database encryption, TLS data | Key exchange, digital signatures, certificates |
-| Examples | AES, ChaCha20 | RSA, Diffie–Hellman, ECDH, ECDSA |
+| Examples | AES, ChaCha20 | RSA, Diffie-Hellman, ECDH, ECDSA |
 
 ### Hybrid encryption
 
@@ -91,11 +91,11 @@ Real systems combine both: an asymmetric step establishes a fresh symmetric key,
 
 ### Looking ahead: post-quantum cryptography
 
-A sufficiently large quantum computer running Shor's algorithm would break RSA, Diffie–Hellman and ECC. Such machines do not exist at the required scale today, but data recorded now could be decrypted in future ("harvest now, decrypt later"). In August 2024 NIST published its first post-quantum cryptography standards, including the ML-KEM key-encapsulation mechanism (FIPS 203). Organisations with long-lived sensitive data should begin inventorying where they use public-key cryptography so they can migrate. Symmetric ciphers such as AES-256 are considered much less affected.
+A sufficiently large quantum computer running Shor's algorithm would break RSA, Diffie-Hellman and ECC. Such machines do not exist at the required scale today, but data recorded now could be decrypted in future ("harvest now, decrypt later"). In August 2024 NIST published its first post-quantum cryptography standards, including the ML-KEM key-encapsulation mechanism (FIPS 203). Organisations with long-lived sensitive data should begin inventorying where they use public-key cryptography so they can migrate. Symmetric ciphers such as AES-256 are considered much less affected.
 
 ## Worked Example
 
-### Part A: toy Diffie–Hellman key agreement
+### Part A: toy Diffie-Hellman key agreement
 
 The parties publicly agree a prime `p = 23` and a generator `g = 5`.
 
@@ -104,7 +104,7 @@ The parties publicly agree a prime `p = 23` and a generator `g = 5`.
 3. Ama computes `B^a mod p = 19^6 mod 23 = 2`.
 4. Kofi computes `A^b mod p = 8^15 mod 23 = 2`.
 
-Both obtain the **shared secret 2** without ever sending it. An eavesdropper sees `p`, `g`, 8 and 19 but must solve a discrete logarithm to find `a` or `b`. With real parameters (2048-bit primes or elliptic curves) this is infeasible. Note that basic Diffie–Hellman is **unauthenticated**: a man-in-the-middle could run separate exchanges with each party. This is why TLS adds the server's signature (CertificateVerify).
+Both obtain the **shared secret 2** without ever sending it. An eavesdropper sees `p`, `g`, 8 and 19 but must solve a discrete logarithm to find `a` or `b`. With real parameters (2048-bit primes or elliptic curves) this is infeasible. Note that basic Diffie-Hellman is **unauthenticated**: a man-in-the-middle could run separate exchanges with each party. This is why TLS adds the server's signature (CertificateVerify).
 
 ### Part B: toy RSA
 
@@ -149,7 +149,7 @@ The company's security lead rejects a proposal to use a developer's "custom XOR 
 In April 2016 WhatsApp announced that end-to-end encryption had been enabled by default for all messages, calls and attachments, using the Signal Protocol developed by Open Whisper Systems. WhatsApp published a technical white paper describing the design. In outline:
 
 - Each device generates long-term identity key pairs and additional pre-keys, whose public parts are registered with the server.
-- To start a conversation, the sender uses the recipient's public keys in an elliptic-curve Diffie–Hellman-based key agreement to derive a shared secret, even if the recipient is offline.
+- To start a conversation, the sender uses the recipient's public keys in an elliptic-curve Diffie-Hellman-based key agreement to derive a shared secret, even if the recipient is offline.
 - Messages are encrypted with symmetric keys that are continually updated (a "ratchet"), providing forward secrecy and limiting the damage if a key is compromised.
 - Users can compare "security codes" to verify that they hold each other's genuine identity keys, defending against a man-in-the-middle.
 
@@ -191,7 +191,7 @@ flowchart LR
 - Computing `φ(n)` as `p × q` rather than `(p − 1)(q − 1)`.
 - Forgetting that the RSA message must be smaller than `n`.
 - Claiming RSA is used to encrypt bulk data in TLS 1.3; it is used, if at all, for signatures.
-- Describing Diffie–Hellman as authenticated on its own.
+- Describing Diffie-Hellman as authenticated on its own.
 - Recommending "AES" without specifying a mode, key management and integrity protection.
 
 ## Critical Thinking Questions
@@ -205,7 +205,7 @@ flowchart LR
 ## Practical Exercises
 
 1. **Toy RSA by hand.** Using `p = 3`, `q = 11` and `e = 7`, compute `n`, `φ(n)` and `d`, then encrypt `m = 4` and decrypt the result. Expected output: `n = 33`, `φ(n) = 20`, `d = 3` (since 7 × 3 = 21 ≡ 1 mod 20), `c = 4^7 mod 33 = 16` and decryption `16^3 mod 33 = 4`.
-2. **Toy Diffie–Hellman.** With `p = 23`, `g = 5`, private values `a = 4` and `b = 3`, compute the public values and the shared secret. Expected output: `A = 4`, `B = 10`, shared secret `18` computed by both sides.
+2. **Toy Diffie-Hellman.** With `p = 23`, `g = 5`, private values `a = 4` and `b = 3`, compute the public values and the shared secret. Expected output: `A = 4`, `B = 10`, shared secret `18` computed by both sides.
 3. **Encrypt a file you own.** Use a reputable tool such as the encrypted-archive feature of an established archive manager or your operating system's disk encryption to encrypt a test file or folder on your own device. Record the algorithm used and how the key or password is managed. Expected output: a short note and a successful decryption test.
 4. **Guided labs.** Work through an introductory cryptography module on Cisco Skills for All. Expected output: a 150-word reflection comparing the course's explanation of symmetric and asymmetric encryption with this lesson.
 
@@ -214,29 +214,29 @@ flowchart LR
 - Symmetric encryption is fast and suits bulk data but needs secure key distribution; asymmetric encryption solves distribution and enables signatures but is slow.
 - Kerckhoffs's principle: security must depend only on the key; use public, vetted algorithms and libraries.
 - Use authenticated encryption (AES-GCM, ChaCha20-Poly1305); avoid ECB and legacy ciphers.
-- RSA rests on factoring; Diffie–Hellman and ECC on discrete logarithms; toy examples show the mechanics but real keys must be large and padded.
+- RSA rests on factoring; Diffie-Hellman and ECC on discrete logarithms; toy examples show the mechanics but real keys must be large and padded.
 - Real systems use hybrid encryption, and long-lived data now requires planning for post-quantum migration.
 
 ## Further Reading
 
-- Diffie, W., & Hellman, M. E. (1976). New directions in cryptography. *IEEE Transactions on Information Theory, 22*(6), 644–654.
-- Rivest, R. L., Shamir, A., & Adleman, L. (1978). A method for obtaining digital signatures and public-key cryptosystems. *Communications of the ACM, 21*(2), 120–126.
+- Diffie, W., & Hellman, M. E. (1976). New directions in cryptography. *IEEE Transactions on Information Theory, 22*(6), 644-654.
+- Rivest, R. L., Shamir, A., & Adleman, L. (1978). A method for obtaining digital signatures and public-key cryptosystems. *Communications of the ACM, 21*(2), 120-126.
 - Katz, J., & Lindell, Y. (2020). *Introduction to modern cryptography* (3rd ed.). CRC Press.
 - Ferguson, N., Schneier, B., & Kohno, T. (2010). *Cryptography engineering: Design principles and practical applications*. Wiley.
 - Stallings, W., & Brown, L. (2018). *Computer security: Principles and practice* (4th ed.). Pearson.
 
 ## Video Resources
 
-- [NIST Computer Security Resource Center](https://csrc.nist.gov/) — National Institute of Standards and Technology. Official home of cryptographic standards, including AES and the post-quantum cryptography project.
-- [Cisco Skills for All](https://skillsforall.com/) — Cisco Networking Academy. Free cybersecurity courses with introductory modules on cryptography.
+- [NIST Computer Security Resource Center](https://csrc.nist.gov/): National Institute of Standards and Technology. Official home of cryptographic standards, including AES and the post-quantum cryptography project.
+- [Cisco Skills for All](https://skillsforall.com/): Cisco Networking Academy. Free cybersecurity courses with introductory modules on cryptography.
 
 ## Revision Summary
 
-Symmetric encryption uses one shared key and is fast; asymmetric encryption uses public and private keys and solves key distribution. Diffie–Hellman agrees secrets over public channels; RSA encrypts and signs using modular exponentiation. Real systems combine both in hybrid designs and should use authenticated encryption from vetted libraries.
+Symmetric encryption uses one shared key and is fast; asymmetric encryption uses public and private keys and solves key distribution. Diffie-Hellman agrees secrets over public channels; RSA encrypts and signs using modular exponentiation. Real systems combine both in hybrid designs and should use authenticated encryption from vetted libraries.
 
 - AES-GCM or ChaCha20-Poly1305 for data; never ECB.
 - RSA: `n = pq`, `φ = (p−1)(q−1)`, `ed ≡ 1 mod φ`, `c = m^e mod n`.
 - Toy RSA: p = 5, q = 11, e = 3, d = 27; 7 encrypts to 13.
 - Toy DH: p = 23, g = 5, a = 6, b = 15, shared secret 2.
-- Diffie–Hellman alone is unauthenticated.
+- Diffie-Hellman alone is unauthenticated.
 - WhatsApp 2016: Signal Protocol, hybrid, forward secrecy.

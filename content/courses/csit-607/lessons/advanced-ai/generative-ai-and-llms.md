@@ -198,9 +198,9 @@ flowchart TD
 
 ## Video Resources
 
-- [Hugging Face Learn](https://huggingface.co/learn) — Hugging Face. Free LLM and NLP courses explaining transformers with hands-on notebooks.
-- [Google Cloud Training](https://cloud.google.com/learn/training) — Google Cloud. Official training catalogue including introductory generative AI learning paths.
-- [Google AI](https://ai.google/) — Google. Official portal with resources on generative AI research and responsible use.
+- [Hugging Face Learn](https://huggingface.co/learn): Hugging Face. Free LLM and NLP courses explaining transformers with hands-on notebooks.
+- [Google Cloud Training](https://cloud.google.com/learn/training): Google Cloud. Official training catalogue including introductory generative AI learning paths.
+- [Google AI](https://ai.google/): Google. Official portal with resources on generative AI research and responsible use.
 
 ## Revision Summary
 

@@ -9,7 +9,7 @@ cards:
     back: Internal validity concerns whether a study can rule out alternative explanations for a causal claim; internal consistency is a reliability property showing whether items in a scale measure the same thing (often via Cronbach's alpha).
   - lesson: validity-reliability-and-trustworthiness
     front: What do convergent and discriminant validity each show?
-    back: Convergent validity shows items for one construct relate strongly to each other; discriminant validity shows the construct is empirically distinct from other constructs (for example via the Fornell–Larcker criterion).
+    back: Convergent validity shows items for one construct relate strongly to each other; discriminant validity shows the construct is empirically distinct from other constructs (for example via the Fornell-Larcker criterion).
   - lesson: validity-reliability-and-trustworthiness
     front: Name Lincoln and Guba's four trustworthiness criteria with one strategy each.
     back: Credibility (triangulation, member checking); transferability (thick description); dependability (audit trail); confirmability (reflexivity and data-grounded quotations).

@@ -190,13 +190,13 @@ flowchart LR
 ## Further Reading
 
 - Buttle, F., & Maklan, S. (2019). *Customer relationship management: Concepts and technologies* (4th ed.). Routledge.
-- Lee, H. L., Padmanabhan, V., & Whang, S. (1997). Information distortion in a supply chain: The bullwhip effect. *Management Science, 43*(4), 546–558.
+- Lee, H. L., Padmanabhan, V., & Whang, S. (1997). Information distortion in a supply chain: The bullwhip effect. *Management Science, 43*(4), 546-558.
 - Monk, E., & Wagner, B. (2013). *Concepts in enterprise resource planning* (4th ed.). Cengage Learning.
 
 ## Video Resources
 
-- [Microsoft Learn: Dynamics 365](https://learn.microsoft.com/en-us/dynamics365/) — Microsoft. Official training and documentation covering CRM, supply chain and finance applications.
-- [SAP Learning](https://learning.sap.com/) — SAP. Learning journeys covering SAP's supply chain, customer experience and human capital management applications.
+- [Microsoft Learn: Dynamics 365](https://learn.microsoft.com/en-us/dynamics365/): Microsoft. Official training and documentation covering CRM, supply chain and finance applications.
+- [SAP Learning](https://learning.sap.com/): SAP. Learning journeys covering SAP's supply chain, customer experience and human capital management applications.
 
 ## Revision Summary
 

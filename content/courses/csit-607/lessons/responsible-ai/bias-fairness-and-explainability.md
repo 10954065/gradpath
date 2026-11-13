@@ -105,22 +105,22 @@ Explanations have limits. LIME results can vary with the perturbation settings; 
 | Approved, not qualified (FP) | 15 | 15 |
 | Total approved | 240 | 120 |
 
-**Step 1 – Demographic parity.**
+**Step 1: Demographic parity.**
 - Selection rate A `= 240 / 400 = 0.60`
 - Selection rate B `= 120 / 300 = 0.40`
 - Difference `= 0.60 − 0.40 = 0.20`; ratio `= 0.40 / 0.60 ≈ 0.67`, below the 0.8 four-fifths benchmark.
 
-**Step 2 – Equal opportunity (true positive rate).**
+**Step 2: Equal opportunity (true positive rate).**
 - TPR A `= 225 / 250 = 0.90`
 - TPR B `= 105 / 150 = 0.70`
 - Difference `= 0.20`: creditworthy rural applicants are approved much less often than creditworthy urban applicants.
 
-**Step 3 – False positive rate (for equalised odds).**
+**Step 3: False positive rate (for equalised odds).**
 - FPR A `= 15 / 150 = 0.10`
 - FPR B `= 15 / 150 = 0.10`
 - Equal, so the disparity lies entirely in missed qualified rural applicants.
 
-**Step 4 – Interpretation.** Part of the demographic parity gap reflects a genuine difference in qualification rates (62.5% versus 50%), but the equal opportunity gap shows that the model under-serves qualified rural applicants. Possible causes include proxies (for example, features based on transaction frequency, which may be lower where connectivity is poor) and under-representation of rural repayers in training data. Remedies include adding rural repayment data, re-examining features that measure rural customers poorly, and reviewing thresholds, followed by re-measurement. Note also the **selective labels** caveat: in normal operation, repayment is observed only for approved applicants, so a credible fairness audit needs experimental or carefully designed data, as assumed here.
+**Step 4: Interpretation.** Part of the demographic parity gap reflects a genuine difference in qualification rates (62.5% versus 50%), but the equal opportunity gap shows that the model under-serves qualified rural applicants. Possible causes include proxies (for example, features based on transaction frequency, which may be lower where connectivity is poor) and under-representation of rural repayers in training data. Remedies include adding rural repayment data, re-examining features that measure rural customers poorly, and reviewing thresholds, followed by re-measurement. Note also the **selective labels** caveat: in normal operation, repayment is observed only for approved applicants, so a credible fairness audit needs experimental or carefully designed data, as assumed here.
 
 ## Ghanaian Business Application
 
@@ -195,17 +195,17 @@ The loop shows that bias can enter at every stage and can be reinforced through 
 
 - Barocas, S., Hardt, M., & Narayanan, A. (2023). *Fairness and machine learning: Limitations and opportunities*. MIT Press. <https://fairmlbook.org/>
 - Hardt, M., Price, E., & Srebro, N. (2016). Equality of opportunity in supervised learning. In *Advances in Neural Information Processing Systems 29*.
-- Ribeiro, M. T., Singh, S., & Guestrin, C. (2016). "Why should I trust you?": Explaining the predictions of any classifier. In *Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining* (pp. 1135–1144). ACM.
+- Ribeiro, M. T., Singh, S., & Guestrin, C. (2016). "Why should I trust you?": Explaining the predictions of any classifier. In *Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining* (pp. 1135-1144). ACM.
 - Lundberg, S. M., & Lee, S.-I. (2017). A unified approach to interpreting model predictions. In *Advances in Neural Information Processing Systems 30*.
-- Obermeyer, Z., Powers, B., Vogeli, C., & Mullainathan, S. (2019). Dissecting racial bias in an algorithm used to manage the health of populations. *Science, 366*(6464), 447–453.
-- Buolamwini, J., & Gebru, T. (2018). Gender shades: Intersectional accuracy disparities in commercial gender classification. In *Proceedings of the 1st Conference on Fairness, Accountability and Transparency* (PMLR 81, pp. 77–91).
-- Rudin, C. (2019). Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead. *Nature Machine Intelligence, 1*, 206–215.
+- Obermeyer, Z., Powers, B., Vogeli, C., & Mullainathan, S. (2019). Dissecting racial bias in an algorithm used to manage the health of populations. *Science, 366*(6464), 447-453.
+- Buolamwini, J., & Gebru, T. (2018). Gender shades: Intersectional accuracy disparities in commercial gender classification. In *Proceedings of the 1st Conference on Fairness, Accountability and Transparency* (PMLR 81, pp. 77-91).
+- Rudin, C. (2019). Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead. *Nature Machine Intelligence, 1*, 206-215.
 - Molnar, C. (2022). *Interpretable machine learning: A guide for making black box models explainable* (2nd ed.). <https://christophm.github.io/interpretable-ml-book/>
 
 ## Video Resources
 
-- [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) — Google for Developers. Includes a module on fairness covering types of bias and fairness evaluation.
-- [Microsoft Learn](https://learn.microsoft.com/en-us/training/) — Microsoft. Official training portal; search for responsible AI modules on fairness and interpretability.
+- [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course): Google for Developers. Includes a module on fairness covering types of bias and fairness evaluation.
+- [Microsoft Learn](https://learn.microsoft.com/en-us/training/): Microsoft. Official training portal; search for responsible AI modules on fairness and interpretability.
 
 ## Revision Summary
 

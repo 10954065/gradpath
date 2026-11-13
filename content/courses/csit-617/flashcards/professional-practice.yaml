@@ -11,7 +11,7 @@ cards:
     back: Recognise, disclose in writing, let the organisation assess, manage (recuse, independent review, divest or decline), record and review when circumstances change.
   - lesson: workplace-ethics-and-conflicts-of-interest
     front: What is the test for whether a gift from a vendor is acceptable?
-    back: Whether it could influence, or appear to influence, a business decision — considering timing (e.g. during a tender), value, openness and organisational policy.
+    back: Whether it could influence, or appear to influence, a business decision, considering timing (e.g. during a tender), value, openness and organisational policy.
   - lesson: workplace-ethics-and-conflicts-of-interest
     front: What limits loyalty to an employer?
     back: Law and duties to the public. An employer cannot legitimately require deception of clients or regulators, concealment of serious defects or unlawful acts.
@@ -32,7 +32,7 @@ cards:
     back: Duty of care, breach of the standard of a reasonably competent professional, causation, and recognised harm.
   - lesson: whistleblowing-and-professional-negligence
     front: What standard is an IT professional held to in negligence?
-    back: That of a reasonably competent practitioner in the field, judged by accepted practice and knowledge at the time — not perfection.
+    back: That of a reasonably competent practitioner in the field, judged by accepted practice and knowledge at the time, not perfection.
   - lesson: whistleblowing-and-professional-negligence
     front: What does the Post Office Horizon scandal teach IT professionals?
     back: Treating system outputs as infallible, ignoring users' reports of anomalies and failing to disclose known defects can cause grave injustice; concerns must be heard and investigated.
@@ -47,7 +47,7 @@ cards:
     back: Legal recognition of electronic records, signatures and contracts, consumer protection in e-commerce and cyber offences such as unauthorised access and interference.
   - lesson: cybercrime-and-misuse-of-information-systems
     front: What separates ethical security testing from hacking?
-    back: Authorisation — written permission and agreed scope — followed by harm avoidance and coordinated, private disclosure of findings.
+    back: Authorisation, written permission and agreed scope, followed by harm avoidance and coordinated, private disclosure of findings.
   - lesson: cybercrime-and-misuse-of-information-systems
     front: Name four controls that reduce insider misuse.
-    back: Least privilege, separation of duties, logging and monitoring of privileged activity, and prompt joiner–mover–leaver access changes.
+    back: Least privilege, separation of duties, logging and monitoring of privileged activity, and prompt joiner-mover-leaver access changes.

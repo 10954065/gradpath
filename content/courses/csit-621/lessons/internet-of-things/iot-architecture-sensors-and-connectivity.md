@@ -209,15 +209,15 @@ flowchart TD
 
 ## Further Reading
 
-- Atzori, L., Iera, A., & Morabito, G. (2010). The Internet of Things: A survey. *Computer Networks, 54*(15), 2787–2805.
-- Al-Fuqaha, A., Guizani, M., Mohammadi, M., Aledhari, M., & Ayyash, M. (2015). Internet of Things: A survey on enabling technologies, protocols, and applications. *IEEE Communications Surveys & Tutorials, 17*(4), 2347–2376.
-- Raza, U., Kulkarni, P., & Sooriyabandara, M. (2017). Low power wide area networks: An overview. *IEEE Communications Surveys & Tutorials, 19*(2), 855–873.
+- Atzori, L., Iera, A., & Morabito, G. (2010). The Internet of Things: A survey. *Computer Networks, 54*(15), 2787-2805.
+- Al-Fuqaha, A., Guizani, M., Mohammadi, M., Aledhari, M., & Ayyash, M. (2015). Internet of Things: A survey on enabling technologies, protocols, and applications. *IEEE Communications Surveys & Tutorials, 17*(4), 2347-2376.
+- Raza, U., Kulkarni, P., & Sooriyabandara, M. (2017). Low power wide area networks: An overview. *IEEE Communications Surveys & Tutorials, 19*(2), 855-873.
 
 ## Video Resources
 
-- [ITU](https://www.itu.int/) — International Telecommunication Union. The UN agency for information and communication technologies, with material on IoT standards and spectrum.
-- [Microsoft Learn](https://learn.microsoft.com/) — Microsoft. Learning paths introducing IoT solution architecture and device connectivity.
-- [IBM Think](https://www.ibm.com/think) — IBM. Explainers on the Internet of Things and its business uses.
+- [ITU](https://www.itu.int/): International Telecommunication Union. The UN agency for information and communication technologies, with material on IoT standards and spectrum.
+- [Microsoft Learn](https://learn.microsoft.com/): Microsoft. Learning paths introducing IoT solution architecture and device connectivity.
+- [IBM Think](https://www.ibm.com/think): IBM. Explainers on the Internet of Things and its business uses.
 
 ## Revision Summary
 

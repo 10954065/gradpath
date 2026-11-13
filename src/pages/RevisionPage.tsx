@@ -139,7 +139,7 @@ export default function RevisionPage() {
           <div className="mt-6 flex flex-wrap gap-2">
             {!revealed && current.item_type !== 'topic' ? (
               <Button onClick={() => setRevealed(true)}>
-                <Brain /> I've recalled it — show answer
+                <Brain /> Show answer
               </Button>
             ) : (
               RATINGS.map((r) => (

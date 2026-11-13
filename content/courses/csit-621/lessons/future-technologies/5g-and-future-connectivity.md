@@ -196,15 +196,15 @@ flowchart TD
 
 ## Further Reading
 
-- International Telecommunication Union. (2015). *IMT vision – Framework and overall objectives of the future development of IMT for 2020 and beyond* (Recommendation ITU-R M.2083-0). ITU.
-- Andrews, J. G., Buzzi, S., Choi, W., Hanly, S. V., Lozano, A., Soong, A. C. K., & Zhang, J. C. (2014). What will 5G be? *IEEE Journal on Selected Areas in Communications, 32*(6), 1065–1082.
+- International Telecommunication Union. (2015). *IMT vision: Framework and overall objectives of the future development of IMT for 2020 and beyond* (Recommendation ITU-R M.2083-0). ITU.
+- Andrews, J. G., Buzzi, S., Choi, W., Hanly, S. V., Lozano, A., Soong, A. C. K., & Zhang, J. C. (2014). What will 5G be? *IEEE Journal on Selected Areas in Communications, 32*(6), 1065-1082.
 - Dahlman, E., Parkvall, S., & Sköld, J. (2018). *5G NR: The next generation wireless access technology*. Academic Press.
 
 ## Video Resources
 
-- [3GPP](https://www.3gpp.org/) — 3rd Generation Partnership Project. Official site of the body that develops 5G technical specifications, with explanatory articles on releases and features.
-- [International Telecommunication Union](https://www.itu.int/) — ITU. Official site of the UN agency for ICTs, with material on IMT-2020 and IMT-2030.
-- [National Communications Authority, Ghana](https://nca.org.gh/) — NCA. Official regulator site for current information on spectrum and licensing in Ghana.
+- [3GPP](https://www.3gpp.org/): 3rd Generation Partnership Project. Official site of the body that develops 5G technical specifications, with explanatory articles on releases and features.
+- [International Telecommunication Union](https://www.itu.int/): ITU. Official site of the UN agency for ICTs, with material on IMT-2020 and IMT-2030.
+- [National Communications Authority, Ghana](https://nca.org.gh/): NCA. Official regulator site for current information on spectrum and licensing in Ghana.
 
 ## Revision Summary
 

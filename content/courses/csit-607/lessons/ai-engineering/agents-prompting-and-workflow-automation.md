@@ -35,7 +35,7 @@ This lesson connects three topics. First, it explains the architecture of LLM-ba
 - **Guardrails**: Technical and procedural controls that constrain what an AI system can see, say and do.
 - **Human-in-the-loop (HITL)**: A design in which a person must review or approve certain AI outputs or actions before they take effect.
 - **Prompt engineering**: The practice of designing instructions and context for an LLM to obtain accurate, relevant, safe and well-formatted outputs.
-- **Few-shot prompting**: Including a small number of worked input–output examples in a prompt to show the model the expected behaviour.
+- **Few-shot prompting**: Including a small number of worked input-output examples in a prompt to show the model the expected behaviour.
 
 ## Detailed Explanation
 
@@ -135,7 +135,7 @@ Automation exists on a spectrum:
 
 | Approach | How it works | Strength | Limitation |
 |---|---|---|---|
-| Rule-based automation | If–then logic in workflows or scripts | Predictable, auditable | Breaks on unstructured inputs |
+| Rule-based automation | If-then logic in workflows or scripts | Predictable, auditable | Breaks on unstructured inputs |
 | Robotic process automation (RPA) | Software "bots" mimic user clicks and keystrokes across applications | Works with legacy systems without APIs | Brittle when screens change; no understanding |
 | AI workflow automation | AI steps (classification, extraction, summarisation, drafting) embedded in a workflow with rules and human checkpoints | Handles unstructured text, documents and conversation | Probabilistic; needs evaluation, monitoring and guardrails |
 | Agentic automation | An agent chooses the sequence of steps and tools itself | Flexible for varied tasks | Hardest to predict, test and govern |
@@ -148,10 +148,10 @@ A sound design principle is to use **the least autonomy that achieves the goal**
 
 A practical framework for deciding how much control to give an AI system:
 
-1. **Assist** – AI drafts or suggests; a human performs every action.
-2. **Approve** – AI prepares actions; a human approves each one.
-3. **Supervise** – AI acts within limits; humans review samples and exceptions.
-4. **Autonomous** – AI acts without routine review, with monitoring and the ability to intervene.
+1. **Assist**: AI drafts or suggests; a human performs every action.
+2. **Approve**: AI prepares actions; a human approves each one.
+3. **Supervise**: AI acts within limits; humans review samples and exceptions.
+4. **Autonomous**: AI acts without routine review, with monitoring and the ability to intervene.
 
 The appropriate level depends on the impact and reversibility of errors, the maturity of evaluation evidence and regulatory expectations. Most customer-facing financial or health workflows should begin at levels 1 or 2.
 
@@ -245,8 +245,8 @@ The case is a concise lesson in agent and prompt design. Grounding answers in au
 
 ## Video Resources
 
-- [DeepLearning.AI Short Courses](https://www.deeplearning.ai/short-courses/) — DeepLearning.AI. Free short courses on prompt engineering, retrieval-augmented generation and building agents.
-- [Hugging Face Learn](https://huggingface.co/learn) — Hugging Face. Free courses including an agents course and LLM course using open-source tools.
+- [DeepLearning.AI Short Courses](https://www.deeplearning.ai/short-courses/): DeepLearning.AI. Free short courses on prompt engineering, retrieval-augmented generation and building agents.
+- [Hugging Face Learn](https://huggingface.co/learn): Hugging Face. Free courses including an agents course and LLM course using open-source tools.
 
 ## Revision Summary
 

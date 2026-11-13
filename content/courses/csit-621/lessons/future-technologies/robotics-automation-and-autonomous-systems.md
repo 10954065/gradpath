@@ -44,7 +44,7 @@ For managers, the challenge is to see past the general label "automation" and as
 
 These three terms overlap but are not synonyms. **Automation** describes *what* is done: a task once performed by a person is performed by technology. **Robotics** describes one *means* of doing it in the physical world, through machines that combine sensors, controllers and actuators. **Autonomy** describes *how independently* a system acts. A traditional industrial welding robot is highly automated but has little autonomy: it repeats a programmed path inside a safety cage and stops if anything unexpected happens. An autonomous delivery robot on a pavement must perceive a changing environment, plan a route and respond to pedestrians without human guidance.
 
-A physical robot typically follows a **sense–think–act** cycle. Sensors (cameras, lidar, radar, ultrasonic sensors, force sensors, GPS) gather data; software for perception, localisation and planning interprets it, increasingly using machine learning; actuators (motors, grippers, wheels, rotors) carry out decisions. Each stage can fail, and failures propagate.
+A physical robot typically follows a **sense-think-act** cycle. Sensors (cameras, lidar, radar, ultrasonic sensors, force sensors, GPS) gather data; software for perception, localisation and planning interprets it, increasingly using machine learning; actuators (motors, grippers, wheels, rotors) carry out decisions. Each stage can fail, and failures propagate.
 
 ### Types of physical robots in business
 
@@ -192,23 +192,23 @@ flowchart LR
 ## Further Reading
 
 - SAE International. (2021). *Taxonomy and definitions for terms related to driving automation systems for on-road motor vehicles* (SAE Standard J3016_202104).
-- Parasuraman, R., Sheridan, T. B., & Wickens, C. D. (2000). A model for types and levels of human interaction with automation. *IEEE Transactions on Systems, Man, and Cybernetics – Part A: Systems and Humans, 30*(3), 286–297.
-- van der Aalst, W. M. P., Bichler, M., & Heinzl, A. (2018). Robotic process automation. *Business & Information Systems Engineering, 60*(4), 269–272.
+- Parasuraman, R., Sheridan, T. B., & Wickens, C. D. (2000). A model for types and levels of human interaction with automation. *IEEE Transactions on Systems, Man, and Cybernetics: Part A: Systems and Humans, 30*(3), 286-297.
+- van der Aalst, W. M. P., Bichler, M., & Heinzl, A. (2018). Robotic process automation. *Business & Information Systems Engineering, 60*(4), 269-272.
 - Siciliano, B., & Khatib, O. (Eds.). (2016). *Springer handbook of robotics* (2nd ed.). Springer.
 - Brynjolfsson, E., & McAfee, A. (2014). *The second machine age: Work, progress, and prosperity in a time of brilliant technologies*. W. W. Norton.
 
 ## Video Resources
 
-- [SAE International](https://www.sae.org/) — SAE International. Official site of the standards body that publishes J3016, with explanatory material on driving automation levels.
-- [International Federation of Robotics](https://ifr.org/) — IFR. Official industry body site with reports and explanations of industrial and service robotics.
-- [MIT OpenCourseWare](https://ocw.mit.edu/) — Massachusetts Institute of Technology. Open learning portal; search for robotics and autonomous systems course materials.
+- [SAE International](https://www.sae.org/): SAE International. Official site of the standards body that publishes J3016, with explanatory material on driving automation levels.
+- [International Federation of Robotics](https://ifr.org/): IFR. Official industry body site with reports and explanations of industrial and service robotics.
+- [MIT OpenCourseWare](https://ocw.mit.edu/): Massachusetts Institute of Technology. Open learning portal; search for robotics and autonomous systems course materials.
 
 ## Revision Summary
 
-Automation replaces human effort; robotics provides physical means through sense–think–act machines; autonomy measures independence within a defined domain. RPA automates rule-based digital tasks and differs sharply from physical robots in cost, speed and risk. Levels-of-automation models, including SAE J3016 for vehicles, clarify who acts, who monitors and who is the fallback. Autonomous systems carry technical, human-factor, security, legal and ethical risks that must be managed together.
+Automation replaces human effort; robotics provides physical means through sense-think-act machines; autonomy measures independence within a defined domain. RPA automates rule-based digital tasks and differs sharply from physical robots in cost, speed and risk. Levels-of-automation models, including SAE J3016 for vehicles, clarify who acts, who monitors and who is the fallback. Autonomous systems carry technical, human-factor, security, legal and ethical risks that must be managed together.
 
 - RPA = software bots on user interfaces; brittle; govern credentials and ownership.
-- SAE 0–2: human drives and supervises; 3: takeover on request; 4: no takeover within ODD; 5: everywhere.
+- SAE 0-2: human drives and supervises; 3: takeover on request; 4: no takeover within ODD; 5: everywhere.
 - Parasuraman et al.: automate acquisition, analysis, decision and action to different degrees.
 - Automation complacency undermines human safety backups.
 - Zipline in Ghana: autonomous drones in a defined domain via public-private partnership.

@@ -10,7 +10,7 @@ cards:
     front: Work through toy RSA with p = 5, q = 11, e = 3.
     back: n = 55, φ(n) = 40, d = 27 (3 × 27 = 81 ≡ 1 mod 40). Encrypt 7 - 7^3 mod 55 = 13. Decrypt - 13^27 mod 55 = 7.
   - lesson: symmetric-and-asymmetric-encryption
-    front: In toy Diffie–Hellman with p = 23, g = 5, a = 6, b = 15, what is exchanged and what is shared?
+    front: In toy Diffie-Hellman with p = 23, g = 5, a = 6, b = 15, what is exchanged and what is shared?
     back: Public values A = 5^6 mod 23 = 8 and B = 5^15 mod 23 = 19 are exchanged; both compute the shared secret 2 without sending it.
   - lesson: symmetric-and-asymmetric-encryption
     front: Why should ECB mode not be used to encrypt data?

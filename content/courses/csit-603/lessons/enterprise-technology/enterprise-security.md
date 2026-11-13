@@ -77,12 +77,12 @@ The matrix below shows which pairs of functions should not be held by the same u
 
 | Function | Maintain supplier master | Create purchase order | Approve purchase order | Record goods receipt | Post supplier invoice | Release payment |
 |---|---|---|---|---|---|---|
-| Maintain supplier master | — | X | | | X | X |
-| Create purchase order | X | — | X | X | | X |
-| Approve purchase order | | X | — | | | |
-| Record goods receipt | | X | | — | X | |
-| Post supplier invoice | X | | | X | — | X |
-| Release payment | X | X | | | X | — |
+| Maintain supplier master | n/a | X | | | X | X |
+| Create purchase order | X | n/a | X | X | | X |
+| Approve purchase order | | X | n/a | | | |
+| Record goods receipt | | X | | n/a | X | |
+| Post supplier invoice | X | | | X | n/a | X |
+| Release payment | X | X | | | X | n/a |
 
 The reasoning behind key conflicts:
 
@@ -185,16 +185,16 @@ flowchart LR
 
 ## Further Reading
 
-- Sandhu, R. S., Coyne, E. J., Feinstein, H. L., & Youman, C. E. (1996). Role-based access control models. *Computer, 29*(2), 38–47.
+- Sandhu, R. S., Coyne, E. J., Feinstein, H. L., & Youman, C. E. (1996). Role-based access control models. *Computer, 29*(2), 38-47.
 - Committee of Sponsoring Organizations of the Treadway Commission. (2013). *Internal control: Integrated framework*. COSO.
 - International Organization for Standardization. (2022). *Information security, cybersecurity and privacy protection: Information security management systems: Requirements* (ISO/IEC 27001:2022). ISO.
 - Monk, E., & Wagner, B. (2013). *Concepts in enterprise resource planning* (4th ed.). Cengage Learning.
 
 ## Video Resources
 
-- [SAP Learning](https://learning.sap.com/) — SAP. Free learning journeys including introductions to authorisation concepts and governance, risk and compliance.
-- [Microsoft Learn training](https://learn.microsoft.com/training/) — Microsoft. Self-paced modules on identity, access management and role-based access control.
-- [ISO/IEC 27001 information security management](https://www.iso.org/standard/27001) — ISO. Official overview of the international standard for information security management systems.
+- [SAP Learning](https://learning.sap.com/): SAP. Free learning journeys including introductions to authorisation concepts and governance, risk and compliance.
+- [Microsoft Learn training](https://learn.microsoft.com/training/): Microsoft. Self-paced modules on identity, access management and role-based access control.
+- [ISO/IEC 27001 information security management](https://www.iso.org/standard/27001): ISO. Official overview of the international standard for information security management systems.
 
 ## Revision Summary
 

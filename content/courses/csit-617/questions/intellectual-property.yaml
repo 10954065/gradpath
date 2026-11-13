@@ -6,7 +6,7 @@ questions:
     type: mcq
     bloom: understand
     difficulty: easy
-    objective: Apply the idea–expression distinction to software
+    objective: Apply the idea-expression distinction to software
     prompt: A competitor studies a popular Ghanaian ride-hailing app and independently writes new code that reproduces its main features. Which statement best describes the copyright position?
     options:
       - The competitor infringes copyright because the features are the same
@@ -148,7 +148,7 @@ questions:
     objective: Interpret "free" in free software
     prompt: In the Free Software Foundation's sense, "free software" means software that is given away at no cost.
     answer: false
-    explanation: The word free refers to freedom — to run, study and change, redistribute and distribute modified versions — not price. Free software may be sold, and no-cost software can be proprietary.
+    explanation: The word free refers to freedom (to run, study and change, redistribute and distribute modified versions) not price. Free software may be sold, and no-cost software can be proprietary.
   - id: ip12
     lesson: software-licensing-and-open-source
     type: short_answer
@@ -212,7 +212,7 @@ questions:
       - Problematic, because the student did not confirm the institution's policy, did not disclose the use and submitted unverified, apparently fabricated references
       - Problematic only because of grammar errors in AI output
     answer: 2
-    explanation: Silence in a brief does not authorise use; students must check their institution's policy and ask when unclear. Undisclosed AI-generated text can misrepresent authorship, and submitting non-existent references is fabrication regardless of intention. The permit–disclose–verify–own model captures each failure.
+    explanation: Silence in a brief does not authorise use; students must check their institution's policy and ask when unclear. Undisclosed AI-generated text can misrepresent authorship, and submitting non-existent references is fabrication regardless of intention. The permit-disclose-verify-own model captures each failure.
   - id: ip17
     lesson: plagiarism-and-academic-integrity
     type: matching
@@ -229,7 +229,7 @@ questions:
         right: Fabrication
       - left: Resubmitting last year's essay for a new module
         right: Self-plagiarism or duplicate submission
-    explanation: Each behaviour misrepresents something different — who did the work, whether it was individual, whether the data are real, or whether the effort is new. Precise classification shows understanding.
+    explanation: Each behaviour misrepresents something different, who did the work, whether it was individual, whether the data are real, or whether the effort is new. Precise classification shows understanding.
   - id: ip18
     lesson: plagiarism-and-academic-integrity
     type: true_false
@@ -247,7 +247,7 @@ questions:
     objective: Recall a fundamental value of academic integrity
     prompt: The ICAI's fundamental values are honesty, trust, fairness, respect, responsibility and which sixth value?
     answers: ["courage"]
-    explanation: Courage — acting with integrity when it is difficult or unpopular — completes the six values described by the International Center for Academic Integrity.
+    explanation: Courage, acting with integrity when it is difficult or unpopular, completes the six values described by the International Center for Academic Integrity.
   - id: ip20
     lesson: plagiarism-and-academic-integrity
     type: mcq
@@ -261,7 +261,7 @@ questions:
       - AI tools are too expensive for most researchers
       - AI tools are protected by trademark law
     answer: 1
-    explanation: Authorship entails accountability — answering for the work, correcting errors and attesting to its integrity — which a tool cannot do. Writing quality and cost are irrelevant to the principle, and trademark law has nothing to do with authorship.
+    explanation: Authorship entails accountability (answering for the work, correcting errors and attesting to its integrity) which a tool cannot do. Writing quality and cost are irrelevant to the principle, and trademark law has nothing to do with authorship.
 
   # ---------- module-level ----------
   - id: ip21
@@ -297,7 +297,7 @@ questions:
         marks: 2
         descriptor: Addresses the CEO's schedule argument and writes clearly.
     modelAnswer: |
-      A strong answer separates the three problems. (a) Because the system will be distributed to clients, incorporating GPL code generally obliges the firm to license the combined work under the GPL and provide source. If it wants to remain proprietary, it must replace the module or negotiate a separate licence; renaming or modifying the code does not avoid the obligation. (b) Icons without licence information are protected by default copyright, so the firm lacks permission; it should replace them with properly licensed assets or obtain permission. (c) The report misrepresents vendor material as the firm's own analysis — plagiarism — and may also infringe copyright; it must be corrected and the funder informed.
+      A strong answer separates the three problems. (a) Because the system will be distributed to clients, incorporating GPL code generally obliges the firm to license the combined work under the GPL and provide source. If it wants to remain proprietary, it must replace the module or negotiate a separate licence; renaming or modifying the code does not avoid the obligation. (b) Icons without licence information are protected by default copyright, so the firm lacks permission; it should replace them with properly licensed assets or obtain permission. (c) The report misrepresents vendor material as the firm's own analysis, plagiarism, and may also infringe copyright; it must be corrected and the funder informed.
 
       Stakeholders include clients (who may inherit legal risk), the funder (misled), original authors (whose conditions are ignored), staff and the firm's reputation. A utilitarian analysis weighs short-term delay against risks of injunctions, client losses and reputational damage, and the wider harm to the open-source commons; it favours remediation before shipping. A Kantian analysis rejects shipping knowingly non-compliant software because it treats authors merely as means and relies on deception. ACM principles 1.3 (honesty), 1.5 (respect and credit creators' work) and 2.3 (know and respect rules) point the same way.
 

@@ -187,8 +187,8 @@ flowchart LR
 
 ## Video Resources
 
-- [Web Accessibility Perspectives](https://www.w3.org/WAI/perspective-videos/) — W3C Web Accessibility Initiative. Short official videos showing how accessibility features help people with and without disabilities.
-- [W3C Web Accessibility Initiative](https://www.w3.org/WAI/) — W3C. Official portal for WCAG, introductory guides and accessibility learning resources.
+- [Web Accessibility Perspectives](https://www.w3.org/WAI/perspective-videos/): W3C Web Accessibility Initiative. Short official videos showing how accessibility features help people with and without disabilities.
+- [W3C Web Accessibility Initiative](https://www.w3.org/WAI/): W3C. Official portal for WCAG, introductory guides and accessibility learning resources.
 
 ## Revision Summary
 

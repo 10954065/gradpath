@@ -109,7 +109,7 @@ Symptoms such as "claims are rejected" have causes, and redesigning around sympt
 | 4. Pay at cashier | Cashiers | 1 | 2 | 25 | BVA |
 | 5. Dispense medicines | Pharmacists | 2 | 4 | 30 | VA |
 
-**Step 1 – Cycle time efficiency.**
+**Step 1: Cycle time efficiency.**
 
 - Total processing time = 3 + 3 + 10 + 2 + 4 = 22 minutes.
 - Total waiting time = 20 + 15 + 45 + 25 + 30 = 135 minutes.
@@ -119,7 +119,7 @@ Symptoms such as "claims are rejected" have causes, and redesigning around sympt
 
 Roughly nine-tenths of the patient's time is non-value-adding, and waiting dominates.
 
-**Step 2 – Capacity and utilisation (demand 30 patients per hour).**
+**Step 2: Capacity and utilisation (demand 30 patients per hour).**
 
 | Resource | Capacity per hour | Utilisation |
 |---|---|---|
@@ -129,11 +129,11 @@ Roughly nine-tenths of the patient's time is non-value-adding, and waiting domin
 | Cashier | 1 × 60/2 = 30 | 30/30 = 100% |
 | Pharmacists | 2 × 60/4 = 30 | 100% |
 
-**Step 3 – Interpretation.** Doctors are the bottleneck: at 125% utilisation, demand exceeds capacity and the consultation queue will grow throughout the morning. The cashier and pharmacy are at 100%, so any variability creates long queues there too. Adding records clerks would not help throughput. Following the Theory of Constraints, the hospital should first *exploit* doctors' time (for example, by moving folder retrieval and test ordering away from consultation), then *subordinate* other steps (schedule arrivals by appointment slots), and only then *elevate* capacity (add a doctor in the peak).
+**Step 3: Interpretation.** Doctors are the bottleneck: at 125% utilisation, demand exceeds capacity and the consultation queue will grow throughout the morning. The cashier and pharmacy are at 100%, so any variability creates long queues there too. Adding records clerks would not help throughput. Following the Theory of Constraints, the hospital should first *exploit* doctors' time (for example, by moving folder retrieval and test ordering away from consultation), then *subordinate* other steps (schedule arrivals by appointment slots), and only then *elevate* capacity (add a doctor in the peak).
 
-**Step 4 – Root cause of a related problem.** Insurance claims are often rejected. A 5 Whys sequence: Why rejected? Missing diagnosis codes. Why missing? Doctors write diagnoses on paper and the claims clerk codes them later. Why later? There is no electronic capture at consultation. Why? The registration system does not reach consulting rooms. Root cause: information is not captured once at the source. A Pareto count of rejection reasons over a month would confirm whether this is the dominant cause.
+**Step 4: Root cause of a related problem.** Insurance claims are often rejected. A 5 Whys sequence: Why rejected? Missing diagnosis codes. Why missing? Doctors write diagnoses on paper and the claims clerk codes them later. Why later? There is no electronic capture at consultation. Why? The registration system does not reach consulting rooms. Root cause: information is not captured once at the source. A Pareto count of rejection reasons over a month would confirm whether this is the dominant cause.
 
-**Step 5 – Prioritised inefficiencies.** (1) Doctor capacity and consultation waiting; (2) folder retrieval, a pure NVA step that could be eliminated with electronic records; (3) the single cashier, a near-bottleneck that could be removed by mobile money payment at registration or consultation; (4) late diagnosis coding causing claim defects.
+**Step 5: Prioritised inefficiencies.** (1) Doctor capacity and consultation waiting; (2) folder retrieval, a pure NVA step that could be eliminated with electronic records; (3) the single cashier, a near-bottleneck that could be removed by mobile money payment at registration or consultation; (4) late diagnosis coding causing claim defects.
 
 ## International Case Study
 
@@ -210,8 +210,8 @@ flowchart LR
 
 ## Video Resources
 
-- [Bizagi](https://www.bizagi.com/) — Bizagi. Official site for Bizagi Modeler, which includes process simulation for analysing time and resources.
-- [Camunda Documentation](https://docs.camunda.io/) — Camunda. Official documentation including process monitoring and analysis of running process instances.
+- [Bizagi](https://www.bizagi.com/): Bizagi. Official site for Bizagi Modeler, which includes process simulation for analysing time and resources.
+- [Camunda Documentation](https://docs.camunda.io/): Camunda. Official documentation including process monitoring and analysis of running process instances.
 
 ## Revision Summary
 

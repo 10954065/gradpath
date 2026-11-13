@@ -128,7 +128,7 @@ questions:
     objective: Recall the property protecting past sessions after key compromise
     prompt: What property ensures that stealing a server's long-term private key does not allow decryption of previously recorded sessions?
     answers: [forward secrecy, perfect forward secrecy, PFS]
-    explanation: Forward secrecy comes from ephemeral Diffie–Hellman key exchange; TLS 1.3 makes it mandatory.
+    explanation: Forward secrecy comes from ephemeral Diffie-Hellman key exchange; TLS 1.3 makes it mandatory.
   - id: ns11
     lesson: secure-protocols
     type: matching
@@ -254,7 +254,7 @@ questions:
       - Availability
       - Non-repudiation
     answer: 1
-    explanation: Biba enforces "no read down, no write up" to protect integrity. Bell–LaPadula enforces "no read up, no write down" for confidentiality.
+    explanation: Biba enforces "no read down, no write up" to protect integrity. Bell-LaPadula enforces "no read up, no write down" for confidentiality.
   - id: ns20
     lesson: os-endpoint-and-access-control
     type: mcq

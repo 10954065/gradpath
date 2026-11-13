@@ -219,8 +219,8 @@ flowchart LR
 ## Further Reading
 
 - Nissenbaum, H. (2010). *Privacy in context: Technology, policy, and the integrity of social life*. Stanford University Press.
-- Solove, D. J. (2006). A taxonomy of privacy. *University of Pennsylvania Law Review, 154*(3), 477–564.
-- Warren, S. D., & Brandeis, L. D. (1890). The right to privacy. *Harvard Law Review, 4*(5), 193–220.
+- Solove, D. J. (2006). A taxonomy of privacy. *University of Pennsylvania Law Review, 154*(3), 477-564.
+- Warren, S. D., & Brandeis, L. D. (1890). The right to privacy. *Harvard Law Review, 4*(5), 193-220.
 - Westin, A. F. (1967). *Privacy and freedom*. Atheneum.
 - Data Protection Commission, Ghana. (n.d.). *Data Protection Commission*. <https://dataprotection.org.gh/>
 - Regulation (EU) 2016/679 of the European Parliament and of the Council (General Data Protection Regulation). (2016). <https://eur-lex.europa.eu/eli/reg/2016/679/oj>
@@ -228,8 +228,8 @@ flowchart LR
 
 ## Video Resources
 
-- [Data Protection Commission, Ghana](https://dataprotection.org.gh/) — Data Protection Commission. Official site with information on registration, data subject rights and guidance under Act 843.
-- [UK Information Commissioner's Office](https://ico.org.uk/) — Information Commissioner's Office. Official regulator site with accessible guidance and explainer resources on data protection principles.
+- [Data Protection Commission, Ghana](https://dataprotection.org.gh/): Data Protection Commission. Official site with information on registration, data subject rights and guidance under Act 843.
+- [UK Information Commissioner's Office](https://ico.org.uk/): Information Commissioner's Office. Official regulator site with accessible guidance and explainer resources on data protection principles.
 
 ## Revision Summary
 

@@ -46,11 +46,11 @@ The card system is often called a **four-party model**: the **cardholder**, the 
 
 ### Five stages that are often confused
 
-1. **Authentication** – verifying that the person paying is the legitimate cardholder or wallet owner. For cards online this commonly uses 3-D Secure, where the issuer may challenge the customer with a one-time password or app approval. For mobile money it is the customer's PIN entry on their own phone.
-2. **Authorisation** – the issuer checks that the card is valid and funds or credit are available and returns an approval code, placing a **hold** on the funds. The money has not yet moved.
-3. **Capture** – the merchant confirms that it wants to collect the authorised amount. Many online merchants capture automatically at authorisation ("sale" transactions); others authorise first and capture later, for example when goods are shipped or a hotel stay ends. Uncaptured authorisations expire after a period set by scheme rules.
-4. **Clearing** – the exchange of transaction details between acquirer and issuer through the scheme, calculating what each party owes, usually in batches.
-5. **Settlement** – the actual movement of funds: the issuer pays the scheme or acquirer, and the acquirer or PSP pays the merchant, net of fees, according to an agreed schedule.
+1. **Authentication**: verifying that the person paying is the legitimate cardholder or wallet owner. For cards online this commonly uses 3-D Secure, where the issuer may challenge the customer with a one-time password or app approval. For mobile money it is the customer's PIN entry on their own phone.
+2. **Authorisation**: the issuer checks that the card is valid and funds or credit are available and returns an approval code, placing a **hold** on the funds. The money has not yet moved.
+3. **Capture**: the merchant confirms that it wants to collect the authorised amount. Many online merchants capture automatically at authorisation ("sale" transactions); others authorise first and capture later, for example when goods are shipped or a hotel stay ends. Uncaptured authorisations expire after a period set by scheme rules.
+4. **Clearing**: the exchange of transaction details between acquirer and issuer through the scheme, calculating what each party owes, usually in batches.
+5. **Settlement**: the actual movement of funds: the issuer pays the scheme or acquirer, and the acquirer or PSP pays the merchant, net of fees, according to an agreed schedule.
 
 The gap between authorisation (seconds) and settlement (often one or more business days later) explains why merchants must reconcile what their system *recorded as paid* with what *actually arrived* in their bank account.
 
@@ -66,7 +66,7 @@ A mobile money payment through a PSP follows a different pattern:
 6. The PSP notifies the merchant by **webhook** and updates the transaction status; the merchant should **verify** the status with the PSP before fulfilling the order.
 7. The PSP later **settles** collected funds to the merchant's bank account or wallet, net of fees.
 
-Compared with cards, mobile money payments are typically *pull requests approved by the customer on a separate device*, are usually completed as a single debit rather than an authorisation hold followed by capture, and rely on the operator's wallet ledger rather than an issuer–acquirer network. A distinctive failure mode is the **pending** state: the customer may not see or respond to the prompt, the session may time out, or network delays may leave the status uncertain for a while.
+Compared with cards, mobile money payments are typically *pull requests approved by the customer on a separate device*, are usually completed as a single debit rather than an authorisation hold followed by capture, and rely on the operator's wallet ledger rather than an issuer-acquirer network. A distinctive failure mode is the **pending** state: the customer may not see or respond to the prompt, the session may time out, or network delays may leave the status uncertain for a while.
 
 ### Gateway integration patterns
 
@@ -133,17 +133,17 @@ sequenceDiagram
 - 3 mobile money payments of GHS 900 in total that remained **pending** at day end and later failed.
 - The order system wrongly marked the 3 pending mobile money orders as paid because it trusted the browser redirect.
 
-**Step 1 – Expected gross collections.** Successful payments = `12,000 + 8,000 = GHS 20,000`.
+**Step 1: Expected gross collections.** Successful payments = `12,000 + 8,000 = GHS 20,000`.
 
-**Step 2 – Fees.** Mobile money: `12,000 × 0.015 = GHS 180`. Cards: `8,000 × 0.025 = GHS 200`. Total fees = `GHS 380`.
+**Step 2: Fees.** Mobile money: `12,000 × 0.015 = GHS 180`. Cards: `8,000 × 0.025 = GHS 200`. Total fees = `GHS 380`.
 
-**Step 3 – Expected net settlement.** `20,000 − 380 − 600 (refund deducted) = GHS 19,020`.
+**Step 3: Expected net settlement.** `20,000 − 380 − 600 (refund deducted) = GHS 19,020`.
 
-**Step 4 – Compare with the order system.** The order system shows paid orders of `20,000 + 900 = GHS 20,900`, because it counted the pending orders. The difference between the order system and the PSP's successful total is GHS 900, exactly the failed pending payments.
+**Step 4: Compare with the order system.** The order system shows paid orders of `20,000 + 900 = GHS 20,900`, because it counted the pending orders. The difference between the order system and the PSP's successful total is GHS 900, exactly the failed pending payments.
 
-**Step 5 – Diagnose and fix.** The root cause is integration design: the system treated the redirect as proof of payment. The fix is to mark orders as paid only after a verified webhook or server-side verification call returns success, to hold pending orders in a "payment pending" state with a timeout, and to notify customers to retry. Had the shop shipped the three orders, it would have lost GHS 900 of goods.
+**Step 5: Diagnose and fix.** The root cause is integration design: the system treated the redirect as proof of payment. The fix is to mark orders as paid only after a verified webhook or server-side verification call returns success, to hold pending orders in a "payment pending" state with a timeout, and to notify customers to retry. Had the shop shipped the three orders, it would have lost GHS 900 of goods.
 
-**Step 6 – Reconcile settlement.** When the PSP pays out GHS 19,020 to the bank account (according to its settlement schedule), the finance team matches the payout to the PSP report (successful transactions minus fees and refunds) and the PSP report to the order system. Any remaining difference is investigated.
+**Step 6: Reconcile settlement.** When the PSP pays out GHS 19,020 to the bank account (according to its settlement schedule), the finance team matches the payout to the PSP report (successful transactions minus fees and refunds) and the PSP report to the order system. Any remaining difference is investigated.
 
 ## Ghanaian Business Application
 
@@ -201,7 +201,7 @@ The case illustrates key concepts of this lesson. Stripe's model **abstracts the
 
 ## Further Reading
 
-- Rochet, J.-C., & Tirole, J. (2003). Platform competition in two-sided markets. *Journal of the European Economic Association, 1*(4), 990–1029. <https://doi.org/10.1162/154247603322493212>
+- Rochet, J.-C., & Tirole, J. (2003). Platform competition in two-sided markets. *Journal of the European Economic Association, 1*(4), 990-1029. <https://doi.org/10.1162/154247603322493212>
 - Laudon, K. C., & Traver, C. G. *E-commerce: Business, technology, society*. Pearson. (Consult the most recent edition available in your library.)
 - Paystack. Paystack documentation. <https://paystack.com/docs/>
 - Stripe. Stripe documentation. <https://docs.stripe.com/>
@@ -209,8 +209,8 @@ The case illustrates key concepts of this lesson. Stripe's model **abstracts the
 
 ## Video Resources
 
-- [Paystack Documentation](https://paystack.com/docs/) — Paystack. Official developer documentation explaining payment initiation, verification and webhooks for cards and mobile money.
-- [Stripe Documentation](https://docs.stripe.com/) — Stripe. Official documentation describing online payment flows, webhooks and idempotent requests.
+- [Paystack Documentation](https://paystack.com/docs/): Paystack. Official developer documentation explaining payment initiation, verification and webhooks for cards and mobile money.
+- [Stripe Documentation](https://docs.stripe.com/): Stripe. Official documentation describing online payment flows, webhooks and idempotent requests.
 
 ## Revision Summary
 

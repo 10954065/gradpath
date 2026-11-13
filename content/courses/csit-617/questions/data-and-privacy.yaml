@@ -74,7 +74,7 @@ questions:
     bloom: analyse
     difficulty: hard
     objective: Analyse the consent failure in the Cambridge Analytica case
-    prompt: Which feature of the Facebook–Cambridge Analytica case most clearly shows the limits of individual consent?
+    prompt: Which feature of the Facebook-Cambridge Analytica case most clearly shows the limits of individual consent?
     options:
       - Users who installed the quiz app agreed to a long privacy policy
       - The app collected data from the friends of users who installed it, people who had not themselves agreed to the collection

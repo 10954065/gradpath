@@ -33,7 +33,7 @@ questions:
         right: System drives and handles fallback within its ODD without human takeover
       - left: Level 5
         right: System drives under all conditions a human could
-    explanation: The key boundary is between levels 2 and 3. At levels 0–2 the human is driving; at levels 3–5 the system drives when engaged. Level 3 still needs a fallback-ready human; level 4 does not within its operational design domain; level 5 has no ODD limitation.
+    explanation: The key boundary is between levels 2 and 3. At levels 0-2 the human is driving; at levels 3-5 the system drives when engaged. Level 3 still needs a fallback-ready human; level 4 does not within its operational design domain; level 5 has no ODD limitation.
 
   - id: ft03
     lesson: robotics-automation-and-autonomous-systems

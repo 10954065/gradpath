@@ -160,7 +160,7 @@ The case illustrates three links in the identity chain failing together: account
 
 1. **Policy critique.** Obtain the password policy of an organisation you belong to (or a published example) and compare it with the NIST SP 800-63B recommendations in this lesson. *Expected output:* a table of each policy clause, whether it aligns, and a recommended change.
 2. **PortSwigger Web Security Academy labs.** Complete the introductory authentication and access control learning materials. *Expected output:* a short note for each lab describing the flawed check and the server-side fix.
-3. **RBAC and ABAC design.** For a small clinic's patient records system, design four roles and two ABAC conditions. *Expected output:* a role–permission matrix and two policy rules written in plain English.
+3. **RBAC and ABAC design.** For a small clinic's patient records system, design four roles and two ABAC conditions. *Expected output:* a role-permission matrix and two policy rules written in plain English.
 4. **Session review.** Using your browser's developer tools on your *own* test application (or OWASP Juice Shop run locally), inspect session cookie attributes. *Expected output:* a list of flags present and missing, and the risk of each missing flag.
 
 ## Key Takeaways
@@ -181,9 +181,9 @@ The case illustrates three links in the identity chain failing together: account
 
 ## Video Resources
 
-- [PortSwigger Web Security Academy](https://portswigger.net/web-security) — PortSwigger. Official free learning portal with topics and labs on authentication, access control and OAuth vulnerabilities.
-- [OpenID Foundation](https://openid.net/) — OpenID Foundation. Official site for OpenID Connect specifications and explanatory material.
-- [Cisco Skills for All](https://skillsforall.com/) — Cisco Networking Academy. Official learning portal with free introductory cybersecurity courses covering identity and access concepts.
+- [PortSwigger Web Security Academy](https://portswigger.net/web-security): PortSwigger. Official free learning portal with topics and labs on authentication, access control and OAuth vulnerabilities.
+- [OpenID Foundation](https://openid.net/): OpenID Foundation. Official site for OpenID Connect specifications and explanatory material.
+- [Cisco Skills for All](https://skillsforall.com/): Cisco Networking Academy. Official learning portal with free introductory cybersecurity courses covering identity and access concepts.
 
 ## Revision Summary
 

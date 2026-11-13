@@ -107,15 +107,15 @@ The dotted lines show that intermediaries frequently sit between parties, provid
 
 **Illustrative scenario.** *Ama Agro Inputs* is a hypothetical company in Techiman that distributes fertiliser, seed and crop-protection products. Its managing director wants to know which e-commerce model to prioritise. It has three groups of customers: (1) 400 agro-input retailers across the Bono East and Ashanti regions that order monthly; (2) individual smallholder farmers who visit the warehouse; and (3) a regional government programme that issues tenders for subsidised inputs.
 
-**Step 1 – Classify the relationships.** Retailers are B2B; farmers are B2C; the government programme is B2G.
+**Step 1: Classify the relationships.** Retailers are B2B; farmers are B2C; the government programme is B2G.
 
-**Step 2 – Compare value.** Suppose each retailer orders an average of GHS 15,000 per month (illustrative assumption). Annual B2B value = `400 × 15,000 × 12 = GHS 72,000,000`. Even if farmers buy far more often, their individual purchases are small. The B2B channel is where digital efficiency yields most value.
+**Step 2: Compare value.** Suppose each retailer orders an average of GHS 15,000 per month (illustrative assumption). Annual B2B value = `400 × 15,000 × 12 = GHS 72,000,000`. Even if farmers buy far more often, their individual purchases are small. The B2B channel is where digital efficiency yields most value.
 
-**Step 3 – Design the B2B solution.** A reseller ordering portal or a WhatsApp-integrated ordering system should show each retailer its negotiated prices and credit limit, allow reordering of previous baskets, and generate invoices automatically. Payment options should include bank transfer and mobile money for smaller retailers, with credit terms tracked against limits.
+**Step 3: Design the B2B solution.** A reseller ordering portal or a WhatsApp-integrated ordering system should show each retailer its negotiated prices and credit limit, allow reordering of previous baskets, and generate invoices automatically. Payment options should include bank transfer and mobile money for smaller retailers, with credit terms tracked against limits.
 
-**Step 4 – Address B2C separately.** For farmers, the priority is not a website but a simple channel suited to their context: USSD or SMS price information, mobile money payment at the warehouse and perhaps orders through agro-dealers rather than direct delivery.
+**Step 4: Address B2C separately.** For farmers, the priority is not a website but a simple channel suited to their context: USSD or SMS price information, mobile money payment at the warehouse and perhaps orders through agro-dealers rather than direct delivery.
 
-**Step 5 – Evaluate.** The B2B portal reduces order processing errors, speeds up collections and improves demand visibility. Risks include low adoption by retailers accustomed to phone ordering, so training and incentives (for example faster dispatch for portal orders) are needed.
+**Step 5: Evaluate.** The B2B portal reduces order processing errors, speeds up collections and improves demand visibility. Risks include low adoption by retailers accustomed to phone ordering, so training and incentives (for example faster dispatch for portal orders) are needed.
 
 The analysis shows that classifying customers by model leads directly to different technology and payment choices.
 
@@ -180,8 +180,8 @@ Alibaba's treatment of the C2C trust problem is especially instructive. In 2004 
 
 ## Video Resources
 
-- [UNCTAD E-commerce and Digital Economy](https://unctad.org/topic/ecommerce-and-digital-economy) — UNCTAD. Official topic page with publications on e-commerce models and readiness in developing countries.
-- [MIT OpenCourseWare](https://ocw.mit.edu/) — Massachusetts Institute of Technology. Official open learning portal; search for supply chain and digital business materials relevant to B2B e-commerce.
+- [UNCTAD E-commerce and Digital Economy](https://unctad.org/topic/ecommerce-and-digital-economy): UNCTAD. Official topic page with publications on e-commerce models and readiness in developing countries.
+- [MIT OpenCourseWare](https://ocw.mit.edu/): Massachusetts Institute of Technology. Official open learning portal; search for supply chain and digital business materials relevant to B2B e-commerce.
 
 ## Revision Summary
 

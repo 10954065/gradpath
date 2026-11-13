@@ -64,7 +64,7 @@ Stevens's classification remains the basis for choosing analyses.
 
 Whether Likert data can be treated as interval is a long-standing debate. A common, defensible position is that a single Likert item is ordinal, whereas a scale score averaged across several items more closely approximates interval data and is usually analysed with parametric statistics. Whatever position you take, state it.
 
-Collect data at the highest sensible level. Asking for the exact number of employees (ratio) allows later grouping into categories, whereas asking only for a category ("1–5, 6–29, 30–99") cannot be reversed.
+Collect data at the highest sensible level. Asking for the exact number of employees (ratio) allows later grouping into categories, whereas asking only for a category ("1-5, 6-29, 30-99") cannot be reversed.
 
 ### Principles of good question wording
 
@@ -73,7 +73,7 @@ Collect data at the highest sensible level. Asking for the exact number of emplo
 3. **Avoid leading and loaded wording.** "Don't you agree that digital payments are safer than cash?" pushes respondents towards agreement.
 4. **Avoid double negatives.** "I do not think AI should not be used" confuses respondents.
 5. **Avoid assumptions.** "How often do you use your company's AI chatbot?" assumes one exists.
-6. **Make response options exhaustive and mutually exclusive.** Ranges such as "0–5" and "5–10" overlap.
+6. **Make response options exhaustive and mutually exclusive.** Ranges such as "0-5" and "5-10" overlap.
 7. **Consider sensitive topics carefully.** Questions about revenue, tax or security breaches may need ranges, reassurance about confidentiality and placement later in the questionnaire.
 8. **Include a mix of positively and negatively worded items cautiously.** Reverse-worded items can detect careless responding but can also confuse respondents; if used, they must be reverse-coded before analysis.
 
@@ -127,9 +127,9 @@ flowchart TD
 - T3: I am confident I can resolve a failed payment.
 - T4: Mobile money payments are reliable for my business.
 
-**Step 1 – Check the wording.** Kofi's first draft of T2 read "The provider protects my information and resolves complaints quickly", which was double-barrelled. He split it, moving the complaints idea into T3.
+**Step 1: Check the wording.** Kofi's first draft of T2 read "The provider protects my information and resolves complaints quickly", which was double-barrelled. He split it, moving the complaints idea into T3.
 
-**Step 2 – Pilot.** Twenty retailers complete the pilot. Kofi computes the sample variance of each item and the variance of the total score (sum of the four items):
+**Step 2: Pilot.** Twenty retailers complete the pilot. Kofi computes the sample variance of each item and the variance of the total score (sum of the four items):
 
 ```
 Var(T1) = 0.80
@@ -141,7 +141,7 @@ Variance of total score = 9.00
 k = 4
 ```
 
-**Step 3 – Compute alpha.**
+**Step 3: Compute alpha.**
 
 ```
 α = (4 / 3) × (1 − 3.40 / 9.00)
@@ -150,11 +150,11 @@ k = 4
   = 0.83
 ```
 
-**Step 4 – Interpret.** An alpha of about 0.83 indicates good internal consistency for a four-item scale under the common 0.70 convention. Kofi also checks "alpha if item deleted" in SPSS; if removing an item would raise alpha substantially, he would examine its wording.
+**Step 4: Interpret.** An alpha of about 0.83 indicates good internal consistency for a four-item scale under the common 0.70 convention. Kofi also checks "alpha if item deleted" in SPSS; if removing an item would raise alpha substantially, he would examine its wording.
 
-**Step 5 – Act on qualitative pilot feedback.** Several older traders found "transaction information" unclear. Kofi rewords T2 as "I believe the mobile money provider keeps details of my payments private" and records the change in his methodology chapter.
+**Step 5: Act on qualitative pilot feedback.** Several older traders found "transaction information" unclear. Kofi rewords T2 as "I believe the mobile money provider keeps details of my payments private" and records the change in his methodology chapter.
 
-**Step 6 – Reverse coding check.** Had Kofi included a negatively worded item such as "I worry that payments will go missing", he would recode it before computing alpha using `recoded = 6 − original` on a five-point scale, so that 1 becomes 5 and 5 becomes 1.
+**Step 6: Reverse coding check.** Had Kofi included a negatively worded item such as "I worry that payments will go missing", he would recode it before computing alpha using `recoded = 6 − original` on a five-point scale, so that 1 becomes 5 and 5 becomes 1.
 
 The expected output is a revised item set, an alpha value with interpretation, and a documented list of pilot-based changes.
 
@@ -221,14 +221,14 @@ The case offers two lessons for Ghanaian researchers. First, translation is a de
 
 - Dillman, D. A., Smyth, J. D., & Christian, L. M. (2014). *Internet, phone, mail, and mixed-mode surveys: The tailored design method* (4th ed.). Wiley.
 - Field, A. (2018). *Discovering statistics using IBM SPSS statistics* (5th ed.). SAGE.
-- Stevens, S. S. (1946). On the theory of scales of measurement. *Science, 103*(2684), 677–680.
-- Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319–340.
+- Stevens, S. S. (1946). On the theory of scales of measurement. *Science, 103*(2684), 677-680.
+- Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319-340.
 - Saunders, M., Lewis, P., & Thornhill, A. (2019). *Research methods for business students* (8th ed.). Pearson.
 
 ## Video Resources
 
-- [European Social Survey](https://www.europeansocialsurvey.org/) — European Social Survey ERIC. Official site with documentation on questionnaire design, translation and fieldwork methodology.
-- [SAGE Research Methods](https://methods.sagepub.com/) — SAGE Publishing. Official research methods platform (access may depend on institutional subscription) with material on questionnaire design and piloting.
+- [European Social Survey](https://www.europeansocialsurvey.org/): European Social Survey ERIC. Official site with documentation on questionnaire design, translation and fieldwork methodology.
+- [SAGE Research Methods](https://methods.sagepub.com/): SAGE Publishing. Official research methods platform (access may depend on institutional subscription) with material on questionnaire design and piloting.
 
 ## Revision Summary
 

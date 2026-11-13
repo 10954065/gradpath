@@ -115,9 +115,9 @@ questions:
     bloom: apply
     difficulty: medium
     objective: Apply the risk equation
-    prompt: Using risk = likelihood × impact on 1–5 scales, what is the risk score for a scenario with likelihood 4 and impact 4?
+    prompt: Using risk = likelihood × impact on 1-5 scales, what is the risk score for a scenario with likelihood 4 and impact 4?
     answers: ["16", sixteen]
-    explanation: 4 × 4 = 16, which falls in the High band (10–16) on the common 5 × 5 matrix. Remember the score is ordinal; it ranks risks rather than measuring money.
+    explanation: 4 × 4 = 16, which falls in the High band (10-16) on the common 5 × 5 matrix. Remember the score is ordinal; it ranks risks rather than measuring money.
   - id: sf10
     lesson: threats-vulnerabilities-and-risk
     type: matching

@@ -101,7 +101,7 @@ function parseQuestion(raw: Obj, index: number, file: string, issues: Validation
     case 'scenario': {
       const options = strList(raw.options)
       const answer = Number(raw.answer)
-      if (options.length < 3 || options.length > 5) errors.push('mcq/scenario needs 3–5 options')
+      if (options.length < 3 || options.length > 5) errors.push('mcq/scenario needs 3 to 5 options')
       if (!Number.isInteger(answer) || answer < 0 || answer >= options.length)
         errors.push('answer must be a zero-based index into options')
       if (new Set(options.map((o) => o.toLowerCase())).size !== options.length) errors.push('duplicate options')
@@ -125,7 +125,7 @@ function parseQuestion(raw: Obj, index: number, file: string, issues: Validation
       const pairs: MatchingPair[] = Array.isArray(raw.pairs)
         ? raw.pairs.filter(isObj).map((p) => ({ left: str(p.left), right: str(p.right) }))
         : []
-      if (pairs.length < 3 || pairs.length > 8) errors.push('matching needs 3–8 pairs')
+      if (pairs.length < 3 || pairs.length > 8) errors.push('matching needs 3 to 8 pairs')
       if (pairs.some((p) => !p.left || !p.right)) errors.push('every pair needs left and right')
       if (new Set(pairs.map((p) => p.right)).size !== pairs.length) errors.push('matching right-hand values must be unique')
       question.pairs = pairs

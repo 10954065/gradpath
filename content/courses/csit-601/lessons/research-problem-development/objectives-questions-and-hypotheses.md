@@ -53,10 +53,10 @@ Weak objectives include actions that are not research outcomes: "to distribute q
 
 **Research questions** restate each objective as a question to be answered. They can be:
 
-- **Descriptive** – "What is the level of cybersecurity awareness among undergraduate students?"
-- **Relational** – "What is the relationship between perceived usefulness and intention to use AI tools among SME owners?"
-- **Causal or explanatory** – "Does completing a security training module reduce students' susceptibility to simulated phishing emails?" (requires an experimental or quasi-experimental design).
-- **Exploratory or process** – "How do nurses adapt their routines after the introduction of electronic health records?" (typical of qualitative research).
+- **Descriptive**: "What is the level of cybersecurity awareness among undergraduate students?"
+- **Relational**: "What is the relationship between perceived usefulness and intention to use AI tools among SME owners?"
+- **Causal or explanatory**: "Does completing a security training module reduce students' susceptibility to simulated phishing emails?" (requires an experimental or quasi-experimental design).
+- **Exploratory or process**: "How do nurses adapt their routines after the introduction of electronic health records?" (typical of qualitative research).
 
 In qualitative studies, research questions are usually open, framed with "how" or "what", and may evolve as understanding develops. Qualitative studies normally do **not** have hypotheses, because they aim to build understanding inductively rather than to test predictions.
 
@@ -183,15 +183,15 @@ The study is a strong example of alignment. The overall aim (to develop and test
 
 ## Further Reading
 
-- Venkatesh, V., Morris, M. G., Davis, G. B., & Davis, F. D. (2003). User acceptance of information technology: Toward a unified view. *MIS Quarterly, 27*(3), 425–478. <https://doi.org/10.2307/30036540>
-- Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319–340. <https://doi.org/10.2307/249008>
+- Venkatesh, V., Morris, M. G., Davis, G. B., & Davis, F. D. (2003). User acceptance of information technology: Toward a unified view. *MIS Quarterly, 27*(3), 425-478. <https://doi.org/10.2307/30036540>
+- Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319-340. <https://doi.org/10.2307/249008>
 - Creswell, J. W., & Creswell, J. D. (2018). *Research design: Qualitative, quantitative, and mixed methods approaches* (5th ed.). SAGE.
 - Popper, K. (1959). *The logic of scientific discovery*. Hutchinson.
 
 ## Video Resources
 
-- [Khan Academy](https://www.khanacademy.org/) — Khan Academy. Official learning platform; its statistics materials explain null and alternative hypotheses and significance testing.
-- [SAGE Research Methods](https://methods.sagepub.com/) — SAGE Publishing. Official platform (institutional access may be required) with material on research questions and hypotheses.
+- [Khan Academy](https://www.khanacademy.org/): Khan Academy. Official learning platform; its statistics materials explain null and alternative hypotheses and significance testing.
+- [SAGE Research Methods](https://methods.sagepub.com/): SAGE Publishing. Official platform (institutional access may be required) with material on research questions and hypotheses.
 
 ## Revision Summary
 

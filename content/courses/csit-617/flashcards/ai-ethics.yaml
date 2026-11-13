@@ -17,7 +17,7 @@ cards:
     back: Allocative harm withholds resources or opportunities, such as loans or jobs; representational harm demeans, stereotypes or erases groups, as in biased search results.
   - lesson: ai-ethics-bias-and-discrimination
     front: What is the core practice for detecting algorithmic bias before deployment?
-    back: Disaggregated testing — reporting accuracy and error rates separately for each relevant group (including intersectional groups) rather than only overall.
+    back: Disaggregated testing, reporting accuracy and error rates separately for each relevant group (including intersectional groups) rather than only overall.
   - lesson: transparency-accountability-and-oversight
     front: How do transparency and explainability differ?
     back: Transparency is openness about AI use, purpose, data, limits and governance at system level; explainability gives understandable reasons for a particular decision to the person affected.

@@ -39,7 +39,7 @@ YAML front matter followed by Markdown. Sections are level-2 headings (`##`). Th
 
 | Heading | Format |
 |---|---|
-| `## Introduction` | 1–3 paragraphs that motivate the lesson |
+| `## Introduction` | 1-3 paragraphs that motivate the lesson |
 | `## Learning Objectives` | bullet list, each starting with a measurable verb (Explain, Compare, Apply, Evaluate…) |
 | `## Prerequisite Knowledge` | bullet list (may say "None beyond …") |
 | `## Key Terminology` | bullet list, each `- **Term**: definition` |
@@ -49,7 +49,7 @@ YAML front matter followed by Markdown. Sections are level-2 headings (`##`). Th
 | `## Practical Exercises` | numbered list; each exercise has a clear task and expected output |
 | `## Key Takeaways` | bullet list |
 | `## Further Reading` | bullet list of APA 7 references; optional URL in angle brackets `<https://…>` |
-| `## Video Resources` | bullet list `- [Title](https://…) — Provider. One-sentence description.` Use only official pages you are confident exist (e.g. provider learning portals or official channels). If unsure, link the provider's official learning page instead of a specific video. |
+| `## Video Resources` | bullet list `- [Title](https://…): Provider. One-sentence description.` Use only official pages you are confident exist (e.g. provider learning portals or official channels). If unsure, link the provider's official learning page instead of a specific video. |
 | `## Revision Summary` | one compact paragraph plus up to 6 bullets for last-minute revision |
 
 Every other `##` heading is treated as **teaching body** and rendered in order between *Key Terminology*
@@ -75,7 +75,7 @@ Front matter:
 ---
 title: "Research Paradigms: Positivism, Interpretivism and Pragmatism"
 summary: One sentence describing what the student will be able to do after the lesson.
-estimatedMinutes: 40          # realistic study time, 25–60
+estimatedMinutes: 40          # realistic study time, 25-60
 difficulty: intermediate       # introductory | intermediate | advanced
 source: supplementary          # supplementary (default for authored content)
 ---
@@ -83,7 +83,7 @@ source: supplementary          # supplementary (default for authored content)
 
 Quote any front-matter value that contains a colon.
 
-Length: the whole lesson should be **1,800–3,000 words**; the teaching body alone at least 1,100 words.
+Length: the whole lesson should be **1,800-3,000 words**; the teaching body alone at least 1,100 words.
 Write in clear British academic English for postgraduate learners. Teach students to analyse, evaluate,
 justify and apply, not only to memorise.
 
@@ -114,14 +114,14 @@ questions:
 Type-specific fields:
 
 - `true_false`: `answer: true` or `answer: false`.
-- `short_answer`: `answers: [accepted, alternative spellings]` — short (1–4 word) answers only;
+- `short_answer`: `answers: [accepted, alternative spellings]`; short (1-4 word) answers only;
   matching is case- and punctuation-insensitive.
 - `scenario`: like `mcq` plus `scenario: |` (a short realistic situation the prompt refers to).
-- `matching`: `pairs:` list of `{ left: ..., right: ... }` (3–6 correct pairs; the app shuffles).
+- `matching`: `pairs:` list of `{ left: ..., right: ... }` (3-6 correct pairs; the app shuffles).
 - `essay` and `case_analysis`: no auto-marking. Provide `marks` (e.g. 20), `case: |` (case_analysis only),
   `structure:` (suggested answer outline, list of strings), `rubric:` list of
   `{ criterion, marks, descriptor }` whose marks sum to `marks`, and `modelAnswer: |` (model answer
-  guidance, 150–350 words).
+  guidance, 150-350 words).
 
 Every question needs `explanation` (for essay/case types, a short note on what examiners look for).
 
@@ -154,9 +154,15 @@ resources:
     module: literature-review     # optional module slug
     difficulty: introductory      # introductory | intermediate | advanced
     stage: foundation             # foundation | core | advanced | revision
-    accessType: unknown           # free | freemium | paid | registration | unknown — use unknown unless certain
+    accessType: unknown           # free | freemium | paid | registration | unknown (use unknown unless certain)
 ```
 
 Verification status and the last-verified date are **not** written by authors. `npm run
 content:verify-links` checks every URL in resources, further reading and video sections and records the
 result in `content/link-verification.json`; unreachable links are shown as *unverified* in the app.
+
+## Punctuation
+
+Do not use em dashes (—) or en dashes (–) as punctuation; they make the writing read as machine-generated. Use a
+comma, colon, full stop or parentheses instead, and an ordinary hyphen for ranges (`15-20 hours`, `pp. 77-101`).
+Write labels as `**Term**: definition` and links as `- [Title](https://…): Provider. Description.`

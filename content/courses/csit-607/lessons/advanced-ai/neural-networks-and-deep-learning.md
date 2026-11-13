@@ -187,15 +187,15 @@ flowchart LR
 ## Further Reading
 
 - Goodfellow, I., Bengio, Y., & Courville, A. (2016). *Deep learning*. MIT Press. <https://www.deeplearningbook.org/>
-- LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. *Nature, 521*(7553), 436–444.
-- Rumelhart, D. E., Hinton, G. E., & Williams, R. J. (1986). Learning representations by back-propagating errors. *Nature, 323*(6088), 533–536.
-- LeCun, Y., Bottou, L., Bengio, Y., & Haffner, P. (1998). Gradient-based learning applied to document recognition. *Proceedings of the IEEE, 86*(11), 2278–2324.
+- LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. *Nature, 521*(7553), 436-444.
+- Rumelhart, D. E., Hinton, G. E., & Williams, R. J. (1986). Learning representations by back-propagating errors. *Nature, 323*(6088), 533-536.
+- LeCun, Y., Bottou, L., Bengio, Y., & Haffner, P. (1998). Gradient-based learning applied to document recognition. *Proceedings of the IEEE, 86*(11), 2278-2324.
 
 ## Video Resources
 
-- [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) — Google for Developers. Includes a neural networks module with interactive visualisations.
-- [Hugging Face Learn](https://huggingface.co/learn) — Hugging Face. Free courses that apply pre-trained deep learning models.
-- [Deep Learning (book website)](https://www.deeplearningbook.org/) — Goodfellow, Bengio and Courville. Free online version of the standard deep learning textbook.
+- [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course): Google for Developers. Includes a neural networks module with interactive visualisations.
+- [Hugging Face Learn](https://huggingface.co/learn): Hugging Face. Free courses that apply pre-trained deep learning models.
+- [Deep Learning (book website)](https://www.deeplearningbook.org/): Goodfellow, Bengio and Courville. Free online version of the standard deep learning textbook.
 
 ## Revision Summary
 

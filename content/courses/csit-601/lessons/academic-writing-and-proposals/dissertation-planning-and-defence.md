@@ -61,17 +61,17 @@ Begin with the final deadline and work backwards. Break each stage into tasks sm
 
 | Task | Weeks (illustrative) | Depends on |
 |---|---|---|
-| Finalise proposal | 1–3 | Supervisor feedback |
-| Ethics application and approval | 3–7 | Final proposal, instruments |
-| Pilot instrument | 6–7 | Draft instrument |
-| Revise literature review | 4–9 | — (parallel) |
-| Data collection | 8–13 | Ethics approval, gatekeeper permission |
-| Draft methodology chapter | 8–11 | Final design |
-| Data analysis | 13–16 | Data collection |
-| Write results and discussion | 15–19 | Analysis |
+| Finalise proposal | 1-3 | Supervisor feedback |
+| Ethics application and approval | 3-7 | Final proposal, instruments |
+| Pilot instrument | 6-7 | Draft instrument |
+| Revise literature review | 4-9 |: (parallel) |
+| Data collection | 8-13 | Ethics approval, gatekeeper permission |
+| Draft methodology chapter | 8-11 | Final design |
+| Data analysis | 13-16 | Data collection |
+| Write results and discussion | 15-19 | Analysis |
 | Full draft to supervisor | 20 | All chapters |
-| Revisions, editing, formatting | 21–23 | Feedback |
-| Submission | 24 | — |
+| Revisions, editing, formatting | 21-23 | Feedback |
+| Submission | 24 | n/a |
 
 The week numbers are illustrative; your programme's calendar and deadlines will differ.
 
@@ -100,15 +100,15 @@ Common risks to dissertation completion include delays in approvals, low respons
 
 ### Preparing a research presentation
 
-Presentations, whether for a proposal panel or a final defence, are typically short, so focus is essential. A common structure for a 15–20 minute presentation is:
+Presentations, whether for a proposal panel or a final defence, are typically short, so focus is essential. A common structure for a 15-20 minute presentation is:
 
 1. **Title and context** (1 slide): topic, why it matters.
-2. **Problem and gap** (1–2 slides).
+2. **Problem and gap** (1-2 slides).
 3. **Aim, objectives and questions** (1 slide).
 4. **Theoretical or conceptual framework** (1 slide, visual).
 5. **Methodology** (2 slides): design, sample, instruments, analysis, ethics.
-6. **Findings** (3–4 slides) or, for a proposal, expected outcomes and work plan.
-7. **Discussion and contribution** (1–2 slides).
+6. **Findings** (3-4 slides) or, for a proposal, expected outcomes and work plan.
+7. **Discussion and contribution** (1-2 slides).
 8. **Limitations, recommendations and future research** (1 slide).
 9. **Conclusion** (1 slide) and invitation for questions.
 
@@ -133,7 +133,7 @@ Typical questions include: Why this topic? Why this paradigm and design? How did
 
 - **SMART goals** (Specific, Measurable, Achievable, Relevant, Time-bound) help turn vague intentions ("work on the literature review") into actionable tasks ("synthesise ten studies on trust into a concept matrix by Friday").
 - **Backward scheduling** starts from the deadline and works back, ensuring that critical tasks are given enough time.
-- **Plan–Do–Check–Act (PDCA)**, from quality management, encourages regular review of progress against plan, with adjustment when slippage occurs.
+- **Plan-Do-Check-Act (PDCA)**, from quality management, encourages regular review of progress against plan, with adjustment when slippage occurs.
 
 ### The "three-minute" summary
 
@@ -143,15 +143,15 @@ Being able to explain the research concisely is a powerful test of understanding
 
 **Illustrative scenario.** Esi is completing an MSc dissertation on cybersecurity awareness among university students while working full time. She has 24 weeks until submission (an illustrative timeline). Her first plan schedules data collection in week 4 and ethics approval "whenever it comes".
 
-**Step 1 – Identify the dependency error.** Data collection cannot begin before ethical approval and permissions; the plan ignores the critical path.
+**Step 1: Identify the dependency error.** Data collection cannot begin before ethical approval and permissions; the plan ignores the critical path.
 
-**Step 2 – Rebuild the schedule backwards.** Submission week 24; full draft to supervisor week 20; analysis and results by week 17; data collection weeks 9–13; ethics approval targeted by week 8 with the application submitted in week 3; pilot in week 7.
+**Step 2: Rebuild the schedule backwards.** Submission week 24; full draft to supervisor week 20; analysis and results by week 17; data collection weeks 9-13; ethics approval targeted by week 8 with the application submitted in week 3; pilot in week 7.
 
-**Step 3 – Add parallel tasks.** While waiting for approval, Esi revises her literature review and drafts her methodology chapter.
+**Step 3: Add parallel tasks.** While waiting for approval, Esi revises her literature review and drafts her methodology chapter.
 
-**Step 4 – Build a risk register.** Highest risks: low response rate during examination periods (mitigation: avoid exam weeks, use multiple faculties' official channels where permitted, send reminders) and limited time because of work (mitigation: fixed weekly writing blocks, short tasks, informing her supervisor early).
+**Step 4: Build a risk register.** Highest risks: low response rate during examination periods (mitigation: avoid exam weeks, use multiple faculties' official channels where permitted, send reminders) and limited time because of work (mitigation: fixed weekly writing blocks, short tasks, informing her supervisor early).
 
-**Step 5 – Prepare for defence.** Esi writes ten likely examiner questions and practises answering them. For "How representative is your sample?", she prepares an honest answer: stratification by faculty improved coverage, but the single-institution design limits generalisability, which she discusses as a limitation and a direction for future research.
+**Step 5: Prepare for defence.** Esi writes ten likely examiner questions and practises answering them. For "How representative is your sample?", she prepares an honest answer: stratification by faculty improved coverage, but the single-institution design limits generalisability, which she discusses as a limitation and a direction for future research.
 
 ## Ghanaian Business Application
 
@@ -214,7 +214,7 @@ The main chain (A to H) is the typical critical path; parallel work fills waitin
 
 1. **Gantt chart.** Create a Gantt chart for your own dissertation from today to your programme's submission date, showing dependencies, milestones and buffer time. *Expected output:* a chart (spreadsheet or table) with at least twelve tasks and the critical path highlighted.
 2. **Risk register.** Identify at least six risks to your dissertation and record likelihood, impact, mitigation and early warning signs. *Expected output:* a completed six-row risk register.
-3. **Defence rehearsal.** Write fifteen likely examiner questions about your study (at least five on methodology) and draft a 60–90 second answer to each. Practise with a peer. *Expected output:* a question-and-answer document and notes on which answers needed improvement.
+3. **Defence rehearsal.** Write fifteen likely examiner questions about your study (at least five on methodology) and draft a 60-90 second answer to each. Practise with a peer. *Expected output:* a question-and-answer document and notes on which answers needed improvement.
 
 ## Key Takeaways
 
@@ -232,8 +232,8 @@ The main chain (A to H) is the typical critical path; parallel work fills waitin
 
 ## Video Resources
 
-- [Three Minute Thesis](https://threeminutethesis.uq.edu.au/) — The University of Queensland. Official 3MT site with information about the competition format and examples of research communication.
-- [SAGE Research Methods](https://methods.sagepub.com/) — SAGE Publishing. Official research methods platform with resources on planning and completing research projects (access may depend on subscription).
+- [Three Minute Thesis](https://threeminutethesis.uq.edu.au/): The University of Queensland. Official 3MT site with information about the competition format and examples of research communication.
+- [SAGE Research Methods](https://methods.sagepub.com/): SAGE Publishing. Official research methods platform with resources on planning and completing research projects (access may depend on subscription).
 
 ## Revision Summary
 

@@ -102,7 +102,7 @@ questions:
       - The employee has documented evidence convincing to a reasonable impartial observer and good reason to believe going public will bring about change
       - The employee will receive a financial reward
     answer: 2
-    explanation: Criteria 1–3 (serious harm, reporting to a superior, exhausting internal channels) make disclosure permissible; criteria 4–5 (convincing evidence and likelihood of success) make it obligatory. Rewards are not part of De George's criteria.
+    explanation: Criteria 1-3 (serious harm, reporting to a superior, exhausting internal channels) make disclosure permissible; criteria 4-5 (convincing evidence and likelihood of success) make it obligatory. Rewards are not part of De George's criteria.
   - id: pp09
     lesson: whistleblowing-and-professional-negligence
     type: matching
@@ -200,7 +200,7 @@ questions:
         right: Insider misuse
       - left: Distributing child sexual abuse material online
         right: Content-related offence
-    explanation: The classification helps match responses — technical defences for cyber-dependent attacks, awareness and process for cyber-enabled fraud, access controls for insiders and specialised enforcement for content offences.
+    explanation: The classification helps match responses, technical defences for cyber-dependent attacks, awareness and process for cyber-enabled fraud, access controls for insiders and specialised enforcement for content offences.
   - id: pp16
     lesson: cybercrime-and-misuse-of-information-systems
     type: mcq
@@ -311,7 +311,7 @@ questions:
 
       Unchangeable default passwords on an internet-exposed industrial control system fall well below accepted security practice, contrary to ACM 2.9 (robustly and usably secure systems) and 3.7 (special care for infrastructure systems). If an attacker altered chemical dosing and residents were harmed, a negligence claim could argue that the company and possibly the vendor owed a duty to consumers, breached it by deploying and retaining a known insecure configuration, caused the harm, and that personal injury is recognised damage. The plant may also be treated as critical information infrastructure under the Cybersecurity Act, 2020 (Act 1038), bringing regulatory obligations.
 
-      On De George's criteria, the potential harm is serious and considerable (1) and Yaw has reported to his superior (2). Because the CTO is conflicted, Yaw should escalate in writing to the managing director, board or audit committee (3). If they fail to act, his technical evidence (4) and the likelihood that the regulator would intervene (5) would make external disclosure — to the Cyber Security Authority or another appropriate regulator rather than the media — obligatory. The limitation that internal escalation may be futile when leadership is implicated supports moving more quickly to the board.
+      On De George's criteria, the potential harm is serious and considerable (1) and Yaw has reported to his superior (2). Because the CTO is conflicted, Yaw should escalate in writing to the managing director, board or audit committee (3). If they fail to act, his technical evidence (4) and the likelihood that the regulator would intervene (5) would make external disclosure, to the Cyber Security Authority or another appropriate regulator rather than the media, obligatory. The limitation that internal escalation may be futile when leadership is implicated supports moving more quickly to the board.
 
       Utilitarian reasoning strongly favours action because the expected harm to many people outweighs the costs to Yaw and the company; deontology supports refusing complicity and honesty to the public. Recommendation: document the vulnerability, propose immediate mitigations (network isolation, compensating controls), escalate to the board with a declaration of the conflict concern, seek advice on protections under the Whistleblower Act, 2006 (Act 720), and report to the regulator if the board does not act. Loyalty and job security are real concerns but cannot outweigh a credible threat to public health.
     explanation: Examiners look for integration of the three topics, accurate De George and negligence analysis, use of the critical infrastructure context and a staged, proportionate recommendation.

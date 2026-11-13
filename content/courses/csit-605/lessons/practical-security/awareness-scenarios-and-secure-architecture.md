@@ -174,15 +174,15 @@ The case links all three themes of this lesson. **Awareness**: staff were persua
 ## Further Reading
 
 - Wilson, M., & Hash, J. (2003). *Building an information technology security awareness and training program* (NIST Special Publication 800-50). National Institute of Standards and Technology.
-- Saltzer, J. H., & Schroeder, M. D. (1975). The protection of information in computer systems. *Proceedings of the IEEE, 63*(9), 1278–1308.
+- Saltzer, J. H., & Schroeder, M. D. (1975). The protection of information in computer systems. *Proceedings of the IEEE, 63*(9), 1278-1308.
 - Rose, S., Borchert, O., Mitchell, S., & Connelly, S. (2020). *Zero trust architecture* (NIST Special Publication 800-207). National Institute of Standards and Technology. <https://csrc.nist.gov/pubs/sp/800/207/final>
 - Anderson, R. (2020). *Security engineering: A guide to building dependable distributed systems* (3rd ed.). Wiley.
 
 ## Video Resources
 
-- [CISA Tabletop Exercise Packages](https://www.cisa.gov/resources-tools/services/cisa-tabletop-exercise-packages) — Cybersecurity and Infrastructure Security Agency. Official, free scenario packages for planning and running tabletop exercises.
-- [Cisco Skills for All](https://skillsforall.com/) — Cisco Networking Academy. Official learning portal with free cybersecurity courses covering awareness and network defence.
-- [Cyber Security Authority, Ghana](https://www.csa.gov.gh/) — Cyber Security Authority. Official website with national cybersecurity awareness information and guidance.
+- [CISA Tabletop Exercise Packages](https://www.cisa.gov/resources-tools/services/cisa-tabletop-exercise-packages): Cybersecurity and Infrastructure Security Agency. Official, free scenario packages for planning and running tabletop exercises.
+- [Cisco Skills for All](https://skillsforall.com/): Cisco Networking Academy. Official learning portal with free cybersecurity courses covering awareness and network defence.
+- [Cyber Security Authority, Ghana](https://www.csa.gov.gh/): Cyber Security Authority. Official website with national cybersecurity awareness information and guidance.
 
 ## Revision Summary
 

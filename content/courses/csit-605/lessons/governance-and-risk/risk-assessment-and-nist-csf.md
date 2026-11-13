@@ -79,7 +79,7 @@ Qualitative assessment uses ordinal scales (for example 1 to 5) and is fast, inc
 | 4 | Likely | Major: significant losses, regulatory enquiry, media coverage |
 | 5 | Almost certain | Severe: large customer losses, sustained outage, threat to licence |
 
-Risk score = likelihood × impact. Bands: **1–4 Low**, **5–9 Medium**, **10–14 High**, **15–25 Critical**.
+Risk score = likelihood × impact. Bands: **1-4 Low**, **5-9 Medium**, **10-14 High**, **15-25 Critical**.
 
 **Risk register extract (inherent ratings, with existing controls):**
 
@@ -210,9 +210,9 @@ Analysed through a risk lens, WannaCry shows a well-known, high-likelihood risk 
 
 ## Video Resources
 
-- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework) — National Institute of Standards and Technology. Official CSF 2.0 home with the framework, quick-start guides and explanatory material.
-- [NIST Computer Security Resource Center](https://csrc.nist.gov/) — National Institute of Standards and Technology. Official portal for SP 800-30 and related risk management publications.
-- [Cisco Skills for All](https://skillsforall.com/) — Cisco Networking Academy. Official learning portal with free courses introducing cybersecurity risk management.
+- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework): National Institute of Standards and Technology. Official CSF 2.0 home with the framework, quick-start guides and explanatory material.
+- [NIST Computer Security Resource Center](https://csrc.nist.gov/): National Institute of Standards and Technology. Official portal for SP 800-30 and related risk management publications.
+- [Cisco Skills for All](https://skillsforall.com/): Cisco Networking Academy. Official learning portal with free courses introducing cybersecurity risk management.
 
 ## Revision Summary
 
@@ -222,5 +222,5 @@ Risk assessment ranks risks by likelihood and impact so that treatment follows b
 - Treat: mitigate, transfer, avoid or accept (formally, by an authorised owner).
 - ALE = SLE × ARO supports cost-benefit decisions.
 - CSF Functions: Govern, Identify, Protect, Detect, Respond, Recover.
-- Profiles = current and target outcomes; Tiers 1–4 = Partial, Risk Informed, Repeatable, Adaptive.
+- Profiles = current and target outcomes; Tiers 1-4 = Partial, Risk Informed, Repeatable, Adaptive.
 - WannaCry (2017): an untreated, known risk with severe impact on patient services.

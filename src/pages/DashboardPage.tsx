@@ -79,7 +79,7 @@ export default function DashboardPage() {
             <Card className="mb-6 border-primary/30 bg-accent/40">
               <CardContent className="flex flex-col gap-3 p-5 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <p className="font-semibold">Welcome to GradPath — let's begin.</p>
+                  <p className="font-semibold">Welcome to GradPath. Let's begin.</p>
                   <p className="text-sm text-muted-foreground">Your dashboard fills in as you read lessons, take quizzes and record study sessions. Nothing here is estimated or invented.</p>
                 </div>
                 <Button asChild>
@@ -162,7 +162,7 @@ export default function DashboardPage() {
                     <div className="text-sm">
                       <p className="font-medium">{next.title}</p>
                       <p className="text-muted-foreground">
-                        {formatDateTime(next.start)} – {format(next.end, 'HH:mm')}
+                        {formatDateTime(next.start)} to {format(next.end, 'HH:mm')}
                       </p>
                       {next.isProvisional ? <Badge className="mt-2">Provisional</Badge> : null}
                     </div>
@@ -212,7 +212,7 @@ export default function DashboardPage() {
                         <li key={a.id}>
                           <Link to={`/assessments/attempts/${a.id}`} className="flex items-center justify-between gap-2 hover:underline">
                             <span className="truncate">{(quizTitle.get(a.quiz_id) ?? 'Assessment').replace(/^(Lesson quiz|Module assessment): /, '')}</span>
-                            <Badge tone={a.passed ? 'success' : 'warning'}>{a.percent === null ? '—' : `${Math.round(Number(a.percent))}%`}</Badge>
+                            <Badge tone={a.passed ? 'success' : 'warning'}>{a.percent === null ? 'n/a' : `${Math.round(Number(a.percent))}%`}</Badge>
                           </Link>
                         </li>
                       ))}

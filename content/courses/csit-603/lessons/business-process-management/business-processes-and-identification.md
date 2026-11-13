@@ -84,10 +84,10 @@ Porter's (1985) value chain divides activities into primary and support activiti
 
 A process architecture is usually built in levels:
 
-- **Level 0 – Process landscape**: the organisation's main process areas, often drawn as management processes along the top, core processes in the middle (flowing from customer need to customer satisfaction) and support processes along the bottom.
-- **Level 1 – Process groups**: for example, within "Fulfil customer orders": order capture, picking, delivery and invoicing.
-- **Level 2 – Processes**: individual end-to-end processes with defined triggers and outcomes.
-- **Level 3 and below – Sub-processes and tasks**: detailed models used for analysis and automation.
+- **Level 0: Process landscape**: the organisation's main process areas, often drawn as management processes along the top, core processes in the middle (flowing from customer need to customer satisfaction) and support processes along the bottom.
+- **Level 1: Process groups**: for example, within "Fulfil customer orders": order capture, picking, delivery and invoicing.
+- **Level 2: Processes**: individual end-to-end processes with defined triggers and outcomes.
+- **Level 3 and below: Sub-processes and tasks**: detailed models used for analysis and automation.
 
 Reference frameworks can accelerate this work. The APQC Process Classification Framework, for example, offers a standard hierarchy of process categories that organisations can adapt rather than starting from a blank page. SCOR, introduced in the previous module, serves the same purpose for supply chains.
 
@@ -180,7 +180,7 @@ flowchart TB
 ## Practical Exercises
 
 1. **Name the processes.** For a restaurant, identify at least eight processes using "X-to-Y" names and classify each as core, support or management. *Expected output:* a table with names, triggers, outcomes and categories.
-2. **Draw a process landscape.** Produce a Level 0 landscape for a logistics firm in Tema using the management–core–support layout. *Expected output:* a diagram with at least four core, three support and two management processes.
+2. **Draw a process landscape.** Produce a Level 0 landscape for a logistics firm in Tema using the management-core-support layout. *Expected output:* a diagram with at least four core, three support and two management processes.
 3. **Prioritisation matrix.** Score five processes in an organisation you know on importance, dysfunction and feasibility, choose weights and justify the top two. *Expected output:* a completed matrix and a half-page justification citing evidence you would collect.
 4. **Explore modelling tools.** Install or open Bizagi Modeler (<https://www.bizagi.com/>) or Camunda Modeler (see <https://camunda.com/>) and create a simple diagram listing the Level 1 process groups of one core process. *Expected output:* a saved diagram file and a screenshot.
 
@@ -201,8 +201,8 @@ flowchart TB
 
 ## Video Resources
 
-- [Camunda](https://camunda.com/) — Camunda. Official site with resources introducing process orchestration and BPMN-based process management.
-- [Bizagi](https://www.bizagi.com/) — Bizagi. Official site for Bizagi Modeler, a process modelling tool, with learning resources on process documentation.
+- [Camunda](https://camunda.com/): Camunda. Official site with resources introducing process orchestration and BPMN-based process management.
+- [Bizagi](https://www.bizagi.com/): Bizagi. Official site for Bizagi Modeler, a process modelling tool, with learning resources on process documentation.
 
 ## Revision Summary
 

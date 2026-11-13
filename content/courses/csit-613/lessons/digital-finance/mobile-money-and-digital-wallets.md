@@ -106,18 +106,18 @@ flowchart TD
 
 **Illustrative scenario.** *Esi's Shop* is a hypothetical mobile money agent in a busy Kumasi market. She starts Monday with GHS 5,000 in cash and GHS 5,000 in e-float (total liquidity GHS 10,000). Commissions are ignored for simplicity.
 
-**Step 1 – Morning transactions.** Traders deposit their takings before travelling to buy stock: cash-ins total GHS 4,200, and cash-outs total GHS 800.
+**Step 1: Morning transactions.** Traders deposit their takings before travelling to buy stock: cash-ins total GHS 4,200, and cash-outs total GHS 800.
 - Cash = `5,000 + 4,200 − 800 = GHS 8,400`
 - E-float = `5,000 − 4,200 + 800 = GHS 1,600`
 - Total liquidity = `8,400 + 1,600 = GHS 10,000` (unchanged, as expected).
 
-**Step 2 – A problem appears.** At midday a trader wants to deposit GHS 2,500. Esi has only GHS 1,600 e-float, so she can serve only part of the deposit or must turn the customer away. Her cash is plentiful but cannot be used for a cash-in.
+**Step 2: A problem appears.** At midday a trader wants to deposit GHS 2,500. Esi has only GHS 1,600 e-float, so she can serve only part of the deposit or must turn the customer away. Her cash is plentiful but cannot be used for a cash-in.
 
-**Step 3 – Rebalance.** Esi takes GHS 4,000 cash to a nearby bank branch or super-agent and converts it to e-float. Now cash = `8,400 − 4,000 = GHS 4,400` and e-float = `1,600 + 4,000 = GHS 5,600`. She can serve the GHS 2,500 cash-in.
+**Step 3: Rebalance.** Esi takes GHS 4,000 cash to a nearby bank branch or super-agent and converts it to e-float. Now cash = `8,400 − 4,000 = GHS 4,400` and e-float = `1,600 + 4,000 = GHS 5,600`. She can serve the GHS 2,500 cash-in.
 
-**Step 4 – Analyse the pattern.** Esi's location produces a predictable *cash-in-heavy* morning. She can plan by starting the day with more e-float and less cash, or arrange a scheduled midday rebalance. A rural agent serving remittance recipients would face the opposite pattern and need more cash.
+**Step 4: Analyse the pattern.** Esi's location produces a predictable *cash-in-heavy* morning. She can plan by starting the day with more e-float and less cash, or arrange a scheduled midday rebalance. A rural agent serving remittance recipients would face the opposite pattern and need more cash.
 
-**Step 5 – Consider risks.** Holding GHS 8,400 in cash creates theft risk; rebalancing trips cost time and transport; and agents must guard against fraud such as fake "reversal" calls asking them to send e-value back. Liquidity management therefore combines forecasting, security and fraud awareness.
+**Step 5: Consider risks.** Holding GHS 8,400 in cash creates theft risk; rebalancing trips cost time and transport; and agents must guard against fraud such as fake "reversal" calls asking them to send e-value back. Liquidity management therefore combines forecasting, security and fraud awareness.
 ## Ghanaian Business Application
 
 Mobile money is a central part of Ghana's payments landscape. MTN Mobile Money (MTN MoMo) is the most widely known service, and other mobile network operators offer competing services, such as Telecel Cash (formerly Vodafone Cash). Customers use mobile money for person-to-person transfers, airtime and data, utility bills, school fees, merchant payments and, through partnerships with financial institutions, savings and small loans. A large agent network provides cash-in and cash-out across cities, towns and rural areas.
@@ -176,16 +176,16 @@ The M-Pesa case highlights several lessons relevant to Ghana. First, the **agent
 
 ## Further Reading
 
-- Jack, W., & Suri, T. (2014). Risk sharing and transactions costs: Evidence from Kenya's mobile money revolution. *American Economic Review, 104*(1), 183–223. <https://doi.org/10.1257/aer.104.1.183>
-- Suri, T., & Jack, W. (2016). The long-run poverty and gender impacts of mobile money. *Science, 354*(6317), 1288–1292. <https://doi.org/10.1126/science.aah5309>
+- Jack, W., & Suri, T. (2014). Risk sharing and transactions costs: Evidence from Kenya's mobile money revolution. *American Economic Review, 104*(1), 183-223. <https://doi.org/10.1257/aer.104.1.183>
+- Suri, T., & Jack, W. (2016). The long-run poverty and gender impacts of mobile money. *Science, 354*(6317), 1288-1292. <https://doi.org/10.1126/science.aah5309>
 - Demirgüç-Kunt, A., Klapper, L., Singer, D., & Ansar, S. (2022). *The Global Findex Database 2021: Financial inclusion, digital payments, and resilience in the age of COVID-19*. World Bank. <https://www.worldbank.org/en/publication/globalfindex>
 - GSMA. Mobile money resources. <https://www.gsma.com/>
 - Ghana Interbank Payment and Settlement Systems (GhIPSS). <https://ghipss.net/>
 
 ## Video Resources
 
-- [GSMA](https://www.gsma.com/) — GSMA. Official site of the mobile industry association, with research and programmes on mobile money.
-- [GhIPSS](https://ghipss.net/) — Ghana Interbank Payment and Settlement Systems. Official site describing Ghana's national payment infrastructure, including interoperability services.
+- [GSMA](https://www.gsma.com/): GSMA. Official site of the mobile industry association, with research and programmes on mobile money.
+- [GhIPSS](https://ghipss.net/): Ghana Interbank Payment and Settlement Systems. Official site describing Ghana's national payment infrastructure, including interoperability services.
 
 ## Revision Summary
 

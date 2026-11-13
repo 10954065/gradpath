@@ -1,6 +1,6 @@
 ---
 title: FinTech and Digital Banking
-summary: Classify the main categories of FinTech, explain how digital banking channels, open banking and bank–FinTech partnerships work, and evaluate the opportunities and risks they create for customers, institutions and regulators in Ghana and internationally.
+summary: Classify the main categories of FinTech, explain how digital banking channels, open banking and bank-FinTech partnerships work, and evaluate the opportunities and risks they create for customers, institutions and regulators in Ghana and internationally.
 estimatedMinutes: 50
 difficulty: intermediate
 source: supplementary
@@ -17,7 +17,7 @@ In Ghana, the effect is visible in everyday life: people pay bills by mobile mon
 - Define FinTech and explain why finance is especially open to digital innovation.
 - Classify FinTech activities into payments, lending, savings and investment, insurance, regulatory technology and infrastructure.
 - Describe digital banking channels, including internet banking, mobile apps, USSD and agency banking.
-- Explain open banking and the role of APIs in bank–FinTech collaboration.
+- Explain open banking and the role of APIs in bank-FinTech collaboration.
 - Evaluate the opportunities and risks of FinTech for customers, incumbents and regulators.
 
 ## Prerequisite Knowledge
@@ -62,11 +62,11 @@ Categories overlap. A mobile money service starts in payments, then adds savings
 
 Banks deliver digital services through several channels, each suited to different customers:
 
-1. **Internet banking** – browser-based access, common for business customers handling bulk payments and statements.
-2. **Mobile banking apps** – smartphone apps offering balance checks, transfers, bill payments, card controls and sometimes account opening with identity verification.
-3. **USSD banking** – menu sessions accessed by dialling a short code, working on basic phones without data; widely used in Ghana for its accessibility, although sessions are short and the interface limited.
-4. **Agency banking** – agents provide cash deposits and withdrawals on behalf of a bank, extending reach without branches.
-5. **ATMs, cards and point-of-sale** – still important, increasingly integrated with mobile channels.
+1. **Internet banking**: browser-based access, common for business customers handling bulk payments and statements.
+2. **Mobile banking apps**: smartphone apps offering balance checks, transfers, bill payments, card controls and sometimes account opening with identity verification.
+3. **USSD banking**: menu sessions accessed by dialling a short code, working on basic phones without data; widely used in Ghana for its accessibility, although sessions are short and the interface limited.
+4. **Agency banking**: agents provide cash deposits and withdrawals on behalf of a bank, extending reach without branches.
+5. **ATMs, cards and point-of-sale**: still important, increasingly integrated with mobile channels.
 
 Behind these channels sit the **core banking system** (accounts and ledgers), **middleware and APIs** that expose services to channels and partners, and **security systems** for authentication and fraud monitoring.
 
@@ -112,20 +112,20 @@ flowchart LR
 
 **Illustrative scenario.** *QuickCedi* is a hypothetical digital lender in Ghana, partnered with a licensed institution, offering 30-day micro-loans to mobile money users. It is considering offering GHS 500 loans with a fee of 6 per cent. This example teaches risk-based reasoning; it is not lending or pricing advice, and real lending is subject to regulation and consumer protection rules.
 
-**Step 1 – Understand expected loss.** Lenders estimate expected loss with the formula `Expected loss = PD × LGD × EAD`, where PD is the probability of default, LGD the loss given default (share not recovered) and EAD the exposure at default.
+**Step 1: Understand expected loss.** Lenders estimate expected loss with the formula `Expected loss = PD × LGD × EAD`, where PD is the probability of default, LGD the loss given default (share not recovered) and EAD the exposure at default.
 
-**Step 2 – Apply initial estimates.** Using a simple scoring model, QuickCedi estimates PD = 8 per cent, LGD = 90 per cent and EAD = GHS 500. Expected loss per loan = `0.08 × 0.90 × 500 = GHS 36`.
+**Step 2: Apply initial estimates.** Using a simple scoring model, QuickCedi estimates PD = 8 per cent, LGD = 90 per cent and EAD = GHS 500. Expected loss per loan = `0.08 × 0.90 × 500 = GHS 36`.
 
-**Step 3 – Estimate expected fee income.** Only non-defaulting borrowers pay the fee: `0.92 × (500 × 0.06) = 0.92 × 30 = GHS 27.60`.
+**Step 3: Estimate expected fee income.** Only non-defaulting borrowers pay the fee: `0.92 × (500 × 0.06) = 0.92 × 30 = GHS 27.60`.
 
-**Step 4 – Compare.** Expected contribution before operating costs = `27.60 − 36 = −GHS 8.40` per loan. The product loses money even before costs.
+**Step 4: Compare.** Expected contribution before operating costs = `27.60 − 36 = −GHS 8.40` per loan. The product loses money even before costs.
 
-**Step 5 – Consider responses.**
+**Step 5: Consider responses.**
 - *Better data and scoring*: if transaction-history data reduce PD to 4 per cent for approved applicants, expected loss = `0.04 × 0.90 × 500 = GHS 18`, and fee income = `0.96 × 30 = GHS 28.80`, giving a contribution of `+GHS 10.80`.
 - *Smaller first loans*: starting customers at lower limits and increasing them after on-time repayment reduces exposure while data accumulates.
 - *Raising fees*: may appear to fix the numbers but can increase over-indebtedness and attract riskier borrowers (adverse selection), and can raise consumer protection concerns.
 
-**Step 6 – Evaluate.** The example shows why data is central to FinTech lending: the business model works only if digital data genuinely improve risk assessment. It also shows the ethical dimension: profitable lending should not rely on borrowers falling into repeated debt.
+**Step 6: Evaluate.** The example shows why data is central to FinTech lending: the business model works only if digital data genuinely improve risk assessment. It also shows the ethical dimension: profitable lending should not rely on borrowers falling into repeated debt.
 
 ## Ghanaian Business Application
 
@@ -181,15 +181,15 @@ The case illustrates several points. First, open banking was introduced primaril
 
 ## Further Reading
 
-- Arner, D. W., Barberis, J., & Buckley, R. P. (2016). The evolution of FinTech: A new post-crisis paradigm? *Georgetown Journal of International Law, 47*(4), 1271–1319.
+- Arner, D. W., Barberis, J., & Buckley, R. P. (2016). The evolution of FinTech: A new post-crisis paradigm? *Georgetown Journal of International Law, 47*(4), 1271-1319.
 - Philippon, T. (2016). *The FinTech opportunity* (NBER Working Paper No. 22476). National Bureau of Economic Research.
 - Demirgüç-Kunt, A., Klapper, L., Singer, D., & Ansar, S. (2022). *The Global Findex Database 2021: Financial inclusion, digital payments, and resilience in the age of COVID-19*. World Bank. <https://www.worldbank.org/en/publication/globalfindex>
 - Bank of Ghana. Official website. <https://www.bog.gov.gh/>
 
 ## Video Resources
 
-- [World Bank Global Findex](https://www.worldbank.org/en/publication/globalfindex) — World Bank. Official page for the Global Findex database and related material on financial inclusion and digital payments.
-- [Bank of Ghana](https://www.bog.gov.gh/) — Bank of Ghana. Official central bank website with publications on payment systems and financial technology.
+- [World Bank Global Findex](https://www.worldbank.org/en/publication/globalfindex): World Bank. Official page for the Global Findex database and related material on financial inclusion and digital payments.
+- [Bank of Ghana](https://www.bog.gov.gh/): Bank of Ghana. Official central bank website with publications on payment systems and financial technology.
 
 ## Revision Summary
 

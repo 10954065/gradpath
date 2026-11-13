@@ -74,7 +74,7 @@ export default function QuizPage() {
               <li>Your answers are saved on this device as you go, so a refresh will not lose them.</li>
               {q.time_limit_minutes ? <li>The timer keeps running if you leave the page. When time is up your answers are submitted automatically.</li> : null}
               <li>Answers and explanations are shown only after you submit.</li>
-              <li>Written answers are self-assessed using the rubric and model answer guidance — they are not marked by a lecturer.</li>
+              <li>Written answers are self-assessed using the rubric and model answer guidance. They are not marked by a lecturer.</li>
             </ul>
           </div>
           {!online ? <Alert tone="warning">Assessments are scored on the server, so you need a connection to start or submit.</Alert> : null}

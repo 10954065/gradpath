@@ -159,7 +159,7 @@ export default function PlannerPage() {
           </Button>
         </div>
         <h2 className="text-sm font-semibold">
-          {format(anchor, 'd MMM')} – {format(weekEnd, 'd MMM yyyy')}
+          {format(anchor, 'd MMM')} to {format(weekEnd, 'd MMM yyyy')}
         </h2>
         <Button asChild variant="link" size="sm">
           <Link to="/timetable">Edit weekly timetable</Link>
@@ -193,7 +193,7 @@ export default function PlannerPage() {
                     >
                       <button type="button" className="w-full text-left" onClick={() => openEditor(e)}>
                         <span className="flex items-center gap-1 font-medium">
-                          <Clock className="size-3" aria-hidden /> {format(e.start, 'HH:mm')}–{format(e.end, 'HH:mm')}
+                          <Clock className="size-3" aria-hidden /> {format(e.start, 'HH:mm')}-{format(e.end, 'HH:mm')}
                         </span>
                         <span className="mt-0.5 line-clamp-2 block">{e.title}</span>
                         <span className="mt-1 flex flex-wrap gap-1">

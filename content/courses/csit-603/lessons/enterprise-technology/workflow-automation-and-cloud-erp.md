@@ -186,16 +186,16 @@ flowchart TD
 
 - Lacity, M. C., & Willcocks, L. P. (2016). Robotic process automation at Telefónica O2. *MIS Quarterly Executive, 15*(1).
 - Mell, P., & Grance, T. (2011). *The NIST definition of cloud computing* (NIST Special Publication 800-145). National Institute of Standards and Technology. <https://doi.org/10.6028/NIST.SP.800-145>
-- Hammer, M. (1990). Reengineering work: Don't automate, obliterate. *Harvard Business Review, 68*(4), 104–112.
+- Hammer, M. (1990). Reengineering work: Don't automate, obliterate. *Harvard Business Review, 68*(4), 104-112.
 - Dumas, M., La Rosa, M., Mendling, J., & Reijers, H. A. (2018). *Fundamentals of business process management* (2nd ed.). Springer.
 - Monk, E., & Wagner, B. (2013). *Concepts in enterprise resource planning* (4th ed.). Cengage Learning.
 
 ## Video Resources
 
-- [Camunda documentation](https://docs.camunda.io/) — Camunda. Official guides to modelling and executing BPMN workflows and decision tables.
-- [Microsoft Learn: Power Automate documentation](https://learn.microsoft.com/power-automate/) — Microsoft. Official documentation on cloud flows, desktop flows (RPA) and connectors.
-- [UiPath Academy](https://academy.uipath.com/) — UiPath. Free official courses introducing robotic process automation concepts and tools.
-- [SAP Learning](https://learning.sap.com/) — SAP. Free learning journeys on SAP's cloud ERP and business process automation.
+- [Camunda documentation](https://docs.camunda.io/): Camunda. Official guides to modelling and executing BPMN workflows and decision tables.
+- [Microsoft Learn: Power Automate documentation](https://learn.microsoft.com/power-automate/): Microsoft. Official documentation on cloud flows, desktop flows (RPA) and connectors.
+- [UiPath Academy](https://academy.uipath.com/): UiPath. Free official courses introducing robotic process automation concepts and tools.
+- [SAP Learning](https://learning.sap.com/): SAP. Free learning journeys on SAP's cloud ERP and business process automation.
 
 ## Revision Summary
 

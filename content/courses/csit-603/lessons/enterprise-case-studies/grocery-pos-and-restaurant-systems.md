@@ -228,9 +228,9 @@ The case shows that in retail, the product master is the foundation of every pro
 
 ## Video Resources
 
-- [SAP Learning](https://learning.sap.com/) — SAP. Free learning journeys including inventory management and retail processes.
-- [Bizagi](https://www.bizagi.com/) — Bizagi. Official site for Bizagi Modeler, used for modelling as-is and to-be retail processes.
-- [GS1 standards](https://www.gs1.org/standards) — GS1. Official overview of barcode and product identification standards used in retail.
+- [SAP Learning](https://learning.sap.com/): SAP. Free learning journeys including inventory management and retail processes.
+- [Bizagi](https://www.bizagi.com/): Bizagi. Official site for Bizagi Modeler, used for modelling as-is and to-be retail processes.
+- [GS1 standards](https://www.gs1.org/standards): GS1. Official overview of barcode and product identification standards used in retail.
 
 ## Revision Summary
 
@@ -241,4 +241,4 @@ The illustrative supermarket lacks product-level sales data, has invisible shrin
 - Theoretical versus actual usage exposes waste and theft.
 - Price overrides need authorisation and logging.
 - Master data and recipes are preconditions, not afterthoughts.
-- Target Canada (2013–2015): item data problems emptied shelves.
+- Target Canada (2013-2015): item data problems emptied shelves.

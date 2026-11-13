@@ -16,7 +16,7 @@ This lesson covers two of the most common and valuable predictive projects in bu
 
 - Apply a structured project template to design an end-to-end business AI project.
 - Design a demand forecasting project with appropriate baselines, features, backtesting and error metrics.
-- Design a churn prediction project with a defensible churn definition, imbalance-aware metrics and a cost–benefit retention policy.
+- Design a churn prediction project with a defensible churn definition, imbalance-aware metrics and a cost-benefit retention policy.
 - Evaluate the deployment, risk and ethical implications of each project.
 - Create a step-by-step implementation plan using free tools for a Ghanaian organisation.
 
@@ -94,13 +94,13 @@ Risks include censored demand, structural breaks (currency depreciation raising 
 
 **Illustrative scenario.** A fictional supermarket chain with four stores in Accra and Tema wants to reduce waste in bakery and fresh produce and stock-outs in staples such as rice, cooking oil and sugar.
 
-1. **Weeks 1–2 – Define scope and baseline.** Agree with the operations manager on 150 products across three categories, a seven-day horizon and success criteria (for example, a measurable reduction in waste value with no increase in stock-outs). Extract two years of POS data to CSV.
-2. **Weeks 2–3 – Data quality.** In Google Colab, use pandas to check missing days, negative sales (returns), duplicate rows and stock-out periods. Build a holiday and payday calendar.
-3. **Week 4 – Baselines.** Compute seasonal naïve and 4-week moving average forecasts and their WAPE in rolling backtests.
-4. **Weeks 5–6 – Models.** Fit ETS models for high-volume items and a global gradient-boosted model with lag, rolling, price, promotion and calendar features. Compare against baselines by category.
-5. **Week 7 – Ordering simulation.** Replay the last three months, converting forecasts into orders, and estimate waste and stock-outs versus actual history.
-6. **Weeks 8–11 – Pilot.** Deploy batch forecasts to two stores; the other two continue as before. Buyers review suggestions daily and record overrides.
-7. **Week 12 – Review and scale.** Compare waste, stock-outs and overrides; decide whether to scale, refine or stop; set a monthly monitoring routine.
+1. **Weeks 1-2: Define scope and baseline.** Agree with the operations manager on 150 products across three categories, a seven-day horizon and success criteria (for example, a measurable reduction in waste value with no increase in stock-outs). Extract two years of POS data to CSV.
+2. **Weeks 2-3: Data quality.** In Google Colab, use pandas to check missing days, negative sales (returns), duplicate rows and stock-out periods. Build a holiday and payday calendar.
+3. **Week 4: Baselines.** Compute seasonal naïve and 4-week moving average forecasts and their WAPE in rolling backtests.
+4. **Weeks 5-6: Models.** Fit ETS models for high-volume items and a global gradient-boosted model with lag, rolling, price, promotion and calendar features. Compare against baselines by category.
+5. **Week 7: Ordering simulation.** Replay the last three months, converting forecasts into orders, and estimate waste and stock-outs versus actual history.
+6. **Weeks 8-11: Pilot.** Deploy batch forecasts to two stores; the other two continue as before. Buyers review suggestions daily and record overrides.
+7. **Week 12: Review and scale.** Compare waste, stock-outs and overrides; decide whether to scale, refine or stop; set a monthly monitoring routine.
 
 ```python
 # Seasonal naive baseline and WAPE (pandas)
@@ -148,7 +148,7 @@ A monthly **batch** score produces a ranked list delivered to the CRM or call ce
 
 Risks include leakage (features recorded after the decision to leave), a churn definition that does not match business reality, and wasting offers on customers who would have stayed anyway. Ethical issues include **price discrimination** (offering discounts only to customers who threaten to leave, while loyal customers pay more), intrusive use of personal data, and making it harder for customers to leave. Under Act 843, the purpose of processing should be clear and features minimised; customers should be able to object to direct marketing.
 
-### Worked cost–benefit example
+### Worked cost-benefit example
 
 Assume (hypothetical figures) a retention budget for 1,000 customers, an offer cost of GHS 20, precision at 1,000 of 0.30, an offer that retains 40% of true churners who receive it, and a CLV of GHS 600.
 
@@ -164,13 +164,13 @@ If precision were only 0.10, value saved would be `0.40 × 100 × 600 = GHS 24,0
 
 **Illustrative scenario.** A fictional fixed-wireless internet provider in Kumasi with monthly prepaid bundles has rising churn among small-business customers.
 
-1. **Weeks 1–2 – Define churn and value.** Agree that churn is "no bundle purchase for 45 days", estimate average CLV by segment, and set the retention budget.
-2. **Weeks 2–4 – Data and labels.** Build a customer–month table with features up to each month-end and a churn label for the following 45 days. Check for leakage and duplicates.
-3. **Week 5 – Baselines.** Train logistic regression and a usage-drop rule; measure precision at k on a later time period.
-4. **Weeks 6–7 – Model and explanations.** Train a gradient-boosted classifier with class weights, compare precision at k and lift, and generate SHAP explanations.
-5. **Week 8 – Ethics and privacy review.** Confirm feature minimisation, check offer fairness across areas, and update the privacy notice if needed.
-6. **Weeks 9–14 – Randomised pilot.** Score customers monthly; randomly split the top-ranked list into treatment (contacted) and control (not contacted).
-7. **Week 15 – Evaluate and decide.** Compare churn and net value between treatment and control; decide on scaling and set up monitoring.
+1. **Weeks 1-2: Define churn and value.** Agree that churn is "no bundle purchase for 45 days", estimate average CLV by segment, and set the retention budget.
+2. **Weeks 2-4: Data and labels.** Build a customer-month table with features up to each month-end and a churn label for the following 45 days. Check for leakage and duplicates.
+3. **Week 5: Baselines.** Train logistic regression and a usage-drop rule; measure precision at k on a later time period.
+4. **Weeks 6-7: Model and explanations.** Train a gradient-boosted classifier with class weights, compare precision at k and lift, and generate SHAP explanations.
+5. **Week 8: Ethics and privacy review.** Confirm feature minimisation, check offer fairness across areas, and update the privacy notice if needed.
+6. **Weeks 9-14: Randomised pilot.** Score customers monthly; randomly split the top-ranked list into treatment (contacted) and control (not contacted).
+7. **Week 15: Evaluate and decide.** Compare churn and net value between treatment and control; decide on scaling and set up monitoring.
 
 ## International Case Study
 
@@ -201,7 +201,7 @@ flowchart TD
 - **Misconception:** The most complex model gives the best forecast. **Correction:** Simple baselines are often competitive; models must be shown to beat them in backtests.
 - **Misconception:** Zero sales means zero demand. **Correction:** During stock-outs, demand is censored; treating it as zero biases forecasts downwards.
 - **Misconception:** Churn is obvious from the data. **Correction:** In prepaid settings churn must be defined explicitly, and the definition shapes the whole project.
-- **Misconception:** Targeting the highest-risk customers always maximises value. **Correction:** Some will leave regardless; uplift and cost–benefit analysis identify who is worth contacting.
+- **Misconception:** Targeting the highest-risk customers always maximises value. **Correction:** Some will leave regardless; uplift and cost-benefit analysis identify who is worth contacting.
 - **Misconception:** High overall accuracy indicates a good churn model. **Correction:** With imbalanced classes, precision at k, recall and lift are more informative.
 
 ## Common Examination Mistakes
@@ -223,7 +223,7 @@ flowchart TD
 
 1. **Forecast baseline.** Using any public retail sales dataset in Google Colab, compute seasonal naïve and moving-average WAPE using a rolling-origin backtest. *Expected output:* a table of WAPE by product category for both baselines.
 2. **Churn model.** Using the publicly available IBM Telco customer churn sample dataset (available on Kaggle), train logistic regression and gradient boosting with a held-out split and report precision at the top 10% and PR-AUC. *Expected output:* a notebook, a metrics table and SHAP explanations for three customers.
-3. **Cost–benefit.** Recalculate the worked churn example with an offer cost of GHS 35 and precision of 0.25. *Expected output:* net value (GHS 25,000) and a recommendation.
+3. **Cost-benefit.** Recalculate the worked churn example with an offer cost of GHS 35 and precision of 0.25. *Expected output:* net value (GHS 25,000) and a recommendation.
 
 ## Key Takeaways
 
@@ -236,14 +236,14 @@ flowchart TD
 ## Further Reading
 
 - Hyndman, R. J., & Athanasopoulos, G. (2021). *Forecasting: Principles and practice* (3rd ed.). OTexts. <https://otexts.com/fpp3/>
-- Makridakis, S., Spiliotis, E., & Assimakopoulos, V. (2022). M5 accuracy competition: Results, findings, and conclusions. *International Journal of Forecasting, 38*(4), 1346–1364.
+- Makridakis, S., Spiliotis, E., & Assimakopoulos, V. (2022). M5 accuracy competition: Results, findings, and conclusions. *International Journal of Forecasting, 38*(4), 1346-1364.
 - Provost, F., & Fawcett, T. (2013). *Data science for business: What you need to know about data mining and data-analytic thinking*. O'Reilly Media.
 - Huyen, C. (2022). *Designing machine learning systems*. O'Reilly Media.
 
 ## Video Resources
 
-- [Kaggle Learn](https://www.kaggle.com/learn) — Kaggle. Free micro-courses on time series, feature engineering and intermediate machine learning with browser-based notebooks.
-- [scikit-learn User Guide](https://scikit-learn.org/stable/user_guide.html) — scikit-learn developers. Official documentation for the classification, regression and model evaluation tools used in these projects.
+- [Kaggle Learn](https://www.kaggle.com/learn): Kaggle. Free micro-courses on time series, feature engineering and intermediate machine learning with browser-based notebooks.
+- [scikit-learn User Guide](https://scikit-learn.org/stable/user_guide.html): scikit-learn developers. Official documentation for the classification, regression and model evaluation tools used in these projects.
 
 ## Revision Summary
 

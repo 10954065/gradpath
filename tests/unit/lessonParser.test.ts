@@ -140,5 +140,11 @@ describe('lessonParser', () => {
       url: 'https://example.org/v',
       description: 'Provider. Desc',
     })
+    // Current authoring format uses a colon instead of a dash.
+    expect(parseVideo('[Intro](https://example.org/v): Provider. Desc')).toEqual({
+      title: 'Intro',
+      url: 'https://example.org/v',
+      description: 'Provider. Desc',
+    })
   })
 })

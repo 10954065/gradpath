@@ -2,7 +2,7 @@ module: payment-security
 cards:
   - lesson: payment-authentication-and-transaction-security
     front: Why is a password plus a security question not multi-factor authentication?
-    back: Both are knowledge factors. Multi-factor authentication needs evidence from different categories — knowledge, possession and inherence.
+    back: Both are knowledge factors. Multi-factor authentication needs evidence from different categories, knowledge, possession and inherence.
   - lesson: payment-authentication-and-transaction-security
     front: What distinguishes the frictionless and challenge flows of EMV 3-D Secure 2.x?
     back: In the frictionless flow the issuer authenticates silently using device and transaction data; in the challenge flow the customer must complete a step such as an OTP, app approval or biometric check.
@@ -20,7 +20,7 @@ cards:
     back: It scores each transaction from signals such as device, amount and velocity, letting low-risk payments proceed, stepping up medium-risk ones and declining or reviewing high-risk ones.
   - lesson: fraud-prevention-risk-and-reconciliation
     front: Why can strong authentication not prevent friendly fraud?
-    back: The genuine customer authenticates and later disputes the purchase, so controls must be evidential — delivery proof, clear descriptors and good records.
+    back: The genuine customer authenticates and later disputes the purchase, so controls must be evidential, delivery proof, clear descriptors and good records.
   - lesson: fraud-prevention-risk-and-reconciliation
     front: What are the four risk treatment options?
     back: Avoid (stop the activity), reduce (apply controls), transfer (insurance, contracts, liability shift) and accept (tolerate within appetite while monitoring).
@@ -32,7 +32,7 @@ cards:
     back: Timing differences, amount mismatches (e.g. keying errors), duplicates, failed payments recorded as paid, and unmatched receipts with no ledger entry.
   - lesson: fraud-prevention-risk-and-reconciliation
     front: What is the main weakness of a purely rule-based fraud system?
-    back: Rigidity — fraudsters learn and stay beneath thresholds, and large overlapping rule sets generate many false positives.
+    back: Rigidity, fraudsters learn and stay beneath thresholds, and large overlapping rule sets generate many false positives.
   - lesson: fraud-prevention-risk-and-reconciliation
     front: Why should a merchant never treat an SMS alert as proof of a mobile money payment?
     back: SMS messages can be forged; payment must be confirmed in the wallet, merchant dashboard or a verified PSP notification.

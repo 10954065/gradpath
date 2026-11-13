@@ -48,7 +48,7 @@ John Stuart Mill, in *Utilitarianism* (1863), refined the theory. He argued that
 
 **Act and rule utilitarianism.** Act utilitarians evaluate each action directly: in this situation, which option produces the most well-being? Rule utilitarians evaluate rules: which general rules, if widely followed, would produce the most well-being? The distinction matters. An act utilitarian might conclude that secretly reading one employee's emails is justified if it prevents a fraud. A rule utilitarian asks what would happen if employers generally read staff emails secretly whenever they suspected wrongdoing: trust might collapse and the overall consequences could be worse, so the rule "respect employee correspondence except under transparent, lawful procedures" would be preferred.
 
-**Application to IT.** Utilitarian reasoning is natural in technology decisions: cost–benefit analysis, risk assessment and public-health uses of data all weigh aggregate consequences. It requires decision-makers to consider *everyone* affected, not only shareholders.
+**Application to IT.** Utilitarian reasoning is natural in technology decisions: cost-benefit analysis, risk assessment and public-health uses of data all weigh aggregate consequences. It requires decision-makers to consider *everyone* affected, not only shareholders.
 
 **Criticisms.**
 
@@ -101,7 +101,7 @@ John Rawls, in *A Theory of Justice* (1971), proposed the **veil of ignorance**:
 
 | Theory | Central question | Key thinkers | Strength in IT ethics | Main weakness |
 |---|---|---|---|---|
-| Act utilitarianism | Which act produces the best overall consequences? | Bentham, Mill | Considers everyone affected; supports risk–benefit analysis | Can justify violating rights of minorities |
+| Act utilitarianism | Which act produces the best overall consequences? | Bentham, Mill | Considers everyone affected; supports risk-benefit analysis | Can justify violating rights of minorities |
 | Rule utilitarianism | Which rules produce the best consequences if generally followed? | Mill (interpretations vary) | Supports stable policies and trust | May collapse into act utilitarianism |
 | Kantian deontology | Could my maxim be universalised? Am I treating people merely as means? | Kant | Grounds consent, honesty, privacy and dignity | Rigid; weak guidance when duties conflict |
 | Virtue ethics | What would a person of good character do? | Aristotle; Vallor | Fits professional judgement and character | Less precise guidance in hard cases |
@@ -200,9 +200,9 @@ flowchart LR
 
 ## Video Resources
 
-- [Justice with Michael Sandel](https://justiceharvard.org/) — Harvard University. Official course site with lectures on utilitarianism, Kant, Rawls and Aristotle.
-- [Crash Course](https://www.youtube.com/@crashcourse) — Crash Course. Official channel whose Philosophy series covers utilitarianism, Kantian ethics, virtue ethics and contractarianism.
-- [Markkula Center for Applied Ethics](https://www.scu.edu/ethics/) — Santa Clara University. Official portal explaining ethical lenses used in decision-making.
+- [Justice with Michael Sandel](https://justiceharvard.org/): Harvard University. Official course site with lectures on utilitarianism, Kant, Rawls and Aristotle.
+- [Crash Course](https://www.youtube.com/@crashcourse): Crash Course. Official channel whose Philosophy series covers utilitarianism, Kantian ethics, virtue ethics and contractarianism.
+- [Markkula Center for Applied Ethics](https://www.scu.edu/ethics/): Santa Clara University. Official portal explaining ethical lenses used in decision-making.
 
 ## Revision Summary
 

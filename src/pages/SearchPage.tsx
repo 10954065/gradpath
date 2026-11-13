@@ -39,7 +39,7 @@ export default function SearchPage() {
 
   return (
     <>
-      <PageHeader title="Search" description="Search courses, modules, lessons, topics and resources — plus your own notes and assignments, which only you can see." />
+      <PageHeader title="Search" description="Search courses, modules, lessons, topics and resources, plus your own notes and assignments, which only you can see." />
       <form onSubmit={onSubmit} role="search" className="mb-5 flex max-w-2xl gap-2">
         <Input aria-label="Search" value={text} onChange={(e) => setText(e.target.value)} placeholder="e.g. thematic analysis, BPMN gateways, hashing" />
         <Button type="submit">

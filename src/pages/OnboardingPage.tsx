@@ -80,7 +80,7 @@ export default function OnboardingPage() {
                 </h1>
                 <p className="mt-3 max-w-xl text-muted-foreground">
                   GradPath supports you through Semester 1 of the MSc IT for Business: structured lessons, practice assessments,
-                  spaced-repetition revision, a study planner and progress analytics — all in one place.
+                  spaced-repetition revision, a study planner and progress analytics, all in one place.
                 </p>
                 <Alert className="mt-6" title="An independent study companion">
                   Lessons are original supplementary explanations and all questions are practice questions. They are not official
@@ -95,7 +95,7 @@ export default function OnboardingPage() {
                   Your seven courses
                 </h1>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  These courses make up GradPath's initial curriculum. Confirm each one against your official registration — not every
+                  These courses make up GradPath's initial curriculum. Confirm each one against your official registration, as not every
                   course is necessarily compulsory for you.
                 </p>
                 <ul className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-2">
@@ -126,7 +126,7 @@ export default function OnboardingPage() {
                   Set a weekly study target
                 </h1>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  We recommend 15–20 hours of independent study per week alongside lectures. You can change this at any time.
+                  We recommend 15 to 20 hours of independent study per week alongside lectures. You can change this at any time.
                 </p>
                 <div className="mt-6">
                   <label htmlFor="target" className="flex items-baseline justify-between text-sm font-medium">
@@ -145,7 +145,7 @@ export default function OnboardingPage() {
                   />
                   <div className="mt-1 flex justify-between text-xs text-muted-foreground">
                     <span>1</span>
-                    <span>Recommended 15–20</span>
+                    <span>Recommended 15 to 20</span>
                     <span>40</span>
                   </div>
                 </div>
@@ -185,8 +185,8 @@ export default function OnboardingPage() {
                   Start your study planner
                 </h1>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  We can add a provisional weekly study schedule (Monday–Sunday blocks for each course). It is a suggested study plan,
-                  not an official lecture timetable — edit it or replace it with your real timetable whenever you like.
+                  We can add a provisional weekly study schedule (Monday to Sunday blocks for each course). It is a suggested study plan,
+                  not an official lecture timetable. Edit it or replace it with your real timetable whenever you like.
                 </p>
                 <label className="mt-5 flex items-start gap-3 rounded-lg border p-4">
                   <input

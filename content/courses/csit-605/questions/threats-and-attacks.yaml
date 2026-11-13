@@ -201,7 +201,7 @@ questions:
       - Offline brute force
       - Volumetric DDoS
     answer: 1
-    explanation: Spraying tries a few common passwords across many accounts to avoid lockout. Credential stuffing uses many different leaked username–password pairs; offline brute force happens on stolen hashes, not live logins; DDoS targets availability.
+    explanation: Spraying tries a few common passwords across many accounts to avoid lockout. Credential stuffing uses many different leaked username-password pairs; offline brute force happens on stolen hashes, not live logins; DDoS targets availability.
   - id: ta16
     lesson: denial-of-service-and-credential-attacks
     type: short_answer

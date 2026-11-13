@@ -48,10 +48,10 @@ AI is defined partly by its goals and partly by a moving target. Tasks that once
 
 The most widely used textbook in the field, Russell and Norvig's *Artificial Intelligence: A Modern Approach*, organises definitions of AI along two dimensions. The first asks whether we judge a system by its **thought processes** or by its **behaviour**. The second asks whether we measure success against **human performance** or against an ideal standard of **rationality**. This yields four approaches:
 
-1. **Thinking humanly** – the cognitive modelling approach. The aim is to build programs whose internal reasoning resembles human thinking, tested against psychological experiments. This connects AI with cognitive science.
-2. **Acting humanly** – the Turing test approach. A system is intelligent if its observable behaviour is indistinguishable from a person's. To pass, a system would need natural language processing, knowledge representation, automated reasoning and learning.
-3. **Thinking rationally** – the "laws of thought" approach. Intelligence is the ability to draw correct conclusions using formal logic. Its weakness is that much real-world knowledge is uncertain and informal, and logical inference over large problems can be computationally intractable.
-4. **Acting rationally** – the rational agent approach. A system is intelligent if it acts to achieve the best expected outcome. Russell and Norvig adopt this as their main framing because rationality is mathematically well defined and more general than either logic or human imitation.
+1. **Thinking humanly**: the cognitive modelling approach. The aim is to build programs whose internal reasoning resembles human thinking, tested against psychological experiments. This connects AI with cognitive science.
+2. **Acting humanly**: the Turing test approach. A system is intelligent if its observable behaviour is indistinguishable from a person's. To pass, a system would need natural language processing, knowledge representation, automated reasoning and learning.
+3. **Thinking rationally**: the "laws of thought" approach. Intelligence is the ability to draw correct conclusions using formal logic. Its weakness is that much real-world knowledge is uncertain and informal, and logical inference over large problems can be computationally intractable.
+4. **Acting rationally**: the rational agent approach. A system is intelligent if it acts to achieve the best expected outcome. Russell and Norvig adopt this as their main framing because rationality is mathematically well defined and more general than either logic or human imitation.
 
 The rational agent view is particularly useful for business. Organisations rarely care whether a demand-forecasting model "thinks like" a planner; they care whether its decisions lead to better outcomes, such as lower stock-outs and less waste. The rational agent framing also forces designers to specify a performance measure explicitly, which exposes hidden value judgements.
 
@@ -85,10 +85,10 @@ AI history displays a repeated pattern: a breakthrough, confident predictions, i
 |---|---|---|
 | 1950 | Turing publishes "Computing machinery and intelligence" | Frames machine intelligence as a testable, behavioural question |
 | 1956 | Dartmouth summer research project, organised by John McCarthy, Marvin Minsky, Nathaniel Rochester and Claude Shannon | The term "artificial intelligence" is adopted and AI becomes a named research field |
-| Late 1950s–1960s | Early programs for logic, games and language; Rosenblatt's perceptron | Optimism that general intelligence is near |
+| Late 1950s-1960s | Early programs for logic, games and language; Rosenblatt's perceptron | Optimism that general intelligence is near |
 | 1970s | First AI winter | Early systems fail to scale; funding is cut in the UK and USA |
 | 1980s | Commercial expert systems | Rule-based systems deliver business value in narrow domains |
-| Late 1980s–early 1990s | Second AI winter | Expert systems prove costly to maintain and brittle |
+| Late 1980s-early 1990s | Second AI winter | Expert systems prove costly to maintain and brittle |
 | 1986 | Backpropagation popularised by Rumelhart, Hinton and Williams | Makes training of multi-layer neural networks practical |
 | 1997 | IBM's Deep Blue defeats world chess champion Garry Kasparov | Shows the power of search plus specialised hardware |
 | 2012 | AlexNet wins the ImageNet image-recognition challenge by a wide margin | Triggers the deep learning resurgence, enabled by GPUs and large labelled datasets |
@@ -174,16 +174,16 @@ flowchart LR
 ## Further Reading
 
 - Russell, S., & Norvig, P. (2020). *Artificial intelligence: A modern approach* (4th ed.). Pearson.
-- Turing, A. M. (1950). Computing machinery and intelligence. *Mind, 59*(236), 433–460.
+- Turing, A. M. (1950). Computing machinery and intelligence. *Mind, 59*(236), 433-460.
 - Mitchell, T. M. (1997). *Machine learning*. McGraw-Hill.
 - Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2012). ImageNet classification with deep convolutional neural networks. *Advances in Neural Information Processing Systems, 25*.
 - Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. *Advances in Neural Information Processing Systems, 30*.
 
 ## Video Resources
 
-- [Elements of AI](https://www.elementsofai.com/) — University of Helsinki and MinnaLearn. A free introductory online course on what AI is and how it developed.
-- [IBM Think: What is artificial intelligence?](https://www.ibm.com/think/topics/artificial-intelligence) — IBM. An explainer page on AI definitions and types, with linked video material.
-- [Google AI](https://ai.google/) — Google. Official portal describing Google's AI research and educational resources.
+- [Elements of AI](https://www.elementsofai.com/): University of Helsinki and MinnaLearn. A free introductory online course on what AI is and how it developed.
+- [IBM Think: What is artificial intelligence?](https://www.ibm.com/think/topics/artificial-intelligence): IBM. An explainer page on AI definitions and types, with linked video material.
+- [Google AI](https://ai.google/): Google. Official portal describing Google's AI research and educational resources.
 
 ## Revision Summary
 

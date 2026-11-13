@@ -36,7 +36,7 @@ This lesson develops three foundational techniques that every business analyst s
 - **Logistic regression**: A classification model that passes a linear combination of features through the sigmoid function to output a probability.
 - **Sigmoid function**: The function `1 / (1 + e^(-z))`, which maps any real number z to a value between 0 and 1.
 - **Decision threshold**: The probability above which a case is assigned to the positive class.
-- **Decision tree**: A model that predicts by applying a sequence of if–then splits on features, ending in leaves that give a class or value.
+- **Decision tree**: A model that predicts by applying a sequence of if-then splits on features, ending in leaves that give a class or value.
 - **Gini impurity**: A measure of how mixed the classes in a node are; zero means the node contains only one class.
 
 ## Detailed Explanation
@@ -91,7 +91,7 @@ Trees are intuitive, handle both numeric and categorical features, capture inter
 
 **Step 4: prediction.** For a planned spend of 6 (GHS 600): `1.7 + 1.5 × 6 = 10.7`, that is about 1,070 units. Note that x = 6 lies just outside the training range, so this is a mild extrapolation that should be treated with caution.
 
-**Step 5: residuals and MSE.** Predictions for weeks 1–5 are 3.2, 4.7, 6.2, 7.7 and 9.2; residuals are −0.2, 0.3, −0.2, 0.3, −0.2; squared residuals sum to 0.30, so MSE = 0.30 / 5 = 0.06. **Interpretation**: each additional GHS 100 of promotion is associated with about 150 extra units sold within this range.
+**Step 5: residuals and MSE.** Predictions for weeks 1-5 are 3.2, 4.7, 6.2, 7.7 and 9.2; residuals are −0.2, 0.3, −0.2, 0.3, −0.2; squared residuals sum to 0.30, so MSE = 0.30 / 5 = 0.06. **Interpretation**: each additional GHS 100 of promotion is associated with about 150 extra units sold within this range.
 
 ### 2. Logistic regression probability
 
@@ -193,14 +193,14 @@ flowchart TD
 
 - James, G., Witten, D., Hastie, T., & Tibshirani, R. (2013). *An introduction to statistical learning: With applications in R*. Springer. <https://www.statlearning.com/>
 - Géron, A. (2019). *Hands-on machine learning with Scikit-Learn, Keras, and TensorFlow* (2nd ed.). O'Reilly Media.
-- Breiman, L. (2001). Random forests. *Machine Learning, 45*(1), 5–32.
+- Breiman, L. (2001). Random forests. *Machine Learning, 45*(1), 5-32.
 - Provost, F., & Fawcett, T. (2013). *Data science for business*. O'Reilly Media.
 
 ## Video Resources
 
-- [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) — Google for Developers. Includes modules on linear regression, logistic regression and classification.
-- [scikit-learn documentation](https://scikit-learn.org/stable/) — scikit-learn. Official user guide with explanations and examples of linear models and decision trees.
-- [Kaggle Learn](https://www.kaggle.com/learn) — Kaggle. Free micro-courses including decision trees and model validation.
+- [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course): Google for Developers. Includes modules on linear regression, logistic regression and classification.
+- [scikit-learn documentation](https://scikit-learn.org/stable/): scikit-learn. Official user guide with explanations and examples of linear models and decision trees.
+- [Kaggle Learn](https://www.kaggle.com/learn): Kaggle. Free micro-courses including decision trees and model validation.
 
 ## Revision Summary
 

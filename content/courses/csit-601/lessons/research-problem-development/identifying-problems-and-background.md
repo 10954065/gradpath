@@ -65,12 +65,12 @@ A useful warning follows from this distinction: "no one has studied X in Ghana" 
 
 The background establishes why the problem matters and situates it in context. It is usually structured as a **funnel**:
 
-1. **Broad context** – the global or sectoral development, such as the growth of digital payments.
-2. **Regional or national context** – how the development plays out in Africa and Ghana.
-3. **Specific setting** – the sector, organisation type or population you will study.
-4. **Evidence of the problem** – credible sources showing the issue exists.
-5. **What is known and not known** – a brief signal of existing research and the gap.
-6. **Transition** – a sentence leading into the problem statement.
+1. **Broad context**: the global or sectoral development, such as the growth of digital payments.
+2. **Regional or national context**: how the development plays out in Africa and Ghana.
+3. **Specific setting**: the sector, organisation type or population you will study.
+4. **Evidence of the problem**: credible sources showing the issue exists.
+5. **What is known and not known**: a brief signal of existing research and the gap.
+6. **Transition**: a sentence leading into the problem statement.
 
 Each claim in the background should be supported by credible evidence: peer-reviewed research, reports from recognised institutions or official statistics. Precise numbers must be cited from their original source; unsupported claims such as "most SMEs have adopted AI" undermine credibility. A typical MSc background runs to two or three pages and should not become a full literature review.
 
@@ -171,15 +171,15 @@ The case shows how a research problem can emerge from a widely observed technolo
 
 ## Further Reading
 
-- Alvesson, M., & Sandberg, J. (2011). Generating research questions through problematization. *Academy of Management Review, 36*(2), 247–271.
-- Sandberg, J., & Alvesson, M. (2011). Ways of constructing research questions: Gap-spotting or problematization? *Organization, 18*(1), 23–44.
-- Suri, T., & Jack, W. (2016). The long-run poverty and gender impacts of mobile money. *Science, 354*(6317), 1288–1292. <https://doi.org/10.1126/science.aah5309>
+- Alvesson, M., & Sandberg, J. (2011). Generating research questions through problematization. *Academy of Management Review, 36*(2), 247-271.
+- Sandberg, J., & Alvesson, M. (2011). Ways of constructing research questions: Gap-spotting or problematization? *Organization, 18*(1), 23-44.
+- Suri, T., & Jack, W. (2016). The long-run poverty and gender impacts of mobile money. *Science, 354*(6317), 1288-1292. <https://doi.org/10.1126/science.aah5309>
 - Saunders, M., Lewis, P., & Thornhill, A. (2019). *Research methods for business students* (8th ed.). Pearson.
 
 ## Video Resources
 
-- [Purdue Online Writing Lab](https://owl.purdue.edu/) — Purdue University. Official writing resource with guidance on developing research topics and questions.
-- [SAGE Research Methods](https://methods.sagepub.com/) — SAGE Publishing. Official platform (institutional access may be required) with material on formulating research problems.
+- [Purdue Online Writing Lab](https://owl.purdue.edu/): Purdue University. Official writing resource with guidance on developing research topics and questions.
+- [SAGE Research Methods](https://methods.sagepub.com/): SAGE Publishing. Official platform (institutional access may be required) with material on formulating research problems.
 
 ## Revision Summary
 

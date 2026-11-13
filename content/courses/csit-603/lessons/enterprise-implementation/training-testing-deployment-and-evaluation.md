@@ -82,8 +82,8 @@ A cut-over plan (or runbook) lists every activity, its owner, its start time, it
 | T − 2 weeks | UAT sign-off; training certification reviewed | Process owners |
 | T − 1 week | Freeze configuration changes; confirm support rota for hypercare | Project manager |
 | Friday 18:00 | Stop legacy transactions; count stock; print legacy control reports | Operations, finance |
-| Friday 20:00 – Saturday 14:00 | Extract, transform, load master data, balances and open items | Data team |
-| Saturday 14:00 – 20:00 | Reconcile and obtain data-owner sign-off | Finance controller |
+| Friday 20:00: Saturday 14:00 | Extract, transform, load master data, balances and open items | Data team |
+| Saturday 14:00: 20:00 | Reconcile and obtain data-owner sign-off | Finance controller |
 | Saturday 21:00 | Go/no-go meeting | Steering committee |
 | Sunday | Smoke tests: one transaction per key process; enable user access | Super-users |
 | Monday 07:00 | Go-live; hypercare desk opens | Support lead |
@@ -114,7 +114,7 @@ A post-implementation review assesses whether the system is delivering value and
 | Order accuracy (orders delivered without error) | 91% | 98% | 97% | +6 points |
 | Days to close monthly accounts | 12 | 5 | 6 | −50% |
 | Inventory record accuracy (cycle counts matching system) | 82% | 97% | 95% | +13 points |
-| Help-desk tickets per 100 users per week | — | < 5 | 7 | above target |
+| Help-desk tickets per 100 users per week | n/a | < 5 | 7 | above target |
 
 The cycle-time change is `(3.0 − 4.0) / 4.0 = −25%`; the close-time change is `(6 − 12) / 12 = −50%`. Interpreting the table, the system has delivered substantial improvement, but most KPIs remain short of target and the help-desk volume indicates continuing usability or training problems. A sound PIR would investigate root causes (for example, by analysing ticket categories), recommend targeted retraining or configuration changes, and set a date for re-measurement. Without a baseline measured *before* go-live, none of these conclusions would be possible, which is why baselining belongs in the chartering phase.
 
@@ -186,13 +186,13 @@ flowchart TD
 - Markus, M. L., & Tanis, C. (2000). The enterprise systems experience: From adoption to success. In R. W. Zmud (Ed.), *Framing the domains of IT management: Projecting the future through the past*. Pinnaflex Educational Resources.
 - Monk, E., & Wagner, B. (2013). *Concepts in enterprise resource planning* (4th ed.). Cengage Learning.
 - Kotter, J. P. (1996). *Leading change*. Harvard Business School Press.
-- Nah, F. F.-H., Lau, J. L.-S., & Kuang, J. (2001). Critical factors for successful implementation of enterprise systems. *Business Process Management Journal, 7*(3), 285–296.
+- Nah, F. F.-H., Lau, J. L.-S., & Kuang, J. (2001). Critical factors for successful implementation of enterprise systems. *Business Process Management Journal, 7*(3), 285-296.
 
 ## Video Resources
 
-- [SAP Learning](https://learning.sap.com/) — SAP. Free learning journeys including the SAP Activate methodology's deploy and run phases.
-- [Microsoft Learn: Dynamics 365 training](https://learn.microsoft.com/training/dynamics365/) — Microsoft. Self-paced modules including implementation guidance and testing for business applications.
-- [Bizagi](https://www.bizagi.com/) — Bizagi. Official site for Bizagi Modeler, used for BPMN modelling exercises such as cut-over processes.
+- [SAP Learning](https://learning.sap.com/): SAP. Free learning journeys including the SAP Activate methodology's deploy and run phases.
+- [Microsoft Learn: Dynamics 365 training](https://learn.microsoft.com/training/dynamics365/): Microsoft. Self-paced modules including implementation guidance and testing for business applications.
+- [Bizagi](https://www.bizagi.com/): Bizagi. Official site for Bizagi Modeler, used for BPMN modelling exercises such as cut-over processes.
 
 ## Revision Summary
 

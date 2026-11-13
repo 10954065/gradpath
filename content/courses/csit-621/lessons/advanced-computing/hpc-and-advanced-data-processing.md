@@ -200,16 +200,16 @@ flowchart LR
 
 ## Further Reading
 
-- Dean, J., & Ghemawat, S. (2008). MapReduce: Simplified data processing on large clusters. *Communications of the ACM, 51*(1), 107–113.
-- Zaharia, M., et al. (2016). Apache Spark: A unified engine for big data processing. *Communications of the ACM, 59*(11), 56–65.
-- Akidau, T., et al. (2015). The dataflow model: A practical approach to balancing correctness, latency, and cost in massive-scale, unbounded, out-of-order data processing. *Proceedings of the VLDB Endowment, 8*(12), 1792–1803.
+- Dean, J., & Ghemawat, S. (2008). MapReduce: Simplified data processing on large clusters. *Communications of the ACM, 51*(1), 107-113.
+- Zaharia, M., et al. (2016). Apache Spark: A unified engine for big data processing. *Communications of the ACM, 59*(11), 56-65.
+- Akidau, T., et al. (2015). The dataflow model: A practical approach to balancing correctness, latency, and cost in massive-scale, unbounded, out-of-order data processing. *Proceedings of the VLDB Endowment, 8*(12), 1792-1803.
 - Kleppmann, M. (2017). *Designing data-intensive applications*. O'Reilly Media.
 
 ## Video Resources
 
-- [TOP500](https://www.top500.org/) — TOP500 project. Official site of the twice-yearly ranking of the world's most powerful supercomputers, with explanatory material on HPC trends.
-- [Apache Spark](https://spark.apache.org/) — Apache Software Foundation. Official project site with documentation and introductory material on large-scale batch and streaming processing.
-- [Apache Kafka](https://kafka.apache.org/) — Apache Software Foundation. Official project site explaining event streaming concepts and use cases.
+- [TOP500](https://www.top500.org/): TOP500 project. Official site of the twice-yearly ranking of the world's most powerful supercomputers, with explanatory material on HPC trends.
+- [Apache Spark](https://spark.apache.org/): Apache Software Foundation. Official project site with documentation and introductory material on large-scale batch and streaming processing.
+- [Apache Kafka](https://kafka.apache.org/): Apache Software Foundation. Official project site explaining event streaming concepts and use cases.
 
 ## Revision Summary
 

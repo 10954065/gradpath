@@ -209,8 +209,8 @@ flowchart TD
 
 ## Video Resources
 
-- [CISA cybersecurity resources](https://www.cisa.gov/) — Cybersecurity and Infrastructure Security Agency. Official guidance and awareness material on phishing, social engineering and phishing-resistant MFA.
-- [Cisco Skills for All](https://skillsforall.com/) — Cisco Networking Academy. Free cybersecurity courses that include modules on social engineering and protecting personal data.
+- [CISA cybersecurity resources](https://www.cisa.gov/): Cybersecurity and Infrastructure Security Agency. Official guidance and awareness material on phishing, social engineering and phishing-resistant MFA.
+- [Cisco Skills for All](https://skillsforall.com/): Cisco Networking Academy. Free cybersecurity courses that include modules on social engineering and protecting personal data.
 
 ## Revision Summary
 

@@ -42,11 +42,11 @@ This lesson examines the three components at the heart of any e-commerce operati
 
 A useful way to analyse a storefront is as a set of layers:
 
-1. **Presentation layer** – the web pages or app screens the customer sees, built with HTML, CSS and JavaScript or native mobile code. It must be responsive, because many Ghanaian shoppers browse on smartphones.
-2. **Application (commerce) layer** – the business logic: pricing rules, promotions, cart calculations, tax and delivery fees, customer accounts and order creation.
-3. **Data layer** – databases holding products, inventory, customers, carts and orders, plus a search index for fast product search.
-4. **Integration layer** – APIs connecting to payment gateways, delivery partners, accounting or ERP systems, messaging (SMS, email, WhatsApp) and analytics.
-5. **Infrastructure layer** – hosting, content delivery networks (CDNs) that cache images close to users, TLS certificates for HTTPS, backups and monitoring.
+1. **Presentation layer**: the web pages or app screens the customer sees, built with HTML, CSS and JavaScript or native mobile code. It must be responsive, because many Ghanaian shoppers browse on smartphones.
+2. **Application (commerce) layer**: the business logic: pricing rules, promotions, cart calculations, tax and delivery fees, customer accounts and order creation.
+3. **Data layer**: databases holding products, inventory, customers, carts and orders, plus a search index for fast product search.
+4. **Integration layer**: APIs connecting to payment gateways, delivery partners, accounting or ERP systems, messaging (SMS, email, WhatsApp) and analytics.
+5. **Infrastructure layer**: hosting, content delivery networks (CDNs) that cache images close to users, TLS certificates for HTTPS, backups and monitoring.
 
 Performance and security cut across all layers. Slow pages reduce conversion, especially on mobile data connections, so image compression and caching matter. Security requires HTTPS, secure handling of credentials and, ideally, leaving card data handling to a certified payment provider (see Module 5).
 
@@ -66,13 +66,13 @@ The right choice depends on budget, skills, the size and complexity of the catal
 
 The catalogue is the structured data that describes what is for sale. Poor catalogue data produces poor search results, confusing product pages, wrong stock levels and customer complaints. A sound catalogue model separates:
 
-- **Product** – the general item (for example "Ankara wrap dress").
-- **Variants** – combinations of attributes (size M, blue pattern), each with its own **SKU**, price, stock quantity and possibly image.
-- **Attributes** – structured properties (size, colour, fabric, weight) used for filtering.
-- **Categories** – a taxonomy (Women > Dresses > Wrap dresses) for navigation; a product can belong to several categories.
-- **Media and content** – images, descriptions, size guides and reviews.
-- **Pricing and promotions** – list price, sale price, start and end dates, and customer-group prices for B2B buyers.
-- **Inventory** – stock per location or warehouse, with reserved quantities for unpaid orders.
+- **Product**: the general item (for example "Ankara wrap dress").
+- **Variants**: combinations of attributes (size M, blue pattern), each with its own **SKU**, price, stock quantity and possibly image.
+- **Attributes**: structured properties (size, colour, fabric, weight) used for filtering.
+- **Categories**: a taxonomy (Women > Dresses > Wrap dresses) for navigation; a product can belong to several categories.
+- **Media and content**: images, descriptions, size guides and reviews.
+- **Pricing and promotions**: list price, sale price, start and end dates, and customer-group prices for B2B buyers.
+- **Inventory**: stock per location or warehouse, with reserved quantities for unpaid orders.
 
 Catalogue quality has a direct business effect. Consistent attributes allow filtering ("size M under GHS 300"), accurate weights allow correct delivery fees, and good images reduce returns.
 
@@ -125,20 +125,20 @@ flowchart TD
 
 **Illustrative scenario.** *Kente & Co Accessories* is a hypothetical Accra-based seller of bags and jewellery. Its current website checkout has seven steps: create account, verify email, enter full postal address, choose delivery, see delivery fee, enter card details, confirm. Only card payment is offered. Analytics show that of 1,000 shoppers who reach the cart each month, 120 complete an order.
 
-**Step 1 – Calculate the cart-to-order rate.** `120 ÷ 1,000 = 12%`. Therefore 88 per cent of carts are abandoned at some stage.
+**Step 1: Calculate the cart-to-order rate.** `120 ÷ 1,000 = 12%`. Therefore 88 per cent of carts are abandoned at some stage.
 
-**Step 2 – Apply the friction audit.**
+**Step 2: Apply the friction audit.**
 - *Transparency*: delivery fee appears late. Move a delivery estimate to the cart.
 - *Minimal effort*: forced account creation and email verification add two steps. Introduce guest checkout using phone number.
 - *Local fit*: a full postal address is unsuitable where many locations are described by landmarks. Accept a Ghana Post digital address or a pick-up point, with a landmark field.
 - *Choice*: card-only payment excludes many customers. Integrate a payment service provider that supports mobile money and cards.
 - *Reassurance*: add a returns policy, a WhatsApp contact and visible secure payment branding.
 
-**Step 3 – Redesign.** New flow: cart (with delivery estimate) → details (name, phone, optional email) → delivery (digital address or pick-up point) → payment (mobile money or card) → confirmation by SMS. Four steps replace seven.
+**Step 3: Redesign.** New flow: cart (with delivery estimate) → details (name, phone, optional email) → delivery (digital address or pick-up point) → payment (mobile money or card) → confirmation by SMS. Four steps replace seven.
 
-**Step 4 – Estimate impact.** If the redesign raises the cart-to-order rate to 18 per cent (an illustrative target, not a forecast), orders rise to `1,000 × 0.18 = 180` per month, an increase of 60 orders. With an average order value of GHS 220, additional monthly revenue = `60 × 220 = GHS 13,200`. The business should test the change and measure the actual effect rather than assume it.
+**Step 4: Estimate impact.** If the redesign raises the cart-to-order rate to 18 per cent (an illustrative target, not a forecast), orders rise to `1,000 × 0.18 = 180` per month, an increase of 60 orders. With an average order value of GHS 220, additional monthly revenue = `60 × 220 = GHS 13,200`. The business should test the change and measure the actual effect rather than assume it.
 
-**Step 5 – Catalogue fix.** The seller's bags come in several colours, but each colour was listed as a separate product, cluttering search. Restructure as one product with colour variants, each with its own SKU and stock, so that shoppers see one listing and can choose a colour.
+**Step 5: Catalogue fix.** The seller's bags come in several colours, but each colour was listed as a separate product, cluttering search. Restructure as one product with colour variants, each with its own SKU and stock, so that shoppers see one listing and can choose a colour.
 
 ## Ghanaian Business Application
 
@@ -202,8 +202,8 @@ The case illustrates several points from this lesson. First, SaaS platforms **lo
 
 ## Video Resources
 
-- [Paystack Documentation](https://paystack.com/docs/) — Paystack. Official developer documentation describing how online checkouts accept card and mobile money payments.
-- [Shopify Help Center](https://help.shopify.com/) — Shopify. Official help resources explaining storefront, product and checkout configuration on a SaaS platform.
+- [Paystack Documentation](https://paystack.com/docs/): Paystack. Official developer documentation describing how online checkouts accept card and mobile money payments.
+- [Shopify Help Center](https://help.shopify.com/): Shopify. Official help resources explaining storefront, product and checkout configuration on a SaaS platform.
 
 ## Revision Summary
 

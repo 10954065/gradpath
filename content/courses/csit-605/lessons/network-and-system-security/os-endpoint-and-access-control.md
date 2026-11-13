@@ -80,7 +80,7 @@ Removing local administrator rights is one of the most cost-effective endpoint c
 
 **DAC** is the default on most personal computers and file shares: a file's owner grants access to others. It is flexible but prone to "permission sprawl" because individuals share generously and rarely revoke.
 
-**MAC** assigns labels to subjects and objects (for example *Confidential* and *Secret*) and enforces a central policy that users cannot override. The Bell–LaPadula model, designed for confidentiality, enforces "no read up" and "no write down"; the Biba model, designed for integrity, enforces the reverse. MAC suits military and some government settings; Linux implementations such as SELinux apply mandatory policies to processes.
+**MAC** assigns labels to subjects and objects (for example *Confidential* and *Secret*) and enforces a central policy that users cannot override. The Bell-LaPadula model, designed for confidentiality, enforces "no read up" and "no write down"; the Biba model, designed for integrity, enforces the reverse. MAC suits military and some government settings; Linux implementations such as SELinux apply mandatory policies to processes.
 
 **RBAC** assigns permissions to roles such as *Teller*, *Branch Manager* or *Auditor* and assigns users to roles. It scales well and supports least privilege and segregation of duties, and it is the most common model in business applications.
 
@@ -94,7 +94,7 @@ Least privilege means every user, process and service receives only the access n
 
 - **Segregation of duties**: no single person can initiate, approve and record a sensitive transaction.
 - **Need to know**: access to information is limited to those who need it for their work, even within a role.
-- **Joiner–mover–leaver processes**: access is granted on joining, adjusted when someone changes role and removed promptly on leaving.
+- **Joiner-mover-leaver processes**: access is granted on joining, adjusted when someone changes role and removed promptly on leaving.
 - **Periodic access reviews**: managers recertify their staff's access, removing accumulated rights.
 - **Privileged access management**: separate administrator accounts from everyday accounts; store privileged credentials in a vault; require MFA; grant **just-in-time** elevation for a limited period; record privileged sessions; apply **two-person control** for the most sensitive operations.
 
@@ -186,7 +186,7 @@ flowchart TD
 ## Common Examination Mistakes
 
 - Confusing MAC with RBAC, or describing MAC as something users can configure.
-- Mixing up Bell–LaPadula (confidentiality) with Biba (integrity).
+- Mixing up Bell-LaPadula (confidentiality) with Biba (integrity).
 - Designing role matrices that violate segregation of duties, such as allowing one role to both post and reverse transactions.
 - Listing hardening steps without linking them to specific threats.
 - Neglecting privileged accounts and service accounts when discussing least privilege.
@@ -211,20 +211,20 @@ flowchart TD
 - Operating systems enforce security through accounts, privilege separation, permissions, memory protections and secure boot; hardening reduces attack surface.
 - Endpoint protection layers antivirus, EDR, allow-listing, encryption and MDM; removing local administrator rights is highly effective.
 - DAC, MAC, RBAC and ABAC offer increasing central control or expressiveness; RBAC is the business default and ABAC adds context.
-- Least privilege requires segregation of duties, joiner–mover–leaver processes, access reviews and privileged access management.
+- Least privilege requires segregation of duties, joiner-mover-leaver processes, access reviews and privileged access management.
 - Privileged insiders, as the Snowden case shows, need partitioned, monitored and two-person-controlled access.
 
 ## Further Reading
 
-- Saltzer, J. H., & Schroeder, M. D. (1975). The protection of information in computer systems. *Proceedings of the IEEE, 63*(9), 1278–1308.
+- Saltzer, J. H., & Schroeder, M. D. (1975). The protection of information in computer systems. *Proceedings of the IEEE, 63*(9), 1278-1308.
 - Stallings, W., & Brown, L. (2018). *Computer security: Principles and practice* (4th ed.). Pearson.
 - Anderson, R. (2020). *Security engineering: A guide to building dependable distributed systems* (3rd ed.). Wiley.
 - Rose, S., Borchert, O., Mitchell, S., & Connelly, S. (2020). *Zero trust architecture* (NIST Special Publication 800-207). National Institute of Standards and Technology. <https://doi.org/10.6028/NIST.SP.800-207>
 
 ## Video Resources
 
-- [Cisco Skills for All](https://skillsforall.com/) — Cisco Networking Academy. Free courses including endpoint security and operating system protection modules with hands-on activities.
-- [CISA cybersecurity resources](https://www.cisa.gov/) — Cybersecurity and Infrastructure Security Agency. Official guidance on patching, secure configuration and protecting privileged accounts.
+- [Cisco Skills for All](https://skillsforall.com/): Cisco Networking Academy. Free courses including endpoint security and operating system protection modules with hands-on activities.
+- [CISA cybersecurity resources](https://www.cisa.gov/): Cybersecurity and Infrastructure Security Agency. Official guidance on patching, secure configuration and protecting privileged accounts.
 
 ## Revision Summary
 
@@ -233,6 +233,6 @@ Endpoints and servers are where attacks succeed or fail. Hardening, patching and
 - Harden: patch, baseline, remove services, change defaults.
 - Remove local admin rights; use EDR and disk encryption.
 - DAC = owner decides; MAC = central labels; RBAC = roles; ABAC = attributes.
-- Bell–LaPadula protects confidentiality; Biba protects integrity.
+- Bell-LaPadula protects confidentiality; Biba protects integrity.
 - PAM: vault, MFA, just-in-time, session recording, two-person control.
 - Snowden 2013: broad administrator access led to two-person rule.

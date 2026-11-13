@@ -14,7 +14,7 @@ Examiners often find that MSc results chapters contain correct analyses but weak
 
 ## Learning Objectives
 
-- Explain principles of effective and honest data visualisation, including data–ink, appropriate scales and accessibility.
+- Explain principles of effective and honest data visualisation, including data-ink, appropriate scales and accessibility.
 - Select an appropriate chart or table for a given type of variable and analytic purpose.
 - Identify and correct misleading visual practices such as truncated axes and three-dimensional effects.
 - Apply a structured framework for interpreting findings in relation to research questions, literature, practical significance and limitations.
@@ -28,7 +28,7 @@ Examiners often find that MSc results chapters contain correct analyses but weak
 ## Key Terminology
 
 - **Data visualisation**: The graphical representation of data to reveal patterns, comparisons, distributions and relationships.
-- **Data–ink ratio**: Tufte's idea that the proportion of a graphic's ink devoted to showing data should be maximised, removing non-informative decoration.
+- **Data-ink ratio**: Tufte's idea that the proportion of a graphic's ink devoted to showing data should be maximised, removing non-informative decoration.
 - **Chartjunk**: Decorative elements, such as 3D effects, heavy gridlines and clip art, that do not convey data and can distort perception.
 - **Truncated axis**: A value axis that does not start at zero, which can exaggerate differences in bar charts.
 - **Joint display**: A table or figure in mixed-methods research that brings quantitative and qualitative results together to show integration.
@@ -47,7 +47,7 @@ Well-designed graphics allow readers to compare values, see distributions and de
 Drawing on Tufte's *The Visual Display of Quantitative Information* and common practice in statistical communication:
 
 1. **Start with the message.** Decide what comparison or pattern the reader should see, then choose the chart that shows it most directly.
-2. **Maximise data–ink, minimise chartjunk.** Remove 3D effects, shadows, unnecessary gridlines and decorative images.
+2. **Maximise data-ink, minimise chartjunk.** Remove 3D effects, shadows, unnecessary gridlines and decorative images.
 3. **Use honest scales.** Bar charts encode values by length, so their value axis should start at zero. Line charts showing change over time may use a non-zero baseline if clearly labelled.
 4. **Label clearly.** Use informative titles, axis labels with units, data sources, sample sizes (n) and notes on missing data.
 5. **Order meaningfully.** Sort categories by value or by a logical order (such as Likert response order) rather than alphabetically.
@@ -116,7 +116,7 @@ flowchart TD
 
 **Illustrative scenario.** A student's survey finds that 62% of retailers in Market A and 68% in Market B accept mobile money merchant payments. Her bar chart's vertical axis runs from 60% to 70%.
 
-**Step 1 – Measure the distortion.** On the truncated axis, Market A's bar shows `62 − 60 = 2` units of height and Market B's shows `68 − 60 = 8` units.
+**Step 1: Measure the distortion.** On the truncated axis, Market A's bar shows `62 − 60 = 2` units of height and Market B's shows `68 − 60 = 8` units.
 
 ```
 Visual ratio = 8 / 2 = 4
@@ -125,9 +125,9 @@ Actual ratio = 68 / 62 = 1.10
 
 The chart makes Market B appear four times higher, when acceptance is actually about 10% higher in relative terms (6 percentage points).
 
-**Step 2 – Correct the chart.** Start the axis at 0%, label it "Percentage of retailers accepting merchant payments", add sample sizes (for example, n = 150 and n = 140), and consider adding 95% confidence interval error bars.
+**Step 2: Correct the chart.** Start the axis at 0%, label it "Percentage of retailers accepting merchant payments", add sample sizes (for example, n = 150 and n = 140), and consider adding 95% confidence interval error bars.
 
-**Step 3 – Check uncertainty.** With n ≈ 150 per market, the margin of error for each percentage is roughly `1.96 × √(0.65 × 0.35 / 150) ≈ 1.96 × 0.039 ≈ ±7.6` points. The intervals overlap substantially, so the student should not claim a meaningful difference without a formal test.
+**Step 3: Check uncertainty.** With n ≈ 150 per market, the margin of error for each percentage is roughly `1.96 × √(0.65 × 0.35 / 150) ≈ 1.96 × 0.039 ≈ ±7.6` points. The intervals overlap substantially, so the student should not claim a meaningful difference without a formal test.
 
 ### Part B: Interpreting a finding
 
@@ -198,7 +198,7 @@ The case offers lessons that apply directly to business and technology research.
 ## Key Takeaways
 
 - Visualisation is part of analysis and honest communication; choose the chart that shows the intended message most directly.
-- Maximise data–ink, avoid chartjunk, start bar charts at zero, label fully and show uncertainty.
+- Maximise data-ink, avoid chartjunk, start bar charts at zero, label fully and show uncertainty.
 - Tables should be concise, formatted and focused on the statistics that answer the research question.
 - Interpretation restates, weighs, connects to literature, considers alternatives, judges practical significance and states limitations.
 - Results report; discussion interprets and makes the study's contribution explicit.
@@ -213,8 +213,8 @@ The case offers lessons that apply directly to business and technology research.
 
 ## Video Resources
 
-- [Khan Academy: Statistics and Probability](https://www.khanacademy.org/math/statistics-probability) — Khan Academy. Free official course with units on displaying and comparing quantitative and categorical data.
-- [APA Style](https://apastyle.apa.org/) — American Psychological Association. Official APA Style site with guidance on formatting tables and figures in APA 7.
+- [Khan Academy: Statistics and Probability](https://www.khanacademy.org/math/statistics-probability): Khan Academy. Free official course with units on displaying and comparing quantitative and categorical data.
+- [APA Style](https://apastyle.apa.org/): American Psychological Association. Official APA Style site with guidance on formatting tables and figures in APA 7.
 
 ## Revision Summary
 

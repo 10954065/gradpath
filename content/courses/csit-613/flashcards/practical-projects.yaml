@@ -5,7 +5,7 @@ cards:
     back: Whether each order or customer creates value after variable costs such as cost of goods, packaging, delivery, payment fees and acquisition cost.
   - lesson: business-model-and-payment-process-projects
     front: How is break-even order volume calculated?
-    back: Monthly fixed costs divided by contribution per order after acquisition costs — e.g. 6,500 ÷ 43.40 ≈ 150 orders.
+    back: Monthly fixed costs divided by contribution per order after acquisition costs, e.g. 6,500 ÷ 43.40 ≈ 150 orders.
   - lesson: business-model-and-payment-process-projects
     front: Why must the server, not the browser, confirm that an order is paid?
     back: Browser redirects can be altered or lost; a verified, signed webhook or server-side status query is the reliable source of truth.
@@ -29,7 +29,7 @@ cards:
     back: Must have, Should have, Could have and Won't have (this time).
   - lesson: ecosystem-strategy-and-solution-design-projects
     front: Why is a payback period sensitive to adoption assumptions?
-    back: Net benefit is a small difference between benefits and costs, so a modest fall in benefits can cut it sharply — e.g. from GHS 1,400 to 500, stretching payback from about 13 to 36 months.
+    back: Net benefit is a small difference between benefits and costs, so a modest fall in benefits can cut it sharply, e.g. from GHS 1,400 to 500, stretching payback from about 13 to 36 months.
   - lesson: ecosystem-strategy-and-solution-design-projects
     front: Which controls should accompany a bulk payment or collection solution?
     back: Segregation of duties, dual approval of batches and refunds, audit logs, verified callbacks, daily reconciliation and exception reports.

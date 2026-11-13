@@ -78,7 +78,7 @@ questions:
     difficulty: hard
     objective: Diagnose a measurement problem from item statistics
     scenario: |
-      Illustrative scenario. In a pilot of a four-item "perceived ease of use" scale for a mobile banking app, three items have corrected item–total correlations above 0.60. The fourth item, "I would recommend the app to friends", has an item–total correlation of 0.10, and alpha rises from 0.74 to 0.85 if it is deleted.
+      Illustrative scenario. In a pilot of a four-item "perceived ease of use" scale for a mobile banking app, three items have corrected item-total correlations above 0.60. The fourth item, "I would recommend the app to friends", has an item-total correlation of 0.10, and alpha rises from 0.74 to 0.85 if it is deleted.
     prompt: What is the most defensible interpretation and action?
     options:
       - Keep the item because overall alpha already exceeds 0.70
@@ -86,7 +86,7 @@ questions:
       - Recognise that the item measures recommendation intention rather than ease of use, remove it on conceptual and statistical grounds, and document the change
       - Add more items similar to the fourth item to raise its correlation
     answer: 2
-    explanation: The statistical signal (low item–total correlation) agrees with the conceptual diagnosis that the item belongs to a different construct, so removal is justified on content and construct validity grounds and should be documented. Keeping it ignores the validity problem; deleting purely to raise alpha is mechanical and poor practice; adding similar items would create a second construct inside the scale.
+    explanation: The statistical signal (low item-total correlation) agrees with the conceptual diagnosis that the item belongs to a different construct, so removal is justified on content and construct validity grounds and should be documented. Keeping it ignores the validity problem; deleting purely to raise alpha is mechanical and poor practice; adding similar items would create a second construct inside the scale.
 
   - id: q07
     lesson: validity-reliability-and-trustworthiness
@@ -156,12 +156,12 @@ questions:
     difficulty: medium
     objective: Recommend a remedy for response bias
     scenario: |
-      Illustrative scenario. A student surveying hospital nurses about compliance with data-handling rules includes the item "I always log out of the records system when I leave my workstation" on an agree–disagree scale. The questionnaire is distributed by ward managers.
+      Illustrative scenario. A student surveying hospital nurses about compliance with data-handling rules includes the item "I always log out of the records system when I leave my workstation" on an agree-disagree scale. The questionnaire is distributed by ward managers.
     prompt: Which change would most directly reduce the main response bias?
     options:
       - Increase the sample from 80 to 300 nurses
       - Distribute anonymously through a neutral channel and replace the self-rating with a realistic scenario question
-      - Add more agree–disagree items about compliance
+      - Add more agree-disagree items about compliance
       - Report percentages to two decimal places
     answer: 1
     explanation: The main risk is social desirability, intensified by managers distributing the survey. Anonymous neutral distribution reduces pressure and scenario-based items are less transparent than self-ratings. A larger sample does not remove systematic bias, more similar items add acquiescence risk, and reporting precision is irrelevant.
@@ -188,10 +188,10 @@ questions:
     options:
       - Acquiescence bias in the usability items
       - Coverage bias, because non-users, the group of interest, are excluded from the frame
-      - Low test–retest reliability of the questionnaire
+      - Low test-retest reliability of the questionnaire
       - Interviewer effects caused by face-to-face administration
     answer: 1
-    explanation: The question concerns non-users, yet only registered users can respond, so the frame cannot cover the target population; the results describe users' complaints, not reasons for non-adoption. Acquiescence may exist but is secondary, test–retest reliability is not the issue, and the survey was emailed, not administered face to face.
+    explanation: The question concerns non-users, yet only registered users can respond, so the frame cannot cover the target population; the results describe users' complaints, not reasons for non-adoption. Acquiescence may exist but is secondary, test-retest reliability is not the issue, and the survey was emailed, not administered face to face.
 
   - id: q14
     lesson: research-bias

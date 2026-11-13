@@ -10,7 +10,7 @@ source: supplementary
 
 Traditional finance depends on trusted intermediaries. Each bank keeps its own ledger, and a central party such as a clearing house or central bank reconciles them. This model works, but it requires participants to trust the intermediary and to spend considerable effort reconciling separate records. In 2008 a paper published under the name Satoshi Nakamoto proposed a different approach: a ledger replicated across many independent computers, kept consistent by cryptography and a consensus protocol rather than by a central authority. That design, implemented as Bitcoin, became the template for what is now called **blockchain** and, more broadly, **distributed ledger technology (DLT)**.
 
-For business students the important question is not whether blockchain is fashionable, but how it works and when its particular combination of properties is worth its costs. This lesson explains the building blocks — cryptographic hashes, Merkle trees, linked blocks and consensus — and then applies a structured decision framework. It is educational and does not constitute investment advice.
+For business students the important question is not whether blockchain is fashionable, but how it works and when its particular combination of properties is worth its costs. This lesson explains the building blocks (cryptographic hashes, Merkle trees, linked blocks and consensus) and then applies a structured decision framework. It is educational and does not constitute investment advice.
 
 ## Learning Objectives
 
@@ -57,13 +57,13 @@ A block contains a **header** and a list of transactions. The header includes a 
 
 ### Merkle trees
 
-Instead of hashing all transactions as one blob, blockchains arrange them in a Merkle tree, named after Ralph Merkle. Transactions are hashed individually, the hashes are paired and hashed together, and the process repeats until one **Merkle root** remains. This allows a lightweight client to verify that a transaction is included in a block by checking only a short **Merkle proof** — the sibling hashes along the path to the root — rather than downloading every transaction. For a block with *n* transactions the proof needs roughly log2(*n*) hashes, so verifying inclusion among about a thousand transactions needs only about ten hashes.
+Instead of hashing all transactions as one blob, blockchains arrange them in a Merkle tree, named after Ralph Merkle. Transactions are hashed individually, the hashes are paired and hashed together, and the process repeats until one **Merkle root** remains. This allows a lightweight client to verify that a transaction is included in a block by checking only a short **Merkle proof**: the sibling hashes along the path to the root, rather than downloading every transaction. For a block with *n* transactions the proof needs roughly log2(*n*) hashes, so verifying inclusion among about a thousand transactions needs only about ten hashes.
 
 ### Consensus
 
 In a distributed system, participants may be offline, slow or dishonest. The classic statement of this challenge is the **Byzantine Generals Problem** described by Lamport, Shostak and Pease (1982): how can loyal parties agree on a plan when some participants may send conflicting messages? Blockchains answer this in different ways.
 
-- **Proof of work** asks miners to search for a number (a nonce) that makes the block header's hash fall below a target. Finding it is costly; checking it is cheap. The honest chain is the one with the most accumulated work, so rewriting history requires out-computing the rest of the network — the so-called **51% attack**. Finality is **probabilistic**: each additional block makes reversal less likely. The cost is significant energy consumption.
+- **Proof of work** asks miners to search for a number (a nonce) that makes the block header's hash fall below a target. Finding it is costly; checking it is cheap. The honest chain is the one with the most accumulated work, so rewriting history requires out-computing the rest of the network: the so-called **51% attack**. Finality is **probabilistic**: each additional block makes reversal less likely. The cost is significant energy consumption.
 - **Proof of stake** selects validators according to locked stake and penalises misbehaviour by destroying part of it ("slashing"). It uses far less energy than proof of work. Ethereum moved from proof of work to proof of stake in 2022, an event known as "the Merge".
 - **Byzantine fault-tolerant (BFT) protocols**, such as Practical Byzantine Fault Tolerance (Castro & Liskov, 1999), use rounds of voting among a known set of validators. They provide fast, **deterministic finality** and tolerate fewer than one-third faulty validators, but they scale to fewer participants and therefore suit permissioned ledgers.
 
@@ -107,7 +107,7 @@ Consider a block with four transactions, T1 to T4. Hash values are shown in abbr
 
 **Merkle proof.** A mobile wallet wants to confirm T3 is in the block. It needs T3, the sibling H4 and the sibling H12. It computes H(T3) = H3, then H(H3 + H4) = H34, then H(H12 + H34). If the result equals `c3b9`, T3 is included. Only two hashes were supplied, matching log2(4) = 2.
 
-**Tampering.** Suppose an insider changes the amount in T2. Then H2 changes (say to `5d1e`), so H12 changes, so the Merkle root no longer equals `c3b9`. The block header hash changes, and the next block, which stored the old header hash as its "previous hash", no longer links correctly. Every node that holds a copy detects the discrepancy instantly. To succeed, the attacker would need to recompute this block and all later blocks and persuade the network to accept the rewritten chain — prohibitively costly under proof of work, and requiring collusion among validators under BFT or proof of stake.
+**Tampering.** Suppose an insider changes the amount in T2. Then H2 changes (say to `5d1e`), so H12 changes, so the Merkle root no longer equals `c3b9`. The block header hash changes, and the next block, which stored the old header hash as its "previous hash", no longer links correctly. Every node that holds a copy detects the discrepancy instantly. To succeed, the attacker would need to recompute this block and all later blocks and persuade the network to accept the rewritten chain: prohibitively costly under proof of work, and requiring collusion among validators under BFT or proof of stake.
 
 ## Ghanaian Business Application
 
@@ -178,7 +178,7 @@ flowchart LR
 
 - Hash functions create fingerprints whose properties make linked blocks tamper-evident.
 - Merkle trees summarise many transactions in one root and enable efficient proofs of inclusion.
-- Consensus mechanisms — proof of work, proof of stake and BFT — trade off openness, finality, throughput and energy.
+- Consensus mechanisms (proof of work, proof of stake and BFT) trade off openness, finality, throughput and energy.
 - Permissioned ledgers offer performance and privacy among known parties but must justify themselves against shared databases.
 - Blockchain is appropriate only when multiple mutually distrusting writers need a shared record and no trusted intermediary is available or acceptable.
 
@@ -186,15 +186,15 @@ flowchart LR
 
 - Nakamoto, S. (2008). *Bitcoin: A peer-to-peer electronic cash system*. <https://bitcoin.org/bitcoin.pdf>
 - Narayanan, A., Bonneau, J., Felten, E., Miller, A., & Goldfeder, S. (2016). *Bitcoin and cryptocurrency technologies: A comprehensive introduction*. Princeton University Press.
-- Lamport, L., Shostak, R., & Pease, M. (1982). The Byzantine generals problem. *ACM Transactions on Programming Languages and Systems, 4*(3), 382–401.
+- Lamport, L., Shostak, R., & Pease, M. (1982). The Byzantine generals problem. *ACM Transactions on Programming Languages and Systems, 4*(3), 382-401.
 - Castro, M., & Liskov, B. (1999). Practical Byzantine fault tolerance. In *Proceedings of the Third Symposium on Operating Systems Design and Implementation (OSDI '99)*. USENIX Association.
 - Wüst, K., & Gervais, A. (2018). Do you need a blockchain? In *2018 Crypto Valley Conference on Blockchain Technology (CVCBT)*. IEEE.
 
 ## Video Resources
 
-- [Bitcoin and Cryptocurrency Technologies](https://www.coursera.org/learn/cryptocurrency) — Princeton University on Coursera. Lecture course by the authors of the textbook covering hashing, consensus and Bitcoin mechanics.
-- [Blockchain and Money](https://ocw.mit.edu/courses/15-s12-blockchain-and-money-fall-2018/) — MIT OpenCourseWare. Recorded lectures examining blockchain technology and its implications for finance and policy.
-- [Ethereum developer documentation](https://ethereum.org/en/developers/docs/) — ethereum.org. Official explanations of blocks, consensus and proof of stake.
+- [Bitcoin and Cryptocurrency Technologies](https://www.coursera.org/learn/cryptocurrency): Princeton University on Coursera. Lecture course by the authors of the textbook covering hashing, consensus and Bitcoin mechanics.
+- [Blockchain and Money](https://ocw.mit.edu/courses/15-s12-blockchain-and-money-fall-2018/): MIT OpenCourseWare. Recorded lectures examining blockchain technology and its implications for finance and policy.
+- [Ethereum developer documentation](https://ethereum.org/en/developers/docs/): ethereum.org. Official explanations of blocks, consensus and proof of stake.
 
 ## Revision Summary
 

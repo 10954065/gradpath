@@ -68,7 +68,7 @@ At each gate, a cross-functional group of decision-makers ("gatekeepers") review
 
 **Strengths**: discipline, early killing of weak projects, cross-functional involvement, clear accountability and better use of scarce resources.
 
-**Criticisms**: when applied rigidly, Stage-Gate can become bureaucratic, slow and biased against radical ideas whose markets cannot yet be measured. In response, many organisations combine Stage-Gate with **agile** development within stages, use flexible, lighter gates for small projects, and run fast learning experiments (prototypes, minimum viable products) in the early stages. Cooper himself has written about such hybrid "Agile–Stage-Gate" approaches.
+**Criticisms**: when applied rigidly, Stage-Gate can become bureaucratic, slow and biased against radical ideas whose markets cannot yet be measured. In response, many organisations combine Stage-Gate with **agile** development within stages, use flexible, lighter gates for small projects, and run fast learning experiments (prototypes, minimum viable products) in the early stages. Cooper himself has written about such hybrid "Agile-Stage-Gate" approaches.
 
 ### Open innovation
 
@@ -143,7 +143,7 @@ Linkages between layers show how technology choices serve business goals. Roadma
 
 **Roadmap (simplified).**
 
-| Layer | Year 1 | Years 2–3 | Years 4–5 |
+| Layer | Year 1 | Years 2-3 | Years 4-5 |
 |---|---|---|---|
 | Market and business | SME digital onboarding demand; competition from fintechs | Demand for working capital credit | Regional trade growth |
 | Products and services | Digital account opening; improved app | Cash-flow-based loans; accounting integrations | Digital trade finance |
@@ -222,19 +222,19 @@ flowchart LR
 
 ## Further Reading
 
-- Cooper, R. G. (1990). Stage-gate systems: A new tool for managing new products. *Business Horizons, 33*(3), 44–54.
+- Cooper, R. G. (1990). Stage-gate systems: A new tool for managing new products. *Business Horizons, 33*(3), 44-54.
 - Chesbrough, H. W. (2003). *Open innovation: The new imperative for creating and profiting from technology*. Harvard Business School Press.
-- Huston, L., & Sakkab, N. (2006). Connect and develop: Inside Procter & Gamble's new model for innovation. *Harvard Business Review, 84*(3), 58–66.
-- Phaal, R., Farrukh, C. J. P., & Probert, D. R. (2004). Technology roadmapping: A planning framework for evolution and revolution. *Technological Forecasting and Social Change, 71*(1–2), 5–26.
-- O'Reilly, C. A., & Tushman, M. L. (2004). The ambidextrous organization. *Harvard Business Review, 82*(4), 74–81.
+- Huston, L., & Sakkab, N. (2006). Connect and develop: Inside Procter & Gamble's new model for innovation. *Harvard Business Review, 84*(3), 58-66.
+- Phaal, R., Farrukh, C. J. P., & Probert, D. R. (2004). Technology roadmapping: A planning framework for evolution and revolution. *Technological Forecasting and Social Change, 71*(1-2), 5-26.
+- O'Reilly, C. A., & Tushman, M. L. (2004). The ambidextrous organization. *Harvard Business Review, 82*(4), 74-81.
 - Christensen, C. M. (1997). *The innovator's dilemma: When new technologies cause great firms to fail*. Harvard Business School Press.
 - Tidd, J., & Bessant, J. (2018). *Managing innovation: Integrating technological, market and organizational change* (6th ed.). Wiley.
 
 ## Video Resources
 
-- [Stage-Gate International](https://www.stage-gate.com/) — Stage-Gate International. Official site of the organisation associated with the Stage-Gate model, with explanatory resources.
-- [MIT OpenCourseWare](https://ocw.mit.edu/) — Massachusetts Institute of Technology. Open learning portal; search for technology strategy and innovation management course materials.
-- [Institute for Manufacturing, University of Cambridge](https://www.ifm.eng.cam.ac.uk/) — University of Cambridge. Official site of the institute known for technology roadmapping research and resources.
+- [Stage-Gate International](https://www.stage-gate.com/): Stage-Gate International. Official site of the organisation associated with the Stage-Gate model, with explanatory resources.
+- [MIT OpenCourseWare](https://ocw.mit.edu/): Massachusetts Institute of Technology. Open learning portal; search for technology strategy and innovation management course materials.
+- [Institute for Manufacturing, University of Cambridge](https://www.ifm.eng.cam.ac.uk/): University of Cambridge. Official site of the institute known for technology roadmapping research and resources.
 
 ## Revision Summary
 

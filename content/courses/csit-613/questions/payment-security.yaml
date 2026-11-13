@@ -30,7 +30,7 @@ questions:
     difficulty: medium
     objective: Apply risk-based authentication thresholds
     scenario: |
-      An online shop scores transactions: new device +30, amount above three times average +25, new delivery address +15, three or more attempts in ten minutes +20, account under 24 hours old +20, known device -10. Below 30 proceeds, 30–59 triggers step-up authentication, 60 or more is declined for review. A long-standing customer uses a new phone to buy goods worth four times her average order, delivered to a new address.
+      An online shop scores transactions: new device +30, amount above three times average +25, new delivery address +15, three or more attempts in ten minutes +20, account under 24 hours old +20, known device -10. Below 30 proceeds, 30-59 triggers step-up authentication, 60 or more is declined for review. A long-standing customer uses a new phone to buy goods worth four times her average order, delivered to a new address.
     prompt: What decision should the system make?
     options:
       - Proceed frictionlessly, because she is a long-standing customer

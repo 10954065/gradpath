@@ -5,7 +5,7 @@ cards:
     back: Facts, stakeholders, ethical issues, analysis through theories and the ACM Code, options, recommendation, counter-arguments.
   - lesson: ai-recruitment-and-employee-monitoring
     front: What does the Amazon recruiting tool case (Reuters, 2018) illustrate?
-    back: Historical bias — a model trained on male-dominated CVs learned to favour men and penalise terms like "women's"; patching terms gave no guarantee of fairness, and the tool was abandoned.
+    back: Historical bias, a model trained on male-dominated CVs learned to favour men and penalise terms like "women's"; patching terms gave no guarantee of fairness, and the tool was abandoned.
   - lesson: ai-recruitment-and-employee-monitoring
     front: Why is validity an ethical issue in AI recruitment?
     back: If features such as facial expressions or accents do not predict job performance, using them excludes people for irrelevant reasons while appearing objective.
@@ -38,7 +38,7 @@ cards:
     back: When individuals can be re-identified, for example by combining the data with other sources.
   - lesson: piracy-unauthorised-ai-and-exclusion
     front: Why does the affordability defence of software piracy usually fail?
-    back: Lawful alternatives — open-source tools, education licences, free web tools — usually provide most of the benefit without infringement or malware risk.
+    back: Lawful alternatives (open-source tools, education licences, free web tools) usually provide most of the benefit without infringement or malware risk.
   - lesson: piracy-unauthorised-ai-and-exclusion
     front: What risks does shadow AI create?
     back: Leakage of confidential and personal data, loss of trade secrets, fabricated or inaccurate content, and unclear accountability.
@@ -53,4 +53,4 @@ cards:
     back: USSD or agent-based alternatives, assisted help desks, and local-language and accessible interfaces tested with disabled and low-literacy users.
   - lesson: piracy-unauthorised-ai-and-exclusion
     front: Which ACM principle places a duty on leaders to provide policies such as an AI acceptable-use policy?
-    back: Principle 3.4 — articulate, apply and support policies and processes that reflect the principles of the Code.
+    back: Principle 3.4, articulate, apply and support policies and processes that reflect the principles of the Code.

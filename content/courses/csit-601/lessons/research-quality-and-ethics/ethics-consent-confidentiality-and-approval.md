@@ -103,9 +103,9 @@ Ethical approval is the formal review of a study's risks and safeguards by a des
 - **Virtue ethics** emphasises the character of the researcher: honesty, care, fairness and humility.
 - **Ethics of care** stresses relationships and responsibilities towards participants, especially vulnerable ones.
 
-Ethics committees often reason in a consequentialist way (risk–benefit assessment) within deontological limits (consent, honesty), so understanding both helps you justify your design.
+Ethics committees often reason in a consequentialist way (risk-benefit assessment) within deontological limits (consent, honesty), so understanding both helps you justify your design.
 
-### A risk–benefit assessment model
+### A risk-benefit assessment model
 
 A practical approach is to tabulate each risk, its likelihood, severity, mitigation and residual risk. This makes your reasoning visible to a reviewer and forces you to think beyond generic promises.
 
@@ -113,9 +113,9 @@ A practical approach is to tabulate each risk, its likelihood, severity, mitigat
 
 **Illustrative scenario.** Yaw, an MSc student and IT officer at a private hospital in Accra, proposes to study electronic health record (EHR) use. He plans to (a) survey nurses, (b) interview doctors, and (c) analyse system audit logs showing which staff accessed records and when.
 
-**Step 1 – Identify stakeholders and vulnerabilities.** Nurses are in a dependent relationship with Yaw's department; audit logs involve staff personal data and are linked to patient records, which are sensitive health data under Act 843.
+**Step 1: Identify stakeholders and vulnerabilities.** Nurses are in a dependent relationship with Yaw's department; audit logs involve staff personal data and are linked to patient records, which are sensitive health data under Act 843.
 
-**Step 2 – Risk–benefit table.**
+**Step 2: Risk-benefit table.**
 
 | Risk | Likelihood | Severity | Mitigation | Residual |
 |---|---|---|---|---|
@@ -125,11 +125,11 @@ A practical approach is to tabulate each risk, its likelihood, severity, mitigat
 | Data breach of transcripts | Low | High | Encrypted storage; password-protected devices; access limited to researcher and supervisor; defined retention and deletion | Low |
 | Researcher's insider role biases data | Medium | Medium | Declare role; reflexive journal; independent second coder | Medium |
 
-**Step 3 – Approvals.** Yaw identifies that he needs (i) his university's ethical approval, (ii) any health-sector ethics review required for research in a health facility, and (iii) written gatekeeper permission from hospital management, including agreement on what log data may be provided. He checks his institution's guidance on whether data protection registration or other steps apply.
+**Step 3: Approvals.** Yaw identifies that he needs (i) his university's ethical approval, (ii) any health-sector ethics review required for research in a health facility, and (iii) written gatekeeper permission from hospital management, including agreement on what log data may be provided. He checks his institution's guidance on whether data protection registration or other steps apply.
 
-**Step 4 – Consent documents.** He prepares an information sheet and consent form for interviews, and an information page preceding the survey stating that submission indicates consent, with clear withdrawal rules.
+**Step 4: Consent documents.** He prepares an information sheet and consent form for interviews, and an information page preceding the survey stating that submission indicates consent, with clear withdrawal rules.
 
-**Step 5 – Reflection.** Yaw considers dropping the audit-log element entirely. If aggregated statistics answer his research question, collecting less data is ethically and legally preferable, an application of **data minimisation** consistent with Act 843's purpose specification principle.
+**Step 5: Reflection.** Yaw considers dropping the audit-log element entirely. If aggregated statistics answer his research question, collecting less data is ethically and legally preferable, an application of **data minimisation** consistent with Act 843's purpose specification principle.
 
 ## Ghanaian Business Application
 
@@ -192,7 +192,7 @@ The dotted arrow is important: significant changes to an approved design usually
 ## Practical Exercises
 
 1. **Participant information sheet.** Draft a one-page information sheet for an interview study on AI adoption among SME owners in Kumasi. *Expected output:* a plain-language document covering purpose, procedures, risks, benefits, confidentiality, data handling, withdrawal and contacts (use placeholders for contact details).
-2. **Risk–benefit table.** For a survey on cybersecurity awareness among students, list five ethical risks with likelihood, severity, mitigation and residual risk. *Expected output:* a completed five-row table.
+2. **Risk-benefit table.** For a survey on cybersecurity awareness among students, list five ethical risks with likelihood, severity, mitigation and residual risk. *Expected output:* a completed five-row table.
 3. **Act 843 mapping.** Map each of the eight data protection principles in Act 843 to one concrete measure in your own proposed study. *Expected output:* an eight-row table linking principle to action.
 
 ## Key Takeaways
@@ -207,14 +207,14 @@ The dotted arrow is important: significant changes to an approved design usually
 
 - National Commission for the Protection of Human Subjects of Biomedical and Behavioral Research. (1979). *The Belmont report: Ethical principles and guidelines for the protection of human subjects of research*. U.S. Department of Health, Education, and Welfare.
 - Data Protection Act, 2012 (Act 843) (Ghana). <https://dataprotection.org.gh/>
-- Kramer, A. D. I., Guillory, J. E., & Hancock, J. T. (2014). Experimental evidence of massive-scale emotional contagion through social networks. *Proceedings of the National Academy of Sciences, 111*(24), 8788–8790.
+- Kramer, A. D. I., Guillory, J. E., & Hancock, J. T. (2014). Experimental evidence of massive-scale emotional contagion through social networks. *Proceedings of the National Academy of Sciences, 111*(24), 8788-8790.
 - Saunders, M., Lewis, P., & Thornhill, A. (2019). *Research methods for business students* (8th ed.). Pearson.
 - Bell, E., Bryman, A., & Harley, B. (2019). *Business research methods* (5th ed.). Oxford University Press.
 
 ## Video Resources
 
-- [CITI Program](https://about.citiprogram.org/) — CITI Program. Official site of a widely used provider of research ethics and human subjects protection training courses (access may require registration or institutional subscription).
-- [SAGE Research Methods](https://methods.sagepub.com/) — SAGE Publishing. Official research methods platform with material on research ethics, consent and data management (access may depend on subscription).
+- [CITI Program](https://about.citiprogram.org/): CITI Program. Official site of a widely used provider of research ethics and human subjects protection training courses (access may require registration or institutional subscription).
+- [SAGE Research Methods](https://methods.sagepub.com/): SAGE Publishing. Official research methods platform with material on research ethics, consent and data management (access may depend on subscription).
 
 ## Revision Summary
 

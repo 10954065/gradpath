@@ -230,9 +230,9 @@ For this lesson, the case reinforces the six-step method: technology was procure
 
 ## Video Resources
 
-- [SAP Learning](https://learning.sap.com/) — SAP. Free learning journeys including inventory and batch management in SAP S/4HANA.
-- [Camunda documentation](https://docs.camunda.io/) — Camunda. Official guides for modelling as-is and to-be processes in BPMN.
-- [HL7 FHIR](https://hl7.org/fhir/) — HL7 International. Official specification and introductory material for the FHIR healthcare interoperability standard.
+- [SAP Learning](https://learning.sap.com/): SAP. Free learning journeys including inventory and batch management in SAP S/4HANA.
+- [Camunda documentation](https://docs.camunda.io/): Camunda. Official guides for modelling as-is and to-be processes in BPMN.
+- [HL7 FHIR](https://hl7.org/fhir/): HL7 International. Official specification and introductory material for the FHIR healthcare interoperability standard.
 
 ## Revision Summary
 
@@ -243,4 +243,4 @@ Healthcare process redesign starts with the as-is process and its weaknesses, no
 - E-prescribing removes handwriting risk and enables parallel pharmacy preparation.
 - Point-of-care charging reduces revenue leakage.
 - Clinician engagement is a critical success factor.
-- NPfIT (2002–2011): central procurement ahead of local readiness.
+- NPfIT (2002-2011): central procurement ahead of local readiness.

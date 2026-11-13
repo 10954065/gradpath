@@ -166,15 +166,15 @@ The lessons are sobering. Replication is not backup: synchronised copies were de
 ## Further Reading
 
 - Swanson, M., Bowen, P., Phillips, A. W., Gallup, D., & Lynes, D. (2010). *Contingency planning guide for federal information systems* (NIST Special Publication 800-34, Revision 1). National Institute of Standards and Technology. <https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final>
-- International Organization for Standardization. (2019). *Security and resilience — Business continuity management systems — Requirements* (ISO 22301:2019). ISO.
+- International Organization for Standardization. (2019). *Security and resilience, Business continuity management systems, Requirements* (ISO 22301:2019). ISO.
 - Greenberg, A. (2018, August 22). The untold story of NotPetya, the most devastating cyberattack in history. *Wired*. <https://www.wired.com/story/notpetya-cyberattack-ukraine-russia-code-crashed-the-world/>
 - Stallings, W., & Brown, L. (2018). *Computer security: Principles and practice* (4th ed.). Pearson.
 
 ## Video Resources
 
-- [CISA Stop Ransomware](https://www.cisa.gov/stopransomware) — Cybersecurity and Infrastructure Security Agency. Official US government ransomware resource hub, including guidance on backups and recovery.
-- [Cisco Skills for All](https://skillsforall.com/) — Cisco Networking Academy. Official learning portal with free cybersecurity courses that cover availability, backup and recovery concepts.
-- [NIST Computer Security Resource Center](https://csrc.nist.gov/) — National Institute of Standards and Technology. Official portal for NIST security publications, including contingency planning guidance.
+- [CISA Stop Ransomware](https://www.cisa.gov/stopransomware): Cybersecurity and Infrastructure Security Agency. Official US government ransomware resource hub, including guidance on backups and recovery.
+- [Cisco Skills for All](https://skillsforall.com/): Cisco Networking Academy. Official learning portal with free cybersecurity courses that cover availability, backup and recovery concepts.
+- [NIST Computer Security Resource Center](https://csrc.nist.gov/): National Institute of Standards and Technology. Official portal for NIST security publications, including contingency planning guidance.
 
 ## Revision Summary
 

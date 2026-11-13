@@ -210,8 +210,8 @@ questions:
     difficulty: hard
     objective: Interpret a multiple regression coefficient
     scenario: |
-      A regression of operational efficiency (1–5) on perceived usefulness (1–5), facilitating conditions
-      (1–5) and firm age (years) for 180 SMEs gives, for perceived usefulness, B = 0.42, SE = 0.07,
+      A regression of operational efficiency (1-5) on perceived usefulness (1-5), facilitating conditions
+      (1-5) and firm age (years) for 180 SMEs gives, for perceived usefulness, B = 0.42, SE = 0.07,
       β = 0.39, t = 6.00, p < .001. R² = 0.31.
     prompt: Which interpretation of the perceived usefulness coefficient is most accurate?
     options:

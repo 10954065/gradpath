@@ -124,21 +124,21 @@ flowchart TD
 - Gross margin: 40 per cent
 - Customers buy on average 3 times a year and remain customers for about 2 years
 
-**Step 1 – Conversion rate.** `400 ÷ 20,000 × 100 = 2%`.
+**Step 1: Conversion rate.** `400 ÷ 20,000 × 100 = 2%`.
 
-**Step 2 – Funnel step rates.** View rate `8,000 ÷ 20,000 = 40%`; add-to-cart rate `1,200 ÷ 8,000 = 15%`; checkout start `600 ÷ 1,200 = 50%`; checkout completion `400 ÷ 600 ≈ 66.7%`. The weakest step is product view to add-to-cart (15 per cent), suggesting that product pages, pricing or sizing information should be investigated first.
+**Step 2: Funnel step rates.** View rate `8,000 ÷ 20,000 = 40%`; add-to-cart rate `1,200 ÷ 8,000 = 15%`; checkout start `600 ÷ 1,200 = 50%`; checkout completion `400 ÷ 600 ≈ 66.7%`. The weakest step is product view to add-to-cart (15 per cent), suggesting that product pages, pricing or sizing information should be investigated first.
 
-**Step 3 – AOV.** `100,000 ÷ 400 = GHS 250`.
+**Step 3: AOV.** `100,000 ÷ 400 = GHS 250`.
 
-**Step 4 – CAC.** `30,000 ÷ 300 = GHS 100` per new customer.
+**Step 4: CAC.** `30,000 ÷ 300 = GHS 100` per new customer.
 
-**Step 5 – ROAS for social ads.** `54,000 ÷ 18,000 = 3.0`, meaning GHS 3 of revenue per GHS 1 of ad spend. Because gross margin is 40 per cent, each GHS 1 of ad spend produced `3.0 × 0.40 = GHS 1.20` of gross margin, a modest positive return before other costs.
+**Step 5: ROAS for social ads.** `54,000 ÷ 18,000 = 3.0`, meaning GHS 3 of revenue per GHS 1 of ad spend. Because gross margin is 40 per cent, each GHS 1 of ad spend produced `3.0 × 0.40 = GHS 1.20` of gross margin, a modest positive return before other costs.
 
-**Step 6 – CLV.** `250 × 3 × 0.40 × 2 = GHS 600` of gross margin over the relationship.
+**Step 6: CLV.** `250 × 3 × 0.40 × 2 = GHS 600` of gross margin over the relationship.
 
-**Step 7 – CLV-to-CAC ratio.** `600 ÷ 100 = 6`. Each new customer is expected to generate six times their acquisition cost in gross margin, which suggests acquisition spending is sustainable, provided the retention assumptions hold.
+**Step 7: CLV-to-CAC ratio.** `600 ÷ 100 = 6`. Each new customer is expected to generate six times their acquisition cost in gross margin, which suggests acquisition spending is sustainable, provided the retention assumptions hold.
 
-**Step 8 – Interpretation and decisions.**
+**Step 8: Interpretation and decisions.**
 1. Improve the add-to-cart step: add size guides, more photos and clearer delivery fees. If the add-to-cart rate rose from 15 to 18 per cent with other step rates unchanged, purchases would rise to `8,000 × 0.18 × 0.5 × 0.667 ≈ 480`, an increase of about 80 orders without extra traffic.
 2. Validate the CLV assumptions with real repeat-purchase data from the CRM; if customers actually buy only once, CLV falls to `250 × 1 × 0.40 × 1 = GHS 100`, equal to CAC, and the acquisition strategy would no longer be profitable.
 3. Shift some budget towards owned media (email, WhatsApp community) to lower the cost of repeat purchases.
@@ -205,8 +205,8 @@ The case is useful for analytics because the business model depended on **lifeti
 
 ## Video Resources
 
-- [Google Skillshop](https://skillshop.withgoogle.com/) — Google. Official free training portal with courses on Google Analytics and Google Ads.
-- [HubSpot Academy](https://academy.hubspot.com/) — HubSpot. Official free learning portal with courses on inbound, content and email marketing.
+- [Google Skillshop](https://skillshop.withgoogle.com/): Google. Official free training portal with courses on Google Analytics and Google Ads.
+- [HubSpot Academy](https://academy.hubspot.com/): HubSpot. Official free learning portal with courses on inbound, content and email marketing.
 
 ## Revision Summary
 

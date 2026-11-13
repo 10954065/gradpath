@@ -29,7 +29,7 @@ Every example is an **illustrative scenario** written for teaching. The examples
 
 - **Mini-proposal**: A condensed proposal containing all essential elements of a full research proposal in summary form.
 - **Alignment**: Consistency between the problem, objectives, questions, hypotheses, framework, methods and analysis.
-- **Technology–organisation–environment (TOE) framework**: A framework explaining organisational technology adoption through technological, organisational and environmental contexts.
+- **Technology-organisation-environment (TOE) framework**: A framework explaining organisational technology adoption through technological, organisational and environmental contexts.
 - **UTAUT**: The Unified Theory of Acceptance and Use of Technology, explaining intention and use through performance expectancy, effort expectancy, social influence and facilitating conditions.
 - **Protection Motivation Theory**: A theory explaining protective behaviour through threat appraisal and coping appraisal.
 - **Explanatory sequential design**: A mixed-methods design in which a quantitative phase is followed by a qualitative phase that explains its results.
@@ -53,7 +53,7 @@ For quantitative examples, sample size is calculated with Cochran's formula for 
 
 **Objectives:** (1) To examine the effect of technological factors (relative advantage, compatibility) on AI adoption among SMEs. (2) To assess the effect of organisational readiness (skills, top management support) on AI adoption. (3) To determine the effect of environmental pressures (competition, customer expectations) on AI adoption. (4) To examine the relationship between AI adoption and perceived operational efficiency.
 
-**Research questions:** RQ1–RQ4 mirror the objectives, for example RQ4: "What is the relationship between AI adoption and perceived operational efficiency among SMEs in Accra?"
+**Research questions:** RQ1-RQ4 mirror the objectives, for example RQ4: "What is the relationship between AI adoption and perceived operational efficiency among SMEs in Accra?"
 
 **Hypotheses:** H1: Technological factors positively influence AI adoption. H2: Organisational readiness positively influences AI adoption. H3: Environmental pressure positively influences AI adoption. H4: AI adoption is positively associated with perceived operational efficiency.
 
@@ -63,7 +63,7 @@ For quantitative examples, sample size is calculated with Cochran's formula for 
 
 **Sampling:** Target population: registered SMEs in Accra. Frame: membership lists of business associations, obtained with permission (acknowledging exclusion of informal firms). Stratified random sampling by sector (retail, services, manufacturing). Illustrative frame N = 1,200 gives `n = 384.16 / (1 + 383.16 / 1,200) ≈ 292`; the student would target more to allow for non-response.
 
-**Analysis:** Data screening; descriptive statistics; Cronbach's alpha and validity checks; structural equation modelling (or multiple regression) to test H1–H4. Because the design is cross-sectional, findings indicate associations, not causation.
+**Analysis:** Data screening; descriptive statistics; Cronbach's alpha and validity checks; structural equation modelling (or multiple regression) to test H1-H4. Because the design is cross-sectional, findings indicate associations, not causation.
 
 **Ethics:** Institutional ethical approval before data collection; informed consent; anonymous responses; no commercially sensitive figures requested; secure storage consistent with the principles of the Data Protection Act, 2012 (Act 843).
 
@@ -81,7 +81,7 @@ For quantitative examples, sample size is calculated with Cochran's formula for 
 
 **Research questions:** For example, RQ5: "To what extent does perceived transaction cost influence retailers' intention to accept digital payments?"
 
-**Hypotheses:** H1–H4: Performance expectancy, effort expectancy, social influence and facilitating conditions positively influence intention. H5: Perceived transaction cost negatively influences intention.
+**Hypotheses:** H1-H4: Performance expectancy, effort expectancy, social influence and facilitating conditions positively influence intention. H5: Perceived transaction cost negatively influences intention.
 
 **Conceptual framework (UTAUT extended; Venkatesh et al., 2003):** Four UTAUT constructs plus perceived cost → intention to accept digital payments, with age and experience as control variables.
 
@@ -89,7 +89,7 @@ For quantitative examples, sample size is calculated with Cochran's formula for 
 
 **Sampling:** No list of traders exists, so multi-stage cluster sampling is used: market sections (clusters) are randomly selected, then traders are chosen systematically (every kth stall) within each section. A target of approximately 385 respondents follows from Cochran's formula; the design effect of clustering is acknowledged.
 
-**Analysis:** Descriptive statistics, reliability and validity tests, and multiple regression (or PLS-SEM) to test H1–H5, reporting coefficients, p-values, confidence intervals and R².
+**Analysis:** Descriptive statistics, reliability and validity tests, and multiple regression (or PLS-SEM) to test H1-H5, reporting coefficients, p-values, confidence intervals and R².
 
 **Ethics:** Permission from market leadership as gatekeepers; verbal recorded consent where literacy varies; no recording of names or phone numbers; interviews arranged to avoid disrupting trade; institutional approval obtained beforehand.
 
@@ -107,7 +107,7 @@ For quantitative examples, sample size is calculated with Cochran's formula for 
 
 **Research questions:** RQ1: "What is the level of cybersecurity knowledge among undergraduates?" RQ2: "Does knowledge differ significantly across faculties?" RQ3: "To what extent do threat and coping appraisals influence protective behaviour intention?"
 
-**Hypotheses:** H1: Knowledge differs significantly across faculties. H2–H5: Perceived severity, perceived vulnerability, response efficacy and self-efficacy positively influence protective behaviour intention.
+**Hypotheses:** H1: Knowledge differs significantly across faculties. H2-H5: Perceived severity, perceived vulnerability, response efficacy and self-efficacy positively influence protective behaviour intention.
 
 **Conceptual framework (Protection Motivation Theory; Rogers, 1975):** Threat appraisal (severity, vulnerability) and coping appraisal (response efficacy, self-efficacy) → protective behaviour intention; knowledge score as a separate descriptive outcome.
 
@@ -137,9 +137,9 @@ For quantitative examples, sample size is calculated with Cochran's formula for 
 
 **Conceptual framework (sensitising, not tested):** Diffusion of Innovations attributes (Rogers, 2003): relative advantage, compatibility, complexity, trialability and observability, used to inform interview questions while allowing new themes to emerge.
 
-**Methodology:** Interpretivist, inductive qualitative design using semi-structured interviews (45–60 minutes) and, with consent, review of businesses' public social media pages.
+**Methodology:** Interpretivist, inductive qualitative design using semi-structured interviews (45-60 minutes) and, with consent, review of businesses' public social media pages.
 
-**Sampling:** Purposive maximum variation sampling of approximately 12–20 owners across sectors (fashion, food, electronics), business ages, and current and discontinued online sellers, recruited via business associations and referrals; final number guided by data saturation.
+**Sampling:** Purposive maximum variation sampling of approximately 12-20 owners across sectors (fashion, food, electronics), business ages, and current and discontinued online sellers, recruited via business associations and referrals; final number guided by data saturation.
 
 **Analysis:** Verbatim transcription; reflexive thematic analysis following Braun and Clarke (2006); second-coder review of a subset of transcripts; audit trail and reflexive memos.
 
@@ -159,13 +159,13 @@ For quantitative examples, sample size is calculated with Cochran's formula for 
 
 **Research questions:** RQ1 and RQ2 mirror the quantitative objectives; RQ3: "How do clinicians and administrators explain the patterns of EHR use identified in the survey?"
 
-**Hypotheses:** H1–H4: Performance expectancy, effort expectancy, facilitating conditions and system quality positively influence EHR use. H5: EHR use is positively associated with perceived net benefits.
+**Hypotheses:** H1-H4: Performance expectancy, effort expectancy, facilitating conditions and system quality positively influence EHR use. H5: EHR use is positively associated with perceived net benefits.
 
 **Conceptual framework:** UTAUT constructs (Venkatesh et al., 2003) and system quality from the DeLone and McLean (2003) model → EHR use → perceived net benefits.
 
 **Methodology:** Pragmatist explanatory sequential mixed-methods design: Phase 1 survey of clinicians (doctors, nurses, pharmacists); Phase 2 semi-structured interviews to explain significant and unexpected Phase 1 results.
 
-**Sampling:** Phase 1: hospitals selected purposively (for example, one public and one private facility using EHRs), then staff stratified by professional group within each hospital. Phase 2: purposive selection of 10–15 participants, including high and low users identified anonymously through voluntary follow-up consent.
+**Sampling:** Phase 1: hospitals selected purposively (for example, one public and one private facility using EHRs), then staff stratified by professional group within each hospital. Phase 2: purposive selection of 10-15 participants, including high and low users identified anonymously through voluntary follow-up consent.
 
 **Analysis:** Phase 1: reliability and validity tests, then multiple regression or SEM. Phase 2: thematic analysis. Integration: a joint display table comparing statistical results with explanatory themes.
 
@@ -205,7 +205,7 @@ The diagram shows the conceptual framework for Worked Proposal 1. Each arrow cor
 ## Common Examination Mistakes
 
 - Copying a worked example's structure without adapting the theory, population and design to a new problem.
-- Claiming causation from cross-sectional survey designs such as proposals 1–3.
+- Claiming causation from cross-sectional survey designs such as proposals 1-3.
 - Stating "random sampling" when no sampling frame exists.
 - Omitting ethics or giving generic ethics statements unrelated to the specific study.
 - Presenting a conceptual framework whose constructs do not appear in the objectives or instrument.
@@ -235,17 +235,17 @@ The diagram shows the conceptual framework for Worked Proposal 1. Each arrow cor
 ## Further Reading
 
 - Tornatzky, L. G., & Fleischer, M. (1990). *The processes of technological innovation*. Lexington Books.
-- Venkatesh, V., Morris, M. G., Davis, G. B., & Davis, F. D. (2003). User acceptance of information technology: Toward a unified view. *MIS Quarterly, 27*(3), 425–478.
-- Rogers, R. W. (1975). A protection motivation theory of fear appeals and attitude change. *The Journal of Psychology, 91*(1), 93–114.
+- Venkatesh, V., Morris, M. G., Davis, G. B., & Davis, F. D. (2003). User acceptance of information technology: Toward a unified view. *MIS Quarterly, 27*(3), 425-478.
+- Rogers, R. W. (1975). A protection motivation theory of fear appeals and attitude change. *The Journal of Psychology, 91*(1), 93-114.
 - Rogers, E. M. (2003). *Diffusion of innovations* (5th ed.). Free Press.
-- DeLone, W. H., & McLean, E. R. (2003). The DeLone and McLean model of information systems success: A ten-year update. *Journal of Management Information Systems, 19*(4), 9–30.
-- Braun, V., & Clarke, V. (2006). Using thematic analysis in psychology. *Qualitative Research in Psychology, 3*(2), 77–101.
+- DeLone, W. H., & McLean, E. R. (2003). The DeLone and McLean model of information systems success: A ten-year update. *Journal of Management Information Systems, 19*(4), 9-30.
+- Braun, V., & Clarke, V. (2006). Using thematic analysis in psychology. *Qualitative Research in Psychology, 3*(2), 77-101.
 - Creswell, J. W., & Creswell, J. D. (2018). *Research design: Qualitative, quantitative, and mixed methods approaches* (5th ed.). SAGE.
 
 ## Video Resources
 
-- [SAGE Research Methods](https://methods.sagepub.com/) — SAGE Publishing. Official research methods platform with guidance and cases on research design and proposal development (access may depend on subscription).
-- [MIT OpenCourseWare](https://ocw.mit.edu/) — Massachusetts Institute of Technology. Official open learning portal; search for research design and methods course materials.
+- [SAGE Research Methods](https://methods.sagepub.com/): SAGE Publishing. Official research methods platform with guidance and cases on research design and proposal development (access may depend on subscription).
+- [MIT OpenCourseWare](https://ocw.mit.edu/): Massachusetts Institute of Technology. Official open learning portal; search for research design and methods course materials.
 
 ## Revision Summary
 

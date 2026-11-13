@@ -203,7 +203,7 @@ questions:
       - Mean absolute error
       - R-squared
     answer: 1
-    explanation: Precision–recall measures focus on performance for the rare class and are more informative than ROC-based or accuracy measures on heavily imbalanced data. MAE and R-squared are regression metrics.
+    explanation: Precision-recall measures focus on performance for the rare class and are more informative than ROC-based or accuracy measures on heavily imbalanced data. MAE and R-squared are regression metrics.
   - id: q16
     lesson: fraud-detection-and-ai-reporting-projects
     type: true_false

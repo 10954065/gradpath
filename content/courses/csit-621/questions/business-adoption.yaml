@@ -62,7 +62,7 @@ questions:
         right: Net gain expressed as a percentage of cost
       - left: Internal rate of return
         right: Discount rate at which NPV equals zero
-    explanation: Each technique answers a different question — value created (NPV), recovery speed (payback, discounted payback), overall gain (ROI) and break-even rate (IRR). Robust business cases report several together with sensitivity analysis.
+    explanation: Each technique answers a different question, value created (NPV), recovery speed (payback, discounted payback), overall gain (ROI) and break-even rate (IRR). Robust business cases report several together with sensitivity analysis.
 
   - id: ba05
     lesson: technology-evaluation-and-cost-benefit
@@ -95,14 +95,14 @@ questions:
     bloom: analyse
     difficulty: hard
     objective: Analyse lessons from TradeLens for ecosystem-dependent technology
-    prompt: What is the most important evaluation lesson from the discontinuation of the Maersk–IBM TradeLens platform in 2022?
+    prompt: What is the most important evaluation lesson from the discontinuation of the Maersk-IBM TradeLens platform in 2022?
     options:
       - Blockchain technology does not work
       - Benefits that depend on broad ecosystem participation must be tested under pessimistic adoption scenarios, with governance and incentives for participants
       - Shipping companies should never use digital platforms
       - Large companies cannot afford technology investments
     answer: 1
-    explanation: Maersk and IBM cited insufficient commercial viability and global industry collaboration. The lesson concerns ecosystem adoption, governance and incentives — including competitors' reluctance to join a rival-led platform — not the technical failure of blockchain or an inability to invest.
+    explanation: Maersk and IBM cited insufficient commercial viability and global industry collaboration. The lesson concerns ecosystem adoption, governance and incentives, including competitors' reluctance to join a rival-led platform, not the technical failure of blockchain or an inability to invest.
 
   - id: ba08
     lesson: adoption-risks-and-organisational-readiness
@@ -127,7 +127,7 @@ questions:
     difficulty: medium
     objective: Apply risk scoring and select a risk response
     scenario: |
-      Illustrative scenario. An insurer scores the risk "AI model performs poorly on local handwritten claim forms" at likelihood 4 and impact 4 on 1–5 scales. Its risk appetite treats scores above 12 as requiring treatment before go-live.
+      Illustrative scenario. An insurer scores the risk "AI model performs poorly on local handwritten claim forms" at likelihood 4 and impact 4 on 1-5 scales. Its risk appetite treats scores above 12 as requiring treatment before go-live.
     prompt: What is the risk score, and which response is most appropriate?
     options:
       - 8; accept the risk
@@ -226,7 +226,7 @@ questions:
     objective: Explain the relationship between Stage-Gate and agile
     prompt: Stage-Gate and agile development are incompatible, so organisations must choose one or the other.
     answer: false
-    explanation: Stage-Gate is a governance framework for investment decisions, while agile is a way of performing development work. Many organisations run agile sprints within stages and use lighter, more flexible gates; Cooper has written about hybrid Agile–Stage-Gate approaches.
+    explanation: Stage-Gate is a governance framework for investment decisions, while agile is a way of performing development work. Many organisations run agile sprints within stages and use lighter, more flexible gates; Cooper has written about hybrid Agile-Stage-Gate approaches.
 
   - id: ba17
     lesson: innovation-management-and-technology-strategy
@@ -309,7 +309,7 @@ questions:
 
       Risks: governance deadlock between competitors (L4, I5; reduce via a neutral governance charter); poor data quality at farm gate (L4, I4; offline-capable app, training, spot audits); vendor lock-in (L3, I4; open standards, data export, escrow); low cooperative participation (L3, I4; incentives, farmer benefits); buyer requirements changing (L2, I4; align with buyers early).
 
-      TOE: technology — maturity adequate but connectivity weak; organisation — limited blockchain skills and no agreed sponsor; environment — strong buyer pressure, but competitive tension and regulatory engagement with industry bodies are needed.
+      TOE: technology, maturity adequate but connectivity weak; organisation, limited blockchain skills and no agreed sponsor; environment, strong buyer pressure, but competitive tension and regulatory engagement with industry bodies are needed.
 
       Recommendation: do not approve full deployment. Agree governance first, then run a low-cost pilot on one supply route, comparing blockchain with a neutral shared database, with exit criteria tied to data quality, participation and cost.
     explanation: Examiners look for honest suitability analysis (including the data-entry problem), correct NPV and payback with interpretation, a scored risk register, case-specific TOE analysis and a conditional, justified recommendation.

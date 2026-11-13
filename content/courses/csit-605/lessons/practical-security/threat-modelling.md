@@ -197,9 +197,9 @@ Viewed through STRIDE, the case is instructive. **Spoofing**: messages appeared 
 
 ## Video Resources
 
-- [OWASP Threat Dragon](https://owasp.org/www-project-threat-dragon/) — OWASP Foundation. Official project page for a free threat modelling tool that supports STRIDE and data flow diagrams.
-- [OWASP Threat Modeling](https://owasp.org/www-community/Threat_Modeling) — OWASP Foundation. Official community page explaining threat modelling concepts and approaches.
-- [Microsoft Learn](https://learn.microsoft.com/en-us/training/) — Microsoft. Official free training portal; search for threat modelling security fundamentals modules.
+- [OWASP Threat Dragon](https://owasp.org/www-project-threat-dragon/): OWASP Foundation. Official project page for a free threat modelling tool that supports STRIDE and data flow diagrams.
+- [OWASP Threat Modeling](https://owasp.org/www-community/Threat_Modeling): OWASP Foundation. Official community page explaining threat modelling concepts and approaches.
+- [Microsoft Learn](https://learn.microsoft.com/en-us/training/): Microsoft. Official free training portal; search for threat modelling security fundamentals modules.
 
 ## Revision Summary
 

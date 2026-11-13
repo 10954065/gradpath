@@ -115,7 +115,7 @@ export default function TimetablePage() {
                     <li key={e.id} className="flex items-start justify-between gap-2 rounded-lg border p-2.5 text-sm">
                       <span className="min-w-0">
                         <span className="block text-xs font-semibold tabular-nums">
-                          {e.start_time.slice(0, 5)}–{e.end_time.slice(0, 5)}
+                          {e.start_time.slice(0, 5)}-{e.end_time.slice(0, 5)}
                         </span>
                         <span className="block">{e.title}</span>
                         <span className="mt-1 flex flex-wrap gap-1">
@@ -149,7 +149,7 @@ export default function TimetablePage() {
                     <li key={e.id} className="flex items-center justify-between gap-2 rounded-lg border p-2.5 text-sm">
                       <span>
                         <span className="block text-xs font-semibold">
-                          {e.event_date} · {e.start_time.slice(0, 5)}–{e.end_time.slice(0, 5)}
+                          {e.event_date} · {e.start_time.slice(0, 5)}-{e.end_time.slice(0, 5)}
                         </span>
                         {e.title}
                       </span>

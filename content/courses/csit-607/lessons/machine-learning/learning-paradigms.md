@@ -185,14 +185,14 @@ flowchart TD
 
 - Géron, A. (2019). *Hands-on machine learning with Scikit-Learn, Keras, and TensorFlow* (2nd ed.). O'Reilly Media.
 - Sutton, R. S., & Barto, A. G. (2018). *Reinforcement learning: An introduction* (2nd ed.). MIT Press.
-- Silver, D., Huang, A., Maddison, C. J., Guez, A., Sifre, L., van den Driessche, G., Schrittwieser, J., Antonoglou, I., Panneershelvam, V., Lanctot, M., Dieleman, S., Grewe, D., Nham, J., Kalchbrenner, N., Sutskever, I., Lillicrap, T., Leach, M., Kavukcuoglu, K., Graepel, T., & Hassabis, D. (2016). Mastering the game of Go with deep neural networks and tree search. *Nature, 529*(7587), 484–489.
+- Silver, D., Huang, A., Maddison, C. J., Guez, A., Sifre, L., van den Driessche, G., Schrittwieser, J., Antonoglou, I., Panneershelvam, V., Lanctot, M., Dieleman, S., Grewe, D., Nham, J., Kalchbrenner, N., Sutskever, I., Lillicrap, T., Leach, M., Kavukcuoglu, K., Graepel, T., & Hassabis, D. (2016). Mastering the game of Go with deep neural networks and tree search. *Nature, 529*(7587), 484-489.
 - Provost, F., & Fawcett, T. (2013). *Data science for business*. O'Reilly Media.
 
 ## Video Resources
 
-- [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) — Google for Developers. Free course with videos and exercises introducing supervised learning concepts.
-- [Kaggle Learn](https://www.kaggle.com/learn) — Kaggle. Short, free hands-on courses including introductory machine learning.
-- [Hugging Face Learn](https://huggingface.co/learn) — Hugging Face. Free courses, including a deep reinforcement learning course.
+- [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course): Google for Developers. Free course with videos and exercises introducing supervised learning concepts.
+- [Kaggle Learn](https://www.kaggle.com/learn): Kaggle. Short, free hands-on courses including introductory machine learning.
+- [Hugging Face Learn](https://huggingface.co/learn): Hugging Face. Free courses, including a deep reinforcement learning course.
 
 ## Revision Summary
 

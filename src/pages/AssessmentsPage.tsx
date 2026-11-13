@@ -122,7 +122,7 @@ export default function AssessmentsPage() {
                           </td>
                           <td className="px-4 py-2.5 text-muted-foreground">{quiz ? QUIZ_KIND_LABEL[quiz.kind] : ''}</td>
                           <td className="px-4 py-2.5 whitespace-nowrap text-muted-foreground">{formatDateTime(a.submitted_at ?? a.started_at)}</td>
-                          <td className="px-4 py-2.5 tabular-nums">{a.percent !== null ? `${Math.round(Number(a.percent))}%` : '—'}</td>
+                          <td className="px-4 py-2.5 tabular-nums">{a.percent !== null ? `${Math.round(Number(a.percent))}%` : 'n/a'}</td>
                           <td className="px-4 py-2.5">
                             {a.status === 'in_progress' ? (
                               <Badge tone="warning">In progress</Badge>

@@ -188,7 +188,7 @@ The dotted arrows show that the discussion must return explicitly to the literat
 
 ## Practical Exercises
 
-1. **Justify a design decision.** For your own study, write a justification paragraph for your sampling technique that states the choice, the reasons, the alternative rejected and the implications. *Expected output:* a 120–180 word paragraph containing all four elements.
+1. **Justify a design decision.** For your own study, write a justification paragraph for your sampling technique that states the choice, the reasons, the alternative rejected and the implications. *Expected output:* a 120-180 word paragraph containing all four elements.
 2. **Analysis plan table.** Create an objective-by-objective analysis plan table for your study. *Expected output:* a table mapping each objective to data source, variables or focus and analysis technique.
 3. **Results versus discussion.** Using the illustrative regression figures in this lesson, write one results paragraph and one discussion paragraph for the cost variable. *Expected output:* two clearly distinct paragraphs, with the discussion citing relevant theory.
 
@@ -202,16 +202,16 @@ The dotted arrows show that the discussion must return explicitly to the literat
 
 ## Further Reading
 
-- Tong, A., Sainsbury, P., & Craig, J. (2007). Consolidated criteria for reporting qualitative research (COREQ): A 32-item checklist for interviews and focus groups. *International Journal for Quality in Health Care, 19*(6), 349–357.
+- Tong, A., Sainsbury, P., & Craig, J. (2007). Consolidated criteria for reporting qualitative research (COREQ): A 32-item checklist for interviews and focus groups. *International Journal for Quality in Health Care, 19*(6), 349-357.
 - Field, A. (2018). *Discovering statistics using IBM SPSS Statistics* (5th ed.). SAGE.
-- Braun, V., & Clarke, V. (2006). Using thematic analysis in psychology. *Qualitative Research in Psychology, 3*(2), 77–101.
+- Braun, V., & Clarke, V. (2006). Using thematic analysis in psychology. *Qualitative Research in Psychology, 3*(2), 77-101.
 - Saunders, M., Lewis, P., & Thornhill, A. (2019). *Research methods for business students* (8th ed.). Pearson.
 - Creswell, J. W., & Creswell, J. D. (2018). *Research design: Qualitative, quantitative, and mixed methods approaches* (5th ed.). SAGE.
 
 ## Video Resources
 
-- [EQUATOR Network](https://www.equator-network.org/) — EQUATOR Network. Official site of the initiative that collects reporting guidelines such as CONSORT and COREQ, with training resources on transparent reporting.
-- [SAGE Research Methods](https://methods.sagepub.com/) — SAGE Publishing. Official research methods platform with guidance on writing up quantitative and qualitative research (access may depend on subscription).
+- [EQUATOR Network](https://www.equator-network.org/): EQUATOR Network. Official site of the initiative that collects reporting guidelines such as CONSORT and COREQ, with training resources on transparent reporting.
+- [SAGE Research Methods](https://methods.sagepub.com/): SAGE Publishing. Official research methods platform with guidance on writing up quantitative and qualitative research (access may depend on subscription).
 
 ## Revision Summary
 

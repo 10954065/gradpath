@@ -171,7 +171,7 @@ The governance lessons outweigh the technical ones. **Supplier risk** was not go
 
 ## Further Reading
 
-- International Organization for Standardization & International Electrotechnical Commission. (2022). *Information security, cybersecurity and privacy protection — Information security management systems — Requirements* (ISO/IEC 27001:2022). ISO.
+- International Organization for Standardization & International Electrotechnical Commission. (2022). *Information security, cybersecurity and privacy protection, Information security management systems, Requirements* (ISO/IEC 27001:2022). ISO.
 - ISACA. (2018). *COBIT 2019 framework: Introduction and methodology*. ISACA.
 - National Institute of Standards and Technology. (2024). *The NIST Cybersecurity Framework (CSF) 2.0* (NIST CSWP 29). <https://doi.org/10.6028/NIST.CSWP.29>
 - Republic of Ghana. (2020). *Cybersecurity Act, 2020 (Act 1038)*.
@@ -179,9 +179,9 @@ The governance lessons outweigh the technical ones. **Supplier risk** was not go
 
 ## Video Resources
 
-- [Cyber Security Authority, Ghana](https://www.csa.gov.gh/) — Cyber Security Authority. Official website of Ghana's cybersecurity regulator, with information on Act 1038, CII and licensing.
-- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework) — National Institute of Standards and Technology. Official CSF 2.0 resources, including material on the Govern Function.
-- [Cisco Skills for All](https://skillsforall.com/) — Cisco Networking Academy. Official learning portal with free cybersecurity courses that introduce governance and policy concepts.
+- [Cyber Security Authority, Ghana](https://www.csa.gov.gh/): Cyber Security Authority. Official website of Ghana's cybersecurity regulator, with information on Act 1038, CII and licensing.
+- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework): National Institute of Standards and Technology. Official CSF 2.0 resources, including material on the Govern Function.
+- [Cisco Skills for All](https://skillsforall.com/): Cisco Networking Academy. Official learning portal with free cybersecurity courses that introduce governance and policy concepts.
 
 ## Revision Summary
 

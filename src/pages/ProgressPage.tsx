@@ -139,7 +139,7 @@ export default function ProgressPage() {
                       <Link to={w.href} className="text-primary hover:underline">
                         {w.title.replace(/^Revisit /, '')}
                       </Link>{' '}
-                      <span className="text-xs text-muted-foreground">— {w.reason}</span>
+                      <span className="text-xs text-muted-foreground">({w.reason})</span>
                     </li>
                   ))}
                 </ul>

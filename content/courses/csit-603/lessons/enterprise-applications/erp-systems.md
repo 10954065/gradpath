@@ -201,14 +201,14 @@ flowchart LR
 ## Further Reading
 
 - Monk, E., & Wagner, B. (2013). *Concepts in enterprise resource planning* (4th ed.). Cengage Learning.
-- Davenport, T. H. (1998). Putting the enterprise into the enterprise system. *Harvard Business Review, 76*(4), 121–131.
+- Davenport, T. H. (1998). Putting the enterprise into the enterprise system. *Harvard Business Review, 76*(4), 121-131.
 - IBM. (n.d.). *What is enterprise resource planning (ERP)?* IBM Think. <https://www.ibm.com/think/topics/enterprise-resource-planning>
 - Odoo. (n.d.). *Odoo documentation*. <https://www.odoo.com/documentation/>
 
 ## Video Resources
 
-- [SAP Learning](https://learning.sap.com/) — SAP. Free learning journeys introducing SAP S/4HANA business processes, including order-to-cash and procure-to-pay.
-- [Microsoft Learn: Dynamics 365](https://learn.microsoft.com/en-us/dynamics365/) — Microsoft. Official documentation and training modules for Microsoft's ERP and CRM applications.
+- [SAP Learning](https://learning.sap.com/): SAP. Free learning journeys introducing SAP S/4HANA business processes, including order-to-cash and procure-to-pay.
+- [Microsoft Learn: Dynamics 365](https://learn.microsoft.com/en-us/dynamics365/): Microsoft. Official documentation and training modules for Microsoft's ERP and CRM applications.
 
 ## Revision Summary
 

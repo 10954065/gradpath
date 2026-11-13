@@ -226,8 +226,8 @@ flowchart TD
 
 ## Video Resources
 
-- [Markkula Center for Applied Ethics](https://www.scu.edu/ethics/) — Santa Clara University. Official portal with the Framework for Ethical Decision Making and related resources.
-- [Justice with Michael Sandel](https://justiceharvard.org/) — Harvard University. Official course site modelling how to state, challenge and defend moral arguments.
+- [Markkula Center for Applied Ethics](https://www.scu.edu/ethics/): Santa Clara University. Official portal with the Framework for Ethical Decision Making and related resources.
+- [Justice with Michael Sandel](https://justiceharvard.org/): Harvard University. Official course site modelling how to state, challenge and defend moral arguments.
 
 ## Revision Summary
 

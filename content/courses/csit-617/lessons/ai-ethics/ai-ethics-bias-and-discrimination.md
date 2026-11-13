@@ -8,7 +8,7 @@ source: supplementary
 
 ## Introduction
 
-Artificial intelligence systems now help decide who is shortlisted for a job, who receives a loan, which transactions are flagged as fraudulent, which patients are prioritised and what news people see. In Ghana, as elsewhere, banks, telecommunications companies, mobile-money operators, insurers and public agencies are adopting machine-learning tools to automate and scale decisions. These systems can bring real benefits — speed, consistency, the ability to serve customers without formal credit histories — but they can also reproduce and amplify unfairness at a scale and speed that no individual decision-maker could.
+Artificial intelligence systems now help decide who is shortlisted for a job, who receives a loan, which transactions are flagged as fraudulent, which patients are prioritised and what news people see. In Ghana, as elsewhere, banks, telecommunications companies, mobile-money operators, insurers and public agencies are adopting machine-learning tools to automate and scale decisions. These systems can bring real benefits (speed, consistency, the ability to serve customers without formal credit histories) but they can also reproduce and amplify unfairness at a scale and speed that no individual decision-maker could.
 
 This lesson examines why AI raises distinctive ethical problems, explains how bias enters AI systems at each stage of their life cycle, distinguishes types of algorithmic discrimination and introduces the competing definitions of fairness used to measure it. It draws on well-documented international cases and applies the ideas to Ghanaian business contexts. The aim is to equip you, as a future IT manager or analyst, to ask the right questions before an AI system is built, bought or deployed.
 
@@ -46,7 +46,7 @@ All software embodies choices, but machine-learning systems raise particular con
 2. **Opacity.** Complex models, such as deep neural networks or large ensembles, may be difficult even for their developers to explain. Affected people often do not know an algorithm was involved.
 3. **Apparent objectivity.** Numerical outputs can appear neutral and scientific, discouraging challenge. Cathy O'Neil's *Weapons of Math Destruction* (2016) describes models that are opaque, operate at scale and cause damage as particularly dangerous because their authority is rarely questioned.
 4. **Learning from the past.** Models trained on historical data learn the patterns in that data, including patterns produced by past discrimination.
-5. **Diffuse responsibility.** Data suppliers, model developers, vendors, deploying organisations and end users all contribute to outcomes, making it hard to assign accountability — a problem addressed in the next lesson.
+5. **Diffuse responsibility.** Data suppliers, model developers, vendors, deploying organisations and end users all contribute to outcomes, making it hard to assign accountability: a problem addressed in the next lesson.
 
 ### How bias enters AI systems
 
@@ -63,12 +63,12 @@ Bias is not a single defect but can arise at any stage of the life cycle. A wide
 | Deployment bias | Use in context | A tool designed for decision support is used as an automatic decision-maker |
 | Feedback-loop bias | After deployment | Predictive policing sends officers to the same areas, generating more recorded incidents there |
 
-Two points deserve emphasis. First, simply **removing a sensitive attribute** such as gender from the training data rarely eliminates bias, because other features act as **proxies**. A model can infer gender from a CV's mention of a women's football club or a single-sex school, and infer ethnicity or income from location data. Second, bias is not only a data problem. The choice of the **target variable** — what the model is asked to predict — embeds value judgements. Predicting "likelihood to repay as observed historically" is not the same as predicting "creditworthiness", because past lending decisions determined who had the opportunity to repay.
+Two points deserve emphasis. First, simply **removing a sensitive attribute** such as gender from the training data rarely eliminates bias, because other features act as **proxies**. A model can infer gender from a CV's mention of a women's football club or a single-sex school, and infer ethnicity or income from location data. Second, bias is not only a data problem. The choice of the **target variable**: what the model is asked to predict, embeds value judgements. Predicting "likelihood to repay as observed historically" is not the same as predicting "creditworthiness", because past lending decisions determined who had the opportunity to repay.
 
 ### Forms of algorithmic discrimination
 
-- **Direct discrimination**: the system explicitly uses a protected characteristic to treat people less favourably — for example, a rule that scores applicants lower because of sex.
-- **Indirect discrimination or disparate impact**: a neutral-seeming criterion disproportionately disadvantages a group without adequate justification — for example, heavily weighting continuous formal employment history, which may disadvantage people in Ghana's large informal economy.
+- **Direct discrimination**: the system explicitly uses a protected characteristic to treat people less favourably, for example, a rule that scores applicants lower because of sex.
+- **Indirect discrimination or disparate impact**: a neutral-seeming criterion disproportionately disadvantages a group without adequate justification, for example, heavily weighting continuous formal employment history, which may disadvantage people in Ghana's large informal economy.
 - **Proxy discrimination**: the model relies on correlated features that function as stand-ins for protected characteristics.
 - **Representational harm**: systems that demean, stereotype or erase groups, such as search results or image-generation outputs that associate certain groups with negative stereotypes. Safiya Umoja Noble's *Algorithms of Oppression* (2018) documents how search engines can reinforce racist and sexist representations.
 
@@ -92,10 +92,10 @@ Research has shown that when groups differ in their underlying base rates, it is
 
 ### Ethical theories applied to algorithmic bias
 
-- **Utilitarianism** asks whether the system increases overall welfare. A model that improves average accuracy but concentrates errors on a vulnerable minority may increase total utility while being deeply unfair — highlighting a known weakness of simple aggregate reasoning.
+- **Utilitarianism** asks whether the system increases overall welfare. A model that improves average accuracy but concentrates errors on a vulnerable minority may increase total utility while being deeply unfair: highlighting a known weakness of simple aggregate reasoning.
 - **Kantian deontology** insists that each person be treated as an end, not merely a means. Judging people by statistical correlations with groups they belong to, rather than as individuals, sits uneasily with respect for persons, especially when they cannot understand or contest the decision.
-- **Rawlsian justice** asks what principles people would choose behind a "veil of ignorance". Rawls' difference principle suggests that inequalities are acceptable only if they benefit the least advantaged — a useful test for AI systems deployed across unequal populations.
-- **Virtue ethics** asks what a conscientious, just and prudent professional would do — for example, insisting on testing a model's performance for under-represented groups before deployment.
+- **Rawlsian justice** asks what principles people would choose behind a "veil of ignorance". Rawls' difference principle suggests that inequalities are acceptable only if they benefit the least advantaged: a useful test for AI systems deployed across unequal populations.
+- **Virtue ethics** asks what a conscientious, just and prudent professional would do, for example, insisting on testing a model's performance for under-represented groups before deployment.
 
 ### The ACM Code of Ethics
 
@@ -114,7 +114,7 @@ Several ACM principles apply directly: **1.2 Avoid harm**, **1.4 Be fair and tak
 
 ### Illustrative scenario: alternative credit scoring
 
-*Illustrative scenario.* "Adom Digital Credit", a Ghanaian lender, offers small loans through a mobile app. It trains a model on mobile-money transaction histories, airtime purchases and phone metadata to predict repayment. The model promises to extend credit to people without bank accounts — a genuine inclusion benefit.
+*Illustrative scenario.* "Adom Digital Credit", a Ghanaian lender, offers small loans through a mobile app. It trains a model on mobile-money transaction histories, airtime purchases and phone metadata to predict repayment. The model promises to extend credit to people without bank accounts: a genuine inclusion benefit.
 
 A bias review raises several concerns:
 
@@ -132,7 +132,7 @@ A defensible approach would test approval and error rates separately by region a
 
 **Gender Shades.** In a 2018 study, Joy Buolamwini and Timnit Gebru evaluated commercial gender-classification systems from several technology companies using a benchmark balanced by gender and skin type. They found that the systems were substantially less accurate for darker-skinned women than for lighter-skinned men. The study illustrated **representation and evaluation bias**, showing that a system that performs well "on average" can perform badly for specific intersectional groups, and that benchmarks themselves must be representative.
 
-**COMPAS.** In 2016 the investigative newsroom ProPublica published "Machine Bias", an analysis of the COMPAS risk-assessment tool used in parts of the US criminal justice system. ProPublica reported that Black defendants who did not reoffend were more likely than white defendants to be incorrectly labelled high risk. The tool's developer responded that the scores were similarly calibrated across groups — that a given score corresponded to similar reoffending rates. Both claims could be true at the same time, because, as later research showed, calibration and equal false-positive rates generally cannot be achieved simultaneously when base rates differ. The case demonstrates that "is this algorithm fair?" has no purely technical answer: it requires an explicit ethical choice about which errors matter most and who bears them.
+**COMPAS.** In 2016 the investigative newsroom ProPublica published "Machine Bias", an analysis of the COMPAS risk-assessment tool used in parts of the US criminal justice system. ProPublica reported that Black defendants who did not reoffend were more likely than white defendants to be incorrectly labelled high risk. The tool's developer responded that the scores were similarly calibrated across groups: that a given score corresponded to similar reoffending rates. Both claims could be true at the same time, because, as later research showed, calibration and equal false-positive rates generally cannot be achieved simultaneously when base rates differ. The case demonstrates that "is this algorithm fair?" has no purely technical answer: it requires an explicit ethical choice about which errors matter most and who bears them.
 
 ## Diagram
 
@@ -149,11 +149,11 @@ flowchart LR
 
 ## Common Misconceptions
 
-- "Algorithms are objective because they are mathematical." — Models learn from data and objectives chosen by people; they can encode historical and measurement biases while appearing neutral.
-- "Removing gender or ethnicity from the data makes a model fair." — Correlated proxy variables can reproduce the same patterns; fairness must be tested on outcomes.
-- "High overall accuracy means the model works for everyone." — Aggregate accuracy can hide large error-rate differences for minority or intersectional groups.
-- "There is one correct mathematical definition of fairness." — Fairness criteria conflict; choosing among them is an ethical and contextual decision.
-- "Bias is only a data problem." — Bias can also arise from the choice of target, model design, evaluation and the way the system is deployed.
+- "Algorithms are objective because they are mathematical." Models learn from data and objectives chosen by people; they can encode historical and measurement biases while appearing neutral.
+- "Removing gender or ethnicity from the data makes a model fair." Correlated proxy variables can reproduce the same patterns; fairness must be tested on outcomes.
+- "High overall accuracy means the model works for everyone." Aggregate accuracy can hide large error-rate differences for minority or intersectional groups.
+- "There is one correct mathematical definition of fairness." Fairness criteria conflict; choosing among them is an ethical and contextual decision.
+- "Bias is only a data problem." Bias can also arise from the choice of target, model design, evaluation and the way the system is deployed.
 
 ## Common Examination Mistakes
 
@@ -188,15 +188,15 @@ flowchart LR
 
 - O'Neil, C. (2016). *Weapons of math destruction: How big data increases inequality and threatens democracy*. Crown.
 - Noble, S. U. (2018). *Algorithms of oppression: How search engines reinforce racism*. NYU Press.
-- Buolamwini, J., & Gebru, T. (2018). Gender shades: Intersectional accuracy disparities in commercial gender classification. *Proceedings of Machine Learning Research, 81*, 77–91.
+- Buolamwini, J., & Gebru, T. (2018). Gender shades: Intersectional accuracy disparities in commercial gender classification. *Proceedings of Machine Learning Research, 81*, 77-91.
 - Angwin, J., Larson, J., Mattu, S., & Kirchner, L. (2016, May 23). Machine bias. *ProPublica*.
 - Barocas, S., Hardt, M., & Narayanan, A. (2023). *Fairness and machine learning: Limitations and opportunities*. MIT Press. <https://fairmlbook.org/>
 - Eubanks, V. (2018). *Automating inequality: How high-tech tools profile, police, and punish the poor*. St. Martin's Press.
 
 ## Video Resources
 
-- [Ethics of AI](https://ethics-of-ai.mooc.fi/) — University of Helsinki. Free online course covering fairness, transparency, accountability and other ethical questions in AI.
-- [Elements of AI](https://www.elementsofai.com/) — University of Helsinki and MinnaLearn. Free introductory course explaining how machine learning works and its societal implications.
+- [Ethics of AI](https://ethics-of-ai.mooc.fi/): University of Helsinki. Free online course covering fairness, transparency, accountability and other ethical questions in AI.
+- [Elements of AI](https://www.elementsofai.com/): University of Helsinki and MinnaLearn. Free introductory course explaining how machine learning works and its societal implications.
 
 ## Revision Summary
 

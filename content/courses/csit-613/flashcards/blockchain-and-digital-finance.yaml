@@ -2,7 +2,7 @@ module: blockchain-and-digital-finance
 cards:
   - lesson: blockchain-and-distributed-ledgers
     front: What four properties make cryptographic hash functions useful in blockchains?
-    back: Determinism, pre-image resistance, collision resistance and the avalanche effect — together they make a hash a reliable fingerprint of data.
+    back: Determinism, pre-image resistance, collision resistance and the avalanche effect, together they make a hash a reliable fingerprint of data.
   - lesson: blockchain-and-distributed-ledgers
     front: Why is a blockchain described as tamper-evident rather than tamper-proof?
     back: Any change alters hashes and breaks links, so alteration is detectable, but history can still be rewritten with enough computation, stake or validator collusion.
@@ -26,7 +26,7 @@ cards:
     back: Contracts cannot observe the real world, so they depend on oracles for external facts; the contract is only as trustworthy as its oracle.
   - lesson: cryptocurrency-smart-contracts-and-digital-identity
     front: What did The DAO incident of 2016 demonstrate?
-    back: Smart-contract bugs can be exploited, and immutability ultimately rests on social consensus — Ethereum forked, while Ethereum Classic kept the original chain.
+    back: Smart-contract bugs can be exploited, and immutability ultimately rests on social consensus, Ethereum forked, while Ethereum Classic kept the original chain.
   - lesson: cryptocurrency-smart-contracts-and-digital-identity
     front: How does a CBDC differ from mobile money?
     back: A CBDC is a direct central bank liability; mobile money is e-money issued by a licensed issuer and backed by funds held in trust at banks.

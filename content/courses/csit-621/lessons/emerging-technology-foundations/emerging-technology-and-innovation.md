@@ -196,15 +196,15 @@ flowchart LR
 
 ## Further Reading
 
-- Rotolo, D., Hicks, D., & Martin, B. R. (2015). What is an emerging technology? *Research Policy, 44*(10), 1827–1843.
-- Henderson, R. M., & Clark, K. B. (1990). Architectural innovation: The reconfiguration of existing product technologies and the failure of established firms. *Administrative Science Quarterly, 35*(1), 9–30.
+- Rotolo, D., Hicks, D., & Martin, B. R. (2015). What is an emerging technology? *Research Policy, 44*(10), 1827-1843.
+- Henderson, R. M., & Clark, K. B. (1990). Architectural innovation: The reconfiguration of existing product technologies and the failure of established firms. *Administrative Science Quarterly, 35*(1), 9-30.
 - Fenn, J., & Raskino, M. (2008). *Mastering the hype cycle: How to choose the right innovation at the right time*. Harvard Business Press.
 - Christensen, C. M. (1997). *The innovator's dilemma: When new technologies cause great firms to fail*. Harvard Business School Press.
 
 ## Video Resources
 
-- [IBM Think](https://www.ibm.com/think) — IBM. Explainer articles and videos on emerging technologies such as AI, quantum computing and blockchain.
-- [Google Cloud Learn](https://cloud.google.com/learn) — Google Cloud. Introductory explainers on cloud, data and AI technologies discussed throughout this course.
+- [IBM Think](https://www.ibm.com/think): IBM. Explainer articles and videos on emerging technologies such as AI, quantum computing and blockchain.
+- [Google Cloud Learn](https://cloud.google.com/learn): Google Cloud. Introductory explainers on cloud, data and AI technologies discussed throughout this course.
 
 ## Revision Summary
 

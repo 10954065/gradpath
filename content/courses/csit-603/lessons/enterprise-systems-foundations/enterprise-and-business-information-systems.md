@@ -182,15 +182,15 @@ flowchart TD
 
 ## Further Reading
 
-- Davenport, T. H. (1998). Putting the enterprise into the enterprise system. *Harvard Business Review, 76*(4), 121–131.
+- Davenport, T. H. (1998). Putting the enterprise into the enterprise system. *Harvard Business Review, 76*(4), 121-131.
 - Monk, E., & Wagner, B. (2013). *Concepts in enterprise resource planning* (4th ed.). Cengage Learning.
 - Porter, M. E. (1985). *Competitive advantage: Creating and sustaining superior performance*. Free Press.
 - IBM. (n.d.). *What is enterprise resource planning (ERP)?* IBM Think. <https://www.ibm.com/think/topics/enterprise-resource-planning>
 
 ## Video Resources
 
-- [SAP Learning](https://learning.sap.com/) — SAP. Free learning journeys and videos introducing SAP S/4HANA and integrated enterprise processes.
-- [What is ERP? (IBM Think)](https://www.ibm.com/think/topics/enterprise-resource-planning) — IBM. An overview page explaining ERP concepts, with links to related IBM explainer media.
+- [SAP Learning](https://learning.sap.com/): SAP. Free learning journeys and videos introducing SAP S/4HANA and integrated enterprise processes.
+- [What is ERP? (IBM Think)](https://www.ibm.com/think/topics/enterprise-resource-planning): IBM. An overview page explaining ERP concepts, with links to related IBM explainer media.
 
 ## Revision Summary
 

@@ -71,7 +71,7 @@ Detection performance should be evaluated on several dimensions at once: fraud c
 
 Payment risk management follows a cycle common to frameworks such as ISO 31000: **identify** risks, **assess** them, **treat** them, then **monitor and review**. Assessment frequently uses a likelihood-impact matrix:
 
-| Risk (illustrative) | Likelihood (1–5) | Impact (1–5) | Rating | Treatment |
+| Risk (illustrative) | Likelihood (1-5) | Impact (1-5) | Rating | Treatment |
 |---|---|---|---|---|
 | Customers tricked into revealing PINs | 4 | 3 | 12 (high) | Reduce: awareness messages, PIN-never-shared policy |
 | Chargebacks from friendly fraud | 3 | 2 | 6 (medium) | Reduce: delivery evidence, clear descriptors |
@@ -111,9 +111,9 @@ The four treatment options are **avoid** (stop the activity), **reduce** (apply 
 | P-9006 | (none) | 90.00 | 1.80 | 88.20 |
 | **Total** | | **1,468.00** | **29.36** | **1,438.64** |
 
-**Step 1 — Match on reference.** T1001, T1002 and the first T1005 match exactly. T1003 matches on reference but not amount.
+**Step 1: Match on reference.** T1001, T1002 and the first T1005 match exactly. T1003 matches on reference but not amount.
 
-**Step 2 — Classify the breaks.**
+**Step 2: Classify the breaks.**
 
 1. *T1003 amount mismatch (480.00 versus 408.00).* The difference is 72.00. A difference divisible by 9 is a classic sign of transposed digits. The PSP record shows the customer paid GHS 408.00, which matches the original WhatsApp order; the ledger entry was mis-keyed. **Resolution:** correct the ledger to 408.00.
 2. *T1004 missing from settlement (75.00).* The PSP dashboard shows the payment succeeded at 23:52, after the daily cut-off, so it appears in the next report. **Resolution:** a timing difference; carry forward and confirm next day.
@@ -121,7 +121,7 @@ The four treatment options are **avoid** (stop the activity), **reduce** (apply 
 4. *Duplicate T1005 (P-9005).* The customer was charged twice after pressing "pay" again during a slow response. **Resolution:** record a refund liability of 300.00, refund the customer and add idempotency keys to the payment request.
 5. *Unmatched P-9006 (90.00).* A payment with no merchant reference, made through a shared payment link. **Resolution:** identify the payer from the PSP details, then either record the sale or refund.
 
-**Step 3 — Prove the reconciliation.**
+**Step 3: Prove the reconciliation.**
 
 ```text
 Ledger total                         1,285.00
@@ -135,7 +135,7 @@ Less PSP fees                          -29.36
 Expected bank credit                 1,438.64
 ```
 
-**Step 4 — Three-way check.** The bank statement shows a credit of GHS 1,438.64 from the PSP on 15 March, completing a three-way match between ledger, settlement report and bank. Fees should also be checked: 2% of 1,468.00 is 29.36, confirming the PSP applied the contracted rate.
+**Step 4: Three-way check.** The bank statement shows a credit of GHS 1,438.64 from the PSP on 15 March, completing a three-way match between ledger, settlement report and bank. Fees should also be checked: 2% of 1,468.00 is 29.36, confirming the PSP applied the contracted rate.
 
 The example demonstrates that reconciliation is not merely accounting. Two of the five breaks revealed design flaws (status set on redirect, missing idempotency) and one revealed a customer-service obligation (the duplicate refund).
 
@@ -214,16 +214,16 @@ flowchart TD
 ## Further Reading
 
 - Anderson, R. (2020). *Security engineering: A guide to building dependable distributed systems* (3rd ed.). Wiley.
-- International Organization for Standardization. (2018). *ISO 31000:2018 Risk management — Guidelines*. ISO.
+- International Organization for Standardization. (2018). *ISO 31000:2018 Risk management: Guidelines*. ISO.
 - The Institute of Internal Auditors. (2020). *The IIA's Three Lines Model: An update of the Three Lines of Defense*. The IIA.
 - PCI Security Standards Council. (2022). *Payment Card Industry Data Security Standard: Requirements and testing procedures* (Version 4.0). <https://www.pcisecuritystandards.org/>
 - Cybersecurity Act, 2020 (Act 1038) (Ghana).
 
 ## Video Resources
 
-- [Cyber Security Authority, Ghana](https://www.csa.gov.gh/) — Cyber Security Authority. Official site with public cyber-safety awareness material relevant to digital payment fraud.
-- [Bank of Ghana](https://www.bog.gov.gh/) — Bank of Ghana. Official site with notices, payment systems information and consumer guidance.
-- [OWASP Foundation](https://owasp.org/) — OWASP. Community guidance on application security, including authentication and session controls that prevent account takeover.
+- [Cyber Security Authority, Ghana](https://www.csa.gov.gh/): Cyber Security Authority. Official site with public cyber-safety awareness material relevant to digital payment fraud.
+- [Bank of Ghana](https://www.bog.gov.gh/): Bank of Ghana. Official site with notices, payment systems information and consumer guidance.
+- [OWASP Foundation](https://owasp.org/): OWASP. Community guidance on application security, including authentication and session controls that prevent account takeover.
 
 ## Revision Summary
 
@@ -233,4 +233,4 @@ Digital payment fraud includes SIM swap, social engineering, account takeover, f
 - Velocity and new-beneficiary rules counter account takeover.
 - Risk rating = likelihood × impact; justify treatment.
 - Adjusted ledger must equal settlement gross; less fees equals bank credit.
-- Breaks reveal process defects — fix root causes.
+- Breaks reveal process defects: fix root causes.

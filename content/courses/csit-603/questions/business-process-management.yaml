@@ -421,7 +421,7 @@ questions:
         descriptor: Weighs BPMN's precision and interoperability against complexity and readability problems, with examples.
       - criterion: Style and practice
         marks: 4
-        descriptor: Applies guidelines such as verb–noun labels, matching gateways and layered models.
+        descriptor: Applies guidelines such as verb-noun labels, matching gateways and layered models.
       - criterion: Conclusion
         marks: 2
         descriptor: A justified position on the statement.
@@ -433,7 +433,7 @@ questions:
       The statement is largely supported. BPMN's vocabulary is large, and models that use obscure event types, implicit
       gateways or inconsistent levels of detail confuse business readers. Errors such as merging parallel branches with an
       exclusive gateway produce models that mean something different from what the author intended. Style guidelines from
-      Silver (2011) and Dumas et al. (2018), such as verb–noun labels, explicit start and end events, labelled gateway
+      Silver (2011) and Dumas et al. (2018), such as verb-noun labels, explicit start and end events, labelled gateway
       conditions and small layered models, make diagrams readable and correct.
 
       However, style is not the only condition. Descriptive and executable models serve different audiences; one diagram

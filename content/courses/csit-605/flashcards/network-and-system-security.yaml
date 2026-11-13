@@ -43,8 +43,8 @@ cards:
     front: How does EDR differ from traditional antivirus?
     back: Antivirus mainly blocks known malicious files; EDR records endpoint behaviour, detects suspicious activity, supports investigation and can isolate devices remotely.
   - lesson: os-endpoint-and-access-control
-    front: Contrast Bell–LaPadula and Biba.
-    back: Bell–LaPadula protects confidentiality (no read up, no write down); Biba protects integrity (no read down, no write up).
+    front: Contrast Bell-LaPadula and Biba.
+    back: Bell-LaPadula protects confidentiality (no read up, no write down); Biba protects integrity (no read down, no write up).
   - lesson: os-endpoint-and-access-control
     front: What is segregation of duties? Give a banking example.
     back: Splitting sensitive tasks so no single person can complete them alone, for example tellers post transactions but only managers can reverse them.

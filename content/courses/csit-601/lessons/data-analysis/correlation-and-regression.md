@@ -136,9 +136,9 @@ The diagram summarises the illustrative regression output interpreted in Part B 
 | D | 4 | 4 |
 | E | 5 | 5 |
 
-**Step 1 – Means.** `x̄ = 15 / 5 = 3`; `ȳ = 20 / 5 = 4`.
+**Step 1: Means.** `x̄ = 15 / 5 = 3`; `ȳ = 20 / 5 = 4`.
 
-**Step 2 – Deviations and products.**
+**Step 2: Deviations and products.**
 
 | x − x̄ | y − ȳ | (x − x̄)(y − ȳ) | (x − x̄)² | (y − ȳ)² |
 |---|---|---|---|---|
@@ -149,7 +149,7 @@ The diagram summarises the illustrative regression output interpreted in Part B 
 | 2 | 1 | 2 | 4 | 1 |
 | **Sum** | | **6** | **10** | **6** |
 
-**Step 3 – Pearson's r.**
+**Step 3: Pearson's r.**
 
 ```
 r = 6 / √(10 × 6) = 6 / √60 = 6 / 7.746 = 0.77
@@ -157,7 +157,7 @@ r = 6 / √(10 × 6) = 6 / √60 = 6 / 7.746 = 0.77
 
 A strong positive correlation.
 
-**Step 4 – Regression line.**
+**Step 4: Regression line.**
 
 ```
 b = 6 / 10 = 0.6
@@ -167,7 +167,7 @@ a = 4 − 0.6 × 3 = 2.2
 
 Each additional training day is associated with a 0.6-point higher predicted efficiency score. For an SME with 4 training days, `ŷ = 2.2 + 2.4 = 4.6`.
 
-**Step 5 – R².** Predicted values are 2.8, 3.4, 4.0, 4.6 and 5.2. Residuals (y − ŷ) are −0.8, 0.6, 1.0, −0.6 and −0.2.
+**Step 5: R².** Predicted values are 2.8, 3.4, 4.0, 4.6 and 5.2. Residuals (y − ŷ) are −0.8, 0.6, 1.0, −0.6 and −0.2.
 
 ```
 SS_residual = 0.64 + 0.36 + 1.00 + 0.36 + 0.04 = 2.40
@@ -181,7 +181,7 @@ This equals `r² = 0.775² ≈ 0.60`: training days account for 60% of the varia
 
 ### Part B: Interpreting a software output
 
-**Illustrative scenario.** Kwesi surveys 180 SMEs and regresses an operational efficiency scale score (1–5) on perceived usefulness of AI tools (1–5), facilitating conditions (1–5) and firm age (years). The output below is illustrative.
+**Illustrative scenario.** Kwesi surveys 180 SMEs and regresses an operational efficiency scale score (1-5) on perceived usefulness of AI tools (1-5), facilitating conditions (1-5) and firm age (years). The output below is illustrative.
 
 ```
 Model summary:  R² = 0.31   Adjusted R² = 0.30
@@ -211,7 +211,7 @@ Correlation and regression are central to many Ghanaian MSc projects.
 
 - **Digital payment adoption.** Regression of retailers' intention to accept merchant payments on perceived usefulness, transaction costs, trust and network reliability can show which factors matter most once others are controlled. A negative B for transaction costs would support arguments for fee reductions, but policy-makers should note that correlation does not prove that cutting fees alone will change behaviour.
 - **AI adoption and SME performance.** Regression can control for firm size and sector when relating AI use to efficiency, partially addressing confounding. Owner education or managerial capability, if unmeasured, may still bias results.
-- **Student cybersecurity behaviour.** Correlations between awareness and safe behaviour are often only moderate, illustrating the "knowledge–behaviour gap". Regression may show that perceived vulnerability or peer norms predict behaviour beyond awareness.
+- **Student cybersecurity behaviour.** Correlations between awareness and safe behaviour are often only moderate, illustrating the "knowledge-behaviour gap". Regression may show that perceived vulnerability or peer norms predict behaviour beyond awareness.
 - **Healthcare technology.** In hospitals, regression of nurses' EHR use on training hours, workload and perceived ease of use must consider clustering by ward; nurses in the same ward share conditions, violating independence unless the model accounts for it.
 
 Ghanaian researchers should also consider **multicollinearity** in adoption models: constructs such as perceived usefulness and performance expectancy can be highly correlated, especially when items are adapted from different frameworks, making individual coefficients unstable.
@@ -222,7 +222,7 @@ Ghanaian researchers should also consider **multicollinearity** in adoption mode
 
 Google Flu Trends, launched in 2008, estimated influenza activity in the United States from the volume of related search queries. The approach was essentially correlational: researchers identified search terms whose frequencies correlated with historical flu surveillance data and used them to predict current flu levels faster than official reporting.
 
-Initially the model appeared highly successful. However, in the 2012–2013 flu season its estimates substantially overestimated flu prevalence compared with surveillance data from the Centers for Disease Control and Prevention. In a widely cited 2014 article in *Science*, "The Parable of Google Flu: Traps in Big Data Analysis", David Lazer and colleagues analysed the failure. They pointed to what they called "big data hubris" (treating large-scale correlational data as a substitute for, rather than a supplement to, traditional data collection), to the selection of search terms that correlated with flu by chance or because of seasonal patterns rather than flu itself, and to changes in Google's search algorithms that altered how people searched, so that the relationships on which the model relied shifted over time. Google later discontinued publishing the estimates.
+Initially the model appeared highly successful. However, in the 2012-2013 flu season its estimates substantially overestimated flu prevalence compared with surveillance data from the Centers for Disease Control and Prevention. In a widely cited 2014 article in *Science*, "The Parable of Google Flu: Traps in Big Data Analysis", David Lazer and colleagues analysed the failure. They pointed to what they called "big data hubris" (treating large-scale correlational data as a substitute for, rather than a supplement to, traditional data collection), to the selection of search terms that correlated with flu by chance or because of seasonal patterns rather than flu itself, and to changes in Google's search algorithms that altered how people searched, so that the relationships on which the model relied shifted over time. Google later discontinued publishing the estimates.
 
 For students of correlation and regression the case teaches several lessons. A strong historical correlation does not guarantee a stable relationship; predictors chosen because they correlate, without theoretical justification, can capture spurious patterns; and models must be validated on new data. These risks apply equally to Ghanaian organisations building predictive models from mobile money, e-commerce or hospital data.
 
@@ -266,14 +266,14 @@ For students of correlation and regression the case teaches several lessons. A s
 ## Further Reading
 
 - Field, A. (2018). *Discovering statistics using IBM SPSS statistics* (5th ed.). SAGE.
-- Anscombe, F. J. (1973). Graphs in statistical analysis. *The American Statistician, 27*(1), 17–21.
-- Lazer, D., Kennedy, R., King, G., & Vespignani, A. (2014). The parable of Google Flu: Traps in big data analysis. *Science, 343*(6176), 1203–1205.
-- Venkatesh, V., Morris, M. G., Davis, G. B., & Davis, F. D. (2003). User acceptance of information technology: Toward a unified view. *MIS Quarterly, 27*(3), 425–478.
+- Anscombe, F. J. (1973). Graphs in statistical analysis. *The American Statistician, 27*(1), 17-21.
+- Lazer, D., Kennedy, R., King, G., & Vespignani, A. (2014). The parable of Google Flu: Traps in big data analysis. *Science, 343*(6176), 1203-1205.
+- Venkatesh, V., Morris, M. G., Davis, G. B., & Davis, F. D. (2003). User acceptance of information technology: Toward a unified view. *MIS Quarterly, 27*(3), 425-478.
 
 ## Video Resources
 
-- [Khan Academy: Statistics and Probability](https://www.khanacademy.org/math/statistics-probability) — Khan Academy. Free official course with units on scatter plots, correlation coefficients and least-squares regression.
-- [IBM SPSS Statistics](https://www.ibm.com/products/spss-statistics) — IBM. Official product page with links to documentation for running and interpreting correlation and regression in SPSS.
+- [Khan Academy: Statistics and Probability](https://www.khanacademy.org/math/statistics-probability): Khan Academy. Free official course with units on scatter plots, correlation coefficients and least-squares regression.
+- [IBM SPSS Statistics](https://www.ibm.com/products/spss-statistics): IBM. Official product page with links to documentation for running and interpreting correlation and regression in SPSS.
 
 ## Revision Summary
 

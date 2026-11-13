@@ -222,14 +222,14 @@ flowchart TD
 ## Further Reading
 
 - Cooper, D., Santesson, S., Farrell, S., Boeyen, S., Housley, R., & Polk, W. (2008). *Internet X.509 public key infrastructure certificate and certificate revocation list (CRL) profile* (RFC 5280). Internet Engineering Task Force. <https://www.rfc-editor.org/rfc/rfc5280>
-- Barker, E. (2020). *Recommendation for key management: Part 1 – General* (NIST Special Publication 800-57 Part 1 Rev. 5). National Institute of Standards and Technology. <https://doi.org/10.6028/NIST.SP.800-57pt1r5>
+- Barker, E. (2020). *Recommendation for key management: Part 1, General* (NIST Special Publication 800-57 Part 1 Rev. 5). National Institute of Standards and Technology. <https://doi.org/10.6028/NIST.SP.800-57pt1r5>
 - Anderson, R. (2020). *Security engineering: A guide to building dependable distributed systems* (3rd ed.). Wiley.
 - Stallings, W., & Brown, L. (2018). *Computer security: Principles and practice* (4th ed.). Pearson.
 
 ## Video Resources
 
-- [NIST Computer Security Resource Center](https://csrc.nist.gov/) — National Institute of Standards and Technology. Official source for key management guidance, including SP 800-57, and related project pages.
-- [Cisco Skills for All](https://skillsforall.com/) — Cisco Networking Academy. Free cybersecurity courses with modules explaining certificates, PKI and cryptographic key use.
+- [NIST Computer Security Resource Center](https://csrc.nist.gov/): National Institute of Standards and Technology. Official source for key management guidance, including SP 800-57, and related project pages.
+- [Cisco Skills for All](https://skillsforall.com/): Cisco Networking Academy. Free cybersecurity courses with modules explaining certificates, PKI and cryptographic key use.
 
 ## Revision Summary
 

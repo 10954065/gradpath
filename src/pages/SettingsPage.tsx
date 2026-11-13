@@ -111,7 +111,7 @@ function ProfileTab() {
           <Field
             label="Weekly study target (hours)"
             htmlFor="weekly_study_target_hours"
-            hint="Recommended 15–20 hours"
+            hint="Recommended 15 to 20 hours"
             error={formState.errors.weekly_study_target_hours?.message}
           >
             <Input id="weekly_study_target_hours" type="number" min={1} max={80} step={0.5} {...register('weekly_study_target_hours')} />
@@ -291,7 +291,7 @@ function CoursesTab() {
                 <p className="text-sm font-medium">
                   {c.code} {c.title}
                 </p>
-                {c.status === 'recommended_elective' ? <Badge tone="warning">Recommended elective — confirm registration</Badge> : null}
+                {c.status === 'recommended_elective' ? <Badge tone="warning">Recommended elective: confirm registration</Badge> : null}
               </div>
               <Select
                 aria-label={`Registration status for ${c.code}`}

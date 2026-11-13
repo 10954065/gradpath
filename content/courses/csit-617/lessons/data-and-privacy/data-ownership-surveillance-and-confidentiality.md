@@ -102,7 +102,7 @@ Practical confidentiality obligations for IT staff include accessing data only a
 
 ### SIM registration and the Ghana Card
 
-Ghana required mobile subscribers to re-register their SIM cards and link them to the Ghana Card (the national identity card issued by the National Identification Authority), with a major re-registration exercise in 2021–2022. The stated aims included reducing fraud and crime associated with anonymous SIMs. The exercise illustrates tensions explored in this lesson: linking identity data across systems may help law enforcement and fraud prevention, but it also creates detailed, centralised records connecting identity, communications and mobile money activity. Ethical analysis asks whether the data are adequately secured, whether access by state agencies is governed by clear law and independent oversight, whether retention is limited, and how citizens can exercise their rights under Act 843.
+Ghana required mobile subscribers to re-register their SIM cards and link them to the Ghana Card (the national identity card issued by the National Identification Authority), with a major re-registration exercise in 2021-2022. The stated aims included reducing fraud and crime associated with anonymous SIMs. The exercise illustrates tensions explored in this lesson: linking identity data across systems may help law enforcement and fraud prevention, but it also creates detailed, centralised records connecting identity, communications and mobile money activity. Ethical analysis asks whether the data are adequately secured, whether access by state agencies is governed by clear law and independent oversight, whether retention is limited, and how citizens can exercise their rights under Act 843.
 
 ### Illustrative scenario: a curious database administrator
 
@@ -184,8 +184,8 @@ flowchart TD
 
 ## Video Resources
 
-- [Data Protection Commission, Ghana](https://dataprotection.org.gh/) — Data Protection Commission. Official site explaining data subject rights and controllers' obligations in Ghana.
-- [Markkula Center for Applied Ethics](https://www.scu.edu/ethics/) — Santa Clara University. Official portal with resources on internet ethics, surveillance and data.
+- [Data Protection Commission, Ghana](https://dataprotection.org.gh/): Data Protection Commission. Official site explaining data subject rights and controllers' obligations in Ghana.
+- [Markkula Center for Applied Ethics](https://www.scu.edu/ethics/): Santa Clara University. Official portal with resources on internet ethics, surveillance and data.
 
 ## Revision Summary
 
@@ -196,4 +196,4 @@ Personal data is relational, so the property model fits poorly; data protection 
 - Zuboff: behavioural data extracted to predict and influence behaviour.
 - Seven-point surveillance checklist; mass surveillance is hardest to justify.
 - Confidentiality: need-to-know access, audit logs, training; limits are law, consent, serious harm.
-- Ghana Card SIM linkage and Snowden illustrate security–privacy trade-offs.
+- Ghana Card SIM linkage and Snowden illustrate security-privacy trade-offs.

@@ -101,7 +101,7 @@ Nissenbaum's argument is not that accountability is impossible, but that it must
 
 ## International Case Study
 
-### The Therac-25 radiation therapy accidents (1985–1987)
+### The Therac-25 radiation therapy accidents (1985-1987)
 
 The Therac-25 was a computer-controlled radiation therapy machine. Between 1985 and 1987 it delivered massive radiation overdoses to several patients in North America, some of whom died or were seriously injured. The investigation by Nancy Leveson and Clark Turner, published in 1993, is one of the most studied cases in software engineering ethics.
 
@@ -192,17 +192,17 @@ flowchart TD
 
 ## Further Reading
 
-- Davis, M. (1991). Thinking like an engineer: The place of a code of ethics in the practice of a profession. *Philosophy & Public Affairs, 20*(2), 150–167.
+- Davis, M. (1991). Thinking like an engineer: The place of a code of ethics in the practice of a profession. *Philosophy & Public Affairs, 20*(2), 150-167.
 - Johnson, D. G. (2009). *Computer ethics* (4th ed.). Pearson.
-- Leveson, N. G., & Turner, C. S. (1993). An investigation of the Therac-25 accidents. *Computer, 26*(7), 18–41.
-- Nissenbaum, H. (1996). Accountability in a computerized society. *Science and Engineering Ethics, 2*(1), 25–42.
+- Leveson, N. G., & Turner, C. S. (1993). An investigation of the Therac-25 accidents. *Computer, 26*(7), 18-41.
+- Nissenbaum, H. (1996). Accountability in a computerized society. *Science and Engineering Ethics, 2*(1), 25-42.
 - Quinn, M. J. (2020). *Ethics for the information age* (8th ed.). Pearson.
 - Stanford Encyclopedia of Philosophy. Computer and information ethics. <https://plato.stanford.edu/entries/ethics-computer/>
 
 ## Video Resources
 
-- [Markkula Center for Applied Ethics](https://www.scu.edu/ethics/) — Santa Clara University. Official portal with articles, cases and short videos on technology and professional ethics.
-- [ACM Code of Ethics and Professional Conduct](https://www.acm.org/code-of-ethics) — Association for Computing Machinery. Official page for the ACM Code, including supporting material on applying it in practice.
+- [Markkula Center for Applied Ethics](https://www.scu.edu/ethics/): Santa Clara University. Official portal with articles, cases and short videos on technology and professional ethics.
+- [ACM Code of Ethics and Professional Conduct](https://www.acm.org/code-of-ethics): Association for Computing Machinery. Official page for the ACM Code, including supporting material on applying it in practice.
 
 ## Revision Summary
 

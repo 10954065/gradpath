@@ -186,9 +186,9 @@ From a secure SDLC perspective, Equifax is a lesson in the *operate* phase and i
 
 ## Video Resources
 
-- [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/) — OWASP Foundation. Official project page for a locally run, deliberately insecure application useful for practising SAST, DAST and threat-informed testing.
-- [NIST Secure Software Development Framework](https://csrc.nist.gov/projects/ssdf) — National Institute of Standards and Technology. Official project page for the SSDF with publications and supporting material.
-- [PostgreSQL Documentation](https://www.postgresql.org/docs/) — PostgreSQL Global Development Group. Official documentation, including row security policies and role privileges.
+- [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/): OWASP Foundation. Official project page for a locally run, deliberately insecure application useful for practising SAST, DAST and threat-informed testing.
+- [NIST Secure Software Development Framework](https://csrc.nist.gov/projects/ssdf): National Institute of Standards and Technology. Official project page for the SSDF with publications and supporting material.
+- [PostgreSQL Documentation](https://www.postgresql.org/docs/): PostgreSQL Global Development Group. Official documentation, including row security policies and role privileges.
 
 ## Revision Summary
 

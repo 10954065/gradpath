@@ -43,10 +43,10 @@ This lesson treats implementation as a managed organisational change rather than
 
 Markus and Tanis (2000) describe the enterprise systems experience as a sequence of phases, each with its own typical problems. A useful adaptation for planning purposes is:
 
-1. **Chartering** – the business case, scope, budget, sponsor and high-level strategy are agreed. Problems here (unrealistic expectations, weak sponsorship) are inherited by every later phase.
-2. **Project (configuration and roll-out)** – requirements are gathered, the package is configured, data is migrated, the system is tested and users are trained, ending at go-live.
-3. **Shakedown** – the period from go-live until "normal operation" is reached. Performance typically dips as staff learn new procedures and defects surface.
-4. **Onward and upward** – the organisation stabilises, realises benefits, and plans upgrades and extensions.
+1. **Chartering**: the business case, scope, budget, sponsor and high-level strategy are agreed. Problems here (unrealistic expectations, weak sponsorship) are inherited by every later phase.
+2. **Project (configuration and roll-out)**: requirements are gathered, the package is configured, data is migrated, the system is tested and users are trained, ending at go-live.
+3. **Shakedown**: the period from go-live until "normal operation" is reached. Performance typically dips as staff learn new procedures and defects surface.
+4. **Onward and upward**: the organisation stabilises, realises benefits, and plans upgrades and extensions.
 
 The value of this model is that it reminds project teams that success at go-live is not the same as business success. A project can be on time and on budget and still fail in shakedown if process changes were not understood. The implementation strategy is essentially a decision about how much shakedown risk the organisation will accept at once.
 
@@ -197,15 +197,15 @@ flowchart TD
 
 - Markus, M. L., & Tanis, C. (2000). The enterprise systems experience: From adoption to success. In R. W. Zmud (Ed.), *Framing the domains of IT management: Projecting the future through the past*. Pinnaflex Educational Resources.
 - Monk, E., & Wagner, B. (2013). *Concepts in enterprise resource planning* (4th ed.). Cengage Learning.
-- Davenport, T. H. (1998). Putting the enterprise into the enterprise system. *Harvard Business Review, 76*(4), 121–131.
-- Nah, F. F.-H., Lau, J. L.-S., & Kuang, J. (2001). Critical factors for successful implementation of enterprise systems. *Business Process Management Journal, 7*(3), 285–296.
+- Davenport, T. H. (1998). Putting the enterprise into the enterprise system. *Harvard Business Review, 76*(4), 121-131.
+- Nah, F. F.-H., Lau, J. L.-S., & Kuang, J. (2001). Critical factors for successful implementation of enterprise systems. *Business Process Management Journal, 7*(3), 285-296.
 - Dumas, M., La Rosa, M., Mendling, J., & Reijers, H. A. (2018). *Fundamentals of business process management* (2nd ed.). Springer.
 
 ## Video Resources
 
-- [SAP Learning](https://learning.sap.com/) — SAP. Free learning journeys, including introductions to SAP S/4HANA and the SAP Activate implementation methodology.
-- [Microsoft Learn: Dynamics 365 training](https://learn.microsoft.com/training/dynamics365/) — Microsoft. Self-paced modules on implementing and using Dynamics 365 business applications.
-- [Camunda documentation](https://docs.camunda.io/) — Camunda. Official guides to the Camunda Modeler for BPMN process modelling.
+- [SAP Learning](https://learning.sap.com/): SAP. Free learning journeys, including introductions to SAP S/4HANA and the SAP Activate implementation methodology.
+- [Microsoft Learn: Dynamics 365 training](https://learn.microsoft.com/training/dynamics365/): Microsoft. Self-paced modules on implementing and using Dynamics 365 business applications.
+- [Camunda documentation](https://docs.camunda.io/): Camunda. Official guides to the Camunda Modeler for BPMN process modelling.
 
 ## Revision Summary
 

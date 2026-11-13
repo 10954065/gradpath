@@ -10,7 +10,7 @@ source: supplementary
 
 The previous lesson showed how AI systems can produce biased and discriminatory outcomes. Identifying harm, however, is only half the task. Organisations also need mechanisms that make AI systems understandable, assign responsibility when things go wrong and keep meaningful human judgement in the loop where it matters. Without such mechanisms, people affected by automated decisions cannot find out why a decision was made, cannot challenge it and cannot hold anyone to account.
 
-This lesson examines four interlocking safeguards — **transparency, explainability, accountability and human oversight** — and the broader idea of **responsible AI**. It summarises the UNESCO *Recommendation on the Ethics of Artificial Intelligence*, adopted by UNESCO's member states in November 2021 as the first global standard-setting instrument on AI ethics, and sets it alongside other well-known frameworks. Finally, it shows how an IT manager in a Ghanaian organisation could translate these principles into practical governance. Regulatory content is summarised for educational purposes and is not legal advice.
+This lesson examines four interlocking safeguards: **transparency, explainability, accountability and human oversight**: and the broader idea of **responsible AI**. It summarises the UNESCO *Recommendation on the Ethics of Artificial Intelligence*, adopted by UNESCO's member states in November 2021 as the first global standard-setting instrument on AI ethics, and sets it alongside other well-known frameworks. Finally, it shows how an IT manager in a Ghanaian organisation could translate these principles into practical governance. Regulatory content is summarised for educational purposes and is not legal advice.
 
 ## Learning Objectives
 
@@ -42,9 +42,9 @@ This lesson examines four interlocking safeguards — **transparency, explainabi
 
 Transparency operates at several levels:
 
-1. **Disclosure that AI is being used** — people should know when they are interacting with a chatbot or when an automated system contributed to a decision about them.
-2. **System-level transparency** — documentation of purpose, training data, performance (including disaggregated performance), known limitations and intended use. Tools such as *model cards* (proposed by Mitchell and colleagues in 2019) and *datasheets for datasets* provide structured formats for this information.
-3. **Decision-level explanation** — reasons for a particular outcome, such as the main factors behind a loan rejection, and what the person could change.
+1. **Disclosure that AI is being used**: people should know when they are interacting with a chatbot or when an automated system contributed to a decision about them.
+2. **System-level transparency**: documentation of purpose, training data, performance (including disaggregated performance), known limitations and intended use. Tools such as *model cards* (proposed by Mitchell and colleagues in 2019) and *datasheets for datasets* provide structured formats for this information.
+3. **Decision-level explanation**: reasons for a particular outcome, such as the main factors behind a loan rejection, and what the person could change.
 
 Explainability must be **audience-appropriate**. A data scientist auditing a model needs technical detail; a rejected loan applicant needs a clear, actionable reason; a regulator needs evidence of testing and controls. Some models, such as decision trees or linear scoring models, are inherently interpretable. Others, such as deep neural networks, are often explained after the fact using techniques such as feature-importance methods (for example, LIME or SHAP). Post-hoc explanations are approximations and can be incomplete or misleading, so for high-stakes decisions there is a strong argument for preferring inherently interpretable models where they perform comparably.
 
@@ -59,7 +59,7 @@ AI intensifies these barriers. A deployed model may combine data from third part
 - **clear role allocation**: a named system owner, accountable executive and technical lead;
 - **documentation and audit trails** recording data, versions, decisions and changes;
 - **contracts** with vendors that allocate responsibility, require performance information and permit audit;
-- **redress mechanisms** — ways for affected people to complain, obtain human review and receive remedies;
+- **redress mechanisms**: ways for affected people to complain, obtain human review and receive remedies;
 - **independent audit** for high-impact systems.
 
 ### Human oversight
@@ -89,13 +89,13 @@ Adopted by UNESCO's General Conference in November 2021, the Recommendation is a
 
 **Ten principles**
 
-1. Proportionality and do no harm — AI use should not exceed what is necessary to achieve a legitimate aim, with risk assessment to prevent harm.
+1. Proportionality and do no harm: AI use should not exceed what is necessary to achieve a legitimate aim, with risk assessment to prevent harm.
 2. Safety and security.
 3. Right to privacy and data protection.
 4. Multi-stakeholder and adaptive governance and collaboration.
 5. Responsibility and accountability.
 6. Transparency and explainability.
-7. Human oversight and determination — ultimate responsibility should remain with humans, and life-and-death decisions should not be ceded to AI systems.
+7. Human oversight and determination: ultimate responsibility should remain with humans, and life-and-death decisions should not be ceded to AI systems.
 8. Sustainability.
 9. Awareness and literacy.
 10. Fairness and non-discrimination.
@@ -106,10 +106,10 @@ For a developing economy such as Ghana, several features are notable: the emphas
 
 ### Other frameworks
 
-- **OECD AI Principles (2019, updated 2024)** — promote AI that is innovative, trustworthy and respects human rights and democratic values, including transparency, robustness and accountability.
-- **EU AI Act (adopted 2024)** — a binding regulation for the European Union that takes a risk-based approach: prohibited practices, obligations for high-risk systems (such as many employment and credit uses), transparency duties for certain systems and lighter rules for others. Ghanaian firms serving EU customers may be affected.
-- **NIST AI Risk Management Framework (2023)** — a voluntary US framework organised around the functions Govern, Map, Measure and Manage.
-- **Floridi and Cowls (2019)** — synthesised principles from many guidelines into five: beneficence, non-maleficence, autonomy, justice and explicability.
+- **OECD AI Principles (2019, updated 2024)**: promote AI that is innovative, trustworthy and respects human rights and democratic values, including transparency, robustness and accountability.
+- **EU AI Act (adopted 2024)**: a binding regulation for the European Union that takes a risk-based approach: prohibited practices, obligations for high-risk systems (such as many employment and credit uses), transparency duties for certain systems and lighter rules for others. Ghanaian firms serving EU customers may be affected.
+- **NIST AI Risk Management Framework (2023)**: a voluntary US framework organised around the functions Govern, Map, Measure and Manage.
+- **Floridi and Cowls (2019)**: synthesised principles from many guidelines into five: beneficence, non-maleficence, autonomy, justice and explicability.
 
 ### Ethical justification of these safeguards
 
@@ -126,12 +126,12 @@ For a developing economy such as Ghana, several features are notable: the emphas
 
 A responsible-AI approach would include:
 
-1. **Proportionality check** — is AI necessary for each function? Answering FAQs is low risk; fraud flagging affects customers' payouts and is higher risk.
-2. **Ethical impact assessment** — identify risks such as inaccurate answers about policy terms, poorer performance in Twi, wrongful fraud flags and data-protection issues under the Data Protection Act, 2012 (Act 843).
-3. **Transparency** — tell customers they are talking to an AI assistant; publish a plain-language notice explaining how claims screening works; provide reasons when a claim is referred for investigation.
-4. **Human oversight** — fraud flags lead to human investigation, never automatic rejection (human-in-the-loop for adverse decisions); customers can request a human agent at any time.
-5. **Accountability** — appoint a system owner; require the vendor to provide performance data and audit access; log conversations and decisions within data-retention limits.
-6. **Monitoring** — track error rates, complaints and override rates, and test performance across languages.
+1. **Proportionality check**: is AI necessary for each function? Answering FAQs is low risk; fraud flagging affects customers' payouts and is higher risk.
+2. **Ethical impact assessment**: identify risks such as inaccurate answers about policy terms, poorer performance in Twi, wrongful fraud flags and data-protection issues under the Data Protection Act, 2012 (Act 843).
+3. **Transparency**: tell customers they are talking to an AI assistant; publish a plain-language notice explaining how claims screening works; provide reasons when a claim is referred for investigation.
+4. **Human oversight**: fraud flags lead to human investigation, never automatic rejection (human-in-the-loop for adverse decisions); customers can request a human agent at any time.
+5. **Accountability**: appoint a system owner; require the vendor to provide performance data and audit access; log conversations and decisions within data-retention limits.
+6. **Monitoring**: track error rates, complaints and override rates, and test performance across languages.
 
 This approach does not prevent innovation; it makes the system defensible to customers, regulators and the board.
 
@@ -160,11 +160,11 @@ flowchart TD
 
 ## Common Misconceptions
 
-- "Transparency means publishing the source code." — Meaningful transparency is audience-appropriate: disclosure of AI use, documentation of purpose and limitations, and understandable reasons for decisions; source code alone rarely helps affected people.
-- "Having a human in the loop guarantees good oversight." — Without time, information, authority and protection from automation bias, human review can become a rubber stamp.
-- "If the vendor built the model, the vendor is responsible." — Deploying organisations remain accountable for how they use AI on their customers and staff, and should allocate responsibilities contractually.
-- "The UNESCO Recommendation is a binding international treaty." — It is a non-binding standard-setting instrument adopted by member states, which are invited to implement it.
-- "Post-hoc explanations show exactly how a model works." — Techniques such as feature attribution approximate model behaviour and can be incomplete or misleading.
+- "Transparency means publishing the source code." Meaningful transparency is audience-appropriate: disclosure of AI use, documentation of purpose and limitations, and understandable reasons for decisions; source code alone rarely helps affected people.
+- "Having a human in the loop guarantees good oversight." Without time, information, authority and protection from automation bias, human review can become a rubber stamp.
+- "If the vendor built the model, the vendor is responsible." Deploying organisations remain accountable for how they use AI on their customers and staff, and should allocate responsibilities contractually.
+- "The UNESCO Recommendation is a binding international treaty." It is a non-binding standard-setting instrument adopted by member states, which are invited to implement it.
+- "Post-hoc explanations show exactly how a model works." Techniques such as feature attribution approximate model behaviour and can be incomplete or misleading.
 
 ## Common Examination Mistakes
 
@@ -179,12 +179,12 @@ flowchart TD
 1. Should high-stakes decisions about individuals, such as dismissals or benefit fraud findings, ever be made using models that cannot be explained? Justify your position.
 2. How can a small Ghanaian company that buys AI services from a large foreign vendor achieve real accountability?
 3. Does the UNESCO Recommendation's non-binding status make it ineffective, or can soft law shape practice? Give reasons.
-4. How should organisations protect employees who override an AI system's recommendation and are later proven right — or wrong?
+4. How should organisations protect employees who override an AI system's recommendation and are later proven right, or wrong?
 
 ## Practical Exercises
 
 1. **Model card draft.** For an illustrative AI system that predicts which mobile-money agents are likely to commit fraud, draft a one-page model card covering purpose, intended users, data, performance by group, limitations and ethical considerations. Expected output: a structured model card.
-2. **Oversight design.** For three AI uses in a bank — FAQ chatbot, transaction fraud alerts, loan rejection — choose an oversight model and justify it. Expected output: a table with use, risk level, oversight model and three conditions for meaningful oversight.
+2. **Oversight design.** For three AI uses in a bank (FAQ chatbot, transaction fraud alerts, loan rejection) choose an oversight model and justify it. Expected output: a table with use, risk level, oversight model and three conditions for meaningful oversight.
 3. **UNESCO mapping.** Map each of the ten UNESCO principles to one concrete control an organisation could implement. Expected output: a ten-row table.
 
 ## Key Takeaways
@@ -198,15 +198,15 @@ flowchart TD
 ## Further Reading
 
 - UNESCO. (2021). *Recommendation on the ethics of artificial intelligence*. UNESCO. <https://www.unesco.org/en/artificial-intelligence/recommendation-ethics>
-- Nissenbaum, H. (1996). Accountability in a computerized society. *Science and Engineering Ethics, 2*(1), 25–42.
+- Nissenbaum, H. (1996). Accountability in a computerized society. *Science and Engineering Ethics, 2*(1), 25-42.
 - Floridi, L., & Cowls, J. (2019). A unified framework of five principles for AI in society. *Harvard Data Science Review, 1*(1).
-- Mitchell, M., Wu, S., Zaldivar, A., Barnes, P., Vasserman, L., Hutchinson, B., Spitzer, E., Raji, I. D., & Gebru, T. (2019). Model cards for model reporting. In *Proceedings of the Conference on Fairness, Accountability, and Transparency* (pp. 220–229). ACM.
+- Mitchell, M., Wu, S., Zaldivar, A., Barnes, P., Vasserman, L., Hutchinson, B., Spitzer, E., Raji, I. D., & Gebru, T. (2019). Model cards for model reporting. In *Proceedings of the Conference on Fairness, Accountability, and Transparency* (pp. 220-229). ACM.
 - National Institute of Standards and Technology. (2023). *Artificial intelligence risk management framework (AI RMF 1.0)*. <https://www.nist.gov/itl/ai-risk-management-framework>
 
 ## Video Resources
 
-- [UNESCO – Ethics of Artificial Intelligence](https://www.unesco.org/en/artificial-intelligence/recommendation-ethics) — UNESCO. Official page for the Recommendation with summaries, implementation tools and related materials.
-- [OECD.AI – AI Principles](https://oecd.ai/en/ai-principles) — OECD. Official overview of the OECD AI Principles and policy resources.
+- [UNESCO: Ethics of Artificial Intelligence](https://www.unesco.org/en/artificial-intelligence/recommendation-ethics): UNESCO. Official page for the Recommendation with summaries, implementation tools and related materials.
+- [OECD.AI: AI Principles](https://oecd.ai/en/ai-principles): OECD. Official overview of the OECD AI Principles and policy resources.
 
 ## Revision Summary
 

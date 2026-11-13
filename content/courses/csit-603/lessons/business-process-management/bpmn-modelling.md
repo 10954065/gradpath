@@ -107,7 +107,7 @@ A diagram with two or more pools exchanging messages is called a **collaboration
 
 Silver (2011) and Dumas et al. (2018) offer practical guidelines that make BPMN models easier to read and validate:
 
-1. Use **verb–noun labels** for activities ("Verify prescription") and **state labels** for end events ("Medicine dispensed", "Prescription rejected").
+1. Use **verb-noun labels** for activities ("Verify prescription") and **state labels** for end events ("Medicine dispensed", "Prescription rejected").
 2. Use **explicit start and end events**, with one start event per pool where possible.
 3. **Avoid implicit gateways** (multiple arrows leaving an activity without a gateway); make branching explicit.
 4. **Model the happy path first** in a straight line, then add exceptions.
@@ -123,20 +123,20 @@ The same notation serves different purposes. A **descriptive model** communicate
 
 **Illustrative scenario.** *Ridge Valley Hospital*, a hypothetical hospital in Accra, wants to model its outpatient prescription-to-dispensing process, including insurance coverage checks with an insurer.
 
-**Step 1 – Participants.** Pools: *Ridge Valley Hospital* (lanes: Pharmacy assistant, Pharmacist, Cashier) and *Insurer* (black-box pool).
+**Step 1: Participants.** Pools: *Ridge Valley Hospital* (lanes: Pharmacy assistant, Pharmacist, Cashier) and *Insurer* (black-box pool).
 
-**Step 2 – Trigger and outcomes.** Start event: message start "Prescription received". End events: "Medicine dispensed", "Prescription referred back to prescriber".
+**Step 2: Trigger and outcomes.** Start event: message start "Prescription received". End events: "Medicine dispensed", "Prescription referred back to prescriber".
 
-**Step 3 – Happy path.** Check prescription (pharmacist, user task) → Check stock (service task) → Request coverage (send task, message flow to insurer) → Receive coverage decision (receive task) → Take payment or co-payment (cashier) → Dispense and counsel (pharmacist).
+**Step 3: Happy path.** Check prescription (pharmacist, user task) → Check stock (service task) → Request coverage (send task, message flow to insurer) → Receive coverage decision (receive task) → Take payment or co-payment (cashier) → Dispense and counsel (pharmacist).
 
-**Step 4 – Decisions and exceptions.**
+**Step 4: Decisions and exceptions.**
 
 - Exclusive gateway "Prescription valid?": *No* → "Contact prescriber" → end event "Prescription referred back".
 - Exclusive gateway "Item in stock?": *No* → "Offer alternative or order item".
 - Timer boundary event on "Receive coverage decision": if no response in 30 minutes, "Offer self-pay option".
 - Parallel gateway: after payment, "Update stock record" (service task) and "Dispense and counsel" run in parallel and are joined by a parallel gateway before the end event.
 
-**Step 5 – Mermaid approximation.** In the diagram below, circles approximate events, rounded boxes are tasks, diamonds are gateways (labelled with their type) and the dashed arrows represent message flows to the insurer pool.
+**Step 5: Mermaid approximation.** In the diagram below, circles approximate events, rounded boxes are tasks, diamonds are gateways (labelled with their type) and the dashed arrows represent message flows to the insurer pool.
 
 ```mermaid
 flowchart LR
@@ -165,7 +165,7 @@ flowchart LR
   I1 -. "Message: coverage decision" .-> T6
 ```
 
-**Step 6 – Validate.** Trace tokens: a valid prescription with stock and timely insurer response produces one token that splits into two at the AND split and rejoins before the end event, so the instance completes exactly once. An invalid prescription ends at "Referred back". No message flow connects activities inside the hospital pool, and no sequence flow crosses into the insurer pool.
+**Step 6: Validate.** Trace tokens: a valid prescription with stock and timely insurer response produces one token that splits into two at the AND split and rejoins before the end event, so the instance completes exactly once. An invalid prescription ends at "Referred back". No message flow connects activities inside the hospital pool, and no sequence flow crosses into the insurer pool.
 
 ## International Case Study
 
@@ -189,7 +189,7 @@ This history matters for practitioners. Because BPMN 2.0 has a shared, standardi
 - Omitting start or end events, or leaving paths that never reach an end event.
 - Using gateways without labelled conditions on outgoing flows.
 - Confusing the inclusive (OR) gateway with the exclusive (XOR) gateway.
-- Labelling activities with nouns or system names rather than verb–noun phrases.
+- Labelling activities with nouns or system names rather than verb-noun phrases.
 - Describing BPMN elements without explaining their behaviour.
 
 ## Critical Thinking Questions
@@ -213,7 +213,7 @@ This history matters for practitioners. Because BPMN 2.0 has a shared, standardi
 - Events (start, intermediate, end) are circles; activities are rounded rectangles; gateways are diamonds that split and merge tokens.
 - Exclusive gateways choose one path, parallel gateways take all paths and synchronise, inclusive gateways take one or more, and event-based gateways choose by the first event to occur.
 - Sequence flows stay within a pool; message flows connect pools; lanes subdivide a pool by role.
-- Good style uses verb–noun labels, explicit start and end events, matching split and join gateways and small, layered models.
+- Good style uses verb-noun labels, explicit start and end events, matching split and join gateways and small, layered models.
 
 ## Further Reading
 
@@ -224,9 +224,9 @@ This history matters for practitioners. Because BPMN 2.0 has a shared, standardi
 
 ## Video Resources
 
-- [Camunda Documentation](https://docs.camunda.io/) — Camunda. Official documentation including BPMN guides and instructions for using Camunda Modeler.
-- [Bizagi](https://www.bizagi.com/) — Bizagi. Official site for Bizagi Modeler with learning resources on BPMN modelling.
-- [OMG BPMN Specification](https://www.omg.org/spec/BPMN/) — Object Management Group. The official specification page for BPMN, including version history.
+- [Camunda Documentation](https://docs.camunda.io/): Camunda. Official documentation including BPMN guides and instructions for using Camunda Modeler.
+- [Bizagi](https://www.bizagi.com/): Bizagi. Official site for Bizagi Modeler with learning resources on BPMN modelling.
+- [OMG BPMN Specification](https://www.omg.org/spec/BPMN/): Object Management Group. The official specification page for BPMN, including version history.
 
 ## Revision Summary
 

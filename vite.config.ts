@@ -17,7 +17,7 @@ export default defineConfig({
       includeAssets: ['icons/favicon.svg', 'icons/apple-touch-icon.png'],
       manifest: {
         id: '/',
-        name: 'GradPath — MSc IT for Business',
+        name: 'GradPath | MSc IT for Business',
         short_name: 'GradPath',
         description:
           'Learn with purpose. Master every course. Graduate with excellence. A supplementary study platform for MSc IT for Business students.',

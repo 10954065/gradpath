@@ -52,7 +52,7 @@ The model is diagnostic, not prescriptive. A caterer may rationally stay at stag
 
 ### The PSP landscape
 
-Payment services can be unbundled into distinct roles. A **gateway** captures and routes payment data. An **acquirer** holds the card acceptance contract and settles to the merchant. An **aggregator** gives one integration to many methods — critical in Ghana, where customers use different mobile money networks as well as cards and bank transfers. A **payment facilitator** onboards small merchants quickly under its own master account. **Wallet APIs** from e-money issuers allow direct integration for collections (customer-to-business) and disbursements (business-to-customer). In practice, many PSPs combine several roles. Ghanaian businesses encounter local aggregators and international PSPs operating in the market; under the Payment Systems and Services Act, 2019 (Act 987), providers must be licensed or authorised by the Bank of Ghana, and an SME should verify this before signing up.
+Payment services can be unbundled into distinct roles. A **gateway** captures and routes payment data. An **acquirer** holds the card acceptance contract and settles to the merchant. An **aggregator** gives one integration to many methods: critical in Ghana, where customers use different mobile money networks as well as cards and bank transfers. A **payment facilitator** onboards small merchants quickly under its own master account. **Wallet APIs** from e-money issuers allow direct integration for collections (customer-to-business) and disbursements (business-to-customer). In practice, many PSPs combine several roles. Ghanaian businesses encounter local aggregators and international PSPs operating in the market; under the Payment Systems and Services Act, 2019 (Act 987), providers must be licensed or authorised by the Bank of Ghana, and an SME should verify this before signing up.
 
 ### What SMEs need from a PSP
 
@@ -81,7 +81,7 @@ For SMEs, digital payments create **data trails**. A history of regular mobile m
 | APIs, plugins and payment links | 0.15 | 5 | 3 | 2 |
 | Support and dispute handling | 0.10 | 3 | 4 | 4 |
 
-**Step 1 — Weighted scores.**
+**Step 1: Weighted scores.**
 
 - A = 5×0.25 + 4×0.15 + 3×0.20 + 4×0.15 + 5×0.15 + 3×0.10 = 1.25 + 0.60 + 0.60 + 0.60 + 0.75 + 0.30 = **4.10**
 - B = 4×0.25 + 5×0.15 + 4×0.20 + 3×0.15 + 3×0.15 + 4×0.10 = 1.00 + 0.75 + 0.80 + 0.45 + 0.45 + 0.40 = **3.85**
@@ -89,7 +89,7 @@ For SMEs, digital payments create **data trails**. A history of regular mobile m
 
 Provider A ranks first.
 
-**Step 2 — Sensitivity analysis.** Suppose the owner decides she will rely on payment links rather than plugins, so APIs drop to 0.05 and fees rise to 0.30.
+**Step 2: Sensitivity analysis.** Suppose the owner decides she will rely on payment links rather than plugins, so APIs drop to 0.05 and fees rise to 0.30.
 
 - A = 1.25 + 0.60 + 0.90 + 0.60 + 0.25 + 0.30 = **3.90**
 - B = 1.00 + 0.75 + 1.20 + 0.45 + 0.15 + 0.40 = **3.95**
@@ -167,15 +167,15 @@ flowchart LR
 
 - Demirgüç-Kunt, A., Klapper, L., Singer, D., & Ansar, S. (2022). *The Global Findex Database 2021: Financial inclusion, digital payments, and resilience in the age of COVID-19*. World Bank.
 - Laudon, K. C., & Traver, C. G. (n.d.). *E-commerce: Business, technology, society*. Pearson. (Consult the chapters on e-commerce payment systems in the latest edition.)
-- Suri, T., & Jack, W. (2016). The long-run poverty and gender impacts of mobile money. *Science, 354*(6317), 1288–1292.
+- Suri, T., & Jack, W. (2016). The long-run poverty and gender impacts of mobile money. *Science, 354*(6317), 1288-1292.
 - Osterwalder, A., & Pigneur, Y. (2010). *Business model generation: A handbook for visionaries, game changers, and challengers*. Wiley.
 - Payment Systems and Services Act, 2019 (Act 987) (Ghana).
 
 ## Video Resources
 
-- [CGAP](https://www.cgap.org/) — CGAP. Research and publications on financial inclusion, digital finance and consumer protection.
-- [Global Findex Database](https://www.worldbank.org/en/publication/globalfindex) — World Bank. Data and reports on account ownership, digital payments and inclusion gaps.
-- [Banco Central do Brasil](https://www.bcb.gov.br/en) — Central Bank of Brazil. Official information on the Pix instant payment system.
+- [CGAP](https://www.cgap.org/): CGAP. Research and publications on financial inclusion, digital finance and consumer protection.
+- [Global Findex Database](https://www.worldbank.org/en/publication/globalfindex): World Bank. Data and reports on account ownership, digital payments and inclusion gaps.
+- [Banco Central do Brasil](https://www.bcb.gov.br/en): Central Bank of Brazil. Official information on the Pix instant payment system.
 
 ## Revision Summary
 
@@ -185,4 +185,4 @@ SME digital commerce moves from digital presence through social selling, marketp
 - Aggregators matter in multi-wallet markets.
 - Weighted score + sensitivity + hard constraints.
 - Inclusion = access + usage + quality.
-- Data trails enable credit — protect borrowers.
+- Data trails enable credit: protect borrowers.

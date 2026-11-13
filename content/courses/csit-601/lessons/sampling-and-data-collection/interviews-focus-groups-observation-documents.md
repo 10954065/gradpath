@@ -70,10 +70,10 @@ Focus groups are less suitable for sensitive individual experiences, such as hav
 
 Observation captures behaviour directly in natural settings. Researchers choose a role along a continuum:
 
-1. **Complete participant** – a full member whose research role is concealed; raises serious ethical concerns and requires strong justification and approval.
-2. **Participant as observer** – takes part openly while researching.
-3. **Observer as participant** – mainly observes with limited participation.
-4. **Complete observer** – observes without interaction.
+1. **Complete participant**: a full member whose research role is concealed; raises serious ethical concerns and requires strong justification and approval.
+2. **Participant as observer**: takes part openly while researching.
+3. **Observer as participant**: mainly observes with limited participation.
+4. **Complete observer**: observes without interaction.
 
 Observation can be **structured**, using a checklist or coding schedule to count behaviours (for example, recording how often cashiers ask customers whether they will pay by mobile money), or **unstructured**, using detailed field notes. Observation reveals gaps between reported and actual behaviour, but it is time-consuming and subject to the **observer effect**: people may behave differently when watched.
 
@@ -115,9 +115,9 @@ flowchart LR
 
 **Illustrative scenario.** Esi is studying how nurses in a Ghanaian regional hospital experience a newly introduced electronic health records (EHR) system. Her objective is: *To explore the factors that encourage or discourage nurses' use of the EHR system in daily ward work.*
 
-**Step 1 – Choose methods.** Interviews capture individual experiences; observation of ward routines shows actual use; documents (training materials, implementation reports) show what the system was intended to do. She plans a small number of focus groups to explore shared norms among nurses.
+**Step 1: Choose methods.** Interviews capture individual experiences; observation of ward routines shows actual use; documents (training materials, implementation reports) show what the system was intended to do. She plans a small number of focus groups to explore shared norms among nurses.
 
-**Step 2 – Draft the interview guide.**
+**Step 2: Draft the interview guide.**
 
 | Section | Main question | Probes |
 |---|---|---|
@@ -126,17 +126,17 @@ flowchart LR
 | Encouraging factors | What, if anything, makes the system helpful in your work? | Can you give an example? Has this changed over time? |
 | Discouraging factors | What makes the system difficult to use? | What do you do when it is unavailable? How do colleagues respond? |
 | Support | How were you trained, and where do you go for help? | Who is the most helpful person? |
-| Closing | Is there anything about the system we have not discussed that you think is important? | — |
+| Closing | Is there anything about the system we have not discussed that you think is important? | n/a |
 
 The guide begins with easy, concrete questions, uses "tell me about the last time" to elicit specific episodes rather than generalisations, avoids leading wording such as "Isn't the system slow?", and ends with an open invitation.
 
-**Step 3 – Plan focus groups.** Two groups of six to eight nurses each, separated by grade to reduce hierarchy effects; a trained moderator and an assistant; audio recording with consent; a 75-minute questioning route that moves from general experiences to key questions on workarounds and support.
+**Step 3: Plan focus groups.** Two groups of six to eight nurses each, separated by grade to reduce hierarchy effects; a trained moderator and an assistant; audio recording with consent; a 75-minute questioning route that moves from general experiences to key questions on workarounds and support.
 
-**Step 4 – Plan observation.** With approval from the hospital and ward managers, Esi spends several shifts as an *observer as participant* at the nurses' station, recording field notes on when the EHR is used, when paper is used instead, and why.
+**Step 4: Plan observation.** With approval from the hospital and ward managers, Esi spends several shifts as an *observer as participant* at the nurses' station, recording field notes on when the EHR is used, when paper is used instead, and why.
 
-**Step 5 – Plan document analysis.** She requests the implementation plan, training manual and any post-implementation review, evaluating each for authorship and purpose.
+**Step 5: Plan document analysis.** She requests the implementation plan, training manual and any post-implementation review, evaluating each for authorship and purpose.
 
-**Step 6 – Plan triangulation.** She expects to compare what nurses say about EHR use with what observation shows, and both with what documents intended.
+**Step 6: Plan triangulation.** She expects to compare what nurses say about EHR use with what observation shows, and both with what documents intended.
 
 The expected output is an aligned set of instruments (interview guide, focus group route, observation protocol, document checklist) and a statement of how they will be triangulated.
 
@@ -204,21 +204,21 @@ For contemporary IT-for-business researchers, the case remains instructive. Rigi
 
 - Brinkmann, S., & Kvale, S. (2015). *InterViews: Learning the craft of qualitative research interviewing* (3rd ed.). SAGE.
 - Krueger, R. A., & Casey, M. A. (2015). *Focus groups: A practical guide for applied research* (5th ed.). SAGE.
-- Bowen, G. A. (2009). Document analysis as a qualitative research method. *Qualitative Research Journal, 9*(2), 27–40.
+- Bowen, G. A. (2009). Document analysis as a qualitative research method. *Qualitative Research Journal, 9*(2), 27-40.
 - Roethlisberger, F. J., & Dickson, W. J. (1939). *Management and the worker*. Harvard University Press.
 - Saunders, M., Lewis, P., & Thornhill, A. (2019). *Research methods for business students* (8th ed.). Pearson.
 
 ## Video Resources
 
-- [SAGE Research Methods](https://methods.sagepub.com/) — SAGE Publishing. Official research methods platform (access may depend on institutional subscription) with material on interviewing, focus groups and observation.
-- [MIT OpenCourseWare](https://ocw.mit.edu/) — Massachusetts Institute of Technology. Official open learning portal; search for qualitative research methods and fieldwork course materials.
+- [SAGE Research Methods](https://methods.sagepub.com/): SAGE Publishing. Official research methods platform (access may depend on institutional subscription) with material on interviewing, focus groups and observation.
+- [MIT OpenCourseWare](https://ocw.mit.edu/): Massachusetts Institute of Technology. Official open learning portal; search for qualitative research methods and fieldwork course materials.
 
 ## Revision Summary
 
 Qualitative data collection methods capture meanings, interactions, practices and records that questionnaires miss: semi-structured interviews explore individual experiences in depth, focus groups reveal how views are formed and contested in interaction, observation records actual behaviour in context, and document analysis supplies official and historical evidence. Combining them through triangulation builds a credible, well-rounded account.
 
 - Interview guide: easy opening, concrete "last time" questions, probes, open closing.
-- Focus groups: about 6–10, homogeneous on key traits, skilled moderator.
+- Focus groups: about 6-10, homogeneous on key traits, skilled moderator.
 - Observation roles: complete participant ↔ complete observer.
 - Evaluate documents for authenticity, credibility, representativeness, meaning.
 - Obtain consent, anonymise and protect recordings.

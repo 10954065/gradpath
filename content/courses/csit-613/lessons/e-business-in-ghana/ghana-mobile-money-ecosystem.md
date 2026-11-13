@@ -94,7 +94,7 @@ A structured view classifies ecosystem risks as:
 
 | Time | Transaction | E-float | Cash |
 |---|---|---|---|
-| Opening | — | 2,000 | 1,500 |
+| Opening | n/a | 2,000 | 1,500 |
 | Morning | Cash-ins totalling 1,200 (traders depositing takings) | 800 | 2,700 |
 | Midday | Cash-outs totalling 900 (customers withdrawing remittances) | 1,700 | 1,800 |
 | Afternoon | Cash-ins totalling 1,000 | 700 | 2,800 |
@@ -178,23 +178,23 @@ flowchart LR
 
 ## Further Reading
 
-- Jack, W., & Suri, T. (2014). Risk sharing and transactions costs: Evidence from Kenya's mobile money revolution. *American Economic Review, 104*(1), 183–223.
-- Suri, T., & Jack, W. (2016). The long-run poverty and gender impacts of mobile money. *Science, 354*(6317), 1288–1292.
+- Jack, W., & Suri, T. (2014). Risk sharing and transactions costs: Evidence from Kenya's mobile money revolution. *American Economic Review, 104*(1), 183-223.
+- Suri, T., & Jack, W. (2016). The long-run poverty and gender impacts of mobile money. *Science, 354*(6317), 1288-1292.
 - Demirgüç-Kunt, A., Klapper, L., Singer, D., & Ansar, S. (2022). *The Global Findex Database 2021: Financial inclusion, digital payments, and resilience in the age of COVID-19*. World Bank.
 - Payment Systems and Services Act, 2019 (Act 987) (Ghana).
 - Parker, G. G., Van Alstyne, M. W., & Choudary, S. P. (2016). *Platform revolution: How networked markets are transforming the economy and how to make them work for you*. W. W. Norton.
 
 ## Video Resources
 
-- [GSMA](https://www.gsma.com/) — GSMA. Research, reports and events on mobile money and digital inclusion, including the State of the Industry reports.
-- [Bank of Ghana](https://www.bog.gov.gh/) — Bank of Ghana. Official source for payment systems regulation, licensed institutions and notices.
-- [GhIPSS](https://ghipss.net/) — Ghana Interbank Payment and Settlement Systems. Information on national payment infrastructure, including mobile money interoperability and GhQR.
+- [GSMA](https://www.gsma.com/): GSMA. Research, reports and events on mobile money and digital inclusion, including the State of the Industry reports.
+- [Bank of Ghana](https://www.bog.gov.gh/): Bank of Ghana. Official source for payment systems regulation, licensed institutions and notices.
+- [GhIPSS](https://ghipss.net/): Ghana Interbank Payment and Settlement Systems. Information on national payment infrastructure, including mobile money interoperability and GhQR.
 
 ## Revision Summary
 
 Ghana's mobile money ecosystem links customers, MNO-linked e-money issuers, agents, banks holding trust accounts, the GhIPSS switch, PSPs, merchants and the Bank of Ghana. E-money is redeemable at par and ring-fenced in trust accounts. Agents exchange cash and e-float and must rebalance as cash-ins and cash-outs change the composition of their liquidity. Act 987 and laws on AML, data protection and cybersecurity frame oversight. Interoperability since 2018 and universal QR have shifted competition towards service quality.
 
-- Actors, flows and incentives — map them.
+- Actors, flows and incentives: map them.
 - E-money ≠ deposit: trust accounts, no lending.
 - Agent liquidity: total constant, composition shifts.
 - Bank of Ghana regulates; GhIPSS switches.

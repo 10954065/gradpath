@@ -41,7 +41,7 @@ Once data are clean, **descriptive statistics** summarise them: what is typical,
 
 ### Stage 1: Design the codebook
 
-Ideally the codebook is written *before* data collection, alongside the questionnaire. Each variable receives a short, systematic name (for example `PU1`–`PU4` for perceived usefulness items), a descriptive label, numeric codes for categories (1 = Accra, 2 = Kumasi, 3 = Takoradi), the level of measurement, and codes for different kinds of missing data (for example, 98 = "don't know", 99 = "no response"). Consistent naming makes syntax and scale construction far easier later.
+Ideally the codebook is written *before* data collection, alongside the questionnaire. Each variable receives a short, systematic name (for example `PU1` to `PU4` for perceived usefulness items), a descriptive label, numeric codes for categories (1 = Accra, 2 = Kumasi, 3 = Takoradi), the level of measurement, and codes for different kinds of missing data (for example, 98 = "don't know", 99 = "no response"). Consistent naming makes syntax and scale construction far easier later.
 
 ### Stage 2: Enter or export data
 
@@ -123,14 +123,14 @@ flowchart TD
 12, 15, 9, 20, 14, 11, 18, 13, 16, 12
 ```
 
-**Step 1 – Mean.**
+**Step 1: Mean.**
 
 ```
 Sum = 12 + 15 + 9 + 20 + 14 + 11 + 18 + 13 + 16 + 12 = 140
 Mean = 140 / 10 = 14.0
 ```
 
-**Step 2 – Median and mode.** Order the data:
+**Step 2: Median and mode.** Order the data:
 
 ```
 9, 11, 12, 12, 13, 14, 15, 16, 18, 20
@@ -138,7 +138,7 @@ Mean = 140 / 10 = 14.0
 
 With *n* = 10, the median is the average of the 5th and 6th values: `(13 + 14) / 2 = 13.5`. The mode is 12 (it appears twice).
 
-**Step 3 – Range and IQR.**
+**Step 3: Range and IQR.**
 
 ```
 Range = 20 − 9 = 11
@@ -149,7 +149,7 @@ IQR = 16 − 12 = 4
 
 (Software packages use slightly different quartile methods, so IQR values may differ marginally; state which method you used.)
 
-**Step 4 – Variance and standard deviation.**
+**Step 4: Variance and standard deviation.**
 
 | Value (x) | Deviation (x − 14) | Squared deviation |
 |---|---|---|
@@ -172,7 +172,7 @@ Standard deviation s = √11.11 = 3.33
 
 **Interpretation:** typical monthly digital sales are about GH¢14,000, with sales typically about GH¢3,330 either side of that average. Mean and median are close (14.0 versus 13.5), suggesting a roughly symmetric distribution.
 
-**Step 5 – The effect of a data entry error.** Suppose the value 20 had been mistyped as 200.
+**Step 5: The effect of a data entry error.** Suppose the value 20 had been mistyped as 200.
 
 ```
 New sum = 140 − 20 + 200 = 320
@@ -197,7 +197,7 @@ For student cybersecurity surveys, descriptive tables of awareness scores by fac
 
 ## International Case Study
 
-### The Reinhart–Rogoff spreadsheet error
+### The Reinhart-Rogoff spreadsheet error
 
 In 2010, economists Carmen Reinhart and Kenneth Rogoff published an influential paper, "Growth in a Time of Debt", which was widely cited in debates about government austerity. In 2013, Thomas Herndon, Michael Ash and Robert Pollin of the University of Massachusetts Amherst attempted to replicate the results using the original spreadsheet. They reported several problems, including a spreadsheet coding error that excluded some countries from a key average, the selective exclusion of certain data, and an unconventional weighting of country averages. Their corrected analysis showed a considerably weaker relationship between high public debt and low growth than the original paper had suggested. Reinhart and Rogoff acknowledged the spreadsheet error while defending other aspects of their work.
 
@@ -224,7 +224,7 @@ The case is directly relevant to data preparation. First, it shows that errors i
 1. When is it legitimate to remove an outlier from a dataset, and what must the researcher report if they do so?
 2. A survey of SME owners has 30% missing data on revenue. What risks does this create, and how would you decide whether to use listwise deletion or another approach?
 3. Should single Likert items be summarised with means or medians? Defend a position and explain how you would report it to an examiner.
-4. The Reinhart–Rogoff case was discovered through replication. How could MSc programmes encourage reproducible data preparation among students?
+4. The Reinhart-Rogoff case was discovered through replication. How could MSc programmes encourage reproducible data preparation among students?
 
 ## Practical Exercises
 
@@ -244,13 +244,13 @@ The case is directly relevant to data preparation. First, it shows that errors i
 
 - Field, A. (2018). *Discovering statistics using IBM SPSS statistics* (5th ed.). SAGE.
 - Saunders, M., Lewis, P., & Thornhill, A. (2019). *Research methods for business students* (8th ed.). Pearson.
-- Herndon, T., Ash, M., & Pollin, R. (2014). Does high public debt consistently stifle economic growth? A critique of Reinhart and Rogoff. *Cambridge Journal of Economics, 38*(2), 257–279.
+- Herndon, T., Ash, M., & Pollin, R. (2014). Does high public debt consistently stifle economic growth? A critique of Reinhart and Rogoff. *Cambridge Journal of Economics, 38*(2), 257-279.
 - NIST/SEMATECH. (n.d.). *e-Handbook of statistical methods*. National Institute of Standards and Technology. <https://www.itl.nist.gov/div898/handbook/>
 
 ## Video Resources
 
-- [Khan Academy: Statistics and Probability](https://www.khanacademy.org/math/statistics-probability) — Khan Academy. Free official course with units on summarising quantitative data, including mean, median, IQR and standard deviation.
-- [IBM SPSS Statistics](https://www.ibm.com/products/spss-statistics) — IBM. Official product page with links to documentation and learning resources for data preparation and descriptive statistics in SPSS.
+- [Khan Academy: Statistics and Probability](https://www.khanacademy.org/math/statistics-probability): Khan Academy. Free official course with units on summarising quantitative data, including mean, median, IQR and standard deviation.
+- [IBM SPSS Statistics](https://www.ibm.com/products/spss-statistics): IBM. Official product page with links to documentation and learning resources for data preparation and descriptive statistics in SPSS.
 
 ## Revision Summary
 

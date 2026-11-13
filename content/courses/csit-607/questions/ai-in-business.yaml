@@ -92,7 +92,7 @@ questions:
     bloom: apply
     difficulty: medium
     objective: Apply RFM scoring
-    prompt: Among five customers, C4 bought 90 days ago, made 1 purchase and spent the least. What RFM code should C4 receive on a 1–5 scale where 5 is best?
+    prompt: Among five customers, C4 bought 90 days ago, made 1 purchase and spent the least. What RFM code should C4 receive on a 1-5 scale where 5 is best?
     options:
       - "555"
       - "111"
@@ -294,7 +294,7 @@ questions:
     modelAnswer: |
       A strong answer begins with the data foundation. Four years of POS and loyalty data are valuable only if product codes, branches and customer identifiers are integrated in a warehouse with reliable dashboards for stock-outs, waste and refunds. This should be phase one, because it also yields quick descriptive wins.
 
-      Forecasting is the highest-value application, as stock-outs and waste are direct costs. The chain should forecast at product–branch–week level, start with seasonal exponential smoothing benchmarks, then pilot gradient-boosted models including festive periods, paydays, school terms and promotions. Evaluation should use MAE or RMSE on held-out festive seasons. Forecasts should feed an ordering DSS using expected-value or newsvendor-style logic, especially for perishables where unsold stock is costly, with buyers able to adjust for local knowledge.
+      Forecasting is the highest-value application, as stock-outs and waste are direct costs. The chain should forecast at product-branch-week level, start with seasonal exponential smoothing benchmarks, then pilot gradient-boosted models including festive periods, paydays, school terms and promotions. Evaluation should use MAE or RMSE on held-out festive seasons. Forecasts should feed an ordering DSS using expected-value or newsvendor-style logic, especially for perishables where unsold stock is costly, with buyers able to adjust for local knowledge.
 
       Customer analytics via RFM gives transparent segments for promotions; CLV helps decide retention spending; controlled tests should show which offers change behaviour. Limits on sensitive inferences, consent and purpose specification are required under the Data Protection Act, 2012 (Act 843).
 
@@ -302,5 +302,5 @@ questions:
 
       For support, a WhatsApp bot handling store hours, stock queries and loyalty balances via APIs, with a grounded knowledge base, clear human escalation and resolution-based metrics, would reduce waits.
 
-      A phased roadmap might be: months 0–6 data and BI plus a forecasting pilot; months 6–12 ordering DSS, RFM and refund rules; months 12–18 support automation and supervised fraud models, each with KPIs, owners and review.
+      A phased roadmap might be: months 0-6 data and BI plus a forecasting pilot; months 6-12 ordering DSS, RFM and refund rules; months 12-18 support automation and supervised fraud models, each with KPIs, owners and review.
     explanation: Examiners reward prioritisation grounded in business value and data readiness, correct method choices with matching metrics, and explicit safeguards rather than a list of fashionable tools.

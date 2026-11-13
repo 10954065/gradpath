@@ -48,10 +48,10 @@ A business model is not the same as a strategy. Strategy concerns how a firm pos
 
 Amit and Zott's research on e-business models identified four interrelated sources of value creation in digital businesses. They are a useful lens for analysis:
 
-1. **Efficiency** – digital processes reduce transaction costs, search costs and errors. Ordering through an app instead of phoning a supplier saves time for both sides.
-2. **Complementarities** – value rises when products, services or technologies are bundled together. A ride-hailing app that combines mapping, payment and driver rating offers more value than each element separately.
-3. **Lock-in** – loyalty programmes, stored preferences, data and network effects make customers less likely to switch.
-4. **Novelty** – new ways of connecting parties or new content and services create value that did not previously exist.
+1. **Efficiency**: digital processes reduce transaction costs, search costs and errors. Ordering through an app instead of phoning a supplier saves time for both sides.
+2. **Complementarities**: value rises when products, services or technologies are bundled together. A ride-hailing app that combines mapping, payment and driver rating offers more value than each element separately.
+3. **Lock-in**: loyalty programmes, stored preferences, data and network effects make customers less likely to switch.
+4. **Novelty**: new ways of connecting parties or new content and services create value that did not previously exist.
 
 Digital goods also have distinctive cost structures. Software, music and online courses have high fixed costs of creation but **near-zero marginal cost** of reproduction. Shapiro and Varian (1999) showed in *Information Rules* that this encourages pricing by customer value rather than cost, versioning (different editions for different customers) and bundling.
 
@@ -101,7 +101,7 @@ Timmers (1998) offered one of the first classifications of internet business mod
 
 **Illustrative scenario.** *FarmFresh GH* is a hypothetical start-up in Accra that wants to deliver fresh vegetables from farmers in the Eastern Region to middle-income households and small restaurants. Customers order through a mobile app or WhatsApp, pay by mobile money or card, and receive deliveries twice a week.
 
-**Step 1 – Complete the canvas.**
+**Step 1: Complete the canvas.**
 
 | Block | FarmFresh GH |
 |---|---|
@@ -115,11 +115,11 @@ Timmers (1998) offered one of the first classifications of internet business mod
 | Key Partnerships | Farmer cooperatives, payment service provider, cold-chain equipment supplier |
 | Cost Structure | Produce purchase, transport fuel and riders, cold storage, payment fees, marketing, spoilage |
 
-**Step 2 – Identify value creation sources.** *Efficiency* (customers avoid market trips; farmers gain a predictable buyer), *lock-in* (subscription boxes and saved preferences), *complementarities* (combining sourcing, grading and delivery).
+**Step 2: Identify value creation sources.** *Efficiency* (customers avoid market trips; farmers gain a predictable buyer), *lock-in* (subscription boxes and saved preferences), *complementarities* (combining sourcing, grading and delivery).
 
-**Step 3 – Test unit economics with simple assumptions.** Suppose an average household order is GHS 250, the gross margin on produce is 25 per cent, delivery costs GHS 30 per order, and payment fees and packaging total GHS 10. Contribution per order = `250 × 0.25 − 30 − 10 = 62.5 − 40 = GHS 22.50`. If spoilage averages 5 per cent of sales value (GHS 12.50), contribution falls to GHS 10. The model is fragile: a small increase in spoilage or fuel costs makes orders unprofitable. (These figures are illustrative assumptions for practice, not market data.)
+**Step 3: Test unit economics with simple assumptions.** Suppose an average household order is GHS 250, the gross margin on produce is 25 per cent, delivery costs GHS 30 per order, and payment fees and packaging total GHS 10. Contribution per order = `250 × 0.25 − 30 − 10 = 62.5 − 40 = GHS 22.50`. If spoilage averages 5 per cent of sales value (GHS 12.50), contribution falls to GHS 10. The model is fragile: a small increase in spoilage or fuel costs makes orders unprofitable. (These figures are illustrative assumptions for practice, not market data.)
 
-**Step 4 – Evaluate coherence and risks.** The subscription box improves forecasting and reduces spoilage, linking Revenue Streams to Cost Structure. Restaurant accounts raise order size and lower delivery cost per cedi of sales. Key risks are spoilage, fuel price volatility, dependence on a few farmers and competition from informal market traders who offer credit. A recommendation would be to prioritise restaurant customers in dense delivery zones and set a minimum order value.
+**Step 4: Evaluate coherence and risks.** The subscription box improves forecasting and reduces spoilage, linking Revenue Streams to Cost Structure. Restaurant accounts raise order size and lower delivery cost per cedi of sales. Key risks are spoilage, fuel price volatility, dependence on a few farmers and competition from informal market traders who offer credit. A recommendation would be to prioritise restaurant customers in dense delivery zones and set a minimum order value.
 
 ## Diagram
 
@@ -195,15 +195,15 @@ Each step altered building blocks of the canvas. The *channel* moved from postal
 ## Further Reading
 
 - Osterwalder, A., & Pigneur, Y. (2010). *Business model generation: A handbook for visionaries, game changers, and challengers*. Wiley.
-- Teece, D. J. (2010). Business models, business strategy and innovation. *Long Range Planning, 43*(2–3), 172–194. <https://doi.org/10.1016/j.lrp.2009.07.003>
-- Zott, C., Amit, R., & Massa, L. (2011). The business model: Recent developments and future research. *Journal of Management, 37*(4), 1019–1042.
+- Teece, D. J. (2010). Business models, business strategy and innovation. *Long Range Planning, 43*(2-3), 172-194. <https://doi.org/10.1016/j.lrp.2009.07.003>
+- Zott, C., Amit, R., & Massa, L. (2011). The business model: Recent developments and future research. *Journal of Management, 37*(4), 1019-1042.
 - Shapiro, C., & Varian, H. R. (1999). *Information rules: A strategic guide to the network economy*. Harvard Business School Press.
-- Timmers, P. (1998). Business models for electronic markets. *Electronic Markets, 8*(2), 3–8.
+- Timmers, P. (1998). Business models for electronic markets. *Electronic Markets, 8*(2), 3-8.
 
 ## Video Resources
 
-- [Strategyzer](https://www.strategyzer.com/) — Strategyzer. Official site of the Business Model Canvas creators, with explanatory resources on business model design.
-- [MIT OpenCourseWare](https://ocw.mit.edu/) — Massachusetts Institute of Technology. Official open learning portal; search for entrepreneurship and business model materials.
+- [Strategyzer](https://www.strategyzer.com/): Strategyzer. Official site of the Business Model Canvas creators, with explanatory resources on business model design.
+- [MIT OpenCourseWare](https://ocw.mit.edu/): Massachusetts Institute of Technology. Official open learning portal; search for entrepreneurship and business model materials.
 
 ## Revision Summary
 

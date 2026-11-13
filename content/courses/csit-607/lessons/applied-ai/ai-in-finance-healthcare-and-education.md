@@ -15,7 +15,7 @@ The lesson is organised around a simple but demanding analytical habit: for ever
 ## Learning Objectives
 
 - Explain the main AI applications in finance, healthcare and education, including credit scoring, fraud detection, diagnostic support, triage and adaptive learning.
-- Analyse the opportunities and risks of each application using the opportunity–risk–readiness lens.
+- Analyse the opportunities and risks of each application using the opportunity-risk-readiness lens.
 - Apply a structured readiness assessment to a Ghanaian organisation considering an AI investment.
 - Evaluate why technically accurate AI systems can still fail when deployed in real clinical, financial or educational settings.
 - Compare the regulatory and ethical sensitivities of AI in the three sectors.
@@ -71,7 +71,7 @@ Education's specific risks include widening the digital divide (learners without
 
 ## Theories, Frameworks and Models
 
-### The opportunity–risk–readiness lens
+### The opportunity-risk-readiness lens
 
 A practical way to evaluate any sector application is to assess three dimensions in turn.
 
@@ -87,12 +87,12 @@ Agrawal, Gans and Goldfarb (2018) offer a complementary economic view: AI makes 
 
 Readiness is usually the binding constraint in practice. A useful checklist has six elements:
 
-1. **Data readiness** – Are historical outcomes recorded (repayments, diagnoses, grades)? Are they complete, representative and lawfully usable?
-2. **Technical readiness** – Is there connectivity, compute and integration with core systems (core banking, hospital information systems, learning management systems)?
-3. **Skills readiness** – Are there data scientists, but also domain experts and managers able to interpret model outputs?
-4. **Governance readiness** – Who owns the model, approves deployment and handles complaints?
-5. **Regulatory readiness** – Does the use comply with data protection law and sector regulators' expectations?
-6. **Cultural readiness** – Will loan officers, nurses or teachers trust and appropriately use the tool?
+1. **Data readiness**: Are historical outcomes recorded (repayments, diagnoses, grades)? Are they complete, representative and lawfully usable?
+2. **Technical readiness**: Is there connectivity, compute and integration with core systems (core banking, hospital information systems, learning management systems)?
+3. **Skills readiness**: Are there data scientists, but also domain experts and managers able to interpret model outputs?
+4. **Governance readiness**: Who owns the model, approves deployment and handles complaints?
+5. **Regulatory readiness**: Does the use comply with data protection law and sector regulators' expectations?
+6. **Cultural readiness**: Will loan officers, nurses or teachers trust and appropriately use the tool?
 
 ### Risk tiering across sectors
 
@@ -177,8 +177,8 @@ The case illustrates three points central to this lesson. First, **accuracy is n
 
 ## Practical Exercises
 
-1. **Opportunity–risk–readiness matrix.** Choose one application from each sector (for example, mobile money fraud detection, chest X-ray triage support and student drop-out prediction). Complete the three-dimension table for a named type of Ghanaian organisation. *Expected output:* a table of three rows with justified scores and a one-paragraph recommendation on which to pursue first.
-2. **Threshold reasoning.** For a triage model that outputs a risk score, write down the consequences of a false negative and a false positive, and argue whether the threshold should favour precision or recall. *Expected output:* a short justification (150–200 words) linking error costs to the threshold choice.
+1. **Opportunity-risk-readiness matrix.** Choose one application from each sector (for example, mobile money fraud detection, chest X-ray triage support and student drop-out prediction). Complete the three-dimension table for a named type of Ghanaian organisation. *Expected output:* a table of three rows with justified scores and a one-paragraph recommendation on which to pursue first.
+2. **Threshold reasoning.** For a triage model that outputs a risk score, write down the consequences of a false negative and a false positive, and argue whether the threshold should favour precision or recall. *Expected output:* a short justification (150-200 words) linking error costs to the threshold choice.
 3. **Readiness audit.** Using the six readiness dimensions, interview a colleague or reflect on your own organisation and rate each dimension. *Expected output:* a readiness profile with the weakest dimension identified and two actions to strengthen it.
 
 ## Key Takeaways
@@ -199,8 +199,8 @@ The case illustrates three points central to this lesson. First, **accuracy is n
 
 ## Video Resources
 
-- [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) — Google for Developers. Official free course whose classification modules explain the precision–recall trade-offs that underpin fraud and triage decisions.
-- [Elements of AI](https://www.elementsofai.com/) — University of Helsinki and MinnaLearn. Free introductory course discussing the societal implications of AI applications.
+- [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course): Google for Developers. Official free course whose classification modules explain the precision-recall trade-offs that underpin fraud and triage decisions.
+- [Elements of AI](https://www.elementsofai.com/): University of Helsinki and MinnaLearn. Free introductory course discussing the societal implications of AI applications.
 
 ## Revision Summary
 

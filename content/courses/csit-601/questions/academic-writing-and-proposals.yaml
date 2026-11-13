@@ -138,7 +138,7 @@ questions:
     prompt: Match each research focus with the theory that best fits it.
     pairs:
       - left: Organisational adoption of AI by SMEs
-        right: Technology–organisation–environment (TOE) framework
+        right: Technology-organisation-environment (TOE) framework
       - left: Individual employees' intention to use a new system
         right: UTAUT
       - left: Spread of an innovation through a community over time
@@ -461,7 +461,7 @@ questions:
     prompt: Match each worked proposal topic with the theory used in its framework.
     pairs:
       - left: AI adoption and SME operational efficiency
-        right: Technology–organisation–environment framework
+        right: Technology-organisation-environment framework
       - left: Digital payment acceptance among retailers
         right: Extended UTAUT
       - left: Cybersecurity awareness among students

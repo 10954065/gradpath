@@ -135,7 +135,7 @@ flowchart TD
 
 **Illustrative scenario.** Akosua is surveying registered SMEs in Greater Accra about AI adoption. A business association's list contains `N = 1,200` firms. She wants to estimate the proportion that use any AI tool with 95% confidence and a margin of error of ±5 percentage points. No previous estimate exists.
 
-**Step 1 – Choose the inputs.**
+**Step 1: Choose the inputs.**
 
 ```
 z = 1.96 (95% confidence)
@@ -144,7 +144,7 @@ q = 1 − 0.5 = 0.5
 e = 0.05
 ```
 
-**Step 2 – Compute n0.**
+**Step 2: Compute n0.**
 
 ```
 n0 = (1.96^2 × 0.5 × 0.5) / 0.05^2
@@ -153,7 +153,7 @@ n0 = (1.96^2 × 0.5 × 0.5) / 0.05^2
    = 384.16  → 385 (always round up)
 ```
 
-**Step 3 – Apply the finite population correction.**
+**Step 3: Apply the finite population correction.**
 
 ```
 n = 384.16 / (1 + (384.16 − 1) / 1,200)
@@ -165,15 +165,15 @@ n = 384.16 / (1 + (384.16 − 1) / 1,200)
 
 This is very close to the figure given in Krejcie and Morgan's (1970) table for a population of 1,200, as expected, since both rest on the same assumptions.
 
-**Step 4 – Adjust for the expected response rate.** From discussions with the association, Akosua expects about 60% of approached firms to complete the questionnaire.
+**Step 4: Adjust for the expected response rate.** From discussions with the association, Akosua expects about 60% of approached firms to complete the questionnaire.
 
 ```
 Firms to approach = 292 / 0.60 = 486.7 → 487
 ```
 
-**Step 5 – Check the planned analysis.** She also plans a multiple regression with five predictors of AI adoption intention. Green's rule of thumb gives `50 + 8 × 5 = 90`, comfortably below 292, so the descriptive target is binding.
+**Step 5: Check the planned analysis.** She also plans a multiple regression with five predictors of AI adoption intention. Green's rule of thumb gives `50 + 8 × 5 = 90`, comfortably below 292, so the descriptive target is binding.
 
-**Step 6 – Interpret the margin of error if the target is missed.** Suppose only 200 usable responses are returned and the observed proportion is 0.5. Ignoring the FPC for simplicity:
+**Step 6: Interpret the margin of error if the target is missed.** Suppose only 200 usable responses are returned and the observed proportion is 0.5. Ignoring the FPC for simplicity:
 
 ```
 e = 1.96 × √(p × q / n)
@@ -185,7 +185,7 @@ e = 1.96 × √(p × q / n)
 
 Precision is lower than planned, and Akosua must report this honestly.
 
-**Step 7 – A mean-based alternative.** If her key outcome were a mean score on a five-point scale with a pilot standard deviation of 0.8, and she wanted a margin of error of ±0.1 scale points:
+**Step 7: A mean-based alternative.** If her key outcome were a mean score on a five-point scale with a pilot standard deviation of 0.8, and she wanted a margin of error of ±0.1 scale points:
 
 ```
 n0 = (1.96^2 × 0.8^2) / 0.1^2 = (3.8416 × 0.64) / 0.01 = 245.86 → 246
@@ -200,7 +200,7 @@ Sample-size reasoning appears in many Ghanaian research settings.
 - **Digital payments among market retailers.** If no frame exists and cluster sampling of market sections is used, a design effect must be considered. Traders in the same section often sell similar goods and share experiences, so the effective sample is smaller than the raw count. A researcher might plan for more completed questionnaires than the simple Cochran calculation suggests and explain why.
 - **Student cybersecurity awareness.** A university's student population is large, so the FPC makes little difference and `n0` of about 385 is adequate for a ±5-point estimate overall. But if the aim is to compare five colleges, each college needs enough responses for its own estimate, which may require a larger total.
 - **Healthcare technology adoption.** The population of IT or records officers across a region's hospitals may be small, for example fewer than 100. Here the FPC substantially reduces the required sample, and a census (studying everyone) may be more sensible than sampling.
-- **Qualitative interviews with SME owners about AI.** An exploratory study might begin with about 12–20 interviews, sampled for maximum variation across sectors and firm sizes, with stopping decided by saturation. The methodology chapter should describe how new codes per interview were tracked.
+- **Qualitative interviews with SME owners about AI.** An exploratory study might begin with about 12-20 interviews, sampled for maximum variation across sectors and firm sizes, with stopping decided by saturation. The methodology chapter should describe how new codes per interview were tracked.
 
 Response rates in Ghanaian business surveys vary widely depending on mode, gatekeepers and timing, so students should base assumptions on their pilot or on comparable studies rather than on optimistic guesses, and should state those assumptions.
 
@@ -254,16 +254,16 @@ The lesson for sample size is subtle but crucial. National polls typically had s
 ## Further Reading
 
 - Cochran, W. G. (1977). *Sampling techniques* (3rd ed.). Wiley.
-- Krejcie, R. V., & Morgan, D. W. (1970). Determining sample size for research activities. *Educational and Psychological Measurement, 30*(3), 607–610.
+- Krejcie, R. V., & Morgan, D. W. (1970). Determining sample size for research activities. *Educational and Psychological Measurement, 30*(3), 607-610.
 - Cohen, J. (1988). *Statistical power analysis for the behavioral sciences* (2nd ed.). Lawrence Erlbaum Associates.
-- Green, S. B. (1991). How many subjects does it take to do a regression analysis? *Multivariate Behavioral Research, 26*(3), 499–510.
-- Guest, G., Bunce, A., & Johnson, L. (2006). How many interviews are enough? An experiment with data saturation and variability. *Field Methods, 18*(1), 59–82.
-- Malterud, K., Siersma, V. D., & Guassora, A. D. (2016). Sample size in qualitative interview studies: Guided by information power. *Qualitative Health Research, 26*(13), 1753–1760.
+- Green, S. B. (1991). How many subjects does it take to do a regression analysis? *Multivariate Behavioral Research, 26*(3), 499-510.
+- Guest, G., Bunce, A., & Johnson, L. (2006). How many interviews are enough? An experiment with data saturation and variability. *Field Methods, 18*(1), 59-82.
+- Malterud, K., Siersma, V. D., & Guassora, A. D. (2016). Sample size in qualitative interview studies: Guided by information power. *Qualitative Health Research, 26*(13), 1753-1760.
 
 ## Video Resources
 
-- [Khan Academy: Statistics and Probability](https://www.khanacademy.org/math/statistics-probability) — Khan Academy. Free official course with units on confidence intervals and margins of error.
-- [SAGE Research Methods](https://methods.sagepub.com/) — SAGE Publishing. Official research methods platform (access may depend on institutional subscription) with material on sample size and saturation.
+- [Khan Academy: Statistics and Probability](https://www.khanacademy.org/math/statistics-probability): Khan Academy. Free official course with units on confidence intervals and margins of error.
+- [SAGE Research Methods](https://methods.sagepub.com/): SAGE Publishing. Official research methods platform (access may depend on institutional subscription) with material on sample size and saturation.
 
 ## Revision Summary
 

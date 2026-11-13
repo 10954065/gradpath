@@ -172,9 +172,9 @@ The case is a precise illustration of shared responsibility. The provider's infr
 
 ## Video Resources
 
-- [AWS Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/) — Amazon Web Services. Official explanation of how security duties are divided between AWS and its customers.
-- [Microsoft Learn](https://learn.microsoft.com/en-us/training/) — Microsoft. Official free training portal; search for cloud security fundamentals and identity modules.
-- [Cloud Security Alliance](https://cloudsecurityalliance.org/) — Cloud Security Alliance. Official site with cloud security guidance, research and training information.
+- [AWS Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/): Amazon Web Services. Official explanation of how security duties are divided between AWS and its customers.
+- [Microsoft Learn](https://learn.microsoft.com/en-us/training/): Microsoft. Official free training portal; search for cloud security fundamentals and identity modules.
+- [Cloud Security Alliance](https://cloudsecurityalliance.org/): Cloud Security Alliance. Official site with cloud security guidance, research and training information.
 
 ## Revision Summary
 

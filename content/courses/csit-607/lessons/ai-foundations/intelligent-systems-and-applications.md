@@ -68,7 +68,7 @@ Most business environments are partially observable, stochastic, sequential, dyn
 
 Five classic agent designs form a ladder of sophistication:
 
-1. **Simple reflex agents** act on the current percept using condition–action rules ("IF the transaction exceeds the daily limit THEN decline"). They are fast and transparent but fail when the right action depends on history.
+1. **Simple reflex agents** act on the current percept using condition-action rules ("IF the transaction exceeds the daily limit THEN decline"). They are fast and transparent but fail when the right action depends on history.
 2. **Model-based reflex agents** maintain an internal state that tracks aspects of the world they cannot currently see, such as a customer's recent transaction pattern.
 3. **Goal-based agents** consider the future consequences of actions and choose those that achieve a goal, for example route-planning for deliveries.
 4. **Utility-based agents** go further by weighing how desirable different outcomes are, trading off speed, cost and risk through a utility function.
@@ -189,9 +189,9 @@ flowchart LR
 
 ## Video Resources
 
-- [Elements of AI](https://www.elementsofai.com/) — University of Helsinki and MinnaLearn. Free course whose early chapters cover AI problem-solving and real-world applications.
-- [Google AI](https://ai.google/) — Google. Official overview of AI research areas and applied examples.
-- [IBM Think: Artificial intelligence](https://www.ibm.com/think/topics/artificial-intelligence) — IBM. Explainer on AI types and business applications.
+- [Elements of AI](https://www.elementsofai.com/): University of Helsinki and MinnaLearn. Free course whose early chapters cover AI problem-solving and real-world applications.
+- [Google AI](https://ai.google/): Google. Official overview of AI research areas and applied examples.
+- [IBM Think: Artificial intelligence](https://www.ibm.com/think/topics/artificial-intelligence): IBM. Explainer on AI types and business applications.
 
 ## Revision Summary
 

@@ -202,13 +202,13 @@ The diagram reads top-down: start with the asset, decide which properties matter
 
 - Anderson, R. (2020). *Security engineering: A guide to building dependable distributed systems* (3rd ed.). Wiley.
 - National Institute of Standards and Technology. (2024). *The NIST Cybersecurity Framework (CSF) 2.0* (NIST CSWP 29). <https://www.nist.gov/cyberframework>
-- Saltzer, J. H., & Schroeder, M. D. (1975). The protection of information in computer systems. *Proceedings of the IEEE, 63*(9), 1278–1308.
+- Saltzer, J. H., & Schroeder, M. D. (1975). The protection of information in computer systems. *Proceedings of the IEEE, 63*(9), 1278-1308.
 - Stallings, W., & Brown, L. (2018). *Computer security: Principles and practice* (4th ed.). Pearson.
 
 ## Video Resources
 
-- [Cisco Skills for All](https://skillsforall.com/) — Cisco Networking Academy. Free self-paced courses, including an introduction to cybersecurity that covers the CIA triad with interactive activities.
-- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework) — National Institute of Standards and Technology. Official CSF 2.0 page with overview material and resources explaining the six core functions.
+- [Cisco Skills for All](https://skillsforall.com/): Cisco Networking Academy. Free self-paced courses, including an introduction to cybersecurity that covers the CIA triad with interactive activities.
+- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework): National Institute of Standards and Technology. Official CSF 2.0 page with overview material and resources explaining the six core functions.
 
 ## Revision Summary
 

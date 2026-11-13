@@ -31,7 +31,7 @@ This lesson explains the purpose and operation of the most important secure prot
 - **TLS (Transport Layer Security)**: The standard protocol for securing application traffic such as HTTPS, email transport and many APIs; TLS 1.3 is the current version.
 - **Handshake**: The initial exchange in which parties agree parameters, authenticate and derive shared session keys.
 - **Cipher suite**: The set of algorithms used in a session; in TLS 1.3 it names the authenticated encryption algorithm and hash function.
-- **Ephemeral Diffie–Hellman (ECDHE/DHE)**: Key exchange using temporary key pairs generated per session, providing forward secrecy.
+- **Ephemeral Diffie-Hellman (ECDHE/DHE)**: Key exchange using temporary key pairs generated per session, providing forward secrecy.
 - **Forward secrecy**: The property that compromise of a server's long-term private key does not reveal past session keys.
 - **SSH (Secure Shell)**: A protocol for secure remote login, command execution and file transfer.
 - **VPN (virtual private network)**: A protected tunnel that carries traffic between networks or from a user's device to a network over an untrusted network.
@@ -52,11 +52,11 @@ Encryption alone gives only the first property. A protocol that encrypts traffic
 
 ### TLS in context
 
-TLS operates above TCP and below application protocols. HTTPS is HTTP carried over TLS, typically on TCP port 443. TLS 1.3, standardised in RFC 8446 in 2018, simplified and strengthened earlier versions by removing obsolete algorithms (such as RSA key transport, static Diffie–Hellman, RC4 and CBC-mode cipher suites), requiring forward secrecy, encrypting more of the handshake and reducing the full handshake to one round trip. SSL 2.0, SSL 3.0, TLS 1.0 and TLS 1.1 are all deprecated and should be disabled.
+TLS operates above TCP and below application protocols. HTTPS is HTTP carried over TLS, typically on TCP port 443. TLS 1.3, standardised in RFC 8446 in 2018, simplified and strengthened earlier versions by removing obsolete algorithms (such as RSA key transport, static Diffie-Hellman, RC4 and CBC-mode cipher suites), requiring forward secrecy, encrypting more of the handshake and reducing the full handshake to one round trip. SSL 2.0, SSL 3.0, TLS 1.0 and TLS 1.1 are all deprecated and should be disabled.
 
 ### SSH
 
-SSH provides secure remote administration of servers and network devices, replacing the insecure Telnet and rlogin protocols, and supports secure file transfer (SFTP and SCP) and port forwarding. Its transport layer negotiates algorithms and performs a Diffie–Hellman key exchange; the server authenticates with a host key, and the client checks that key against a stored fingerprint (the "trust on first use" prompt users see on first connection). Users then authenticate, preferably with public-key authentication rather than passwords. Good practice includes disabling password login for administrators, protecting private keys with passphrases or hardware tokens, restricting which source networks may connect and never exposing SSH for privileged accounts directly to the whole internet.
+SSH provides secure remote administration of servers and network devices, replacing the insecure Telnet and rlogin protocols, and supports secure file transfer (SFTP and SCP) and port forwarding. Its transport layer negotiates algorithms and performs a Diffie-Hellman key exchange; the server authenticates with a host key, and the client checks that key against a stored fingerprint (the "trust on first use" prompt users see on first connection). Users then authenticate, preferably with public-key authentication rather than passwords. Good practice includes disabling password login for administrators, protecting private keys with passphrases or hardware tokens, restricting which source networks may connect and never exposing SSH for privileged accounts directly to the whole internet.
 
 ### VPNs
 
@@ -85,13 +85,13 @@ Consider a customer's phone connecting to a bank's API server. The handshake pro
 - the TLS versions it supports (indicating 1.3);
 - a random value (nonce);
 - a list of supported cipher suites, for example `TLS_AES_128_GCM_SHA256` and `TLS_CHACHA20_POLY1305_SHA256`;
-- supported key-exchange groups (for example X25519) and one or more **key shares**, which are ephemeral Diffie–Hellman public values;
+- supported key-exchange groups (for example X25519) and one or more **key shares**, which are ephemeral Diffie-Hellman public values;
 - the Server Name Indication (SNI), naming the site it wants;
 - supported signature algorithms.
 
 Because the client guesses the key-exchange group and sends its key share immediately, TLS 1.3 can complete in one round trip.
 
-**Step 2: ServerHello (server → client).** The server selects the version, a cipher suite and a key-exchange group, and sends its own ephemeral key share and random value. At this point **both sides can compute the same shared secret** from the two Diffie–Hellman key shares. Using a key derivation function (HKDF), each derives handshake encryption keys. Everything after this message is encrypted.
+**Step 2: ServerHello (server → client).** The server selects the version, a cipher suite and a key-exchange group, and sends its own ephemeral key share and random value. At this point **both sides can compute the same shared secret** from the two Diffie-Hellman key shares. Using a key derivation function (HKDF), each derives handshake encryption keys. Everything after this message is encrypted.
 
 **Step 3: EncryptedExtensions (server → client, encrypted).** Additional parameters, such as the application protocol negotiated (for example HTTP/2).
 
@@ -111,7 +111,7 @@ If any check fails, the client aborts. This is where a fake bank server is rejec
 
 **Step 9: Application data.** Both sides derive application traffic keys and exchange data protected by authenticated encryption (AES-GCM or ChaCha20-Poly1305), which provides confidentiality and integrity together.
 
-**Why this design gives forward secrecy:** the session keys came from ephemeral Diffie–Hellman values that are discarded after the session. The server's long-term private key was used only to *sign*, not to encrypt the key. Stealing that key later does not reveal recorded sessions.
+**Why this design gives forward secrecy:** the session keys came from ephemeral Diffie-Hellman values that are discarded after the session. The server's long-term private key was used only to *sign*, not to encrypt the key. Stealing that key later does not reveal recorded sessions.
 
 **Comparison with TLS 1.2:** TLS 1.2 normally needed two round trips, sent the certificate unencrypted and allowed RSA key transport, in which the client encrypted the pre-master secret with the server's RSA public key, giving no forward secrecy. TLS 1.3 also offers session resumption and optional "0-RTT" early data, which is faster but can be replayed, so it should be used only for requests that are safe to repeat.
 
@@ -139,7 +139,7 @@ In April 2014 researchers disclosed a serious vulnerability, catalogued as CVE-2
 **Lessons:**
 
 - **Protocol design versus implementation.** TLS itself was not broken; a coding error (a missing bounds check) in one implementation undermined it. Secure protocols depend on secure software.
-- **Forward secrecy matters.** Servers using RSA key transport faced the risk that recorded past traffic could be decrypted with a leaked private key; servers using ephemeral Diffie–Hellman limited that exposure. This contributed to the industry's move to make forward secrecy mandatory in TLS 1.3.
+- **Forward secrecy matters.** Servers using RSA key transport faced the risk that recorded past traffic could be decrypted with a leaked private key; servers using ephemeral Diffie-Hellman limited that exposure. This contributed to the industry's move to make forward secrecy mandatory in TLS 1.3.
 - **Response requires more than patching.** Organisations had to patch OpenSSL, then generate new key pairs, obtain and install new certificates, revoke old certificates and invalidate user sessions and passwords where appropriate.
 - **Open-source sustainability.** The incident drew attention to under-resourced projects maintaining critical infrastructure, and led to industry funding initiatives for core open-source projects.
 
@@ -161,7 +161,7 @@ flowchart TD
 ## Common Misconceptions
 
 - "The padlock means the website is trustworthy." It means the connection is encrypted to a server that holds a valid certificate for that name; a fraudster's lookalike domain can also have a valid certificate.
-- "TLS encrypts the data with the server's public key." In TLS 1.3 the session keys come from ephemeral Diffie–Hellman; the certificate key is used to sign the handshake, not to encrypt data.
+- "TLS encrypts the data with the server's public key." In TLS 1.3 the session keys come from ephemeral Diffie-Hellman; the certificate key is used to sign the handshake, not to encrypt data.
 - "DNSSEC encrypts DNS queries." DNSSEC provides authenticity and integrity only; confidentiality requires DNS over TLS or DNS over HTTPS.
 - "Having a VPN means we are secure." A VPN protects traffic in transit and controls network access; weak VPN credentials or unpatched gateways create a direct path for attackers.
 - "SSH is safe whatever the configuration." Password-based SSH exposed to the internet invites credential attacks; key-based authentication and restricted access are needed.
@@ -192,7 +192,7 @@ flowchart TD
 ## Key Takeaways
 
 - Secure channels need confidentiality, integrity, authentication and ideally forward secrecy; encryption alone is insufficient.
-- TLS 1.3 completes in one round trip, uses ephemeral Diffie–Hellman, encrypts most of the handshake and authenticates the server via certificate and CertificateVerify signature.
+- TLS 1.3 completes in one round trip, uses ephemeral Diffie-Hellman, encrypts most of the handshake and authenticates the server via certificate and CertificateVerify signature.
 - SSH secures remote administration and should use key-based authentication with restricted access.
 - VPNs protect traffic in transit but become attack paths when credentials are weak or gateways unpatched.
 - DNSSEC authenticates DNS answers but provides no confidentiality; Heartbleed shows implementations can fail even when protocols are sound.
@@ -206,12 +206,12 @@ flowchart TD
 
 ## Video Resources
 
-- [Cisco Skills for All](https://skillsforall.com/) — Cisco Networking Academy. Free networking and cybersecurity courses covering VPNs, SSH and secure communications.
-- [PortSwigger Web Security Academy](https://portswigger.net/web-security) — PortSwigger. Free learning material on web security topics, including how HTTPS and related protections fit into web application defence.
+- [Cisco Skills for All](https://skillsforall.com/): Cisco Networking Academy. Free networking and cybersecurity courses covering VPNs, SSH and secure communications.
+- [PortSwigger Web Security Academy](https://portswigger.net/web-security): PortSwigger. Free learning material on web security topics, including how HTTPS and related protections fit into web application defence.
 
 ## Revision Summary
 
-Secure protocols create protected channels over untrusted networks. TLS 1.3 uses an ephemeral Diffie–Hellman key exchange, certificate-based server authentication with a signature over the handshake and authenticated encryption for data. SSH secures administration, VPNs secure network-level tunnels, and DNSSEC signs DNS answers for authenticity without confidentiality.
+Secure protocols create protected channels over untrusted networks. TLS 1.3 uses an ephemeral Diffie-Hellman key exchange, certificate-based server authentication with a signature over the handshake and authenticated encryption for data. SSH secures administration, VPNs secure network-level tunnels, and DNSSEC signs DNS answers for authenticity without confidentiality.
 
 - Goals: confidentiality, integrity, authentication, forward secrecy.
 - TLS 1.3: ClientHello and ServerHello with key shares, then encrypted Certificate, CertificateVerify, Finished.

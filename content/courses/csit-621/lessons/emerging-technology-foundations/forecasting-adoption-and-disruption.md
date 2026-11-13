@@ -192,15 +192,15 @@ flowchart TD
 - Rogers, E. M. (2003). *Diffusion of innovations* (5th ed.). Free Press.
 - Christensen, C. M. (1997). *The innovator's dilemma: When new technologies cause great firms to fail*. Harvard Business School Press.
 - Christensen, C. M., & Raynor, M. E. (2003). *The innovator's solution: Creating and sustaining successful growth*. Harvard Business School Press.
-- Christensen, C. M., Raynor, M. E., & McDonald, R. (2015). What is disruptive innovation? *Harvard Business Review, 93*(12), 44–53.
+- Christensen, C. M., Raynor, M. E., & McDonald, R. (2015). What is disruptive innovation? *Harvard Business Review, 93*(12), 44-53.
 - Moore, G. A. (1991). *Crossing the chasm: Marketing and selling technology products to mainstream customers*. HarperBusiness.
 - Foster, R. N. (1986). *Innovation: The attacker's advantage*. Summit Books.
-- Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319–340.
+- Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319-340.
 
 ## Video Resources
 
-- [IBM Think](https://www.ibm.com/think) — IBM. Articles and explainers on technology trends useful as raw material for forecasting exercises.
-- [Microsoft Learn](https://learn.microsoft.com/) — Microsoft. Free learning paths that illustrate how vendors package emerging technologies for adoption by organisations.
+- [IBM Think](https://www.ibm.com/think): IBM. Articles and explainers on technology trends useful as raw material for forecasting exercises.
+- [Microsoft Learn](https://learn.microsoft.com/): Microsoft. Free learning paths that illustrate how vendors package emerging technologies for adoption by organisations.
 
 ## Revision Summary
 

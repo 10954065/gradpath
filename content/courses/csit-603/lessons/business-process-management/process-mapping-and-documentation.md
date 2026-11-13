@@ -64,7 +64,7 @@ A swimlane map places each activity in the lane of the role that performs it. Wh
 
 1. **Confirm scope** from the SIPOC: trigger, outcome, customer.
 2. **Identify the roles** (people, departments, external parties, systems) and create one lane for each.
-3. **List activities** in sequence using verb–noun labels ("Verify prescription", not "Prescription").
+3. **List activities** in sequence using verb-noun labels ("Verify prescription", not "Prescription").
 4. **Add decisions** where the flow branches, labelling each outgoing path with its condition.
 5. **Draw the happy path first**, then add the main exceptions (rework loops, rejections, escalations).
 6. **Mark hand-offs, waits and documents** that move between lanes.
@@ -201,7 +201,7 @@ The case is relevant here because it shows the value of making *time and informa
 ## Practical Exercises
 
 1. **SIPOC for a restaurant.** Produce a SIPOC for "order-to-table" in a busy Accra restaurant. *Expected output:* a completed five-column table with five to seven process steps.
-2. **Swimlane map.** Map the as-is process for receiving a parcel at a courier depot, with at least four lanes and two decision points. *Expected output:* a diagram in a tool such as Bizagi Modeler (<https://www.bizagi.com/>) or on paper, with verb–noun labels and labelled decision branches.
+2. **Swimlane map.** Map the as-is process for receiving a parcel at a courier depot, with at least four lanes and two decision points. *Expected output:* a diagram in a tool such as Bizagi Modeler (<https://www.bizagi.com/>) or on paper, with verb-noun labels and labelled decision branches.
 3. **RACI matrix.** For the courier process, assign R, A, C and I for six activities, ensuring exactly one "A" per activity. *Expected output:* a RACI table with a short justification of each accountable role.
 4. **Discovery plan.** Plan the discovery of a clinic's outpatient process, specifying which methods you will use, with whom, in what order and how you will triangulate. *Expected output:* a one-page plan.
 
@@ -221,8 +221,8 @@ The case is relevant here because it shows the value of making *time and informa
 
 ## Video Resources
 
-- [Bizagi](https://www.bizagi.com/) — Bizagi. Official site for Bizagi Modeler, a free-to-download process mapping and documentation tool.
-- [Camunda Documentation](https://docs.camunda.io/) — Camunda. Official documentation including guidance on modelling processes with Camunda Modeler.
+- [Bizagi](https://www.bizagi.com/): Bizagi. Official site for Bizagi Modeler, a free-to-download process mapping and documentation tool.
+- [Camunda Documentation](https://docs.camunda.io/): Camunda. Official documentation including guidance on modelling processes with Camunda Modeler.
 
 ## Revision Summary
 
@@ -230,6 +230,6 @@ Process discovery builds an accurate as-is picture by triangulating documents, o
 
 - Triangulate discovery methods; validate with real cases.
 - SIPOC = Suppliers, Inputs, Process, Outputs, Customers.
-- Swimlanes expose hand-offs; label activities verb–noun.
+- Swimlanes expose hand-offs; label activities verb-noun.
 - RACI: one Accountable per activity.
 - Value stream maps reveal waiting time between steps.

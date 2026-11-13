@@ -17,7 +17,7 @@ Behind the scenes, AI also supports decisions made by managers and professionals
 - Compare rule-based, intent-based and LLM-based chatbot architectures and identify suitable uses for each.
 - Apply containment rate, resolution rate and cost-per-contact calculations to evaluate a support-automation deployment.
 - Design escalation and confidence-threshold rules that hand conversations to humans appropriately.
-- Explain the structure of a decision support system using Simon's intelligence–design–choice model and the data, model and interface components.
+- Explain the structure of a decision support system using Simon's intelligence-design-choice model and the data, model and interface components.
 - Apply an expected-value payoff table as a model-driven decision support technique and evaluate its limitations.
 
 ## Prerequisite Knowledge
@@ -100,7 +100,7 @@ An intent classifier returns probabilities for each message:
 | Message | Top intent | Confidence | Routing rule | Action |
 |---|---|---|---|---|
 | "my balance pls" | Check balance | 0.92 | ≥ 0.80: automate | Authenticate and show balance |
-| "money gone but not received" | Failed transfer | 0.55 | 0.40–0.79: clarify | Ask for the transaction reference and confirm intent |
+| "money gone but not received" | Failed transfer | 0.55 | 0.40-0.79: clarify | Ask for the transaction reference and confirm intent |
 | "someone called me and I gave my PIN" | Fraud report | 0.88 | Sensitive intent: always escalate | Immediate transfer to fraud team with security steps |
 | "eii this thing" | Unclear | 0.25 | < 0.40: human | Offer a human agent |
 
@@ -164,7 +164,7 @@ flowchart TD
 - Describing chatbots generically without distinguishing rule-based, intent-based and LLM-based designs.
 - Omitting escalation design and human handover in proposals for customer-facing AI.
 - Miscalculating payoffs by forgetting the cost of unsold units when supply exceeds demand.
-- Describing a DSS without linking it to Simon's intelligence–design–choice phases or its data, model and interface components.
+- Describing a DSS without linking it to Simon's intelligence-design-choice phases or its data, model and interface components.
 
 ## Critical Thinking Questions
 
@@ -192,14 +192,14 @@ flowchart TD
 - Simon, H. A. (1960). *The new science of management decision*. Harper & Row.
 - Keen, P. G. W., & Scott Morton, M. S. (1978). *Decision support systems: An organizational perspective*. Addison-Wesley.
 - Power, D. J. (2002). *Decision support systems: Concepts and resources for managers*. Quorum Books.
-- Weizenbaum, J. (1966). ELIZA: A computer program for the study of natural language communication between man and machine. *Communications of the ACM, 9*(1), 36–45.
+- Weizenbaum, J. (1966). ELIZA: A computer program for the study of natural language communication between man and machine. *Communications of the ACM, 9*(1), 36-45.
 - Russell, S., & Norvig, P. (2020). *Artificial intelligence: A modern approach* (4th ed.). Pearson.
 
 ## Video Resources
 
-- [Google Cloud Training](https://cloud.google.com/learn/training) — Google Cloud. Official training catalogue including conversational AI and generative AI learning paths.
-- [Hugging Face Learn](https://huggingface.co/learn) — Hugging Face. Free courses on building language applications with open models.
-- [IBM Think: Artificial intelligence](https://www.ibm.com/think/topics/artificial-intelligence) — IBM. Explainer pages covering AI in customer service and decision-making.
+- [Google Cloud Training](https://cloud.google.com/learn/training): Google Cloud. Official training catalogue including conversational AI and generative AI learning paths.
+- [Hugging Face Learn](https://huggingface.co/learn): Hugging Face. Free courses on building language applications with open models.
+- [IBM Think: Artificial intelligence](https://www.ibm.com/think/topics/artificial-intelligence): IBM. Explainer pages covering AI in customer service and decision-making.
 
 ## Revision Summary
 

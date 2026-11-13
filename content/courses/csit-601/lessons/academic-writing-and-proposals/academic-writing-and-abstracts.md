@@ -16,7 +16,7 @@ This lesson explains the characteristics of academic writing, the difference bet
 
 - Explain the defining characteristics of academic writing, including argument, evidence, precision and appropriate tone.
 - Distinguish descriptive from critical writing and transform descriptive passages into critical ones.
-- Apply paragraph structures such as point–evidence–analysis–link to build coherent arguments.
+- Apply paragraph structures such as point-evidence-analysis-link to build coherent arguments.
 - Use hedging and precise language to make claims proportionate to evidence.
 - Construct an informative abstract for a proposal and for a completed study, including purpose, method, findings and implications.
 
@@ -62,7 +62,7 @@ The critical version evaluates (strength and weakness), interprets (why it matte
 
 ### Building paragraphs: PEAL
 
-A reliable structure for academic paragraphs is **Point–Evidence–Analysis–Link (PEAL)**:
+A reliable structure for academic paragraphs is **Point-Evidence-Analysis-Link (PEAL)**:
 
 - **Point**: a topic sentence stating the claim.
 - **Evidence**: data, examples or citations supporting the claim.
@@ -92,7 +92,7 @@ Research rarely proves anything conclusively. Over-claiming ("This study proves 
 
 ### Abstracts: purpose and content
 
-The abstract is often the only part of a document that many readers, reviewers and examiners read first. It must stand alone, with no citations (in most cases), no undefined abbreviations and no information absent from the main text. Most guidance, including the APA *Publication Manual* (7th ed.), recommends a concise length; many universities and journals set a specific word limit, commonly in the range of 150–300 words, so always check your own requirement.
+The abstract is often the only part of a document that many readers, reviewers and examiners read first. It must stand alone, with no citations (in most cases), no undefined abbreviations and no information absent from the main text. Most guidance, including the APA *Publication Manual* (7th ed.), recommends a concise length; many universities and journals set a specific word limit, commonly in the range of 150-300 words, so always check your own requirement.
 
 An informative abstract for a **completed study** answers five questions:
 
@@ -128,9 +128,9 @@ Expert writers rarely produce polished prose in one draft. A practical model is:
 
 > "This study is about AI. AI is very important nowadays. SMEs in Ghana were studied. A questionnaire was used and the results were analysed. The results were interesting and showed many things. Recommendations are given."
 
-**Step 1 – Diagnose.** The draft lacks a specific problem, purpose, sample, analysis method, actual findings and implications. Words such as "very important", "interesting" and "many things" are vague.
+**Step 1: Diagnose.** The draft lacks a specific problem, purpose, sample, analysis method, actual findings and implications. Words such as "very important", "interesting" and "many things" are vague.
 
-**Step 2 – Draft under structured headings.**
+**Step 2: Draft under structured headings.**
 
 - *Context/problem*: Ghanaian SMEs increasingly encounter AI-enabled tools, yet evidence on whether adoption improves operational efficiency is limited.
 - *Purpose*: Examine the relationship between AI adoption and perceived operational efficiency, and the role of organisational readiness.
@@ -138,11 +138,11 @@ Expert writers rarely produce polished prose in one draft. A practical model is:
 - *Findings*: (state the actual direction and nature of the main results).
 - *Implications*: For SME owners, technology vendors and policy-makers.
 
-**Step 3 – Combine into prose (format example with placeholder findings).**
+**Step 3: Combine into prose (format example with placeholder findings).**
 
-> "Although artificial intelligence (AI) tools are increasingly available to small and medium-sized enterprises (SMEs) in Ghana, little empirical evidence exists on whether their adoption improves operational efficiency. Drawing on the technology–organisation–environment framework, this study examined the relationship between AI adoption and perceived operational efficiency among SMEs in Accra, and whether organisational readiness moderates that relationship. A cross-sectional survey of owner-managers, selected through stratified random sampling by sector, was analysed using multiple regression. [State the principal findings here, for example the direction and significance of the main relationship and the moderating effect.] The findings contribute to technology adoption research by extending it to the SME context in Ghana and suggest that SMEs should invest in staff skills and data infrastructure alongside AI tools."
+> "Although artificial intelligence (AI) tools are increasingly available to small and medium-sized enterprises (SMEs) in Ghana, little empirical evidence exists on whether their adoption improves operational efficiency. Drawing on the technology-organisation-environment framework, this study examined the relationship between AI adoption and perceived operational efficiency among SMEs in Accra, and whether organisational readiness moderates that relationship. A cross-sectional survey of owner-managers, selected through stratified random sampling by sector, was analysed using multiple regression. [State the principal findings here, for example the direction and significance of the main relationship and the moderating effect.] The findings contribute to technology adoption research by extending it to the SME context in Ghana and suggest that SMEs should invest in staff skills and data infrastructure alongside AI tools."
 
-**Step 4 – Check.** Does the abstract stand alone? Are abbreviations defined? Are all claims in the main text? Is it within the required word limit? Are findings stated rather than promised? (In a real abstract, the placeholder sentence must be replaced with the actual results.)
+**Step 4: Check.** Does the abstract stand alone? Are abbreviations defined? Are all claims in the main text? Is it within the required word limit? Are findings stated rather than promised? (In a real abstract, the placeholder sentence must be replaced with the actual results.)
 
 ## Ghanaian Business Application
 
@@ -197,7 +197,7 @@ Each box usually needs only one or two sentences; together they form a complete,
 
 1. **Descriptive to critical.** Take a descriptive paragraph from your own literature notes and rewrite it using the PEAL structure. *Expected output:* the original and revised paragraphs, with each PEAL element labelled.
 2. **Hedging calibration.** Rewrite five over-claiming sentences (for example "The survey proves that trust causes adoption") so that they match the strength of the evidence. *Expected output:* five revised sentences with a brief justification for each choice.
-3. **Proposal abstract.** Write a 200–250 word abstract for your own planned study using the five-part structure, with methods in the future tense and expected contributions instead of findings. *Expected output:* a complete, self-contained proposal abstract.
+3. **Proposal abstract.** Write a 200-250 word abstract for your own planned study using the five-part structure, with methods in the future tense and expected contributions instead of findings. *Expected output:* a complete, self-contained proposal abstract.
 
 ## Key Takeaways
 
@@ -211,13 +211,13 @@ Each box usually needs only one or two sentences; together they form a complete,
 
 - Swales, J. M., & Feak, C. B. (2012). *Academic writing for graduate students: Essential tasks and skills* (3rd ed.). University of Michigan Press.
 - American Psychological Association. (2020). *Publication manual of the American Psychological Association* (7th ed.). American Psychological Association.
-- Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319–340.
+- Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319-340.
 - Saunders, M., Lewis, P., & Thornhill, A. (2019). *Research methods for business students* (8th ed.). Pearson.
 
 ## Video Resources
 
-- [APA Style](https://apastyle.apa.org/) — American Psychological Association. Official APA Style site with guidance on paper elements, including abstracts, and on clear, concise writing.
-- [Purdue Online Writing Lab](https://owl.purdue.edu/) — Purdue University. Official writing resource portal with guidance on academic writing, paragraphing and research writing.
+- [APA Style](https://apastyle.apa.org/): American Psychological Association. Official APA Style site with guidance on paper elements, including abstracts, and on clear, concise writing.
+- [Purdue Online Writing Lab](https://owl.purdue.edu/): Purdue University. Official writing resource portal with guidance on academic writing, paragraphing and research writing.
 
 ## Revision Summary
 

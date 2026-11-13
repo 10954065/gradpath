@@ -187,15 +187,15 @@ flowchart TB
 
 ## Further Reading
 
-- Hammer, M. (1990). Reengineering work: Don't automate, obliterate. *Harvard Business Review, 68*(4), 104–112.
+- Hammer, M. (1990). Reengineering work: Don't automate, obliterate. *Harvard Business Review, 68*(4), 104-112.
 - Hammer, M., & Champy, J. (1993). *Reengineering the corporation: A manifesto for business revolution*. HarperBusiness.
-- Davenport, T. H., & Short, J. E. (1990). The new industrial engineering: Information technology and business process redesign. *Sloan Management Review, 31*(4), 11–27.
+- Davenport, T. H., & Short, J. E. (1990). The new industrial engineering: Information technology and business process redesign. *Sloan Management Review, 31*(4), 11-27.
 - Davenport, T. H. (1993). *Process innovation: Reengineering work through information technology*. Harvard Business School Press.
 
 ## Video Resources
 
-- [Camunda](https://camunda.com/) — Camunda. Official site with resources on process orchestration and automating redesigned processes.
-- [SAP Learning](https://learning.sap.com/) — SAP. Learning journeys showing how standard ERP processes such as procurement are designed and automated.
+- [Camunda](https://camunda.com/): Camunda. Official site with resources on process orchestration and automating redesigned processes.
+- [SAP Learning](https://learning.sap.com/): SAP. Learning journeys showing how standard ERP processes such as procurement are designed and automated.
 
 ## Revision Summary
 

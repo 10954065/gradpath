@@ -267,9 +267,9 @@ flowchart TD
 
 ## Video Resources
 
-- [MIT OpenCourseWare](https://ocw.mit.edu/) — Massachusetts Institute of Technology. Open learning portal; search for finance theory and capital budgeting course materials covering NPV.
-- [Khan Academy](https://www.khanacademy.org/) — Khan Academy. Free learning platform; search for present value and the time value of money.
-- [Gartner Hype Cycle methodology](https://www.gartner.com/en/research/methodologies/gartner-hype-cycle) — Gartner. Official explanation of the hype cycle used to judge technology maturity.
+- [MIT OpenCourseWare](https://ocw.mit.edu/): Massachusetts Institute of Technology. Open learning portal; search for finance theory and capital budgeting course materials covering NPV.
+- [Khan Academy](https://www.khanacademy.org/): Khan Academy. Free learning platform; search for present value and the time value of money.
+- [Gartner Hype Cycle methodology](https://www.gartner.com/en/research/methodologies/gartner-hype-cycle): Gartner. Official explanation of the hype cycle used to judge technology maturity.
 
 ## Revision Summary
 

@@ -197,15 +197,15 @@ flowchart TD
 
 ## Video Resources
 
-- [PCI Security Standards Council](https://www.pcisecuritystandards.org/) — PCI Security Standards Council. Official home of PCI DSS with overview material, resources and educational content for merchants.
-- [OWASP Foundation](https://owasp.org/) — OWASP. Free, community-maintained guidance on web application security, including authentication and session management.
-- [EMVCo](https://www.emvco.com/) — EMVCo. Official site describing EMV specifications, including 3-D Secure and payment tokenisation.
+- [PCI Security Standards Council](https://www.pcisecuritystandards.org/): PCI Security Standards Council. Official home of PCI DSS with overview material, resources and educational content for merchants.
+- [OWASP Foundation](https://owasp.org/): OWASP. Free, community-maintained guidance on web application security, including authentication and session management.
+- [EMVCo](https://www.emvco.com/): EMVCo. Official site describing EMV specifications, including 3-D Secure and payment tokenisation.
 
 ## Revision Summary
 
 Payment authentication verifies the payer using knowledge, possession and inherence factors; multi-factor authentication combines categories. PINs, OTPs and biometrics each have characteristic weaknesses, notably SIM swap and social engineering for SMS-based methods. EMV 3-D Secure 2.x and risk-based authentication score transactions and challenge only the risky ones. Transaction security depends on TLS, encryption at rest with well-managed keys, signed callbacks and idempotent processing. Tokenisation replaces card numbers with surrogates that are worthless if stolen, and PCI DSS sets security requirements for card data, with hosted checkouts offering scope reduction.
 
-- Factors: know, have, are — combine categories.
+- Factors: know, have, are, combine categories.
 - 3DS 2.x: frictionless versus challenge; liability shift.
 - TLS plus signed webhooks plus idempotency keys.
 - PCI DSS v4.0: twelve requirements under six goals; reduce scope.

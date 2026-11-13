@@ -176,14 +176,14 @@ The incident response lessons are notable. FireEye's detection reportedly began 
 
 - Cichonski, P., Millar, T., Grance, T., & Scarfone, K. (2012). *Computer security incident handling guide* (NIST Special Publication 800-61, Revision 2). National Institute of Standards and Technology. <https://csrc.nist.gov/pubs/sp/800/61/r2/final>
 - Swanson, M., Bowen, P., Phillips, A. W., Gallup, D., & Lynes, D. (2010). *Contingency planning guide for federal information systems* (NIST Special Publication 800-34, Revision 1). National Institute of Standards and Technology.
-- International Organization for Standardization. (2019). *Security and resilience — Business continuity management systems — Requirements* (ISO 22301:2019). ISO.
+- International Organization for Standardization. (2019). *Security and resilience, Business continuity management systems, Requirements* (ISO 22301:2019). ISO.
 - National Institute of Standards and Technology. (2024). *The NIST Cybersecurity Framework (CSF) 2.0* (NIST CSWP 29). <https://doi.org/10.6028/NIST.CSWP.29>
 
 ## Video Resources
 
-- [CISA Tabletop Exercise Packages](https://www.cisa.gov/resources-tools/services/cisa-tabletop-exercise-packages) — Cybersecurity and Infrastructure Security Agency. Official, free exercise packages for practising incident response and continuity decisions.
-- [Cyber Security Authority, Ghana](https://www.csa.gov.gh/) — Cyber Security Authority. Official website with information on incident reporting, CERT-GH and Act 1038.
-- [NIST Computer Security Resource Center](https://csrc.nist.gov/) — National Institute of Standards and Technology. Official portal for SP 800-61 and contingency planning publications.
+- [CISA Tabletop Exercise Packages](https://www.cisa.gov/resources-tools/services/cisa-tabletop-exercise-packages): Cybersecurity and Infrastructure Security Agency. Official, free exercise packages for practising incident response and continuity decisions.
+- [Cyber Security Authority, Ghana](https://www.csa.gov.gh/): Cyber Security Authority. Official website with information on incident reporting, CERT-GH and Act 1038.
+- [NIST Computer Security Resource Center](https://csrc.nist.gov/): National Institute of Standards and Technology. Official portal for SP 800-61 and contingency planning publications.
 
 ## Revision Summary
 

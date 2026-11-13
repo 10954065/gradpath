@@ -81,13 +81,13 @@ Hallucinated policies (recall Moffatt v. Air Canada), outdated knowledge, prompt
 
 **Illustrative scenario.** A fictional microfinance institution with branches in the Ashanti and Eastern regions receives many phone and chat queries about loan balances, repayment dates, branch hours and required documents.
 
-1. **Weeks 1–2 – Scope.** Select 15 high-volume informational intents; list sensitive intents that always escalate; agree success measures with the customer service manager.
-2. **Weeks 2–3 – Knowledge base.** Collect and clean policy documents and FAQs; assign owners; remove outdated material.
-3. **Week 4 – Test set.** Write 200 realistic questions from anonymised logs, including mixed English and Twi phrasing, out-of-scope questions and injection attempts, with expected answers.
-4. **Weeks 5–6 – Prototype in Colab.** Build embeddings and a FAISS index, a retrieval function and a constrained prompt; add an intent classifier; build a simple Gradio interface.
-5. **Week 7 – Evaluate offline.** Score correctness, groundedness and escalation; fix knowledge gaps and prompts; repeat.
-6. **Weeks 8–11 – Agent-assist pilot.** Staff see AI-drafted answers and accept, edit or reject them; measure acceptance and errors.
-7. **Week 12 – Decide.** If accuracy and escalation targets are met, launch customer-facing chat for low-risk intents with monitoring and monthly knowledge review.
+1. **Weeks 1-2: Scope.** Select 15 high-volume informational intents; list sensitive intents that always escalate; agree success measures with the customer service manager.
+2. **Weeks 2-3: Knowledge base.** Collect and clean policy documents and FAQs; assign owners; remove outdated material.
+3. **Week 4: Test set.** Write 200 realistic questions from anonymised logs, including mixed English and Twi phrasing, out-of-scope questions and injection attempts, with expected answers.
+4. **Weeks 5-6: Prototype in Colab.** Build embeddings and a FAISS index, a retrieval function and a constrained prompt; add an intent classifier; build a simple Gradio interface.
+5. **Week 7: Evaluate offline.** Score correctness, groundedness and escalation; fix knowledge gaps and prompts; repeat.
+6. **Weeks 8-11: Agent-assist pilot.** Staff see AI-drafted answers and accept, edit or reject them; measure acceptance and errors.
+7. **Week 12: Decide.** If accuracy and escalation targets are met, launch customer-facing chat for low-risk intents with monitoring and monthly knowledge review.
 
 ## Project 2: Business Document Automation
 
@@ -137,13 +137,13 @@ A batch or near-real-time service watches an email inbox or upload folder, proce
 
 **Illustrative scenario.** A fictional freight-forwarding company in Tema processes many supplier and haulier invoices each month, mostly as scanned PDFs and phone photographs.
 
-1. **Weeks 1–2 – Scope.** Focus on haulier invoices; define eight target fields and validation rules with the finance manager; measure current processing time.
-2. **Weeks 2–4 – Dataset.** Collect 400 past invoices, remove unnecessary personal data, and label fields in a spreadsheet or open-source labelling tool.
-3. **Week 5 – Baseline.** Run Tesseract OCR plus regular expressions; measure field accuracy.
-4. **Weeks 6–7 – Improved extraction.** Test a layout-aware model or LLM JSON extraction in Google Colab; compare per-field accuracy.
-5. **Week 8 – Validation layer.** Implement arithmetic checks, supplier and bank-detail matching, and duplicate detection; set confidence thresholds.
-6. **Weeks 9–12 – Pilot with review.** All documents go through the pipeline but every output is reviewed; measure time saved and errors caught.
-7. **Week 13 – Decide on STP.** Allow straight-through processing only for document types and suppliers whose audited escape rate meets the finance manager's tolerance; never auto-approve bank-detail changes.
+1. **Weeks 1-2: Scope.** Focus on haulier invoices; define eight target fields and validation rules with the finance manager; measure current processing time.
+2. **Weeks 2-4: Dataset.** Collect 400 past invoices, remove unnecessary personal data, and label fields in a spreadsheet or open-source labelling tool.
+3. **Week 5: Baseline.** Run Tesseract OCR plus regular expressions; measure field accuracy.
+4. **Weeks 6-7: Improved extraction.** Test a layout-aware model or LLM JSON extraction in Google Colab; compare per-field accuracy.
+5. **Week 8: Validation layer.** Implement arithmetic checks, supplier and bank-detail matching, and duplicate detection; set confidence thresholds.
+6. **Weeks 9-12: Pilot with review.** All documents go through the pipeline but every output is reviewed; measure time saved and errors caught.
+7. **Week 13: Decide on STP.** Allow straight-through processing only for document types and suppliers whose audited escape rate meets the finance manager's tolerance; never auto-approve bank-detail changes.
 
 ## International Case Study
 
@@ -216,14 +216,14 @@ flowchart LR
 ## Further Reading
 
 - Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., et al. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. In *Advances in Neural Information Processing Systems 33*.
-- Xu, Y., Li, M., Cui, L., Huang, S., Wei, F., & Zhou, M. (2020). LayoutLM: Pre-training of text and layout for document image understanding. In *Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining* (pp. 1192–1200). ACM.
+- Xu, Y., Li, M., Cui, L., Huang, S., Wei, F., & Zhou, M. (2020). LayoutLM: Pre-training of text and layout for document image understanding. In *Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining* (pp. 1192-1200). ACM.
 - Jaume, G., Ekenel, H. K., & Thiran, J.-P. (2019). FUNSD: A dataset for form understanding in noisy scanned documents. In *2019 International Conference on Document Analysis and Recognition Workshops (ICDARW)*. IEEE.
 - Jurafsky, D., & Martin, J. H. (n.d.). *Speech and language processing* (3rd ed. draft). <https://web.stanford.edu/~jurafsky/slp3/>
 
 ## Video Resources
 
-- [Hugging Face Learn](https://huggingface.co/learn) — Hugging Face. Free courses on transformers, LLMs and building applications with open models.
-- [DeepLearning.AI Short Courses](https://www.deeplearning.ai/short-courses/) — DeepLearning.AI. Free short courses on retrieval-augmented generation and LLM application development.
+- [Hugging Face Learn](https://huggingface.co/learn): Hugging Face. Free courses on transformers, LLMs and building applications with open models.
+- [DeepLearning.AI Short Courses](https://www.deeplearning.ai/short-courses/): DeepLearning.AI. Free short courses on retrieval-augmented generation and LLM application development.
 
 ## Revision Summary
 

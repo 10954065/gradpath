@@ -194,8 +194,8 @@ flowchart TD
 
 ## Video Resources
 
-- [Markkula Center for Applied Ethics](https://www.scu.edu/ethics/) — Santa Clara University. Official portal with resources on technology ethics, including workplace and internet ethics.
-- [UNESCO Recommendation on the Ethics of Artificial Intelligence](https://www.unesco.org/en/artificial-intelligence/recommendation-ethics) — UNESCO. Official page on the global AI ethics standard, which addresses human rights and labour impacts.
+- [Markkula Center for Applied Ethics](https://www.scu.edu/ethics/): Santa Clara University. Official portal with resources on technology ethics, including workplace and internet ethics.
+- [UNESCO Recommendation on the Ethics of Artificial Intelligence](https://www.unesco.org/en/artificial-intelligence/recommendation-ethics): UNESCO. Official page on the global AI ethics standard, which addresses human rights and labour impacts.
 
 ## Revision Summary
 

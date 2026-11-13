@@ -1,6 +1,6 @@
 ---
 title: Sustainable Innovation and Technology's Environmental Impact
-summary: Analyse the direct and enabling environmental effects of technology, explain carbon accounting scopes 1–3 and the energy footprint of AI, and evaluate sustainable innovation strategies such as circular business models.
+summary: Analyse the direct and enabling environmental effects of technology, explain carbon accounting scopes 1-3 and the energy footprint of AI, and evaluate sustainable innovation strategies such as circular business models.
 estimatedMinutes: 45
 difficulty: intermediate
 source: supplementary
@@ -206,16 +206,16 @@ flowchart TD
 
 - World Resources Institute & World Business Council for Sustainable Development. (2004). *The greenhouse gas protocol: A corporate accounting and reporting standard* (Rev. ed.). WRI/WBCSD. <https://ghgprotocol.org/>
 - Elkington, J. (1997). *Cannibals with forks: The triple bottom line of 21st century business*. Capstone.
-- Porter, M. E., & van der Linde, C. (1995). Toward a new conception of the environment-competitiveness relationship. *Journal of Economic Perspectives, 9*(4), 97–118.
-- Hart, S. L. (1995). A natural-resource-based view of the firm. *Academy of Management Review, 20*(4), 986–1014.
-- Strubell, E., Ganesh, A., & McCallum, A. (2019). Energy and policy considerations for deep learning in NLP. In *Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics* (pp. 3645–3650).
+- Porter, M. E., & van der Linde, C. (1995). Toward a new conception of the environment-competitiveness relationship. *Journal of Economic Perspectives, 9*(4), 97-118.
+- Hart, S. L. (1995). A natural-resource-based view of the firm. *Academy of Management Review, 20*(4), 986-1014.
+- Strubell, E., Ganesh, A., & McCallum, A. (2019). Energy and policy considerations for deep learning in NLP. In *Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics* (pp. 3645-3650).
 - Ellen MacArthur Foundation. (2013). *Towards the circular economy* (Vol. 1). Ellen MacArthur Foundation.
 
 ## Video Resources
 
-- [Greenhouse Gas Protocol](https://ghgprotocol.org/) — WRI and WBCSD. Official site with standards, guidance and training material on scope 1, 2 and 3 accounting.
-- [Ellen MacArthur Foundation](https://www.ellenmacarthurfoundation.org/) — Ellen MacArthur Foundation. Official site with explanatory material and videos on the circular economy.
-- [International Energy Agency](https://www.iea.org/) — IEA. Official site with analysis of energy demand from data centres and AI.
+- [Greenhouse Gas Protocol](https://ghgprotocol.org/): WRI and WBCSD. Official site with standards, guidance and training material on scope 1, 2 and 3 accounting.
+- [Ellen MacArthur Foundation](https://www.ellenmacarthurfoundation.org/): Ellen MacArthur Foundation. Official site with explanatory material and videos on the circular economy.
+- [International Energy Agency](https://www.iea.org/): IEA. Official site with analysis of energy demand from data centres and AI.
 
 ## Revision Summary
 

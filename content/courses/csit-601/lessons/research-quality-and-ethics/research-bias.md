@@ -94,15 +94,15 @@ In interpretivist research, eliminating the researcher's influence is neither po
 
 ## Worked Example
 
-**Illustrative scenario.** Efua plans to study "cybersecurity awareness among university students". Her draft design is: post a Google Forms link in two class WhatsApp groups she belongs to; ask 25 statements such as "I always use strong passwords" (agree–disagree); and report the percentage of students who are "aware".
+**Illustrative scenario.** Efua plans to study "cybersecurity awareness among university students". Her draft design is: post a Google Forms link in two class WhatsApp groups she belongs to; ask 25 statements such as "I always use strong passwords" (agree-disagree); and report the percentage of students who are "aware".
 
-**Step 1 – Identify sampling biases.** Only students in her own programme and social circle can respond (coverage and convenience bias). Students interested in security are more likely to complete it (self-selection). Results cannot represent "university students".
+**Step 1: Identify sampling biases.** Only students in her own programme and social circle can respond (coverage and convenience bias). Students interested in security are more likely to complete it (self-selection). Results cannot represent "university students".
 
-**Step 2 – Identify response biases.** "I always use strong passwords" invites social desirability; all items are positively worded, inviting acquiescence; self-report of awareness may not reflect actual behaviour.
+**Step 2: Identify response biases.** "I always use strong passwords" invites social desirability; all items are positively worded, inviting acquiescence; self-report of awareness may not reflect actual behaviour.
 
-**Step 3 – Identify researcher bias.** Efua, an IT security enthusiast, expects low awareness; if she codes open-ended answers alone, she may interpret ambiguous answers as unaware.
+**Step 3: Identify researcher bias.** Efua, an IT security enthusiast, expects low awareness; if she codes open-ended answers alone, she may interpret ambiguous answers as unaware.
 
-**Step 4 – Redesign.**
+**Step 4: Redesign.**
 
 1. Define the population precisely (for example, undergraduate students across faculties at one named institution, with permission) and use stratified sampling by faculty and level, recruiting through official channels where permitted.
 2. Make the survey anonymous and state clearly that there are no right or wrong answers.
@@ -111,7 +111,7 @@ In interpretivist research, eliminating the researcher's influence is neither po
 5. Ask a second person to code a sample of open-ended answers and discuss disagreements.
 6. Compare the faculty and gender profile of respondents with institutional figures, if officially available, to assess non-response bias.
 
-**Step 5 – Report residual bias.** Efua acknowledges that a single-institution, self-administered survey still cannot measure actual behaviour and that findings may not transfer to other universities.
+**Step 5: Report residual bias.** Efua acknowledges that a single-institution, self-administered survey still cannot measure actual behaviour and that findings may not transfer to other universities.
 
 ## Ghanaian Business Application
 
@@ -184,16 +184,16 @@ Each arrow marks a point where the data can drift systematically away from the t
 
 ## Further Reading
 
-- Podsakoff, P. M., MacKenzie, S. B., Lee, J.-Y., & Podsakoff, N. P. (2003). Common method biases in behavioral research: A critical review of the literature and recommended remedies. *Journal of Applied Psychology, 88*(5), 879–903.
-- Nickerson, R. S. (1998). Confirmation bias: A ubiquitous phenomenon in many guises. *Review of General Psychology, 2*(2), 175–220.
+- Podsakoff, P. M., MacKenzie, S. B., Lee, J.-Y., & Podsakoff, N. P. (2003). Common method biases in behavioral research: A critical review of the literature and recommended remedies. *Journal of Applied Psychology, 88*(5), 879-903.
+- Nickerson, R. S. (1998). Confirmation bias: A ubiquitous phenomenon in many guises. *Review of General Psychology, 2*(2), 175-220.
 - Tourangeau, R., Rips, L. J., & Rasinski, K. (2000). *The psychology of survey response*. Cambridge University Press.
 - Bell, E., Bryman, A., & Harley, B. (2019). *Business research methods* (5th ed.). Oxford University Press.
 - Saunders, M., Lewis, P., & Thornhill, A. (2019). *Research methods for business students* (8th ed.). Pearson.
 
 ## Video Resources
 
-- [SAGE Research Methods](https://methods.sagepub.com/) — SAGE Publishing. Official research methods platform (access may depend on institutional subscription) with material on survey error, sampling and reflexivity.
-- [Khan Academy Statistics and Probability](https://www.khanacademy.org/math/statistics-probability) — Khan Academy. Free official course pages that include lessons on sampling methods and bias in surveys.
+- [SAGE Research Methods](https://methods.sagepub.com/): SAGE Publishing. Official research methods platform (access may depend on institutional subscription) with material on survey error, sampling and reflexivity.
+- [Khan Academy Statistics and Probability](https://www.khanacademy.org/math/statistics-probability): Khan Academy. Free official course pages that include lessons on sampling methods and bias in surveys.
 
 ## Revision Summary
 

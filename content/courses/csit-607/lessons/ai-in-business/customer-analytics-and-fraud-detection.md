@@ -84,7 +84,7 @@ Fraud is rare relative to legitimate activity. If only a tiny fraction of transa
 - **Resampling**: undersampling the majority class, oversampling the minority class, or generating synthetic minority examples with methods such as SMOTE (Chawla et al., 2002). Resampling must be applied only to training data, never to validation or test data.
 - **Class weights**: penalising errors on the minority class more heavily during training.
 - **Cost-sensitive thresholds**: choosing the decision threshold that minimises expected business cost.
-- **Appropriate metrics**: precision, recall, F1 and the area under the precision–recall curve rather than accuracy.
+- **Appropriate metrics**: precision, recall, F1 and the area under the precision-recall curve rather than accuracy.
 
 ### The adversarial dimension
 
@@ -207,17 +207,17 @@ flowchart TD
 ## Further Reading
 
 - Provost, F., & Fawcett, T. (2013). *Data science for business*. O'Reilly Media.
-- Fader, P. S., Hardie, B. G. S., & Lee, K. L. (2005). RFM and CLV: Using iso-value curves for customer base analysis. *Journal of Marketing Research, 42*(4), 415–430.
+- Fader, P. S., Hardie, B. G. S., & Lee, K. L. (2005). RFM and CLV: Using iso-value curves for customer base analysis. *Journal of Marketing Research, 42*(4), 415-430.
 - Chandola, V., Banerjee, A., & Kumar, V. (2009). Anomaly detection: A survey. *ACM Computing Surveys, 41*(3), Article 15.
-- Chawla, N. V., Bowyer, K. W., Hall, L. O., & Kegelmeyer, W. P. (2002). SMOTE: Synthetic minority over-sampling technique. *Journal of Artificial Intelligence Research, 16*, 321–357.
-- He, H., & Garcia, E. A. (2009). Learning from imbalanced data. *IEEE Transactions on Knowledge and Data Engineering, 21*(9), 1263–1284.
-- Liu, F. T., Ting, K. M., & Zhou, Z.-H. (2008). Isolation forest. In *2008 Eighth IEEE International Conference on Data Mining* (pp. 413–422). IEEE.
+- Chawla, N. V., Bowyer, K. W., Hall, L. O., & Kegelmeyer, W. P. (2002). SMOTE: Synthetic minority over-sampling technique. *Journal of Artificial Intelligence Research, 16*, 321-357.
+- He, H., & Garcia, E. A. (2009). Learning from imbalanced data. *IEEE Transactions on Knowledge and Data Engineering, 21*(9), 1263-1284.
+- Liu, F. T., Ting, K. M., & Zhou, Z.-H. (2008). Isolation forest. In *2008 Eighth IEEE International Conference on Data Mining* (pp. 413-422). IEEE.
 
 ## Video Resources
 
-- [scikit-learn documentation](https://scikit-learn.org/stable/) — scikit-learn. The user guide covers outlier and novelty detection, including isolation forests.
-- [Kaggle Learn](https://www.kaggle.com/learn) — Kaggle. Free micro-courses on machine learning and feature engineering applicable to customer and fraud data.
-- [IBM Think: Artificial intelligence](https://www.ibm.com/think/topics/artificial-intelligence) — IBM. Explainer pages on AI topics, including business applications.
+- [scikit-learn documentation](https://scikit-learn.org/stable/): scikit-learn. The user guide covers outlier and novelty detection, including isolation forests.
+- [Kaggle Learn](https://www.kaggle.com/learn): Kaggle. Free micro-courses on machine learning and feature engineering applicable to customer and fraud data.
+- [IBM Think: Artificial intelligence](https://www.ibm.com/think/topics/artificial-intelligence): IBM. Explainer pages on AI topics, including business applications.
 
 ## Revision Summary
 

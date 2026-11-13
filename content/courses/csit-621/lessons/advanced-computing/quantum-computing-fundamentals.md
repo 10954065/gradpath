@@ -209,16 +209,16 @@ flowchart TD
 
 - Nielsen, M. A., & Chuang, I. L. (2010). *Quantum computation and quantum information* (10th anniversary ed.). Cambridge University Press.
 - Preskill, J. (2018). Quantum computing in the NISQ era and beyond. *Quantum, 2*, 79. <https://doi.org/10.22331/q-2018-08-06-79>
-- Shor, P. W. (1997). Polynomial-time algorithms for prime factorization and discrete logarithms on a quantum computer. *SIAM Journal on Computing, 26*(5), 1484–1509.
-- Grover, L. K. (1996). A fast quantum mechanical algorithm for database search. In *Proceedings of the 28th Annual ACM Symposium on Theory of Computing* (pp. 212–219). ACM.
-- Arute, F., et al. (2019). Quantum supremacy using a programmable superconducting processor. *Nature, 574*, 505–510.
+- Shor, P. W. (1997). Polynomial-time algorithms for prime factorization and discrete logarithms on a quantum computer. *SIAM Journal on Computing, 26*(5), 1484-1509.
+- Grover, L. K. (1996). A fast quantum mechanical algorithm for database search. In *Proceedings of the 28th Annual ACM Symposium on Theory of Computing* (pp. 212-219). ACM.
+- Arute, F., et al. (2019). Quantum supremacy using a programmable superconducting processor. *Nature, 574*, 505-510.
 - National Institute of Standards and Technology. (2024). *Module-lattice-based key-encapsulation mechanism standard* (FIPS 203). U.S. Department of Commerce.
 
 ## Video Resources
 
-- [NIST Post-Quantum Cryptography Project](https://csrc.nist.gov/projects/post-quantum-cryptography) — National Institute of Standards and Technology. Official project page with background, standards and presentations on the PQC programme.
-- [IBM Quantum](https://www.ibm.com/quantum) — IBM. Official portal with introductory learning material and explanations of quantum computing concepts.
-- [MIT OpenCourseWare](https://ocw.mit.edu/) — Massachusetts Institute of Technology. Open learning portal; search for quantum computation and quantum information lectures.
+- [NIST Post-Quantum Cryptography Project](https://csrc.nist.gov/projects/post-quantum-cryptography): National Institute of Standards and Technology. Official project page with background, standards and presentations on the PQC programme.
+- [IBM Quantum](https://www.ibm.com/quantum): IBM. Official portal with introductory learning material and explanations of quantum computing concepts.
+- [MIT OpenCourseWare](https://ocw.mit.edu/): Massachusetts Institute of Technology. Open learning portal; search for quantum computation and quantum information lectures.
 
 ## Revision Summary
 

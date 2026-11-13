@@ -115,18 +115,18 @@ Loshin (2009) and the broader data management literature emphasise that MDM is p
 
 **Illustrative scenario.** *Asante Health Pharmacy*, a hypothetical five-branch chain in Kumasi, wants to analyse sales and expiry losses.
 
-**Step 1 – Choose the process and grain.** Business process: retail sales. Grain: one row per sales line (one product on one receipt).
+**Step 1: Choose the process and grain.** Business process: retail sales. Grain: one row per sales line (one product on one receipt).
 
-**Step 2 – Identify dimensions.**
+**Step 2: Identify dimensions.**
 
 - `dim_date` (date, week, month, quarter, year, season flag)
 - `dim_product` (product code, generic name, brand, therapeutic category, prescription-only flag)
 - `dim_branch` (branch name, town, region)
 - `dim_payment` (cash, card, mobile money, insurance)
 
-**Step 3 – Identify facts.** `quantity`, `sales_amount`, `cost_amount`, `discount_amount`.
+**Step 3: Identify facts.** `quantity`, `sales_amount`, `cost_amount`, `discount_amount`.
 
-**Step 4 – Write an analytical query.** Sales and gross margin by therapeutic category and month:
+**Step 4: Write an analytical query.** Sales and gross margin by therapeutic category and month:
 
 ```sql
 SELECT d.year, d.month, p.therapeutic_category,
@@ -139,9 +139,9 @@ GROUP BY d.year, d.month, p.therapeutic_category
 ORDER BY d.year, d.month;
 ```
 
-**Step 5 – Check master data dependencies.** The query is only correct if each product has one key and a correct therapeutic category. The chain discovers that the same paracetamol brand exists under three codes created by different branches. Before trusting the analysis, it appoints a product data steward, merges the duplicates and introduces an approval step for new product codes.
+**Step 5: Check master data dependencies.** The query is only correct if each product has one key and a correct therapeutic category. The chain discovers that the same paracetamol brand exists under three codes created by different branches. Before trusting the analysis, it appoints a product data steward, merges the duplicates and introduces an approval step for new product codes.
 
-**Step 6 – Move up the analytics ladder.** With clean descriptive data, the chain can diagnose which branches have high expiry write-offs and then forecast seasonal demand to reduce them.
+**Step 6: Move up the analytics ladder.** With clean descriptive data, the chain can diagnose which branches have high expiry write-offs and then forecast seasonal demand to reduce them.
 
 ## International Case Study
 
@@ -220,8 +220,8 @@ flowchart TD
 
 ## Video Resources
 
-- [SAP Learning](https://learning.sap.com/) — SAP. Learning journeys on SAP data management, analytics and master data topics.
-- [Microsoft Learn: Dynamics 365](https://learn.microsoft.com/en-us/dynamics365/) — Microsoft. Official documentation including reporting and data management in Dynamics 365 applications.
+- [SAP Learning](https://learning.sap.com/): SAP. Learning journeys on SAP data management, analytics and master data topics.
+- [Microsoft Learn: Dynamics 365](https://learn.microsoft.com/en-us/dynamics365/): Microsoft. Official documentation including reporting and data management in Dynamics 365 applications.
 
 ## Revision Summary
 

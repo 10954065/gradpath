@@ -34,7 +34,7 @@ cards:
     front: Name three things a kitchen display system adds beyond replacing paper tickets.
     back: Routing items to stations, showing order age with timers, synchronising dishes for a table, and recording preparation-time data for KPIs.
   - lesson: grocery-pos-and-restaurant-systems
-    front: What does Target's Canadian expansion (2013–2015) teach about retail systems?
+    front: What does Target's Canadian expansion (2013-2015) teach about retail systems?
     back: Inaccurate product data in new systems, combined with rapid scaling, can disrupt replenishment and leave shelves empty; data must be stabilised before scaling.
   - lesson: logistics-and-distribution-systems
     front: List the core WMS functions in order of goods flow.

@@ -136,7 +136,7 @@ function ResourceDialog({ resource, defaultCourseId, onClose }: { resource: Less
               <SelectItem value="">Choose…</SelectItem>
               {(catalogue.data ?? []).map((c) => (
                 <SelectItem key={c.id} value={c.id}>
-                  {c.code} — {c.title}
+                  {c.code}: {c.title}
                 </SelectItem>
               ))}
             </Select>

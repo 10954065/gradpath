@@ -92,7 +92,7 @@ Some texts expand it as `Risk = Threat × Vulnerability × Impact`, which makes 
 | 4 | Likely: will probably occur | Major: significant loss, customer harm, regulatory sanction |
 | 5 | Almost certain: expected to occur | Severe: threatens survival or licence |
 
-The product gives a score from 1 to 25, usually banded: **1–4 Low**, **5–9 Medium**, **10–16 High**, **20–25 Critical**. Organisations must define these scales in writing so that different assessors score consistently.
+The product gives a score from 1 to 25, usually banded: **1-4 Low**, **5-9 Medium**, **10-16 High**, **20-25 Critical**. Organisations must define these scales in writing so that different assessors score consistently.
 
 ### Qualitative versus quantitative analysis
 
@@ -216,7 +216,7 @@ flowchart LR
 
 ## Practical Exercises
 
-1. **Personal risk register.** For your own digital life (phone, email, mobile money wallet, laptop), identify five risk scenarios, score likelihood and impact on a 1–5 scale and propose one treatment for each. Expected output: a table with scenario, L, I, score, treatment and residual score.
+1. **Personal risk register.** For your own digital life (phone, email, mobile money wallet, laptop), identify five risk scenarios, score likelihood and impact on a 1-5 scale and propose one treatment for each. Expected output: a table with scenario, L, I, score, treatment and residual score.
 2. **Classify threat sources.** List ten events that could disrupt your workplace's IT (for example a burst pipe, a disgruntled employee, a ransomware campaign). Classify each as adversarial, accidental, structural or environmental. Expected output: a ten-row classification table with one sentence of justification per row.
 3. **ALE calculation.** A company estimates that a website outage costs GH₵ 8,000 per occurrence and expects three per year. A redundant hosting service would cost GH₵ 12,000 per year and reduce outages to one per year. Calculate ALE before and after and decide whether the control is cost-justified. Expected output: before ALE GH₵ 24,000; after ALE GH₵ 8,000; reduction GH₵ 16,000, which exceeds the GH₵ 12,000 cost, so the control is justified on this measure, with a note on non-financial factors.
 4. **Read a vulnerability record.** Look up CVE-2017-5638 in a public vulnerability database such as the US National Vulnerability Database. Do not attempt to test it on any system. Expected output: a short note recording the affected product, the published severity and why severity alone does not determine organisational risk.
@@ -238,8 +238,8 @@ flowchart LR
 
 ## Video Resources
 
-- [NIST Computer Security Resource Center](https://csrc.nist.gov/) — National Institute of Standards and Technology. Official home of NIST security publications, including SP 800-30, with project pages and presentations on risk management.
-- [Cisco Skills for All](https://skillsforall.com/) — Cisco Networking Academy. Free cybersecurity courses whose modules explain threats, vulnerabilities and risk with interactive examples.
+- [NIST Computer Security Resource Center](https://csrc.nist.gov/): National Institute of Standards and Technology. Official home of NIST security publications, including SP 800-30, with project pages and presentations on risk management.
+- [Cisco Skills for All](https://skillsforall.com/): Cisco Networking Academy. Free cybersecurity courses whose modules explain threats, vulnerabilities and risk with interactive examples.
 
 ## Revision Summary
 

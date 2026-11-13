@@ -211,15 +211,15 @@ flowchart TD
 
 ## Further Reading
 
-- Porter, M. E., & Heppelmann, J. E. (2014). How smart, connected products are transforming competition. *Harvard Business Review, 92*(11), 64–88.
-- Boyes, H., Hallaq, B., Cunningham, J., & Watson, T. (2018). The industrial internet of things (IIoT): An analysis framework. *Computers in Industry, 101*, 1–12.
-- Kagermann, H., Wahlster, W., & Helbig, J. (2013). *Recommendations for implementing the strategic initiative INDUSTRIE 4.0*. acatech – National Academy of Science and Engineering.
+- Porter, M. E., & Heppelmann, J. E. (2014). How smart, connected products are transforming competition. *Harvard Business Review, 92*(11), 64-88.
+- Boyes, H., Hallaq, B., Cunningham, J., & Watson, T. (2018). The industrial internet of things (IIoT): An analysis framework. *Computers in Industry, 101*, 1-12.
+- Kagermann, H., Wahlster, W., & Helbig, J. (2013). *Recommendations for implementing the strategic initiative INDUSTRIE 4.0*. acatech: National Academy of Science and Engineering.
 
 ## Video Resources
 
-- [Microsoft Learn](https://learn.microsoft.com/) — Microsoft. Learning paths on industrial IoT, edge and predictive maintenance solutions.
-- [IBM Think](https://www.ibm.com/think) — IBM. Explainers on predictive maintenance, asset management and Industry 4.0.
-- [Google Cloud Learn](https://cloud.google.com/learn) — Google Cloud. Introductions to IoT data processing and analytics.
+- [Microsoft Learn](https://learn.microsoft.com/): Microsoft. Learning paths on industrial IoT, edge and predictive maintenance solutions.
+- [IBM Think](https://www.ibm.com/think): IBM. Explainers on predictive maintenance, asset management and Industry 4.0.
+- [Google Cloud Learn](https://cloud.google.com/learn): Google Cloud. Introductions to IoT data processing and analytics.
 
 ## Revision Summary
 

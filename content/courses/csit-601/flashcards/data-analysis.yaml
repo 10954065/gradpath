@@ -13,7 +13,7 @@ cards:
     front: Which measures of centre and spread suit skewed interval data?
     back: The median and interquartile range, with the mean reported alongside for transparency.
   - lesson: data-preparation-and-descriptive-statistics
-    front: What is the main lesson of the Reinhart–Rogoff spreadsheet error for MSc students?
+    front: What is the main lesson of the Reinhart-Rogoff spreadsheet error for MSc students?
     back: Coding and data-handling errors can change conclusions; keep raw data untouched, script or log every step, and be ready to share analysis files.
 
   - lesson: inferential-statistics

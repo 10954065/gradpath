@@ -1,6 +1,6 @@
 ---
 title: "Case Studies: Customer Data Misuse and Data Breaches"
-summary: Analyse customer data misuse and data breach cases — including Cambridge Analytica and the 2017 Equifax breach — using stakeholder analysis, ethical theories and the ACM Code, and recommend defensible organisational responses.
+summary: Analyse customer data misuse and data breach cases, including Cambridge Analytica and the 2017 Equifax breach, using stakeholder analysis, ethical theories and the ACM Code, and recommend defensible organisational responses.
 estimatedMinutes: 55
 difficulty: advanced
 source: supplementary
@@ -10,7 +10,7 @@ source: supplementary
 
 Customer data are among an organisation's most valuable assets and its most serious liabilities. Used responsibly, they enable better services, fraud prevention and financial inclusion. Misused or poorly protected, they can expose millions of people to fraud, manipulation and loss of autonomy, and can destroy an organisation's reputation. Two kinds of failure are especially common. **Data misuse** occurs when data are collected or used in ways that people did not expect or agree to, even if no one "breaks in". **Data breaches** occur when security failures allow unauthorised access to or disclosure of data.
 
-This lesson analyses both types of failure through two well-documented international cases — the Cambridge Analytica affair and the 2017 Equifax breach — and two Ghanaian illustrative scenarios. Each case applies the seven-step method from the previous lesson: facts, stakeholders, ethical issues, analysis, options, recommendation and counter-arguments. References to Ghana's Data Protection Act, 2012 (Act 843) and Cybersecurity Act, 2020 (Act 1038) are general and educational, not legal advice.
+This lesson analyses both types of failure through two well-documented international cases, the Cambridge Analytica affair and the 2017 Equifax breach, and two Ghanaian illustrative scenarios. Each case applies the seven-step method from the previous lesson: facts, stakeholders, ethical issues, analysis, options, recommendation and counter-arguments. References to Ghana's Data Protection Act, 2012 (Act 843) and Cybersecurity Act, 2020 (Act 1038) are general and educational, not legal advice.
 
 ## Learning Objectives
 
@@ -43,17 +43,17 @@ The seven-step method applies, but data cases benefit from three additional lens
 
 1. **Lifecycle lens.** Trace the data from collection through use, sharing, storage and deletion. Ask at each stage whether the activity is necessary, expected by the person concerned and protected.
 2. **Expectation lens.** Ask what a reasonable customer would expect given what they were told. Helen Nissenbaum's idea of *contextual integrity* captures this: information flows are appropriate when they respect the norms of the context in which the information was shared.
-3. **Accountability lens.** Distinguish individual errors from organisational choices — business models, budgets for security, governance and culture — because effective remedies must target the level at which the failure occurred.
+3. **Accountability lens.** Distinguish individual errors from organisational choices (business models, budgets for security, governance and culture) because effective remedies must target the level at which the failure occurred.
 
 These lenses help avoid two common errors: treating a lawful-looking privacy notice as the end of the analysis, and treating a breach as the fault of a single careless employee.
 
 ## Case Study 1: Customer Data Misuse
 
-### Facts — the international case
+### Facts: the international case
 
-In 2018, reporting by *The Guardian*, *The Observer* and *The New York Times* revealed that the political consultancy Cambridge Analytica had obtained data derived from millions of Facebook users. The data had been collected through a personality-quiz app developed by researcher Aleksandr Kogan. Although only a relatively small number of users installed the app, Facebook's platform at the time allowed apps to access data about users' friends, so data relating to a far larger number of people — Facebook later estimated up to 87 million — were obtained. The data were passed to Cambridge Analytica, which was reported to use them for political profiling and targeting. In 2019 the US Federal Trade Commission announced a record US$5 billion penalty against Facebook over privacy failures, and the UK Information Commissioner's Office had earlier fined Facebook the maximum then available under UK law. Cambridge Analytica ceased operations in 2018.
+In 2018, reporting by *The Guardian*, *The Observer* and *The New York Times* revealed that the political consultancy Cambridge Analytica had obtained data derived from millions of Facebook users. The data had been collected through a personality-quiz app developed by researcher Aleksandr Kogan. Although only a relatively small number of users installed the app, Facebook's platform at the time allowed apps to access data about users' friends, so data relating to a far larger number of people, Facebook later estimated up to 87 million, were obtained. The data were passed to Cambridge Analytica, which was reported to use them for political profiling and targeting. In 2019 the US Federal Trade Commission announced a record US$5 billion penalty against Facebook over privacy failures, and the UK Information Commissioner's Office had earlier fined Facebook the maximum then available under UK law. Cambridge Analytica ceased operations in 2018.
 
-### Facts — the Ghanaian application
+### Facts: the Ghanaian application
 
 *Illustrative scenario.* "QuickLoan GH", a digital lending app, requests access to users' contacts, photos and messages at installation. Its privacy notice says data are used "to improve services". When borrowers fall behind, the app's collection team sends messages to people in their contact lists describing the borrower as a debtor. The company also sells anonymised-looking "behavioural segments" to a marketing firm, which can re-identify individuals by combining them with other data.
 
@@ -70,7 +70,7 @@ In 2018, reporting by *The Guardian*, *The Observer* and *The New York Times* re
 
 - **Lack of meaningful consent**: broad permissions and vague notices do not give users real understanding or choice.
 - **Purpose limitation**: data collected for credit assessment are used for shaming and for sale.
-- **Third-party harm**: contacts are affected without any relationship with the lender — as were the friends of quiz-takers in the Cambridge Analytica case.
+- **Third-party harm**: contacts are affected without any relationship with the lender, as were the friends of quiz-takers in the Cambridge Analytica case.
 - **Re-identification**: "anonymised" segments that can be re-linked to individuals remain personal data.
 - **Dignity and coercion**: public shaming exploits social pressure and can cause serious distress.
 
@@ -82,7 +82,7 @@ In 2018, reporting by *The Guardian*, *The Observer* and *The New York Times* re
 
 **Contractarian (social contract) analysis.** The informal social contract of digital services is that people share data in exchange for services, within reasonable expectations. Selling data and shaming borrowers break the terms that a reasonable user would accept.
 
-**ACM Code.** Principles **1.6** (respect privacy — including using data only for legitimate ends and limiting collection), **1.3** (honesty about data practices), **1.2** (avoid harm) and **1.1** (contribute to human well-being, acknowledging that all people are stakeholders) apply. Developers asked to build contact-scraping or shaming features should raise objections.
+**ACM Code.** Principles **1.6** (respect privacy: including using data only for legitimate ends and limiting collection), **1.3** (honesty about data practices), **1.2** (avoid harm) and **1.1** (contribute to human well-being, acknowledging that all people are stakeholders) apply. Developers asked to build contact-scraping or shaming features should raise objections.
 
 **Legal context.** Ghana's Data Protection Act, 2012 (Act 843) sets out data protection principles, including lawful processing, purpose specification, minimality and security safeguards, and confers rights on data subjects. The practices described would raise serious questions under those principles.
 
@@ -105,11 +105,11 @@ Option 3. Transparency alone (option 1) does not cure unfair processing, and sel
 
 ## Case Study 2: Data Breach
 
-### Facts — the international case
+### Facts: the international case
 
-In 2017 the US credit reporting agency Equifax suffered one of the most significant data breaches on record. Attackers exploited a known vulnerability in the Apache Struts web framework used in an online dispute portal. A patch for the vulnerability had been publicly released months earlier, but Equifax had not applied it to the affected system. The attackers remained in the network for weeks and accessed personal information — including names, Social Security numbers and dates of birth — relating to approximately 147 million people. Equifax announced the breach in September 2017, some weeks after discovering it, and its response was widely criticised, including problems with the website it set up for consumers. In 2019 Equifax agreed a settlement with the Federal Trade Commission, the Consumer Financial Protection Bureau and US states. Investigations also highlighted weaknesses such as poor asset inventory and an expired security certificate that had impaired monitoring of network traffic.
+In 2017 the US credit reporting agency Equifax suffered one of the most significant data breaches on record. Attackers exploited a known vulnerability in the Apache Struts web framework used in an online dispute portal. A patch for the vulnerability had been publicly released months earlier, but Equifax had not applied it to the affected system. The attackers remained in the network for weeks and accessed personal information (including names, Social Security numbers and dates of birth) relating to approximately 147 million people. Equifax announced the breach in September 2017, some weeks after discovering it, and its response was widely criticised, including problems with the website it set up for consumers. In 2019 Equifax agreed a settlement with the Federal Trade Commission, the Consumer Financial Protection Bureau and US states. Investigations also highlighted weaknesses such as poor asset inventory and an expired security certificate that had impaired monitoring of network traffic.
 
-### Facts — the Ghanaian application
+### Facts: the Ghanaian application
 
 *Illustrative scenario.* "Sankofa Health Insurance", a Ghanaian private insurer, discovers that a test database containing members' names, Ghana Card numbers, phone numbers and medical claim histories was left accessible on the internet without a password for several months. A security researcher reports it. There is no evidence yet of malicious access, but logs are incomplete. The marketing director argues that because there is "no proof of harm", members need not be told.
 
@@ -138,7 +138,7 @@ In 2017 the US credit reporting agency Equifax suffered one of the most signific
 
 **Virtue ethics.** Honesty, responsibility and courage call for prompt disclosure and an apology; defensiveness and minimisation reflect vices that erode institutional character.
 
-**ACM Code.** Principles **2.9** (design and implement systems that are robustly and usably secure), **1.6** (respect privacy), **1.3** (honesty), **2.5** (thorough evaluation of risks) and **3.6** (use care when modifying or retiring systems) apply, together with **1.2** (avoid harm), whose guidance states that where harm occurs unintentionally, those responsible are obliged to undo or mitigate it as far as possible — which includes enabling affected people to protect themselves.
+**ACM Code.** Principles **2.9** (design and implement systems that are robustly and usably secure), **1.6** (respect privacy), **1.3** (honesty), **2.5** (thorough evaluation of risks) and **3.6** (use care when modifying or retiring systems) apply, together with **1.2** (avoid harm), whose guidance states that where harm occurs unintentionally, those responsible are obliged to undo or mitigate it as far as possible, which includes enabling affected people to protect themselves.
 
 **Legal context.** Act 843 requires appropriate security safeguards and includes provisions on notification where personal data have been accessed by unauthorised persons; Act 1038 provides for cybersecurity incident reporting structures. The insurer should take legal advice on its specific obligations and the sector regulator's requirements.
 
@@ -161,7 +161,7 @@ Option 3. The insurer should secure the database immediately, preserve and revie
 
 ## Comparative Analysis and Diagram
 
-Misuse and breach cases differ in mechanism — one is a deliberate choice about data use, the other a failure of protection — but share a root cause: **treating customer data as an asset to exploit rather than a trust to honour**. In both, the ethical response combines stopping the harm, honesty with affected people, accountability at organisational level and structural change.
+Misuse and breach cases differ in mechanism (one is a deliberate choice about data use, the other a failure of protection) but share a root cause: **treating customer data as an asset to exploit rather than a trust to honour**. In both, the ethical response combines stopping the harm, honesty with affected people, accountability at organisational level and structural change.
 
 | Dimension | Data misuse | Data breach |
 |---|---|---|
@@ -184,10 +184,10 @@ flowchart TD
 
 ## Common Misconceptions
 
-- "If no one hacked us, we have not mishandled data." — Misuse beyond people's expectations or lawful purposes is an ethical and legal failure even without a breach.
-- "Anonymised data can be shared freely." — Data that can be re-identified remain personal data and carry privacy risk.
-- "No proof of harm means no need to notify." — Affected people need information to protect themselves, and legal notification duties may apply regardless.
-- "Breaches are always sophisticated attacks." — Many result from basic failures, such as Equifax's unpatched known vulnerability or an unprotected test database.
+- "If no one hacked us, we have not mishandled data." Misuse beyond people's expectations or lawful purposes is an ethical and legal failure even without a breach.
+- "Anonymised data can be shared freely." Data that can be re-identified remain personal data and carry privacy risk.
+- "No proof of harm means no need to notify." Affected people need information to protect themselves, and legal notification duties may apply regardless.
+- "Breaches are always sophisticated attacks." Many result from basic failures, such as Equifax's unpatched known vulnerability or an unprotected test database.
 
 ## Common Examination Mistakes
 
@@ -206,7 +206,7 @@ flowchart TD
 
 ## Practical Exercises
 
-1. **Notification letter.** Write a plain-language notification to members of the illustrative Sankofa Health Insurance explaining the incident, the data involved, actions taken and steps members can take. Expected output: a 250–300 word letter.
+1. **Notification letter.** Write a plain-language notification to members of the illustrative Sankofa Health Insurance explaining the incident, the data involved, actions taken and steps members can take. Expected output: a 250-300 word letter.
 2. **Permissions review.** Examine the permissions requested by three finance apps on your own phone and judge whether each is necessary for the service. Expected output: a table of app, permission, stated purpose and your assessment.
 3. **Root-cause analysis.** Using public reporting on the Equifax breach, construct a root-cause diagram distinguishing technical, process and governance failures. Expected output: a diagram with at least six causes and one control for each.
 
@@ -228,8 +228,8 @@ flowchart TD
 
 ## Video Resources
 
-- [FTC – Equifax Data Breach Settlement](https://www.ftc.gov/enforcement/refunds/equifax-data-breach-settlement) — US Federal Trade Commission. Official page summarising the Equifax breach settlement and consumer guidance.
-- [Data Protection Commission, Ghana](https://dataprotection.org.gh/) — Data Protection Commission. Official site of Ghana's data protection regulator with guidance for data controllers.
+- [FTC: Equifax Data Breach Settlement](https://www.ftc.gov/enforcement/refunds/equifax-data-breach-settlement): US Federal Trade Commission. Official page summarising the Equifax breach settlement and consumer guidance.
+- [Data Protection Commission, Ghana](https://dataprotection.org.gh/): Data Protection Commission. Official site of Ghana's data protection regulator with guidance for data controllers.
 
 ## Revision Summary
 

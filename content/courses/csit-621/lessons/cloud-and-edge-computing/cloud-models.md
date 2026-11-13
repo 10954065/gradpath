@@ -209,14 +209,14 @@ flowchart TD
 ## Further Reading
 
 - Mell, P., & Grance, T. (2011). *The NIST definition of cloud computing* (NIST Special Publication 800-145). National Institute of Standards and Technology. <https://csrc.nist.gov/pubs/sp/800/145/final>
-- Armbrust, M., Fox, A., Griffith, R., Joseph, A. D., Katz, R., Konwinski, A., Lee, G., Patterson, D., Rabkin, A., Stoica, I., & Zaharia, M. (2010). A view of cloud computing. *Communications of the ACM, 53*(4), 50–58.
+- Armbrust, M., Fox, A., Griffith, R., Joseph, A. D., Katz, R., Konwinski, A., Lee, G., Patterson, D., Rabkin, A., Stoica, I., & Zaharia, M. (2010). A view of cloud computing. *Communications of the ACM, 53*(4), 50-58.
 - Erl, T., Mahmood, Z., & Puttini, R. (2013). *Cloud computing: Concepts, technology and architecture*. Prentice Hall.
 
 ## Video Resources
 
-- [Google Cloud Learn](https://cloud.google.com/learn) — Google Cloud. Explainers on cloud computing concepts, deployment models and cloud economics.
-- [Microsoft Learn](https://learn.microsoft.com/) — Microsoft. Free learning paths including introductory cloud concepts modules.
-- [AWS Skill Builder](https://skillbuilder.aws/) — Amazon Web Services. Official training portal with introductory cloud practitioner courses.
+- [Google Cloud Learn](https://cloud.google.com/learn): Google Cloud. Explainers on cloud computing concepts, deployment models and cloud economics.
+- [Microsoft Learn](https://learn.microsoft.com/): Microsoft. Free learning paths including introductory cloud concepts modules.
+- [AWS Skill Builder](https://skillbuilder.aws/): Amazon Web Services. Official training portal with introductory cloud practitioner courses.
 
 ## Revision Summary
 

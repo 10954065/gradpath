@@ -231,14 +231,14 @@ flowchart TD
 
 - Szabo, N. (1997). Formalizing and securing relationships on public networks. *First Monday, 2*(9).
 - Wüst, K., & Gervais, A. (2018). Do you need a blockchain? In *2018 Crypto Valley Conference on Blockchain Technology (CVCBT)*. IEEE.
-- Iansiti, M., & Lakhani, K. R. (2017). The truth about blockchain. *Harvard Business Review, 95*(1), 118–127.
+- Iansiti, M., & Lakhani, K. R. (2017). The truth about blockchain. *Harvard Business Review, 95*(1), 118-127.
 - Nakamoto, S. (2008). *Bitcoin: A peer-to-peer electronic cash system*. <https://bitcoin.org/bitcoin.pdf>
 
 ## Video Resources
 
-- [Ethereum Developer Documentation](https://ethereum.org/developers/docs/) — Ethereum.org. Official documentation on smart contracts, the EVM, gas and oracles.
-- [Hyperledger Foundation](https://www.lfdecentralizedtrust.org/) — LF Decentralized Trust. Information and learning resources for Hyperledger Fabric and other enterprise ledger projects.
-- [IBM Think](https://www.ibm.com/think) — IBM. Explainers on smart contracts and enterprise blockchain use cases.
+- [Ethereum Developer Documentation](https://ethereum.org/developers/docs/): Ethereum.org. Official documentation on smart contracts, the EVM, gas and oracles.
+- [Hyperledger Foundation](https://www.lfdecentralizedtrust.org/): LF Decentralized Trust. Information and learning resources for Hyperledger Fabric and other enterprise ledger projects.
+- [IBM Think](https://www.ibm.com/think): IBM. Explainers on smart contracts and enterprise blockchain use cases.
 
 ## Revision Summary
 

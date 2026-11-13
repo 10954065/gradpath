@@ -108,7 +108,7 @@ Assume, purely for illustration, an offline attacker who can test 10 billion (10
 | Pattern | Observation | Likely attack |
 |---|---|---|
 | A | 1,200 failed logins for 1,200 different usernames from 15 IP addresses, all using the same password; three successes | Password spraying |
-| B | 40,000 attempts for 40,000 different username–password pairs from thousands of IP addresses, many usernames not registered on the site; 0.5% succeed | Credential stuffing with leaked pairs from another service |
+| B | 40,000 attempts for 40,000 different username-password pairs from thousands of IP addresses, many usernames not registered on the site; 0.5% succeed | Credential stuffing with leaked pairs from another service |
 | C | 3,000 failed attempts against one administrator account from one IP address | Online brute force or dictionary attack |
 
 **Recommended responses:** For A, block or challenge the source addresses, force resets for the three compromised accounts and add the sprayed password to the blocked list. For B, enable bot detection, require MFA or step-up verification for logins from new devices, and screen all customer passwords against breach data. For C, confirm rate limiting is working, restrict administrator login to the corporate VPN and require phishing-resistant MFA for privileged accounts.
@@ -198,9 +198,9 @@ flowchart TD
 
 ## Video Resources
 
-- [PortSwigger Web Security Academy](https://portswigger.net/web-security) — PortSwigger. Free learning materials and legal practice labs, including authentication vulnerabilities and defences.
-- [OWASP](https://owasp.org/) — OWASP Foundation. Official site of the open community project, with guidance on authentication, credential stuffing and automated threats to web applications.
-- [CISA cybersecurity resources](https://www.cisa.gov/) — Cybersecurity and Infrastructure Security Agency. Official guidance on DDoS preparedness and multi-factor authentication.
+- [PortSwigger Web Security Academy](https://portswigger.net/web-security): PortSwigger. Free learning materials and legal practice labs, including authentication vulnerabilities and defences.
+- [OWASP](https://owasp.org/): OWASP Foundation. Official site of the open community project, with guidance on authentication, credential stuffing and automated threats to web applications.
+- [CISA cybersecurity resources](https://www.cisa.gov/): Cybersecurity and Infrastructure Security Agency. Official guidance on DDoS preparedness and multi-factor authentication.
 
 ## Revision Summary
 

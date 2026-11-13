@@ -59,7 +59,7 @@ The earlier modules of this course built a toolkit: business models and value cr
 8. **Cost structure.** Raw materials, packaging, delivery subsidies, payment fees, marketing and platform subscriptions.
 9. **Unit economics.** Test whether each order makes money after variable costs and marketing.
 
-**Deliverables.** A completed canvas with justification for each block; a unit-economics model with assumptions stated; a competitor comparison of at least three alternatives available to the target segment; and a 1,000–1,500-word business model report with recommendations.
+**Deliverables.** A completed canvas with justification for each block; a unit-economics model with assumptions stated; a competitor comparison of at least three alternatives available to the target segment; and a 1,000-1,500-word business model report with recommendations.
 
 **Evaluation criteria.**
 
@@ -97,7 +97,7 @@ The earlier modules of this course built a toolkit: business models and value cr
 | FAILED | PSP reports failure | CREATED (retry) |
 | EXPIRED | No confirmation within the time limit | CREATED (retry) |
 | FULFILLED | Order dispatched | REFUNDED (return) |
-| REFUNDED | Refund confirmed by PSP | — |
+| REFUNDED | Refund confirmed by PSP | n/a |
 
 **Deliverables.** A process narrative; a sequence diagram; the state model; a controls table mapping each risk to a control; a reconciliation procedure; and a test plan with at least ten test cases, including duplicate clicks, network timeouts, a forged callback and a customer who closes the browser after paying.
 
@@ -226,9 +226,9 @@ flowchart LR
 
 ## Video Resources
 
-- [Stripe documentation](https://docs.stripe.com/) — Stripe. Developer documentation illustrating payment intents, webhooks and idempotent requests as general design patterns.
-- [Strategyzer](https://www.strategyzer.com/) — Strategyzer. Official resources on the Business Model Canvas from its creators.
-- [Mermaid documentation](https://mermaid.js.org/) — Mermaid. Official guide to writing sequence diagrams and flowcharts in text.
+- [Stripe documentation](https://docs.stripe.com/): Stripe. Developer documentation illustrating payment intents, webhooks and idempotent requests as general design patterns.
+- [Strategyzer](https://www.strategyzer.com/): Strategyzer. Official resources on the Business Model Canvas from its creators.
+- [Mermaid documentation](https://mermaid.js.org/): Mermaid. Official guide to writing sequence diagrams and flowcharts in text.
 
 ## Revision Summary
 

@@ -229,16 +229,16 @@ flowchart LR
 
 ## Further Reading
 
-- Murugesan, S. (2008). Harnessing green IT: Principles and practices. *IT Professional, 10*(1), 24–33.
+- Murugesan, S. (2008). Harnessing green IT: Principles and practices. *IT Professional, 10*(1), 24-33.
 - The Green Grid. (2012). *PUE: A comprehensive examination of the metric* (White Paper No. 49). The Green Grid.
-- International Organization for Standardization & International Electrotechnical Commission. (2016). *Information technology – Data centres – Key performance indicators – Part 2: Power usage effectiveness (PUE)* (ISO/IEC 30134-2:2016).
+- International Organization for Standardization & International Electrotechnical Commission. (2016). *Information technology, Data centres, Key performance indicators: Part 2: Power usage effectiveness (PUE)* (ISO/IEC 30134-2:2016).
 - Republic of Ghana. (2016). *Hazardous and Electronic Waste Control and Management Act, 2016 (Act 917)*.
 
 ## Video Resources
 
-- [The Green Grid](https://www.thegreengrid.org/) — The Green Grid. Official site of the consortium that developed PUE, with resources on data centre efficiency metrics.
-- [International Energy Agency](https://www.iea.org/) — IEA. Official site with analysis of energy use by data centres, networks and digital technologies.
-- [United Nations Environment Programme](https://www.unep.org/) — UNEP. Official site with material on e-waste, chemicals and sustainable consumption.
+- [The Green Grid](https://www.thegreengrid.org/): The Green Grid. Official site of the consortium that developed PUE, with resources on data centre efficiency metrics.
+- [International Energy Agency](https://www.iea.org/): IEA. Official site with analysis of energy use by data centres, networks and digital technologies.
+- [United Nations Environment Programme](https://www.unep.org/): UNEP. Official site with material on e-waste, chemicals and sustainable consumption.
 
 ## Revision Summary
 

@@ -118,7 +118,7 @@ flowchart TD
 | Faculty A (trained) | 30% | 12% | −18 points |
 | Faculty B (comparison) | 28% | 24% | −4 points |
 
-**Step 1 – Identify the design.** Students were not randomly assigned; whole faculties were. This is a **quasi-experiment** with a non-equivalent comparison group, in notation:
+**Step 1: Identify the design.** Students were not randomly assigned; whole faculties were. This is a **quasi-experiment** with a non-equivalent comparison group, in notation:
 
 ```
 NR   O1   X   O2
@@ -127,9 +127,9 @@ NR   O3        O4
 
 (`NR` = non-random assignment.)
 
-**Step 2 – Compute the naive estimate.** Looking only at Faculty A, clicks fell by 18 percentage points. But this ignores history and maturation: Faculty B's rate also fell by 4 points without training, perhaps because of a campus-wide news story or growing familiarity with the simulation.
+**Step 2: Compute the naive estimate.** Looking only at Faculty A, clicks fell by 18 percentage points. But this ignores history and maturation: Faculty B's rate also fell by 4 points without training, perhaps because of a campus-wide news story or growing familiarity with the simulation.
 
-**Step 3 – Compute the difference-in-differences (DiD).**
+**Step 3: Compute the difference-in-differences (DiD).**
 
 ```
 DiD = (After_A − Before_A) − (After_B − Before_B)
@@ -140,9 +140,9 @@ DiD = (After_A − Before_A) − (After_B − Before_B)
 
 The training is associated with a 14-point greater reduction in click rate than would have been expected from the comparison group's trend.
 
-**Step 4 – Evaluate threats.** *Selection*: Faculty A may have more technically skilled students; the similar baseline rates (30% versus 28%) are reassuring but do not rule this out. *Diffusion*: Faculty B students sharing halls with Faculty A may have heard about the training, which would make the estimate conservative. *Testing*: the first simulated email may itself have taught students something, affecting both groups. The DiD logic assumes both faculties would have followed parallel trends without training.
+**Step 4: Evaluate threats.** *Selection*: Faculty A may have more technically skilled students; the similar baseline rates (30% versus 28%) are reassuring but do not rule this out. *Diffusion*: Faculty B students sharing halls with Faculty A may have heard about the training, which would make the estimate conservative. *Testing*: the first simulated email may itself have taught students something, affecting both groups. The DiD logic assumes both faculties would have followed parallel trends without training.
 
-**Step 5 – State a calibrated conclusion.** *"The quasi-experimental evidence suggests the training substantially reduced phishing susceptibility, although non-random assignment means selection effects cannot be fully excluded."* The expected output is the DiD figure (−14 points), a list of threats, and a cautious conclusion.
+**Step 5: State a calibrated conclusion.** *"The quasi-experimental evidence suggests the training substantially reduced phishing susceptibility, although non-random assignment means selection effects cannot be fully excluded."* The expected output is the DiD figure (−14 points), a list of threats, and a cautious conclusion.
 
 ## Ghanaian Business Application
 
@@ -206,14 +206,14 @@ The case illustrates several design principles. **Random assignment** among volu
 
 - Yin, R. K. (2018). *Case study research and applications: Design and methods* (6th ed.). SAGE.
 - Shadish, W. R., Cook, T. D., & Campbell, D. T. (2002). *Experimental and quasi-experimental designs for generalized causal inference*. Houghton Mifflin.
-- Eisenhardt, K. M. (1989). Building theories from case study research. *Academy of Management Review, 14*(4), 532–550.
-- Bloom, N., Liang, J., Roberts, J., & Ying, Z. J. (2015). Does working from home work? Evidence from a Chinese experiment. *Quarterly Journal of Economics, 130*(1), 165–218.
+- Eisenhardt, K. M. (1989). Building theories from case study research. *Academy of Management Review, 14*(4), 532-550.
+- Bloom, N., Liang, J., Roberts, J., & Ying, Z. J. (2015). Does working from home work? Evidence from a Chinese experiment. *Quarterly Journal of Economics, 130*(1), 165-218.
 - Saunders, M., Lewis, P., & Thornhill, A. (2019). *Research methods for business students* (8th ed.). Pearson.
 
 ## Video Resources
 
-- [SAGE Research Methods](https://methods.sagepub.com/) — SAGE Publishing. Official research methods platform (access may depend on institutional subscription) with material on experiments and case study design.
-- [MIT OpenCourseWare](https://ocw.mit.edu/) — Massachusetts Institute of Technology. Official open learning portal; search for experimental design and causal inference materials.
+- [SAGE Research Methods](https://methods.sagepub.com/): SAGE Publishing. Official research methods platform (access may depend on institutional subscription) with material on experiments and case study design.
+- [MIT OpenCourseWare](https://ocw.mit.edu/): Massachusetts Institute of Technology. Official open learning portal; search for experimental design and causal inference materials.
 
 ## Revision Summary
 

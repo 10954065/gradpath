@@ -141,7 +141,7 @@ export function extractUrl(text: string): string | null {
 }
 
 export function parseVideo(item: string): VideoItem | null {
-  const match = /^\[(.+?)\]\((https?:\/\/[^)\s]+)\)\s*(?:[—–-]\s*)?([\s\S]*)$/.exec(item)
+  const match = /^\[(.+?)\]\((https?:\/\/[^)\s]+)\)\s*(?:[:—–-]\s*)?([\s\S]*)$/.exec(item)
   if (!match) return null
   return { title: (match[1] ?? '').trim(), url: match[2] ?? '', description: (match[3] ?? '').trim() }
 }
@@ -210,7 +210,7 @@ export function parseLesson(fileName: string, rawText: string): LessonParseResul
   const videoItems = parseList(get('videos'))
   const videos = videoItems.map(parseVideo)
   videos.forEach((v, i) => {
-    if (!v) error(`Video ${i + 1} must use the format "- [Title](https://...) — Provider. Description"`)
+    if (!v) error(`Video ${i + 1} must use the format "- [Title](https://...): Provider. Description"`)
   })
 
   const lesson: ParsedLesson = {

@@ -76,7 +76,7 @@ export default function AttemptResultPage() {
         </CardHeader>
         <CardContent className="grid grid-cols-1 gap-6 sm:grid-cols-[auto_1fr] sm:items-center">
           <div className="text-center sm:pr-6">
-            <p className="text-5xl font-semibold tracking-tight tabular-nums">{percent === null ? '—' : `${Math.round(percent)}%`}</p>
+            <p className="text-5xl font-semibold tracking-tight tabular-nums">{percent === null ? 'n/a' : `${Math.round(percent)}%`}</p>
             <p className="mt-1 text-xs text-muted-foreground">
               {objectiveCount ? `${attempt.score ?? 0} / ${attempt.maxScore ?? 0} marks on ${objectiveCount} objective questions` : 'Written answers only'}
             </p>
@@ -94,7 +94,7 @@ export default function AttemptResultPage() {
             <p className="text-muted-foreground">
               {band === 'mastered'
                 ? 'Strong work. Move on to the next lesson or module, and revisit this topic later in your revision schedule.'
-                : 'The weaker topics below have been added to your revision queue. Revisit the lessons, then try again — you can retake this assessment.'}
+                : 'The weaker topics below have been added to your revision queue. Revisit the lessons, then try again. You can retake this assessment.'}
             </p>
             {attempt.isLate ? <Badge tone="warning">Submitted after the time limit</Badge> : null}
             <div className="mt-2 flex flex-wrap gap-2">
@@ -125,7 +125,7 @@ export default function AttemptResultPage() {
               <li key={l.lessonId} className="rounded-lg border bg-surface p-3 text-sm">
                 <div className="flex items-center justify-between gap-2">
                   <span className="truncate font-medium">{l.lessonTitle}</span>
-                  <span className="font-semibold tabular-nums">{l.percent === null ? '—' : `${Math.round(Number(l.percent))}%`}</span>
+                  <span className="font-semibold tabular-nums">{l.percent === null ? 'n/a' : `${Math.round(Number(l.percent))}%`}</span>
                 </div>
                 <ProgressBar value={Number(l.percent ?? 0)} label={`${l.lessonTitle} score`} className="mt-2" tone={Number(l.percent) >= quiz.passMark ? 'success' : 'warning'} />
                 {Number(l.percent) < quiz.passMark && lessonLinks.get(l.lessonId) ? (

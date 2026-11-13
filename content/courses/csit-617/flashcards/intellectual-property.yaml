@@ -1,7 +1,7 @@
 module: intellectual-property
 cards:
   - lesson: copyright-patents-and-trademarks
-    front: What does the idea–expression distinction mean for software?
+    front: What does the idea-expression distinction mean for software?
     back: Copyright protects the way a program is expressed (its code and some structure), not its ideas, algorithms or functionality, so independently written code with the same features does not infringe.
   - lesson: copyright-patents-and-trademarks
     front: Why is independent creation a defence to copyright but not to patent infringement?
@@ -11,7 +11,7 @@ cards:
     back: When the algorithm is valuable, can be kept confidential (it is not exposed by the product), and the owner does not want the disclosure or cost that a patent requires.
   - lesson: copyright-patents-and-trademarks
     front: Give one utilitarian argument for and one against software patents.
-    back: For — patents can reward costly R&D and add disclosed knowledge. Against — long, broad patents in a fast, incremental field may block follow-on innovation and impose litigation costs, reducing overall welfare.
+    back: For, patents can reward costly R&D and add disclosed knowledge. Against, long, broad patents in a fast, incremental field may block follow-on innovation and impose litigation costs, reducing overall welfare.
   - lesson: copyright-patents-and-trademarks
     front: In general terms, what does Ghana's Copyright Act, 2005 (Act 690) do for software?
     back: It treats computer software as a protected work, grants authors economic and moral rights, provides limitations for certain uses such as research and education, and establishes the Copyright Office.
@@ -38,7 +38,7 @@ cards:
     back: Inventory every third-party component and its licence so that obligations, incompatibilities and security vulnerabilities can be managed.
   - lesson: plagiarism-and-academic-integrity
     front: Why can you plagiarise a work that has no copyright?
-    back: Plagiarism is a failure of attribution — misrepresenting origin — not a breach of legal rights, so presenting a public-domain text as your own is still plagiarism.
+    back: Plagiarism is a failure of attribution, misrepresenting origin, not a breach of legal rights, so presenting a public-domain text as your own is still plagiarism.
   - lesson: plagiarism-and-academic-integrity
     front: What is patchwriting and why is it plagiarism?
     back: Stitching together a source's phrases with minor word changes; it preserves the original expression and structure, so it misrepresents the writing as your own even if cited.
@@ -47,7 +47,7 @@ cards:
     back: Confirm use is allowed by your institution and the assessment; disclose the tool and purpose; check every claim and reference; take full responsibility for the final work.
   - lesson: plagiarism-and-academic-integrity
     front: Why do publication-ethics bodies say AI cannot be an author?
-    back: Authorship requires accountability — answering for the work and its integrity — which a tool cannot provide.
+    back: Authorship requires accountability, answering for the work and its integrity, which a tool cannot provide.
   - lesson: plagiarism-and-academic-integrity
     front: What lesson does Mata v. Avianca (2023) teach about AI-generated references?
     back: AI tools can fabricate plausible citations, and the professional who submits them remains responsible; verification is a non-negotiable duty.

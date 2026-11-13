@@ -111,9 +111,9 @@ flowchart TD
 
 **Illustrative scenario.** Akua interviews twelve owners of small businesses in Accra about adopting AI tools such as chatbots and automated bookkeeping. Her research question is: *How do SME owners experience the adoption of AI tools in their operations?* She adopts a hybrid approach, starting with UTAUT-informed codes and adding inductive ones.
 
-**Step 1 – Familiarisation.** She reads all transcripts twice and writes memos, noting that owners often mention relatives and that many describe "testing quietly" before telling staff.
+**Step 1: Familiarisation.** She reads all transcripts twice and writes memos, noting that owners often mention relatives and that many describe "testing quietly" before telling staff.
 
-**Step 2 – Initial coding of extracts.** Three illustrative extracts (invented for teaching):
+**Step 2: Initial coding of extracts.** Three illustrative extracts (invented for teaching):
 
 | Extract | Initial codes |
 |---|---|
@@ -121,7 +121,7 @@ flowchart TD
 | "My nephew set it up for me. If he travels, I am stuck." | Dependence on family for technical help; fragile support (facilitating conditions) |
 | "I tried it quietly for two weeks before I told my staff, because I didn't want them to think I was replacing them." | Testing quietly; managing staff fears; job-security concerns |
 
-**Step 3 – Build the coding frame.**
+**Step 3: Build the coding frame.**
 
 | Code | Definition | Include when | Exclude when | Example extract |
 |---|---|---|---|---|
@@ -131,7 +131,7 @@ flowchart TD
 | Staff job-security concerns | Owner's perception that staff fear replacement | Explicit or implied fear of being replaced | Staff complaints about usability | "think I was replacing them" |
 | Cost justification | Weighing AI subscription costs against benefits | Mentions of fees, data bundles, value | Generic complaints about the economy | "worth it if it brings two orders a week" |
 
-**Step 4 – Search for and review themes.** Akua clusters codes:
+**Step 4: Search for and review themes.** Akua clusters codes:
 
 - *Out-of-hours availability* + *cost justification* → candidate theme: **"AI as an extra pair of hands"** (AI valued as a tireless, low-cost assistant).
 - *Family as tech support* + other codes about informal help → candidate theme: **"Borrowed capability"** (adoption depends on capability borrowed from relatives and friends, which makes it fragile).
@@ -139,9 +139,9 @@ flowchart TD
 
 On review, she checks that each theme is supported across several interviews, not just one vivid quote, and that themes are distinct. She finds that "borrowed capability" also explains why some owners abandoned tools, strengthening the theme.
 
-**Step 5 – Define and name.** Each theme receives a short definition, for example: *"Borrowed capability: owners' adoption of AI rests on technical skills borrowed from family and friends, so continued use is vulnerable when those helpers are unavailable."*
+**Step 5: Define and name.** Each theme receives a short definition, for example: *"Borrowed capability: owners' adoption of AI rests on technical skills borrowed from family and friends, so continued use is vulnerable when those helpers are unavailable."*
 
-**Step 6 – Report.** In her findings chapter, each theme is presented with an analytic narrative, two or three well-chosen extracts, and links to literature: "borrowed capability" extends UTAUT's facilitating conditions by showing that support may be informal and relational in Ghanaian SMEs.
+**Step 6: Report.** In her findings chapter, each theme is presented with an analytic narrative, two or three well-chosen extracts, and links to literature: "borrowed capability" extends UTAUT's facilitating conditions by showing that support may be informal and relational in Ghanaian SMEs.
 
 **Optional agreement check (codebook approach).** If Akua's supervisor codes 50 segments for the presence of *Family as tech support* and they agree on 42, with Akua applying the code to 20 segments and the supervisor to 22:
 
@@ -215,15 +215,15 @@ Although the study pre-dates Braun and Clarke's codification of thematic analysi
 
 ## Further Reading
 
-- Braun, V., & Clarke, V. (2006). Using thematic analysis in psychology. *Qualitative Research in Psychology, 3*(2), 77–101. <https://doi.org/10.1191/1478088706qp063oa>
-- Braun, V., & Clarke, V. (2019). Reflecting on reflexive thematic analysis. *Qualitative Research in Sport, Exercise and Health, 11*(4), 589–597.
+- Braun, V., & Clarke, V. (2006). Using thematic analysis in psychology. *Qualitative Research in Psychology, 3*(2), 77-101. <https://doi.org/10.1191/1478088706qp063oa>
+- Braun, V., & Clarke, V. (2019). Reflecting on reflexive thematic analysis. *Qualitative Research in Sport, Exercise and Health, 11*(4), 589-597.
 - Saldaña, J. (2016). *The coding manual for qualitative researchers* (3rd ed.). SAGE.
 - Miles, M. B., Huberman, A. M., & Saldaña, J. (2014). *Qualitative data analysis: A methods sourcebook* (3rd ed.). SAGE.
 
 ## Video Resources
 
-- [SAGE Research Methods](https://methods.sagepub.com/) — SAGE Publishing. Official research methods platform (access may depend on institutional subscription) with material on qualitative coding and thematic analysis.
-- [MIT OpenCourseWare](https://ocw.mit.edu/) — Massachusetts Institute of Technology. Official open learning portal; search for qualitative research methods and analysis course materials.
+- [SAGE Research Methods](https://methods.sagepub.com/): SAGE Publishing. Official research methods platform (access may depend on institutional subscription) with material on qualitative coding and thematic analysis.
+- [MIT OpenCourseWare](https://ocw.mit.edu/): Massachusetts Institute of Technology. Official open learning portal; search for qualitative research methods and analysis course materials.
 
 ## Revision Summary
 

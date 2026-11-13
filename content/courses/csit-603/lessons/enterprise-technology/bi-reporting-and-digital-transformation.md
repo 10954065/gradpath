@@ -190,9 +190,9 @@ flowchart LR
 
 ## Video Resources
 
-- [Microsoft Learn: Power BI documentation](https://learn.microsoft.com/power-bi/) — Microsoft. Official guidance and tutorials on building data models, reports and dashboards.
-- [SAP Learning](https://learning.sap.com/) — SAP. Free learning journeys including introductions to SAP analytics and embedded reporting.
-- [Oracle University](https://education.oracle.com/) — Oracle. Official training portal with material on analytics and cloud applications.
+- [Microsoft Learn: Power BI documentation](https://learn.microsoft.com/power-bi/): Microsoft. Official guidance and tutorials on building data models, reports and dashboards.
+- [SAP Learning](https://learning.sap.com/): SAP. Free learning journeys including introductions to SAP analytics and embedded reporting.
+- [Oracle University](https://education.oracle.com/): Oracle. Official training portal with material on analytics and cloud applications.
 
 ## Revision Summary
 

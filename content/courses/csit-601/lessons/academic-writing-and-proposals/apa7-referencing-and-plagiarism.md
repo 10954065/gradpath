@@ -14,7 +14,7 @@ This lesson teaches the essentials of **APA 7**, the referencing style set out i
 
 ## Learning Objectives
 
-- Explain the purposes of referencing and the principles of the APA 7 author–date system.
+- Explain the purposes of referencing and the principles of the APA 7 author-date system.
 - Apply APA 7 rules to format narrative and parenthetical in-text citations for one, two, three or more, and group authors.
 - Construct APA 7 reference list entries for journal articles, books, edited book chapters and webpages.
 - Use Zotero to collect, organise and insert citations and generate a reference list.
@@ -28,7 +28,7 @@ This lesson teaches the essentials of **APA 7**, the referencing style set out i
 
 ## Key Terminology
 
-- **APA 7**: The seventh edition of the American Psychological Association's style, using an author–date citation system.
+- **APA 7**: The seventh edition of the American Psychological Association's style, using an author-date citation system.
 - **In-text citation**: A brief reference in the body of the text, giving author and year (and page for quotations), that points to the full reference list entry.
 - **Narrative citation**: An in-text citation where the author's name forms part of the sentence, for example "Davis (1989) argued...".
 - **Parenthetical citation**: An in-text citation placed in brackets, for example "(Davis, 1989)".
@@ -47,7 +47,7 @@ Referencing serves four purposes: **attribution** (credit to the original author
 
 ### In-text citations in APA 7
 
-APA 7 uses an author–date system. The table below shows the main patterns. The names are fictional format examples.
+APA 7 uses an author-date system. The table below shows the main patterns. The names are fictional format examples.
 
 | Situation | Parenthetical | Narrative |
 |---|---|---|
@@ -57,7 +57,7 @@ APA 7 uses an author–date system. The table below shows the main patterns. The
 | Group author with abbreviation (first citation) | (Illustrative Statistics Agency [ISA], 2022) | Illustrative Statistics Agency (ISA, 2022) |
 | Group author (later citations) | (ISA, 2022) | ISA (2022) |
 | Direct quotation | (Mensah, 2021, p. 14) | Mensah (2021) stated that "..." (p. 14). |
-| Several works in one bracket | (Asante, 2019; Mensah, 2021) | — |
+| Several works in one bracket | (Asante, 2019; Mensah, 2021) | n/a |
 | Same author, same year | (Owusu, 2020a, 2020b) | Owusu (2020a) |
 
 Key rules:
@@ -76,13 +76,13 @@ The reference list appears at the end, titled **References**, in alphabetical or
 
 **Journal article**
 
-Pattern: Author, A. A., Author, B. B., & Author, C. C. (Year). Title of article in sentence case. *Title of Journal in Title Case, volume*(issue), page–page. https://doi.org/xxxxx
+Pattern: Author, A. A., Author, B. B., & Author, C. C. (Year). Title of article in sentence case. *Title of Journal in Title Case, volume*(issue), page-page. https://doi.org/xxxxx
 
 *Format example (fictional):*
-Asante, K. M., & Boateng, E. A. (2021). Mobile money use and record keeping among market traders. *Journal of Illustrative Information Systems, 12*(3), 45–67. https://doi.org/10.0000/example.2021.003
+Asante, K. M., & Boateng, E. A. (2021). Mobile money use and record keeping among market traders. *Journal of Illustrative Information Systems, 12*(3), 45-67. https://doi.org/10.0000/example.2021.003
 
 *Real example:*
-Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319–340. https://doi.org/10.2307/249008
+Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319-340. https://doi.org/10.2307/249008
 
 Note that the article title is in sentence case (only the first word, the first word after a colon and proper nouns capitalised) and not italicised, while the journal title and volume number are italicised; the issue number in brackets is not.
 
@@ -98,10 +98,10 @@ Saunders, M., Lewis, P., & Thornhill, A. (2019). *Research methods for business 
 
 **Chapter in an edited book**
 
-Pattern: Author, A. A. (Year). Title of chapter. In E. E. Editor & F. F. Editor (Eds.), *Title of book* (pp. xx–xx). Publisher. https://doi.org/xxxxx (if available)
+Pattern: Author, A. A. (Year). Title of chapter. In E. E. Editor & F. F. Editor (Eds.), *Title of book* (pp. xx-xx). Publisher. https://doi.org/xxxxx (if available)
 
 *Format example (fictional):*
-Mensah, A. B. (2019). Cybersecurity awareness in higher education. In C. D. Ofori & E. F. Darko (Eds.), *Information security in emerging economies* (pp. 101–125). Illustrative Academic Press.
+Mensah, A. B. (2019). Cybersecurity awareness in higher education. In C. D. Ofori & E. F. Darko (Eds.), *Information security in emerging economies* (pp. 101-125). Illustrative Academic Press.
 
 Note that editors' initials come **before** their surnames in this position, and the book title, not the chapter title, is italicised.
 
@@ -178,7 +178,7 @@ Postgraduate writing should rely mainly on paraphrase and synthesis; heavy quota
 3. *In text:* "(Ofori, Darko, and Mensah, 2022)" on first citation.
    *Error:* APA 7 uses et al. for three or more authors from the first citation. *Correct:* "(Ofori et al., 2022)".
 4. *Reference:* "Davis, F. D. (1989). Perceived Usefulness, Perceived Ease Of Use, And User Acceptance Of Information Technology. MIS Quarterly, 13(3), 319-340."
-   *Errors:* article title in title case; journal title and volume not italicised; hyphen instead of en dash; DOI missing where available. *Correct:* Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319–340. https://doi.org/10.2307/249008
+   *Errors:* article title in title case; journal title and volume not italicised; hyphen instead of en dash; DOI missing where available. *Correct:* Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319-340. https://doi.org/10.2307/249008
 5. *Reference:* "Saunders, M., Lewis, P., & Thornhill, A. (2019). Research methods for business students. 8th edition. Harlow: Pearson."
    *Errors:* title not italicised; edition format; publisher location included. *Correct:* Saunders, M., Lewis, P., & Thornhill, A. (2019). *Research methods for business students* (8th ed.). Pearson.
 
@@ -229,7 +229,7 @@ Good referencing begins at the note-taking stage: notes written in your own word
 
 ## Critical Thinking Questions
 
-1. Why might a field prefer the author–date system of APA over numbered footnote systems? What does this suggest about how evidence is valued?
+1. Why might a field prefer the author-date system of APA over numbered footnote systems? What does this suggest about how evidence is valued?
 2. Where is the line between legitimate learning from a source's structure and patchwriting?
 3. How should universities respond to generative AI tools that can paraphrase text automatically? What would a fair policy look like?
 4. Is self-plagiarism a genuine integrity issue, or simply an administrative rule? Defend your view.
@@ -243,7 +243,7 @@ Good referencing begins at the note-taking stage: notes written in your own word
 ## Key Takeaways
 
 - Referencing provides attribution, verification, positioning and integrity.
-- APA 7 in-text citations use author–date; use "&" in parentheses, "and" in narrative, and "et al." for three or more authors.
+- APA 7 in-text citations use author-date; use "&" in parentheses, "and" in narrative, and "et al." for three or more authors.
 - Reference entries differ by source type; check sentence case, italics, edition, DOI format and the absence of publisher locations.
 - Zotero automates citations but requires metadata checking and proofreading.
 - Avoid plagiarism through notes in your own words, genuine paraphrase, consistent citation and honest use of tools.
@@ -252,22 +252,22 @@ Good referencing begins at the note-taking stage: notes written in your own word
 
 - American Psychological Association. (2020). *Publication manual of the American Psychological Association* (7th ed.). American Psychological Association.
 - Swales, J. M., & Feak, C. B. (2012). *Academic writing for graduate students: Essential tasks and skills* (3rd ed.). University of Michigan Press.
-- Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319–340. <https://doi.org/10.2307/249008>
+- Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319-340. <https://doi.org/10.2307/249008>
 - American Psychological Association. (n.d.). *APA Style*. <https://apastyle.apa.org/>
 
 ## Video Resources
 
-- [APA Style](https://apastyle.apa.org/) — American Psychological Association. Official APA Style site with references and in-text citation guidance, sample papers and instructional aids.
-- [Zotero Documentation](https://www.zotero.org/support/) — Zotero. Official documentation and quick-start guides for capturing sources, using word processor plugins and generating bibliographies.
-- [Purdue Online Writing Lab](https://owl.purdue.edu/) — Purdue University. Official writing resource portal with APA formatting guidance and advice on paraphrasing.
+- [APA Style](https://apastyle.apa.org/): American Psychological Association. Official APA Style site with references and in-text citation guidance, sample papers and instructional aids.
+- [Zotero Documentation](https://www.zotero.org/support/): Zotero. Official documentation and quick-start guides for capturing sources, using word processor plugins and generating bibliographies.
+- [Purdue Online Writing Lab](https://owl.purdue.edu/): Purdue University. Official writing resource portal with APA formatting guidance and advice on paraphrasing.
 
 ## Revision Summary
 
-APA 7 is an author–date style that requires an in-text citation for every use of others' ideas or words and a matching, correctly formatted entry in an alphabetical reference list. Zotero and similar tools speed up referencing but require careful metadata checking. Plagiarism, including patchwriting and unacknowledged paraphrase, is avoided through good notes, genuine paraphrase and consistent citation.
+APA 7 is an author-date style that requires an in-text citation for every use of others' ideas or words and a matching, correctly formatted entry in an alphabetical reference list. Zotero and similar tools speed up referencing but require careful metadata checking. Plagiarism, including patchwriting and unacknowledged paraphrase, is avoided through good notes, genuine paraphrase and consistent citation.
 
 - In text: (Author, Year); Author (Year); "&" in brackets; "et al." for 3+ authors; page numbers for quotations.
 - Journal: Author. (Year). Sentence-case title. *Journal, vol*(issue), pages. https://doi.org/...
 - Book: Author. (Year). *Title* (ed.). Publisher. (No location.)
-- Chapter: Author. (Year). Chapter title. In E. Editor (Ed.), *Book* (pp. x–y). Publisher.
+- Chapter: Author. (Year). Chapter title. In E. Editor (Ed.), *Book* (pp. x-y). Publisher.
 - Webpage: Author. (Year, Month Day). *Title*. Site. URL.
 - Similarity reports are evidence to review, not verdicts.

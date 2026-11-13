@@ -17,7 +17,7 @@ export function SourceBadge({ source }: { source: ContentSource }) {
   return (
     <Badge
       tone={meta.tone}
-      title={source === 'supplementary' ? 'Original GradPath explanation — not official University of Ghana material' : undefined}
+      title={source === 'supplementary' ? 'Original GradPath explanation, not official University of Ghana material' : undefined}
     >
       <Icon aria-hidden /> {meta.label}
     </Badge>

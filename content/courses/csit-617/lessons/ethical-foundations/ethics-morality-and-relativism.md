@@ -166,8 +166,8 @@ flowchart TD
 
 ## Practical Exercises
 
-1. **Ethics–law matrix.** Identify two IT practices in each quadrant of the legal/moral table in this lesson, drawing on Ghanaian contexts. *Expected output:* a completed 2×2 matrix with eight examples and a one-sentence justification for each.
-2. **Argument reconstruction.** Write the cultural relativist argument as numbered premises and conclusion, then identify precisely where it fails. *Expected output:* a structured argument and a 200-word critique naming the descriptive–normative gap.
+1. **Ethics-law matrix.** Identify two IT practices in each quadrant of the legal/moral table in this lesson, drawing on Ghanaian contexts. *Expected output:* a completed 2×2 matrix with eight examples and a one-sentence justification for each.
+2. **Argument reconstruction.** Write the cultural relativist argument as numbered premises and conclusion, then identify precisely where it fails. *Expected output:* a structured argument and a 200-word critique naming the descriptive-normative gap.
 3. **Policy vacuum brief.** Choose a new technology used in Ghana (for example drone delivery, AI chatbots or biometric attendance systems). *Expected output:* a one-page brief identifying the vacuum, any conceptual muddle and a proposed policy with its justification.
 
 ## Key Takeaways
@@ -181,7 +181,7 @@ flowchart TD
 ## Further Reading
 
 - Gyekye, K. (1997). *Tradition and modernity: Philosophical reflections on the African experience*. Oxford University Press.
-- Moor, J. H. (1985). What is computer ethics? *Metaphilosophy, 16*(4), 266–275.
+- Moor, J. H. (1985). What is computer ethics? *Metaphilosophy, 16*(4), 266-275.
 - Quinn, M. J. (2020). *Ethics for the information age* (8th ed.). Pearson.
 - Stanford Encyclopedia of Philosophy. Moral relativism. <https://plato.stanford.edu/entries/moral-relativism/>
 - Tavani, H. T. (2016). *Ethics and technology: Controversies, questions, and strategies for ethical computing* (5th ed.). Wiley.
@@ -189,8 +189,8 @@ flowchart TD
 
 ## Video Resources
 
-- [Justice with Michael Sandel](https://justiceharvard.org/) — Harvard University. Official site for the Justice course, with lecture videos introducing moral reasoning and disagreement.
-- [Crash Course](https://www.youtube.com/@crashcourse) — Crash Course. Official channel whose Philosophy series includes introductory episodes on metaethics and moral theories.
+- [Justice with Michael Sandel](https://justiceharvard.org/): Harvard University. Official site for the Justice course, with lecture videos introducing moral reasoning and disagreement.
+- [Crash Course](https://www.youtube.com/@crashcourse): Crash Course. Official channel whose Philosophy series includes introductory episodes on metaethics and moral theories.
 
 ## Revision Summary
 

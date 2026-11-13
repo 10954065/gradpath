@@ -63,9 +63,9 @@ The central challenge of explanatory research is **causal inference**. A survey 
 
 A widely used framework, rooted in the philosophy of John Stuart Mill and standard in methods texts, holds that three conditions must be satisfied before claiming X causes Y.
 
-1. **Covariation** – X and Y vary together; when X changes, Y tends to change.
-2. **Temporal precedence** – X occurs before Y.
-3. **Non-spuriousness** – the relationship is not explained by a third variable Z.
+1. **Covariation**: X and Y vary together; when X changes, Y tends to change.
+2. **Temporal precedence**: X occurs before Y.
+3. **Non-spuriousness**: the relationship is not explained by a third variable Z.
 
 Experiments satisfy all three most convincingly because the researcher manipulates X and random assignment balances other variables. Cross-sectional surveys can establish covariation and, by statistically controlling for measured confounders, partially address non-spuriousness, but temporal order is often assumed rather than demonstrated. A well-written dissertation therefore uses cautious language such as "is associated with" or "predicts" unless the design supports "causes".
 
@@ -184,13 +184,13 @@ The case illustrates three points. First, plausible initial hypotheses (that the
 - Saunders, M., Lewis, P., & Thornhill, A. (2019). *Research methods for business students* (8th ed.). Pearson.
 - Bell, E., Bryman, A., & Harley, B. (2019). *Business research methods* (5th ed.). Oxford University Press.
 - Creswell, J. W., & Creswell, J. D. (2018). *Research design: Qualitative, quantitative, and mixed methods approaches* (5th ed.). SAGE.
-- Edmondson, A. (1999). Psychological safety and learning behavior in work teams. *Administrative Science Quarterly, 44*(2), 350–383.
+- Edmondson, A. (1999). Psychological safety and learning behavior in work teams. *Administrative Science Quarterly, 44*(2), 350-383.
 - Shadish, W. R., Cook, T. D., & Campbell, D. T. (2002). *Experimental and quasi-experimental designs for generalized causal inference*. Houghton Mifflin.
 
 ## Video Resources
 
-- [SAGE Research Methods](https://methods.sagepub.com/) — SAGE Publishing. Official research methods platform (access may depend on institutional subscription) covering research purposes and design.
-- [Google re:Work](https://rework.withgoogle.com/) — Google. Official site where Google shares guides and research summaries on team effectiveness, including Project Aristotle.
+- [SAGE Research Methods](https://methods.sagepub.com/): SAGE Publishing. Official research methods platform (access may depend on institutional subscription) covering research purposes and design.
+- [Google re:Work](https://rework.withgoogle.com/): Google. Official site where Google shares guides and research summaries on team effectiveness, including Project Aristotle.
 
 ## Revision Summary
 

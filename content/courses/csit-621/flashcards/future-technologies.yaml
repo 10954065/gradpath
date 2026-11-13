@@ -2,16 +2,16 @@ module: future-technologies
 cards:
   - lesson: robotics-automation-and-autonomous-systems
     front: How do automation, robotics and autonomy differ?
-    back: Automation is what is done (a task performed by technology); robotics is one physical means of doing it (sense–think–act machines); autonomy is how independently the system decides and acts within a defined domain.
+    back: Automation is what is done (a task performed by technology); robotics is one physical means of doing it (sense-think-act machines); autonomy is how independently the system decides and acts within a defined domain.
   - lesson: robotics-automation-and-autonomous-systems
     front: Give two strengths and two weaknesses of RPA.
-    back: Strengths — fast to deploy and works across legacy systems without changing them. Weaknesses — brittle when interfaces change and automates existing (possibly broken) processes; bots also need governance of credentials and ownership.
+    back: Strengths, fast to deploy and works across legacy systems without changing them. Weaknesses, brittle when interfaces change and automates existing (possibly broken) processes; bots also need governance of credentials and ownership.
   - lesson: robotics-automation-and-autonomous-systems
     front: Where is the critical boundary in SAE J3016 and why?
-    back: Between levels 2 and 3. At levels 0–2 the human is driving and must supervise; at levels 3–5 the automated system drives when engaged, with level 3 still needing a human ready to take over on request.
+    back: Between levels 2 and 3. At levels 0-2 the human is driving and must supervise; at levels 3-5 the automated system drives when engaged, with level 3 still needing a human ready to take over on request.
   - lesson: robotics-automation-and-autonomous-systems
     front: What does the Parasuraman, Sheridan and Wickens model add to automation decisions?
-    back: It separates four functions — information acquisition, information analysis, decision selection and action implementation — each of which can be automated to a different degree, helping decide where human judgement should remain.
+    back: It separates four functions (information acquisition, information analysis, decision selection and action implementation) each of which can be automated to a different degree, helping decide where human judgement should remain.
   - lesson: robotics-automation-and-autonomous-systems
     front: Why is the Zipline drone service in Ghana a useful example of autonomous systems?
     back: It shows autonomy working within a defined operating domain (planned routes and coordinated airspace) to solve a real logistics problem for health facilities, through a partnership with the Government of Ghana.
@@ -20,13 +20,13 @@ cards:
     back: Supervisors of reliable automation monitor less carefully over time and react slowly. Designers should not rely on humans as the only safety backstop, and should use monitoring, clear handovers and limited operating domains.
   - lesson: 5g-and-future-connectivity
     front: Name and explain the three 5G usage scenarios.
-    back: eMBB — high data rates and capacity; URLLC — very low latency and very high reliability for control applications; mMTC — very large numbers of low-power, low-data devices.
+    back: eMBB, high data rates and capacity; URLLC, very low latency and very high reliability for control applications; mMTC, very large numbers of low-power, low-data devices.
   - lesson: 5g-and-future-connectivity
     front: What is network slicing and what does it require?
     back: Multiple isolated logical networks with different guaranteed performance on shared infrastructure. It requires a standalone 5G core and an operator able to sell and manage slices.
   - lesson: 5g-and-future-connectivity
     front: When does private 5G make more sense than Wi-Fi?
-    back: At large, often outdoor, mission-critical sites with many moving devices or heavy interference — ports, mines, factories — where reliability, mobility and control justify the cost, spectrum and skills required.
+    back: At large, often outdoor, mission-critical sites with many moving devices or heavy interference (ports, mines, factories) where reliability, mobility and control justify the cost, spectrum and skills required.
   - lesson: 5g-and-future-connectivity
     front: Why is 5G often described as having a "killer application" problem?
     back: Consumers often see little extra value over good 4G, so operators struggle to earn returns; stronger cases tend to come from fixed wireless access and enterprise or industrial uses needing capabilities 4G lacks.
@@ -47,4 +47,4 @@ cards:
     back: Mass surveillance (e.g. facial recognition), function creep, re-identification of "anonymous" location data, security breaches of centralised data, exclusion of non-digital residents and vendor lock-in.
   - lesson: advanced-ai-and-smart-cities
     front: What is the central lesson of Sidewalk Toronto?
-    back: Data governance and public trust — who owns and controls data collected in public spaces — must be settled early; the controversy contributed to the project's end when Sidewalk Labs withdrew in 2020.
+    back: Data governance and public trust, who owns and controls data collected in public spaces, must be settled early; the controversy contributed to the project's end when Sidewalk Labs withdrew in 2020.

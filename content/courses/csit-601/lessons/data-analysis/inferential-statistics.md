@@ -87,9 +87,9 @@ For small samples, the multiplier comes from the t-distribution with `n − 1` d
 | Research question | Data | Common parametric test | Common non-parametric alternative |
 |---|---|---|---|
 | Does a mean differ from a fixed value? | One interval variable | One-sample t-test | Wilcoxon signed-rank test |
-| Do two independent groups differ? | Interval outcome, two groups | Independent-samples t-test | Mann–Whitney U test |
+| Do two independent groups differ? | Interval outcome, two groups | Independent-samples t-test | Mann-Whitney U test |
 | Do the same people differ at two times? | Interval outcome, paired | Paired-samples t-test | Wilcoxon signed-rank test |
-| Do three or more groups differ? | Interval outcome, 3+ groups | One-way ANOVA | Kruskal–Wallis test |
+| Do three or more groups differ? | Interval outcome, 3+ groups | One-way ANOVA | Kruskal-Wallis test |
 | Are two categorical variables associated? | Two nominal variables | Chi-square test of independence | Fisher's exact test (small samples) |
 | Are two interval variables related? | Two interval variables | Pearson correlation | Spearman's rank correlation |
 
@@ -142,13 +142,13 @@ flowchart TD
 n = 100,  x̄ = 3.40,  s = 0.80
 ```
 
-**Step 1 – Standard error.**
+**Step 1: Standard error.**
 
 ```
 SE = s / √n = 0.80 / √100 = 0.80 / 10 = 0.08
 ```
 
-**Step 2 – 95% confidence interval.**
+**Step 2: 95% confidence interval.**
 
 ```
 3.40 ± 1.96 × 0.08 = 3.40 ± 0.157
@@ -157,7 +157,7 @@ CI = (3.24, 3.56)
 
 (Using the t multiplier for 99 degrees of freedom, about 1.98, gives nearly the same interval.)
 
-**Step 3 – One-sample t-test.** H0: μ = 3.0; H1: μ ≠ 3.0; α = 0.05.
+**Step 3: One-sample t-test.** H0: μ = 3.0; H1: μ ≠ 3.0; α = 0.05.
 
 ```
 t = (x̄ − μ0) / SE = (3.40 − 3.00) / 0.08 = 5.0,  df = 99
@@ -165,7 +165,7 @@ t = (x̄ − μ0) / SE = (3.40 − 3.00) / 0.08 = 5.0,  df = 99
 
 A t value of 5.0 with 99 degrees of freedom corresponds to `p < .001`. Nana rejects H0.
 
-**Step 4 – Effect size.**
+**Step 4: Effect size.**
 
 ```
 d = (3.40 − 3.00) / 0.80 = 0.50
@@ -173,7 +173,7 @@ d = (3.40 − 3.00) / 0.80 = 0.50
 
 This is a medium effect by Cohen's conventions.
 
-**Step 5 – Report.** *"Mean cybersecurity awareness (M = 3.40, SD = 0.80) was significantly above the scale midpoint, t(99) = 5.00, p < .001, d = 0.50, 95% CI [3.24, 3.56]."* Interpretation: awareness is moderately above neutral, but even the upper end of the interval (3.56) is well below "high" (4), suggesting room for improvement.
+**Step 5: Report.** *"Mean cybersecurity awareness (M = 3.40, SD = 0.80) was significantly above the scale midpoint, t(99) = 5.00, p < .001, d = 0.50, 95% CI [3.24, 3.56]."* Interpretation: awareness is moderately above neutral, but even the upper end of the interval (3.56) is well below "high" (4), suggesting room for improvement.
 
 ### Part B: Chi-square test of independence
 
@@ -185,7 +185,7 @@ This is a medium effect by Cohen's conventions.
 | Not trained | 36 | 84 | 120 |
 | **Total** | **48** | **152** | **200** |
 
-**Step 1 – Expected frequencies** under H0 (no association): `E = (row total × column total) / grand total`.
+**Step 1: Expected frequencies** under H0 (no association): `E = (row total × column total) / grand total`.
 
 ```
 Trained, clicked:       80 × 48 / 200 = 19.2
@@ -196,7 +196,7 @@ Untrained, not clicked: 120 × 152 / 200 = 91.2
 
 All expected frequencies exceed 5, so the chi-square approximation is acceptable.
 
-**Step 2 – Chi-square statistic:** `χ² = Σ (O − E)² / E`.
+**Step 2: Chi-square statistic:** `χ² = Σ (O − E)² / E`.
 
 ```
 (12 − 19.2)² / 19.2 = 51.84 / 19.2 = 2.700
@@ -206,9 +206,9 @@ All expected frequencies exceed 5, so the chi-square approximation is acceptable
 χ² = 5.92,  df = (2 − 1) × (2 − 1) = 1
 ```
 
-**Step 3 – Decide.** The critical value of χ² at α = 0.05 with 1 df is 3.84. Since 5.92 > 3.84, H0 is rejected; the p-value lies between 0.01 and 0.025.
+**Step 3: Decide.** The critical value of χ² at α = 0.05 with 1 df is 3.84. Since 5.92 > 3.84, H0 is rejected; the p-value lies between 0.01 and 0.025.
 
-**Step 4 – Interpret.** Click rates were 15% among trained students (12/80) and 30% among untrained students (36/120). Training is associated with a lower click rate. Because students chose whether to attend training, this is an association, not proof of causation; more security-conscious students may have been more likely to attend.
+**Step 4: Interpret.** Click rates were 15% among trained students (12/80) and 30% among untrained students (36/120). Training is associated with a lower click rate. Because students chose whether to attend training, this is an association, not proof of causation; more security-conscious students may have been more likely to attend.
 
 **Expected output:** CI [3.24, 3.56], t(99) = 5.00, d = 0.50, χ²(1) = 5.92, with correct decisions and calibrated interpretations.
 
@@ -260,7 +260,7 @@ The statement did not ban p-values, but it encouraged researchers to supplement 
 
 1. **Confidence interval.** A random sample of 64 SMEs reports a mean AI-readiness score of 2.8 (SD = 1.2) on a five-point scale. Compute the standard error and the 95% CI. *Expected output:* `SE = 1.2 / 8 = 0.15`; `CI = 2.8 ± 1.96 × 0.15 = 2.8 ± 0.294 = (2.51, 3.09)`, interpreted as a plausible range that includes the midpoint 3.0.
 2. **Hypothesis test.** Using the same data, test H0: μ = 3.0 at α = 0.05 and compute Cohen's d. *Expected output:* `t = (2.8 − 3.0) / 0.15 = −1.33`, df = 63, not significant (|t| < about 2.00); `d = −0.2 / 1.2 = −0.17`, a small effect; conclusion: fail to reject H0, consistent with the CI including 3.0.
-3. **Choose the test.** For each question, name the appropriate test: (a) Do adopters and non-adopters of e-commerce differ in mean firm age? (b) Is gender associated with password reuse (yes/no)? (c) Do nurses' satisfaction scores differ before and after EHR training? *Expected output:* (a) independent-samples t-test (or Mann–Whitney U), (b) chi-square test of independence, (c) paired-samples t-test (or Wilcoxon signed-rank).
+3. **Choose the test.** For each question, name the appropriate test: (a) Do adopters and non-adopters of e-commerce differ in mean firm age? (b) Is gender associated with password reuse (yes/no)? (c) Do nurses' satisfaction scores differ before and after EHR training? *Expected output:* (a) independent-samples t-test (or Mann-Whitney U), (b) chi-square test of independence, (c) paired-samples t-test (or Wilcoxon signed-rank).
 
 ## Key Takeaways
 
@@ -274,13 +274,13 @@ The statement did not ban p-values, but it encouraged researchers to supplement 
 
 - Field, A. (2018). *Discovering statistics using IBM SPSS statistics* (5th ed.). SAGE.
 - Cohen, J. (1988). *Statistical power analysis for the behavioral sciences* (2nd ed.). Lawrence Erlbaum Associates.
-- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA's statement on p-values: Context, process, and purpose. *The American Statistician, 70*(2), 129–133. <https://doi.org/10.1080/00031305.2016.1154108>
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA's statement on p-values: Context, process, and purpose. *The American Statistician, 70*(2), 129-133. <https://doi.org/10.1080/00031305.2016.1154108>
 - Saunders, M., Lewis, P., & Thornhill, A. (2019). *Research methods for business students* (8th ed.). Pearson.
 
 ## Video Resources
 
-- [Khan Academy: Statistics and Probability](https://www.khanacademy.org/math/statistics-probability) — Khan Academy. Free official course with units on confidence intervals, significance tests and chi-square tests.
-- [MIT OpenCourseWare](https://ocw.mit.edu/) — Massachusetts Institute of Technology. Official open learning portal; search for introductory probability and statistics course materials.
+- [Khan Academy: Statistics and Probability](https://www.khanacademy.org/math/statistics-probability): Khan Academy. Free official course with units on confidence intervals, significance tests and chi-square tests.
+- [MIT OpenCourseWare](https://ocw.mit.edu/): Massachusetts Institute of Technology. Official open learning portal; search for introductory probability and statistics course materials.
 
 ## Revision Summary
 

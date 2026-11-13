@@ -176,14 +176,14 @@ Although this case comes from medicine, its lessons apply to every field. First,
 ## Further Reading
 
 - Saunders, M., Lewis, P., & Thornhill, A. (2019). *Research methods for business students* (8th ed.). Pearson.
-- Sandberg, J., & Alvesson, M. (2011). Ways of constructing research questions: Gap-spotting or problematization? *Organization, 18*(1), 23–44.
+- Sandberg, J., & Alvesson, M. (2011). Ways of constructing research questions: Gap-spotting or problematization? *Organization, 18*(1), 23-44.
 - Hart, C. (1998). *Doing a literature review: Releasing the social science research imagination*. SAGE.
-- Snyder, H. (2019). Literature review as a research methodology: An overview and guidelines. *Journal of Business Research, 104*, 333–339. <https://doi.org/10.1016/j.jbusres.2019.07.039>
+- Snyder, H. (2019). Literature review as a research methodology: An overview and guidelines. *Journal of Business Research, 104*, 333-339. <https://doi.org/10.1016/j.jbusres.2019.07.039>
 
 ## Video Resources
 
-- [Directory of Open Access Journals](https://doaj.org/) — DOAJ. Official directory of quality-checked open access journals, useful for checking a journal's listing.
-- [Purdue Online Writing Lab](https://owl.purdue.edu/) — Purdue University. Official writing resource with guidance on evaluating sources.
+- [Directory of Open Access Journals](https://doaj.org/): DOAJ. Official directory of quality-checked open access journals, useful for checking a journal's listing.
+- [Purdue Online Writing Lab](https://owl.purdue.edu/): Purdue University. Official writing resource with guidance on evaluating sources.
 
 ## Revision Summary
 

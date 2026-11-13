@@ -89,9 +89,9 @@ A tiny 4 by 4 greyscale image has a bright vertical stripe on its right edge (0 
 
 A 3 by 3 vertical-edge filter has each row equal to (−1, 0, 1): it subtracts the left column of the window and adds the right column.
 
-**Position 1 (rows 1–3, columns 1–3).** Each row of the window is (0, 0, 0). Sum = 3 × (−1 × 0 + 0 × 0 + 1 × 0) = **0**.
+**Position 1 (rows 1-3, columns 1-3).** Each row of the window is (0, 0, 0). Sum = 3 × (−1 × 0 + 0 × 0 + 1 × 0) = **0**.
 
-**Position 2 (rows 1–3, columns 2–4).** Each row is (0, 0, 9). Sum = 3 × (−1 × 0 + 0 × 0 + 1 × 9) = **27**.
+**Position 2 (rows 1-3, columns 2-4).** Each row is (0, 0, 9). Sum = 3 × (−1 × 0 + 0 × 0 + 1 × 9) = **27**.
 
 Sliding down one row gives the same two values, so the 2 by 2 feature map is:
 
@@ -202,14 +202,14 @@ flowchart LR
 - Goodfellow, I., Bengio, Y., & Courville, A. (2016). *Deep learning*. MIT Press. <https://www.deeplearningbook.org/>
 - Jurafsky, D., & Martin, J. H. (2009). *Speech and language processing* (2nd ed.). Pearson Prentice Hall. Draft chapters of a later edition are available at <https://web.stanford.edu/~jurafsky/slp3/>
 - Mikolov, T., Chen, K., Corrado, G., & Dean, J. (2013). *Efficient estimation of word representations in vector space* (arXiv:1301.3781). arXiv. <https://arxiv.org/abs/1301.3781>
-- LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. *Nature, 521*(7553), 436–444.
+- LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. *Nature, 521*(7553), 436-444.
 - Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. *Advances in Neural Information Processing Systems, 30*.
 
 ## Video Resources
 
-- [Hugging Face Learn](https://huggingface.co/learn) — Hugging Face. Free courses on NLP, computer vision and transformers using open models.
-- [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) — Google for Developers. Includes material on embeddings and working with categorical and text data.
-- [Kaggle Learn](https://www.kaggle.com/learn) — Kaggle. Free micro-courses including computer vision.
+- [Hugging Face Learn](https://huggingface.co/learn): Hugging Face. Free courses on NLP, computer vision and transformers using open models.
+- [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course): Google for Developers. Includes material on embeddings and working with categorical and text data.
+- [Kaggle Learn](https://www.kaggle.com/learn): Kaggle. Free micro-courses including computer vision.
 
 ## Revision Summary
 

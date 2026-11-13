@@ -203,7 +203,7 @@ flowchart LR
 ## Practical Exercises
 
 1. **Code comparison.** Read the full ACM and IEEE codes on their official websites. *Expected output:* a table comparing at least eight themes (for example public welfare, privacy, competence, honesty, discrimination, security, environment, reporting) with a paraphrase from each code and a comment on differences.
-2. **Personal CPD plan.** Using the reflect–plan–act–evaluate cycle, produce a 12-month CPD plan for your current or intended role. *Expected output:* a one-page plan with three competence gaps, matching learning activities, target dates and evidence you will keep.
+2. **Personal CPD plan.** Using the reflect-plan-act-evaluate cycle, produce a 12-month CPD plan for your current or intended role. *Expected output:* a one-page plan with three competence gaps, matching learning activities, target dates and evidence you will keep.
 3. **Code-based recommendation.** Write a 300-word memo from Abena to her manager in the worked example. *Expected output:* a professional memo that discloses limitations, cites relevant principles in paraphrase and proposes at least two alternatives.
 
 ## Key Takeaways
@@ -217,17 +217,17 @@ flowchart LR
 ## Further Reading
 
 - Association for Computing Machinery. (2018). *ACM code of ethics and professional conduct*. <https://www.acm.org/code-of-ethics>
-- Davis, M. (1991). Thinking like an engineer: The place of a code of ethics in the practice of a profession. *Philosophy & Public Affairs, 20*(2), 150–167.
+- Davis, M. (1991). Thinking like an engineer: The place of a code of ethics in the practice of a profession. *Philosophy & Public Affairs, 20*(2), 150-167.
 - IEEE. (n.d.). *IEEE code of ethics*. <https://www.ieee.org/about/corporate/governance/p7-8.html>
-- Moor, J. H. (1985). What is computer ethics? *Metaphilosophy, 16*(4), 266–275.
+- Moor, J. H. (1985). What is computer ethics? *Metaphilosophy, 16*(4), 266-275.
 - Quinn, M. J. (2020). *Ethics for the information age* (8th ed.). Pearson.
 - Tavani, H. T. (2016). *Ethics and technology: Controversies, questions, and strategies for ethical computing* (5th ed.). Wiley.
 
 ## Video Resources
 
-- [ACM Code of Ethics and Professional Conduct](https://www.acm.org/code-of-ethics) — Association for Computing Machinery. Official home of the 2018 code with supporting guidance and case material.
-- [IEEE Code of Ethics](https://www.ieee.org/about/corporate/governance/p7-8.html) — IEEE. Official page presenting the current IEEE Code of Ethics within IEEE policies.
-- [Markkula Center for Applied Ethics](https://www.scu.edu/ethics/) — Santa Clara University. Official portal with resources on technology ethics and professional practice.
+- [ACM Code of Ethics and Professional Conduct](https://www.acm.org/code-of-ethics): Association for Computing Machinery. Official home of the 2018 code with supporting guidance and case material.
+- [IEEE Code of Ethics](https://www.ieee.org/about/corporate/governance/p7-8.html): IEEE. Official page presenting the current IEEE Code of Ethics within IEEE policies.
+- [Markkula Center for Applied Ethics](https://www.scu.edu/ethics/): Santa Clara University. Official portal with resources on technology ethics and professional practice.
 
 ## Revision Summary
 

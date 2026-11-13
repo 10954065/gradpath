@@ -1,6 +1,6 @@
 ---
 title: "Case Studies: AI Recruitment Bias and Employee Monitoring"
-summary: Analyse two workplace technology cases — biased AI recruitment and intrusive employee monitoring — using stakeholder analysis, at least two ethical theories and the ACM Code, and construct defensible recommendations.
+summary: Analyse two workplace technology cases, biased AI recruitment and intrusive employee monitoring, using stakeholder analysis, at least two ethical theories and the ACM Code, and construct defensible recommendations.
 estimatedMinutes: 55
 difficulty: advanced
 source: supplementary
@@ -55,11 +55,11 @@ Separating **facts** from **assumptions** is essential. Many weak answers assert
 
 ## Case Study 1: AI Recruitment Bias
 
-### Facts — the international case
+### Facts: the international case
 
 In October 2018, Reuters reported that Amazon had worked for several years on an experimental machine-learning tool to review job applicants' CVs and rate candidates. According to the report, the models were trained on CVs submitted to the company over roughly a ten-year period, most of which came from men, reflecting male dominance in the technology industry. The system learned to favour male candidates for software development and other technical roles: it reportedly penalised CVs containing the word "women's" (as in "women's chess club captain") and downgraded graduates of two all-women's colleges. Engineers edited the programs to make them neutral to those particular terms, but there was no guarantee that the system would not find other ways to discriminate. Amazon ultimately disbanded the team, and the company told Reuters that the tool was never used by its recruiters to evaluate candidates.
 
-### Facts — the Ghanaian application
+### Facts: the Ghanaian application
 
 *Illustrative scenario.* "Kasa Talent Solutions", an Accra recruitment platform, sells an AI screening service to banks and telecoms companies. Its model ranks graduate applicants using CV text, university attended, grades, location and video-interview analysis of speech and facial expression. A client bank notices that shortlists contain few graduates from regional universities and few applicants who speak English with strong local accents. Kasa says the model is "objective" and declines to share details, citing trade secrets.
 
@@ -83,7 +83,7 @@ In October 2018, Reuters reported that Amazon had worked for several years on an
 
 **Utilitarian analysis.** Automated screening can save time and may reduce some individual biases of human recruiters. But the expected harms are substantial: talented applicants are excluded, employers lose talent and diversity, inequality between regions widens, and public trust in AI declines. When the model's validity is unproven, the claimed efficiency benefits are themselves uncertain. On balance, deploying an unvalidated, opaque tool produces worse expected consequences than a validated, monitored alternative.
 
-**Kantian analysis.** Treating applicants as data points scored by correlations with group characteristics — where they studied, how they sound — fails to treat them as ends in themselves who are entitled to be judged on relevant qualities. A maxim such as "use any predictive signal that reduces screening cost, regardless of whether it is relevant or explicable" could not be accepted by those it judges. Respect for persons requires notice, relevant criteria and an opportunity to contest.
+**Kantian analysis.** Treating applicants as data points scored by correlations with group characteristics (where they studied, how they sound) fails to treat them as ends in themselves who are entitled to be judged on relevant qualities. A maxim such as "use any predictive signal that reduces screening cost, regardless of whether it is relevant or explicable" could not be accepted by those it judges. Respect for persons requires notice, relevant criteria and an opportunity to contest.
 
 **Rawlsian justice.** Behind a veil of ignorance, no one knowing whether they would be a regional graduate with a local accent would agree to a hiring rule that systematically disadvantages them without justification.
 
@@ -98,11 +98,11 @@ In October 2018, Reuters reported that Amazon had worked for several years on an
 
 ### Recommendation
 
-Option 3, potentially leading to option 4, is the most defensible. The bank should suspend the tool and require the vendor, as a contractual condition, to provide disaggregated selection rates and validity evidence. Features without a demonstrated link to job performance should be removed, especially video emotion and accent analysis. Applicants should be told that automated tools are used, what data are processed and how to request human review, consistent with data protection principles. The bank's HR and IT leaders should be named as accountable owners, with periodic audits. If the vendor refuses, the bank should change vendors — Amazon's own experience suggests that a tool which cannot be shown to be fair should be abandoned rather than patched.
+Option 3, potentially leading to option 4, is the most defensible. The bank should suspend the tool and require the vendor, as a contractual condition, to provide disaggregated selection rates and validity evidence. Features without a demonstrated link to job performance should be removed, especially video emotion and accent analysis. Applicants should be told that automated tools are used, what data are processed and how to request human review, consistent with data protection principles. The bank's HR and IT leaders should be named as accountable owners, with periodic audits. If the vendor refuses, the bank should change vendors: Amazon's own experience suggests that a tool which cannot be shown to be fair should be abandoned rather than patched.
 
 ### Counter-arguments
 
-- *"Human recruiters are biased too."* True — but replacing hidden human bias with hidden algorithmic bias at scale is not an improvement. The recommendation keeps humans accountable while using data to detect bias in both.
+- *"Human recruiters are biased too."* True, but replacing hidden human bias with hidden algorithmic bias at scale is not an improvement. The recommendation keeps humans accountable while using data to detect bias in both.
 - *"Vendor secrecy protects legitimate IP."* Trade secrets can be respected through confidential audits; they do not justify withholding the information needed to show non-discrimination.
 - *"Auditing is costly."* The cost is modest compared with the legal, reputational and talent costs of discriminatory hiring.
 
@@ -175,10 +175,10 @@ flowchart TD
 
 ## Common Misconceptions
 
-- "If a tool was never formally used for decisions, there are no ethical lessons." — The Amazon case shows how bias arises from historical data and why tools must be tested before and during use.
-- "Removing the gendered words fixes a biased CV model." — Other proxies can carry the same pattern; outcome testing is required.
-- "Employers may monitor anything on company devices." — Monitoring must still be proportionate, transparent and lawful under data protection principles.
-- "Employee consent makes any monitoring acceptable." — Consent in employment is weakened by power imbalance and does not justify disproportionate intrusion.
+- "If a tool was never formally used for decisions, there are no ethical lessons." The Amazon case shows how bias arises from historical data and why tools must be tested before and during use.
+- "Removing the gendered words fixes a biased CV model." Other proxies can carry the same pattern; outcome testing is required.
+- "Employers may monitor anything on company devices." Monitoring must still be proportionate, transparent and lawful under data protection principles.
+- "Employee consent makes any monitoring acceptable." Consent in employment is weakened by power imbalance and does not justify disproportionate intrusion.
 
 ## Common Examination Mistakes
 
@@ -219,8 +219,8 @@ flowchart TD
 
 ## Video Resources
 
-- [ACM Code of Ethics – Case Studies](https://www.acm.org/code-of-ethics/case-studies) — Association for Computing Machinery. Official worked case studies applying the Code to dilemmas, including workplace and AI scenarios.
-- [Ethics of AI](https://ethics-of-ai.mooc.fi/) — University of Helsinki. Free online course with material on fairness, accountability and AI in society.
+- [ACM Code of Ethics: Case Studies](https://www.acm.org/code-of-ethics/case-studies): Association for Computing Machinery. Official worked case studies applying the Code to dilemmas, including workplace and AI scenarios.
+- [Ethics of AI](https://ethics-of-ai.mooc.fi/): University of Helsinki. Free online course with material on fairness, accountability and AI in society.
 
 ## Revision Summary
 

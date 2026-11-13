@@ -61,14 +61,14 @@ Zachman (1987) proposed one of the earliest frameworks, a matrix that classifies
 TOGAF, maintained by The Open Group, is both a framework and a method. Its best-known element is the **Architecture Development Method (ADM)**, an iterative cycle:
 
 1. **Preliminary**: establish the architecture capability, principles and governance.
-2. **Phase A – Architecture Vision**: define scope, stakeholders, business goals and a high-level vision; obtain approval.
-3. **Phase B – Business Architecture**: describe baseline and target business architecture.
-4. **Phase C – Information Systems Architectures**: describe baseline and target data and application architectures.
-5. **Phase D – Technology Architecture**: describe baseline and target technology architecture.
-6. **Phase E – Opportunities and Solutions**: identify projects and work packages that close the gaps.
-7. **Phase F – Migration Planning**: sequence the work into a prioritised roadmap of transition architectures.
-8. **Phase G – Implementation Governance**: ensure delivery projects conform to the target architecture.
-9. **Phase H – Architecture Change Management**: monitor changes in business and technology and decide when a new cycle is needed.
+2. **Phase A: Architecture Vision**: define scope, stakeholders, business goals and a high-level vision; obtain approval.
+3. **Phase B: Business Architecture**: describe baseline and target business architecture.
+4. **Phase C: Information Systems Architectures**: describe baseline and target data and application architectures.
+5. **Phase D: Technology Architecture**: describe baseline and target technology architecture.
+6. **Phase E: Opportunities and Solutions**: identify projects and work packages that close the gaps.
+7. **Phase F: Migration Planning**: sequence the work into a prioritised roadmap of transition architectures.
+8. **Phase G: Implementation Governance**: ensure delivery projects conform to the target architecture.
+9. **Phase H: Architecture Change Management**: monitor changes in business and technology and decide when a new cycle is needed.
 
 **Requirements Management** sits at the centre of the cycle and is continuous: requirements are captured, stored and fed into every phase. In each of phases B to D, the architect performs a gap analysis between baseline and target. TOGAF stresses that the ADM should be tailored; a small organisation would not produce every artefact the full standard describes.
 
@@ -193,21 +193,21 @@ flowchart LR
 ## Further Reading
 
 - The Open Group. (n.d.). *The TOGAF Standard*. <https://www.opengroup.org/togaf>
-- Zachman, J. A. (1987). A framework for information systems architecture. *IBM Systems Journal, 26*(3), 276–292.
+- Zachman, J. A. (1987). A framework for information systems architecture. *IBM Systems Journal, 26*(3), 276-292.
 - Hohpe, G., & Woolf, B. (2004). *Enterprise integration patterns: Designing, building, and deploying messaging solutions*. Addison-Wesley.
 - Camunda. (n.d.). *Camunda documentation*. <https://docs.camunda.io/>
 
 ## Video Resources
 
-- [The TOGAF Standard](https://www.opengroup.org/togaf) — The Open Group. Official home of TOGAF with overview material and links to learning resources.
-- [Camunda Documentation](https://docs.camunda.io/) — Camunda. Official guides explaining how process orchestration connects systems through APIs and connectors.
+- [The TOGAF Standard](https://www.opengroup.org/togaf): The Open Group. Official home of TOGAF with overview material and links to learning resources.
+- [Camunda Documentation](https://docs.camunda.io/): Camunda. Official guides explaining how process orchestration connects systems through APIs and connectors.
 
 ## Revision Summary
 
 Enterprise architecture describes how business, data, applications and technology fit together and plans their evolution from a baseline to a target state. TOGAF's ADM provides a tailorable cycle of phases, with requirements management at the centre. Integration connects applications through file transfer, shared databases, remote calls (APIs) or messaging, arranged point-to-point or through hubs and API gateways. Value comes from linking architecture to real decisions.
 
 - Four EA domains: business, data, application, technology.
-- ADM: Preliminary, A–H, requirements management at the centre.
+- ADM: Preliminary, A-H, requirements management at the centre.
 - Baseline + target + gap analysis = the core architecture reasoning.
 - Integration styles: file, shared database, RPC/API, messaging.
 - Point-to-point grows as `n(n−1)/2`; hubs reduce connections but need governance.

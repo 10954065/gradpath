@@ -202,13 +202,13 @@ flowchart LR
 
 - Mell, P., & Grance, T. (2011). *The NIST definition of cloud computing* (NIST Special Publication 800-145). National Institute of Standards and Technology. <https://csrc.nist.gov/pubs/sp/800/145/final>
 - Erl, T., Mahmood, Z., & Puttini, R. (2013). *Cloud computing: Concepts, technology and architecture*. Prentice Hall.
-- Armbrust, M., Fox, A., Griffith, R., Joseph, A. D., Katz, R., Konwinski, A., Lee, G., Patterson, D., Rabkin, A., Stoica, I., & Zaharia, M. (2010). A view of cloud computing. *Communications of the ACM, 53*(4), 50–58.
+- Armbrust, M., Fox, A., Griffith, R., Joseph, A. D., Katz, R., Konwinski, A., Lee, G., Patterson, D., Rabkin, A., Stoica, I., & Zaharia, M. (2010). A view of cloud computing. *Communications of the ACM, 53*(4), 50-58.
 
 ## Video Resources
 
-- [AWS Skill Builder](https://skillbuilder.aws/) — Amazon Web Services. Official training including cloud practitioner material on service models and shared responsibility.
-- [Microsoft Learn](https://learn.microsoft.com/) — Microsoft. Learning paths describing IaaS, PaaS and SaaS and the shared responsibility model.
-- [Google Cloud Learn](https://cloud.google.com/learn) — Google Cloud. Explainers comparing cloud service models.
+- [AWS Skill Builder](https://skillbuilder.aws/): Amazon Web Services. Official training including cloud practitioner material on service models and shared responsibility.
+- [Microsoft Learn](https://learn.microsoft.com/): Microsoft. Learning paths describing IaaS, PaaS and SaaS and the shared responsibility model.
+- [Google Cloud Learn](https://cloud.google.com/learn): Google Cloud. Explainers comparing cloud service models.
 
 ## Revision Summary
 

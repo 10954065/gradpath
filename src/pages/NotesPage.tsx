@@ -117,7 +117,7 @@ export default function NotesPage() {
     <>
       <PageHeader
         title="My Notes"
-        description="Your private academic notebook. Only you can see these notes — administrators cannot read them."
+        description="Your private academic notebook. Only you can see these notes. Administrators cannot read them."
         actions={
           <>
             <Button variant="secondary" onClick={exportNotes} disabled={!visible.length}>

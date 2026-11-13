@@ -10,7 +10,7 @@ source: supplementary
 
 Why does one trader in Kumasi accept mobile money by QR code while her neighbour insists on cash? Why do many Ghanaian online shoppers prefer to pay the rider on delivery even when a wallet payment would be quicker? Questions like these sit at the intersection of technology, behaviour and economics, and they matter to every business planning a digital commerce strategy. A brilliantly engineered checkout fails if customers do not trust it, find it effortful or see no benefit over cash.
 
-This lesson equips you with the main theoretical lenses for explaining adoption — the Technology Acceptance Model, the Unified Theory of Acceptance and Use of Technology and diffusion of innovations — and applies them to Ghanaian digital payments and online retail. It then examines the practical features of online retail in Ghana, including social commerce, delivery and addressing, cash on delivery and returns, before working through a cost analysis of shifting customers to prepaid digital payment. Statements about Ghana are deliberately qualitative; for current figures consult the Bank of Ghana, GSMA and the World Bank's Global Findex.
+This lesson equips you with the main theoretical lenses for explaining adoption: the Technology Acceptance Model, the Unified Theory of Acceptance and Use of Technology and diffusion of innovations, and applies them to Ghanaian digital payments and online retail. It then examines the practical features of online retail in Ghana, including social commerce, delivery and addressing, cash on delivery and returns, before working through a cost analysis of shifting customers to prepaid digital payment. Statements about Ghana are deliberately qualitative; for current figures consult the Bank of Ghana, GSMA and the World Bank's Global Findex.
 
 ## Learning Objectives
 
@@ -108,13 +108,13 @@ Ghana's online retail landscape includes general marketplaces such as Jumia, cla
 
 The 3% discount destroys value. With a **1% discount** (GHS 2 per order), discount cost falls to 600, total costs to 1,800, and the net effect becomes **+75**, roughly break-even.
 
-**Interpretation.** The financial case for prepaid is weaker than intuition suggests because PSP fees replace cash-handling costs. The decision therefore depends on benefits the model omits: faster cash flow, fewer riders carrying cash (security), better data and lower reconciliation effort. A UTAUT lens suggests non-price levers — priority dispatch, a "pay on delivery by wallet" option or visible buyer protection — may raise performance expectancy and trust more cheaply than discounts.
+**Interpretation.** The financial case for prepaid is weaker than intuition suggests because PSP fees replace cash-handling costs. The decision therefore depends on benefits the model omits: faster cash flow, fewer riders carrying cash (security), better data and lower reconciliation effort. A UTAUT lens suggests non-price levers (priority dispatch, a "pay on delivery by wallet" option or visible buyer protection) may raise performance expectancy and trust more cheaply than discounts.
 
 ## Ghanaian Business Application
 
 A Ghanaian SME can turn adoption theory into practical design:
 
-- **Performance expectancy:** show what the customer gains — faster dispatch for prepaid orders, digital receipts, easy reordering.
+- **Performance expectancy:** show what the customer gains: faster dispatch for prepaid orders, digital receipts, easy reordering.
 - **Effort expectancy:** use merchant-initiated payment prompts or QR codes so customers approve with a PIN rather than typing wallet numbers.
 - **Social influence and observability:** display acceptance signs and encourage reviews from satisfied customers.
 - **Facilitating conditions:** support all major wallets and cards through an aggregator; provide a phone or chat line for payment problems.
@@ -183,17 +183,17 @@ flowchart LR
 
 ## Further Reading
 
-- Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319–340.
-- Venkatesh, V., Morris, M. G., Davis, G. B., & Davis, F. D. (2003). User acceptance of information technology: Toward a unified view. *MIS Quarterly, 27*(3), 425–478.
-- Venkatesh, V., Thong, J. Y. L., & Xu, X. (2012). Consumer acceptance and use of information technology: Extending the unified theory of acceptance and use of technology. *MIS Quarterly, 36*(1), 157–178.
+- Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319-340.
+- Venkatesh, V., Morris, M. G., Davis, G. B., & Davis, F. D. (2003). User acceptance of information technology: Toward a unified view. *MIS Quarterly, 27*(3), 425-478.
+- Venkatesh, V., Thong, J. Y. L., & Xu, X. (2012). Consumer acceptance and use of information technology: Extending the unified theory of acceptance and use of technology. *MIS Quarterly, 36*(1), 157-178.
 - Rogers, E. M. (2003). *Diffusion of innovations* (5th ed.). Free Press.
 - Demirgüç-Kunt, A., Klapper, L., Singer, D., & Ansar, S. (2022). *The Global Findex Database 2021: Financial inclusion, digital payments, and resilience in the age of COVID-19*. World Bank.
 
 ## Video Resources
 
-- [Global Findex Database](https://www.worldbank.org/en/publication/globalfindex) — World Bank. Official data and reports on account ownership and digital payment use worldwide.
-- [GSMA](https://www.gsma.com/) — GSMA. Research and reports on mobile money adoption and the mobile economy in Africa.
-- [National Payments Corporation of India](https://www.npci.org.in/) — NPCI. Official information on UPI and India's retail payment infrastructure.
+- [Global Findex Database](https://www.worldbank.org/en/publication/globalfindex): World Bank. Official data and reports on account ownership and digital payment use worldwide.
+- [GSMA](https://www.gsma.com/): GSMA. Research and reports on mobile money adoption and the mobile economy in Africa.
+- [National Payments Corporation of India](https://www.npci.org.in/): NPCI. Official information on UPI and India's retail payment infrastructure.
 
 ## Revision Summary
 

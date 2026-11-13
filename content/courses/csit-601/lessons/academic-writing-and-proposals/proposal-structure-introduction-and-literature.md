@@ -102,27 +102,27 @@ Examiners often test alignment by picking one objective and tracing it through t
 
 ### Choosing theory deliberately
 
-Theory should not be decoration. Justify your choice by explaining why the theory's constructs match your problem and context. For organisational adoption by SMEs, the technology–organisation–environment (TOE) framework of Tornatzky and Fleischer (1990) is often more suitable than TAM, which focuses on individual users. For consumer or employee adoption, TAM or UTAUT may fit better. Diffusion of Innovations (Rogers, 2003) helps explain adoption over time and attributes of innovations, while the DeLone and McLean model (2003) addresses information system success rather than adoption. Combining theories is acceptable when justified, not when used simply to include more variables.
+Theory should not be decoration. Justify your choice by explaining why the theory's constructs match your problem and context. For organisational adoption by SMEs, the technology-organisation-environment (TOE) framework of Tornatzky and Fleischer (1990) is often more suitable than TAM, which focuses on individual users. For consumer or employee adoption, TAM or UTAUT may fit better. Diffusion of Innovations (Rogers, 2003) helps explain adoption over time and attributes of innovations, while the DeLone and McLean model (2003) addresses information system success rather than adoption. Combining theories is acceptable when justified, not when used simply to include more variables.
 
 ## Worked Example
 
 **Illustrative scenario.** A student's draft problem statement reads: "Digital payments are important. Many retailers in Ghana do not use them. This study will look at digital payments."
 
-**Step 1 – Identify weaknesses.** No evidence of the problem, no consequences, no knowledge gap, no specific population.
+**Step 1: Identify weaknesses.** No evidence of the problem, no consequences, no knowledge gap, no specific population.
 
-**Step 2 – Revise using a three-part structure (ideal situation, reality, consequence and gap).**
+**Step 2: Revise using a three-part structure (ideal situation, reality, consequence and gap).**
 
 > "Policy-makers and payment providers in Ghana have promoted digital payments as a means of improving transaction efficiency and financial inclusion, and mobile money is widely used for person-to-person transfers. However, many small retailers in traditional markets continue to rely mainly on cash for sales, which may expose them to theft, limit their access to transaction records that could support credit applications, and reduce the benefits of digital payment infrastructure. Existing adoption research has focused largely on consumers rather than on merchants operating in informal market settings, and the factors shaping retailers' acceptance of digital payments in this context remain insufficiently understood. This study therefore examines the factors influencing digital payment adoption among retailers in [named market or city]."
 
-**Step 3 – Derive aligned objectives.**
+**Step 3: Derive aligned objectives.**
 
 1. To examine the influence of perceived usefulness on retailers' intention to accept digital payments.
 2. To assess the effect of transaction costs on intention to accept digital payments.
 3. To determine whether trust in payment providers influences intention to accept digital payments.
 
-**Step 4 – Derive matching research questions** (for example, "What is the influence of perceived usefulness on retailers' intention to accept digital payments?") and, if the design is quantitative, hypotheses.
+**Step 4: Derive matching research questions** (for example, "What is the influence of perceived usefulness on retailers' intention to accept digital payments?") and, if the design is quantitative, hypotheses.
 
-**Step 5 – Check significance.** Theory: extends adoption models to merchants in informal markets. Practice: informs payment providers' merchant onboarding. Policy: provides evidence for digital inclusion initiatives.
+**Step 5: Check significance.** Theory: extends adoption models to merchants in informal markets. Practice: informs payment providers' merchant onboarding. Policy: provides evidence for digital inclusion initiatives.
 
 In a real proposal, every factual claim in the revised problem statement would be supported by citations to verifiable sources.
 
@@ -195,16 +195,16 @@ The diagram shows the funnel of the introduction feeding into the literature rev
 
 ## Further Reading
 
-- Webster, J., & Watson, R. T. (2002). Analyzing the past to prepare for the future: Writing a literature review. *MIS Quarterly, 26*(2), xiii–xxiii.
+- Webster, J., & Watson, R. T. (2002). Analyzing the past to prepare for the future: Writing a literature review. *MIS Quarterly, 26*(2), xiii-xxiii.
 - Tornatzky, L. G., & Fleischer, M. (1990). *The processes of technological innovation*. Lexington Books.
 - Rogers, E. M. (2003). *Diffusion of innovations* (5th ed.). Free Press.
-- DeLone, W. H., & McLean, E. R. (2003). The DeLone and McLean model of information systems success: A ten-year update. *Journal of Management Information Systems, 19*(4), 9–30.
+- DeLone, W. H., & McLean, E. R. (2003). The DeLone and McLean model of information systems success: A ten-year update. *Journal of Management Information Systems, 19*(4), 9-30.
 - Creswell, J. W., & Creswell, J. D. (2018). *Research design: Qualitative, quantitative, and mixed methods approaches* (5th ed.). SAGE.
 
 ## Video Resources
 
-- [SAGE Research Methods](https://methods.sagepub.com/) — SAGE Publishing. Official research methods platform with guidance on proposal writing and literature reviews (access may depend on subscription).
-- [Purdue Online Writing Lab](https://owl.purdue.edu/) — Purdue University. Official writing resource portal including guidance on research proposals and literature reviews.
+- [SAGE Research Methods](https://methods.sagepub.com/): SAGE Publishing. Official research methods platform with guidance on proposal writing and literature reviews (access may depend on subscription).
+- [Purdue Online Writing Lab](https://owl.purdue.edu/): Purdue University. Official writing resource portal including guidance on research proposals and literature reviews.
 
 ## Revision Summary
 

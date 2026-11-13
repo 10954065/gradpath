@@ -210,7 +210,7 @@ questions:
     bloom: evaluate
     difficulty: hard
     objective: Evaluate a green IT and sustainable innovation plan for a Ghanaian organisation
-    prompt: Evaluate the organisation's environmental position and recommend a costed, prioritised sustainability plan, including a PUE calculation, a scope 1–3 analysis and an assessment of its AI plans.
+    prompt: Evaluate the organisation's environmental position and recommend a costed, prioritised sustainability plan, including a PUE calculation, a scope 1-3 analysis and an assessment of its AI plans.
     marks: 20
     case: |
       Illustrative scenario. Oda River Bank is a fictional Ghanaian bank with an on-premises data centre in Accra. Over the last year the IT load averaged 200 kW and the total facility load averaged 400 kW. A diesel generator runs frequently during supply interruptions. The bank replaces laptops every three years and sells old devices to informal collectors without wiping them. It plans to deploy a generative AI customer-service assistant hosted by a cloud provider and to announce that it is "going green". Assume, for illustration only, an electricity cost of GHS 2.00 per kWh.
@@ -276,7 +276,7 @@ questions:
         marks: 2
         descriptor: Justified, nuanced conclusion
     modelAnswer: |
-      A good essay rejects the binary framing. Digital technology has substantial direct impacts: data centres and networks consume growing amounts of electricity, AI training and especially large-scale inference add to demand, cooling uses water, and device manufacturing carries embodied emissions and mineral extraction. In Ghana, diesel generators for towers and data centres and informal e-waste recycling — illustrated, with care, by Agbogbloshie — show local dimensions of these harms.
+      A good essay rejects the binary framing. Digital technology has substantial direct impacts: data centres and networks consume growing amounts of electricity, AI training and especially large-scale inference add to demand, cooling uses water, and device manufacturing carries embodied emissions and mineral extraction. In Ghana, diesel generators for towers and data centres and informal e-waste recycling (illustrated, with care, by Agbogbloshie) show local dimensions of these harms.
 
       Enabling effects are real: smart grids help integrate renewables, sensors reduce fertiliser and water use, logistics optimisation saves fuel, and digital services can replace some travel and paper. AI can improve forecasting and efficiency in energy systems.
 

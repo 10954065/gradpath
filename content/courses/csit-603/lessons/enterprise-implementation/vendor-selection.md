@@ -57,7 +57,7 @@ Selecting the **implementation partner** deserves equal attention. Many failures
 
 ### Multi-criteria decision analysis
 
-Weighted scoring is a simple form of multi-criteria decision analysis. Its strengths are transparency and the ability to combine dissimilar factors. Its weaknesses are well known: weights are subjective; scores on a 1–5 scale imply false precision; and a high score on one criterion can compensate for a fatal weakness on another. Good practice therefore combines weighted scoring with **knock-out criteria** (any vendor failing a Must requirement is excluded regardless of total score) and with sensitivity analysis.
+Weighted scoring is a simple form of multi-criteria decision analysis. Its strengths are transparency and the ability to combine dissimilar factors. Its weaknesses are well known: weights are subjective; scores on a 1-5 scale imply false precision; and a high score on one criterion can compensate for a fatal weakness on another. Good practice therefore combines weighted scoring with **knock-out criteria** (any vendor failing a Must requirement is excluded regardless of total score) and with sensitivity analysis.
 
 ### Cost-benefit and TCO thinking
 
@@ -81,7 +81,7 @@ Package selection is fundamentally about fit between organisational processes an
 | Implementation partner capability | 0.10 | 4 | 0.40 | 3 | 0.30 | 3 | 0.30 |
 | **Total** | **1.00** | | **3.70** | | **3.65** | | **3.50** |
 
-Each weighted score is `weight × score`; for example, product A's functional fit is `0.30 × 4 = 1.20`. Product A ranks first, but the margin over B is only 0.05, which is well within the uncertainty of subjective 1–5 scores.
+Each weighted score is `weight × score`; for example, product A's functional fit is `0.30 × 4 = 1.20`. Product A ranks first, but the margin over B is only 0.05, which is well within the uncertainty of subjective 1-5 scores.
 
 **Sensitivity test.** Suppose the finance director argues that cost should weigh 0.30 and functional fit 0.20. Recalculating:
 
@@ -97,15 +97,15 @@ The ranking now changes: C leads. **Interpretation:** the decision hinges on how
 
 | Cost element | On-premise (5 years) | Cloud subscription (5 years) |
 |---|---|---|
-| Licences (one-off) | 600,000 | — |
-| Annual maintenance (20% of licence × 5) | 600,000 | — |
-| Subscription (300,000 × 5) | — | 1,500,000 |
-| Servers, storage, backup hardware | 250,000 | — |
+| Licences (one-off) | 600,000 | n/a |
+| Annual maintenance (20% of licence × 5) | 600,000 | n/a |
+| Subscription (300,000 × 5) | n/a | 1,500,000 |
+| Servers, storage, backup hardware | 250,000 | n/a |
 | Implementation services | 500,000 | 400,000 |
 | Internal IT support staff (150,000 or 80,000 per year × 5) | 750,000 | 400,000 |
 | Training | 80,000 | 80,000 |
 | Major upgrade in year 4 | 150,000 | included |
-| Additional connectivity and redundancy (60,000 × 5) | — | 300,000 |
+| Additional connectivity and redundancy (60,000 × 5) | n/a | 300,000 |
 | **Five-year TCO** | **2,930,000** | **2,680,000** |
 
 Year-one cash outlay differs even more sharply: on-premise requires `600,000 + 120,000 + 250,000 + 500,000 + 150,000 + 80,000 = 1,700,000`, while cloud requires `300,000 + 400,000 + 80,000 + 80,000 + 60,000 = 920,000`.
@@ -184,15 +184,15 @@ flowchart LR
 ## Further Reading
 
 - Monk, E., & Wagner, B. (2013). *Concepts in enterprise resource planning* (4th ed.). Cengage Learning.
-- Davenport, T. H. (1998). Putting the enterprise into the enterprise system. *Harvard Business Review, 76*(4), 121–131.
+- Davenport, T. H. (1998). Putting the enterprise into the enterprise system. *Harvard Business Review, 76*(4), 121-131.
 - Markus, M. L., & Tanis, C. (2000). The enterprise systems experience: From adoption to success. In R. W. Zmud (Ed.), *Framing the domains of IT management: Projecting the future through the past*. Pinnaflex Educational Resources.
 - Mell, P., & Grance, T. (2011). *The NIST definition of cloud computing* (NIST Special Publication 800-145). National Institute of Standards and Technology. <https://doi.org/10.6028/NIST.SP.800-145>
 
 ## Video Resources
 
-- [SAP Learning](https://learning.sap.com/) — SAP. Free learning journeys introducing SAP's ERP products and deployment options.
-- [Oracle University](https://education.oracle.com/) — Oracle. Official training portal with introductory material on Oracle's cloud ERP applications.
-- [Microsoft Learn: Dynamics 365 training](https://learn.microsoft.com/training/dynamics365/) — Microsoft. Self-paced modules describing Dynamics 365 finance and operations capabilities.
+- [SAP Learning](https://learning.sap.com/): SAP. Free learning journeys introducing SAP's ERP products and deployment options.
+- [Oracle University](https://education.oracle.com/): Oracle. Official training portal with introductory material on Oracle's cloud ERP applications.
+- [Microsoft Learn: Dynamics 365 training](https://learn.microsoft.com/training/dynamics365/): Microsoft. Self-paced modules describing Dynamics 365 finance and operations capabilities.
 
 ## Revision Summary
 

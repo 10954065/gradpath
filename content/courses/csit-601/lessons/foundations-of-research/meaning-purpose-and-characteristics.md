@@ -48,11 +48,11 @@ This distinguishes research from activities that superficially resemble it. A ne
 
 Research is undertaken for several overlapping purposes, and a clear statement of purpose shapes every later decision.
 
-1. **Exploration** – investigating a poorly understood phenomenon to generate insights and ideas, for example how small Ghanaian fashion businesses first experiment with Instagram selling.
-2. **Description** – producing an accurate profile of people, events or situations, for example the proportion of pharmacies in a district that use electronic inventory systems.
-3. **Explanation** – establishing relationships between variables and explaining why something happens, for example whether perceived usefulness explains the intention of retailers to accept mobile money payments.
-4. **Prediction** – using established relationships to forecast outcomes, such as which customer characteristics predict adoption of a banking app.
-5. **Evaluation** – judging the effectiveness of an intervention, system or policy, such as whether a new hospital records system reduced patient waiting times.
+1. **Exploration**: investigating a poorly understood phenomenon to generate insights and ideas, for example how small Ghanaian fashion businesses first experiment with Instagram selling.
+2. **Description**: producing an accurate profile of people, events or situations, for example the proportion of pharmacies in a district that use electronic inventory systems.
+3. **Explanation**: establishing relationships between variables and explaining why something happens, for example whether perceived usefulness explains the intention of retailers to accept mobile money payments.
+4. **Prediction**: using established relationships to forecast outcomes, such as which customer characteristics predict adoption of a banking app.
+5. **Evaluation**: judging the effectiveness of an intervention, system or policy, such as whether a new hospital records system reduced patient waiting times.
 
 Purposes are linked to research questions. "What" and "how" questions often signal exploration or description; "why" and "to what extent" questions often signal explanation or evaluation.
 
@@ -175,8 +175,8 @@ The case is directly relevant to business and IT research for three reasons. Fir
 
 ## Video Resources
 
-- [SAGE Research Methods](https://methods.sagepub.com/) — SAGE Publishing. Official research methods platform (access may depend on institutional subscription) with explanatory material on the research process.
-- [MIT OpenCourseWare](https://ocw.mit.edu/) — Massachusetts Institute of Technology. Official open learning portal; search for research methods and research design course materials.
+- [SAGE Research Methods](https://methods.sagepub.com/): SAGE Publishing. Official research methods platform (access may depend on institutional subscription) with explanatory material on the research process.
+- [MIT OpenCourseWare](https://ocw.mit.edu/): Massachusetts Institute of Technology. Official open learning portal; search for research methods and research design course materials.
 
 ## Revision Summary
 

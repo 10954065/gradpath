@@ -62,4 +62,4 @@ cards:
     back: Information unavailable at prediction time entering training, inflating results. For each feature ask whether its value would genuinely be known when the prediction is made.
   - lesson: training-and-evaluation
     front: What did Google Flu Trends teach about evaluation?
-    back: A model selected from many search terms fitted past seasons but overestimated flu in 2012–2013, showing the dangers of spurious correlation, drift and weak out-of-time validation.
+    back: A model selected from many search terms fitted past seasons but overestimated flu in 2012-2013, showing the dangers of spurious correlation, drift and weak out-of-time validation.

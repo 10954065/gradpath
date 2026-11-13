@@ -183,7 +183,7 @@ The case illustrates two points from this lesson. First, it is a direct applicat
 1. **Apply redesign heuristics.** For a restaurant order-to-table process, propose at least five changes, each labelled with the heuristic used and its expected effect on time, cost, quality and flexibility. *Expected output:* a table of changes and a Devil's Quadrangle assessment.
 2. **To-be BPMN model.** Using Camunda Modeler (see <https://docs.camunda.io/>) or Bizagi Modeler (<https://www.bizagi.com/>), model the hospital to-be process with an exclusive gateway for triage and a parallel gateway for pharmacy preparation. *Expected output:* a BPMN diagram and, in Bizagi, a simulation comparing as-is and to-be cycle times.
 3. **Kotter plan.** Write a change plan for introducing electronic records at a pharmacy chain, with one concrete action for each of Kotter's eight steps. *Expected output:* an eight-row table with actions, owners and timing.
-4. **ADKAR assessment.** For three stakeholder groups affected by a redesign (for example records clerks, nurses and doctors), assess each ADKAR element on a 1–5 scale and identify the barrier point. *Expected output:* an assessment grid and targeted interventions for each barrier.
+4. **ADKAR assessment.** For three stakeholder groups affected by a redesign (for example records clerks, nurses and doctors), assess each ADKAR element on a 1-5 scale and identify the barrier point. *Expected output:* an assessment grid and targeted interventions for each barrier.
 5. **Explore implementation support.** Browse SAP Learning (<https://learning.sap.com/>) for material on organisational change or user adoption in enterprise implementations. *Expected output:* a short note relating what you find to Kotter or ADKAR.
 
 ## Key Takeaways
@@ -196,21 +196,21 @@ The case illustrates two points from this lesson. First, it is a direct applicat
 
 ## Further Reading
 
-- Reijers, H. A., & Limam Mansar, S. (2005). Best practices in business process redesign: An overview and qualitative evaluation of successful redesign heuristics. *Omega, 33*(4), 283–306.
-- Kotter, J. P. (1995). Leading change: Why transformation efforts fail. *Harvard Business Review, 73*(2), 59–67.
+- Reijers, H. A., & Limam Mansar, S. (2005). Best practices in business process redesign: An overview and qualitative evaluation of successful redesign heuristics. *Omega, 33*(4), 283-306.
+- Kotter, J. P. (1995). Leading change: Why transformation efforts fail. *Harvard Business Review, 73*(2), 59-67.
 - Kotter, J. P. (1996). *Leading change*. Harvard Business School Press.
 - Hiatt, J. M. (2006). *ADKAR: A model for change in business, government and our community*. Prosci Learning Center Publications.
-- Hammer, M. (1990). Reengineering work: Don't automate, obliterate. *Harvard Business Review, 68*(4), 104–112.
+- Hammer, M. (1990). Reengineering work: Don't automate, obliterate. *Harvard Business Review, 68*(4), 104-112.
 
 ## Video Resources
 
-- [Prosci ADKAR Model](https://www.prosci.com/methodology/adkar) — Prosci. Official overview of the ADKAR model of individual change.
-- [Kotter Inc.](https://www.kotterinc.com/) — Kotter Inc. Official site of the organisation founded by John Kotter, with material on the eight-step change model.
-- [Bizagi](https://www.bizagi.com/) — Bizagi. Official site for Bizagi Modeler, used to model and simulate as-is and to-be processes.
+- [Prosci ADKAR Model](https://www.prosci.com/methodology/adkar): Prosci. Official overview of the ADKAR model of individual change.
+- [Kotter Inc.](https://www.kotterinc.com/): Kotter Inc. Official site of the organisation founded by John Kotter, with material on the eight-step change model.
+- [Bizagi](https://www.bizagi.com/): Bizagi. Official site for Bizagi Modeler, used to model and simulate as-is and to-be processes.
 
 ## Revision Summary
 
-Redesign applies proven heuristics to the problems found in analysis, producing a to-be process whose benefits are quantified, simulated or piloted against baseline KPIs, with trade-offs across time, cost, quality and flexibility made explicit. Adoption requires change management: Lewin's unfreeze–change–refreeze, Kotter's eight leadership steps and ADKAR's five individual building blocks. Mutual Benefit Life shows how a case manager redesign transforms jobs and therefore demands deliberate change support.
+Redesign applies proven heuristics to the problems found in analysis, producing a to-be process whose benefits are quantified, simulated or piloted against baseline KPIs, with trade-offs across time, cost, quality and flexibility made explicit. Adoption requires change management: Lewin's unfreeze-change-refreeze, Kotter's eight leadership steps and ADKAR's five individual building blocks. Mutual Benefit Life shows how a case manager redesign transforms jobs and therefore demands deliberate change support.
 
 - Heuristics: eliminate, compose, resequence, parallelise, triage, case manager, empower, automate.
 - Devil's Quadrangle: time, cost, quality, flexibility.

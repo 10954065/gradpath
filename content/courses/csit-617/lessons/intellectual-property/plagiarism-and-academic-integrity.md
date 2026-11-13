@@ -8,7 +8,7 @@ source: supplementary
 
 ## Introduction
 
-Plagiarism sits at the meeting point of intellectual property, professional ethics and personal integrity. For a postgraduate student it is also an immediate, practical concern: dissertations, assignments and project reports are judged on the assumption that the ideas, words, data and code presented are either the student's own or clearly attributed to their sources. When that assumption fails, the credibility of the work — and of the qualification it leads to — is undermined.
+Plagiarism sits at the meeting point of intellectual property, professional ethics and personal integrity. For a postgraduate student it is also an immediate, practical concern: dissertations, assignments and project reports are judged on the assumption that the ideas, words, data and code presented are either the student's own or clearly attributed to their sources. When that assumption fails, the credibility of the work, and of the qualification it leads to, is undermined.
 
 Generative artificial intelligence has made the subject more complex. Tools that can draft paragraphs, summarise articles, write code and suggest references are now widely available. They can support learning, but they also create new risks: undisclosed machine-generated text, fabricated citations and confusion about who the "author" of a piece of work really is. This lesson explains plagiarism and academic integrity, analyses why they matter ethically, and sets out principles for the responsible use of generative AI. It does **not** state the rules of any particular university. Every student must read and follow the academic integrity and AI-use policies of their own institution and the instructions given for each assessment.
 
@@ -38,7 +38,7 @@ Generative artificial intelligence has made the subject more complex. Tools that
 
 ## Detailed Explanation
 
-### What plagiarism is — and is not
+### What plagiarism is, and is not
 
 Plagiarism is about **misrepresentation**: it creates a false impression about the origin of work. It can take several forms:
 
@@ -88,14 +88,14 @@ The International Center for Academic Integrity describes six fundamental values
 ### Ethical analysis of plagiarism
 
 - **Deontology.** Plagiarism involves deception, which Kant's categorical imperative condemns: a maxim of misrepresenting authorship whenever convenient could not be universalised without destroying the very practice of credit on which it depends. It also treats the original author merely as a means.
-- **Utilitarianism.** Plagiarism may appear to benefit the individual, but it devalues qualifications for everyone, wastes assessment resources, and — in research — spreads unverified claims. The aggregate consequences are harmful.
+- **Utilitarianism.** Plagiarism may appear to benefit the individual, but it devalues qualifications for everyone, wastes assessment resources, and, in research, spreads unverified claims. The aggregate consequences are harmful.
 - **Virtue ethics.** Plagiarism reflects and reinforces vices such as dishonesty and intellectual laziness, whereas careful attribution expresses honesty and intellectual humility.
 
 ### Generative AI and authorship
 
 Generative AI raises four distinct questions that should not be confused.
 
-1. **Is AI use permitted for this task?** This is determined by your institution's policy and the assessment instructions, which vary widely — from prohibition, to permitted use for specific purposes, to required use with reflection. Where instructions are unclear, the responsible course is to ask the module convenor before using a tool.
+1. **Is AI use permitted for this task?** This is determined by your institution's policy and the assessment instructions, which vary widely: from prohibition, to permitted use for specific purposes, to required use with reflection. Where instructions are unclear, the responsible course is to ask the module convenor before using a tool.
 2. **Can an AI system be an author?** Authorship carries accountability: an author can answer for the work, correct errors and take responsibility for its integrity. The Committee on Publication Ethics (COPE) and many major publishers have taken the position that AI tools cannot meet authorship criteria and cannot be listed as authors, and that human authors who use such tools should disclose that use.
 3. **Is undisclosed AI-generated content plagiarism or misconduct?** Even if no human author is being copied, submitting machine-generated text or code as one's own unaided work can misrepresent the origin of the work. Many institutions therefore treat undisclosed or unauthorised AI use as a form of academic misconduct.
 4. **Is the output reliable?** Large language models can produce fluent but false statements and **fabricated references** that look plausible but do not exist. Submitting such references is fabrication, regardless of whether it was intended.
@@ -120,7 +120,7 @@ The partner who reviews the draft detects the problem. The ethical issues includ
 - presenting a vendor's marketing claims as independent analysis, which could bias a public procurement decision;
 - fabricated references, which undermine the credibility of the whole report and could mislead public decision-making.
 
-The professional response is to withdraw and rewrite the affected sections, cite all sources, verify every reference, disclose any AI assistance in line with the firm's policy and contract, and introduce a quality-assurance step for source checking. The firm should also consider whether its deadlines and supervision created the pressure that led to the shortcut — integrity is an organisational as well as individual responsibility.
+The professional response is to withdraw and rewrite the affected sections, cite all sources, verify every reference, disclose any AI assistance in line with the firm's policy and contract, and introduce a quality-assurance step for source checking. The firm should also consider whether its deadlines and supervision created the pressure that led to the shortcut: integrity is an organisational as well as individual responsibility.
 
 ### Building integrity habits as a working student
 
@@ -151,11 +151,11 @@ flowchart TD
 
 ## Common Misconceptions
 
-- "If I change every few words, it is not plagiarism." — Patchwriting that preserves the source's structure and phrasing is still plagiarism; genuine paraphrase requires new expression plus a citation.
-- "Citing a source means I can copy as much as I like." — Citation addresses attribution, not copyright; large verbatim copying may infringe and is poor scholarship even when cited.
-- "AI-generated text cannot be plagiarism because no person wrote it." — Submitting undisclosed AI output as your own unaided work misrepresents authorship and may breach your institution's rules.
-- "Similarity-checking software decides whether plagiarism occurred." — Similarity scores are indicators that require human judgement; a high score may reflect properly quoted material, and a low score does not prove originality.
-- "Reusing my own previous assignment is always fine." — Without permission, resubmitting your own work for new credit is generally treated as misconduct.
+- "If I change every few words, it is not plagiarism." Patchwriting that preserves the source's structure and phrasing is still plagiarism; genuine paraphrase requires new expression plus a citation.
+- "Citing a source means I can copy as much as I like." Citation addresses attribution, not copyright; large verbatim copying may infringe and is poor scholarship even when cited.
+- "AI-generated text cannot be plagiarism because no person wrote it." Submitting undisclosed AI output as your own unaided work misrepresents authorship and may breach your institution's rules.
+- "Similarity-checking software decides whether plagiarism occurred." Similarity scores are indicators that require human judgement; a high score may reflect properly quoted material, and a low score does not prove originality.
+- "Reusing my own previous assignment is always fine." Without permission, resubmitting your own work for new credit is generally treated as misconduct.
 
 ## Common Examination Mistakes
 
@@ -175,7 +175,7 @@ flowchart TD
 ## Practical Exercises
 
 1. **Paraphrase practice.** Select a paragraph from a textbook you own. Write (a) a patchwritten version and (b) a genuine paraphrase with an APA 7 citation, then explain the differences. Expected output: two versions and a 150-word commentary.
-2. **AI disclosure statement.** Assuming your institution permits AI use for brainstorming only, draft a disclosure statement for an assignment that states the tool, purpose, prompts used and how outputs were checked. Expected output: a 100–150 word statement.
+2. **AI disclosure statement.** Assuming your institution permits AI use for brainstorming only, draft a disclosure statement for an assignment that states the tool, purpose, prompts used and how outputs were checked. Expected output: a 100-150 word statement.
 3. **Reference verification.** Ask a generative AI tool (where permitted) for five references on a topic in this course, then try to locate each one in a library database or publisher website. Expected output: a table recording whether each reference exists and whether its details are accurate.
 
 ## Key Takeaways
@@ -195,8 +195,8 @@ flowchart TD
 
 ## Video Resources
 
-- [ACM Code of Ethics and Professional Conduct](https://www.acm.org/code-of-ethics) — Association for Computing Machinery. Official page with the full Code, including principles on honesty and crediting the work of others.
-- [Committee on Publication Ethics](https://publicationethics.org/) — COPE. Official site with guidance and position statements on authorship, AI tools and research integrity.
+- [ACM Code of Ethics and Professional Conduct](https://www.acm.org/code-of-ethics): Association for Computing Machinery. Official page with the full Code, including principles on honesty and crediting the work of others.
+- [Committee on Publication Ethics](https://publicationethics.org/): COPE. Official site with guidance and position statements on authorship, AI tools and research integrity.
 
 ## Revision Summary
 

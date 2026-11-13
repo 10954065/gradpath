@@ -170,9 +170,9 @@ The configuration lesson is about secrets management: long-lived cloud credentia
 
 ## Video Resources
 
-- [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks) — Center for Internet Security. Official page for consensus-based secure configuration guides for operating systems, cloud platforms and applications.
-- [Microsoft Learn](https://learn.microsoft.com/en-us/training/) — Microsoft. Official free training portal; search for data classification, information protection and cloud posture management modules.
-- [Cisco Skills for All](https://skillsforall.com/) — Cisco Networking Academy. Official learning portal with free introductory cybersecurity courses that cover data protection basics.
+- [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks): Center for Internet Security. Official page for consensus-based secure configuration guides for operating systems, cloud platforms and applications.
+- [Microsoft Learn](https://learn.microsoft.com/en-us/training/): Microsoft. Official free training portal; search for data classification, information protection and cloud posture management modules.
+- [Cisco Skills for All](https://skillsforall.com/): Cisco Networking Academy. Official learning portal with free introductory cybersecurity courses that cover data protection basics.
 
 ## Revision Summary
 

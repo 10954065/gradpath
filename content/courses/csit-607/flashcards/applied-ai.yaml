@@ -1,7 +1,7 @@
 module: applied-ai
 cards:
   - lesson: ai-in-finance-healthcare-and-education
-    front: What three questions does the opportunity–risk–readiness lens ask of an AI application?
+    front: What three questions does the opportunity-risk-readiness lens ask of an AI application?
     back: What value it creates and for whom (opportunity), who could be harmed and how severely (risk), and whether the organisation has the data, systems, skills, governance and culture to sustain it (readiness).
   - lesson: ai-in-finance-healthcare-and-education
     front: Why is alternative-data credit scoring both an opportunity and a risk?

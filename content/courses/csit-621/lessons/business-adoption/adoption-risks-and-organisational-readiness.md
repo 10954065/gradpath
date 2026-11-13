@@ -63,7 +63,7 @@ ISO 31000:2018 describes risk management as an iterative process. A practical ve
 
 1. **Establish context**: objectives, scope, stakeholders, risk appetite and criteria for assessing likelihood and impact.
 2. **Identify risks**: through workshops, checklists (such as the categories above), lessons from similar projects, vendor references, and pre-mortem exercises ("imagine the project failed; why?").
-3. **Analyse risks**: estimate likelihood and impact, typically on 1–5 scales, and multiply to obtain a risk score.
+3. **Analyse risks**: estimate likelihood and impact, typically on 1-5 scales, and multiply to obtain a risk score.
 4. **Evaluate risks**: compare scores with appetite; prioritise high scores.
 5. **Treat risks**: choose responses and controls.
 6. **Monitor and review**: update the register regularly; record when risks materialise, close or change.
@@ -111,7 +111,7 @@ An evaluation of a large adoption decision often combines these: TOE for the fir
 
 ### A TOE readiness assessment tool
 
-| Context | Readiness factor | Questions | Score (1–5) |
+| Context | Readiness factor | Questions | Score (1-5) |
 |---|---|---|---|
 | Technology | Relative advantage | Does it clearly outperform current methods? | |
 | Technology | Compatibility | Does it fit existing systems, data and processes? | |
@@ -131,7 +131,7 @@ Low scores identify gaps to close before scaling.
 
 **Illustrative scenario.** *Nkabom Insurance* (a fictional Ghanaian insurer) plans to adopt an AI-based claims triage system that reads claim documents and photographs, flags likely fraud and recommends settlement amounts for adjusters to review.
 
-**Extract from the risk register** (likelihood L and impact I scored 1–5; score = L × I):
+**Extract from the risk register** (likelihood L and impact I scored 1-5; score = L × I):
 
 | ID | Risk | Category | L | I | Score | Owner | Response | Residual score |
 |---|---|---|---|---|---|---|---|---|
@@ -141,7 +141,7 @@ Low scores identify gaps to close before scaling.
 | R4 | Adjusters distrust or ignore recommendations | People/change | 4 | 3 | 12 | Claims Manager | Reduce: involve adjusters in design, training, explain recommendations | 6 |
 | R5 | Vendor pricing in US dollars raises costs after cedi depreciation | Financial | 3 | 3 | 9 | CFO | Transfer/reduce: negotiate fixed or cedi pricing, budget contingency | 6 |
 | R6 | Vendor exits the Ghanaian market | Vendor | 2 | 4 | 8 | CIO | Reduce: data export clauses, escrow, exit plan | 4 |
-| R7 | Faster claims processing improves customer retention | Opportunity | 3 | 4 | 12 | Customer Director | Enhance: publicise faster settlement, measure satisfaction | — |
+| R7 | Faster claims processing improves customer retention | Opportunity | 3 | 4 | 12 | Customer Director | Enhance: publicise faster settlement, measure satisfaction | n/a |
 
 **Interpretation.** R1 and R2 are the highest inherent risks. The plan's central control is a phased pilot in which AI recommendations are advisory and every output is reviewed, which reduces several risks at once. R7 reminds the team that risk management also captures opportunities.
 
@@ -234,16 +234,16 @@ flowchart LR
 ## Further Reading
 
 - Tornatzky, L. G., & Fleischer, M. (1990). *The processes of technological innovation*. Lexington Books.
-- Oliveira, T., & Martins, M. F. (2011). Literature review of information technology adoption models at firm level. *Electronic Journal of Information Systems Evaluation, 14*(1), 110–121.
+- Oliveira, T., & Martins, M. F. (2011). Literature review of information technology adoption models at firm level. *Electronic Journal of Information Systems Evaluation, 14*(1), 110-121.
 - Weiner, B. J. (2009). A theory of organizational readiness for change. *Implementation Science, 4*, 67. <https://doi.org/10.1186/1748-5908-4-67>
-- Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319–340.
+- Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly, 13*(3), 319-340.
 - Rogers, E. M. (2003). *Diffusion of innovations* (5th ed.). Free Press.
-- International Organization for Standardization. (2018). *Risk management – Guidelines* (ISO 31000:2018).
+- International Organization for Standardization. (2018). *Risk management: Guidelines* (ISO 31000:2018).
 
 ## Video Resources
 
-- [ISO 31000 Risk management](https://www.iso.org/iso-31000-risk-management.html) — International Organization for Standardization. Official page describing the ISO 31000 risk management standard.
-- [MIT OpenCourseWare](https://ocw.mit.edu/) — Massachusetts Institute of Technology. Open learning portal; search for technology strategy and innovation management course materials.
+- [ISO 31000 Risk management](https://www.iso.org/iso-31000-risk-management.html): International Organization for Standardization. Official page describing the ISO 31000 risk management standard.
+- [MIT OpenCourseWare](https://ocw.mit.edu/): Massachusetts Institute of Technology. Open learning portal; search for technology strategy and innovation management course materials.
 
 ## Revision Summary
 

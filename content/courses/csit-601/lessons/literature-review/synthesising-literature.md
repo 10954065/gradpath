@@ -55,10 +55,10 @@ Level four makes a claim about the literature as a whole, explains variation, an
 
 A review can be structured in several ways, and many combine them.
 
-- **Thematic or conceptual** – sections on each theme or construct (for example, perceived usefulness, cost, trust, infrastructure). This is the most common and most effective structure for MSc reviews.
-- **Theoretical** – sections on competing theories (for example, TAM, UTAUT, Diffusion of Innovations) and how each explains the phenomenon.
-- **Methodological** – grouping studies by approach (surveys, case studies, experiments) to show how method influences findings.
-- **Chronological** – tracing how understanding developed over time; useful for showing evolution but risks becoming descriptive.
+- **Thematic or conceptual**: sections on each theme or construct (for example, perceived usefulness, cost, trust, infrastructure). This is the most common and most effective structure for MSc reviews.
+- **Theoretical**: sections on competing theories (for example, TAM, UTAUT, Diffusion of Innovations) and how each explains the phenomenon.
+- **Methodological**: grouping studies by approach (surveys, case studies, experiments) to show how method influences findings.
+- **Chronological**: tracing how understanding developed over time; useful for showing evolution but risks becoming descriptive.
 
 Whichever structure you choose, each section should open with a claim (a topic sentence), develop the claim with evidence from several sources, evaluate that evidence, and close with what it means for your study.
 
@@ -191,15 +191,15 @@ The article has become one of the most widely cited methodological guides in the
 
 ## Further Reading
 
-- Webster, J., & Watson, R. T. (2002). Analyzing the past to prepare for the future: Writing a literature review. *MIS Quarterly, 26*(2), xiii–xxiii.
+- Webster, J., & Watson, R. T. (2002). Analyzing the past to prepare for the future: Writing a literature review. *MIS Quarterly, 26*(2), xiii-xxiii.
 - Hart, C. (1998). *Doing a literature review: Releasing the social science research imagination*. SAGE.
-- Snyder, H. (2019). Literature review as a research methodology: An overview and guidelines. *Journal of Business Research, 104*, 333–339. <https://doi.org/10.1016/j.jbusres.2019.07.039>
+- Snyder, H. (2019). Literature review as a research methodology: An overview and guidelines. *Journal of Business Research, 104*, 333-339. <https://doi.org/10.1016/j.jbusres.2019.07.039>
 - Saunders, M., Lewis, P., & Thornhill, A. (2019). *Research methods for business students* (8th ed.). Pearson.
 
 ## Video Resources
 
-- [Purdue Online Writing Lab](https://owl.purdue.edu/) — Purdue University. Official writing resource covering synthesis, paraphrasing and academic writing.
-- [Zotero Documentation](https://www.zotero.org/support/) — Zotero. Official documentation for organising sources, notes and tags that support a synthesis matrix.
+- [Purdue Online Writing Lab](https://owl.purdue.edu/): Purdue University. Official writing resource covering synthesis, paraphrasing and academic writing.
+- [Zotero Documentation](https://www.zotero.org/support/): Zotero. Official documentation for organising sources, notes and tags that support a synthesis matrix.
 
 ## Revision Summary
 

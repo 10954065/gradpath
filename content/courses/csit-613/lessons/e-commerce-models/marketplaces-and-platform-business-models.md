@@ -85,11 +85,11 @@ The side that is usually subsidised is the one that is more **price-sensitive** 
 
 Parker and colleagues stress that platforms must govern their ecosystems. Governance tools include:
 
-- **Curation and access rules** – who may join, and with what verification.
-- **Reputation systems** – ratings and reviews that reward good behaviour.
-- **Payment and dispute rules** – holding funds until delivery, refund policies.
-- **Algorithms and ranking** – which listings are shown first, which shapes behaviour.
-- **Value sharing** – commission levels that leave producers enough reward to stay.
+- **Curation and access rules**: who may join, and with what verification.
+- **Reputation systems**: ratings and reviews that reward good behaviour.
+- **Payment and dispute rules**: holding funds until delivery, refund policies.
+- **Algorithms and ranking**: which listings are shown first, which shapes behaviour.
+- **Value sharing**: commission levels that leave producers enough reward to stay.
 
 Good governance balances openness (to grow supply) with quality control (to prevent negative network effects). Governance also raises ethical and regulatory questions: platforms that rank their own products above those of rival sellers, or that change commission levels once sellers depend on them, face criticism and, in some jurisdictions, regulatory scrutiny.
 
@@ -115,17 +115,17 @@ The solid loop is the virtuous circle; the dotted path shows how governance coun
 
 **Illustrative scenario.** *TutorLink GH* is a hypothetical platform that connects private tutors with parents of senior high school students in Accra and Kumasi. Analyse its launch strategy.
 
-**Step 1 – Identify the sides and core interaction.** Producers: tutors. Consumers: parents (and students). Value unit: a tutor profile with subjects, availability and ratings. Core interaction: a parent books and pays for a tutoring session.
+**Step 1: Identify the sides and core interaction.** Producers: tutors. Consumers: parents (and students). Value unit: a tutor profile with subjects, availability and ratings. Core interaction: a parent books and pays for a tutoring session.
 
-**Step 2 – Identify network effects.** Cross-side: more tutors give parents better choice by subject and location; more parents give tutors more bookings. Same-side: more tutors in the same subject compete for bookings (negative same-side effect); more parents may create positive same-side effects through reviews.
+**Step 2: Identify network effects.** Cross-side: more tutors give parents better choice by subject and location; more parents give tutors more bookings. Same-side: more tutors in the same subject compete for bookings (negative same-side effect); more parents may create positive same-side effects through reviews.
 
-**Step 3 – Choose which side to subsidise.** Parents are price-sensitive about platform fees but highly value trusted, vetted tutors; tutors value a steady flow of bookings. TutorLink decides to let parents search and book free and to charge tutors a 15 per cent commission on sessions, consistent with Rochet and Tirole's logic of charging the side that values access more and is less price-sensitive to the fee.
+**Step 3: Choose which side to subsidise.** Parents are price-sensitive about platform fees but highly value trusted, vetted tutors; tutors value a steady flow of bookings. TutorLink decides to let parents search and book free and to charge tutors a 15 per cent commission on sessions, consistent with Rochet and Tirole's logic of charging the side that values access more and is less price-sensitive to the fee.
 
-**Step 4 – Solve chicken-and-egg.** Start in a dense niche: final-year science and mathematics tutoring in two Accra districts. Recruit 40 vetted tutors before launch and offer them zero commission for the first three months (subsidy and seeding). Give tutors free scheduling and payment tools (stand-alone value).
+**Step 4: Solve chicken-and-egg.** Start in a dense niche: final-year science and mathematics tutoring in two Accra districts. Recruit 40 vetted tutors before launch and offer them zero commission for the first three months (subsidy and seeding). Give tutors free scheduling and payment tools (stand-alone value).
 
-**Step 5 – Check the economics.** If, after launch, 300 sessions a month are booked at an average of GHS 150, monthly gross transaction value = `300 × 150 = GHS 45,000`, and commission revenue at 15 per cent = `45,000 × 0.15 = GHS 6,750`. (Figures are illustrative assumptions.)
+**Step 5: Check the economics.** If, after launch, 300 sessions a month are booked at an average of GHS 150, monthly gross transaction value = `300 × 150 = GHS 45,000`, and commission revenue at 15 per cent = `45,000 × 0.15 = GHS 6,750`. (Figures are illustrative assumptions.)
 
-**Step 6 – Governance and risks.** Risks include disintermediation (parents and tutors arranging sessions privately after the first meeting to avoid commission), safeguarding of minors and quality variation. Mitigations: in-platform scheduling, payment protection and session records that give both sides reasons to stay; background checks; ratings and refund policies. This illustrates that a platform must keep delivering value *after* matching, or users will leave.
+**Step 6: Governance and risks.** Risks include disintermediation (parents and tutors arranging sessions privately after the first meeting to avoid commission), safeguarding of minors and quality variation. Mitigations: in-platform scheduling, payment protection and session records that give both sides reasons to stay; background checks; ratings and refund policies. This illustrates that a platform must keep delivering value *after* matching, or users will leave.
 
 ## Ghanaian Business Application
 
@@ -185,14 +185,14 @@ The case also highlights **negative externalities beyond the platform**. Many ci
 ## Further Reading
 
 - Parker, G. G., Van Alstyne, M. W., & Choudary, S. P. (2016). *Platform revolution: How networked markets are transforming the economy and how to make them work for you*. W. W. Norton.
-- Rochet, J.-C., & Tirole, J. (2003). Platform competition in two-sided markets. *Journal of the European Economic Association, 1*(4), 990–1029. <https://doi.org/10.1162/154247603322493212>
-- Katz, M. L., & Shapiro, C. (1985). Network externalities, competition, and compatibility. *The American Economic Review, 75*(3), 424–440.
+- Rochet, J.-C., & Tirole, J. (2003). Platform competition in two-sided markets. *Journal of the European Economic Association, 1*(4), 990-1029. <https://doi.org/10.1162/154247603322493212>
+- Katz, M. L., & Shapiro, C. (1985). Network externalities, competition, and compatibility. *The American Economic Review, 75*(3), 424-440.
 - Shapiro, C., & Varian, H. R. (1999). *Information rules: A strategic guide to the network economy*. Harvard Business School Press.
 
 ## Video Resources
 
-- [MIT OpenCourseWare](https://ocw.mit.edu/) — Massachusetts Institute of Technology. Official open learning portal; search for platform strategy and digital economy course materials.
-- [UNCTAD E-commerce and Digital Economy](https://unctad.org/topic/ecommerce-and-digital-economy) — UNCTAD. Official topic page including work on digital platforms in developing economies.
+- [MIT OpenCourseWare](https://ocw.mit.edu/): Massachusetts Institute of Technology. Official open learning portal; search for platform strategy and digital economy course materials.
+- [UNCTAD E-commerce and Digital Economy](https://unctad.org/topic/ecommerce-and-digital-economy): UNCTAD. Official topic page including work on digital platforms in developing economies.
 
 ## Revision Summary
 

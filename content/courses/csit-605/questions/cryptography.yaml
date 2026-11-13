@@ -44,10 +44,10 @@ questions:
     type: true_false
     bloom: understand
     difficulty: medium
-    objective: Explain the limitation of basic Diffie–Hellman
-    prompt: Basic Diffie–Hellman key exchange, on its own, protects against a man-in-the-middle who intercepts and replaces the public values.
+    objective: Explain the limitation of basic Diffie-Hellman
+    prompt: Basic Diffie-Hellman key exchange, on its own, protects against a man-in-the-middle who intercepts and replaces the public values.
     answer: false
-    explanation: Unauthenticated Diffie–Hellman lets an attacker run separate exchanges with each party. Authentication, such as the server's signature over the handshake in TLS 1.3, is needed to bind the exchange to an identity.
+    explanation: Unauthenticated Diffie-Hellman lets an attacker run separate exchanges with each party. Authentication, such as the server's signature over the handshake in TLS 1.3, is needed to bind the exchange to an identity.
   - id: cr05
     lesson: symmetric-and-asymmetric-encryption
     type: matching

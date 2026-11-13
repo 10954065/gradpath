@@ -196,7 +196,7 @@ flowchart TD
 ## Practical Exercises
 
 1. **Layer mapping.** Choose one smart city application (for example adaptive traffic signals on a major Accra road). *Expected output:* a diagram showing each of the six layers with specific components and data flows.
-2. **Value–risk matrix.** Place eight proposed AI applications for Kumasi on a public value versus rights risk grid. *Expected output:* a completed matrix and a recommended sequence of three pilots.
+2. **Value-risk matrix.** Place eight proposed AI applications for Kumasi on a public value versus rights risk grid. *Expected output:* a completed matrix and a recommended sequence of three pilots.
 3. **Data protection impact assessment outline.** For the flood early-warning scenario, list the personal data collected, purposes, legal basis, retention, risks and safeguards. *Expected output:* a one-page DPIA outline referencing Act 843 principles.
 4. **Procurement clauses.** Draft five contract clauses for a smart city platform vendor. *Expected output:* clauses on data ownership, open APIs, security, exit and audit rights.
 
@@ -213,15 +213,15 @@ flowchart TD
 
 - Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. In *Advances in Neural Information Processing Systems 30*.
 - Russell, S., & Norvig, P. (2021). *Artificial intelligence: A modern approach* (4th ed.). Pearson.
-- Kitchin, R. (2014). The real-time city? Big data and smart urbanism. *GeoJournal, 79*(1), 1–14.
+- Kitchin, R. (2014). The real-time city? Big data and smart urbanism. *GeoJournal, 79*(1), 1-14.
 - Townsend, A. M. (2013). *Smart cities: Big data, civic hackers, and the quest for a new utopia*. W. W. Norton.
 - Republic of Ghana. (2012). *Data Protection Act, 2012 (Act 843)*.
 
 ## Video Resources
 
-- [OECD.AI Policy Observatory](https://oecd.ai/) — OECD. Official portal on AI policy, principles and national strategies, including material on trustworthy AI.
-- [Data Protection Commission, Ghana](https://dataprotection.org.gh/) — Data Protection Commission. Official site with guidance on obligations under the Data Protection Act, 2012.
-- [MIT OpenCourseWare](https://ocw.mit.edu/) — Massachusetts Institute of Technology. Open learning portal; search for artificial intelligence and urban science course materials.
+- [OECD.AI Policy Observatory](https://oecd.ai/): OECD. Official portal on AI policy, principles and national strategies, including material on trustworthy AI.
+- [Data Protection Commission, Ghana](https://dataprotection.org.gh/): Data Protection Commission. Official site with guidance on obligations under the Data Protection Act, 2012.
+- [MIT OpenCourseWare](https://ocw.mit.edu/): Massachusetts Institute of Technology. Open learning portal; search for artificial intelligence and urban science course materials.
 
 ## Revision Summary
 
@@ -231,5 +231,5 @@ Advanced AI has moved from narrow models to foundation models, generative and ag
 - AI limits: hallucination, bias, weak local-language coverage, energy use.
 - Six layers: sensing, connectivity, platform, analytics, applications, governance.
 - City-owned data, open APIs and privacy by design prevent lock-in and abuse.
-- Value–risk matrix: start with high value, low rights-risk uses.
+- Value-risk matrix: start with high value, low rights-risk uses.
 - Sidewalk Toronto: withdrew in 2020 after sustained data governance controversy.

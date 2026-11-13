@@ -198,15 +198,15 @@ flowchart LR
 ## Further Reading
 
 - Nakamoto, S. (2008). *Bitcoin: A peer-to-peer electronic cash system*. <https://bitcoin.org/bitcoin.pdf>
-- Lamport, L., Shostak, R., & Pease, M. (1982). The Byzantine generals problem. *ACM Transactions on Programming Languages and Systems, 4*(3), 382–401.
+- Lamport, L., Shostak, R., & Pease, M. (1982). The Byzantine generals problem. *ACM Transactions on Programming Languages and Systems, 4*(3), 382-401.
 - Castro, M., & Liskov, B. (1999). Practical Byzantine fault tolerance. In *Proceedings of the Third Symposium on Operating Systems Design and Implementation*. USENIX Association.
 - Narayanan, A., Bonneau, J., Felten, E., Miller, A., & Goldfeder, S. (2016). *Bitcoin and cryptocurrency technologies: A comprehensive introduction*. Princeton University Press.
 
 ## Video Resources
 
-- [Ethereum Developer Documentation](https://ethereum.org/developers/docs/) — Ethereum.org. Official documentation explaining blocks, consensus, proof of stake and the Merge.
-- [Hyperledger Foundation](https://www.lfdecentralizedtrust.org/) — LF Decentralized Trust. Home of open-source enterprise ledger projects such as Hyperledger Fabric, with learning resources.
-- [IBM Think](https://www.ibm.com/think) — IBM. Explainers on blockchain and distributed ledger technology for business.
+- [Ethereum Developer Documentation](https://ethereum.org/developers/docs/): Ethereum.org. Official documentation explaining blocks, consensus, proof of stake and the Merge.
+- [Hyperledger Foundation](https://www.lfdecentralizedtrust.org/): LF Decentralized Trust. Home of open-source enterprise ledger projects such as Hyperledger Fabric, with learning resources.
+- [IBM Think](https://www.ibm.com/think): IBM. Explainers on blockchain and distributed ledger technology for business.
 
 ## Revision Summary
 

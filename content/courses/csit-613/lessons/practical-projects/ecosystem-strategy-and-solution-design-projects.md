@@ -50,7 +50,7 @@ All three projects use one **Illustrative scenario**. The organisation is hypoth
 
 1. **Stakeholder map.** Identify retailers, drivers, Nkabom staff, e-money issuers, agents, banks, PSPs and aggregators, GhIPSS, the Bank of Ghana, tax authorities and suppliers. Classify each by interest and power.
 2. **Value network.** Trace money, goods and information flows: goods to retailers, cash and e-value back, settlement into bank accounts, data into records.
-3. **PESTEL.** For example: *political and legal* — Act 987, data protection, AML and transfer taxes; *economic* — inflation, fees and working capital; *social* — trust, cash habits and digital skills; *technological* — interoperability, GhQR, network reliability; *environmental* — fuel use on delivery routes.
+3. **PESTEL.** For example: *political and legal* (Act 987, data protection, AML and transfer taxes; *economic*) inflation, fees and working capital; *social* (trust, cash habits and digital skills; *technological*) interoperability, GhQR, network reliability; *environmental*, fuel use on delivery routes.
 4. **Opportunities and threats.** Summarise what the ecosystem enables (cross-network collections, bulk disbursements, transaction data) and what could go wrong (fraud, outages, fee changes).
 
 **Deliverables.** A stakeholder map, a value network diagram, a PESTEL table with evidence, and a 1,000-word analysis citing official sources such as Bank of Ghana, GSMA and World Bank publications in general terms.
@@ -71,14 +71,14 @@ All three projects use one **Illustrative scenario**. The organisation is hypoth
 
 | Phase | Months | Initiatives |
 |---|---|---|
-| Foundation | 0–3 | Merchant collection account via a licensed aggregator; unique retailer IDs; WhatsApp Business catalogue; daily reconciliation |
-| Expansion | 3–6 | Payment links on invoices; QR codes for drivers; order capture form; digital statements to retailers |
-| Optimisation | 6–12 | Ordering portal or app; credit limits based on payment history; analytics dashboard; possible supplier payments by bulk disbursement |
+| Foundation | 0-3 | Merchant collection account via a licensed aggregator; unique retailer IDs; WhatsApp Business catalogue; daily reconciliation |
+| Expansion | 3-6 | Payment links on invoices; QR codes for drivers; order capture form; digital statements to retailers |
+| Optimisation | 6-12 | Ordering portal or app; credit limits based on payment history; analytics dashboard; possible supplier payments by bulk disbursement |
 
 4. **KPIs** such as share of collections received digitally, average days to collect, number of balance disputes per month, cash carried per route and repeat order frequency. Baselines must be measured, not assumed.
 5. **Change management.** Retailer onboarding sessions, driver training, incentives such as faster delivery for digital payers, and a transition period in which cash remains accepted.
 
-**Deliverables.** A strategy document of 1,500–2,000 words with roadmap, KPIs, change plan and budget outline.
+**Deliverables.** A strategy document of 1,500-2,000 words with roadmap, KPIs, change plan and budget outline.
 
 **Evaluation criteria.** Alignment with the Project C analysis; realism of phasing; measurable KPIs with baselines; attention to people and change; and justification of priorities.
 
@@ -126,7 +126,7 @@ PSP fees on collections are estimated at **GHS 1,000** per month, partly offset 
 
 **Payback period** = 18,000 ÷ 1,400 ≈ **12.9 months**.
 
-**Sensitivity.** If retailer adoption is slower and benefits reach only 70% (GHS 2,100), net benefit becomes 2,100 − 600 − 1,000 = 500, and payback stretches to 36 months. If the business negotiates fees down to GHS 700, the base-case net benefit becomes 1,700 and payback about 10.6 months. The business case is therefore most sensitive to adoption and fees, which suggests focusing early effort on retailer onboarding and fee negotiation. Unquantified benefits — retailer credit data, fewer disputes and better customer relationships — should be described qualitatively rather than given invented values.
+**Sensitivity.** If retailer adoption is slower and benefits reach only 70% (GHS 2,100), net benefit becomes 2,100 − 600 − 1,000 = 500, and payback stretches to 36 months. If the business negotiates fees down to GHS 700, the base-case net benefit becomes 1,700 and payback about 10.6 months. The business case is therefore most sensitive to adoption and fees, which suggests focusing early effort on retailer onboarding and fee negotiation. Unquantified benefits (retailer credit data, fewer disputes and better customer relationships) should be described qualitatively rather than given invented values.
 
 ## Ghanaian Business Application
 
@@ -136,7 +136,7 @@ The projects are designed around real features of the Ghanaian environment: inte
 
 ### Merchant and distributor payments on M-Pesa
 
-In Kenya, Safaricom extended M-Pesa beyond person-to-person transfers to merchant payments through **Lipa na M-Pesa** and to business services such as paybill numbers used for invoices, utility bills and school fees. Distributors and fast-moving consumer goods companies have used mobile money to collect from small retailers, reducing the cash carried by delivery staff. The Kenyan experience illustrates the progression this lesson models: once a mobile money ecosystem is widely used for transfers, businesses can build structured collections, reconciliation and data on top of it. It also shows that merchant adoption depends on pricing, settlement speed and the convenience of tools for small businesses — the same factors evaluated in Projects D and E.
+In Kenya, Safaricom extended M-Pesa beyond person-to-person transfers to merchant payments through **Lipa na M-Pesa** and to business services such as paybill numbers used for invoices, utility bills and school fees. Distributors and fast-moving consumer goods companies have used mobile money to collect from small retailers, reducing the cash carried by delivery staff. The Kenyan experience illustrates the progression this lesson models: once a mobile money ecosystem is widely used for transfers, businesses can build structured collections, reconciliation and data on top of it. It also shows that merchant adoption depends on pricing, settlement speed and the convenience of tools for small businesses: the same factors evaluated in Projects D and E.
 
 ## Diagram
 
@@ -180,7 +180,7 @@ flowchart TD
 ## Practical Exercises
 
 1. **Project C submission.** Produce the stakeholder map, value network, PESTEL table and analysis for Nkabom Provisions or another clearly labelled illustrative Ghanaian SME. *Expected output:* the Project C deliverables assessed against its criteria.
-2. **Project D submission.** Write the 12-month strategy with a phased roadmap, KPIs with baselines and a change plan. *Expected output:* a strategy document of 1,500–2,000 words.
+2. **Project D submission.** Write the 12-month strategy with a phased roadmap, KPIs with baselines and a change plan. *Expected output:* a strategy document of 1,500-2,000 words.
 3. **Project E submission.** Produce a MoSCoW-prioritised requirements specification, architecture diagram, controls matrix, test plan and business case with sensitivity analysis. *Expected output:* a solution design pack with every assumption stated.
 
 ## Key Takeaways
@@ -194,16 +194,16 @@ flowchart TD
 ## Further Reading
 
 - Osterwalder, A., & Pigneur, Y. (2010). *Business model generation: A handbook for visionaries, game changers, and challengers*. Wiley.
-- Jack, W., & Suri, T. (2014). Risk sharing and transactions costs: Evidence from Kenya's mobile money revolution. *American Economic Review, 104*(1), 183–223.
+- Jack, W., & Suri, T. (2014). Risk sharing and transactions costs: Evidence from Kenya's mobile money revolution. *American Economic Review, 104*(1), 183-223.
 - Demirgüç-Kunt, A., Klapper, L., Singer, D., & Ansar, S. (2022). *The Global Findex Database 2021: Financial inclusion, digital payments, and resilience in the age of COVID-19*. World Bank.
-- Venkatesh, V., Morris, M. G., Davis, G. B., & Davis, F. D. (2003). User acceptance of information technology: Toward a unified view. *MIS Quarterly, 27*(3), 425–478.
+- Venkatesh, V., Morris, M. G., Davis, G. B., & Davis, F. D. (2003). User acceptance of information technology: Toward a unified view. *MIS Quarterly, 27*(3), 425-478.
 - Payment Systems and Services Act, 2019 (Act 987) (Ghana).
 
 ## Video Resources
 
-- [Bank of Ghana](https://www.bog.gov.gh/) — Bank of Ghana. Official source for payment systems regulation and licensed providers, essential for verifying project assumptions.
-- [GhIPSS](https://ghipss.net/) — Ghana Interbank Payment and Settlement Systems. Information on interoperability, GhQR and national payment infrastructure.
-- [CGAP](https://www.cgap.org/) — CGAP. Research and guidance on digital finance for small businesses and responsible inclusion.
+- [Bank of Ghana](https://www.bog.gov.gh/): Bank of Ghana. Official source for payment systems regulation and licensed providers, essential for verifying project assumptions.
+- [GhIPSS](https://ghipss.net/): Ghana Interbank Payment and Settlement Systems. Information on interoperability, GhQR and national payment infrastructure.
+- [CGAP](https://www.cgap.org/): CGAP. Research and guidance on digital finance for small businesses and responsible inclusion.
 
 ## Revision Summary
 

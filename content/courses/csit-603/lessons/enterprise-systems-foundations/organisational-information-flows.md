@@ -105,17 +105,17 @@ A simple model links the stages: **data** (raw recorded facts) becomes **informa
 
 **Illustrative scenario.** *Korle Family Supermarket* is a hypothetical three-branch supermarket in Accra. The operations manager wants to reduce stock-outs of fast-moving items.
 
-**Step 1 – Identify the decision.** "Which items should be reordered today, and in what quantity, for each branch?"
+**Step 1: Identify the decision.** "Which items should be reordered today, and in what quantity, for each branch?"
 
-**Step 2 – Identify the transactions that feed it.** Point-of-sale sales lines, goods received notes, inter-branch transfers and stock adjustments (damage, theft, expiry).
+**Step 2: Identify the transactions that feed it.** Point-of-sale sales lines, goods received notes, inter-branch transfers and stock adjustments (damage, theft, expiry).
 
-**Step 3 – Define the calculation.** For each item and branch: `available stock = opening stock + receipts + transfers in − sales − transfers out − adjustments`. Flag the item if `available stock < reorder level`, where `reorder level = average daily sales × supplier lead time (days) + safety stock`.
+**Step 3: Define the calculation.** For each item and branch: `available stock = opening stock + receipts + transfers in − sales − transfers out − adjustments`. Flag the item if `available stock < reorder level`, where `reorder level = average daily sales × supplier lead time (days) + safety stock`.
 
 For example, sugar 1 kg at the Osu branch: average daily sales 40 units, lead time 3 days, safety stock 30 units, so reorder level = 40 × 3 + 30 = 150 units. If available stock is 120, the item appears on the exception report with a suggested order to bring stock back to an agreed maximum.
 
-**Step 4 – Design the report.** An exception report listing only flagged items, sorted by days of cover remaining, with columns for item, branch, available stock, reorder level, suggested order quantity and preferred supplier.
+**Step 4: Design the report.** An exception report listing only flagged items, sorted by days of cover remaining, with columns for item, branch, available stock, reorder level, suggested order quantity and preferred supplier.
 
-**Step 5 – Check the information flow.** If tills upload sales only at night (batch), the report reflects yesterday's position; if they post in real time, the report can be refreshed at midday. The manager decides that a nightly batch is adequate for most lines but that fresh produce needs intraday visibility.
+**Step 5: Check the information flow.** If tills upload sales only at night (batch), the report reflects yesterday's position; if they post in real time, the report can be refreshed at midday. The manager decides that a nightly batch is adequate for most lines but that fresh produce needs intraday visibility.
 
 ## International Case Study
 
@@ -179,13 +179,13 @@ flowchart TD
 ## Further Reading
 
 - Monk, E., & Wagner, B. (2013). *Concepts in enterprise resource planning* (4th ed.). Cengage Learning.
-- Davenport, T. H. (1998). Putting the enterprise into the enterprise system. *Harvard Business Review, 76*(4), 121–131.
+- Davenport, T. H. (1998). Putting the enterprise into the enterprise system. *Harvard Business Review, 76*(4), 121-131.
 - Dumas, M., La Rosa, M., Mendling, J., & Reijers, H. A. (2018). *Fundamentals of business process management* (2nd ed.). Springer.
 
 ## Video Resources
 
-- [SAP Learning](https://learning.sap.com/) — SAP. Learning journeys that walk through integrated sales, procurement and finance flows in SAP S/4HANA.
-- [What is ERP? (IBM Think)](https://www.ibm.com/think/topics/enterprise-resource-planning) — IBM. Explains how ERP captures transactions once and shares them across business functions.
+- [SAP Learning](https://learning.sap.com/): SAP. Learning journeys that walk through integrated sales, procurement and finance flows in SAP S/4HANA.
+- [What is ERP? (IBM Think)](https://www.ibm.com/think/topics/enterprise-resource-planning): IBM. Explains how ERP captures transactions once and shares them across business functions.
 
 ## Revision Summary
 

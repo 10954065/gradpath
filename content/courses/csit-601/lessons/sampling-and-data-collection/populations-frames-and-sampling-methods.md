@@ -105,17 +105,17 @@ flowchart TD
 
 **Illustrative scenario.** Yaw is studying e-commerce adoption among registered SMEs. A business association provides a membership list of 1,200 SMEs located in Accra (600), Kumasi (360) and Takoradi (240). He plans a sample of 300.
 
-**Step 1 – Define the levels.** Target population: registered SMEs in Ghana's three largest commercial centres. Sampling frame: the association's membership list of 1,200 firms. Coverage limitation: non-member and unregistered firms are excluded, so conclusions apply to association members.
+**Step 1: Define the levels.** Target population: registered SMEs in Ghana's three largest commercial centres. Sampling frame: the association's membership list of 1,200 firms. Coverage limitation: non-member and unregistered firms are excluded, so conclusions apply to association members.
 
-**Step 2 – Choose a method.** E-commerce adoption is likely to differ between cities, so Yaw chooses **proportional stratified random sampling** by city.
+**Step 2: Choose a method.** E-commerce adoption is likely to differ between cities, so Yaw chooses **proportional stratified random sampling** by city.
 
-**Step 3 – Compute the sampling fraction.**
+**Step 3: Compute the sampling fraction.**
 
 ```
 Sampling fraction = n / N = 300 / 1,200 = 0.25 (25%)
 ```
 
-**Step 4 – Allocate the sample to strata.**
+**Step 4: Allocate the sample to strata.**
 
 | Stratum | Population | Share | Sample (25%) |
 |---|---|---|---|
@@ -124,11 +124,11 @@ Sampling fraction = n / N = 300 / 1,200 = 0.25 (25%)
 | Takoradi | 240 | 20% | 60 |
 | **Total** | **1,200** | **100%** | **300** |
 
-**Step 5 – Select within strata using systematic sampling.** For Accra, `k = 600 / 150 = 4`. A random start between 1 and 4 is chosen, say 3, so firms 3, 7, 11, 15 ... are selected from the alphabetical Accra list. Yaw checks that the list has no periodic pattern (for example, every fourth firm being a branch of the same company).
+**Step 5: Select within strata using systematic sampling.** For Accra, `k = 600 / 150 = 4`. A random start between 1 and 4 is chosen, say 3, so firms 3, 7, 11, 15 ... are selected from the alphabetical Accra list. Yaw checks that the list has no periodic pattern (for example, every fourth firm being a branch of the same company).
 
-**Step 6 – Consider disproportional allocation.** If Yaw wanted to compare Takoradi with the other cities with similar precision, 60 firms might be too few. He could oversample Takoradi (for example, 100 firms) and use weights when estimating overall figures.
+**Step 6: Consider disproportional allocation.** If Yaw wanted to compare Takoradi with the other cities with similar precision, 60 firms might be too few. He could oversample Takoradi (for example, 100 firms) and use weights when estimating overall figures.
 
-**Step 7 – Anticipate non-response.** If he expects only some firms to respond, he will need to approach more firms than 300 (see the next lesson on sample size) and compare respondents with non-respondents on known characteristics such as city and sector.
+**Step 7: Anticipate non-response.** If he expects only some firms to respond, he will need to approach more firms than 300 (see the next lesson on sample size) and compare respondents with non-respondents on known characteristics such as city and sector.
 
 The expected output is a fully specified sampling plan: population, frame, method, allocation table, selection procedure and stated limitations.
 
@@ -199,8 +199,8 @@ The case is a textbook illustration of two lessons. First, **coverage error** in
 
 ## Video Resources
 
-- [Khan Academy: Statistics and Probability](https://www.khanacademy.org/math/statistics-probability) — Khan Academy. Free official course including units on sampling methods and study design.
-- [SAGE Research Methods](https://methods.sagepub.com/) — SAGE Publishing. Official research methods platform (access may depend on institutional subscription) with material on sampling strategies.
+- [Khan Academy: Statistics and Probability](https://www.khanacademy.org/math/statistics-probability): Khan Academy. Free official course including units on sampling methods and study design.
+- [SAGE Research Methods](https://methods.sagepub.com/): SAGE Publishing. Official research methods platform (access may depend on institutional subscription) with material on sampling strategies.
 
 ## Revision Summary
 

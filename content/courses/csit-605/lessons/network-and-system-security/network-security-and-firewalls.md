@@ -215,8 +215,8 @@ flowchart LR
 
 ## Video Resources
 
-- [Cisco Skills for All](https://skillsforall.com/) — Cisco Networking Academy. Free courses on networking and network defence, including firewall and segmentation concepts with simulations.
-- [NIST Computer Security Resource Center](https://csrc.nist.gov/) — National Institute of Standards and Technology. Official source for SP 800-41 and SP 800-207, with project pages on zero trust.
+- [Cisco Skills for All](https://skillsforall.com/): Cisco Networking Academy. Free courses on networking and network defence, including firewall and segmentation concepts with simulations.
+- [NIST Computer Security Resource Center](https://csrc.nist.gov/): National Institute of Standards and Technology. Official source for SP 800-41 and SP 800-207, with project pages on zero trust.
 
 ## Revision Summary
 

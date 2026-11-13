@@ -26,10 +26,10 @@ cards:
     back: Ingest and validate data, engineer features, train and track, evaluate and approve, register, deploy with a rollout strategy, monitor, then retrain or roll back.
   - lesson: deployment-and-pipelines
     front: Distinguish data drift, concept drift and prediction drift.
-    back: Data drift is a change in input distributions; concept drift is a change in the input–outcome relationship; prediction drift is a change in the distribution of model outputs.
+    back: Data drift is a change in input distributions; concept drift is a change in the input-outcome relationship; prediction drift is a change in the distribution of model outputs.
   - lesson: deployment-and-pipelines
     front: State the PSI formula and a common interpretation.
-    back: PSI = Σ (A − E) × ln(A/E). By rule of thumb, below about 0.1 is little change, 0.1–0.25 moderate, above 0.25 significant.
+    back: PSI = Σ (A − E) × ln(A/E). By rule of thumb, below about 0.1 is little change, 0.1-0.25 moderate, above 0.25 significant.
   - lesson: deployment-and-pipelines
     front: What is the main managerial lesson of "hidden technical debt in machine learning systems"?
     back: Model code is a small part of the system; data pipelines, configuration, serving and monitoring dominate lifetime cost and must be budgeted and maintained.

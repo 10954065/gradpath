@@ -42,14 +42,14 @@ This lesson covers two closely related capabilities. **Order management** coordi
 
 Although statuses vary between systems, a typical B2C order lifecycle includes:
 
-1. **Placed / pending payment** – the order is created; for mobile money, the customer may still need to approve the payment prompt on their phone.
-2. **Paid / confirmed** – the payment provider confirms success, usually by a callback or webhook to the merchant's system.
-3. **Verified** – optional fraud or risk checks, especially for high-value orders or unusual patterns.
-4. **Allocated** – stock is reserved against the order at a specific warehouse or shop.
-5. **Picked and packed** – items are collected, checked and packaged, and a delivery label or reference is generated.
-6. **Dispatched / shipped** – handed to a rider or courier with a tracking reference.
-7. **Delivered** – confirmed by the courier, customer signature, photo or one-time code.
-8. **Completed** – the return window closes and the sale is final.
+1. **Placed / pending payment**: the order is created; for mobile money, the customer may still need to approve the payment prompt on their phone.
+2. **Paid / confirmed**: the payment provider confirms success, usually by a callback or webhook to the merchant's system.
+3. **Verified**: optional fraud or risk checks, especially for high-value orders or unusual patterns.
+4. **Allocated**: stock is reserved against the order at a specific warehouse or shop.
+5. **Picked and packed**: items are collected, checked and packaged, and a delivery label or reference is generated.
+6. **Dispatched / shipped**: handed to a rider or courier with a tracking reference.
+7. **Delivered**: confirmed by the courier, customer signature, photo or one-time code.
+8. **Completed**: the return window closes and the sale is final.
 
 Branches include **cancelled** (before dispatch), **failed delivery** (customer unavailable, address not found) and **returned / refunded**. For *pay on delivery* orders, payment is collected at the delivery step, which adds a cash reconciliation task: the rider's collections must be matched against delivered orders.
 
@@ -97,9 +97,9 @@ CRM depends on personal data: names, phone numbers, addresses and purchase histo
 
 RFM is a simple but powerful analytical CRM technique. Each customer is scored, often from 1 (lowest) to 5 (highest), on:
 
-- **Recency** – how recently they purchased (more recent scores higher).
-- **Frequency** – how many purchases they made in the period.
-- **Monetary value** – how much they spent in the period.
+- **Recency**: how recently they purchased (more recent scores higher).
+- **Frequency**: how many purchases they made in the period.
+- **Monetary value**: how much they spent in the period.
 
 Combinations identify segments such as **Champions** (high R, F and M), **Loyal customers** (high F), **At risk** (low R but previously high F and M) and **New customers** (high R, low F). Each segment receives different treatment: champions might be invited to a loyalty tier, at-risk customers sent a personalised win-back offer.
 
@@ -142,12 +142,12 @@ flowchart TD
 | Abena | 300 | 1 | 150 |
 | Kofi | 25 | 7 | 2,100 |
 
-**Step 1 – Define scoring bands (1–3 for simplicity).**
-- Recency: 0–30 days = 3; 31–120 days = 2; over 120 days = 1.
-- Frequency: 6 or more orders = 3; 2–5 = 2; 1 = 1.
-- Monetary: over GHS 1,500 = 3; GHS 500–1,500 = 2; under GHS 500 = 1.
+**Step 1: Define scoring bands (1-3 for simplicity).**
+- Recency: 0-30 days = 3; 31-120 days = 2; over 120 days = 1.
+- Frequency: 6 or more orders = 3; 2-5 = 2; 1 = 1.
+- Monetary: over GHS 1,500 = 3; GHS 500-1,500 = 2; under GHS 500 = 1.
 
-**Step 2 – Score each customer.**
+**Step 2: Score each customer.**
 
 | Customer | R | F | M | RFM code | Segment |
 |---|---|---|---|---|---|
@@ -158,14 +158,14 @@ flowchart TD
 | Kwame | 1 | 3 | 3 | 133 | At risk (valuable but lapsing) |
 | Abena | 1 | 1 | 1 | 111 | Lost / low value |
 
-**Step 3 – Design actions.**
+**Step 3: Design actions.**
 - *Champions*: early access to new products, a loyalty tier and requests for reviews or referrals.
 - *Yaw*: cross-sell complementary products based on purchase history to increase frequency.
 - *Esi*: a welcome series with product guidance to encourage a second purchase, which is often the hardest step.
 - *Kwame*: priority win-back, because he has high historical value. Check service records for a problem (late delivery, complaint) and contact him personally with a tailored offer; this is service recovery in practice.
 - *Abena*: low-cost automated reminder only.
 
-**Step 4 – Evaluate.** RFM is easy to calculate and explain, but it is backward-looking, ignores margins and product categories, and depends on accurate order data. This is why OMS and CRM must be integrated: without reliable order records, segmentation is unreliable.
+**Step 4: Evaluate.** RFM is easy to calculate and explain, but it is backward-looking, ignores margins and product categories, and depends on accurate order data. This is why OMS and CRM must be integrated: without reliable order records, segmentation is unreliable.
 
 ## Ghanaian Business Application
 
@@ -223,14 +223,14 @@ The case links order management and CRM. Generous returns policies reduce the pe
 ## Further Reading
 
 - Buttle, F., & Maklan, S. (2019). *Customer relationship management: Concepts and technologies* (4th ed.). Routledge.
-- Reichheld, F. F., & Sasser, W. E. (1990). Zero defections: Quality comes to services. *Harvard Business Review, 68*(5), 105–111.
+- Reichheld, F. F., & Sasser, W. E. (1990). Zero defections: Quality comes to services. *Harvard Business Review, 68*(5), 105-111.
 - Laudon, K. C., & Traver, C. G. *E-commerce: Business, technology, society*. Pearson. (Consult the most recent edition available in your library.)
 - Chaffey, D., Hemphill, T., & Edmundson-Bird, D. (2019). *Digital business and e-commerce management* (7th ed.). Pearson.
 
 ## Video Resources
 
-- [MIT OpenCourseWare](https://ocw.mit.edu/) — Massachusetts Institute of Technology. Official open learning portal; search for supply chain, logistics and operations management materials.
-- [HubSpot Academy](https://academy.hubspot.com/) — HubSpot. Official free learning portal with courses on customer relationship management and customer service.
+- [MIT OpenCourseWare](https://ocw.mit.edu/): Massachusetts Institute of Technology. Official open learning portal; search for supply chain, logistics and operations management materials.
+- [HubSpot Academy](https://academy.hubspot.com/): HubSpot. Official free learning portal with courses on customer relationship management and customer service.
 
 ## Revision Summary
 

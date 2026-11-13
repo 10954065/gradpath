@@ -159,15 +159,15 @@ The studies, and the long debate about how to interpret them, illustrate a centr
 ## Further Reading
 
 - Kuhn, T. S. (1962). *The structure of scientific revolutions*. University of Chicago Press.
-- Guba, E. G., & Lincoln, Y. S. (1994). Competing paradigms in qualitative research. In N. K. Denzin & Y. S. Lincoln (Eds.), *Handbook of qualitative research* (pp. 105–117). SAGE.
-- Morgan, D. L. (2007). Paradigms lost and pragmatism regained: Methodological implications of combining qualitative and quantitative methods. *Journal of Mixed Methods Research, 1*(1), 48–76. <https://doi.org/10.1177/2345678906292462>
-- Walsham, G. (1995). Interpretive case studies in IS research: Nature and method. *European Journal of Information Systems, 4*(2), 74–81.
+- Guba, E. G., & Lincoln, Y. S. (1994). Competing paradigms in qualitative research. In N. K. Denzin & Y. S. Lincoln (Eds.), *Handbook of qualitative research* (pp. 105-117). SAGE.
+- Morgan, D. L. (2007). Paradigms lost and pragmatism regained: Methodological implications of combining qualitative and quantitative methods. *Journal of Mixed Methods Research, 1*(1), 48-76. <https://doi.org/10.1177/2345678906292462>
+- Walsham, G. (1995). Interpretive case studies in IS research: Nature and method. *European Journal of Information Systems, 4*(2), 74-81.
 - Saunders, M., Lewis, P., & Thornhill, A. (2019). *Research methods for business students* (8th ed.). Pearson.
 
 ## Video Resources
 
-- [SAGE Research Methods](https://methods.sagepub.com/) — SAGE Publishing. Official research methods platform (institutional access may be required) with explanations of research philosophies.
-- [Coursera](https://www.coursera.org/) — Coursera. Official learning platform; search for university-run research methods courses covering research philosophy.
+- [SAGE Research Methods](https://methods.sagepub.com/): SAGE Publishing. Official research methods platform (institutional access may be required) with explanations of research philosophies.
+- [Coursera](https://www.coursera.org/): Coursera. Official learning platform; search for university-run research methods courses covering research philosophy.
 
 ## Revision Summary
 

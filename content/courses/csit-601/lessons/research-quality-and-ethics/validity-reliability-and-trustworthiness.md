@@ -16,7 +16,7 @@ This lesson introduces the vocabulary used to judge research quality. For quanti
 
 - Explain the difference between validity and reliability and why reliability is necessary but not sufficient for validity.
 - Distinguish content, construct (convergent and discriminant), criterion, internal, external and statistical conclusion validity.
-- Apply common reliability checks, including internal consistency, test–retest and inter-rater reliability, to a research instrument.
+- Apply common reliability checks, including internal consistency, test-retest and inter-rater reliability, to a research instrument.
 - Compare Lincoln and Guba's trustworthiness criteria with their quantitative counterparts.
 - Evaluate a research proposal and recommend specific strategies to strengthen its quality.
 
@@ -54,8 +54,8 @@ Validity is not a single property. Different types address different threats.
 |---|---|---|
 | Face validity | Does the instrument appear, on inspection, to measure the concept? | Review by participants or colleagues (weakest form) |
 | Content validity | Do the items cover the full domain of the construct? | Expert review against a definition from literature |
-| Construct validity – convergent | Do items for one construct correlate strongly with each other? | Factor loadings, average variance extracted |
-| Construct validity – discriminant | Is the construct empirically distinct from other constructs? | Low cross-loadings; Fornell–Larcker comparison |
+| Construct validity: convergent | Do items for one construct correlate strongly with each other? | Factor loadings, average variance extracted |
+| Construct validity: discriminant | Is the construct empirically distinct from other constructs? | Low cross-loadings; Fornell-Larcker comparison |
 | Criterion validity | Does the measure relate to an external benchmark? | Correlation with an established measure or outcome (concurrent or predictive) |
 | Internal validity | Can alternative explanations for a causal relationship be ruled out? | Randomisation, control groups, controlling confounders |
 | External validity | Can findings be generalised beyond the sample? | Probability sampling, replication in other settings |
@@ -66,7 +66,7 @@ Two clarifications prevent common errors. First, **internal and external validit
 ### Types of reliability
 
 - **Internal consistency** asks whether multiple items intended to measure one construct produce consistent responses. Cronbach's alpha is the most widely reported statistic. Values around 0.70 or above are commonly treated as acceptable in exploratory social science work, though the threshold is a convention rather than a law, and very high values (for example above 0.95) can signal redundant, near-identical items.
-- **Test–retest reliability** asks whether the same respondents give similar answers when measured on two occasions, assuming the construct has not genuinely changed.
+- **Test-retest reliability** asks whether the same respondents give similar answers when measured on two occasions, assuming the construct has not genuinely changed.
 - **Inter-rater (inter-coder) reliability** asks whether two or more people coding or rating the same material agree. In qualitative coding or content analysis, agreement can be summarised with statistics such as Cohen's kappa, or discussed through structured comparison of coding decisions.
 - **Parallel-forms reliability** compares two equivalent versions of an instrument.
 
@@ -89,23 +89,23 @@ Note the shift in responsibility for transferability: the qualitative researcher
 
 Shadish, Cook and Campbell's work on experimental and quasi-experimental designs provides a well-known list of threats that any study claiming cause and effect should consider. The most relevant to business and IT research are:
 
-1. **History** – external events occur during the study (for example, a nationwide network outage during an e-commerce intervention).
-2. **Maturation** – participants naturally change over time (employees become more skilled with a system regardless of training).
-3. **Testing** – taking a pre-test influences post-test scores.
-4. **Instrumentation** – the measurement instrument or procedure changes between measurements.
-5. **Selection** – groups differ before the intervention (volunteers for a pilot are already enthusiastic).
-6. **Attrition** – participants drop out non-randomly.
-7. **Regression to the mean** – extreme scores tend to move towards the average on re-measurement.
+1. **History**: external events occur during the study (for example, a nationwide network outage during an e-commerce intervention).
+2. **Maturation**: participants naturally change over time (employees become more skilled with a system regardless of training).
+3. **Testing**: taking a pre-test influences post-test scores.
+4. **Instrumentation**: the measurement instrument or procedure changes between measurements.
+5. **Selection**: groups differ before the intervention (volunteers for a pilot are already enthusiastic).
+6. **Attrition**: participants drop out non-randomly.
+7. **Regression to the mean**: extreme scores tend to move towards the average on re-measurement.
 
 ### Construct validity in structural models
 
-In information systems survey research, constructs such as perceived usefulness, performance expectancy and behavioural intention (from TAM and UTAUT) are measured with multiple items. Researchers commonly assess **convergent validity** through item loadings and the average variance extracted (AVE), and **discriminant validity** through the Fornell and Larcker (1981) criterion, which compares the square root of each construct's AVE with its correlations with other constructs. Campbell and Fiske's (1959) multitrait–multimethod matrix is the classic origin of the convergent–discriminant distinction. You do not need to compute these by hand, but you must know what they demonstrate and report them correctly.
+In information systems survey research, constructs such as perceived usefulness, performance expectancy and behavioural intention (from TAM and UTAUT) are measured with multiple items. Researchers commonly assess **convergent validity** through item loadings and the average variance extracted (AVE), and **discriminant validity** through the Fornell and Larcker (1981) criterion, which compares the square root of each construct's AVE with its correlations with other constructs. Campbell and Fiske's (1959) multitrait-multimethod matrix is the classic origin of the convergent-discriminant distinction. You do not need to compute these by hand, but you must know what they demonstrate and report them correctly.
 
 ## Worked Example
 
 **Illustrative scenario.** Kofi is studying mobile banking adoption among traders in Kumasi. His construct "perceived trust" has four Likert items (1 = strongly disagree, 5 = strongly agree). A pilot with 30 traders gives the following summary from statistical software:
 
-| Item | Corrected item–total correlation | Alpha if item deleted |
+| Item | Corrected item-total correlation | Alpha if item deleted |
 |---|---|---|
 | T1 "My bank's app keeps my money safe" | 0.68 | 0.71 |
 | T2 "I trust the app to process transfers correctly" | 0.64 | 0.73 |
@@ -114,15 +114,15 @@ In information systems survey research, constructs such as perceived usefulness,
 
 Overall Cronbach's alpha for the four items is 0.77.
 
-**Step 1 – Interpret overall alpha.** 0.77 exceeds the conventional 0.70 benchmark, so at first glance the scale looks acceptable.
+**Step 1: Interpret overall alpha.** 0.77 exceeds the conventional 0.70 benchmark, so at first glance the scale looks acceptable.
 
-**Step 2 – Inspect items.** T4 has a very low item–total correlation (0.12), and deleting it would raise alpha to 0.86. This signals that T4 does not belong with the others.
+**Step 2: Inspect items.** T4 has a very low item-total correlation (0.12), and deleting it would raise alpha to 0.86. This signals that T4 does not belong with the others.
 
-**Step 3 – Diagnose conceptually, not only statistically.** T4 measures a *payment preference*, not trust in the app. This is a **content and construct validity** problem: the item was poorly matched to the construct definition. Deleting an item purely to raise alpha would be poor practice; here the statistical signal and the conceptual reasoning agree.
+**Step 3: Diagnose conceptually, not only statistically.** T4 measures a *payment preference*, not trust in the app. This is a **content and construct validity** problem: the item was poorly matched to the construct definition. Deleting an item purely to raise alpha would be poor practice; here the statistical signal and the conceptual reasoning agree.
 
-**Step 4 – Decide and document.** Kofi removes T4, reports the revised alpha, and records the reasoning in his audit of instrument changes. He also notes that the pilot was small, so alpha should be re-checked on the main sample.
+**Step 4: Decide and document.** Kofi removes T4, reports the revised alpha, and records the reasoning in his audit of instrument changes. He also notes that the pilot was small, so alpha should be re-checked on the main sample.
 
-**Step 5 – Remember the limits.** A high alpha shows only that the remaining items are consistent. It does not prove that they measure trust rather than, for instance, general satisfaction with the bank. Kofi should also assess discriminant validity against his "satisfaction" construct in the main study.
+**Step 5: Remember the limits.** A high alpha shows only that the remaining items are consistent. It does not prove that they measure trust rather than, for instance, general satisfaction with the bank. Kofi should also assess discriminant validity against his "satisfaction" construct in the main study.
 
 ## Ghanaian Business Application
 
@@ -201,15 +201,15 @@ The dotted lines show the approximate parallels Lincoln and Guba drew between th
 
 - Lincoln, Y. S., & Guba, E. G. (1985). *Naturalistic inquiry*. SAGE.
 - Shadish, W. R., Cook, T. D., & Campbell, D. T. (2002). *Experimental and quasi-experimental designs for generalized causal inference*. Houghton Mifflin.
-- Cronbach, L. J. (1951). Coefficient alpha and the internal structure of tests. *Psychometrika, 16*(3), 297–334.
-- Fornell, C., & Larcker, D. F. (1981). Evaluating structural equation models with unobservable variables and measurement error. *Journal of Marketing Research, 18*(1), 39–50.
-- Venkatesh, V., Morris, M. G., Davis, G. B., & Davis, F. D. (2003). User acceptance of information technology: Toward a unified view. *MIS Quarterly, 27*(3), 425–478.
+- Cronbach, L. J. (1951). Coefficient alpha and the internal structure of tests. *Psychometrika, 16*(3), 297-334.
+- Fornell, C., & Larcker, D. F. (1981). Evaluating structural equation models with unobservable variables and measurement error. *Journal of Marketing Research, 18*(1), 39-50.
+- Venkatesh, V., Morris, M. G., Davis, G. B., & Davis, F. D. (2003). User acceptance of information technology: Toward a unified view. *MIS Quarterly, 27*(3), 425-478.
 - Saunders, M., Lewis, P., & Thornhill, A. (2019). *Research methods for business students* (8th ed.). Pearson.
 
 ## Video Resources
 
-- [SAGE Research Methods](https://methods.sagepub.com/) — SAGE Publishing. Official research methods platform (access may depend on institutional subscription) with explanations of validity, reliability and qualitative rigour.
-- [MIT OpenCourseWare](https://ocw.mit.edu/) — Massachusetts Institute of Technology. Official open learning portal; search for research design and measurement course materials.
+- [SAGE Research Methods](https://methods.sagepub.com/): SAGE Publishing. Official research methods platform (access may depend on institutional subscription) with explanations of validity, reliability and qualitative rigour.
+- [MIT OpenCourseWare](https://ocw.mit.edu/): Massachusetts Institute of Technology. Official open learning portal; search for research design and measurement course materials.
 
 ## Revision Summary
 
@@ -217,7 +217,7 @@ Research quality answers the examiner's question "why should I believe this?". Q
 
 - Reliability is necessary but not sufficient for validity.
 - Validity types: content, construct (convergent/discriminant), criterion, internal, external, statistical conclusion.
-- Reliability types: internal consistency (Cronbach's alpha), test–retest, inter-rater, parallel forms.
+- Reliability types: internal consistency (Cronbach's alpha), test-retest, inter-rater, parallel forms.
 - Trustworthiness: credibility, transferability, dependability, confirmability.
 - Strategies: piloting, expert review, triangulation, member checking, thick description, audit trail.
 - Re-establish quality whenever instruments are adapted or translated.

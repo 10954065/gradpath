@@ -41,7 +41,7 @@ questions:
     bloom: understand
     difficulty: easy
     objective: Understand time-based splitting
-    prompt: For a sales forecasting model, a random train–test split is preferable to a time-based split because it mixes all periods evenly.
+    prompt: For a sales forecasting model, a random train-test split is preferable to a time-based split because it mixes all periods evenly.
     answer: false
     explanation: Random splits let the model learn from future periods and then be tested on earlier ones, which overstates performance. Forecasting and other time-ordered problems need time-based splits (backtesting) so the test period always follows the training period.
   - id: q04
@@ -52,7 +52,7 @@ questions:
     objective: Name the mismatch between feature computation in training and production
     prompt: What term describes the problem where features are computed differently during training and during inference?
     answers: [training-serving skew, training serving skew, train-serve skew]
-    explanation: Training–serving skew occurs when the inputs a model sees in production differ from those it was trained on because of different code, data sources or timing. Shared feature code or a feature store helps prevent it.
+    explanation: Training-serving skew occurs when the inputs a model sees in production differ from those it was trained on because of different code, data sources or timing. Shared feature code or a feature store helps prevent it.
   - id: q05
     lesson: data-quality-training-and-inference
     type: mcq
@@ -120,7 +120,7 @@ questions:
       - Data (covariate) drift
       - Concept drift
       - Prediction drift only
-      - Training–serving skew
+      - Training-serving skew
     answer: 1
     explanation: The relationship between inputs and the outcome has changed, which is concept drift. Data drift would be a change in the input distribution itself; prediction drift describes changes in output distribution; and skew is a pipeline inconsistency, not a change in the world.
   - id: q10
@@ -165,12 +165,12 @@ questions:
     objective: Evaluate rollout strategies for risk
     prompt: A lender wants to test a new credit model on live applications without any risk that its decisions affect customers. Which strategy fits best?
     options:
-      - Blue–green deployment
+      - Blue-green deployment
       - Canary release to 10% of traffic
       - Shadow deployment
       - Full replacement with rollback plan
     answer: 2
-    explanation: In shadow deployment the new model scores live inputs but its outputs are only logged, so no customer is affected. Canary and blue–green releases both let the new model make real decisions, and full replacement carries the highest risk.
+    explanation: In shadow deployment the new model scores live inputs but its outputs are only logged, so no customer is affected. Canary and blue-green releases both let the new model make real decisions, and full replacement carries the highest risk.
   - id: q14
     lesson: deployment-and-pipelines
     type: scenario
@@ -200,7 +200,7 @@ questions:
       - left: Context
         right: Supplies the facts the model needs
       - left: Examples
-        right: Demonstrates the expected input–output behaviour
+        right: Demonstrates the expected input-output behaviour
       - left: Constraints
         right: Limits scope, length and permitted claims
       - left: Output format
@@ -300,7 +300,7 @@ questions:
     rubric:
       - criterion: Data quality and evaluation
         marks: 6
-        descriptor: Applies quality dimensions, recognises label delay and imbalance, uses time-based splits and precision–recall metrics
+        descriptor: Applies quality dimensions, recognises label delay and imbalance, uses time-based splits and precision-recall metrics
       - criterion: Deployment and MLOps
         marks: 6
         descriptor: Justifies a real-time API with fallback, shadow or canary rollout, registry and rollback

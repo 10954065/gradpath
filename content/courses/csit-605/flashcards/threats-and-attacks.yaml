@@ -44,7 +44,7 @@ cards:
     back: Attackers send small requests with the victim's spoofed address to third-party servers, which send much larger responses to the victim, multiplying the traffic.
   - lesson: denial-of-service-and-credential-attacks
     front: Password spraying versus credential stuffing - what is the difference?
-    back: Spraying tries a few common passwords against many accounts; stuffing tests many username–password pairs leaked from other services, exploiting reuse.
+    back: Spraying tries a few common passwords against many accounts; stuffing tests many username-password pairs leaked from other services, exploiting reuse.
   - lesson: denial-of-service-and-credential-attacks
     front: Why does length matter more than complexity for random passwords?
     back: Search space is N^L, so adding characters multiplies the space exponentially, whereas enlarging the alphabet raises it more slowly; but this holds only for random passwords.

@@ -14,7 +14,7 @@ questions:
       - It used candidates' photographs
       - It relied on salary history
     answer: 1
-    explanation: The model learned from historical CVs dominated by men — historical bias — and reportedly penalised terms such as "women's". There was no reported explicit rule favouring men, and the report did not describe photographs or salary history as the cause.
+    explanation: The model learned from historical CVs dominated by men, historical bias, and reportedly penalised terms such as "women's". There was no reported explicit rule favouring men, and the report did not describe photographs or salary history as the cause.
   - id: cs02
     lesson: ai-recruitment-and-employee-monitoring
     type: true_false
@@ -23,7 +23,7 @@ questions:
     objective: Understand why removing specific terms does not cure bias
     prompt: Once Amazon's engineers made the model neutral to the specific gendered terms identified, it could be guaranteed not to discriminate.
     answer: false
-    explanation: Reuters reported that there was no guarantee the system would not find other ways to discriminate. Proxies can carry the same pattern, which is why outcome testing — not just term removal — is required.
+    explanation: Reuters reported that there was no guarantee the system would not find other ways to discriminate. Proxies can carry the same pattern, which is why outcome testing, not just term removal, is required.
   - id: cs03
     lesson: ai-recruitment-and-employee-monitoring
     type: scenario
@@ -160,7 +160,7 @@ questions:
     objective: Identify the firm at the centre of the 2018 Facebook data scandal
     prompt: Which political consultancy obtained data derived from millions of Facebook users through a personality-quiz app, as revealed in 2018?
     answers: ["Cambridge Analytica"]
-    explanation: Cambridge Analytica obtained data collected by Aleksandr Kogan's app, which — because of Facebook's platform rules at the time — reached the friends of users who installed it. The case illustrates harm to non-consenting third parties.
+    explanation: Cambridge Analytica obtained data collected by Aleksandr Kogan's app, which, because of Facebook's platform rules at the time, reached the friends of users who installed it. The case illustrates harm to non-consenting third parties.
   - id: cs13
     lesson: data-misuse-and-breaches
     type: mcq
@@ -170,7 +170,7 @@ questions:
     prompt: What is the most significant ethical feature shared by the Cambridge Analytica case and the illustrative lending app that messages borrowers' contacts?
     options:
       - Both involved ransomware
-      - Both harmed people who had no relationship with the organisation and never consented — friends or contacts of the users
+      - Both harmed people who had no relationship with the organisation and never consented, friends or contacts of the users
       - Both were caused by unpatched software
       - Both were lawful because users clicked "accept"
     answer: 1
@@ -323,5 +323,5 @@ questions:
 
       A utilitarian analysis weighs reduced return costs against lost sales, exclusion of poorer customers and reputational and regulatory risk, and notes that the model's accuracy for the affected groups is unverified. A Rawlsian analysis condemns a rule that burdens the least advantaged without justification; a Kantian analysis objects to judging individuals by group correlates without explanation. ACM 1.4, 2.5, 1.6, 1.7 and 3.4 apply.
 
-      Options: continue; abandon the model; keep it with safeguards. Recommendation: suspend automatic restrictions; audit outcomes by district and device; remove or justify proxy features; use the model only to trigger human review or alternative assurances (such as confirmation calls); give customers reasons and an appeal route; stop pasting personal data into public tools and provide an approved tool and policy; and formally invite the analyst to lead the audit. Counter-arguments — that "the numbers speak for themselves" and that returns are costly — are answered by showing that unvalidated proxies are not neutral numbers and that safeguards can control returns without blanket exclusion.
+      Options: continue; abandon the model; keep it with safeguards. Recommendation: suspend automatic restrictions; audit outcomes by district and device; remove or justify proxy features; use the model only to trigger human review or alternative assurances (such as confirmation calls); give customers reasons and an appeal route; stop pasting personal data into public tools and provide an approved tool and policy; and formally invite the analyst to lead the audit. Counter-arguments, that "the numbers speak for themselves" and that returns are costly, are answered by showing that unvalidated proxies are not neutral numbers and that safeguards can control returns without blanket exclusion.
     explanation: Examiners reward complete use of the seven-step method, recognition of both AI bias and shadow-AI issues, accurate theory application and a staged, practical recommendation that answers objections.
