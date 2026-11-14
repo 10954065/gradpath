@@ -1,0 +1,344 @@
+module: fintech-regulation-strategy-and-global-developments
+questions:
+  - id: fr01
+    lesson: fintech-regulation-and-compliance
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish prudential from conduct regulation
+    prompt: Which rule is best classified as conduct regulation rather than prudential regulation?
+    options:
+      - A requirement that e-money funds are held in trust accounts separate from the issuer's assets
+      - A requirement to disclose all fees to the customer before a transaction is confirmed
+      - A minimum capital requirement for a licensed payment provider
+      - A liquidity requirement for a deposit-taking institution
+    answer: 1
+    explanation: Conduct regulation governs how customers are treated, including disclosure, pricing and complaints. Safeguarding of funds, capital and liquidity rules aim to keep the provider safe and solvent, so they are prudential.
+  - id: fr02
+    lesson: fintech-regulation-and-compliance
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Understand the purpose of tiered KYC
+    prompt: Tiered KYC allows low-limit accounts to be opened with lighter identification, which is consistent with a risk-based approach to AML/CFT.
+    answer: true
+    explanation: A risk-based approach matches the strength of controls to the level of risk. Low balance and transaction limits reduce the potential for abuse, so lighter identification can be justified, and higher tiers require fuller verification. This protects inclusion for people without documents.
+  - id: fr03
+    lesson: fintech-regulation-and-compliance
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Match Ghanaian laws to the risk they address
+    prompt: Match each Ghanaian law to the main area it addresses.
+    pairs:
+      - left: Payment Systems and Services Act, 2019 (Act 987)
+        right: Licensing and supervision of payment systems and e-money
+      - left: Data Protection Act, 2012 (Act 843)
+        right: Protection of personal data
+      - left: Anti-Money Laundering Act, 2020 (Act 1044)
+        right: Preventing laundering of criminal proceeds
+      - left: Cybersecurity Act, 2020 (Act 1038)
+        right: Cybersecurity and incident handling
+    explanation: Each law targets a different risk, and a FinTech product often falls under several at once. Mapping the applicable laws feature by feature is the first compliance task.
+  - id: fr04
+    lesson: fintech-regulation-and-compliance
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply data protection principles to a credit scoring feature
+    scenario: |
+      Illustrative scenario: A lending app wants to improve its credit scores by collecting each applicant's full phone contact list and message metadata, although it already has the applicant's repayment history and wallet transaction data.
+    prompt: Which data protection principle is most directly challenged by this plan?
+    options:
+      - Retention, because the app must delete all data immediately
+      - Minimality and purpose limitation, because data beyond what is necessary for scoring is being collected
+      - Registration, because only banks may score borrowers
+      - Portability, because applicants must be allowed to use any app
+    answer: 1
+    explanation: Collecting contact lists and message metadata when necessary data already exists conflicts with collecting only what is needed for a specified purpose. The other options misstate the issue. Retention does not require immediate deletion, scoring is not limited to banks, and portability is not the concern here.
+  - id: fr05
+    lesson: fintech-regulation-and-compliance
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name the money laundering stage
+    prompt: In the three-stage model of money laundering, what is the stage called in which funds are moved through many transactions to obscure their origin?
+    answers: ["layering", "Layering"]
+    explanation: Placement puts cash into the system, layering obscures the trail through transactions, and integration returns the funds as apparently legitimate wealth. Fast, cheap transfers make mobile money attractive for layering, which is why monitoring matters.
+  - id: fr06
+    lesson: fintech-regulation-and-compliance
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse a trade-off between strict KYC and inclusion
+    prompt: A regulator proposes requiring full documentary KYC for every wallet regardless of balance. What is the most likely consequence for financial inclusion?
+    options:
+      - No effect, because everyone holds the required documents
+      - Some people who lack documents may be pushed back to cash or informal channels, which are harder to monitor
+      - Wallet usage will automatically increase because trust improves
+      - Criminals will be unable to use any financial service
+    answer: 1
+    explanation: Uniform strict KYC raises the cost and difficulty of access for people without documents, and exclusion can push activity into less visible channels. Tiered KYC tries to avoid this by linking requirements to risk and limits. Strict rules reduce but do not eliminate crime.
+  - id: fr07
+    lesson: fintech-regulation-and-compliance
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate the legal status of a regulatory sandbox
+    prompt: Taking part in a regulatory sandbox exempts a firm from consumer protection and AML obligations for the duration of the test.
+    answer: false
+    explanation: Sandboxes allow tailored conditions and closer supervision, but core protections for customers and basic AML duties remain. Participation also does not guarantee later authorisation.
+  - id: cx01
+    lesson: customer-experience-and-digital-strategy
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Define a moment of truth
+    prompt: In customer journey mapping, what is a moment of truth?
+    options:
+      - A touchpoint that disproportionately shapes the customer's overall judgement
+      - The date on which the customer's contract ends
+      - The moment the firm publishes its annual report
+      - Any survey question that uses a 0-10 scale
+    answer: 0
+    explanation: Examples are the first transfer or the first failed transaction. These touchpoints carry more weight than routine interactions. The other options describe unrelated events or measurement tools.
+  - id: cx02
+    lesson: customer-experience-and-digital-strategy
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Identify the abbreviation for a loyalty measure
+    prompt: Which customer experience metric, abbreviated to three letters, is based on the question "How likely are you to recommend us?" on a 0-10 scale?
+    answers: ["NPS", "Net Promoter Score"]
+    explanation: Net Promoter Score is calculated as the percentage of promoters minus the percentage of detractors. It is a trend indicator and should be triangulated with behavioural data rather than treated as proof of loyalty.
+  - id: cx03
+    lesson: customer-experience-and-digital-strategy
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply funnel analysis to find where users drop out
+    scenario: |
+      Illustrative scenario: A wallet app records these stages for 1,000 new registrants: PIN set-up 900 entered and 630 completed; first transfer 630 entered and 315 completed.
+    prompt: What are the completion rates at PIN set-up and first transfer, in that order?
+    options:
+      - 63% and 31.5%
+      - 70% and 50%
+      - 70% and 31.5%
+      - 63% and 50%
+    answer: 1
+    explanation: PIN set-up is 630 divided by 900, which is 70%. First transfer is 315 divided by 630, which is 50%. The options 63% and 31.5% divide by the original 1,000 registrants, which measures overall progress, not stage completion.
+  - id: cx04
+    lesson: customer-experience-and-digital-strategy
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate the role of friction in trust
+    prompt: Removing all friction from a payment flow is always beneficial, because it increases conversion and reduces customer regret.
+    answer: false
+    explanation: Steps such as confirming the recipient's name or warning on unusual transfers prevent costly errors and fraud and support trust. Conversion may rise when friction is removed, but fraud and regret can rise too.
+  - id: cx05
+    lesson: customer-experience-and-digital-strategy
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse limitations of NPS
+    prompt: A provider's NPS rises for three quarters while the number of active users falls. Which explanation should the analyst test first?
+    options:
+      - NPS and behaviour are the same thing, so one set of data must be wrong
+      - The survey sample may over-represent satisfied active users, while dissatisfied customers have left or do not respond
+      - Falling users always cause rising satisfaction
+      - NPS cannot be measured by SMS
+    answer: 1
+    explanation: Survey scores can be biased by who responds, and customers who leave are no longer surveyed. NPS measures stated willingness to recommend, not usage, so the two can diverge. This is why metrics should be triangulated with behavioural data.
+  - id: cx06
+    lesson: customer-experience-and-digital-strategy
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match market players with typical strengths
+    prompt: Match each type of provider with a typical strategic strength.
+    pairs:
+      - left: Bank
+        right: Trusted brand and regulated lending capacity
+      - left: MNO-linked e-money entity
+        right: Large customer base and agent distribution
+      - left: FinTech
+        right: Speed and a focused user experience
+    explanation: These are tendencies, not rules. Each type also has weaknesses, such as legacy systems for banks, regulatory limits on credit for MNOs and small balance sheets for FinTechs, which explains why coopetition is common.
+  - id: cx07
+    lesson: customer-experience-and-digital-strategy
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate channel strategy for an inclusion target
+    scenario: |
+      Illustrative scenario: A provider wants to reach rural market traders, many of whom use basic phones and have limited mobile data. Management proposes an app-only launch because apps are cheaper to update.
+    prompt: What is the strongest criticism of this proposal?
+    options:
+      - Apps cannot process payments
+      - It excludes the target segment, so USSD and agent channels should be first-class
+      - Apps are illegal under payment regulation
+      - Rural traders never use mobile money
+    answer: 1
+    explanation: Designing for the least capable device and context is a core inclusion principle. An app-only launch is cheaper to update but would not reach customers with basic phones and limited data. The other statements are false.
+  - id: in01
+    lesson: international-fintech-developments
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain open banking
+    prompt: Which description best fits open banking?
+    options:
+      - Banks publish all customer data on the internet
+      - With customer consent, banks give authorised third parties secure API access to account data or payment initiation
+      - A government takes over bank accounts
+      - Any software developer may access any account without authorisation
+    answer: 1
+    explanation: Open banking relies on consent, authorised providers and secure APIs. It is not public disclosure or unrestricted access, and security and liability rules are an essential part of it.
+  - id: in02
+    lesson: international-fintech-developments
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Match payment systems to countries
+    prompt: Match each system to its country or region.
+    pairs:
+      - left: UPI
+        right: India
+      - left: Pix
+        right: Brazil
+      - left: eNaira
+        right: Nigeria
+      - left: PSD2
+        right: European Union
+    explanation: UPI is run by the National Payments Corporation of India, Pix by the Central Bank of Brazil, eNaira was launched by the Central Bank of Nigeria, and PSD2 is an EU directive on payment services.
+  - id: in03
+    lesson: international-fintech-developments
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish a CBDC from cryptocurrency
+    prompt: A central bank digital currency is a digital liability of the central bank in the national currency, which distinguishes it from cryptocurrencies that have no issuer.
+    answer: true
+    explanation: A CBDC is issued by the central bank and denominated in the national unit of account. Cryptocurrencies such as Bitcoin have no central issuer. A CBDC also differs from e-money, which is a liability of a licensed issuer backed by trust funds.
+  - id: in04
+    lesson: international-fintech-developments
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse why a CBDC may see limited uptake
+    scenario: |
+      Illustrative scenario: A country with widely used, interoperable mobile money launches a retail CBDC wallet. Six months later few people use it, and the central bank asks why.
+    prompt: Which explanation is most consistent with the lessons of eNaira?
+    options:
+      - People dislike all digital payments
+      - The CBDC may not offer advantages over existing mobile money and bank apps that people already trust
+      - CBDCs cannot be used on phones
+      - Central banks cannot issue currency
+    answer: 1
+    explanation: Where existing digital payments are convenient and widely accepted, a new instrument must offer a clear additional benefit such as offline use, privacy or lower cost. Without it, users have little reason to switch. The other options are factually wrong or unsupported.
+  - id: in05
+    lesson: international-fintech-developments
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Identify the regional payment system
+    prompt: What is the abbreviation of the initiative supported by Afreximbank and the AfCFTA Secretariat to settle intra-African payments in local currencies?
+    answers: ["PAPSS", "Pan-African Payment and Settlement System"]
+    explanation: PAPSS aims to reduce the need to route intra-African trade payments through foreign currencies and external banks. Its adoption has progressed in stages, so its current status should be checked.
+  - id: in06
+    lesson: international-fintech-developments
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate policy transfer
+    prompt: A minister proposes copying India's UPI exactly. What is the most sound first step?
+    options:
+      - Launch immediately because UPI is successful
+      - Test problem fit, prerequisites such as identity and interoperability, incentives and risks, then pilot
+      - Ban existing payment systems
+      - Wait ten years without analysis
+    answer: 1
+    explanation: Models succeed under particular conditions, including digital identity, bank participation and policy choices. Transfer therefore requires checking problem fit, prerequisites, incentives and risks, and piloting before scaling.
+  - id: in07
+    lesson: international-fintech-developments
+    type: true_false
+    bloom: analyse
+    difficulty: medium
+    objective: Assess claims about stablecoins in cross-border payments
+    prompt: Stablecoins have already resolved the regulatory, reserve backing and consumer protection questions in cross-border payments.
+    answer: false
+    explanation: Stablecoin use in cross-border transfers is emerging and contested. Questions about reserves, volatility, AML compliance, consumer protection and capital flow management remain open, so claims of cost savings should be treated cautiously.
+  - id: mod01
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    marks: 20
+    objective: Evaluate how regulation, experience and international models should inform a FinTech strategy
+    prompt: Discuss how a Ghanaian FinTech should combine regulatory compliance, customer experience design and lessons from international developments to build a sustainable mobile payments and savings product for informal-sector traders.
+    structure:
+      - Introduction defining the product and the target segment
+      - Regulatory perimeter, licensing route, tiered KYC, data protection and consumer protection
+      - Customer journey and inclusive channel design (USSD, agents, app), with metrics used carefully
+      - International lessons (instant payments, open banking, mobile money) and how to test their transferability
+      - Strategic positioning against banks and MNOs, including partnership options
+      - Conclusion with recommendations and risks
+    rubric:
+      - criterion: Regulatory analysis
+        marks: 5
+        descriptor: Identifies relevant authorities and laws, explains licensing or partnership choice, tiered KYC, data protection and consumer protection accurately and at the level of principle.
+      - criterion: Customer experience and inclusion
+        marks: 5
+        descriptor: Uses a journey and channel analysis, addresses trust and USSD or agent inclusion, and treats metrics critically.
+      - criterion: International lessons and transfer
+        marks: 4
+        descriptor: Selects relevant models, distinguishes established from emerging developments, and tests transferability to Ghana.
+      - criterion: Strategy and critical evaluation
+        marks: 4
+        descriptor: Positions the firm against banks and MNOs, justifies partnerships, and weighs trade-offs and risks.
+      - criterion: Structure and academic integrity
+        marks: 2
+        descriptor: Clear structure, accurate terminology, no invented statistics, and correct citation.
+    modelAnswer: |
+      A strong answer starts by defining the product, for example a wallet with savings and bill payment features for market traders, and noting that the segment has limited documents, feature phones and high sensitivity to fees. It maps the regulatory perimeter: e-money and payments fall under the Bank of Ghana and Act 987, personal data under the Data Protection Act, AML duties under Act 1044, and security incidents under the Cybersecurity Act. It decides whether to seek its own licence or partner with a licensed issuer, noting that partnership does not remove conduct and data duties, and proposes early engagement with the FinTech and Innovation Office or the sandbox for novel features such as credit scoring.
+
+      On experience, the answer maps a journey from registration to regular use, identifies moments of truth such as the first transfer, and designs USSD and agent channels as first-class, with an app for richer features. Friction such as recipient name confirmation is justified for trust. Metrics such as funnel completion, complaints and repeat use are triangulated with NPS or CSAT, with caveats about sample bias.
+
+      Internationally, the answer draws on instant payment systems like UPI and Pix for simple identifiers and QR acceptance, on open banking for consented data sharing for lending, and on mobile money in Kenya for agent-led distribution, while testing transferability by problem fit, prerequisites, incentives and risks. Strategically, the firm competes with banks and MNOs through a niche focus, partners for licences and distribution, and builds compliance in from the start. The conclusion recommends staged launch, measurable pilot goals and a risk register.
+    explanation: Examiners look for integration of the three lessons, accurate use of Ghanaian instruments without invented figures, critical use of metrics, and a justified, risk-aware recommendation.
+  - id: mod02
+    type: case_analysis
+    bloom: analyse
+    difficulty: hard
+    marks: 15
+    objective: Analyse a compliance and experience problem in a hypothetical wallet provider
+    case: |
+      Illustrative scenario: "SikaLink", a hypothetical wallet start-up, offers small loans through its app. Reviews show customers complaining that repayment amounts were unclear and that collection messages are sent to people in their contact list. Meanwhile, new-user registration requires a full national ID document, and only 40% of those who start registration finish it (an invented figure for this exercise). Complaints are handled only by email, and customers on basic phones cannot use the app at all.
+    prompt: Analyse the regulatory and customer experience problems in this case and recommend a prioritised set of improvements.
+    structure:
+      - Identify the data protection and consumer protection problems
+      - Analyse the onboarding friction and the inclusion trade-off with tiered KYC
+      - Analyse channel and complaints weaknesses
+      - Prioritise recommendations with measures of success
+    rubric:
+      - criterion: Regulatory and conduct diagnosis
+        marks: 5
+        descriptor: Identifies unclear total cost of credit, contact list misuse and collection practices as data protection and consumer protection concerns, and links them to principles of purpose limitation, minimality and fair treatment.
+      - criterion: Onboarding and inclusion analysis
+        marks: 4
+        descriptor: Explains how tiered KYC could reduce drop-off while maintaining risk-based AML controls.
+      - criterion: Channel and complaints analysis
+        marks: 3
+        descriptor: Proposes USSD or agent access and accessible complaint channels with resolution times and escalation.
+      - criterion: Prioritisation and measures
+        marks: 3
+        descriptor: Ranks actions by harm and feasibility and defines indicators such as completion rate, complaints per thousand transactions and resolution time.
+    modelAnswer: |
+      The most urgent issue is conduct and data protection. Unclear repayment amounts breach the expectation of transparent pricing, so the app should show the total repayment and due date before acceptance. Messaging a borrower's contacts uses personal data of third parties for a purpose they never consented to and is inconsistent with purpose limitation, minimality and fair collection, so it should stop immediately and collection should use proportionate methods with the borrower only.
+
+      Second, onboarding. Requiring a full national ID for every user creates friction that excludes people without documents. A tiered KYC design could allow a basic tier with low limits and no credit, then upgrade to higher tiers when the customer verifies an identity document. Monitoring continues at every tier, so risk remains controlled. The completion rate should be tracked by step, and the 40% figure treated as a baseline to improve, not as a benchmark.
+
+      Third, channels and complaints. Email-only complaints and an app-only service exclude basic phone users. SikaLink should add USSD access for core functions, an agent or call channel, ticket numbers, stated response times and an explanation of how to escalate to the regulator.
+
+      Recommendations are prioritised: stop contact-list collection and fix disclosure first, then introduce tiered KYC and complaints reform, then USSD. Success measures include completion rate, complaints per thousand transactions, time to resolve and repeat usage.
+    explanation: Examiners look for correct linking of observations to principles, balanced treatment of the KYC trade-off, and prioritised recommendations with measures.

@@ -304,3 +304,205 @@ questions:
 
       A phased roadmap might be: months 0-6 data and BI plus a forecasting pilot; months 6-12 ordering DSS, RFM and refund rules; months 12-18 support automation and supervised fraud models, each with KPIs, owners and review.
     explanation: Examiners reward prioritisation grounded in business value and data readiness, correct method choices with matching metrics, and explicit safeguards rather than a list of fashionable tools.
+
+  - id: q20
+    lesson: recommendation-systems
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish content-based from collaborative filtering
+    prompt: What is the key difference between content-based and collaborative filtering?
+    options:
+      - Content-based filtering uses item attributes, whereas collaborative filtering uses patterns in other users' behaviour
+      - Content-based filtering needs ratings, whereas collaborative filtering needs only item prices
+      - Content-based filtering works only offline, whereas collaborative filtering works only online
+      - Content-based filtering recommends random items, whereas collaborative filtering ranks them
+    answer: 0
+    explanation: Content-based methods match item attributes to a user's profile, so they can recommend new items immediately. Collaborative methods need no attributes but rely on interaction data from many users. The other options invent differences that do not exist.
+
+  - id: q21
+    lesson: recommendation-systems
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Compute precision@k and recall@k
+    scenario: |
+      A shop's recommender shows a customer 10 products. The customer later buys 3 of them. Across the whole catalogue, the customer is known to have 6 products that would count as relevant.
+    prompt: What are precision@10 and recall@10 for this customer?
+    options:
+      - Precision 0.30 and recall 0.50
+      - Precision 0.50 and recall 0.30
+      - Precision 0.30 and recall 0.30
+      - Precision 0.60 and recall 0.10
+    answer: 0
+    explanation: Precision@k divides the relevant items in the list by k, giving 3 / 10 = 0.30. Recall@k divides them by all relevant items, giving 3 / 6 = 0.50. Swapping the denominators produces the second option, a common examination error.
+
+  - id: q22
+    lesson: recommendation-systems
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Recognise the limits of offline evaluation
+    prompt: A recommender that scores best on offline accuracy will always produce the highest conversion in a live A/B test.
+    answer: false
+    explanation: Offline metrics judge a model against past behaviour that was shaped by the earlier system and cannot show how recommendations change behaviour. Only a randomised online test measures business impact, and Netflix did not deploy its Prize-winning ensemble in full for related reasons.
+
+  - id: q23
+    lesson: recommendation-systems
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name the new-user and new-item data problem
+    prompt: What term describes the difficulty of recommending for a brand-new user or item with no interaction history?
+    answers: [cold start, the cold start problem, cold-start]
+    explanation: Cold start arises because collaborative methods depend on past interactions. Mitigations include onboarding questions, content-based rules and popularity fallbacks.
+
+  - id: q24
+    lesson: recommendation-systems
+    type: mcq
+    bloom: apply
+    difficulty: hard
+    objective: Predict a rating from neighbour similarities
+    prompt: Two neighbours have cosine similarities of 0.9 and 0.3 with a target user. They rated an unseen item 5 and 1 respectively. What is the similarity-weighted predicted rating?
+    options:
+      - "3.00"
+      - "4.00"
+      - "4.50"
+      - "6.00"
+    answer: 1
+    explanation: The weighted average is (0.9 x 5 + 0.3 x 1) / (0.9 + 0.3) = 4.8 / 1.2 = 4.00. A simple average gives 3.00, which ignores that the first neighbour is far more similar. 4.50 and 6.00 come from no correct calculation, and a predicted rating cannot exceed the 5-point scale.
+
+  - id: q25
+    lesson: recommendation-systems
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match recommendation problems to mitigations
+    prompt: Match each problem to the most suitable mitigation.
+    pairs:
+      - left: New user with no history
+        right: Onboarding questions and popularity fallback
+      - left: Popularity bias starving niche items
+        right: Managed exposure and diversity objectives
+      - left: Offline accuracy that may not reflect business value
+        right: Randomised A/B test with guardrail metrics
+      - left: Sparse user-item matrix
+        right: Matrix factorisation with implicit feedback
+    explanation: Each mitigation targets the specific cause. Onboarding gives early data, diversity objectives counter rich-get-richer exposure, A/B tests measure real behaviour change, and factorisation pools information to handle sparsity.
+
+  - id: q26
+    lesson: recommendation-systems
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a recommender design for a small retailer
+    scenario: |
+      A small Kumasi retailer has two thousand products, few registered customers and many guest checkouts. It wants its first recommender within a month.
+    prompt: Which first step is most sensible?
+    options:
+      - Train a deep personalised collaborative model on the few registered users
+      - Build a "frequently bought together" item-based rule from past baskets and add attribute-based similar items for new stock
+      - Wait until every customer has registered before recommending anything
+      - Copy a global competitor's recommendations without testing
+    answer: 1
+    explanation: Item-based co-purchase rules work from basket data without registration, and attribute-based similarity handles new items. A personalised collaborative model would be starved of data, waiting delays value, and untested copying ignores local customers. Each stage should be A/B tested.
+
+  - id: q27
+    lesson: ai-adoption-and-implementation-strategy
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Identify a common cause of AI project failure
+    prompt: Which statement best explains why many AI pilots never reach production?
+    options:
+      - Pilots usually use too much real data
+      - Pilots are often built to impress with curated data and no integration, so operational conditions are never tested
+      - Production systems never need monitoring
+      - Models cannot be deployed outside a laboratory
+    answer: 1
+    explanation: Pilot purgatory arises when pilots avoid the integration, ownership and monitoring challenges of real operation. The other options are false, because using real data helps, production needs monitoring, and models are routinely deployed.
+
+  - id: q28
+    lesson: ai-adoption-and-implementation-strategy
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply weighted value-feasibility scoring
+    scenario: |
+      A company weights value at 0.6 and feasibility at 0.4. Project X scores value 5 and feasibility 2. Project Y scores value 4 and feasibility 4.
+    prompt: Which project ranks higher, and with what scores?
+    options:
+      - X with 3.8 against Y with 4.0, so Y ranks higher
+      - X with 4.4 against Y with 4.0, so X ranks higher
+      - X with 3.8 against Y with 3.6, so X ranks higher
+      - Both score 4.0, so they tie
+    answer: 0
+    explanation: X = (0.6 x 5) + (0.4 x 2) = 3.0 + 0.8 = 3.8. Y = (0.6 x 4) + (0.4 x 4) = 2.4 + 1.6 = 4.0. The balanced project wins even though X has higher value, because X's low feasibility drags its score down. The weights are a leadership choice and should be stated explicitly.
+
+  - id: q29
+    lesson: ai-adoption-and-implementation-strategy
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Recognise the role of change management
+    prompt: Once a model has been deployed and tested for accuracy, user adoption can be assumed.
+    answer: false
+    explanation: Technical accuracy does not guarantee use. Staff may distrust, ignore or work around the tool, so involvement in design, training, incentives and feedback channels are needed. Value is realised only when decisions and behaviour change.
+
+  - id: q30
+    lesson: ai-adoption-and-implementation-strategy
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Name practices for production machine learning
+    prompt: What abbreviation names the practices for deploying, monitoring and retraining machine learning models in production?
+    answers: [MLOps, ML Ops, machine learning operations]
+    explanation: MLOps applies software operations discipline to models, including versioning, automated deployment, monitoring of drift and fairness, retraining triggers and rollback.
+
+  - id: q31
+    lesson: ai-adoption-and-implementation-strategy
+    type: mcq
+    bloom: apply
+    difficulty: hard
+    objective: Calculate ROI over a fixed period
+    prompt: A project costs GH₵200,000 to build and GH₵50,000 a year to run, and yields GH₵150,000 of benefit a year. Over three years, what is the ROI?
+    options:
+      - 10.0 percent
+      - 28.6 percent
+      - 42.9 percent
+      - 75.0 percent
+    answer: 1
+    explanation: Total cost = 200,000 + 3 x 50,000 = 350,000. Total benefit = 3 x 150,000 = 450,000. Net benefit = 100,000, so ROI = 100,000 / 350,000 = 28.6 percent. The 42.9 percent figure would come from dividing the annual benefit by total cost, ignoring the three-year horizon.
+
+  - id: q32
+    lesson: ai-adoption-and-implementation-strategy
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match sourcing options to their typical fit
+    prompt: Match each sourcing option to the situation in which it is most suitable.
+    pairs:
+      - left: Build in-house
+        right: Capability is a source of competitive advantage using proprietary data
+      - left: Buy a product or API
+        right: Generic need such as speech or translation, needed quickly
+      - left: Partner or co-develop
+        right: Domain data exist but internal skills are limited
+    explanation: Build gives control at higher cost and skill demand, buy gives speed with lock-in risk, and partnering transfers know-how while sharing risk.
+
+  - id: q33
+    lesson: ai-adoption-and-implementation-strategy
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Diagnose readiness gaps before choosing a project
+    scenario: |
+      A rural bank keeps loan histories on paper in half its branches. Its board wants an AI credit-scoring model within six months.
+    prompt: What is the most appropriate advice?
+    options:
+      - Build the scoring model now and fix the data later
+      - Digitise and govern the loan data first, buy a commodity intake tool, and pilot a simple pre-screening model with officers retaining authority
+      - Cancel all AI work permanently
+      - Outsource the lending decision entirely to a vendor
+    answer: 1
+    explanation: Data readiness is the binding constraint, so enabling investment and a low-risk pilot with human oversight come first. Building on missing data would give an unreliable model, cancelling ignores achievable value, and outsourcing the decision removes accountability.

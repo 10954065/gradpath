@@ -48,3 +48,39 @@ cards:
   - lesson: support-automation-and-decision-support
     front: What is automation bias and how can a DSS reduce it?
     back: Over-reliance on system recommendations even when wrong. Showing key factors and uncertainty, requiring recorded reasons and auditing agreement rates encourage critical use.
+  - lesson: recommendation-systems
+    front: How does item-based collaborative filtering differ from user-based, and why is it often easier to scale?
+    back: It recommends items similar to those the user liked, where similarity comes from shared audiences, instead of finding similar users. Item similarities change slowly and can be precomputed offline, so serving is fast.
+  - lesson: recommendation-systems
+    front: Explain the intuition of matrix factorisation in one sentence.
+    back: Each user and item is described by a short vector of learned latent factors, and the predicted rating is their dot product, which compresses a sparse matrix into patterns that generalise.
+  - lesson: recommendation-systems
+    front: What are the three forms of the cold-start problem and one mitigation for each?
+    back: New user (onboarding questions), new item (content-based similarity or managed exposure) and new system (popularity rules and data collection until interactions accumulate).
+  - lesson: recommendation-systems
+    front: Define precision@k and recall@k, and say how each changes as k increases.
+    back: Precision@k is relevant items in the top k divided by k; recall@k is relevant items in the top k divided by all relevant items. Raising k usually lowers precision and raises recall.
+  - lesson: recommendation-systems
+    front: Why must a recommender be validated with an A/B test and not offline metrics alone?
+    back: Offline data reflect past behaviour shaped by the old system and cannot show whether recommendations change behaviour. A randomised test measures real business impact with guardrail metrics.
+  - lesson: recommendation-systems
+    front: Name three risks of personalisation and one mitigation for each.
+    back: Filter bubbles (diversity objectives and user controls), unfair exposure for providers (exposure budgets and fairness audits) and privacy harm (minimisation, transparency and compliance with Act 843).
+  - lesson: ai-adoption-and-implementation-strategy
+    front: List the main barriers to AI adoption in organisations.
+    back: Data quality and access, skills, total cost, culture and leadership, legacy system integration, trust and explainability, and regulation such as Ghana's Data Protection Act, 2012 (Act 843).
+  - lesson: ai-adoption-and-implementation-strategy
+    front: How do you prioritise AI use cases using value and feasibility?
+    back: Score each use case on value and on feasibility, weight and combine the scores, and plot them. High value and high feasibility are quick wins; high value and low feasibility are strategic bets needing enabling investment.
+  - lesson: ai-adoption-and-implementation-strategy
+    front: When is build, buy or partner the best sourcing choice?
+    back: Build when the capability is a differentiator using proprietary data; buy for generic, commodity needs where speed matters; partner when domain data exist but skills are limited. Consider total cost, lock-in and exit plans.
+  - lesson: ai-adoption-and-implementation-strategy
+    front: What is pilot purgatory and how can it be avoided?
+    back: Many pilots launched but few scaled. Avoid it by testing real data feeds, users and integration, setting a baseline, control and pre-agreed stop-or-go rule, and naming operational owners.
+  - lesson: ai-adoption-and-implementation-strategy
+    front: Why does an AI model need MLOps and named hand-off owners after deployment?
+    back: Data and behaviour drift, so performance decays. MLOps provides versioning, monitoring, retraining and rollback, and named owners ensure someone answers for incidents, changes and regulator or customer queries.
+  - lesson: ai-adoption-and-implementation-strategy
+    front: How do you calculate risk-adjusted ROI and payback for an AI project?
+    back: ROI = (total benefit minus total cost) divided by total cost, with benefits multiplied by a realisation factor. Payback = one-off cost divided by annual net benefit after running costs.

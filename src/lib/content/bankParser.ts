@@ -2,6 +2,7 @@ import yaml from 'js-yaml'
 import {
   ACCESS_TYPES,
   BLOOM_LEVELS,
+  COURSE_CLASSIFICATIONS,
   DIFFICULTIES,
   LEARNING_STAGES,
   LESSON_DIFFICULTIES,
@@ -10,6 +11,7 @@ import {
   RESOURCE_CATEGORIES,
   type AccessType,
   type BloomLevel,
+  type CourseClassification,
   type CourseOutline,
   type LearningStage,
   type LessonDifficulty,
@@ -279,6 +281,10 @@ export function parseCourseOutline(file: string, text: string): { course: Course
     title: str(data.title),
     status: str(data.status) === 'recommended_elective' ? 'recommended_elective' : 'listed',
     statusNote: str(data.statusNote),
+    classification: (COURSE_CLASSIFICATIONS as readonly string[]).includes(str(data.classification))
+      ? (str(data.classification) as CourseClassification)
+      : 'core',
+    creditSlots: typeof data.creditSlots === 'number' ? data.creditSlots : 0,
     accent: str(data.accent) || 'indigo',
     description: str(data.description),
     outcomes: strList(data.outcomes),
@@ -298,6 +304,10 @@ export function parseCourseOutline(file: string, text: string): { course: Course
   if (!SLUG.test(course.slug)) fail(`invalid course slug "${course.slug}"`)
   if (!course.title || !course.description) fail('course needs title and description')
   if (course.outcomes.length < 3) fail('course needs at least 3 learning outcomes')
+  if (!(COURSE_CLASSIFICATIONS as readonly string[]).includes(str(data.classification))) {
+    fail(`classification must be one of ${COURSE_CLASSIFICATIONS.join(', ')}`)
+  }
+  if (!Number.isInteger(course.creditSlots) || course.creditSlots < 1 || course.creditSlots > 12) fail('creditSlots must be a whole number from 1 to 12')
   if (course.modules.length === 0) fail('course needs modules')
   const seen = new Set<string>()
   for (const m of course.modules) {

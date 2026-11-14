@@ -150,7 +150,7 @@ function questionRows(
 
 interface QuizSpec {
   ref: string
-  kind: 'lesson_quiz' | 'module_assessment' | 'mock_exam'
+  kind: 'lesson_quiz' | 'module_assessment' | 'mock_exam' | 'revision_test'
   title: string
   description: string
   instructions: string
@@ -186,6 +186,8 @@ function quizRow(row: QuizSpec): string {
   })
 }
 
+const REVISION_TEST_QUESTIONS = 15
+
 const PRACTICE_NOTE =
   'All questions are supplementary practice questions generated for GradPath. They are not official University of Ghana examination questions, and results are not official grades.'
 
@@ -212,6 +214,8 @@ export function buildSeedSql(courses: LoadedCourse[], links: Record<string, Link
         description: q(c.description),
         status: q(c.status),
         status_note: q(c.statusNote),
+        classification: q(c.classification),
+        credit_slots: String(c.creditSlots),
         accent: q(c.accent),
         outcomes: textArray(c.outcomes),
         sort_order: String(course.order),
@@ -353,6 +357,21 @@ export function buildSeedSql(courses: LoadedCourse[], links: Record<string, Link
           questionCount,
           openEndedCount: openEnded,
           timeLimit: 90,
+          sortOrder: course.order,
+        }),
+      )
+      const revisionCount = Math.min(REVISION_TEST_QUESTIONS, courseObjective)
+      out.push(
+        quizRow({
+          ref: `${c.slug}/revision-test`,
+          kind: 'revision_test',
+          title: `${c.code} mixed revision test`,
+          description: `A short, untimed test mixing objective questions from every ${c.code} module. Take it as often as you like.`,
+          instructions: `${revisionCount} objective questions drawn at random from across the course, with no time limit. Use it between modules to keep earlier topics fresh. ${PRACTICE_NOTE}`,
+          courseId,
+          questionCount: revisionCount,
+          openEndedCount: 0,
+          timeLimit: null,
           sortOrder: course.order,
         }),
       )

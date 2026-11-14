@@ -2,7 +2,9 @@ code: CSIT 607
 slug: csit-607
 title: AI for Business Systems
 status: listed
-statusNote: Part of the GradPath initial curriculum. Confirm the course's status against your official registration.
+statusNote: Core course in the MSc IT for Business Semester 1 programme (3 credit slots).
+classification: core
+creditSlots: 3
 accent: violet
 description: >
   The concepts, techniques and engineering practices behind artificial intelligence, and how organisations use AI
@@ -69,6 +71,12 @@ modules:
       - slug: support-automation-and-decision-support
         title: Customer Support Automation and Decision Support Systems
         topics: [Customer support automation, Decision support systems]
+      - slug: recommendation-systems
+        title: Recommendation Systems
+        topics: [Recommender systems, Collaborative filtering, Content-based filtering, Hybrid recommenders]
+      - slug: ai-adoption-and-implementation-strategy
+        title: AI Adoption Challenges and Implementation Strategy
+        topics: [AI adoption, AI readiness, Implementation strategy, Change management]
   - slug: applied-ai
     title: Applied AI
     description: AI across key sectors of the Ghanaian and global economy.

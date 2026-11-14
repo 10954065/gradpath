@@ -2,7 +2,9 @@ code: CSIT 617
 slug: csit-617
 title: Professional & Ethical Issues in IT
 status: listed
-statusNote: Part of the GradPath initial curriculum. Confirm the course's status against your official registration.
+statusNote: Core course in the MSc IT for Business Semester 1 programme (3 credit slots).
+classification: core
+creditSlots: 3
 accent: amber
 description: >
   The professional responsibilities of IT practitioners and the ethical, social and legal questions raised by
@@ -96,6 +98,16 @@ modules:
       - slug: cybercrime-and-misuse-of-information-systems
         title: Cybercrime and the Misuse of Information Systems
         topics: [Cybercrime, Misuse of information systems, Ghana Cybersecurity Act 2020 (Act 1038), Electronic Transactions Act 2008 (Act 772)]
+  - slug: it-governance-and-technology-law
+    title: IT Governance and Technology Law
+    description: How organisations govern information technology, and the legal framework that technology professionals work within.
+    lessons:
+      - slug: it-governance-frameworks
+        title: "IT Governance: COBIT, ISO/IEC 38500 and Accountability"
+        topics: [IT governance, COBIT, ISO/IEC 38500, Accountability]
+      - slug: technology-law-in-ghana
+        title: Technology Law in Ghana and Internationally
+        topics: [Electronic Transactions Act, Cybersecurity Act, Data Protection Act, Technology law]
   - slug: ethical-case-studies
     title: Ethical Case Studies
     description: Applying structured ethical reasoning to realistic dilemmas.

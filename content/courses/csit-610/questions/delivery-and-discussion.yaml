@@ -1,0 +1,329 @@
+module: delivery-and-discussion
+questions:
+  # ---------- research-communication-and-delivery ----------
+  - id: q01
+    lesson: research-communication-and-delivery
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain why delivery skills matter in research communication
+    prompt: Why does delivery matter even when the research content is strong?
+    options:
+      - Because content is irrelevant if the speaker is energetic
+      - Because the audience partly judges command of the work by how clearly it is explained, and unclear delivery can hide good content
+      - Because examiners only assess voice and posture
+      - Because delivery can replace evidence
+    answer: 1
+    explanation: Good content can be lost through poor delivery, and explaining a method without reading it from the slide shows understanding. Delivery does not replace evidence, and it is not the sole focus of assessment.
+
+  - id: q02
+    lesson: research-communication-and-delivery
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply techniques for managing pace and filler words
+    scenario: |
+      Illustrative scenario. A student's recorded rehearsal shows that she speaks quickly, fills pauses with "you know", and speeds up further whenever she feels unsure.
+    prompt: Which strategy is most likely to help?
+    options:
+      - Speak even faster so that there is less time to make mistakes
+      - Plan deliberate pauses at transitions and before key points, and practise replacing filler words with silence
+      - Memorise the whole script word for word
+      - Avoid rehearsing so that the delivery feels spontaneous
+    answer: 1
+    explanation: Silence feels long to the speaker but natural to the audience. Deliberate pauses slow the pace, give weight to key points and replace filler words. Speaking faster lowers comprehension, and skipping rehearsal removes the practice that improves delivery.
+
+  - id: q03
+    lesson: research-communication-and-delivery
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Compare approaches to notes
+    prompt: Match each approach to notes with its main risk.
+    pairs:
+      - left: Reading a full script aloud
+        right: Flat delivery and little eye contact
+      - left: Key-word prompts
+        right: Rambling if the talk is poorly prepared
+      - left: Memorising without notes
+        right: Collapse if memory fails, and rigid delivery
+      - left: Learning only the opening and closing exactly
+        right: Little risk, though the middle still needs prompts
+    explanation: Each approach trades fluency against safety. For most seminars, prompts with a learned opening and closing offer the best balance, because the most pressured moments are secure while the middle sounds natural.
+
+  - id: q04
+    lesson: research-communication-and-delivery
+    type: true_false
+    bloom: evaluate
+    difficulty: medium
+    objective: Evaluate a popular claim about body language
+    prompt: The claim that 55 per cent of every message is conveyed by body language is a reliable description of communication in general.
+    answer: false
+    explanation: "The figures come from narrow experiments on the communication of feelings and attitudes, and the researcher himself has said they do not apply to communication in general. A sound conclusion is more modest: content matters, and voice and presence affect how credible and clear it seems."
+
+  - id: q05
+    lesson: research-communication-and-delivery
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Prepare a contingency plan for equipment problems
+    prompt: Which preparation best protects a presentation against equipment failure?
+    options:
+      - Relying on a live internet link to a cloud copy of the slides
+      - Carrying slides on a USB drive, in cloud storage and as a PDF, and being able to give the talk without slides
+      - Arriving a minute before the start
+      - Embedding a live web demonstration with no fallback
+    answer: 1
+    explanation: Multiple copies and a no-slides version mean that a single failure does not end the talk. Depending on live connectivity, arriving late or having no fallback for a demonstration all increase risk.
+
+  - id: q06
+    lesson: research-communication-and-delivery
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the term for planned responses to foreseeable problems
+    prompt: What two-word term describes a prepared response to foreseeable problems such as equipment failure or reduced time?
+    answers: [contingency plan, contingency planning]
+    explanation: A contingency plan reduces anxiety because the worst cases already have an answer. It should cover technology, time cuts and interruptions, and identify which slide is the safe place to stop.
+
+  - id: q07
+    lesson: research-communication-and-delivery
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse presentation anxiety strategies
+    prompt: Which approach to presentation nerves best reflects the idea that moderate arousal can help performance?
+    options:
+      - Trying to eliminate all nervousness before speaking
+      - Reframing nerves as energy and using preparation, breathing and a learned opening to keep arousal at a useful level
+      - Avoiding rehearsal to prevent worry
+      - Interpreting any nervousness as proof of incompetence
+    answer: 1
+    explanation: Some tension sharpens attention, so the aim is to keep it useful, not to remove it. Preparation, slow breathing and a learned opening reduce excessive arousal. Persistent severe anxiety is a matter for institutional support, not a personal failing.
+
+  # ---------- handling-questions-and-discussion ----------
+  - id: q08
+    lesson: handling-questions-and-discussion
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain the purpose of seminar questions
+    prompt: Which view of audience questions is most accurate?
+    options:
+      - They are mainly attempts to humiliate the presenter
+      - They usually aim to understand, test, extend or contribute to the argument, and are an opportunity to show understanding
+      - They indicate that the presentation failed
+      - They should be avoided by speaking until time runs out
+    answer: 1
+    explanation: Most questions come from interest in the work. Assuming good faith helps a presenter stay calm and respond to the substance. A question does not mean the talk failed, and avoiding questions harms credibility.
+
+  - id: q09
+    lesson: handling-questions-and-discussion
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply an honest response to a question you cannot answer
+    scenario: |
+      Illustrative scenario. During questions, an examiner asks which study first measured trust using the instrument the presenter described. The presenter cannot remember.
+    prompt: What is the best response?
+    options:
+      - Name a plausible-sounding author and year to appear knowledgeable
+      - Say that it does not matter
+      - Say they do not recall the original source, state what they do know about how the instrument is used, and offer to check and follow up
+      - Change the subject to a different question
+    answer: 2
+    explanation: Bluffing risks fabrication and damages credibility if detected. Saying what you do not know, giving relevant knowledge and offering to follow up is honest and professional. Dismissing the question or changing the subject avoids the issue.
+
+  - id: q10
+    lesson: handling-questions-and-discussion
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match question types to response approaches
+    prompt: Match each type of question with the most suitable response approach.
+    pairs:
+      - left: Clarification
+        right: Define briefly, then link to the evidence
+      - left: Methodological
+        right: State the reasoning and acknowledge trade-offs
+      - left: Scope
+        right: State what the evidence covers and mark inference as inference
+      - left: Valid challenge
+        right: Concede the valid point and explain its effect on the conclusion
+    explanation: Recognising the type of question allows a focused answer. A challenge that is partly or fully valid is best met by conceding what holds, which preserves credibility, rather than defending a position the evidence does not support.
+
+  - id: q11
+    lesson: handling-questions-and-discussion
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Recall the value of pausing and paraphrasing
+    prompt: Pausing briefly and paraphrasing a question before answering helps the presenter avoid answering the wrong question and lets the whole audience hear it.
+    answer: true
+    explanation: A short pause shows thought, and paraphrasing ("If I understand correctly, you are asking...") confirms the question, helps listeners who did not hear it and gives you time. It also lets the questioner correct you before you invest in a long answer.
+
+  - id: q12
+    lesson: handling-questions-and-discussion
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the part of an argument being challenged
+    prompt: A questioner says, "Your evidence is from a convenience sample, so it cannot support a claim about all small firms." In Toulmin's terms, which element of the argument is being challenged?
+    options:
+      - The grounds (the evidence) and their relationship to the claim's scope
+      - The title of the presentation
+      - The presenter's accent
+      - The format of the reference list
+    answer: 0
+    explanation: The questioner disputes whether the evidence is adequate to support a broad claim. An effective reply acknowledges the sample limitation and narrows the claim to what the grounds support. Identifying which element is under attack helps you answer precisely.
+
+  - id: q13
+    lesson: handling-questions-and-discussion
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a response to a hostile question
+    scenario: |
+      Illustrative scenario. A participant says, "This is just a summary of other people's work." The presenter replies sharply, "If you had read the literature properly you would see it is not."
+    prompt: Which assessment of the reply is most accurate?
+    options:
+      - It is effective because it shows confidence
+      - It is weak because it responds to the tone with a personal remark; a better reply states what the synthesis adds, using evidence, and offers to continue the discussion afterwards
+      - It is ideal because it ends the discussion quickly
+      - It is acceptable because the participant was rude first
+    answer: 1
+    explanation: Responding to the substance rather than the tone preserves credibility. A calm statement of the contribution, such as comparing how studies measured a concept, answers the criticism without a personal attack, while an offer to continue later respects the time of others.
+
+  - id: q14
+    lesson: handling-questions-and-discussion
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the term for a slide prepared for expected questions
+    prompt: What type of slide, kept after the final slide, is prepared in advance to answer an expected question?
+    answers: [backup slide, backup slides, back-up slide, appendix slide]
+    explanation: Backup slides hold detailed data, methods or alternative interpretations that would overload the main talk. Having them ready shows preparation and lets you answer with evidence.
+
+  # ---------- feedback-reflection-and-next-steps ----------
+  - id: q15
+    lesson: feedback-reflection-and-next-steps
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain the three questions of effective feedback
+    prompt: According to Hattie and Timperley (2007), effective feedback helps learners answer which three questions?
+    options:
+      - Who marked it, when, and how many marks?
+      - Where am I going, how am I going, and where to next?
+      - What did I like, what did I dislike, and who agrees?
+      - How long, how many, and how often?
+    answer: 1
+    explanation: The three questions concern the goal, current progress and next steps. Feedback that only judges performance addresses the second question but not the third, which is why vague praise or criticism is frustrating.
+
+  - id: q16
+    lesson: feedback-reflection-and-next-steps
+    type: matching
+    bloom: recall
+    difficulty: medium
+    objective: Recall the stages of Gibbs' reflective cycle
+    prompt: Match each stage of Gibbs' reflective cycle with its guiding question.
+    pairs:
+      - left: Description
+        right: What happened?
+      - left: Evaluation
+        right: What was good and bad about the experience?
+      - left: Analysis
+        right: Why did things go as they did?
+      - left: Action plan
+        right: What will I do next time, and how?
+    explanation: The cycle moves from narrating to analysing and planning. Weak reflection stops at description; strong reflection explains why events occurred and ends with specific actions.
+
+  - id: q17
+    lesson: feedback-reflection-and-next-steps
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply goal setting to feedback
+    scenario: |
+      Illustrative scenario. A student receives the feedback "needs better delivery" and writes the goal "improve my delivery".
+    prompt: Which revised goal is most useful?
+    options:
+      - "Be a better speaker."
+      - "Record two rehearsals, count filler words in each, and halve the count before the next presentation."
+      - "Try harder next time."
+      - "Avoid presenting if possible."
+    answer: 1
+    explanation: A useful goal is specific, measurable and time-bound, so progress can be checked. The other options are vague, give no way to measure success or avoid the skill rather than develop it.
+
+  - id: q18
+    lesson: feedback-reflection-and-next-steps
+    type: true_false
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the use of conflicting feedback
+    prompt: When two sources of feedback conflict, you should always follow the more senior source without further thought.
+    answer: false
+    explanation: Conflicting comments should be evaluated against your purpose, the audience and the assessment requirements. Seniority may carry relevant knowledge, but if the conflict concerns assessment criteria you should check with your lecturer, and patterns across several sources deserve more weight than a single comment.
+
+  - id: q19
+    lesson: feedback-reflection-and-next-steps
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the use of seminar material in later written work
+    prompt: A student wants to reuse large parts of her graded seminar paper in her dissertation. Which course of action is most appropriate?
+    options:
+      - Reuse it without comment, since it is her own work
+      - Check her programme's rules, discuss the plan with her supervisor, acknowledge the earlier work where required, and rewrite it for a reader with full citations
+      - Replace all the references with new ones to avoid detection
+      - Copy only the slides into the dissertation
+    answer: 1
+    explanation: Reusing submitted work without acknowledgement can be treated as self-plagiarism, and rules vary between programmes. Talking to a supervisor and rewriting for readers, who need fuller definitions and methods than listeners, is both honest and better for the work.
+
+  - id: q20
+    lesson: feedback-reflection-and-next-steps
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the term for feedback focused on what to do next
+    prompt: What term describes feedback focused on what to do next rather than only judging what was done?
+    answers: [feedforward, feed-forward, feed forward]
+    explanation: Feedforward answers the "where to next?" question and is the part of feedback most likely to change later performance. A good comment on a seminar names a specific change to try.
+
+  # ---------- module-level ----------
+  - id: q21
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the contribution of delivery, discussion and reflection to seminar performance and learning
+    marks: 20
+    prompt: '"A seminar is only partly won in the presentation itself." Discuss this statement, explaining how delivery skills, the handling of questions and the use of feedback and reflection each contribute to a postgraduate seminar, and justify the practices you would prioritise.'
+    structure:
+      - Introduction interpreting the statement
+      - Delivery skills and rehearsal as the visible performance
+      - Questions and discussion as evidence of understanding
+      - Feedback and reflection as the route to improvement and further development
+      - Critical evaluation, including limits and fairness
+      - Prioritised practices and conclusion
+    rubric:
+      - criterion: Understanding of delivery, discussion and reflection
+        marks: 6
+        descriptor: Accurately explains the contribution of voice, notes and rehearsal, of structured question handling, and of feedback and reflection, with accurate use of terminology.
+      - criterion: Critical evaluation
+        marks: 6
+        descriptor: Weighs the relative importance of the three areas, considers limits such as anxiety, fairness for different speakers and conflicting feedback, and avoids one-sided assertion.
+      - criterion: Application and examples
+        marks: 4
+        descriptor: Uses realistic examples from seminar or professional settings to illustrate points and links them to practices such as staged rehearsal, paraphrasing questions and Gibbs-style reflection.
+      - criterion: Structure and expression
+        marks: 4
+        descriptor: Clear introduction, logical argument, reasoned prioritisation and a conclusion in academic English.
+    modelAnswer: |
+      A strong answer interprets the statement as claiming that the quality of a seminar depends on preparation before it and learning after it as well as on the talk itself. Delivery matters because listeners cannot re-read: voice, pace, pauses, eye contact and sensible use of notes make content intelligible and signal command of the material. Staged, timed and recorded rehearsal, a learned opening and closing, and a contingency plan are the practical foundations, and nerves can be managed by preparation, breathing and reframing.
+
+      The question session is where understanding becomes visible. Examiners and peers probe reasoning, so a presenter who listens fully, paraphrases, answers directly with evidence, concedes valid criticism and admits what is not known demonstrates intellectual honesty. Preparation, including anticipated questions and backup slides, is again the main protection. Toulmin's model can help identify which part of an argument is being challenged.
+
+      Feedback and reflection turn a single event into learning. Hattie and Timperley's (2007) three questions, a method of receiving, understanding, evaluating, prioritising and acting, and a structured reflection such as Gibbs' cycle, lead to specific goals. The seminar material can also be developed into a literature review, paper or proposal, with attention to acknowledgement of earlier work.
+
+      A critical answer notes limits: delivery can be over-weighted at the expense of content, anxiety and language background affect performance, feedback may conflict and reflection can become formulaic. A reasoned conclusion would prioritise rehearsal with feedback, honest question handling and a concrete action plan, since these are controllable and compound over time.
+    explanation: Examiners look for a balanced argument that connects the three areas, evaluates their relative contribution with reasons, and supports claims with practical, realistic examples.

@@ -1,0 +1,82 @@
+resources:
+  - title: APA Style
+    description: Official site of the American Psychological Association's style guidance, with help on citations, references, paper elements and clear writing.
+    provider: American Psychological Association
+    url: https://apastyle.apa.org/
+    category: guide
+    module: preparing-the-presentation
+    difficulty: introductory
+    stage: core
+    accessType: unknown
+  - title: Academic Phrasebank
+    description: Collection of common phrases used in academic writing and argument, useful for signposting, comparing sources and expressing caution.
+    provider: University of Manchester
+    url: https://www.phrasebank.manchester.ac.uk/
+    category: reference
+    module: topic-and-literature
+    difficulty: introductory
+    stage: foundation
+    accessType: unknown
+  - title: Purdue Online Writing Lab (OWL)
+    description: Writing guidance covering research, argument, source evaluation, paraphrasing and citation styles including APA.
+    provider: Purdue University
+    url: https://owl.purdue.edu/
+    category: guide
+    module: topic-and-literature
+    difficulty: introductory
+    stage: foundation
+    accessType: unknown
+  - title: Google Scholar
+    description: Search engine for scholarly literature, with "Cited by" links useful for forward citation chaining.
+    provider: Google
+    url: https://scholar.google.com/
+    category: database
+    module: topic-and-literature
+    difficulty: introductory
+    stage: foundation
+    accessType: unknown
+  - title: Directory of Open Access Journals (DOAJ)
+    description: Curated directory of open access, peer-reviewed journals, also useful for checking the standing of a journal.
+    provider: DOAJ
+    url: https://doaj.org/
+    category: database
+    module: topic-and-literature
+    difficulty: introductory
+    stage: core
+    accessType: unknown
+  - title: CORE
+    description: Aggregator of open access research papers from repositories and journals worldwide.
+    provider: CORE
+    url: https://core.ac.uk/
+    category: database
+    module: topic-and-literature
+    difficulty: introductory
+    stage: core
+    accessType: unknown
+  - title: Zotero
+    description: Free reference manager for collecting sources, taking notes and generating citations and bibliographies.
+    provider: Zotero
+    url: https://www.zotero.org/
+    category: tool
+    module: preparing-the-presentation
+    difficulty: introductory
+    stage: core
+    accessType: unknown
+  - title: Committee on Publication Ethics (COPE)
+    description: Guidance and resources on publication ethics, useful for understanding integrity expectations in scholarly work.
+    provider: COPE
+    url: https://publicationethics.org/
+    category: organisation
+    module: seminar-foundations
+    difficulty: intermediate
+    stage: advanced
+    accessType: unknown
+  - title: Think. Check. Submit.
+    description: Checklist to help researchers identify trustworthy journals and publishers for their work.
+    provider: Think. Check. Submit.
+    url: https://thinkchecksubmit.org/
+    category: guide
+    module: topic-and-literature
+    difficulty: introductory
+    stage: core
+    accessType: unknown

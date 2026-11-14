@@ -1,0 +1,328 @@
+module: preparing-the-presentation
+questions:
+  # ---------- structuring-an-academic-presentation ----------
+  - id: q01
+    lesson: structuring-an-academic-presentation
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain why spoken presentations need a different structure from written papers
+    prompt: Why does a seminar presentation usually need more explicit signposting than a written paper?
+    options:
+      - Listeners hear each sentence once at the speaker's pace and cannot re-read or skim ahead
+      - Examiners award marks for the number of transitions used
+      - Written papers never use headings or summaries
+      - Slides replace the need for any spoken structure
+    answer: 0
+    explanation: A reader can pause, re-read and see the headings, but a listener relies on the speaker to make the structure audible. The other options are false or unsupported; signposting is valued for its function, not counted, and slides do not remove the need for spoken previews and links.
+
+  - id: q02
+    lesson: structuring-an-academic-presentation
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Recognise the value of repetition in a spoken argument
+    prompt: Restating the central claim in the opening, the body and the closing of a talk is usually a weakness because it wastes time.
+    answer: false
+    explanation: In a written essay repetition is often padding, but in a talk it gives listeners who lost attention a chance to rejoin the argument. The claim should be restated in different words and linked to the new evidence, not copied mechanically.
+
+  - id: q03
+    lesson: structuring-an-academic-presentation
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply a timing plan with a buffer
+    scenario: |
+      Illustrative scenario. A student has a 12-minute slot. A first rehearsal of the talk takes 11 minutes 50 seconds with no pauses for questions or technical delays.
+    prompt: What is the most appropriate response?
+    options:
+      - Leave the talk as it is, because it fits inside the limit
+      - Speak faster on the day to create more time
+      - Cut content so that a rehearsed run takes roughly 10 to 11 minutes, leaving a buffer
+      - Add more slides so that the limit is used completely
+    answer: 2
+    explanation: Nerves, a brief clarifying question or a technical hiccup can easily add a minute or more, so a rehearsal that fills the whole slot leaves no margin. Speaking faster reduces comprehension, and adding slides worsens the problem. Cutting content protects the conclusion.
+
+  - id: q04
+    lesson: structuring-an-academic-presentation
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for cues that tell the audience where the talk is going
+    prompt: What term describes spoken or visual cues that tell the audience where a talk has been and where it is going?
+    answers: [signposting, signpost, sign posting]
+    explanation: Signposting includes previews, markers, summaries and links. It makes the structure of the talk audible and visible so that listeners do not have to guess where they are.
+
+  - id: q05
+    lesson: structuring-an-academic-presentation
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Distinguish the main forms of signposting
+    prompt: Match each signposting move with the example that illustrates it.
+    pairs:
+      - left: Preview
+        right: "I will make three points: what the literature agrees on, where it disagrees, and what that means for small firms."
+      - left: Marker
+        right: "That was the first position. The second takes the opposite view."
+      - left: Summary
+        right: "So far I have shown that adoption is driven mostly by perceived usefulness."
+      - left: Link
+        right: "Given that gap, the next question is how researchers have measured trust."
+    explanation: "Each move does a different job: a preview announces the route, a marker flags a boundary, a summary consolidates what has been shown, and a link explains why the next section follows. Good transitions combine marker and link so that they carry logic."
+
+  - id: q06
+    lesson: structuring-an-academic-presentation
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a draft outline for focus and coherence
+    prompt: A draft outline lists nine headings, including a long history of the technology, five theories and a catalogue of country studies, but no stated claim. What is the best first improvement?
+    options:
+      - Add a ninth slide listing all the references
+      - Write a one-sentence central claim and test every section against it, moving what does not support it to backup slides
+      - Reorder the headings alphabetically
+      - Reduce the font size so that all nine headings fit on fewer slides
+    answer: 1
+    explanation: A talk with no claim is a list of topics. Writing the claim first gives a test for inclusion. Reordering, shrinking text and adding references do not address the lack of focus, and shrinking text harms legibility.
+
+  - id: q07
+    lesson: structuring-an-academic-presentation
+    type: true_false
+    bloom: apply
+    difficulty: medium
+    objective: Apply good practice for the closing of a talk
+    prompt: A good closing introduces one or two new pieces of evidence to leave a strong final impression.
+    answer: false
+    explanation: The closing should restate the claim in light of the evidence, state limitations, draw out implications and deliver the take-home message. New evidence at the end is unsupported and cannot be questioned fairly, and it tends to dilute the main message.
+
+  # ---------- slides-and-visual-evidence ----------
+  - id: q08
+    lesson: slides-and-visual-evidence
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain the role of slides as support for a spoken argument
+    prompt: Which statement best describes the purpose of slides in a seminar?
+    options:
+      - To contain the full text of the speech so the audience can read it
+      - To show what is hard to say and easy to show, while the speaker provides reasoning and interpretation
+      - To prove that the presenter has read many sources
+      - To replace the reference list
+    answer: 1
+    explanation: Slides carry figures, diagrams, structure and key terms; speech carries reasoning and qualification. Putting the full speech on slides creates redundancy, with the audience reading while the speaker reads aloud, which competes for attention.
+
+  - id: q09
+    lesson: slides-and-visual-evidence
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Identify misleading design choices in a chart
+    scenario: |
+      Illustrative scenario. A bar chart compares the average satisfaction scores of two systems, 7.1 and 7.3 on a 10-point scale. The value axis runs from 7.0 to 7.4, so the second bar appears three times as tall as the first. The axis has no label and the chart has no source line.
+    prompt: Which problem is the most serious for the honest communication of the evidence?
+    options:
+      - The chart uses bars instead of a table
+      - The truncated axis exaggerates a very small difference
+      - The scores are shown to one decimal place
+      - The chart compares only two systems
+    answer: 1
+    explanation: Bar length should be proportional to value, so a baseline that does not start at zero makes a 0.2 difference look dramatic. The missing axis label and source are also faults, but the truncation most directly distorts the viewer's conclusion. Bars, one decimal place and two categories are acceptable.
+
+  - id: q10
+    lesson: slides-and-visual-evidence
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Select an appropriate visual for a type of evidence
+    prompt: A presenter wants to show how adoption intention changed across five consecutive years for three firm sizes. Which visual is most suitable?
+    options:
+      - A three-dimensional pie chart for each year
+      - A line chart with one line per firm size and labelled axes
+      - A paragraph of text on the slide
+      - A scatter plot with years on both axes
+    answer: 1
+    explanation: Change over time is shown most clearly by a line chart, and three lines remain readable. Pie charts show parts of a whole and their 3D effects distort size, text hides the pattern, and a scatter plot with years on both axes shows no relationship between variables.
+
+  - id: q11
+    lesson: slides-and-visual-evidence
+    type: true_false
+    bloom: recall
+    difficulty: easy
+    objective: Recall accessibility practice for colour use
+    prompt: Using colour alone to distinguish categories in a chart is good accessibility practice as long as the colours are bright.
+    answer: false
+    explanation: Some viewers have colour vision deficiency, and slides are sometimes printed in greyscale or projected poorly. Categories should also be distinguished by labels, patterns or shapes. Brightness does not solve the problem.
+
+  - id: q12
+    lesson: slides-and-visual-evidence
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the term for text that describes a visual to people who cannot see it
+    prompt: What short text description of an image or chart is supplied for screen reader users?
+    answers: [alternative text, alt text, alt-text]
+    explanation: Alternative text states the content and finding of a visual in words. It is a basic requirement of accessible documents, and writing it also forces you to decide what your visual is meant to show.
+
+  - id: q13
+    lesson: slides-and-visual-evidence
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match types of evidence with suitable visuals
+    prompt: Match each type of evidence with the visual that usually suits it best.
+    pairs:
+      - left: Comparison of a few categories
+        right: Bar chart with a zero baseline
+      - left: Change over time
+        right: Line chart
+      - left: Relationship between two numeric variables
+        right: Scatter plot
+      - left: Exact values that readers must look up
+        right: Table
+      - left: Steps in a process
+        right: Flowchart
+    explanation: The choice follows from the question the audience needs answered. Tables serve exact lookup while graphs serve pattern recognition, a distinction made by Few (2012). A scatter plot shows association but cannot establish causation.
+
+  - id: q14
+    lesson: slides-and-visual-evidence
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply the orient, direct, interpret sequence
+    scenario: |
+      Illustrative scenario. A presenter shows a bar chart of the barriers to digital payment adoption cited by retailers. She says, "Here is the chart," and then waits for the audience to find the pattern.
+    prompt: Which improvement best applies the orient, direct, interpret sequence?
+    options:
+      - Say what the chart shows, point to the key bar, and explain what it means for the argument
+      - Show the chart for as short a time as possible
+      - Read out every value on the chart
+      - Add more bars so the audience has more to explore
+    answer: 0
+    explanation: A visual does not explain itself. Orienting tells the audience what the axes and groups are, directing points them to the feature that matters, and interpreting links it to the claim. Reading every value or hiding the chart fails to help the audience see the point.
+
+  # ---------- referencing-in-presentations ----------
+  - id: q15
+    lesson: referencing-in-presentations
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish what requires attribution in a presentation
+    prompt: Which of the following requires a citation on a slide?
+    options:
+      - A paraphrased idea taken from a journal article
+      - Your own opinion about the topic
+      - A definition so widely known that it is common knowledge
+      - Your own survey data presented as your own analysis
+    answer: 0
+    explanation: Paraphrased ideas, data, figures and structures from other authors need attribution even when no words are copied. Your own opinion and your own data need no citation, although the data source should be described, and genuinely common knowledge usually needs none.
+
+  - id: q16
+    lesson: referencing-in-presentations
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Apply APA 7 in-text citation conventions
+    prompt: A study by three or more authors, Venkatesh, Morris, Davis and Davis, was published in 2003. Which APA 7 in-text citation is correct?
+    options:
+      - (Venkatesh, Morris, Davis, & Davis, 2003)
+      - (Venkatesh et al., 2003)
+      - (Venkatesh 2003)
+      - (Venkatesh & others, 2003)
+    answer: 1
+    explanation: APA 7 uses the first author's surname followed by "et al." from the first citation for works with three or more authors. Listing all authors, omitting the comma before the year, or writing "others" does not follow the style.
+
+  - id: q17
+    lesson: referencing-in-presentations
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate an integrity risk in a draft presentation
+    scenario: |
+      Illustrative scenario. A student's draft slide reports that "about 80 per cent of small firms in the region have experienced a data breach". She remembers reading this on social media but cannot find the original source. She plans to keep the figure because it makes the point strongly.
+    prompt: What should she do?
+    options:
+      - Keep the figure and add "(Anon., n.d.)" so that it looks cited
+      - Keep the figure, since the exact origin does not matter if the point is true
+      - Remove the figure, or replace it with a statistic she can trace to a verified source, or a qualitative statement she can support
+      - Round the figure to 100 per cent to make it memorable
+    answer: 2
+    explanation: An untraceable statistic cannot be checked by the audience and risks fabrication or misrepresentation, and a placeholder citation is misleading. The honest options are to find and verify the original source or to make a claim the evidence supports. Altering the number makes the problem worse.
+
+  - id: q18
+    lesson: referencing-in-presentations
+    type: true_false
+    bloom: apply
+    difficulty: medium
+    objective: Apply image-licence checking
+    prompt: An image returned by a search engine can be used freely in a seminar presentation because it is publicly visible online.
+    answer: false
+    explanation: Public availability is not permission. The image may be protected by copyright or carry licence conditions, such as a requirement to credit the creator. You should check the licence, record the creator and source, and credit the image appropriately.
+
+  - id: q19
+    lesson: referencing-in-presentations
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the term for restating an idea in your own words with a citation
+    prompt: What is the term for restating an author's idea in your own words and sentence structure while still citing the source?
+    answers: [paraphrase, paraphrasing, a paraphrase]
+    explanation: A genuine paraphrase changes both wording and structure and still needs a citation, because the idea belongs to the source. Changing a few words while keeping the original structure is too close and should instead be quoted or properly rewritten.
+
+  - id: q20
+    lesson: referencing-in-presentations
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match source-line wording to the status of a visual
+    prompt: Match each situation with the most appropriate source line.
+    pairs:
+      - left: A figure reproduced unchanged from a published report
+        right: "Source: Author (Year), Figure 2."
+      - left: A figure you modified from a published diagram
+        right: "Adapted from Author (Year)."
+      - left: A chart you drew from an organisation's published data
+        right: "Data from Organisation (Year); author's analysis."
+      - left: A chart from your own survey
+        right: "Source: author's survey data (n = 120)."
+    explanation: A source line tells the audience how your visual relates to the original. Claiming an adapted or reproduced figure as your own, or omitting the data origin, misleads the audience and can breach copyright or integrity rules.
+
+  # ---------- module-level ----------
+  - id: q21
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a draft presentation for structure, visual evidence and referencing
+    marks: 20
+    prompt: Critically evaluate Efosa's draft seminar presentation and recommend specific changes to its structure, slides, visual evidence and referencing.
+    case: |
+      Illustrative scenario. Efosa has 15 minutes to present a literature-based seminar on cloud adoption by small firms in Ghana. His draft has 28 slides. The first six cover the history of cloud computing. Slide titles are topic labels such as "Theories" and "Results". Many slides contain full paragraphs in 14-point type. One slide shows a three-dimensional pie chart with eight slices in similar shades of blue, with no source. Another shows a screenshot from a client's system including customer names. A statistic about "usage in Ghana" has no source. There is no stated claim, no conclusion slide and no reference slide. A trial run took 27 minutes.
+    structure:
+      - Overall assessment against the central claim and time limit
+      - Structure, timing and signposting
+      - Slide design, text and accessibility
+      - Visual evidence and honest charting
+      - Referencing and integrity, including personal data
+      - Prioritised recommendations
+    rubric:
+      - criterion: Structure and timing
+        marks: 5
+        descriptor: Identifies the missing central claim, the disproportionate background, the overrun and the absent conclusion, and proposes a claim-first structure with a timing plan, buffer and backup slides.
+      - criterion: Slide design and accessibility
+        marks: 5
+        descriptor: Identifies topic-label titles, dense text, small type and similar-shade colours; recommends action titles, minimal text, larger type, high contrast and colour-independent coding.
+      - criterion: Visual evidence
+        marks: 5
+        descriptor: Explains the distortion and poor comparability of a 3D, many-slice pie chart, proposes a better chart, and recommends orient, direct, interpret delivery for each visual.
+      - criterion: Referencing and integrity
+        marks: 5
+        descriptor: Identifies the unsourced statistic, the missing reference slide and the exposure of customer personal data; recommends verification, APA 7 citation, a source line and anonymisation or authority to use the data.
+    modelAnswer: |
+      A strong answer begins by noting that the draft lacks a central claim, which explains most of its other problems. With no claim to test content against, Efosa has included everything, producing 28 slides and a 27-minute run for a 15-minute slot. He should write a one-sentence claim, move the history of cloud computing to a backup slide, keep two or three body blocks with signposted transitions, plan roughly 12 to 13 minutes of content, and add a conclusion that restates the claim and states limitations.
+
+      On slide design, topic-label titles should become action titles that state the point, for example "Owner capability explains adoption better than cost". Paragraphs in small type should be reduced to short prompts, with reasoning moved to speech and notes, and type should be large enough to read from the back of the room.
+
+      The three-dimensional pie with eight similar blue slices distorts size, is hard to compare and cannot be read in greyscale. A sorted bar chart with a zero baseline, direct labels, one highlight colour and a source line would be better. Each visual should be introduced by saying what it shows, pointing to the key feature and interpreting it.
+
+      On integrity, the "usage in Ghana" statistic must be traced to a verified source or removed. A reference slide in consistent APA 7 style is required, with every in-text citation matched. The screenshot shows customer names, so it should be cropped or anonymised, and the presenter should consider the obligations on personal data, including the Data Protection Act, 2012 (Act 843), and obtain authority to use client material. The answer should end with prioritised actions: claim and cuts first, then slides, then charts, then referencing.
+    explanation: Examiners look for diagnosis of specific faults, explanation of why each matters to the audience or to integrity, and concrete, prioritised remedies rather than generic advice to make the slides better.

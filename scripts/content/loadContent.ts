@@ -38,7 +38,7 @@ export interface LoadResult {
   issues: ValidationIssue[]
 }
 
-const COURSE_ORDER = ['csit-601', 'csit-603', 'csit-605', 'csit-607', 'csit-613', 'csit-617', 'csit-621']
+const COURSE_ORDER = ['csit-601', 'csit-603', 'csit-605', 'csit-607', 'csit-610', 'csit-613', 'csit-617', 'csit-621']
 
 function rel(path: string): string {
   return relative(process.cwd(), path).replace(/\\/g, '/')

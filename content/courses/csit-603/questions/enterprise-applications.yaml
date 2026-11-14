@@ -458,3 +458,115 @@ questions:
     explanation: >
       Examiners reward precise terminology, balanced argument supported by theory and examples, and practical decision
       criteria in the conclusion.
+
+  - id: q24
+    lesson: erp-architecture
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain what makes ERP modules an integrated system
+    prompt: What chiefly distinguishes an ERP from a bundle of separate business packages?
+    options:
+      - It is always hosted in the cloud
+      - Its modules share a common database and master data
+      - It has a graphical user interface
+      - It is sold by a single vendor
+    answer: 1
+    explanation: Integration comes from shared data, so one transaction updates every relevant module. Cloud hosting, graphical interfaces and single-vendor supply are neither necessary nor sufficient; separate packages can have all three and still hold separate, inconsistent data.
+
+  - id: q25
+    lesson: erp-architecture
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Identify the responsibilities of the ERP tiers
+    prompt: In a three-tier ERP architecture, where do pricing rules, credit checks and workflow approvals run?
+    options:
+      - Presentation tier
+      - Application tier
+      - Database tier
+      - Network tier
+    answer: 1
+    explanation: The application tier executes business logic. The presentation tier displays information and collects input, and the database tier stores data. There is no separate network tier in this model, although network controls sit between tiers.
+
+  - id: q26
+    lesson: erp-architecture
+    type: true_false
+    bloom: recall
+    difficulty: easy
+    objective: Recognise that tiers are logical separations
+    prompt: "True or false: A three-tier ERP architecture requires three physically separate servers."
+    answer: false
+    explanation: Tiers are logical separations of responsibility. They can run on separate machines, on one machine, or on virtual or cloud resources. The benefit lies in independent scaling, security and change, not in the hardware count.
+
+  - id: q27
+    lesson: erp-architecture
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply the configuration, extension and customisation hierarchy
+    scenario: |
+      A Ghanaian distributor wants its ERP to apply a seasonal credit policy. The ERP offers a pricing and credit
+      settings screen, a published API for add-on applications, and the option for developers to edit the delivered
+      credit-check program. The vendor releases upgrades twice a year.
+    prompt: Which approach should the distributor try first, and why?
+    options:
+      - Edit the delivered credit-check program because it gives the exact result
+      - Use the built-in settings, because configuration is vendor-supported and survives upgrades
+      - Build an add-on through the API before checking the settings
+      - Avoid the ERP entirely and use spreadsheets
+    answer: 1
+    explanation: The usual order is configuration, then extension, then customisation of the core. Configuration is supported and normally survives upgrades. The API route is the fallback if settings cannot express the policy. Editing the delivered program would have to be retested or rewritten at every upgrade, and abandoning the ERP defeats its purpose.
+
+  - id: q28
+    lesson: erp-architecture
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse why middleware reduces integration complexity
+    prompt: Why does a hub-based integration platform often become cheaper than point-to-point links as the number of systems grows?
+    options:
+      - Each system connects once to the hub instead of to every other system
+      - Hubs remove the need for any data transformation
+      - Point-to-point links cannot carry data between systems
+      - Hubs make all systems use the same database
+    answer: 0
+    explanation: A mesh can need up to n(n-1)/2 interfaces while a hub needs about n connections. Hubs still perform transformation (they centralise it), point-to-point links do work for small numbers of systems, and a hub does not merge databases.
+
+  - id: q29
+    lesson: erp-architecture
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match deployment models to their defining characteristics
+    prompt: Match each deployment model to its description.
+    pairs:
+      - left: On-premise
+        right: Organisation runs the ERP on its own infrastructure
+      - left: SaaS
+        right: Vendor operates a multi-tenant service and applies updates
+      - left: Public cloud (IaaS)
+        right: Organisation installs and administers the ERP on rented infrastructure
+      - left: Hybrid
+        right: Some components in the cloud and some retained locally
+    explanation: The models differ in who manages the platform and the application. Hybrid is a mix, which adds integration complexity between its parts.
+
+  - id: q30
+    lesson: erp-architecture
+    type: true_false
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate responsibility under SaaS
+    prompt: "True or false: Moving to SaaS ERP transfers responsibility for data quality and user access control to the vendor."
+    answer: false
+    explanation: The vendor runs the platform, but the customer still owns its data quality, user access, process design and compliance duties. SaaS shifts some risks, such as hardware and patching, but does not remove the customer's responsibilities.
+
+  - id: q31
+    lesson: erp-architecture
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for adjusting an ERP using built-in settings
+    prompt: What term describes adjusting an ERP through its built-in parameters without changing program code?
+    answers: [configuration, configuring]
+    explanation: Configuration uses vendor-supported settings. Customisation, by contrast, changes or adds code in the core and raises upgrade cost.

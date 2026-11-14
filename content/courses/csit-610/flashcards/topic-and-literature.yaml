@@ -1,0 +1,62 @@
+module: topic-and-literature
+cards:
+  # selecting-a-seminar-topic
+  - lesson: selecting-a-seminar-topic
+    front: What is the difference between a topic and a research question?
+    back: A topic names an area of interest; a question is focused and answerable, demanding a specific response that can be argued.
+  - lesson: selecting-a-seminar-topic
+    front: What five tests help judge a candidate topic?
+    back: Scope, significance, evidence availability, feasibility and interest.
+  - lesson: selecting-a-seminar-topic
+    front: Why prefer analytical or evaluative questions to descriptive ones at postgraduate level?
+    back: They invite argument and judgement about evidence, whereas descriptive questions only invite a report of what exists.
+  - lesson: selecting-a-seminar-topic
+    front: What is a working thesis?
+    back: A provisional answer to your question that directs reading and may be confirmed, qualified or rejected as evidence is found.
+  - lesson: selecting-a-seminar-topic
+    front: What is the risk of narrowing a topic too far?
+    back: Too few directly relevant sources may exist to support an argument, so focus must be balanced against evidence availability.
+  - lesson: selecting-a-seminar-topic
+    front: How should you handle a Ghana-focused topic when local evidence is thin?
+    back: Say so openly, separate Ghana-specific evidence from international evidence used by extension, and never fill gaps with unverified figures.
+  # exploring-the-literature
+  - lesson: exploring-the-literature
+    front: How do AND and OR work in a literature search?
+    back: OR joins synonyms for one concept and widens results; AND combines different concepts and narrows results.
+  - lesson: exploring-the-literature
+    front: What is citation chaining?
+    back: Finding sources through a paper's reference list (backward) and through later works that cite it (forward).
+  - lesson: exploring-the-literature
+    front: Why does peer review not guarantee a source is correct?
+    back: It improves quality control but processes vary and errors survive, so each source's method and evidence must still be appraised.
+  - lesson: exploring-the-literature
+    front: How should a vendor white paper be treated as a source?
+    back: As evidence of what the vendor claims, noting its commercial purpose and method, not as neutral proof.
+  - lesson: exploring-the-literature
+    front: What should you do with a statistic you cannot trace to its original source?
+    back: Do not use it. Repetition is not verification, so trace it to the originating organisation and release or omit it.
+  - lesson: exploring-the-literature
+    front: What signals that a seminar literature search is sufficient?
+    back: "Saturation: new searches mostly return the same studies and arguments, and you can say what is known, disputed and missing."
+  - lesson: exploring-the-literature
+    front: What should notes on each source include?
+    back: Full APA 7 reference, purpose, method and sample, findings in your own words, strengths and limitations, relevance to your argument, and page numbers for any quotations.
+  # critical-analysis-and-argument
+  - lesson: critical-analysis-and-argument
+    front: What does critical analysis mean in an academic context?
+    back: A balanced, specific judgement of the strength and limits of claims, evidence and reasoning, including strengths, not simply fault-finding.
+  - lesson: critical-analysis-and-argument
+    front: What is the difference between a summary and a synthesis?
+    back: A summary reports each source in turn; synthesis organises ideas by theme, compares sources and explains agreement, conflict and gaps.
+  - lesson: critical-analysis-and-argument
+    front: What are the main components of the Toulmin model?
+    back: Claim, grounds (evidence), warrant, backing, qualifier and rebuttal.
+  - lesson: critical-analysis-and-argument
+    front: Why is a cross-sectional survey weak evidence of cause?
+    back: It shows association at one time point, so it cannot establish direction or rule out other explanations such as confounding or reverse causation.
+  - lesson: critical-analysis-and-argument
+    front: What is cherry-picking and how can you avoid it?
+    back: Selecting only evidence that supports your view. Avoid it by seeking contrary studies and explaining why findings differ.
+  - lesson: critical-analysis-and-argument
+    front: What does a proportionate conclusion look like?
+    back: The strength of the language, such as suggests versus proves, matches the strength and quality of the evidence, with limits stated.

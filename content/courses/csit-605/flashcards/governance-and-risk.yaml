@@ -54,3 +54,21 @@ cards:
   - lesson: incident-response-continuity-and-audit
     front: What incident response lessons does the SolarWinds/FireEye case offer?
     back: Monitor identity events (FireEye noticed an unexpected MFA device registration), scope across the supply chain, hunt for persistence, and share information and countermeasures transparently.
+  - lesson: ghana-cybersecurity-and-data-protection
+    front: How do the Cyber Security Authority and the Data Protection Commission differ?
+    back: The Authority (Act 1038) focuses on the security and resilience of digital systems and national coordination; the Commission (Act 843) focuses on individuals' rights over personal data. One incident can engage both.
+  - lesson: ghana-cybersecurity-and-data-protection
+    front: Why does the Electronic Transactions Act, 2008 (Act 772) matter to security managers?
+    back: It gives legal effect to electronic records and signatures, so the organisation needs identity, logging, integrity and retention controls to prove authenticity if challenged.
+  - lesson: ghana-cybersecurity-and-data-protection
+    front: What is a legal and regulatory register and why use it?
+    back: A list of statutes, sector directives and contractual duties with owners and review dates, mapped to controls and evidence, so compliance is managed through the risk process instead of a separate checklist.
+  - lesson: ghana-cybersecurity-and-data-protection
+    front: Why is ISO/IEC 27001 certification not the same as legal compliance?
+    back: The standard certifies a management system within its scope; the organisation must still identify and satisfy each legal duty, such as registration, consent and breach notification.
+  - lesson: ghana-cybersecurity-and-data-protection
+    front: What makes an incident reporting culture healthy?
+    back: An easy internal channel, no-blame treatment of good-faith reports, clear criteria and decision rights for external notification, known regulator contacts and regular exercises.
+  - lesson: ghana-cybersecurity-and-data-protection
+    front: Why should this topic be treated as educational and not as legal advice?
+    back: Laws are amended and regulators issue changing directives, so obligations depend on the organisation's role and circumstances; current texts and qualified counsel must be consulted.

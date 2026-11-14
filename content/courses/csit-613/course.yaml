@@ -1,8 +1,10 @@
 code: CSIT 613
 slug: csit-613
 title: E-Business Platforms & FinTech
-status: recommended_elective
-statusNote: Recommended elective, pending confirmation of your official course registration.
+status: listed
+statusNote: Elective (3 credit slots). Students choose their elective; record yours in Settings, Courses.
+classification: elective
+creditSlots: 3
 accent: emerald
 description: >
   How digital platforms and financial technology create and capture value, with particular attention to Ghana's
@@ -97,6 +99,19 @@ modules:
       - slug: sme-commerce-psps-and-financial-inclusion
         title: SME Digital Commerce, Payment Service Providers and Financial Inclusion
         topics: [SME digital commerce, Payment service providers, Financial inclusion]
+  - slug: fintech-regulation-strategy-and-global-developments
+    title: FinTech Regulation, Strategy and Global Developments
+    description: How digital finance is regulated, how digital businesses compete on experience and strategy, and what is changing internationally.
+    lessons:
+      - slug: fintech-regulation-and-compliance
+        title: FinTech Regulation, Compliance and Consumer Protection
+        topics: [Financial regulation, Compliance, Consumer protection, Regulatory sandboxes]
+      - slug: customer-experience-and-digital-strategy
+        title: Customer Experience and Digital Business Strategy
+        topics: [Customer experience, Customer journey, Digital business strategy]
+      - slug: international-fintech-developments
+        title: International FinTech Developments
+        topics: [Open banking, Instant payment systems, Central bank digital currencies, Cross-border payments]
   - slug: practical-projects
     title: Practical Projects
     description: Designing e-business and payment solutions.

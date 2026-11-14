@@ -1,0 +1,59 @@
+module: fintech-regulation-strategy-and-global-developments
+cards:
+  - lesson: fintech-regulation-and-compliance
+    front: What are four main reasons financial services are regulated?
+    back: Stability of providers, protection of consumers, market integrity (preventing financial crime) and competition or inclusion. Digital finance changes how each applies but does not remove them.
+  - lesson: fintech-regulation-and-compliance
+    front: How do prudential and conduct regulation differ?
+    back: Prudential regulation keeps providers safe and solvent (capital, liquidity, safeguarding of funds). Conduct regulation governs how customers are treated (disclosure, fair pricing, complaints, agent behaviour).
+  - lesson: fintech-regulation-and-compliance
+    front: What is tiered KYC and why is it used?
+    back: Accounts with low limits need lighter identification, and higher limits require fuller verification. It applies a risk-based approach so that document requirements do not exclude people while risk stays controlled.
+  - lesson: fintech-regulation-and-compliance
+    front: What are the three stages of money laundering?
+    back: Placement (getting cash into the system), layering (moving funds to obscure the origin) and integration (returning funds as apparently legitimate wealth).
+  - lesson: fintech-regulation-and-compliance
+    front: What does a regulatory sandbox allow, and what does it not do?
+    back: It allows supervised, time-limited testing with real customers under tailored conditions. It does not waive core consumer protection or AML duties and does not guarantee later authorisation.
+  - lesson: fintech-regulation-and-compliance
+    front: What is compliance by design?
+    back: Treating regulatory requirements as product requirements, by mapping regulators early, minimising data, building controls and limits into the flow, keeping evidence and governing third parties.
+  - lesson: customer-experience-and-digital-strategy
+    front: What is a customer journey map and what should it show?
+    back: A structured diagram of a persona's stages and touchpoints with their actions, thoughts, emotions, pain points and moments of truth, plus the metrics and owners for fixing them.
+  - lesson: customer-experience-and-digital-strategy
+    front: Why should NPS be used carefully?
+    back: It captures stated willingness to recommend, hides reasons, is affected by sampling and cultural rating style, and may not predict behaviour. Triangulate it with usage, retention and interviews.
+  - lesson: customer-experience-and-digital-strategy
+    front: Why does USSD remain important for inclusive digital finance?
+    back: It works on every handset without data or an app, so it reaches customers with basic phones. Its limits are small screens, time-outs and weaker security than apps.
+  - lesson: customer-experience-and-digital-strategy
+    front: What does funnel analysis tell you, and what does it not?
+    back: It shows where users drop out and at what rate, but not why. Interviews and observation are needed to explain the causes.
+  - lesson: customer-experience-and-digital-strategy
+    front: What is coopetition in digital finance?
+    back: Firms compete for customers while cooperating on infrastructure, such as shared switches, wallet-to-bank links and API partnerships.
+  - lesson: customer-experience-and-digital-strategy
+    front: Why can some friction improve a financial service?
+    back: Steps such as recipient name confirmation or warnings on unusual transfers prevent errors and fraud, which supports trust even if conversion falls slightly.
+  - lesson: international-fintech-developments
+    front: How does open banking work?
+    back: With customer consent, banks give authorised third parties secure API access to account data or payment initiation. It can be regulation-led (EU PSD2) or market-led.
+  - lesson: international-fintech-developments
+    front: What features do UPI and Pix share?
+    back: Open, interoperable rails coordinated by a public authority, simple identifiers such as aliases or keys, QR payments and low-cost design, run by NPCI in India and the Central Bank of Brazil respectively.
+  - lesson: international-fintech-developments
+    front: How does a CBDC differ from e-money and from cryptocurrency?
+    back: A CBDC is a central bank liability in the national currency. E-money is a licensed issuer's liability backed by trust funds, and cryptocurrencies have no issuer backing.
+  - lesson: international-fintech-developments
+    front: What lesson does Nigeria's eNaira offer other countries?
+    back: Reported modest uptake suggests a retail CBDC must offer clear advantages over existing mobile money and bank apps if people are to switch.
+  - lesson: international-fintech-developments
+    front: What problem does PAPSS aim to address?
+    back: Intra-African payments often route through foreign currencies and external banks. PAPSS aims to settle them in local currencies; check its current adoption status.
+  - lesson: international-fintech-developments
+    front: What five questions test whether a foreign fintech model suits Ghana?
+    back: Problem fit, prerequisites such as identity and interoperability, incentives for participants, risks and safeguards, and evidence from a pilot before scaling.
+  - lesson: international-fintech-developments
+    front: What is embedded finance and what is its main risk?
+    back: Financial products offered inside non-financial platforms, often via licensed partners. A main risk is blurred accountability between the platform and the licensed provider.

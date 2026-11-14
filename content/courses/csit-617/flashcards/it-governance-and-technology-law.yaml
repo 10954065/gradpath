@@ -1,0 +1,44 @@
+module: it-governance-and-technology-law
+cards:
+  - lesson: it-governance-frameworks
+    front: What is the difference between IT governance and IT management?
+    back: Governance evaluates, directs and monitors the use of IT (board and executives); management plans, builds, runs and monitors IT within that direction.
+  - lesson: it-governance-frameworks
+    front: Name the six principles of ISO/IEC 38500.
+    back: Responsibility, strategy, acquisition, performance, conformance and human behaviour.
+  - lesson: it-governance-frameworks
+    front: What is the ISO/IEC 38500 governance cycle?
+    back: Evaluate the current and future use of IT, Direct the plans and policies, and Monitor conformance and performance, then repeat.
+  - lesson: it-governance-frameworks
+    front: Why is COBIT tailored rather than applied uniformly?
+    back: Design factors such as size, risk profile, compliance needs and sourcing mean different organisations need different objectives and maturity levels.
+  - lesson: it-governance-frameworks
+    front: What makes an IT steering committee effective?
+    back: Real authority, personal attendance by senior business and IT leaders, evidence-based review of the portfolio and clear escalation to the executive or board.
+  - lesson: it-governance-frameworks
+    front: Why is "technology risk is enterprise risk" a governance statement?
+    back: Failures in core systems, as in the Knight Capital incident, can threaten the whole organisation, so the board remains accountable for oversight.
+  - lesson: it-governance-frameworks
+    front: Why should governance measure outcomes rather than activity?
+    back: Counting tickets closed or projects delivered says little about whether the business benefits; outcome measures show whether value was actually realised.
+  - lesson: technology-law-in-ghana
+    front: Which Ghanaian Act gives legal recognition to electronic records and signatures?
+    back: The Electronic Transactions Act, 2008 (Act 772).
+  - lesson: technology-law-in-ghana
+    front: Match the statute to the subject, Acts 843, 1038, 775 and 690.
+    back: Act 843 is personal data protection, Act 1038 cybersecurity, Act 775 electronic communications and Act 690 copyright including software.
+  - lesson: technology-law-in-ghana
+    front: Why is legal compliance a floor rather than a ceiling for professionals?
+    back: Law sets minimum standards, while professional codes and ethics also ask whether a lawful practice is proportionate, fair and respectful of those affected.
+  - lesson: technology-law-in-ghana
+    front: Why can the GDPR matter to a company outside the EU?
+    back: It can apply when an organisation offers goods or services to people in the EU or monitors their behaviour, and it sets conditions for transfers of data out of the EU.
+  - lesson: technology-law-in-ghana
+    front: What practical lesson does Schrems II teach about cloud and data location?
+    back: Choosing a vendor or region is a legal decision; contracts need case-by-case assessment of the destination's legal environment and technical safeguards, and legal positions can change.
+  - lesson: technology-law-in-ghana
+    front: List the steps of a practical compliance method.
+    back: Map the activity, identify the laws, translate duties into requirements, assign owners, build controls and evidence, train, monitor and review, and escalate legal doubt.
+  - lesson: technology-law-in-ghana
+    front: Why should freelance software work have a written ownership agreement?
+    back: Without one, ownership of the code may be unclear and disputes are more likely; the position depends on the contract and the Copyright Act, 2005 (Act 690).

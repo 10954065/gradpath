@@ -3,6 +3,8 @@ import { join } from 'node:path'
 import { OBJECTIVE_TYPES } from '../../src/lib/content/types'
 import type { LoadedCourse } from './loadContent'
 
+const CLASSIFICATION_LABEL = { core: 'Core', required: 'Required', special_topic: 'Special topic', elective: 'Elective' } as const
+
 /** Regenerate CURRICULUM_STATUS.md from the content actually present on disk. */
 export function writeCurriculumStatus(courses: LoadedCourse[], verifiedResourceUrls?: ReadonlySet<string>): void {
   const today = new Date().toISOString().slice(0, 10)
@@ -28,7 +30,7 @@ export function writeCurriculumStatus(courses: LoadedCourse[], verifiedResourceU
     if (!c.resources.length) outstanding.push('resources')
 
     rows.push(
-      `| ${c.outline.code} ${c.outline.title}${c.outline.status === 'recommended_elective' ? ' *(recommended elective)*' : ''} | ${c.modules.length} | ${lessons.length} | ${written.length} | ${quizzesReady} | ${assessmentsReady} | ${c.resources.length}${verified === null ? '' : ` (${verified} verified)`} | ${complete ? 'Complete' : outstanding.join(', ')} |`,
+      `| ${c.outline.code} ${c.outline.title} | ${CLASSIFICATION_LABEL[c.outline.classification]} | ${c.outline.creditSlots} | ${c.modules.length} | ${lessons.length} | ${written.length} | ${quizzesReady} | ${assessmentsReady} | ${c.resources.length}${verified === null ? '' : ` (${verified} verified)`} | ${complete ? 'Complete' : outstanding.join(', ')} |`,
     )
 
     details.push(`### ${c.outline.code} — ${c.outline.title}\n`)
@@ -50,9 +52,13 @@ is only counted as written when it meets the content specification (no placehold
 All lessons are original **supplementary** study material; all questions are **supplementary practice
 questions**. Neither is official University of Ghana material.
 
-| Course | Modules | Planned lessons | Completed lessons | Completed lesson quizzes | Completed module assessments | Resources | Outstanding |
-|---|---|---|---|---|---|---|---|
+| Course | Classification | Credit slots | Modules | Planned lessons | Completed lessons | Completed lesson quizzes | Completed module assessments | Resources | Outstanding |
+|---|---|---|---|---|---|---|---|---|---|
 ${rows.join('\n')}
+
+Programme listing: ${courses.length} courses, ${courses.reduce((sum, c) => sum + c.outline.creditSlots, 0)} credit slots in total. Each student's
+own selection (core, required and special-topic courses plus their chosen elective) is recorded in the app under
+Settings, Courses.
 
 A lesson quiz is complete when its lesson has at least six objective practice questions; a module
 assessment is complete when the module bank also includes an essay or case-analysis question with a

@@ -2,7 +2,9 @@ code: CSIT 621
 slug: csit-621
 title: Emerging Technologies for Business I
 status: listed
-statusNote: Part of the GradPath initial curriculum. Confirm the course's status against your official registration.
+statusNote: Special topic course (1 credit slot) in the Semester 1 programme.
+classification: special_topic
+creditSlots: 1
 accent: teal
 description: >
   A critical survey of emerging technologies and how businesses evaluate and adopt them: cloud and edge computing,
@@ -95,6 +97,9 @@ modules:
       - slug: advanced-ai-and-smart-cities
         title: Advanced AI and Smart Cities
         topics: [Advanced AI, Smart cities]
+      - slug: industry-4-0-and-smart-business-systems
+        title: Industry 4.0 and Smart Business Systems
+        topics: [Industry 4.0, Cyber-physical systems, Smart manufacturing, Smart business systems]
   - slug: sustainable-technology
     title: Sustainable Technology
     description: Technology's environmental footprint and its potential to reduce it.

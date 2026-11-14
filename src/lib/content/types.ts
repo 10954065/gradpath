@@ -158,12 +158,18 @@ export interface CourseOutlineModule {
   lessons: CourseOutlineLesson[]
 }
 
+/** How a course sits in the programme. Electives are chosen by each student; the others apply to everyone. */
+export const COURSE_CLASSIFICATIONS = ['core', 'required', 'special_topic', 'elective'] as const
+export type CourseClassification = (typeof COURSE_CLASSIFICATIONS)[number]
+
 export interface CourseOutline {
   code: string
   slug: string
   title: string
   status: 'listed' | 'recommended_elective'
   statusNote: string
+  classification: CourseClassification
+  creditSlots: number
   accent: string
   description: string
   outcomes: string[]

@@ -1,0 +1,72 @@
+code: CSIT 610
+slug: csit-610
+title: Seminar
+status: listed
+statusNote: Required course (1 credit slot), listed in the Semester 1 selection as "Required / Seminar". Confirm the official course title, seminar format, topic allocation and presentation dates with the department; GradPath does not set any of these.
+classification: required
+creditSlots: 1
+accent: orange
+description: >
+  A practical learning area for the academic seminar: what seminars are for and what examiners and peers expect,
+  how to choose and refine a topic, explore and critically analyse the literature, build an evidence-based
+  argument, structure and design an academic presentation, reference sources correctly, deliver with confidence,
+  handle questions, and learn from feedback. GradPath provides preparation guidance and a personal seminar tracker;
+  it does not set official seminar topics, deadlines or assessment criteria.
+outcomes:
+  - Explain the purpose, common formats and expectations of a postgraduate academic seminar.
+  - Select, scope and justify a seminar topic and frame it as a focused question or argument.
+  - Locate, evaluate and critically synthesise literature to support a seminar argument.
+  - Structure and design a clear academic presentation that uses evidence and visuals responsibly.
+  - Reference sources accurately in slides and speech and uphold academic integrity.
+  - Deliver a seminar presentation, handle questions professionally and participate constructively in discussion.
+  - Use feedback and reflection to improve and develop seminar work into written research.
+modules:
+  - slug: seminar-foundations
+    title: Seminar Foundations
+    description: What an academic seminar is for, what is expected of presenters and participants, and how to conduct yourself professionally.
+    lessons:
+      - slug: seminar-purpose-and-expectations
+        title: "The Academic Seminar: Purpose, Formats and Expectations"
+        topics: [Academic seminar, Seminar formats, Assessment expectations]
+      - slug: participation-and-academic-conduct
+        title: Seminar Participation and Professional Academic Conduct
+        topics: [Seminar participation, Academic conduct, Respectful debate]
+  - slug: topic-and-literature
+    title: Topic, Literature and Critical Analysis
+    description: Choosing a workable topic, finding and evaluating literature, and building a critical argument from it.
+    lessons:
+      - slug: selecting-a-seminar-topic
+        title: Selecting and Refining a Seminar Topic
+        topics: [Topic selection, Research questions, Scoping]
+      - slug: exploring-the-literature
+        title: Exploring the Literature for a Seminar
+        topics: [Literature search, Source evaluation, Note-making]
+      - slug: critical-analysis-and-argument
+        title: Critical Analysis and Building an Academic Argument
+        topics: [Critical analysis, Argumentation, Synthesis]
+  - slug: preparing-the-presentation
+    title: Preparing the Presentation
+    description: Turning an argument into a well-structured, well-evidenced and properly referenced academic presentation.
+    lessons:
+      - slug: structuring-an-academic-presentation
+        title: Structuring an Academic Presentation
+        topics: [Presentation structure, Signposting, Timing]
+      - slug: slides-and-visual-evidence
+        title: Designing Slides and Presenting Visual Evidence
+        topics: [Slide design, Data visualisation, Accessibility]
+      - slug: referencing-in-presentations
+        title: Referencing and Academic Integrity in Presentations
+        topics: [Referencing, APA 7, Plagiarism, Academic integrity]
+  - slug: delivery-and-discussion
+    title: Delivery, Discussion and Development
+    description: Communicating research clearly, handling questions and debate, and using feedback to improve.
+    lessons:
+      - slug: research-communication-and-delivery
+        title: Research Communication and Delivery Skills
+        topics: [Research communication, Delivery, Presentation anxiety]
+      - slug: handling-questions-and-discussion
+        title: Handling Questions and Academic Discussion
+        topics: [Questions and answers, Academic discussion, Responding to criticism]
+      - slug: feedback-reflection-and-next-steps
+        title: Feedback, Reflection and Developing Seminar Work Further
+        topics: [Feedback, Reflective practice, From seminar to paper]

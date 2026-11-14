@@ -2,7 +2,9 @@ code: CSIT 605
 slug: csit-605
 title: Computer & Cybersecurity
 status: listed
-statusNote: Part of the GradPath initial curriculum. Confirm the course's status against your official registration.
+statusNote: Core course in the MSc IT for Business Semester 1 programme (3 credit slots).
+classification: core
+creditSlots: 3
 accent: rose
 description: >
   The principles, technologies and management practices used to protect information systems. The course covers
@@ -105,6 +107,9 @@ modules:
       - slug: incident-response-continuity-and-audit
         title: Incident Response, Business Continuity and Security Audits
         topics: [Incident response, Business continuity, Security audits]
+      - slug: ghana-cybersecurity-and-data-protection
+        title: Cybersecurity and Data Protection in Ghana
+        topics: [Cybersecurity Act 2020, Data Protection Act 2012, Cyber Security Authority, Data Protection Commission]
   - slug: practical-security
     title: Practical Security
     description: Applying defensive techniques to realistic, authorised scenarios.

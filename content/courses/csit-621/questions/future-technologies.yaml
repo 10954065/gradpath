@@ -344,3 +344,105 @@ questions:
 
       A justified conclusion is that targeted, well-governed applications can address specific urban challenges, but smart technology cannot substitute for urban planning, drainage investment and institutional capacity.
     explanation: Examiners reward essays that are problem-led, technically accurate, critical about risks, specific on safeguards and honest about the limits of technology.
+
+  - id: ft21
+    lesson: industry-4-0-and-smart-business-systems
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Explain what a cyber-physical system is
+    prompt: Which description best fits a cyber-physical system?
+    options:
+      - A standalone spreadsheet used to record production
+      - A system in which physical processes are monitored and controlled by networked computation in a feedback loop
+      - A purely virtual game environment
+      - A paper-based quality checklist
+    answer: 1
+    explanation: A cyber-physical system closes the loop between physical processes and digital analysis, using sensors, networks, software and actuators. Spreadsheets and paper checklists have no automatic feedback to the process, and a virtual game has no physical process.
+
+  - id: ft22
+    lesson: industry-4-0-and-smart-business-systems
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Recognise the origin and nature of the term Industry 4.0
+    prompt: "True or false: The term Industrie 4.0 originated in a German strategic initiative in the early 2010s and is a policy and concept label rather than a precisely measurable event."
+    answer: true
+    explanation: The term was introduced in Germany around 2011 and developed in working group recommendations published in 2013. The numbering of revolutions is a convenient simplification, and there is debate over whether the current period is a distinct revolution.
+
+  - id: ft23
+    lesson: industry-4-0-and-smart-business-systems
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply the digitise-and-stabilise-first principle
+    scenario: |
+      A fictional Ghanaian bakery chain wants to buy an advanced "smart production" platform. Its recipes and
+      batch sizes vary by baker, production records are handwritten, and ovens frequently stop because of power
+      interruptions.
+    prompt: What is the most sensible first step?
+    options:
+      - Buy the full platform immediately to leapfrog competitors
+      - Standardise and digitise basic production records, address power resilience, and pilot a narrow use case
+      - Install predictive maintenance across all ovens before collecting any data
+      - Cancel any digital work because Industry 4.0 is hype
+    answer: 1
+    explanation: Maturity thinking says to stabilise and digitise before automating or optimising. Reliable records and power are prerequisites for useful data, and a narrow pilot tests value. Buying everything first or deploying prediction without data wastes money, while rejecting all digitisation ignores genuine, low-cost benefits.
+
+  - id: ft24
+    lesson: industry-4-0-and-smart-business-systems
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match Industry 4.0 concepts to their definitions
+    prompt: Match each concept to its description.
+    pairs:
+      - left: Digital twin
+        right: Up-to-date digital representation of a physical asset or process used for monitoring and simulation
+      - left: Interoperability
+        right: Ability of different systems to exchange and use information consistently
+      - left: Predictive maintenance
+        right: Using data and models to anticipate equipment failure
+      - left: Operational technology
+        right: Hardware and software that monitors or controls physical equipment
+    explanation: These terms recur in smart manufacturing discussions. Distinguishing OT from IT is important for security, because OT failures can have physical consequences.
+
+  - id: ft25
+    lesson: industry-4-0-and-smart-business-systems
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the risk created by connecting operational equipment
+    prompt: Why does connecting operational technology to corporate networks and the internet raise particular security concerns?
+    options:
+      - It reduces the number of systems that can be attacked
+      - It widens the attack surface and an attack can have physical consequences, while OT components are often hard to patch
+      - It makes patching unnecessary
+      - It removes the need for access control
+    answer: 1
+    explanation: Connectivity exposes equipment that was previously isolated, and OT environments often use long-lived components with limited patching options. Compromise can damage equipment or endanger people, not just expose data. The other options reverse the actual effect.
+
+  - id: ft26
+    lesson: industry-4-0-and-smart-business-systems
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the name of an industrial interoperability standard
+    prompt: Which widely used industrial communication standard, abbreviated with the letters OPC, supports secure platform-independent exchange of machine data?
+    answers: [OPC UA, OPC Unified Architecture]
+    explanation: OPC UA is a standard for secure, platform-independent machine and process data exchange. Standards like it reduce vendor lock-in and support integration between equipment and enterprise systems.
+
+  - id: ft27
+    lesson: industry-4-0-and-smart-business-systems
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate claims made about flagship Industry 4.0 plants
+    prompt: A vendor cites a flagship factory's reported productivity gains to promise similar results to your firm. What is the most appropriate response?
+    options:
+      - Accept the claim because it comes from a respected company
+      - Treat the claim as a claim, and examine whether your products, scale, skills, infrastructure and baseline resemble the flagship's and what independent evidence exists
+      - Ignore all digital technologies
+      - Assume results scale automatically to any firm
+    answer: 1
+    explanation: Flagship results often come from the promoting company and from favourable conditions such as stable, high-volume processes and long investment in skills. Critical evaluation checks transferability and evidence. Blind acceptance and blanket rejection are both poor judgement.

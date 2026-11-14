@@ -54,3 +54,21 @@ cards:
   - lesson: enterprise-databases-and-analytics
     front: Why must predictive analytics be built on governed data?
     back: Models trained on duplicated or inconsistent master data produce confident but misleading predictions.
+  - lesson: erp-architecture
+    front: Why are ERP modules described as integrated?
+    back: They read and write a shared database and shared master data, so one transaction (such as a goods receipt) updates stock, the purchase order and the ledger without re-keying or overnight interfaces.
+  - lesson: erp-architecture
+    front: What does each tier of a three-tier ERP do?
+    back: Presentation collects input and displays results; application runs business logic such as pricing, approvals and batch jobs; database stores master data and transactions.
+  - lesson: erp-architecture
+    front: Why does a hub-based integration design scale better than point-to-point?
+    back: A mesh needs up to n(n-1)/2 interfaces, whereas a hub needs about n connections, and the hub centralises transformation, routing and error monitoring.
+  - lesson: erp-architecture
+    front: Distinguish configuration, extension and customisation.
+    back: Configuration uses built-in settings; extension adds functionality beside the core through supported interfaces; customisation changes or adds code in the core and raises upgrade cost. Prefer them in that order.
+  - lesson: erp-architecture
+    front: When might asynchronous integration be preferred to synchronous?
+    back: For high-volume or failure-tolerant flows, such as posting many retail sales overnight, because the sender need not wait and unavailable systems can catch up later.
+  - lesson: erp-architecture
+    front: What factors should drive the choice between on-premise, SaaS and hybrid ERP?
+    back: Connectivity reliability, IT skills and staffing, capital versus operating budget, how standard the processes are, total cost of ownership, and regulatory expectations on data handling.

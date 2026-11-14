@@ -48,3 +48,21 @@ cards:
   - lesson: advanced-ai-and-smart-cities
     front: What is the central lesson of Sidewalk Toronto?
     back: Data governance and public trust, who owns and controls data collected in public spaces, must be settled early; the controversy contributed to the project's end when Sidewalk Labs withdrew in 2020.
+  - lesson: industry-4-0-and-smart-business-systems
+    front: What is a cyber-physical system and what makes it different from older automation?
+    back: It closes a feedback loop of sensing, connectivity, analytics and actuation. Unlike fixed-programme automation it is networked and data-rich and can adapt, which also means failures or attacks can have physical effects.
+  - lesson: industry-4-0-and-smart-business-systems
+    front: Why is the "four industrial revolutions" narrative a simplification?
+    back: Change was gradual and uneven, and Industry 4.0 is a concept and policy label from a German initiative (c. 2011), not a measurable event; whether it is a new revolution is debated.
+  - lesson: industry-4-0-and-smart-business-systems
+    front: Why does interoperability matter in smart business systems?
+    back: Equipment and software from many vendors must exchange data with consistent meaning; standards such as OPC UA, RAMI 4.0 and ISA-95 enable integration and reduce vendor lock-in.
+  - lesson: industry-4-0-and-smart-business-systems
+    front: What three layers does a smart business system need?
+    back: A data layer (reliable, governed collection), an analytics layer (insight from rules to machine learning) and an action layer (decisions and automation with human oversight).
+  - lesson: industry-4-0-and-smart-business-systems
+    front: What does "digitise and stabilise before you automate and optimise" mean?
+    back: Document and stabilise processes and capture reliable data first; automating a chaotic process only makes the chaos faster, so progress should climb a maturity ladder in measurable steps.
+  - lesson: industry-4-0-and-smart-business-systems
+    front: Name key limits and risks of Industry 4.0 adoption.
+    back: Hype and vague claims, retrofit cost, IT and OT security exposure, skills shortages, poor data quality, social impact on jobs, and contexts with unreliable power or connectivity.

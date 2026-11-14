@@ -2,7 +2,9 @@ code: CSIT 603
 slug: csit-603
 title: Enterprise Systems & Business Process Re-engineering
 status: listed
-statusNote: Part of the GradPath initial curriculum. Confirm the course's status against your official registration.
+statusNote: Core course in the MSc IT for Business Semester 1 programme (3 credit slots).
+classification: core
+creditSlots: 3
 accent: sky
 description: >
   How organisations use integrated enterprise systems to run, coordinate and improve their operations, and how
@@ -36,6 +38,9 @@ modules:
       - slug: erp-systems
         title: Enterprise Resource Planning (ERP) Systems
         topics: [ERP, ERP modules, Best-practice processes]
+      - slug: erp-architecture
+        title: "ERP Architecture: Modules, Tiers, Integration and Deployment"
+        topics: [ERP architecture, Three-tier architecture, ERP modules, Deployment models]
       - slug: crm-scm-and-hris
         title: CRM, SCM and HRIS
         topics: [CRM, SCM, HRIS]

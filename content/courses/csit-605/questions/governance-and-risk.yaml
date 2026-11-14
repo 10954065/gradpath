@@ -360,3 +360,113 @@ questions:
 
       Audits add independent assurance. Even a well-tested plan can decay: contact lists go out of date, backups stop working, playbooks drift from actual systems. Audits evaluate whether controls and plans are both well designed and operating effectively over time, and they report to the board through the audit committee, supporting governance under the Three Lines Model. A strong conclusion is that incident response, continuity and audit are complementary: incident response handles the event, continuity protects the business, and audit verifies both.
     explanation: Examiners look for accurate use of SP 800-61, a clear scope distinction supported by BIA concepts, and recognition of audit's independent assurance role.
+
+  - id: q24
+    lesson: ghana-cybersecurity-and-data-protection
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish the focus of the Cyber Security Authority from that of the Data Protection Commission
+    prompt: Which statement best distinguishes the Data Protection Commission from the Cyber Security Authority?
+    options:
+      - The Commission is concerned with the rights of individuals over personal data, while the Authority is concerned with the security and resilience of digital systems
+      - The Commission regulates only banks, while the Authority regulates only telecommunications companies
+      - The Commission issues digital certificates, while the Authority registers company names
+      - They have identical mandates and differ only in name
+    answer: 0
+    explanation: The Commission, under the Data Protection Act, 2012 (Act 843), supervises how personal data is processed and protects individuals' rights. The Authority, established under the Cybersecurity Act, 2020 (Act 1038), regulates and coordinates national cybersecurity. Neither is limited to a single industry, and a single incident such as a customer database breach can engage both.
+
+  - id: q25
+    lesson: ghana-cybersecurity-and-data-protection
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Match Ghanaian statutes to their main subject matter
+    prompt: Match each statute to its main subject matter.
+    pairs:
+      - left: Cybersecurity Act, 2020 (Act 1038)
+        right: National cybersecurity framework and the Cyber Security Authority
+      - left: Data Protection Act, 2012 (Act 843)
+        right: Processing of personal data and the Data Protection Commission
+      - left: Electronic Transactions Act, 2008 (Act 772)
+        right: Legal recognition of electronic records, signatures and transactions
+    explanation: Knowing which statute addresses which concern helps you build a correct legal register. All three can apply to the same organisation at the same time.
+
+  - id: q26
+    lesson: ghana-cybersecurity-and-data-protection
+    type: true_false
+    bloom: analyse
+    difficulty: medium
+    objective: Evaluate the relationship between certification and legal compliance
+    prompt: "True or false: An ISO/IEC 27001 certificate proves that an organisation complies with every applicable Ghanaian law."
+    answer: false
+    explanation: Certification shows that an information security management system meets the standard within its stated scope. Legal compliance depends on identifying and meeting each legal and regulatory duty, such as registration, consent and notification, which ISO/IEC 27001 only requires you to identify and address through the management system.
+
+  - id: q27
+    lesson: ghana-cybersecurity-and-data-protection
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply the legal, technical and reporting questions to an incident
+    scenario: |
+      A fictional Ghanaian lender discovers that a former contractor's account was still active and was used to
+      download a spreadsheet of customer names, phone numbers and loan balances. The security team has contained
+      the access but is unsure what to do next.
+    prompt: Which next step best reflects a mature, compliant response?
+    options:
+      - Wait until the investigation is complete before telling anyone outside the IT team
+      - Escalate under the incident procedure, assess whether personal data was compromised, and let the designated decision makers determine notification to the regulators and affected individuals, with legal advice
+      - Delete the access logs to avoid confusion
+      - Notify customers only after the media asks
+    answer: 1
+    explanation: A mature response follows a pre-defined procedure, assesses the personal data impact, and uses defined decision rights and legal advice to decide on regulator and individual notification. Silence and delay increase harm, and deleting logs destroys evidence and may breach legal duties.
+
+  - id: q28
+    lesson: ghana-cybersecurity-and-data-protection
+    type: mcq
+    bloom: understand
+    difficulty: medium
+    objective: Explain the importance of the Electronic Transactions Act for security controls
+    prompt: Why does the Electronic Transactions Act, 2008 (Act 772) increase the importance of logging and integrity controls?
+    options:
+      - It bans the use of electronic signatures
+      - It gives legal effect to electronic records and signatures, so an organisation must be able to show they are authentic and unaltered if relied on in a dispute
+      - It requires every organisation to be ISO/IEC 27001 certified
+      - It prohibits cloud computing
+    answer: 1
+    explanation: Legal recognition of electronic records only helps if the records can be trusted. Logging, identity management, integrity controls and retention provide the evidence of authenticity. The Act does not ban signatures, require certification or prohibit cloud services.
+
+  - id: q29
+    lesson: ghana-cybersecurity-and-data-protection
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for an organisation that decides how personal data is processed
+    prompt: What is the term for the person or organisation that decides the purpose and manner of processing personal data?
+    answers: [data controller, controller]
+    explanation: The data controller determines the purposes and means of processing and bears primary accountability. A data processor acts on the controller's behalf under contract.
+
+  - id: q30
+    lesson: ghana-cybersecurity-and-data-protection
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the best way to integrate legal duties with security frameworks
+    prompt: Which approach best integrates Ghanaian legal obligations with ISO/IEC 27001 and the NIST CSF?
+    options:
+      - Keep a separate legal checklist that never connects to the risk register
+      - Maintain a legal and regulatory register, map each obligation to controls and evidence, and feed it into risk management and board reporting
+      - Adopt a framework and assume the law is automatically satisfied
+      - Rely on the regulator to tell the organisation what to do each time
+    answer: 1
+    explanation: A mapped register turns obligations into owned controls and evidence and links them to the risk process, which supports audit and board oversight. A disconnected checklist drifts, frameworks do not automatically satisfy laws, and waiting on the regulator is not a compliance strategy.
+
+  - id: q31
+    lesson: ghana-cybersecurity-and-data-protection
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Recognise the purpose of a no-blame reporting culture
+    prompt: "True or false: A no-blame approach to good-faith incident reports tends to improve how quickly incidents are discovered."
+    answer: true
+    explanation: Staff who fear punishment hide mistakes such as clicking a phishing link, which delays containment. No-blame reporting for honest mistakes encourages early reports, while deliberate misconduct is still handled through discipline.

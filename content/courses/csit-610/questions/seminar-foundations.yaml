@@ -1,0 +1,263 @@
+module: seminar-foundations
+questions:
+  # ---------- seminar-purpose-and-expectations ----------
+  - id: q01
+    lesson: seminar-purpose-and-expectations
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish a seminar from a lecture
+    prompt: Which statement best distinguishes an academic seminar from a lecture?
+    options:
+      - A seminar presents settled knowledge while a lecture presents open arguments
+      - A seminar offers reasoned work for questioning and discussion, while a lecture mainly transmits established knowledge
+      - A seminar is always shorter than a lecture
+      - A seminar does not require sources
+    answer: 1
+    explanation: In a seminar the presenter offers an argument that the audience is expected to test, whereas a lecture usually transmits established knowledge. Length varies in both, and seminars certainly require credible sources.
+
+  - id: q02
+    lesson: seminar-purpose-and-expectations
+    type: true_false
+    bloom: recall
+    difficulty: easy
+    objective: Recognise the authority over seminar requirements
+    prompt: The format, topic allocation and assessment criteria for the CSIT 610 seminar are set by GradPath rather than by the department.
+    answer: false
+    explanation: GradPath is supplementary study material. The official format, topic allocation, dates and assessment criteria are set by the department and must be confirmed with the course coordinator or supervisor.
+
+  - id: q03
+    lesson: seminar-purpose-and-expectations
+    type: matching
+    bloom: recall
+    difficulty: medium
+    objective: Match seminar formats with what they test
+    prompt: Match each seminar format with what it mainly tests.
+    pairs:
+      - left: Individual presentation
+        right: Structure, evidence, clarity and composure
+      - left: Journal-club style session
+        right: Critical reading and evaluation of a published paper
+      - left: Work-in-progress seminar
+        right: Openness to feedback on unfinished research
+      - left: Lightning talk
+        right: Prioritisation and concision
+    explanation: Different formats stress different abilities. Knowing which one applies helps you decide where to put your preparation effort, though your department decides the actual format.
+
+  - id: q04
+    lesson: seminar-purpose-and-expectations
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply genre awareness to a seminar presentation
+    scenario: |
+      Illustrative scenario. A student presents twenty slides summarising nine studies in the order she read them. When a peer asks what a small firm owner should conclude, she cannot answer.
+    prompt: What is the most likely underlying weakness in her preparation?
+    options:
+      - She used too few slides
+      - She did not state a central argument or message
+      - She read too many studies
+      - She refused to take questions
+    answer: 1
+    explanation: Without a one-sentence message, the presentation becomes a tour of the literature and cannot answer a "so what" question. The number of slides or studies is secondary, and she did take the question, she simply had no argument to answer from.
+
+  - id: q05
+    lesson: seminar-purpose-and-expectations
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the planning method that starts from the date
+    prompt: What name is given to planning that starts from the confirmed presentation date and allocates tasks backwards?
+    answers: [backward planning, backwards planning, backward plan]
+    explanation: Backward planning works from the fixed date to allocate time for reading, drafting, slides, rehearsal and a buffer. It applies ordinary project management to an academic task.
+
+  - id: q06
+    lesson: seminar-purpose-and-expectations
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse why seminar and pitch genres differ
+    prompt: Why is acknowledging limitations rewarded in an academic seminar but sometimes minimised in a business pitch?
+    options:
+      - Academic audiences are not interested in outcomes
+      - A pitch aims to persuade to buy or fund, while a seminar is judged on honest, evidence-based argument that can withstand challenge
+      - Limitations are never relevant in business
+      - Seminars are informal so honesty is optional
+    answer: 1
+    explanation: The genres have different purposes. A seminar is assessed on the quality and honesty of reasoning, so limitations show maturity. A pitch seeks commitment and may downplay doubt, although misleading an investor is still unethical. The other options misstate what each audience values.
+
+  - id: q07
+    lesson: seminar-purpose-and-expectations
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Interpret the role of questions in a seminar
+    prompt: Receiving many questions from the audience usually signals that the seminar went badly.
+    answer: false
+    explanation: Questions are the purpose of the format and usually signal engagement. A silent audience may indicate disinterest or a lack of understanding rather than success.
+
+  - id: q08
+    lesson: seminar-purpose-and-expectations
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a preparation plan
+    scenario: |
+      Illustrative scenario. A student has eight weeks. His plan allocates seven weeks to building slides and one week to reading, with no rehearsal time.
+    prompt: Which judgement of this plan is most defensible?
+    options:
+      - It is sound because slides are the main deliverable
+      - It is weak because reading, argument-building and rehearsal need more time than slide design
+      - It is sound because rehearsal wastes time
+      - It is weak only because eight weeks is too long
+    answer: 1
+    explanation: Most of the effort should go into reading, thinking and structuring the argument, with at least two rehearsals. Slides support the argument and take less time than students expect. Eight weeks is a reasonable period.
+
+  # ---------- participation-and-academic-conduct ----------
+  - id: q09
+    lesson: participation-and-academic-conduct
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Describe the role of a discussant
+    prompt: What is the main role of a discussant?
+    options:
+      - To oppose the presenter regardless of the content
+      - To act as a critical friend who summarises fairly, identifies strengths and raises substantive issues
+      - To repeat the presentation for latecomers
+      - To mark the presenter privately
+    answer: 1
+    explanation: A discussant is a critical friend, not an opponent. A fair summary shows understanding before criticism. The other options misdescribe the role.
+
+  - id: q10
+    lesson: participation-and-academic-conduct
+    type: matching
+    bloom: recall
+    difficulty: medium
+    objective: Match question types to purposes
+    prompt: Match each type of seminar question with its purpose.
+    pairs:
+      - left: Clarifying question
+        right: Removes ambiguity about a term or claim
+      - left: Probing evidence question
+        right: Tests support for a claim
+      - left: Probing assumption question
+        right: Exposes hidden premises
+      - left: Extending question
+        right: Moves the idea into a new situation
+    explanation: Naming question types helps you choose the most useful one. Clarifying questions come first when you are unsure what a speaker means; probing questions test reasoning.
+
+  - id: q11
+    lesson: participation-and-academic-conduct
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Recognise spoken plagiarism
+    prompt: Presenting another person's slides or analysis as your own in a spoken seminar is plagiarism even though nothing is submitted in writing.
+    answer: true
+    explanation: Plagiarism concerns presenting someone else's ideas, words or work as your own, whatever the medium. Spoken and slide-based borrowing must be acknowledged in the same way as written text.
+
+  - id: q12
+    lesson: participation-and-academic-conduct
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply the four-step structure for disagreement
+    scenario: |
+      Illustrative scenario. A presenter claims that distrust is the main barrier to mobile banking adoption. A peer notes that two of the cited studies measured intention, not actual use.
+    prompt: Which contribution best follows the acknowledge, concern, reason, invite structure?
+    options:
+      - "That is obviously wrong and you have not met real customers."
+      - "You argue distrust is the main barrier. I am not yet convinced, because two studies measured intention rather than use, which may differ. What evidence links distrust to actual non-use?"
+      - "Many people disagree with you."
+      - "I have a different topic I would like to talk about."
+    answer: 1
+    explanation: The correct option accurately restates the claim, states a specific concern, gives a reason and invites a response. The others are personal, vague or off-topic and give the presenter nothing to answer.
+
+  - id: q13
+    lesson: participation-and-academic-conduct
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for attacking the person
+    prompt: What term describes attacking the person making a claim instead of the claim itself?
+    answers: [ad hominem, ad hominem attack, argumentum ad hominem]
+    explanation: An ad hominem remark targets the speaker's character, competence or background and offers no reasoning about the claim. It has no place in respectful academic debate.
+
+  - id: q14
+    lesson: participation-and-academic-conduct
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse group work integrity
+    prompt: In a team seminar, one member did most of the work and another presented it as an equal contribution. Which analysis is most accurate?
+    options:
+      - There is no issue because the team received one mark
+      - It raises fairness and integrity concerns because the division of work should be agreed openly and credit reflect genuine contribution
+      - It is acceptable if the team is friendly
+      - It is only a problem if the audience notices
+    answer: 1
+    explanation: Fair credit and genuine contribution are core conduct expectations in group work. Whether anyone notices, or whether the team is friendly, does not change the integrity issue. The department's rules govern how it would be handled.
+
+  - id: q15
+    lesson: participation-and-academic-conduct
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a response to a culturally sensitive challenge
+    scenario: |
+      Illustrative scenario. A junior colleague doubts a senior manager's claim in a project meeting but fears appearing disrespectful.
+    prompt: Which approach best combines respect and rigour?
+    options:
+      - Stay silent to avoid conflict
+      - Ask a courteous, specific question about the evidence after acknowledging the manager's point
+      - Contradict the claim loudly
+      - Raise the concern only in private messages to others
+    answer: 1
+    explanation: A respectful, specific question allows the claim to be tested without personal attack and is consistent with courteous norms. Silence leaves a possible error unchallenged, while loud contradiction or back-channel complaints damage trust.
+
+  - id: q16
+    lesson: participation-and-academic-conduct
+    type: true_false
+    bloom: apply
+    difficulty: medium
+    objective: Apply guidance on AI tools
+    prompt: Whether text-generation tools may be used when preparing a seminar is a matter of institutional policy, so a student should ask the department and follow its disclosure rules.
+    answer: true
+    explanation: Policy on such tools varies and is set by the institution. Regardless of permission, the student remains responsible for the accuracy of everything presented.
+
+  # ---------- module-level ----------
+  - id: q17
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the value of seminar participation
+    marks: 20
+    prompt: Discuss the claim that the quality of a postgraduate seminar depends as much on the audience as on the presenter. Refer to the purposes of seminars, the skills of constructive participation and professional academic conduct.
+    structure:
+      - Introduction defining the seminar as an argument offered for testing
+      - Purposes of seminars and why they need an active audience
+      - Constructive questioning and respectful disagreement
+      - Conduct and integrity responsibilities of all participants
+      - Counter-view that presenter preparation matters most
+      - Conclusion with a reasoned judgement
+    rubric:
+      - criterion: Understanding of seminar purposes
+        marks: 5
+        descriptor: Explains synthesis, oral argument, critical listening, community and dissertation preparation and links them to audience roles.
+      - criterion: Analysis of participation skills
+        marks: 6
+        descriptor: Uses question types and the acknowledge-concern-reason-invite structure to show how participation raises quality.
+      - criterion: Treatment of conduct and integrity
+        marks: 4
+        descriptor: Covers honest sourcing, fair credit, confidentiality and respect, and notes institutional policy as authoritative.
+      - criterion: Critical evaluation and structure
+        marks: 5
+        descriptor: Considers the opposing view, reaches a balanced judgement and writes in a clear academic structure.
+    modelAnswer: |
+      A strong essay argues that seminars are designed as collective inquiry, so quality is shared between presenter and audience. It begins by defining a seminar as a reasoned argument offered for testing, unlike a lecture that transmits settled knowledge. The educational purposes, which include synthesis, oral argument, critical listening and preparation for the dissertation, depend on responses: a presenter cannot practise defending a claim if nobody tests it.
+
+      The essay should explain how audience members raise quality through preparation and well-formed clarifying and probing questions, and how discussants act as critical friends. Disagreement should be structured, for instance by acknowledging the claim, stating a precise concern, giving a reason and inviting a response, which keeps debate on arguments rather than persons. Conduct matters to everyone: honest acknowledgement of sources and data, fair credit in group work, confidentiality, inclusive behaviour and compliance with institutional policy, including policy on AI tools.
+
+      A balanced answer considers the counter-view that the presenter's preparation sets the ceiling, since a poorly argued presentation limits what an audience can do. It concludes that preparation is necessary but not sufficient: the best learning arises when a well-prepared presenter meets a prepared, respectful and critical audience, and that responsibility is shared.
+    explanation: Examiners look for a reasoned position rather than a list of tips, specific reference to question types and conduct standards, and recognition that the department's rules are the authority.

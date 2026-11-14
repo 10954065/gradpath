@@ -1,0 +1,61 @@
+module: preparing-the-presentation
+cards:
+  # structuring-an-academic-presentation
+  - lesson: structuring-an-academic-presentation
+    front: Why must a presentation be built around a single central claim?
+    back: The claim gives a test for what to include. Every section should help the audience believe, understand or evaluate it; anything else goes to a backup slide.
+  - lesson: structuring-an-academic-presentation
+    front: What are the three parts of the basic presentation shape and roughly how is time split?
+    back: Opening (about 10 to 15 per cent), body (about 65 to 75 per cent) and closing (about 10 to 15 per cent). These proportions are a guide, not an official rule.
+  - lesson: structuring-an-academic-presentation
+    front: Name four signposting moves and give the job of each.
+    back: Preview (announce the route), marker (flag a boundary), summary (consolidate what has been shown) and link (explain why the next section follows).
+  - lesson: structuring-an-academic-presentation
+    front: Why is repetition of the main point a strength in a talk but a flaw in an essay?
+    back: Listeners cannot re-read, so restating the claim in the opening, body and closing lets anyone who lost attention rejoin the argument.
+  - lesson: structuring-an-academic-presentation
+    front: How should you build a timing plan, and what should you do if you rehearse over time?
+    back: Allocate minutes per section and keep a buffer of at least 10 per cent. If you overrun, cut content and protect the conclusion; do not speak faster.
+  - lesson: structuring-an-academic-presentation
+    front: What belongs in the closing of a presentation, and what does not?
+    back: Restate the claim in light of the evidence, state limitations, draw out implications and give the take-home message. Do not add new evidence or end on an apology.
+
+  # slides-and-visual-evidence
+  - lesson: slides-and-visual-evidence
+    front: What should slides do that speech cannot easily do, and vice versa?
+    back: Slides show figures, diagrams, structure and key terms. Speech carries reasoning, qualification and interpretation.
+  - lesson: slides-and-visual-evidence
+    front: What is an action title and why use one?
+    back: A slide title written as a short sentence stating the point, such as "Cost is the most cited barrier". It tells the audience what to take from the slide, unlike a topic label such as "Results".
+  - lesson: slides-and-visual-evidence
+    front: Why is a truncated bar-chart axis misleading?
+    back: Bar length should be proportional to the value. A baseline that does not start at zero exaggerates small differences.
+  - lesson: slides-and-visual-evidence
+    front: When is a table better than a graph, and when is a graph better?
+    back: Tables suit situations where readers need exact values; graphs suit situations where they need to see patterns or trends (Few, 2012).
+  - lesson: slides-and-visual-evidence
+    front: List three accessibility practices for slides.
+    back: Strong text contrast and large plain type; not relying on colour alone to distinguish categories; alternative text for images and charts in shared files.
+  - lesson: slides-and-visual-evidence
+    front: What is the orient, direct, interpret sequence for presenting a visual?
+    back: Orient (say what it shows), direct (point to the feature that matters) and interpret (say why it matters for your argument).
+
+  # referencing-in-presentations
+  - lesson: referencing-in-presentations
+    front: Besides direct quotations, what else needs attribution in a presentation?
+    back: Paraphrased ideas, data, figures, images, diagrams and the structure of another author's argument.
+  - lesson: referencing-in-presentations
+    front: What does a source line beneath a figure communicate?
+    back: "How the visual relates to the original: reproduced, adapted, drawn from published data, or from your own data, with the author, year and figure or sample details."
+  - lesson: referencing-in-presentations
+    front: Why is "found online" not the same as "free to use"?
+    back: Images and data may be protected by copyright or licence conditions. Check the licence, record the creator and source, and credit them as the licence requires.
+  - lesson: referencing-in-presentations
+    front: What is the difference between a genuine paraphrase and patchwriting?
+    back: A genuine paraphrase changes wording and structure after understanding the source and still cites it. Patchwriting swaps a few words in the original sentence and stays too close.
+  - lesson: referencing-in-presentations
+    front: What checks should you make on a reference list before presenting?
+    back: Every in-text citation appears in the list and vice versa, the style is APA 7 and consistent, and each source, DOI or URL has been verified as real.
+  - lesson: referencing-in-presentations
+    front: What are the main integrity risks when using generative AI tools to prepare a seminar?
+    back: Submitting generated work as your own where rules forbid it, failing to disclose use where required, citing sources that do not exist, and presenting unverified claims. Follow your institution's rules and verify everything.

@@ -1,0 +1,43 @@
+module: seminar-foundations
+cards:
+  # seminar-purpose-and-expectations
+  - lesson: seminar-purpose-and-expectations
+    front: How does a seminar differ from a lecture?
+    back: A lecture mainly transmits settled knowledge; a seminar offers reasoned work as an argument that the audience questions and tests.
+  - lesson: seminar-purpose-and-expectations
+    front: Why should a presenter be able to state a one-sentence message?
+    back: Without a clear message the presentation becomes a tour of the literature. The sentence anchors every decision about which evidence and slides to include.
+  - lesson: seminar-purpose-and-expectations
+    front: Who sets the official seminar format, topic allocation, dates and assessment criteria?
+    back: The department. GradPath is supplementary, so confirm these with the course coordinator or supervisor rather than assuming them.
+  - lesson: seminar-purpose-and-expectations
+    front: Why is acknowledging limitations rewarded in a seminar?
+    back: Seminars are judged on honest, evidence-based argument that can withstand challenge, so naming limits shows analysis and maturity rather than weakness.
+  - lesson: seminar-purpose-and-expectations
+    front: What is backward planning and why use it?
+    back: Starting from the confirmed presentation date and allocating time backwards for reading, drafting, slides, rehearsals and a buffer, so the fixed deadline is met realistically.
+  - lesson: seminar-purpose-and-expectations
+    front: Name three abilities a seminar develops that reading and writing alone do not.
+    back: Synthesis under time pressure, oral argument, and critical listening (also scholarly community and dissertation preparation).
+  # participation-and-academic-conduct
+  - lesson: participation-and-academic-conduct
+    front: What is the role of a discussant?
+    back: A critical friend who summarises the work fairly, identifies strengths, raises a few substantive issues and suggests improvements.
+  - lesson: participation-and-academic-conduct
+    front: What are the four steps of a respectful disagreement?
+    back: Acknowledge the point accurately, state the concern precisely, give the reason or evidence, and invite a response.
+  - lesson: participation-and-academic-conduct
+    front: How does a probing question differ from a clarifying question?
+    back: A clarifying question removes ambiguity about what was said; a probing question tests the evidence, reasoning or assumptions behind it.
+  - lesson: participation-and-academic-conduct
+    front: Is it plagiarism to present someone else's slides or analysis as your own in a spoken seminar?
+    back: Yes. Plagiarism concerns presenting another person's work as your own in any medium, so spoken and slide-based borrowing must be acknowledged.
+  - lesson: participation-and-academic-conduct
+    front: What does the principle of charity ask you to do before criticising an argument?
+    back: Interpret it in its strongest reasonable form, so that you challenge what the speaker actually means, not a weak version of it.
+  - lesson: participation-and-academic-conduct
+    front: What is an ad hominem remark, and why is it unacceptable in debate?
+    back: An attack on the person instead of the claim. It offers no reasoning about the argument and damages respectful discussion.
+  - lesson: participation-and-academic-conduct
+    front: What should you do about AI tools when preparing seminar work?
+    back: Check your department's policy, follow its disclosure rules where use is permitted, and remember that you remain responsible for the accuracy of what you present.

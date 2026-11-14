@@ -1,0 +1,61 @@
+module: delivery-and-discussion
+cards:
+  # research-communication-and-delivery
+  - lesson: research-communication-and-delivery
+    front: Why are pauses valuable in delivery?
+    back: They give weight to key points, let the audience absorb ideas and replace filler words. Silence feels longer to the speaker than to the listener.
+  - lesson: research-communication-and-delivery
+    front: What is the recommended note strategy for most seminars?
+    back: Key-word prompts for each slide, with the opening and closing sentences learned exactly. This balances natural speech with security at the most pressured moments.
+  - lesson: research-communication-and-delivery
+    front: Describe the stages of effective rehearsal.
+    back: Silent run-through, aloud with a timer, standing with slides, recorded, in front of peers, and a final dress rehearsal in the venue if possible, with one improvement goal per run.
+  - lesson: research-communication-and-delivery
+    front: What should be in a contingency plan for a presentation?
+    back: Slides in several formats (USB, cloud, PDF), a no-slides version of the talk, fallback screenshots instead of live demonstrations, and a plan for reduced time.
+  - lesson: research-communication-and-delivery
+    front: Name three techniques for managing presentation anxiety.
+    back: Thorough preparation and realistic rehearsal, slow breathing with longer exhalations, and starting from a learned opening. Reframing nerves as energy also helps.
+  - lesson: research-communication-and-delivery
+    front: Why is the "55 per cent body language" claim misleading?
+    back: It comes from narrow experiments on feelings and attitudes and does not describe communication in general. Content matters, and voice and presence affect its credibility.
+
+  # handling-questions-and-discussion
+  - lesson: handling-questions-and-discussion
+    front: What are the steps of the method for answering a question?
+    back: Listen fully, pause, paraphrase or clarify, answer directly, give evidence, be honest about limits, check the answer was sufficient, and keep it concise.
+  - lesson: handling-questions-and-discussion
+    front: How should you respond if you do not know the answer?
+    back: Say so, explain what you do know that is relevant and how you could find out, and offer to follow up. Do not bluff.
+  - lesson: handling-questions-and-discussion
+    front: How should you respond to a valid criticism?
+    back: Concede the point, explain its effect on your conclusion and say what you would do differently. Conceding a valid point enhances credibility.
+  - lesson: handling-questions-and-discussion
+    front: What is the value of a backup slide?
+    back: It holds detailed data, methods or alternative interpretations ready for expected questions without overloading the main talk.
+  - lesson: handling-questions-and-discussion
+    front: What makes a good audience question?
+    back: It is specific, linked to the speaker's content, asked one at a time, aimed at the argument rather than the person, and seeks understanding or advances discussion.
+  - lesson: handling-questions-and-discussion
+    front: What does the principle of charity ask of a questioner or respondent?
+    back: Interpret the other person's argument in its strongest reasonable form before responding, which models honesty and often reduces tension.
+
+  # feedback-reflection-and-next-steps
+  - lesson: feedback-reflection-and-next-steps
+    front: What three questions does effective feedback answer?
+    back: Where am I going? How am I going? Where to next? (Hattie & Timperley, 2007).
+  - lesson: feedback-reflection-and-next-steps
+    front: What is the difference between feedback and feedforward?
+    back: Feedback describes the gap between performance and goal; feedforward focuses on what to do next to close it.
+  - lesson: feedback-reflection-and-next-steps
+    front: List the six stages of Gibbs' reflective cycle.
+    back: Description, feelings, evaluation, analysis, conclusion and action plan.
+  - lesson: feedback-reflection-and-next-steps
+    front: How do you process feedback instead of reacting to it defensively?
+    back: Receive it, understand it by asking for examples, evaluate its accuracy and patterns, prioritise a few changes and act on them.
+  - lesson: feedback-reflection-and-next-steps
+    front: What makes an improvement goal useful?
+    back: It is specific, measurable and time-bound, for example recording two rehearsals and halving filler words before the next presentation.
+  - lesson: feedback-reflection-and-next-steps
+    front: What changes when seminar material is turned into written research?
+    back: Readers need fuller definitions, detailed methods, explicit reasoning and complete citations, but not the repeated signposts of a talk. Check rules on acknowledging reused work.

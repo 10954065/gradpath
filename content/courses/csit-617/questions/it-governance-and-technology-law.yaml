@@ -1,0 +1,313 @@
+module: it-governance-and-technology-law
+questions:
+  # ---------- it-governance-frameworks ----------
+  - id: gl01
+    lesson: it-governance-frameworks
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish governance from management
+    prompt: Which statement best distinguishes IT governance from IT management?
+    options:
+      - Governance evaluates, directs and monitors the use of IT, while management plans, builds, runs and monitors within that direction
+      - Governance is carried out by the IT department and management by the board
+      - Governance concerns hardware and management concerns software
+      - Governance is a legal requirement and management is optional
+    answer: 0
+    explanation: Governance sets direction, risk appetite and oversight, and is the responsibility of the board and executives. Management delivers within that direction. The second option reverses the roles, the third invents a technical split, and the fourth confuses governance with a legal duty.
+  - id: gl02
+    lesson: it-governance-frameworks
+    type: matching
+    bloom: understand
+    difficulty: medium
+    objective: Match ISO/IEC 38500 principles to their core ideas
+    prompt: Match each ISO/IEC 38500 principle to its core idea.
+    pairs:
+      - left: Responsibility
+        right: People understand and accept their duties for IT and have the authority to meet them
+      - left: Acquisition
+        right: IT purchases are made for valid reasons after balancing benefits, costs and risks
+      - left: Conformance
+        right: IT complies with mandatory legislation and defined policies
+      - left: Human behaviour
+        right: IT decisions respect the needs of the people affected by them
+    explanation: The principles together describe sound governance. Responsibility is about clear ownership, acquisition about transparent investment decisions, conformance about law and policy, and human behaviour about the people who use or are affected by systems.
+  - id: gl03
+    lesson: it-governance-frameworks
+    type: true_false
+    bloom: recall
+    difficulty: easy
+    objective: Recall the nature of COBIT
+    prompt: COBIT is a law that organisations in Ghana must comply with, and adopting it produces a compliance certificate.
+    answer: false
+    explanation: COBIT is a reference framework published by ISACA. Organisations may adopt it wholly, partly or alongside other frameworks. It is not legislation, and the lesson stresses that it should be tailored rather than treated as a certification.
+  - id: gl04
+    lesson: it-governance-frameworks
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the ISO/IEC 38500 governance cycle
+    prompt: "Complete the ISO/IEC 38500 cycle: Evaluate, Direct, ______."
+    answers: [Monitor, monitoring]
+    explanation: The three governance tasks are Evaluate, Direct and Monitor. Monitoring closes the loop by checking conformance and performance, which feeds the next round of evaluation.
+  - id: gl05
+    lesson: it-governance-frameworks
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply governance concepts to a failing project
+    scenario: |
+      Illustrative scenario. A Ghanaian insurance company launches a claims app. The IT manager chose the vendor and signed off the budget alone. Nine months later the app works technically but few claims are filed through it, and the board only learns of low usage from an external auditor.
+    prompt: Which governance weakness is most clearly shown?
+    options:
+      - No benefit owner, business case review or regular monitoring linked the investment to business outcomes
+      - The vendor used the wrong programming language
+      - The app was insufficiently encrypted
+      - The board interfered too much in daily operations
+    answer: 0
+    explanation: The project is technically complete but delivers little value, and the board lacked reporting. That signals failures of responsibility, strategy and monitoring. Nothing in the scenario points to encryption or language problems, and the board's problem was too little oversight, not too much.
+  - id: gl06
+    lesson: it-governance-frameworks
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse why a steering committee may fail
+    prompt: A steering committee approves every IT proposal without questions and members send junior delegates. What does this most likely indicate?
+    options:
+      - Excellent governance because decisions are fast
+      - The committee lacks authority, engagement and evidence, so accountability is diffused
+      - That COBIT has been fully implemented
+      - That decision rights are perfectly clear
+    answer: 1
+    explanation: Rubber-stamping and absent decision makers are classic signs of a ritual committee. Speed is not evidence of quality, and clear decision rights would mean empowered members who challenge proposals.
+  - id: gl07
+    lesson: it-governance-frameworks
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the claim that technology risk is enterprise risk
+    prompt: Which argument best supports the claim that technology risk is enterprise risk?
+    options:
+      - IT staff are more numerous than other staff
+      - A failure in a core system, such as unintended trading orders, can threaten the survival of the whole organisation
+      - Technology budgets are always the largest budget
+      - Boards usually have technical members
+    answer: 1
+    explanation: The Knight Capital incident shows how a deployment failure produced losses large enough to endanger the firm. The other options are either untrue as general claims or irrelevant to the nature of the risk.
+  - id: gl08
+    lesson: it-governance-frameworks
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Explain tailoring in COBIT
+    prompt: COBIT expects the same set of objectives and the same level of maturity to be applied to every organisation regardless of size or risk profile.
+    answer: false
+    explanation: COBIT uses design factors such as size, risk profile and compliance needs to tailor the governance system. A microfinance institution and a universal bank would prioritise differently.
+  - id: gl09
+    lesson: it-governance-frameworks
+    type: scenario
+    bloom: analyse
+    difficulty: hard
+    objective: Link governance failure to professional ethics
+    scenario: |
+      Illustrative scenario. A systems engineer at a Ghanaian bank warns in writing that a planned release lacks a rollback plan. The change manager says the board wants the launch this week and tells her not to put concerns in writing. The release proceeds and causes a day-long outage.
+    prompt: Which analysis best connects governance and professional ethics?
+    options:
+      - The engineer carries no duty because governance belongs to the board
+      - Weak decision rights and escalation channels undermined governance, and the engineer's duties of competence and honesty (for example ACM principles 2.2 and 1.3) support escalating the concern through legitimate channels
+      - Only the vendor is responsible
+      - The outage proves that written warnings should be avoided
+    answer: 1
+    explanation: Governance should provide escalation routes and protect honest risk reporting. Professional codes ask practitioners to be competent and honest about risks. The engineer is not the only responsible party, but she is not free of duty either, and discouraging written warnings is a governance failure.
+
+  # ---------- technology-law-in-ghana ----------
+  - id: gl10
+    lesson: technology-law-in-ghana
+    type: matching
+    bloom: recall
+    difficulty: easy
+    objective: Match Ghanaian statutes to their subjects
+    prompt: Match each Ghanaian statute to its main subject.
+    pairs:
+      - left: Electronic Transactions Act, 2008 (Act 772)
+        right: Legal recognition of electronic records, signatures and contracts
+      - left: Data Protection Act, 2012 (Act 843)
+        right: Processing of personal data
+      - left: Cybersecurity Act, 2020 (Act 1038)
+        right: Cybersecurity regulation and critical information infrastructure
+      - left: Copyright Act, 2005 (Act 690)
+        right: Protection of original works including computer programs
+    explanation: Each Act has a distinct focus. Confusing them is a common examination error, so linking the statute number, name and subject is worth practising.
+  - id: gl11
+    lesson: technology-law-in-ghana
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Understand the relationship between law and ethics
+    prompt: If a practice complies with the law, a professional has no further ethical questions to consider.
+    answer: false
+    explanation: Law provides a minimum standard. A practice can be lawful and still be disproportionate, unfair or disrespectful of users, and professional codes such as the ACM Code ask for more than legal compliance.
+  - id: gl12
+    lesson: technology-law-in-ghana
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the data protection regulator
+    prompt: Which Ghanaian body supervises compliance with the Data Protection Act, 2012?
+    answers: [Data Protection Commission, The Data Protection Commission]
+    explanation: Act 843 established the Data Protection Commission. The Cyber Security Authority regulates cybersecurity under Act 1038, and the National Communications Authority is the communications sector regulator.
+  - id: gl13
+    lesson: technology-law-in-ghana
+    type: mcq
+    bloom: apply
+    difficulty: medium
+    objective: Apply Act 772 reasoning to system design
+    prompt: A fintech builds an online loan agreement. Which design choice best supports the reliability of the electronic records?
+    options:
+      - Storing agreements as editable text files on a shared drive
+      - Capturing authenticated acceptance with timestamps and an audit trail, and protecting records from alteration
+      - Relying on verbal confirmation from the customer
+      - Deleting acceptance logs after one week to save space
+    answer: 1
+    explanation: Electronic records are only valuable as evidence if they can be attributed to a person, dated, protected from change and retrieved. Editable files, undocumented verbal consent and deleting logs all weaken reliability.
+  - id: gl14
+    lesson: technology-law-in-ghana
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply the compliance method to a vendor decision
+    scenario: |
+      Illustrative scenario. A Ghanaian health-records start-up wants to host patient data with a cloud provider whose servers are outside Ghana. The founder says this removes the start-up's data protection duties because the provider will hold the data.
+    prompt: What is the best response?
+    options:
+      - Agree, because the provider becomes the only responsible party
+      - The start-up usually remains responsible for the data it controls, so it should assess the transfer, sign a processing contract with security and breach terms, and take legal advice
+      - Ignore data protection law until a complaint is received
+      - Store the data in plain text so that the provider can handle compliance
+    answer: 1
+    explanation: Outsourcing hosting does not normally remove a controller's responsibility. A structured approach looks at the transfer, contract terms and safeguards. Health data are sensitive, so specialist legal advice is prudent.
+  - id: gl15
+    lesson: technology-law-in-ghana
+    type: mcq
+    bloom: analyse
+    difficulty: medium
+    objective: Analyse the effect of the GDPR on a non-EU company
+    prompt: Why might the EU GDPR matter to a Ghanaian online retailer without any European office?
+    options:
+      - It never applies outside Europe
+      - It can apply where the retailer offers goods or services to people in the EU or monitors their behaviour
+      - It applies only to banks
+      - It replaces Ghana's own data protection law
+    answer: 1
+    explanation: The GDPR has extraterritorial reach in defined circumstances such as targeting people in the EU. It does not replace Ghanaian law, and it is not limited to banks.
+  - id: gl16
+    lesson: technology-law-in-ghana
+    type: short_answer
+    bloom: recall
+    difficulty: medium
+    objective: Recall the Budapest Convention
+    prompt: By what common short name is the Council of Europe Convention on Cybercrime known?
+    answers: [Budapest Convention, The Budapest Convention]
+    explanation: It is called the Budapest Convention because it was opened for signature in Budapest. Ghana has acceded to it, and it promotes harmonised offences and cross-border cooperation.
+  - id: gl17
+    lesson: technology-law-in-ghana
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the lessons of Schrems II
+    prompt: Which conclusion about Schrems II is best supported by the lesson?
+    options:
+      - Cross-border transfer tools are permanent once adopted
+      - Contracts alone may be insufficient, and the legal environment of the destination country and technical safeguards must be assessed
+      - Data location has no legal significance
+      - Only US companies are affected by data transfer rules
+    answer: 1
+    explanation: The Court invalidated the Privacy Shield and required case-by-case checks when relying on standard contractual clauses. The case shows that legal positions can change and that location, contracts and technical safeguards interact.
+  - id: gl18
+    lesson: technology-law-in-ghana
+    type: true_false
+    bloom: apply
+    difficulty: medium
+    objective: Apply copyright rules to freelance work
+    prompt: A freelance developer who writes code for a client without any written agreement on ownership has removed all risk of a later ownership dispute.
+    answer: false
+    explanation: A missing agreement creates uncertainty, and disputes are more likely. Contractors and clients should state ownership and licensing terms in writing, and the exact legal position depends on the contract and the Copyright Act.
+
+  # ---------- module level ----------
+  - id: gl19
+    type: essay
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the interaction of governance, law and professional ethics
+    prompt: "\"Legal compliance and good governance are enough to ensure that IT professionals behave ethically.\" Critically evaluate this statement with reference to ISO/IEC 38500, COBIT, the Ghanaian technology statutes and the ACM Code of Ethics."
+    marks: 20
+    structure:
+      - Introduction and thesis
+      - Governance structures and what they achieve (accountability, decision rights, monitoring)
+      - The role and limits of the law (Acts 772, 843, 1038, 775 and 690 as minimum standards)
+      - What professional ethics adds (proportionality, honesty, whistleblowing, harm avoidance)
+      - A brief illustrative example showing a lawful but ethically doubtful practice
+      - Conclusion
+    rubric:
+      - criterion: Governance analysis
+        marks: 5
+        descriptor: Accurately explains governance versus management, ISO/IEC 38500 principles or COBIT concepts and how they create accountability.
+      - criterion: Legal analysis
+        marks: 5
+        descriptor: Accurately identifies relevant Ghanaian statutes and explains law as a minimum standard without inventing section numbers or penalties.
+      - criterion: Ethical analysis
+        marks: 5
+        descriptor: Uses ACM principles or ethical theories to show what compliance and governance leave out.
+      - criterion: Argument and evaluation
+        marks: 5
+        descriptor: Offers a clear, balanced thesis, uses an example, considers counter-arguments and reaches a justified conclusion.
+    explanation: Examiners look for a clear thesis, accurate use of frameworks and statutes, and evidence of evaluation rather than description. Strong answers show that governance and law are necessary but not sufficient.
+    modelAnswer: |
+      A strong answer argues that compliance and governance are necessary but not sufficient. It begins by defining governance as the board's evaluation, direction and monitoring of IT, with management delivering within that direction. ISO/IEC 38500 and COBIT make accountability visible through clear responsibilities, decision rights, risk appetite and performance reporting. These structures reduce the chance that harmful decisions are made unnoticed.
+
+      The answer then explains that Ghanaian statutes such as the Data Protection Act, 2012 (Act 843), the Cybersecurity Act, 2020 (Act 1038), the Electronic Transactions Act, 2008 (Act 772), the Electronic Communications Act, 2008 (Act 775) and the Copyright Act, 2005 (Act 690) set minimum standards enforced by regulators. They cannot anticipate every technology or context, and enforcement and interpretation vary.
+
+      Ethics fills the gaps. An organisation might lawfully collect more personal data than it needs, or monitor staff in ways that are technically permitted but disproportionate. ACM principles on honesty, avoiding harm and respecting privacy ask professionals to question such practices and to raise concerns through proper channels. Governance can support this by giving escalation routes, but it cannot create integrity by itself, and a committee can approve harmful proposals.
+
+      The conclusion should weigh these points and state that compliance is a floor, governance is an enabling structure and professional judgement is what remains when rules run out.
+  - id: gl20
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Integrate governance, technology law and ethics in a case
+    prompt: Analyse the case. Identify governance failures, the legal frameworks likely to be engaged, the ethical issues and your recommended actions for the organisation and for Kojo.
+    marks: 25
+    case: |
+      Illustrative scenario. "Akwaaba Pay", a hypothetical Ghanaian mobile-payments company, is preparing to expand to customers in the European Union. The chief executive approves a plan to move all customer records to a cloud provider abroad and to launch a feature that scores customers' creditworthiness using their phone contacts and location history. The IT steering committee has not met for a year. Kojo, a senior developer, notices that the contact data of non-customers will be processed, that there is no breach-response plan and that the company has never checked whether it needs to register with a regulator. His manager says that the launch date is fixed and legal questions can wait until after launch.
+    structure:
+      - Facts and stakeholders
+      - Governance analysis (ISO/IEC 38500 principles, decision rights, steering committee, monitoring)
+      - Legal analysis (Acts 843, 772, 1038 and 775 as relevant, and foreign rules such as the GDPR)
+      - Ethical analysis (proportionality, consent, harm to non-customers, ACM principles)
+      - Options for Kojo and for the company
+      - Recommendation and counter-arguments
+    rubric:
+      - criterion: Facts and stakeholders
+        marks: 3
+        descriptor: Identifies customers, non-customers whose contacts are processed, staff, regulators and the company.
+      - criterion: Governance analysis
+        marks: 6
+        descriptor: Applies several ISO/IEC 38500 principles accurately, notes the dormant steering committee and missing accountability and monitoring.
+      - criterion: Legal analysis
+        marks: 6
+        descriptor: Identifies relevant Ghanaian statutes and cross-border issues at an appropriate general level, avoids invented provisions and notes the need for legal advice.
+      - criterion: Ethical analysis
+        marks: 5
+        descriptor: Applies at least one ethical theory and relevant ACM principles to data minimisation, consent and harm.
+      - criterion: Recommendation and counter-arguments
+        marks: 5
+        descriptor: Provides a staged, practical recommendation including escalation by Kojo, a compliance review and delayed launch if necessary, and answers objections about commercial pressure.
+    explanation: Examiners look for integration of the three lenses, accurate and cautious use of legal material and a practical, staged recommendation rather than a list of laws.
+    modelAnswer: |
+      A good answer begins by identifying stakeholders, notably non-customers whose contacts would be processed without their involvement. On governance, there is no evidence of clear responsibility, a business case, a risk assessment or monitoring: the steering committee has been dormant, so evaluation and direction are weak, and the pressure to launch before legal questions are answered shows the conformance principle being ignored.
+
+      On law, the answer should state that Act 843 is engaged by the processing of personal data, including contact data, and that registration and security duties should be checked with the Data Protection Commission. Act 772 is relevant to electronic agreements with customers, Act 1038 to security and incident reporting expectations, and Act 775 and the communications regime where telecom services are used. Moving data abroad and serving EU customers raises cross-border questions, and the GDPR may apply. The answer should be framed as identifying issues for legal advice, not as definitive rulings.
+
+      Ethically, using non-customers' contacts is hard to justify on grounds of consent and proportionality, and ACM principles on avoiding harm and respecting privacy are directly engaged.
+
+      Kojo should document his concerns, raise them with his manager and then through the compliance function, legal counsel or the board, and escalate further if ignored. The company should convene the steering committee, perform a legal and privacy impact review, redesign the scoring feature to avoid contact data and delay the launch if needed.

@@ -1,0 +1,380 @@
+module: topic-and-literature
+questions:
+  # ---------- selecting-a-seminar-topic ----------
+  - id: q01
+    lesson: selecting-a-seminar-topic
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Distinguish a topic from a research question
+    prompt: Which of the following is a focused analytical question rather than a topic?
+    options:
+      - Cybersecurity in banks
+      - Banks and technology
+      - To what extent does staff awareness training reduce phishing incidents in financial institutions, according to the available evidence?
+      - Digital transformation
+    answer: 2
+    explanation: A topic names an area, whereas a question demands a specific, answerable response and invites argument. The third option specifies an intervention, outcome and evidence base. The others are broad areas.
+
+  - id: q02
+    lesson: selecting-a-seminar-topic
+    type: true_false
+    bloom: understand
+    difficulty: easy
+    objective: Understand the value of a working thesis
+    prompt: A working thesis should be abandoned if later reading suggests it is incorrect.
+    answer: false
+    explanation: A working thesis is a provisional answer that may be confirmed, qualified or revised in light of evidence. Revising it is a sign of good scholarship, not failure. Abandoning the question altogether is not required.
+
+  - id: q03
+    lesson: selecting-a-seminar-topic
+    type: matching
+    bloom: recall
+    difficulty: medium
+    objective: Match narrowing dimensions with examples
+    prompt: Match each narrowing dimension with an example.
+    pairs:
+      - left: Who
+        right: Small retailers
+      - left: Where
+        right: Urban Ghana
+      - left: Which technology
+        right: Mobile money
+      - left: Which perspective
+        right: Regulator
+    explanation: Narrowing a topic along these dimensions turns a broad field such as digital payments into a focused, researchable question. Too many constraints can leave too little literature, so balance is needed.
+
+  - id: q04
+    lesson: selecting-a-seminar-topic
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply the topic tests
+    scenario: |
+      Illustrative scenario. A student wants to present on "e-commerce". A quick scholarly search returns many thousands of results across dozens of subtopics.
+    prompt: Which test does the candidate topic most clearly fail?
+    options:
+      - Interest
+      - Scope
+      - Spelling
+      - Referencing
+    answer: 1
+    explanation: A whole field cannot be treated well in a short seminar, so the topic fails on scope. It should be narrowed by population, setting, aspect or perspective. Interest might be high, and spelling and referencing are not topic tests.
+
+  - id: q05
+    lesson: selecting-a-seminar-topic
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for deliberate exclusions
+    prompt: What term describes a deliberate choice to exclude certain areas to keep a study manageable?
+    answers: [delimitation, delimitations, scope delimitation]
+    explanation: Delimitations state what the work will not cover, which manages audience expectations. They differ from limitations, which are weaknesses arising from the design or evidence.
+
+  - id: q06
+    lesson: selecting-a-seminar-topic
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse the trade-off in narrowing
+    prompt: Why can adding too many constraints to a topic become a problem?
+    options:
+      - It makes the topic more interesting
+      - It may leave too little literature to support an argument
+      - It removes the need for a question
+      - It guarantees a new gap
+    answer: 1
+    explanation: Each constraint reduces the number of directly relevant sources. A topic narrowed too far may have insufficient evidence, so the student must balance focus against availability, perhaps drawing on adjacent contexts with clear caveats.
+
+  - id: q07
+    lesson: selecting-a-seminar-topic
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate handling of thin local evidence
+    scenario: |
+      Illustrative scenario. A student wants to examine algorithmic credit scoring in Ghana. She finds substantial international evidence but very little Ghana-specific research.
+    prompt: Which approach is most academically sound?
+    options:
+      - Present international findings as if they describe Ghana
+      - Frame the question internationally, use Ghana as an illustration and state clearly where local evidence is thin
+      - Abandon the topic entirely
+      - Invent plausible Ghana statistics to fill the gap
+    answer: 1
+    explanation: Being transparent about what is known locally and what is extrapolated protects credibility. Presenting foreign findings as local ones is overclaiming, and fabricating statistics is a serious integrity breach. Abandoning the topic is unnecessary.
+
+  - id: q08
+    lesson: selecting-a-seminar-topic
+    type: true_false
+    bloom: apply
+    difficulty: medium
+    objective: Apply feasibility judgement
+    prompt: A topic requiring confidential company data that the student cannot lawfully obtain should be revised or reframed.
+    answer: true
+    explanation: Feasibility includes access to data and permission to use it. A topic that depends on unobtainable or confidential information is risky, so it should be reframed around accessible evidence.
+
+  # ---------- exploring-the-literature ----------
+  - id: q09
+    lesson: exploring-the-literature
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Understand Boolean operators
+    prompt: In a search string, what is the main purpose of OR?
+    options:
+      - To narrow results to documents containing all terms
+      - To join synonyms so that documents matching any of them are retrieved
+      - To exclude a term
+      - To sort results by date
+    answer: 1
+    explanation: OR widens a search by joining alternative terms for the same concept, whereas AND combines different concepts and narrows results. NOT excludes terms.
+
+  - id: q10
+    lesson: exploring-the-literature
+    type: matching
+    bloom: recall
+    difficulty: medium
+    objective: Match source types with descriptions
+    prompt: Match each source type with its description.
+    pairs:
+      - left: Primary source
+        right: Reports original research or first-hand data
+      - left: Secondary source
+        right: Analyses or summarises primary sources
+      - left: Grey literature
+        right: Material from organisations and regulators outside commercial academic publishing
+      - left: Citation chaining
+        right: Finding sources through reference lists and later citing works
+    explanation: Distinguishing source types lets you decide how to use each. Grey literature is valuable for policy and data but is not peer reviewed.
+
+  - id: q11
+    lesson: exploring-the-literature
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Understand limits of peer review
+    prompt: If an article is peer reviewed, its findings can be assumed to be correct.
+    answer: false
+    explanation: Peer review improves quality control but does not guarantee accuracy, and journals vary in the rigour of their processes. Each source still needs appraisal of its method and evidence.
+
+  - id: q12
+    lesson: exploring-the-literature
+    type: scenario
+    bloom: apply
+    difficulty: medium
+    objective: Apply source evaluation to vendor material
+    scenario: |
+      Illustrative scenario. A consultancy white paper, published by a company that sells analytics software, claims large performance gains for firms that adopt analytics but does not explain its method.
+    prompt: How should the student use this source?
+    options:
+      - As neutral proof of the gains
+      - As evidence of what vendors claim, noting its commercial purpose and unclear method
+      - Not at all, under any circumstances
+      - As the main basis for the whole argument
+    answer: 1
+    explanation: Such a source can illustrate industry claims but should be flagged for its purpose and weak method. It should not be treated as neutral evidence or as the main basis of an argument. Whether to cite it at all depends on the argument, but it need not be banned.
+
+  - id: q13
+    lesson: exploring-the-literature
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the term for tracing references forwards
+    prompt: What is the technique called of following a paper's reference list backwards and its citing papers forwards?
+    answers: [citation chaining, citation chain, snowballing, snowball searching]
+    explanation: Citation chaining uses one strong paper as a map to related work in both directions. The "Cited by" feature in tools such as Google Scholar supports forward chaining.
+
+  - id: q14
+    lesson: exploring-the-literature
+    type: mcq
+    bloom: analyse
+    difficulty: hard
+    objective: Analyse poor search results
+    prompt: A student's search returns very few relevant results. Which diagnosis is most likely and useful?
+    options:
+      - The topic cannot be researched
+      - The search terms may be too narrow or may not match the vocabulary authors use, so synonyms should be added
+      - The database is always faulty
+      - Boolean operators should never be used
+    answer: 1
+    explanation: Few relevant results often reflect narrow terms or different vocabulary, so adding synonyms with OR and checking the terms used in known papers helps. It does not necessarily mean the topic is unresearchable.
+
+  - id: q15
+    lesson: exploring-the-literature
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a statistic encountered in a news article
+    scenario: |
+      Illustrative scenario. A student finds an impressive percentage about digital payment use in a social media post that cites no source.
+    prompt: What is the best course of action?
+    options:
+      - Use it because it is widely shared
+      - Trace it to the original organisation and release, and omit it if it cannot be verified
+      - Round it to a safer figure and use it
+      - Cite the social media post as the authority
+    answer: 1
+    explanation: Repetition is not verification. Statistics should be traced to their original source, and unverifiable figures should be left out. Adjusting a number without evidence would be misrepresentation.
+
+  - id: q16
+    lesson: exploring-the-literature
+    type: true_false
+    bloom: apply
+    difficulty: medium
+    objective: Apply note-making practice
+    prompt: Recording full reference details at the time of reading reduces the risk of accidental plagiarism and referencing errors.
+    answer: true
+    explanation: Immediate, accurate records of source, page numbers for quotations and your own paraphrased notes prevent confusion between your ideas and the author's later on.
+
+  # ---------- critical-analysis-and-argument ----------
+  - id: q17
+    lesson: critical-analysis-and-argument
+    type: mcq
+    bloom: understand
+    difficulty: easy
+    objective: Understand critical analysis
+    prompt: In an academic sense, what does "critical" mean?
+    options:
+      - Finding as many faults as possible
+      - Judging the strength and limits of claims, evidence and reasoning in a balanced way
+      - Rejecting all sources
+      - Summarising each source in turn
+    answer: 1
+    explanation: Critical analysis is balanced judgement, including recognising strengths. It is not fault-finding, wholesale rejection or description.
+
+  - id: q18
+    lesson: critical-analysis-and-argument
+    type: matching
+    bloom: recall
+    difficulty: medium
+    objective: Match Toulmin components
+    prompt: Match each Toulmin component with its meaning.
+    pairs:
+      - left: Claim
+        right: What you want the audience to accept
+      - left: Grounds
+        right: The facts or data offered in support
+      - left: Warrant
+        right: The principle linking the grounds to the claim
+      - left: Rebuttal
+        right: The conditions under which the claim would not hold
+    explanation: The Toulmin model makes the structure of an argument visible. Students often supply grounds but forget the warrant that explains why the grounds support the claim.
+
+  - id: q19
+    lesson: critical-analysis-and-argument
+    type: scenario
+    bloom: analyse
+    difficulty: medium
+    objective: Identify a fallacy
+    scenario: |
+      Illustrative scenario. A cross-sectional survey finds that firms with higher analytics use report higher sales. The author concludes that analytics "causes" higher sales.
+    prompt: Which weakness is most evident?
+    options:
+      - Hasty generalisation from one anecdote
+      - Correlation presented as causation
+      - Straw man
+      - False dichotomy
+    answer: 1
+    explanation: A cross-sectional association does not show direction or cause. Successful firms may simply be more able to afford analytics. A causal claim would need stronger design or additional reasoning.
+
+  - id: q20
+    lesson: critical-analysis-and-argument
+    type: true_false
+    bloom: understand
+    difficulty: medium
+    objective: Understand synthesis
+    prompt: A paragraph that reports what Author A found, then what Author B found, then what Author C found is a synthesis.
+    answer: false
+    explanation: That is a source-by-source summary. Synthesis organises ideas by theme, compares sources, explains agreement and disagreement and draws a combined conclusion.
+
+  - id: q21
+    lesson: critical-analysis-and-argument
+    type: short_answer
+    bloom: recall
+    difficulty: easy
+    objective: Recall the tool used to compare sources by theme
+    prompt: What is the table called that lists sources against themes to reveal patterns and gaps?
+    answers: [synthesis matrix, literature matrix, matrix]
+    explanation: A synthesis matrix lets you see where studies agree, conflict or leave gaps, and supports thematic writing rather than source-by-source description.
+
+  - id: q22
+    lesson: critical-analysis-and-argument
+    type: mcq
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate proportionate conclusions
+    prompt: Evidence consists of three cross-sectional surveys with self-reported measures. Which conclusion is best calibrated?
+    options:
+      - The evidence proves that the practice causes better performance
+      - The evidence suggests an association, but the case for a causal effect remains weak because of the designs and self-reporting
+      - The evidence shows the practice is useless
+      - Nothing can be said
+    answer: 1
+    explanation: The wording should match the strength of the evidence. Surveys can indicate association, and self-reports may be biased, so the second option is proportionate. The others overclaim, dismiss the evidence or say nothing.
+
+  - id: q23
+    lesson: critical-analysis-and-argument
+    type: scenario
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate the response to conflicting evidence
+    scenario: |
+      Illustrative scenario. Four studies support a student's working thesis, but one well-designed study contradicts it. She plans to leave the contradicting study out.
+    prompt: What is the most defensible course?
+    options:
+      - Leave it out because most studies agree
+      - Include it, explain possible reasons for the difference and qualify the thesis accordingly
+      - Replace the thesis with its opposite
+      - Mention it without comment
+    answer: 1
+    explanation: Omitting conflicting evidence is cherry-picking. Addressing it, and testing explanations such as different populations or measures, strengthens credibility and may refine the thesis. Reversing the thesis is not justified by one study, and mentioning it without comment adds nothing.
+
+  - id: q24
+    lesson: critical-analysis-and-argument
+    type: true_false
+    bloom: apply
+    difficulty: medium
+    objective: Apply the lesson from the Reinhart-Rogoff episode
+    prompt: The public discussion of the Reinhart and Rogoff growth-and-debt paper shows that a widely cited source can contain errors and that transparency of data and method allows others to test claims.
+    answer: true
+    explanation: In 2013 Herndon, Ash and Pollin reported errors and questionable choices after attempting to replicate the analysis, and the authors acknowledged a coding error. The episode shows why authority alone is not enough and why proportionate judgement is needed about how much an error changes a conclusion.
+
+  # ---------- module-level ----------
+  - id: q25
+    type: case_analysis
+    bloom: evaluate
+    difficulty: hard
+    objective: Evaluate a seminar plan from topic to argument
+    marks: 20
+    prompt: Critically evaluate Efua's seminar plan and recommend specific improvements to her topic, literature search and argument.
+    case: |
+      Illustrative scenario. Efua, an MSc IT for Business student, has chosen the topic "Technology in Ghanaian business". She searched Google Scholar once, using the phrase "technology Ghana business", and chose the first ten results, including a software vendor's white paper and a blog post. Her slides summarise each source in turn. Her conclusion states that "technology clearly improves business performance in Ghana", and she quotes a percentage from a social media post without a source. She has not considered any evidence that contradicts her conclusion.
+    structure:
+      - Overall assessment of the plan
+      - Topic scope and question
+      - Search strategy and source quality
+      - Synthesis and critical analysis
+      - Argument, qualification and use of statistics
+      - Prioritised recommendations
+    rubric:
+      - criterion: Topic and question
+        marks: 4
+        descriptor: Identifies that the topic is a whole field and proposes narrowing by population, aspect and perspective into an analytical question with a working thesis.
+      - criterion: Literature search and source evaluation
+        marks: 5
+        descriptor: Criticises the single-phrase search, reliance on first results and unevaluated vendor and blog sources; recommends concepts, synonyms, Boolean strings, citation chaining and appraisal.
+      - criterion: Critical analysis and synthesis
+        marks: 5
+        descriptor: Explains that source-by-source summary is not synthesis and recommends a synthesis matrix, thematic organisation and treatment of conflicting evidence.
+      - criterion: Argument and integrity
+        marks: 6
+        descriptor: Identifies overclaiming, correlation as causation and the untraceable statistic; recommends Toulmin-style argument with qualifier and rebuttal and verification or omission of the figure.
+    modelAnswer: |
+      A strong answer observes that Efua's plan has the surface features of research but lacks the discipline that makes an argument credible. Her topic is a whole field. She should narrow it, for example to the effect of a specific technology on a defined group of firms, and pose an analytical question such as how strong the available evidence is for that effect, with a provisional thesis to test.
+
+      Her search is thin: a single phrase and the first ten results. She should list concepts and synonyms, build Boolean strings, use more than one source, chain citations forwards and backwards and screen against written criteria. Her sources are unevenly credible. The vendor white paper has a commercial purpose and should be cited, if at all, as evidence of vendor claims; the blog post is not suitable for factual claims. Each retained source needs appraisal of method, sample, context and limitations.
+
+      Source-by-source summary is description, not synthesis. A synthesis matrix would let her compare findings by theme and explain disagreement. Her conclusion overclaims: "clearly improves" is not warranted by uncontrolled evidence, and she should qualify it and state a rebuttal. The percentage from a social media post must be traced to its original source or omitted, since unverified statistics damage credibility. She should also seek and discuss contradictory evidence and be honest about the lack of Ghana-specific data if that is the case.
+
+      The recommendations, in priority order, are to narrow the question, redo the search, appraise and synthesise, then restate the argument with proportionate qualification.
+    explanation: Examiners reward answers that link each weakness to a specific consequence for credibility and propose concrete, ordered remedies rather than generic advice.

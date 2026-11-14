@@ -2,7 +2,9 @@ code: CSIT 601
 slug: csit-601
 title: Research Methods
 status: listed
-statusNote: Part of the GradPath initial curriculum. Confirm the course's status against your official registration.
+statusNote: Core course in the MSc IT for Business Semester 1 programme (3 credit slots).
+classification: core
+creditSlots: 3
 accent: indigo
 description: >
   A postgraduate grounding in how business and information technology research is conceived, designed,
