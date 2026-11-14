@@ -25,6 +25,30 @@ What the code and the live database showed before the update:
 | Hosting | Vercel (the owner switched from Netlify on 2026-11-13); kept. |
 | Baseline checks | typecheck clean; lint 0 errors (29 dev-only warnings); 52 unit tests pass; content validation 0 errors. |
 
+## Semester 1 curriculum update: results (2026-11-14)
+
+| Area | Done |
+|---|---|
+| Curriculum | 8 courses, 20 credit slots, stored with classification. CSIT 610 Seminar added (4 modules, 11 lessons, 84 questions, 68 flashcards, 9 resources). New lessons for every gap in the audit (603, 605, 607 x2, 613 module of 3, 617 module of 2, 621). Totals: 62 modules, 180 lessons (~495k words), 1,325 questions, 1,050 flashcards, 8 mixed revision tests. Content validation 0 errors, 0 warnings. |
+| Personal selection | Compulsory courses enrol automatically (also for existing students on their next visit; a status the student set is never changed); electives are each student's choice, asked at onboarding and editable in Settings. Every screen uses `useMyCourses()`. CSIT 609 does not exist in the programme data and is never enrolled. |
+| Dashboard | "8 enrolled courses · 20 credit slots" with 5 core, 1 required, 1 special topic, 1 elective (CSIT 613); prompt and separate slot count while an elective is unconfirmed; upcoming assessments and deadlines; course mastery. |
+| Seminar | Private CSIT 610 tracker: topic, stage, date with a confirmed flag, 8-step preparation checklist, notes, feedback. |
+| Planner and timetable | University lecture timetable separate from the personal study plan; lectures can be marked awaiting confirmation; courses without a study block are offered one; course pickers list only courses taken; missed sessions; deadlines and revision advice in the planner. |
+| Assessments | Mixed revision tests; mixed mock uses only courses taken; history shows course, attempt number, time spent and raw score. |
+| Hosting | Kept on Vercel (owner's earlier decision), not Netlify as the update brief assumed. |
+
+| Date | Check | Result |
+|---|---|---|
+| 2026-11-14 | `npm run typecheck`, `npm run lint` | Clean; lint 0 errors (29 dev-only warnings, unchanged) |
+| 2026-11-14 | `npm test` | 66/66 unit tests (adds selection 8 courses, 20 slots, 5 core, 1 required, 1 special topic, 613 selected, 609 excluded; attempts; missed sessions; seminar progress) |
+| 2026-11-14 | `npx supabase db reset` then `npm run test:integration` | All 11 migrations and the new seed apply from empty; 54/54 integration tests (adds enrolment rules, 20 slots, classmate isolation, seminar privacy, revision tests, mixed mock, CSIT 610 study block) |
+| 2026-11-14 | `npm run test:e2e` (production build) | 22/22 (adds dashboard count and slots, Settings total, planner picker shows exactly the 8 courses, seminar tracker, revision tests) |
+| 2026-11-14 | Live | Migration 11 and the seed applied to Supabase (22 transactional chunks); live data checked (8 courses, 20 slots, 180 lessons); student records untouched; Vercel deployment `cc58c65` ready and serving the new pages |
+
+Still open: the official title of CSIT 610, seminar format and dates, and whether CSIT 621 is compulsory for every
+student are unconfirmed and labelled as such; lesson length runs above the 3,000-word guide for about 15 new lessons
+(the validator enforces minimums only).
+
 ## Initial audit (Phase 1)
 
 * The workspace `E:\onion\gradpath` was **empty**: no Vite/React setup, PWA or Netlify configuration,
