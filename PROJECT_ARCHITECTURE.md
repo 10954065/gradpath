@@ -179,6 +179,20 @@ Every content item carries a `source` that the UI displays:
   are the course's `credit_slots`. Coursework and examination weights are not in the regulations; the student enters
   them from each course outline.
 
+## Examinations and revision plans
+
+* Examinations are the student's `assignments` of kind `examination` (`/exams` adds them there). Migration 18 adds
+  `timetable_events.exam_id` (cascades when the exam is deleted); the `check_exam_revision_event` trigger only lets a
+  one-off revision block point at the same student's own examination.
+* `src/lib/examPlan.ts` (pure, unit-tested): upcoming exams, days left in Ghana time, a free slot each day at or
+  after the preferred time (else earlier, 06:00 to 23:00), and the topics: each module of the course (consecutive
+  modules share a day when days are short; spare days repeat the least finished modules), then weakest topics (4 or
+  more days) and a final review. The window runs from the chosen number of days before the exam (or tomorrow) to
+  the day before it. `useExams` treats lectures from the day teaching begins, the student's own non-provisional
+  blocks and other exams (3 hours from their start) as busy; the provisional weekly study plan is study time and is
+  not avoided. `saveExamPlan` replaces an exam's sessions; time logged against old sessions is kept
+  (`study_sessions.timetable_event_id` is set to null).
+
 ## Assessment engine
 
 `start_attempt(quiz_id)` selects questions (fixed set or random sample from a bank scope), records them

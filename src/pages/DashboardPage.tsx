@@ -8,6 +8,7 @@ import { SelectionSummary } from '@/components/dashboard/SelectionSummary'
 import { StreakFlame } from '@/components/dashboard/StreakFlame'
 import { CoursePerformanceChart, WeeklyStudyChart } from '@/components/dashboard/StudyCharts'
 import { TodayLessons } from '@/components/dashboard/TodayLessons'
+import { ExamCountdownCard } from '@/components/exams/ExamParts'
 import { LectureSummary } from '@/components/lectures/LectureParts'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -174,6 +175,8 @@ export default function DashboardPage() {
             </div>
 
             <aside className="flex flex-col gap-6">
+              <ExamCountdownCard />
+
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">

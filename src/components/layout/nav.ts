@@ -9,6 +9,7 @@ import {
   ClipboardCheck,
   ClipboardList,
   GraduationCap,
+  Hourglass,
   Layers,
   LayoutDashboard,
   Library,
@@ -53,6 +54,7 @@ export const NAV_GROUPS: NavGroup[] = [
       { to: '/lectures', label: 'Lecture Check-ins', icon: ListChecks },
       { to: '/timetable', label: 'My Study Plan', icon: CalendarDays, end: true },
       { to: '/assignments', label: 'Assignments', icon: ClipboardList },
+      { to: '/exams', label: 'Exam Countdown', icon: Hourglass },
     ],
   },
   {

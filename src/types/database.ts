@@ -265,6 +265,8 @@ export interface TimetableEvent {
   location: string
   notes: string
   is_provisional: boolean
+  /** Set on revision sessions planned back from an examination (an assignment of kind examination). */
+  exam_id?: string | null
   time_zone: string
   created_at: string
   updated_at: string
