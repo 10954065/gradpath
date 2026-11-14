@@ -11,10 +11,11 @@ import { getTimetablePreferences, saveTimetablePreferences, type TimetablePrefer
 const KEY = ['timetable-preferences'] as const
 const LEAD_TIMES = [15, 30, 60, 90, 120, 180]
 
-const TOGGLES: { key: 'lecture_reminders' | 'same_day_summary' | 'change_alerts'; label: string; hint: string }[] = [
+const TOGGLES: { key: 'lecture_reminders' | 'same_day_summary' | 'change_alerts' | 'weekly_review'; label: string; hint: string }[] = [
   { key: 'lecture_reminders', label: 'Upcoming lecture reminders', hint: 'Before each session you have confirmed, with the venue.' },
   { key: 'same_day_summary', label: 'Morning summary of the day’s lectures', hint: 'One notification listing your confirmed lectures for the day.' },
   { key: 'change_alerts', label: 'Official timetable changes', hint: 'When an administrator publishes a change to a course you take.' },
+  { key: 'weekly_review', label: 'End-of-week review', hint: 'At 9 pm on the last day of your study week: hours, lessons, check-ins and what is coming up.' },
 ]
 
 /** Lecture reminder preferences. Reminders go to the notification centre, and to this device only if browser notifications are on. */

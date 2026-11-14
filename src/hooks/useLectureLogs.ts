@@ -76,6 +76,7 @@ export function useLectureLogs() {
     /** Ended lectures with no check-in yet, newest first. */
     due: dueCheckIns(tt.sessions, tt.attendance, all, new Date(), calendar.lecturesStartOn),
     sessions: tt.sessions,
+    attendance: tt.attendance,
     courses: (catalogue.data ?? []).filter((c) => tt.taking.some((t) => t.id === c.id)),
     paces,
     begun,

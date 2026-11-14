@@ -126,6 +126,7 @@ export interface TimetablePreferences {
   same_day_summary: boolean
   change_alerts: boolean
   show_only_confirmed: boolean
+  weekly_review: boolean
 }
 
 export const DEFAULT_TIMETABLE_PREFERENCES: TimetablePreferences = {
@@ -134,12 +135,13 @@ export const DEFAULT_TIMETABLE_PREFERENCES: TimetablePreferences = {
   same_day_summary: true,
   change_alerts: true,
   show_only_confirmed: false,
+  weekly_review: true,
 }
 
 export async function getTimetablePreferences(): Promise<TimetablePreferences> {
   const result = await supabase
     .from('timetable_preferences')
-    .select('lecture_reminders, reminder_lead_minutes, same_day_summary, change_alerts, show_only_confirmed')
+    .select('lecture_reminders, reminder_lead_minutes, same_day_summary, change_alerts, show_only_confirmed, weekly_review')
     .maybeSingle()
   const row = ensureOk(result, 'We could not load your timetable preferences.') as TimetablePreferences | null
   return row ?? DEFAULT_TIMETABLE_PREFERENCES

@@ -193,6 +193,17 @@ Every content item carries a `source` that the UI displays:
   not avoided. `saveExamPlan` replaces an exam's sessions; time logged against old sessions is kept
   (`study_sessions.timetable_event_id` is set to null).
 
+## Weekly review
+
+* `src/lib/weeklyReview.ts` (pure, unit-tested) summarises a study week from data the app already loads (completed
+  study sessions, lesson completions, submitted quizzes, revision reviews, lecture check-ins, deadlines, courses
+  behind the lectures) and writes the suggestions; `/review` steps back through earlier weeks.
+* Migration 20: `weekly_review_core` writes one `study_reminder` notification per student and week (dedupe key
+  `weekly-review:<first day>`) from 21:00 Ghana time on the last day of their study week; `study_week_start_dow`
+  mirrors `semesterCalendar` (own study start, else the day lectures begin, else Monday). It runs from the app
+  (`generate_weekly_review`) and every 15 minutes from pg_cron (`queue_weekly_reviews`, then push).
+  `timetable_push_targets` now includes these notifications. `timetable_preferences.weekly_review` turns it off.
+
 ## Calendar subscription
 
 * Migration 19: `calendar_feeds` (one random 64-hex token per student; readable only by its owner, written only by

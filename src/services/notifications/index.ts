@@ -31,7 +31,11 @@ export async function deleteNotification(id: string): Promise<void> {
  * official sessions the student has confirmed, and follow their timetable preferences.
  */
 export async function generateDueNotifications(): Promise<number> {
-  const results = await Promise.all([supabase.rpc('generate_due_notifications'), supabase.rpc('generate_lecture_notifications')])
+  const results = await Promise.all([
+    supabase.rpc('generate_due_notifications'),
+    supabase.rpc('generate_lecture_notifications'),
+    supabase.rpc('generate_weekly_review'),
+  ])
   return results.reduce((sum, { data, error }) => sum + (!error && typeof data === 'number' ? data : 0), 0)
 }
 
