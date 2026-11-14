@@ -5,6 +5,26 @@ _Last updated: 2026-11-13_
 > **Hosting:** switched from Netlify to Vercel on 2026-11-13 (`vercel.json`, function in `api/`). Earlier phase notes that
 > mention Netlify describe what was built at the time.
 
+## Semester 1 curriculum update: audit (2026-11-14)
+
+Confirmed Semester 1 selection (owner's personal profile): **8 courses, 20 credit slots**: CSIT 601, 603, 605, 607,
+617 (core, 3 slots each), CSIT 610 (required seminar, 1), CSIT 613 (selected elective, 3), CSIT 621 (special
+topic, 1). CSIT 609 is an alternative elective the owner has not selected.
+
+What the code and the live database showed before the update:
+
+| Area | Finding |
+|---|---|
+| Courses | 7 courses (601, 603, 605, 607, 613, 617, 621). **CSIT 610 missing**; no classification or credit slots stored anywhere; 613 stored as "recommended elective, pending confirmation". |
+| CSIT 609 | Not referenced anywhere (code, content, seed or database), so there is nothing to remove or exclude. |
+| Enrolments | `course_enrolments` existed but onboarding enrolled every student in **every** published course; no screen filtered by enrolment. Dashboard, progress, planner, timetable, assessments, revision, flashcards, notes and resources all listed the whole catalogue. |
+| Live account | Enrolled in 601, 603, 605, 607, 617, 621; 613 `pending_confirmation`; no 610. 4 quiz attempts, 0 study sessions. |
+| Timetable | The provisional plan (8 weekly blocks) is labelled as personal **study** time and provisional; there are no lecture entries, so nothing is presented as an official lecture. It has **no CSIT 610 block**. The UI does not separate a university timetable from the personal study plan. |
+| Content gaps vs the brief | No lesson on ERP architecture (603); Ghana cybersecurity/data-protection law only mentioned in passing (605); no lessons on recommendation systems or AI adoption/implementation strategy (607); FinTech regulation, customer experience/digital strategy and international FinTech only touched on (613); no IT governance lesson, technology law not its own lesson (617); Industry 4.0 one mention (621). |
+| Assessments | Lesson quizzes, module assessments, course and mixed-course mock exams exist. **No mixed revision tests.** Attempts store score, percentage, start/submit times and per-lesson breakdown; attempt number and time spent are not shown. |
+| Hosting | Vercel (the owner switched from Netlify on 2026-11-13); kept. |
+| Baseline checks | typecheck clean; lint 0 errors (29 dev-only warnings); 52 unit tests pass; content validation 0 errors. |
+
 ## Initial audit (Phase 1)
 
 * The workspace `E:\onion\gradpath` was **empty**: no Vite/React setup, PWA or Netlify configuration,
