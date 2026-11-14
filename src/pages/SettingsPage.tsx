@@ -20,6 +20,7 @@ import { useSyncStatus } from '@/hooks/useSyncStatus'
 import { toUserMessage } from '@/lib/errors'
 import { updatePassword } from '@/services/auth'
 import { ClassificationBadge } from '@/components/courses/badges'
+import { TimetableReminderSettings } from '@/components/timetable/TimetableReminderSettings'
 import { ENROLMENTS_KEY, useMyCourses } from '@/hooks/useMyCourses'
 import { setEnrolmentStatus } from '@/services/courses'
 import { conflictRemove, conflictsAll, outboxPut, type ConflictEntry } from '@/services/offline/db'
@@ -29,7 +30,7 @@ import { avatarUrl, getPreferences, profileSchema, updatePreferences, updateProf
 import type { CourseEnrolment } from '@/types/database'
 import { formatDateTime } from '@/utils/dates'
 
-const STUDY_TIMES = ['Early morning', 'Morning', 'Afternoon', 'Evening', 'Late night']
+const STUDY_TIMES = ['Early morning', 'Morning', 'Lunchtime', 'Afternoon', 'Evening', 'Late night']
 const TIME_ZONES = ['Africa/Accra', 'Africa/Lagos', 'Africa/Nairobi', 'Africa/Johannesburg', 'Europe/London', 'America/New_York', 'Asia/Dubai']
 
 function ProfileTab() {
@@ -234,7 +235,7 @@ function PreferencesTab() {
                 Browser notifications
               </span>
               <span className="block text-muted-foreground">
-                A reminder on this device in the evening when your streak flame is fading, even when GradPath is closed.{' '}
+                Reminders on this device even when GradPath is closed: when your streak flame is fading in the evening, and before lectures you have confirmed.{' '}
                 {permission === 'unsupported'
                   ? 'Not supported in this browser. On an iPhone or iPad, add GradPath to your Home Screen first.'
                   : `Browser permission: ${permission}.`}
@@ -269,6 +270,7 @@ function PreferencesTab() {
           </div>
         </CardContent>
       </Card>
+      <TimetableReminderSettings />
     </div>
   )
 }

@@ -1,7 +1,8 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import { CalendarDays, Pencil, Plus, RotateCcw, Trash2 } from 'lucide-react'
+import { CalendarDays, Pencil, Plus, Trash2 } from 'lucide-react'
 import { useState } from 'react'
+import { Link } from 'react-router'
 import { useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 import { Badge } from '@/components/ui/badge'
@@ -14,9 +15,10 @@ import { PageHeader } from '@/components/ui/page'
 import { useAuth } from '@/contexts/AuthContext'
 import { toUserMessage } from '@/lib/errors'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { StudyStrategyCard } from '@/components/timetable/StudyStrategyCard'
 import { useMyCourses } from '@/hooks/useMyCourses'
 import { coursesForPicker } from '@/lib/curriculum'
-import { deleteEvent, deleteProvisionalEvents, eventSchema, listEvents, restoreProvisionalTimetable, saveEvent, type EventInput } from '@/services/study/planner'
+import { deleteEvent, deleteProvisionalEvents, eventSchema, listEvents, saveEvent, type EventInput } from '@/services/study/planner'
 import type { TimetableEvent } from '@/types/database'
 
 const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
@@ -93,8 +95,8 @@ export default function TimetablePage() {
   return (
     <>
       <PageHeader
-        title="Timetable"
-        description="Your university lecture timetable and your personal study plan are kept separate. The study planner builds each week from both."
+        title="My Study Plan"
+        description="Your personal weekly study plan. The official University lectures live on their own timetable; your study hours are planned around them and counted separately."
         actions={
           <Button onClick={() => open('new')}>
             <Plus /> {view === 'university' ? 'Add lecture' : 'Add study block'}
@@ -104,18 +106,21 @@ export default function TimetablePage() {
       <Tabs value={view} onValueChange={(v) => setView(v as View)} className="mb-5">
         <TabsList>
           <TabsTrigger value="study">My study plan</TabsTrigger>
-          <TabsTrigger value="university">University timetable</TabsTrigger>
+          <TabsTrigger value="university">My lecture entries</TabsTrigger>
         </TabsList>
       </Tabs>
       {view === 'university' ? (
-        <Alert className="mb-5" title="Official lectures only">
-          Enter lectures from your official University of Ghana timetable. GradPath never adds lectures. When a class allocation is
-          not yet clear, tick “Awaiting confirmation” so it is shown as unconfirmed.
+        <Alert className="mb-5" title="The official timetable is now built in">
+          The published University of Ghana ITB timetable, with venues and your private attendance choices, is on the{' '}
+          <Link to="/timetable/official" className="font-medium text-primary hover:underline">
+            Official Timetable
+          </Link>{' '}
+          page. Use this tab only for extra lectures you were told about that are not on the published timetable.
         </Alert>
       ) : provisional.length ? (
         <Alert className="mb-5" title="Provisional study schedule">
-          The blocks marked “Provisional” are a suggested independent-study plan, not the official University of Ghana lecture timetable. Add your
-          official lectures and adjust or remove these blocks.{' '}
+          The blocks marked “Provisional” are a suggested independent-study plan, not lectures. They are placed around the official University of
+          Ghana timetable; edit any block to make it your own, or rebuild the plan after you confirm your sessions.{' '}
           <button type="button" className="font-medium text-primary hover:underline" onClick={() => setConfirmReplace(true)}>
             Remove all provisional blocks
           </button>
@@ -123,12 +128,10 @@ export default function TimetablePage() {
       ) : (
         <Alert className="mb-5">
           No provisional blocks.{' '}
-          <button type="button" className="font-medium text-primary hover:underline" onClick={() => run.mutate(restoreProvisionalTimetable)}>
-            <RotateCcw className="mr-1 inline size-3.5" aria-hidden />
-            Add the suggested weekly study plan
-          </button>
+          Build one around your lectures below.
         </Alert>
       )}
+      {view === 'study' && events.data ? <StudyStrategyCard events={all} onApplied={done} /> : null}
       {view === 'study' && withoutStudyBlock.length ? (
         <Alert className="mb-5" tone="warning" title="Courses without a study block">
           <span className="block">These courses you take have no time in your study plan yet:</span>
@@ -150,7 +153,7 @@ export default function TimetablePage() {
       {events.isPending ? (
         <Skeleton className="h-96" />
       ) : list.length === 0 ? (
-        <EmptyState icon={CalendarDays} title={view === 'university' ? 'No lectures entered yet' : 'Your study plan is empty'} description={view === 'university' ? 'Add your lectures from the official timetable when you have it.' : 'Add study blocks for your courses to plan your week.'} action={<Button onClick={() => open('new')}>Add event</Button>} />
+        <EmptyState icon={CalendarDays} title={view === 'university' ? 'No lectures entered yet' : 'Your study plan is empty'} description={view === 'university' ? 'Published lectures are on the Official Timetable page; add only extra lectures here.' : 'Add study blocks for your courses to plan your week.'} action={<Button onClick={() => open('new')}>Add event</Button>} />
       ) : (
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
           {ORDER.map((dow) => {

@@ -6,6 +6,7 @@ import { toast } from 'sonner'
 import { CourseMaterials } from '@/components/courses/CourseMaterials'
 import { ClassificationBadge, SourceBadge, VerificationBadge, accentClass } from '@/components/courses/badges'
 import { SeminarTracker } from '@/components/courses/SeminarTracker'
+import { CourseLectureTimes } from '@/components/timetable/CourseLectureTimes'
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -179,6 +180,7 @@ export default function CoursePage() {
         </div>
 
         <aside className="flex flex-col gap-4">
+          <CourseLectureTimes courseId={c.id} />
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">

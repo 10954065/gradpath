@@ -64,7 +64,9 @@ psql "postgresql://postgres:<db-password>@db.<project-ref>.supabase.co:5432/post
 The file is about 7 MB; it takes under a minute. (If you prefer the CLI, recent versions support
 `npx supabase db push --include-seed`; check `npx supabase db push --help` for your version.)
 
-Check it worked in **Table Editor**: `courses` should have 7 rows and `lessons` 159.
+Check it worked in **Table Editor**: `courses` should have 8 rows, `lessons` 180 and `timetable_entries` 20 (the
+official 2026/2027 Semester 1 ITB timetable). Loading the seed again never overwrites timetable changes made in the
+Admin console.
 
 ## 5. Configure authentication
 
@@ -154,6 +156,11 @@ Then, once per project:
    select vault.create_secret('https://<project-ref>.supabase.co/functions/v1/streak-reminders', 'streak_reminders_url');
    ```
 
+The same function also delivers lecture reminders and official timetable change notices: migration
+`20261114000012` schedules `gradpath-lecture-reminders` every 15 minutes, which creates reminders for sessions
+students have confirmed and asks the function (same URL and secret) to push them. Redeploy the function after
+pulling that migration.
+
 Without step 4 the in-app reminders still work and no push is attempted. Push works in Chrome, Edge, Firefox and
 Android browsers; on iPhone and iPad (iOS 16.4+) only after the student adds GradPath to the Home Screen.
 Responses from the function are kept briefly in `net._http_response` if you need to check a run.
@@ -166,7 +173,7 @@ These checks take five minutes and confirm the database is protecting student da
 
   ```bash
   npx supabase start && npx supabase db reset
-  npm run test:integration       # 34 tests: isolation between students, admin-only writes, storage rules, scoring
+  npm run test:integration       # 63 tests: isolation between students, admin-only writes, storage rules, scoring, timetable
   ```
 
 * **On the live project:** register two test students. As student A, create a note and an assignment. Sign in as
@@ -176,6 +183,13 @@ These checks take five minutes and confirm the database is protecting student da
 * In **Storage**, confirm all three buckets are **private**.
 
 Delete the test accounts afterwards from **Authentication → Users**.
+
+### Official timetable changes
+
+Administrators manage the official timetable on **Admin console → Timetable**. Every change needs a reason and is
+kept in the history; students see changes at once and are notified when you choose **Publish changes and notify
+students**. To load a revised University timetable, use **Upload a revised official timetable** (CSV: day, start,
+end, course code, venue in 24-hour Ghana time); it becomes a new version and the previous one is kept.
 
 ## 9. Uploading lecturer and institutional materials
 

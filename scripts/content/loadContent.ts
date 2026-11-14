@@ -2,6 +2,7 @@ import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import { join, relative } from 'node:path'
 import { parseCourseOutline, parseFlashcards, parseQuestionBank, parseResources } from '../../src/lib/content/bankParser'
 import { parseLesson } from '../../src/lib/content/lessonParser'
+import { parseTimetable, type ParsedTimetable } from '../../src/lib/content/timetableParser'
 import type {
   CourseOutline,
   ParsedFlashcard,
@@ -12,6 +13,7 @@ import type {
 } from '../../src/lib/content/types'
 
 export const CONTENT_ROOT = join(process.cwd(), 'content', 'courses')
+export const TIMETABLE_ROOT = join(process.cwd(), 'content', 'timetables')
 
 export interface LoadedModule {
   slug: string
@@ -35,6 +37,7 @@ export interface LoadedCourse {
 
 export interface LoadResult {
   courses: LoadedCourse[]
+  timetables: ParsedTimetable[]
   issues: ValidationIssue[]
 }
 
@@ -128,5 +131,17 @@ export function loadContent(options: { course?: string; requireComplete?: boolea
     courses.push({ outline, order: COURSE_ORDER.indexOf(slug) + 1 || courseIndex + 1, modules, resources, hasResourceFile: existsSync(rFile) })
   })
 
-  return { courses, issues }
+  // Official timetables are validated against the course codes above (only when every course was loaded).
+  const timetables: ParsedTimetable[] = []
+  if (!options.course && existsSync(TIMETABLE_ROOT)) {
+    const codes = new Set(courses.map((c) => c.outline.code))
+    for (const name of readdirSync(TIMETABLE_ROOT).filter((f) => f.endsWith('.yaml')).sort()) {
+      const file = join(TIMETABLE_ROOT, name)
+      const result = parseTimetable(rel(file), readFileSync(file, 'utf8'), codes)
+      issues.push(...result.issues)
+      if (result.timetable) timetables.push(result.timetable)
+    }
+  }
+
+  return { courses, timetables, issues }
 }

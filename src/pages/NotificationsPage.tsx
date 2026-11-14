@@ -18,6 +18,8 @@ const KIND_LABEL = {
   assessment_result: 'Assessment result',
   announcement: 'Announcement',
   system: 'GradPath',
+  lecture_reminder: 'Lecture',
+  timetable_change: 'Timetable change',
 } as const
 
 export default function NotificationsPage() {

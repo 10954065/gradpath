@@ -341,6 +341,8 @@ export type NotificationKind =
   | 'assessment_result'
   | 'announcement'
   | 'system'
+  | 'lecture_reminder'
+  | 'timetable_change'
 
 export interface AppNotification {
   id: string

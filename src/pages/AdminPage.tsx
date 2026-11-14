@@ -5,6 +5,7 @@ import { ContentAdmin } from '@/components/admin/ContentAdmin'
 import { useAdminAction, useAdminCatalogue } from '@/components/admin/hooks'
 import { AnnouncementAdmin, MaterialsAdmin } from '@/components/admin/NoticesAdmin'
 import { ResourceAdmin } from '@/components/admin/ResourceAdmin'
+import { TimetableAdmin } from '@/components/admin/TimetableAdmin'
 import { Button } from '@/components/ui/button'
 import { Alert, ErrorState, Skeleton } from '@/components/ui/feedback'
 import { Field, Input } from '@/components/ui/form-controls'
@@ -22,6 +23,7 @@ const TABS = [
   { value: 'resources', label: 'Resources' },
   { value: 'announcements', label: 'Announcements' },
   { value: 'materials', label: 'Materials' },
+  { value: 'timetable', label: 'Timetable' },
   { value: 'settings', label: 'Settings' },
 ] as const
 
@@ -32,7 +34,7 @@ export default function AdminPage() {
       <PageHeader
         eyebrow="Administration"
         title="Admin console"
-        description="Manage courses, lessons, assessments, resources, announcements and uploaded materials. Every change is enforced by row-level security on the server."
+        description="Manage courses, lessons, assessments, resources, announcements, uploaded materials and the official timetable. Every change is enforced by row-level security on the server."
       />
       <Tabs value={tab} onValueChange={setTab}>
         <TabsList aria-label="Admin sections">
@@ -59,6 +61,9 @@ export default function AdminPage() {
         </TabsContent>
         <TabsContent value="materials">
           <MaterialsAdmin />
+        </TabsContent>
+        <TabsContent value="timetable">
+          <TimetableAdmin />
         </TabsContent>
         <TabsContent value="settings">
           <SettingsPanel />

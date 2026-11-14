@@ -5,6 +5,29 @@ _Last updated: 2026-11-13_
 > **Hosting:** switched from Netlify to Vercel on 2026-11-13 (`vercel.json`, function in `api/`). Earlier phase notes that
 > mention Netlify describe what was built at the time.
 
+## Official timetable (2026-11-14)
+
+Source: University of Ghana, Department of Computer Science, 2026/2027 Semester 1 ITB Postgraduate Timetable,
+transcribed by the student. No PDF is in the repository and the official page
+(https://dcs.ug.edu.gh/post-grad-timetable/?programme=ITB) loads its timetable in the browser, so an automated fetch
+returned no entries; the 20 sessions have **not** been independently compared with the original. This is stated on
+the page and in the source note.
+
+| Area | Done |
+|---|---|
+| Data | Migration 12: `timetable_sources`, `timetable_entries`, `timetable_entry_changes` (trigger-written audit trail), `timetable_publications`, private `timetable_attendance` and `timetable_preferences`, lecture reminder and change notification kinds, `publish_timetable_changes`, `import_timetable_version`, `generate_lecture_notifications`, `queue_lecture_reminders` (pg_cron every 15 minutes), `timetable_push_targets`. Provisional study blocks moved out of lecture times. |
+| Published sessions | 20 sessions: weekday evenings (8), Saturday (6) and Sunday (6), Ghana time; all eight courses; CSIT 613 three times in Earth Science Room 2; CSIT 609 not present. Repeated sessions kept, allocation pending confirmation. |
+| Student pages | `/timetable/official` (week, day, list, phone agenda, filters, attendance choice, "only confirmed" view, published changes); lecture times on each course page; official lectures read-only in the planner and excluded from study totals; reminder preferences in Settings. |
+| Study plan | "Rebuild my study plan around my lectures": preview and review per course, deep study and mixed revision to the weekly target, nothing within 30 minutes of a lecture; warns about blocks that clash with lectures. Adds a Lunchtime study window. |
+| Admin | Timetable tab: add, correct, cancel, remove or restore sessions (reason required), set the allocation once confirmed, publish and notify, history, source details, import a revised timetable (CSV) as a new version. |
+
+| Date | Check | Result |
+|---|---|---|
+| 2026-11-14 | `tsc -b`, `npm run lint` | Clean; lint 0 errors (31 warnings: the 29 before plus two of the same fast-refresh kind) |
+| 2026-11-14 | `npm test` | 89/89 unit tests (adds 23: all 20 sessions by day, venues, 8 courses, 613 included, 609 excluded, repeats kept, nothing compulsory, Ghana time under another time zone, next session, overlap layout, filters, CSV import, planner separation, study plan never within 30 minutes of a lecture) |
+| 2026-11-14 | `npx supabase db reset` then `npm run test:integration` | All 12 migrations and the seed apply from empty; 63/63 integration tests (adds 9: read-only for students, private attendance, reminders only for confirmed sessions, morning summary, preferences, reasons required, history keeps the original, publish notifies, study blocks clear of lectures) |
+| 2026-11-14 | `npm run test:e2e` (production build) | 29/29 (adds 7: source and 20 sessions, list filters, course links, confirmed-only view and planner, study plan rebuild, Ghana time on a New York device, phone agenda) |
+
 ## Semester 1 curriculum update: audit (2026-11-14)
 
 Confirmed Semester 1 selection (owner's personal profile): **8 courses, 20 credit slots**: CSIT 601, 603, 605, 607,

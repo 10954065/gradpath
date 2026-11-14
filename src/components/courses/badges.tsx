@@ -72,3 +72,19 @@ const ACCENTS: Record<string, string> = {
 export function accentClass(accent: string): string {
   return ACCENTS[accent] ?? 'bg-primary'
 }
+
+// Tinted surfaces for timetable blocks, one per course accent, readable in light and dark themes.
+const ACCENT_SURFACES: Record<string, string> = {
+  indigo: 'border-l-indigo-500 bg-indigo-50 dark:bg-indigo-950/45',
+  sky: 'border-l-sky-500 bg-sky-50 dark:bg-sky-950/45',
+  rose: 'border-l-rose-500 bg-rose-50 dark:bg-rose-950/45',
+  violet: 'border-l-violet-500 bg-violet-50 dark:bg-violet-950/45',
+  emerald: 'border-l-emerald-500 bg-emerald-50 dark:bg-emerald-950/45',
+  amber: 'border-l-amber-500 bg-amber-50 dark:bg-amber-950/45',
+  teal: 'border-l-teal-500 bg-teal-50 dark:bg-teal-950/45',
+  orange: 'border-l-orange-500 bg-orange-50 dark:bg-orange-950/45',
+}
+
+export function accentSurfaceClass(accent: string): string {
+  return ACCENT_SURFACES[accent] ?? 'border-l-primary bg-accent'
+}

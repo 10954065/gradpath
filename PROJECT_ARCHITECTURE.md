@@ -118,8 +118,33 @@ Every content item carries a `source` that the UI displays:
   for every screen. Pickers offer only the courses a student takes (plus an older item's course when editing).
 * CSIT 610 pages include a private seminar tracker (`seminar_presentations`): topic, stage, date with a "confirmed"
   flag, an 8-step preparation checklist, notes and feedback. GradPath sets no topics or dates.
-* The timetable separates the university lecture timetable (entered by the student; `is_provisional` on a lecture
-  means awaiting confirmation) from the personal study plan (provisional blocks are suggestions).
+* Personal timetable blocks (`timetable_events`) are the student's study plan; a lecture row there is an extra
+  lecture the student entered themselves (`is_provisional` means awaiting confirmation).
+
+## Official timetable
+
+* Shared, read-only for students: `timetable_sources` (one row per published version, with source, programme, year,
+  semester, `time_zone` fixed to Africa/Accra, version and update number) and `timetable_entries` (weekly sessions:
+  course, day, start and end in Ghana local time, venue, status, attendance allocation). Entries reference
+  `courses`, so course titles, classification, credit slots and colours come from the central course record.
+* The 2026/2027 Semester 1 ITB timetable lives in `content/timetables/*.yaml`, is validated against the course codes
+  and compiled into `seed.sql` with `on conflict do nothing`, so re-seeding never overwrites an administrator's change.
+* Every insert or update is written by a trigger to `timetable_entry_changes` (before/after snapshot, reason, who,
+  when); administrators must give a reason. Changes are visible at once and reach students as a notice when an
+  administrator calls `publish_timetable_changes`, which bumps the update number and notifies the students who take an
+  affected course. `import_timetable_version` adds a revised timetable as a new version and keeps the old one.
+  Sessions are removed by status, never deleted.
+* Private: `timetable_attendance` (each student's choice per session: awaiting, confirmed for my class, not assigned,
+  cancelled) and `timetable_preferences` (lecture reminders, lead time, morning summary, change alerts, "only confirmed"
+  view). The published document does not say whether repeated sessions are alternatives or extra classes, so nothing
+  is presented as compulsory; `allocation` stays `pending_confirmation` until an administrator records otherwise.
+* Reminders: `lecture_reminder_core` creates in-app notifications only for confirmed sessions (before the lecture,
+  plus a morning summary). It runs for the signed-in student from the app (`generate_lecture_notifications`) and for
+  everyone every 15 minutes from `pg_cron`; devices that allow browser notifications receive them through the same
+  push Edge Function as streak reminders.
+* `src/lib/officialTimetable.ts` (Ghana-time formatting independent of the device, next session, overlap layout,
+  filters, planner entries, CSV import parsing) and `src/lib/studyStrategy.ts` (the lecture-aligned study plan) are
+  pure and unit-tested. Lecture time is never counted in study totals.
 
 ## Assessment engine
 

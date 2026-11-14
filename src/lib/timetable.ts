@@ -1,6 +1,10 @@
+import type { OfficialSession } from '@/lib/officialTimetable'
 import type { StudySession, TimetableEvent } from '@/types/database'
 
-/** One concrete calendar entry: a timetable occurrence (possibly overridden by a session) or a one-off session. */
+/**
+ * One concrete calendar entry: a timetable occurrence (possibly overridden by a session), a one-off session, or a
+ * read-only official University lecture (official is set).
+ */
 export interface PlannerEntry {
   key: string
   title: string
@@ -13,6 +17,7 @@ export interface PlannerEntry {
   session: StudySession | null
   status: StudySession['status']
   isProvisional: boolean
+  official?: OfficialSession
 }
 
 function toIsoDate(d: Date): string {

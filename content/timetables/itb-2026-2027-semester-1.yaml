@@ -1,0 +1,47 @@
+# Official University timetable, compiled into supabase/seed.sql by `npm run content:build`.
+# Loaded with "insert ... on conflict do nothing", so re-seeding never overwrites a correction an administrator has
+# made in the app. Days: monday ... sunday. Times: 24-hour Ghana local time (Africa/Accra).
+#
+# Source transcription: supplied by the programme's student from the published University of Ghana,
+# Department of Computer Science, 2026/2027 Semester 1 ITB Postgraduate Timetable. The official web page
+# (https://dcs.ug.edu.gh/post-grad-timetable/?programme=ITB) loads its timetable in the browser and could not be
+# fetched for an automated comparison, and no PDF copy is in the repository, so these entries have not been
+# independently checked against the original.
+slug: itb-2026-2027-semester-1
+title: 2026/2027 Semester 1 ITB Postgraduate Timetable
+institution: University of Ghana
+department: Department of Computer Science
+programme: MSc IT for Business
+programmeCode: ITB
+academicYear: 2026/2027
+semester: Semester 1
+timeZone: Africa/Accra
+sourceUrl: https://dcs.ug.edu.gh/post-grad-timetable/?programme=ITB
+sourceNote: >-
+  University of Ghana, Department of Computer Science, 2026/2027 Semester 1 ITB Postgraduate Timetable.
+  Entries were transcribed from the published timetable and supplied to GradPath; they have not been independently
+  compared with the original document. The timetable does not say whether repeated sessions are alternative
+  groups, additional sessions or classes for different student groups, so attendance allocation is pending
+  confirmation. No semester start, end, examination or holiday dates are published in this source.
+publishedAt: 2026-11-14
+sessions:
+  - { day: monday, start: '19:30', end: '21:30', course: CSIT 601, venue: Earth Science Room 1 }
+  - { day: tuesday, start: '19:30', end: '21:30', course: CSIT 617, venue: Earth Science Room 1 }
+  - { day: wednesday, start: '17:30', end: '19:30', course: CSIT 607, venue: Earth Science Room 1 }
+  - { day: wednesday, start: '19:30', end: '21:30', course: CSIT 613, venue: Earth Science Room 2 }
+  - { day: thursday, start: '17:30', end: '19:30', course: CSIT 603, venue: Earth Science Room 1 }
+  - { day: thursday, start: '19:30', end: '21:30', course: CSIT 605, venue: Earth Science Room 1 }
+  - { day: friday, start: '17:30', end: '19:30', course: CSIT 621, venue: Earth Science Room 1 }
+  - { day: friday, start: '19:30', end: '21:30', course: CSIT 610, venue: Earth Science Room 1 }
+  - { day: saturday, start: '07:30', end: '09:30', course: CSIT 607, venue: Earth Science Room 1 }
+  - { day: saturday, start: '09:30', end: '11:30', course: CSIT 601, venue: Earth Science Room 1 }
+  - { day: saturday, start: '11:30', end: '13:30', course: CSIT 617, venue: Earth Science Room 1 }
+  - { day: saturday, start: '14:00', end: '16:00', course: CSIT 605, venue: Earth Science Room 1 }
+  - { day: saturday, start: '16:00', end: '18:00', course: CSIT 613, venue: Earth Science Room 2 }
+  - { day: saturday, start: '18:00', end: '20:00', course: CSIT 603, venue: Earth Science Room 1 }
+  - { day: sunday, start: '07:30', end: '09:30', course: CSIT 607, venue: Earth Science Room 1 }
+  - { day: sunday, start: '09:30', end: '11:30', course: CSIT 601, venue: Earth Science Room 1 }
+  - { day: sunday, start: '11:30', end: '13:30', course: CSIT 603, venue: Earth Science Room 1 }
+  - { day: sunday, start: '14:00', end: '16:00', course: CSIT 605, venue: Earth Science Room 1 }
+  - { day: sunday, start: '16:00', end: '18:00', course: CSIT 613, venue: Earth Science Room 2 }
+  - { day: sunday, start: '18:00', end: '20:00', course: CSIT 617, venue: Earth Science Room 1 }

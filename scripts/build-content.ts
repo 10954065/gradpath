@@ -24,7 +24,7 @@ function summarise(c: LoadedCourse): string {
 }
 
 async function main(): Promise<void> {
-  const { courses, issues } = loadContent({ course })
+  const { courses, timetables, issues } = loadContent({ course })
   const errors = issues.filter((i) => i.severity === 'error')
   const warnings = issues.filter((i) => i.severity === 'warning')
 
@@ -33,6 +33,7 @@ async function main(): Promise<void> {
   }
   console.log('')
   for (const c of courses) console.log(summarise(c))
+  for (const t of timetables) console.log(`Timetable ${t.slug}: ${t.sessions.length} sessions`)
   console.log(`\n${errors.length} error(s), ${warnings.length} warning(s)`)
 
   // --partial seeds whatever validates (invalid files are skipped, never seeded as placeholders).
@@ -41,7 +42,7 @@ async function main(): Promise<void> {
 
   const { writeSeed, loadLinkVerification } = await import('./content/writeSeed')
   const { writeCurriculumStatus } = await import('./content/writeCurriculumStatus')
-  writeSeed(courses)
+  writeSeed(courses, timetables)
   const links = loadLinkVerification()
   const verified = new Set(Object.entries(links).filter(([, v]) => v.status === 'verified').map(([url]) => url))
   writeCurriculumStatus(courses, Object.keys(links).length ? verified : undefined)

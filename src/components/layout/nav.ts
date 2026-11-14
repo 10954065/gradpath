@@ -14,6 +14,7 @@ import {
   Megaphone,
   NotebookPen,
   RefreshCcw,
+  School,
   Settings,
   ShieldCheck,
   type LucideIcon,
@@ -23,6 +24,8 @@ export interface NavItem {
   to: string
   label: string
   icon: LucideIcon
+  /** Only active on this exact path (another item is nested under it). */
+  end?: boolean
 }
 
 export interface NavGroup {
@@ -44,7 +47,8 @@ export const NAV_GROUPS: NavGroup[] = [
     label: 'Plan',
     items: [
       { to: '/planner', label: 'Study Planner', icon: CalendarClock },
-      { to: '/timetable', label: 'Timetable', icon: CalendarDays },
+      { to: '/timetable/official', label: 'Official Timetable', icon: School },
+      { to: '/timetable', label: 'My Study Plan', icon: CalendarDays, end: true },
       { to: '/assignments', label: 'Assignments', icon: ClipboardList },
     ],
   },

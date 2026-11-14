@@ -15,6 +15,7 @@ test('key screens fit a phone screen without sideways scrolling', async ({ page 
     '/courses/csit-601/lessons/meaning-purpose-and-characteristics',
     '/planner',
     '/timetable',
+    '/timetable/official',
     '/assignments',
     '/assessments',
     '/notes',
@@ -47,4 +48,15 @@ test('the navigation menu opens on a phone and links to My Courses', async ({ pa
   await page.getByRole('link', { name: 'My Courses' }).click()
   await page.waitForURL(/\/courses$/)
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+})
+
+test('the official timetable becomes a daily agenda on a phone', async ({ page }) => {
+  await page.goto('/timetable/official')
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Official University Timetable')
+  await expect(page.getByTestId('week-session').first()).toBeHidden()
+  await page.getByRole('tab', { name: /^Sat/ }).click()
+  const agenda = page.getByRole('list', { name: 'Saturday sessions' })
+  await expect(agenda.getByRole('article')).toHaveCount(6)
+  await expect(agenda.getByRole('article').first()).toContainText('7:30 am – 9:30 am')
+  await expectNoHorizontalOverflow(page, '/timetable/official (Saturday)')
 })

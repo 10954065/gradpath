@@ -18,6 +18,8 @@ import { cn } from '@/lib/utils'
 import { RecommendationList } from '@/components/dashboard/Recommendations'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { useMyCourses } from '@/hooks/useMyCourses'
+import { useOfficialTimetable } from '@/hooks/useOfficialTimetable'
+import { lectureMinutes, officialPlannerEntries } from '@/lib/officialTimetable'
 import { useStudyOverview } from '@/hooks/useStudyOverview'
 import { coursesForPicker } from '@/lib/curriculum'
 import { ASSIGNMENT_KIND_LABEL, bucketOf } from '@/services/study/assignments'
@@ -39,7 +41,10 @@ export default function PlannerPage() {
   const queryClient = useQueryClient()
   const [anchor, setAnchor] = useState(() => weekStart(new Date()))
   const [editor, setEditor] = useState<EditorState | null>(null)
-  const [completing, setCompleting] = useState<{ entry: PlannerEntry; minutes: number } | null>(null)
+  const [completing, setCompleting] = useState<{
+    entry: PlannerEntry
+    minutes: number
+  } | null>(null)
   const weekEnd = endOfWeek(anchor, { weekStartsOn: 1 })
   const monthStart = startOfMonth(anchor)
   const monthEnd = endOfMonth(anchor)
@@ -52,11 +57,22 @@ export default function PlannerPage() {
     queryFn: () => listSessions(rangeStart.toISOString(), addDays(rangeEnd, 1).toISOString()),
   })
   const my = useMyCourses()
+  const official = useOfficialTimetable()
   const overview = useStudyOverview()
   const deadlines = overview.assignments.filter((a) => bucketOf(a) === 'upcoming' || bucketOf(a) === 'overdue').slice(0, 6)
-  const revisionAdvice = overview.recommendations.filter((r) => r.kind === 'weak-topic' || r.kind === 'revision' || r.kind === 'assessment' || r.kind === 'mock-exam')
+  const revisionAdvice = overview.recommendations.filter(
+    (r) => r.kind === 'weak-topic' || r.kind === 'revision' || r.kind === 'assessment' || r.kind === 'mock-exam',
+  )
 
-  const week = useMemo(() => buildPlanner(events.data ?? [], sessions.data ?? [], anchor, weekEnd), [events.data, sessions.data, anchor, weekEnd])
+  // Official lectures are shown read-only alongside the study plan; studyTotals never counts them as study.
+  const week = useMemo(
+    () =>
+      [
+        ...buildPlanner(events.data ?? [], sessions.data ?? [], anchor, weekEnd),
+        ...officialPlannerEntries(official.sessions, official.attendance, anchor, weekEnd),
+      ].sort((a, b) => a.start.getTime() - b.start.getTime()),
+    [events.data, sessions.data, anchor, weekEnd, official.sessions, official.attendance],
+  )
   const month = useMemo(() => buildPlanner(events.data ?? [], sessions.data ?? [], monthStart, monthEnd), [events.data, sessions.data, monthStart, monthEnd])
   const weekTotals = studyTotals(week)
   const monthTotals = studyTotals(month)
@@ -145,9 +161,21 @@ export default function PlannerPage() {
         }
       />
       <div className="mb-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        <StatTile label="Studied this week" value={minutesToHours(weekTotals.completedMinutes)} hint={`Target ${profile?.weekly_study_target_hours ?? 15} h`} />
-        <StatTile label="Planned this week" value={minutesToHours(weekTotals.plannedMinutes)} hint={`${weekTotals.completedSessions} completed · ${missedThisWeek} missed`} />
-        <StatTile label={`Studied in ${format(anchor, 'MMMM')}`} value={minutesToHours(monthTotals.completedMinutes)} hint={`${monthTotals.completedSessions} sessions`} />
+        <StatTile
+          label="Studied this week"
+          value={minutesToHours(weekTotals.completedMinutes)}
+          hint={`Target ${profile?.weekly_study_target_hours ?? 15} h · ${minutesToHours(lectureMinutes(official.sessions, official.attendance))} of lectures not counted`}
+        />
+        <StatTile
+          label="Planned this week"
+          value={minutesToHours(weekTotals.plannedMinutes)}
+          hint={`${weekTotals.completedSessions} completed · ${missedThisWeek} missed`}
+        />
+        <StatTile
+          label={`Studied in ${format(anchor, 'MMMM')}`}
+          value={minutesToHours(monthTotals.completedMinutes)}
+          hint={`${monthTotals.completedSessions} sessions`}
+        />
         <div className="rounded-xl border bg-surface p-4 shadow-card">
           <p className="text-xs font-medium text-muted-foreground">Weekly target progress</p>
           <p className="mt-2 text-2xl font-semibold tabular-nums">{Math.min(100, Math.round((weekTotals.completedMinutes / targetMinutes) * 100))}%</p>
@@ -170,9 +198,14 @@ export default function PlannerPage() {
         <h2 className="text-sm font-semibold">
           {format(anchor, 'd MMM')} to {format(weekEnd, 'd MMM yyyy')}
         </h2>
-        <Button asChild variant="link" size="sm">
-          <Link to="/timetable">Edit weekly timetable</Link>
-        </Button>
+        <span className="flex gap-1">
+          <Button asChild variant="link" size="sm">
+            <Link to="/timetable/official">Official timetable</Link>
+          </Button>
+          <Button asChild variant="link" size="sm">
+            <Link to="/timetable">Edit study plan</Link>
+          </Button>
+        </span>
       </div>
 
       {events.isError ? <ErrorState message={toUserMessage(events.error)} onRetry={() => void events.refetch()} /> : null}
@@ -198,24 +231,56 @@ export default function PlannerPage() {
                         e.status === 'completed' && 'border-success/40 bg-success/8',
                         (e.status === 'skipped' || e.status === 'cancelled') && 'opacity-55',
                         e.kind === 'lecture' && 'border-primary/40 bg-accent',
+                        e.official && e.isProvisional && 'border-dashed',
                       )}
                     >
-                      <button type="button" className="w-full text-left" onClick={() => openEditor(e)}>
-                        <span className="flex items-center gap-1 font-medium">
-                          <Clock className="size-3" aria-hidden /> {format(e.start, 'HH:mm')}-{format(e.end, 'HH:mm')}
-                        </span>
-                        <span className="mt-0.5 line-clamp-2 block">{e.title}</span>
-                        <span className="mt-1 flex flex-wrap gap-1">
-                          {codeOf(e.courseId) ? <Badge>{codeOf(e.courseId)}</Badge> : null}
-                          {e.kind === 'lecture' ? <Badge tone="primary">Lecture</Badge> : null}
-                          {e.isProvisional ? <Badge tone="warning">{e.kind === 'lecture' ? 'Awaiting confirmation' : 'Provisional'}</Badge> : null}
-                          {e.status !== 'planned' ? <Badge tone={e.status === 'completed' ? 'success' : 'neutral'} className="capitalize">{e.status}</Badge> : null}
-                          {isMissed(e) ? <Badge tone="danger">Missed</Badge> : null}
-                        </span>
-                      </button>
+                      {e.official ? (
+                        <Link
+                          to={`/courses/${e.official.slug}`}
+                          className="block w-full text-left"
+                          aria-label={`${e.title}, ${format(e.start, 'HH:mm')} to ${format(e.end, 'HH:mm')}`}
+                        >
+                          <span className="flex items-center gap-1 font-medium">
+                            <Clock className="size-3" aria-hidden /> {format(e.start, 'HH:mm')}-{format(e.end, 'HH:mm')}
+                          </span>
+                          <span className="mt-0.5 line-clamp-2 block">{e.title}</span>
+                          <span className="mt-1 flex flex-wrap gap-1">
+                            <Badge tone="primary">Official lecture</Badge>
+                            {e.isProvisional ? <Badge tone="warning">Awaiting confirmation</Badge> : <Badge tone="success">Confirmed</Badge>}
+                          </span>
+                        </Link>
+                      ) : (
+                        <button type="button" className="w-full text-left" onClick={() => openEditor(e)}>
+                          <span className="flex items-center gap-1 font-medium">
+                            <Clock className="size-3" aria-hidden /> {format(e.start, 'HH:mm')}-{format(e.end, 'HH:mm')}
+                          </span>
+                          <span className="mt-0.5 line-clamp-2 block">{e.title}</span>
+                          <span className="mt-1 flex flex-wrap gap-1">
+                            {codeOf(e.courseId) ? <Badge>{codeOf(e.courseId)}</Badge> : null}
+                            {e.kind === 'lecture' ? <Badge tone="primary">Lecture</Badge> : null}
+                            {e.isProvisional ? <Badge tone="warning">{e.kind === 'lecture' ? 'Awaiting confirmation' : 'Provisional'}</Badge> : null}
+                            {e.status !== 'planned' ? (
+                              <Badge tone={e.status === 'completed' ? 'success' : 'neutral'} className="capitalize">
+                                {e.status}
+                              </Badge>
+                            ) : null}
+                            {isMissed(e) ? <Badge tone="danger">Missed</Badge> : null}
+                          </span>
+                        </button>
+                      )}
                       {e.status === 'planned' && e.kind !== 'lecture' ? (
                         <span className="mt-1.5 flex gap-1">
-                          <Button size="sm" variant="subtle" className="h-7 px-2" onClick={() => setCompleting({ entry: e, minutes: durationMinutes(e) })}>
+                          <Button
+                            size="sm"
+                            variant="subtle"
+                            className="h-7 px-2"
+                            onClick={() =>
+                              setCompleting({
+                                entry: e,
+                                minutes: durationMinutes(e),
+                              })
+                            }
+                          >
                             <Check /> Done
                           </Button>
                           <Button size="sm" variant="ghost" className="h-7 px-2" aria-label="Skip session" onClick={() => setStatus(e, 'skipped')}>
@@ -283,7 +348,13 @@ export default function PlannerPage() {
               min={0}
               max={1440}
               value={completing?.minutes ?? 0}
-              onChange={(e) => completing && setCompleting({ ...completing, minutes: Number(e.target.value) })}
+              onChange={(e) =>
+                completing &&
+                setCompleting({
+                  ...completing,
+                  minutes: Number(e.target.value),
+                })
+              }
             />
           </Field>
           <DialogFooter>

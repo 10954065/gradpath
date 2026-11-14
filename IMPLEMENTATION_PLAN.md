@@ -28,6 +28,15 @@ commit. Progress is recorded in `BUILD_STATUS.md`; curriculum progress in `CURRI
 | U4. Content | CSIT 610 Seminar course (11 lessons); gap lessons in 603, 605, 607, 613, 617 and 621 | Content validation 0 errors; seed rebuilt |
 | U5. Release | Docs, cloud migration and seed, deployment | Live checks |
 
+## Official timetable (2026-11-14)
+
+| Step | Scope | Exit criteria |
+|---|---|---|
+| T1. Data | Sources, published sessions, audit trail, publications, private attendance and preferences, lecture reminders, change notices, revised-version import (migration 12); timetable content file compiled into the seed | Migrations apply from empty; integration tests for read-only access, privacy, reminders, admin changes |
+| T2. Official timetable page | `/timetable/official`: source details, week (overlap lanes), day and list views with filters, phone agenda, course strip, attendance choice, links to course pages | Unit and browser tests for all 20 sessions, venues, Ghana time, links, phone layout |
+| T3. Study plan around lectures | Lecture-aligned study plan generator; planner shows lectures read-only and never counts them; clash warning | Unit tests: no block within 30 minutes of a lecture, preview and review per course |
+| T4. Administration | Timetable tab: add, correct, cancel, remove with reasons; publish and notify; history; import a revised version | Integration tests for reasons, history and notices |
+
 ## Key decisions
 
 1. **Scoring in PostgreSQL** rather than in a serverless function: one trust boundary (RLS), no service-role
@@ -42,3 +51,7 @@ commit. Progress is recorded in `BUILD_STATUS.md`; curriculum progress in `CURRI
 6. **Shared curriculum, personal selection**: `courses` holds the programme (with classification and credit slots);
    `course_enrolments` holds each student's own selection. Compulsory courses enrol automatically and never
    overwrite a choice; electives are each student's decision, so one student's selection is never imposed on another.
+7. **Official timetable apart from the study plan**: published sessions are shared data changed only by administrators
+   with an audit trail; which sessions a student attends is their own private choice, because the published timetable
+   does not say whether repeated sessions are alternatives. The study plan is generated around the lectures and its
+   hours are counted separately.

@@ -26,11 +26,13 @@ export async function deleteNotification(id: string): Promise<void> {
   ensureOk(await supabase.from('notifications').delete().eq('id', id))
 }
 
-/** Ask the database to create due-date and revision reminders (idempotent). */
+/**
+ * Ask the database to create due-date, revision and lecture reminders (idempotent). Lecture reminders are only for
+ * official sessions the student has confirmed, and follow their timetable preferences.
+ */
 export async function generateDueNotifications(): Promise<number> {
-  const { data, error } = await supabase.rpc('generate_due_notifications')
-  if (error) return 0
-  return typeof data === 'number' ? data : 0
+  const results = await Promise.all([supabase.rpc('generate_due_notifications'), supabase.rpc('generate_lecture_notifications')])
+  return results.reduce((sum, { data, error }) => sum + (!error && typeof data === 'number' ? data : 0), 0)
 }
 
 /** Optional browser notification; only shown when the student granted permission in Settings. */

@@ -8,8 +8,9 @@ assessments, timed mock examinations, a study planner, spaced-repetition revisio
 keeps working offline.
 
 > GradPath is an independent **supplementary** study platform. It is not official University of Ghana material,
-> does not replace lecturers' instructions, and practice results are not official grades. Timetables are
-> provisional study plans, not official lecture schedules.
+> does not replace lecturers' instructions, and practice results are not official grades. The official lecture
+> timetable is a transcription of the University's published ITB timetable that has not been independently compared
+> with the original; personal study plans are suggestions.
 
 ## What's inside
 
@@ -17,9 +18,10 @@ keeps working offline.
 |---|---|
 | Courses | The 8 Semester 1 courses (20 credit slots): CSIT 601, 603, 605, 607 and 617 (core, 3 slots each), CSIT 610 Seminar (required, 1 slot), CSIT 613 (elective, 3 slots) and CSIT 621 (special topic, 1 slot). 62 modules, 180 lessons (~495,000 words) in a consistent format: objectives, key terms, worked explanations, Ghanaian and international cases, misconceptions, exam mistakes, critical questions, exercises, revision summary, further reading. Each student records their own elective; their dashboard, planner, progress and assessments use only the courses they take. CSIT 610 has a personal seminar tracker. |
 | Assessment | 1,325 supplementary practice questions (7 question types), lesson quizzes, module assessments, mixed revision tests, course and mixed mock exams (the mixed paper uses only the courses a student takes). Attempt history shows course, attempt number, time spent and score. Scoring happens on the server; answer keys are never sent to the browser before submission. Mastery threshold 80% (configurable). |
-| Study tools | Weekly planner and provisional timetable (Africa/Accra), university lecture timetable kept separate from the personal study plan (lectures can be marked awaiting confirmation), missed-session tracking, deadlines typed as assignment, test, examination, presentation or project, private notes and bookmarks, SM-2 spaced repetition and 1,050 flashcards, search, notifications, rule-based study recommendations. |
+| Official timetable | The University of Ghana, Department of Computer Science 2026/2027 Semester 1 ITB postgraduate timetable (20 published sessions, Ghana time) in week, day and list views, filtered to the courses each student takes, linked to course pages, with venues, credit slots and the next session per course. Repeated sessions are kept and marked "attendance allocation pending confirmation"; each student privately confirms the sessions they attend. Lecture reminders (confirmed sessions only, following each student's preferences) and published change notices. |
+| Study tools | A personal study plan built around the lectures (a preview before and a review after each course's lecture, deep study to the weekly target, mixed revision; never within 30 minutes of a lecture) and counted separately from lecture hours, weekly planner showing official lectures read-only, missed-session tracking, deadlines typed as assignment, test, examination, presentation or project, private notes and bookmarks, SM-2 spaced repetition and 1,050 flashcards, search, notifications, rule-based study recommendations. |
 | Progress | Dashboard, a daily lesson streak shown as a flame (lit, fading or out), today's lessons guided by the timetable, time studied, course and module mastery, weak-topic detection. |
-| Admin | Publish/hide content, edit completion rules and assessment settings, import lessons (Markdown) and question banks (YAML), manage resources (with a server-side link checker), announcements and private lecturer/institutional uploads. |
+| Admin | Publish/hide content, edit completion rules and assessment settings, import lessons (Markdown) and question banks (YAML), manage resources (with a server-side link checker), announcements and private lecturer/institutional uploads, and the official timetable (add, correct, cancel or remove sessions with a reason, publish changes and notify students, view the history, import a revised timetable as a new version). |
 | Offline | Installable PWA. Lessons you open are saved on your device; notes, progress and planner changes made offline are queued and synced when you reconnect. |
 
 Curriculum coverage per module: [CURRICULUM_STATUS.md](CURRICULUM_STATUS.md).
