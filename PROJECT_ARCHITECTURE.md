@@ -166,6 +166,19 @@ Every content item carries a `source` that the UI displays:
   filters, planner entries, CSV import parsing) and `src/lib/studyStrategy.ts` (the lecture-aligned study plan) are
   pure and unit-tested. Lecture time is never counted in study totals.
 
+## Official marks and grades
+
+* `course_marks` (migration 17, `/grades`): private rows, one per assessed component of a course (title, coursework or
+  examination, weight in percent, mark and what it is out of once released, date, note). A trigger keeps each course's
+  weights at 100% or less (a P0001 message the student sees).
+* `src/lib/grades.ts` (pure, unit-tested) holds the University of Ghana Masters Regulations (July 2025) grading scale,
+  Table 5 in section 3.24 (A 80–100 4.00, B+ 70–79 3.50, B 60–69 3.00, C 50–59 2.00, D 30–49 1.50, F 0–29 1.00), and
+  computes a course's earned points, average so far, final mark once the marked weights reach 100, what the rest needs
+  for each pass grade, and the grade point average (grade point × credits ÷ credits, 3.24.3) over finished courses
+  and projected with current averages. Marks are never rounded up (the regulations give no rounding rule). Credits
+  are the course's `credit_slots`. Coursework and examination weights are not in the regulations; the student enters
+  them from each course outline.
+
 ## Assessment engine
 
 `start_attempt(quiz_id)` selects questions (fixed set or random sample from a bank scope), records them

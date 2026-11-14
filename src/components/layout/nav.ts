@@ -1,4 +1,5 @@
 import {
+  Award,
   BarChart3,
   Bell,
   BookMarked,
@@ -68,6 +69,7 @@ export const NAV_GROUPS: NavGroup[] = [
     items: [
       { to: '/notes', label: 'My Notes', icon: NotebookPen },
       { to: '/progress', label: 'Academic Progress', icon: BarChart3 },
+      { to: '/grades', label: 'My Grades', icon: Award },
       { to: '/announcements', label: 'Announcements', icon: Megaphone },
       { to: '/notifications', label: 'Notifications', icon: Bell },
       { to: '/settings', label: 'Settings', icon: Settings },

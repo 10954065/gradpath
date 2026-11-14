@@ -1,0 +1,47 @@
+import { expect, test } from '@playwright/test'
+
+test('a student records official marks and sees the grade, the marks needed and the grade point average', async ({ page }) => {
+  await page.goto('/grades')
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('My Grades')
+  await expect(page.getByText(/Source: University of Ghana Masters Regulations \(July 2025\), section 3\.24, Table 5/)).toBeVisible()
+  const card = page.getByTestId('course-grade').filter({ hasText: 'CSIT 601' })
+  await expect(card.getByTestId('course-grade-status')).toHaveText('No marks yet')
+
+  // Coursework: 24 out of 30, worth 30% of the course.
+  await card.getByRole('button', { name: 'Add a mark' }).click()
+  let dialog = page.getByRole('dialog', { name: 'Add a mark · CSIT 601' })
+  await dialog.getByLabel('Assessment').fill('Mid-semester test')
+  await dialog.getByLabel('Weight in the course (%)').fill('30')
+  await dialog.getByLabel('Your mark').fill('24')
+  await dialog.getByLabel('Out of').fill('30')
+  await dialog.getByRole('button', { name: 'Save mark' }).click()
+  await expect(dialog).toBeHidden()
+  await expect(card.getByTestId('course-grade-status')).toHaveText('So far 80 · A')
+  await expect(card.getByText('The weights entered add up to 30%. Add the rest (70%) from the course outline.')).toBeVisible()
+  const needed = card.getByRole('list', { name: 'CSIT 601 marks needed' })
+  await expect(needed).toContainText('A 80%')
+  await expect(needed).toContainText('B+ 65.8%')
+
+  // The examination, worth 70%, is added before its mark is released, then marked.
+  await card.getByRole('button', { name: 'Add a mark' }).click()
+  dialog = page.getByRole('dialog', { name: 'Add a mark · CSIT 601' })
+  await dialog.getByLabel('Assessment').fill('End-of-semester examination')
+  await dialog.getByRole('combobox', { name: 'Part of' }).click()
+  await page.getByRole('option', { name: 'Examination' }).click()
+  await dialog.getByLabel('Weight in the course (%)').fill('80')
+  await dialog.getByRole('button', { name: 'Save mark' }).click()
+  await expect(page.getByText('The weights for this course would add up to 110 percent; they cannot exceed 100.')).toBeVisible()
+  await dialog.getByLabel('Weight in the course (%)').fill('70')
+  await dialog.getByRole('button', { name: 'Save mark' }).click()
+  await expect(dialog).toBeHidden()
+  await expect(card.getByText('Awaiting mark')).toBeVisible()
+
+  await card.getByRole('button', { name: 'Edit End-of-semester examination' }).click()
+  dialog = page.getByRole('dialog', { name: 'Edit mark · CSIT 601' })
+  await dialog.getByLabel('Your mark').fill('61')
+  await dialog.getByRole('button', { name: 'Save mark' }).click()
+  await expect(dialog).toBeHidden()
+  await expect(card.getByTestId('course-grade-status')).toHaveText('Final 66.7 · B')
+  await expect(page.getByTestId('gpa')).toHaveText('3.00')
+  await expect(page.getByTestId('projected-gpa')).toHaveText('3.00')
+})
