@@ -5,7 +5,7 @@ import { useAuth } from '@/contexts/AuthContext'
 import { useOfficialTimetable } from '@/hooks/useOfficialTimetable'
 import { useSemesterCalendar } from '@/hooks/useSemesterCalendar'
 import { toUserMessage } from '@/lib/errors'
-import { coursePace, dueCheckIns, lectureDateLabel, lecturesBegun, type CoursePace, type LectureLog } from '@/lib/lectureLog'
+import { CHECK_IN_LOOKBACK_DAYS, coursePace, dueCheckIns, lectureDateLabel, lecturesBegun, type CoursePace, type LectureLog } from '@/lib/lectureLog'
 import { getCatalogue } from '@/services/courses'
 import { listMyProgress } from '@/services/progress'
 import { addToQueue } from '@/services/study/revision'
@@ -74,7 +74,8 @@ export function useLectureLogs() {
     error: logs.error ?? catalogue.error ?? progress.error ?? tt.error ?? null,
     logs: all,
     /** Ended lectures with no check-in yet, newest first. */
-    due: dueCheckIns(tt.sessions, tt.attendance, all, new Date(), calendar.lecturesStartOn),
+    due: dueCheckIns(tt.sessions, tt.attendance, all, new Date(), calendar.lecturesStartOn, CHECK_IN_LOOKBACK_DAYS, tt.exceptions),
+    exceptions: tt.exceptions,
     sessions: tt.sessions,
     attendance: tt.attendance,
     courses: (catalogue.data ?? []).filter((c) => tt.taking.some((t) => t.id === c.id)),

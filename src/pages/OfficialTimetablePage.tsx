@@ -152,7 +152,7 @@ export default function OfficialTimetablePage() {
       <section aria-label="My courses on the timetable" className="mb-6 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
         {tt.taking.map((c) => {
           const own = tt.sessions.filter((s) => s.courseId === c.id)
-          const next = nextSession(own, tt.attendance, new Date(), calendar.lecturesStartOn)
+          const next = nextSession(own, tt.attendance, new Date(), calendar.lecturesStartOn, tt.exceptions)
           return (
             <Link key={c.id} to={`/courses/${c.slug}`} className="rounded-xl border bg-surface p-3 shadow-card transition-shadow hover:shadow-raised" data-testid="course-timetable-card">
               <span className="flex items-center gap-2 text-sm font-semibold">

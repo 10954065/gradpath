@@ -4,10 +4,12 @@ import { useAuth } from '@/contexts/AuthContext'
 import { useMyCourses } from '@/hooks/useMyCourses'
 import { useSemesterCalendar } from '@/hooks/useSemesterCalendar'
 import { toUserMessage } from '@/lib/errors'
-import { effectiveAttendance, sortWeek, type AttendanceStatus } from '@/lib/officialTimetable'
+import { effectiveAttendance, sortWeek, type AttendanceStatus, type LectureException } from '@/lib/officialTimetable'
+import { LECTURE_EXCEPTIONS_KEY, listLectureExceptions } from '@/services/timetable/lectureExceptions'
 import { ATTENDANCE_KEY, getOfficialTimetable, listAttendance, OFFICIAL_TIMETABLE_KEY, setAttendance } from '@/services/timetable/official'
 
 const EMPTY_ATTENDANCE: ReadonlyMap<string, AttendanceStatus> = new Map()
+const NO_EXCEPTIONS: LectureException[] = []
 
 /**
  * The official timetable filtered to the courses the student takes, with their private attendance choices.
@@ -21,6 +23,7 @@ export function useOfficialTimetable() {
   const { order } = useSemesterCalendar()
   const timetable = useQuery({ queryKey: OFFICIAL_TIMETABLE_KEY, queryFn: getOfficialTimetable })
   const attendance = useQuery({ queryKey: ATTENDANCE_KEY, queryFn: listAttendance })
+  const exceptions = useQuery({ queryKey: LECTURE_EXCEPTIONS_KEY, queryFn: listLectureExceptions })
 
   const update = useMutation({
     mutationFn: ({ ids, status }: { ids: string[]; status: AttendanceStatus }) => setAttendance(user?.id as string, ids, status),
@@ -55,6 +58,8 @@ export function useOfficialTimetable() {
     hiddenCount: all.length - mine.length,
     /** Each session's attendance: the student's choice, or confirmed when the allocation covers all students. */
     attendance: effectiveAttendance(mine, choices),
+    /** The student's one-off changes to single lectures (cancelled or moved). */
+    exceptions: exceptions.data ?? NO_EXCEPTIONS,
     setAttendance: (ids: string[], status: AttendanceStatus) => update.mutate({ ids, status }),
     saving: update.isPending,
     taking: my.taking,

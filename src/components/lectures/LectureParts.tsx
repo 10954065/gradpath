@@ -57,7 +57,7 @@ const lessonPath = (course: Pick<CourseDetail, 'slug'>, lesson: Pick<LessonSumma
 export function CoursePaceCard({ course, pace, detailed = false }: { course: CourseDetail; pace: CoursePace<LessonSummary>; detailed?: boolean }) {
   const tt = useOfficialTimetable()
   const { lecturesStartOn } = useSemesterCalendar()
-  const next = nextSession(tt.sessions.filter((s) => s.courseId === course.id), tt.attendance, new Date(), lecturesStartOn)
+  const next = nextSession(tt.sessions.filter((s) => s.courseId === course.id), tt.attendance, new Date(), lecturesStartOn, tt.exceptions)
   const percent = pace.total ? Math.round((pace.completed / pace.total) * 100) : 0
   return (
     <div className="flex flex-col gap-2 rounded-lg border p-3" data-testid="course-pace">

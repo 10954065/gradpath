@@ -1,5 +1,17 @@
 // After-lecture check-ins and how far the student is ahead of (or behind) the lectures in each course.
-import { DAY_NAMES, ghanaNow, localDay, mayAttend, shortDate, toMinutes, type AttendanceMap, type OfficialSession } from '@/lib/officialTimetable'
+import {
+  DAY_NAMES,
+  exceptionIndex,
+  exceptionKey,
+  ghanaNow,
+  localDay,
+  mayAttend,
+  shortDate,
+  toMinutes,
+  type AttendanceMap,
+  type LectureException,
+  type OfficialSession,
+} from '@/lib/officialTimetable'
 
 export type LectureAttendance = 'attended' | 'missed' | 'cancelled'
 
@@ -53,22 +65,32 @@ export function dueCheckIns(
   now: Date = new Date(),
   lecturesStartOn: Date | null = null,
   lookbackDays = CHECK_IN_LOOKBACK_DAYS,
+  exceptions: readonly LectureException[] = [],
 ): DueCheckIn[] {
   const logged = new Set(logs.map((l) => logKey(l.entry_id, l.held_on)))
+  const changed = exceptionIndex(exceptions)
   const firstDay = lecturesStartOn ? localDay(lecturesStartOn) : null
   const today = ghanaNow(now)
-  const due: DueCheckIn[] = []
+  const due: (DueCheckIn & { sortKey: string })[] = []
+  const oldest = ghanaNow(new Date(now.getTime() - lookbackDays * DAY_MS)).date
   for (let back = 0; back <= lookbackDays; back += 1) {
     const { date, dayOfWeek } = ghanaNow(new Date(now.getTime() - back * DAY_MS))
     if (firstDay && date < firstDay) break
     const onDay = sessions
       .filter((s) => s.dayOfWeek === dayOfWeek && mayAttend(s, attendance))
       .filter((s) => back > 0 || toMinutes(s.end) <= today.minutes)
-      .filter((s) => !logged.has(logKey(s.id, date)))
-      .sort((a, b) => b.start.localeCompare(a.start))
-    for (const session of onDay) due.push({ session, date, label: lectureDateLabel(date) })
+      .filter((s) => !logged.has(logKey(s.id, date)) && !changed.has(exceptionKey(s.id, date)))
+    for (const session of onDay) due.push({ session, date, label: lectureDateLabel(date), sortKey: `${date} ${session.start}` })
   }
-  return due
+  // Moved lectures are due once they have ended on their new day; the check-in keeps the normal date.
+  for (const x of exceptions) {
+    const session = sessions.find((s) => s.id === x.entry_id)
+    if (x.status !== 'moved' || !x.moved_date || !x.moved_start || !x.moved_end || !session || !mayAttend(session, attendance)) continue
+    if (x.moved_date > today.date || x.moved_date < oldest || (x.moved_date === today.date && toMinutes(x.moved_end) > today.minutes)) continue
+    if (logged.has(logKey(x.entry_id, x.held_on))) continue
+    due.push({ session, date: x.held_on, label: `${lectureDateLabel(x.moved_date)} (moved)`, sortKey: `${x.moved_date} ${x.moved_start}` })
+  }
+  return due.sort((a, b) => b.sortKey.localeCompare(a.sortKey)).map(({ sortKey: _sortKey, ...d }) => d)
 }
 
 /** Whether lectures have begun by now (Ghana date). Unknown start dates count as begun. */

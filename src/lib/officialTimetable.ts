@@ -59,6 +59,28 @@ export interface OfficialSession {
 
 export type AttendanceMap = ReadonlyMap<string, AttendanceStatus>
 
+/** A student's one-off change to a single lecture: cancelled, or moved to another day, time or room. */
+export interface LectureException {
+  id: string
+  entry_id: string
+  /** yyyy-mm-dd: the date the lecture would normally be held. */
+  held_on: string
+  status: 'cancelled' | 'moved'
+  moved_date: string | null
+  /** HH:MM */
+  moved_start: string | null
+  moved_end: string | null
+  moved_venue: string
+  note: string
+}
+
+export const exceptionKey = (entryId: string, date: string): string => `${entryId}|${date}`
+
+/** One-off changes keyed by session and normal date. */
+export function exceptionIndex(exceptions: readonly LectureException[]): ReadonlyMap<string, LectureException> {
+  return new Map(exceptions.map((x) => [exceptionKey(x.entry_id, x.held_on), x]))
+}
+
 export const attendanceOf = (map: AttendanceMap, entryId: string): AttendanceStatus => map.get(entryId) ?? 'awaiting'
 
 /**
@@ -181,23 +203,43 @@ export function nextSession(
   attendance: AttendanceMap,
   now: Date = new Date(),
   lecturesStartOn: Date | null = null,
+  exceptions: readonly LectureException[] = [],
 ): NextSession | null {
-  const { dayOfWeek, minutes } = ghanaNow(now)
+  const today = ghanaNow(now)
   const firstDay = lecturesStartOn ? localDay(lecturesStartOn) : null
+  const changed = exceptionIndex(exceptions)
+  const dateIn = (days: number) => ghanaNow(new Date(now.getTime() + days * DAY_MS)).date
+  const label = (daysAhead: number, date: string, time: string, moved: boolean) => {
+    const dow = new Date(`${date}T12:00:00Z`).getUTCDay()
+    const when = daysAhead === 0 ? 'Today' : daysAhead === 1 ? 'Tomorrow' : daysAhead < 7 ? DAY_NAMES[dow] : `${DAY_NAMES[dow]} ${shortDate(date)}`
+    return `${when}, ${ghanaClock(time)}${moved ? ' (moved)' : ''}`
+  }
   let best: NextSession | null = null
   let bestOffset = Infinity
   for (const s of sessions) {
     if (!mayAttend(s, attendance)) continue
-    let daysAhead = (s.dayOfWeek - dayOfWeek + 7) % 7
-    if (daysAhead === 0 && toMinutes(s.start) <= minutes) daysAhead = 7
-    if (firstDay) while (ghanaNow(new Date(now.getTime() + daysAhead * DAY_MS)).date < firstDay) daysAhead += 7
+    let daysAhead = (s.dayOfWeek - today.dayOfWeek + 7) % 7
+    if (daysAhead === 0 && toMinutes(s.start) <= today.minutes) daysAhead = 7
+    // Skip weeks before teaching begins and weeks the student cancelled or moved this lecture (a year at most).
+    for (let guard = 0; guard < 52 && ((firstDay && dateIn(daysAhead) < firstDay) || changed.has(exceptionKey(s.id, dateIn(daysAhead)))); guard += 1) {
+      daysAhead += 7
+    }
     const offset = daysAhead * 1440 + toMinutes(s.start)
     if (offset < bestOffset) {
       bestOffset = offset
-      const date = ghanaNow(new Date(now.getTime() + daysAhead * DAY_MS)).date
-      const when =
-        daysAhead === 0 ? 'Today' : daysAhead === 1 ? 'Tomorrow' : daysAhead < 7 ? DAY_NAMES[s.dayOfWeek] : `${DAY_NAMES[s.dayOfWeek]} ${shortDate(date)}`
-      best = { session: s, daysAhead, label: `${when}, ${ghanaClock(s.start)}` }
+      best = { session: s, daysAhead, label: label(daysAhead, dateIn(daysAhead), s.start, false) }
+    }
+  }
+  // Lectures moved to a later day or time.
+  for (const x of exceptions) {
+    const s = sessions.find((session) => session.id === x.entry_id)
+    if (x.status !== 'moved' || !x.moved_date || !x.moved_start || !s || !mayAttend(s, attendance)) continue
+    const daysAhead = Math.round((Date.parse(`${x.moved_date}T00:00:00Z`) - Date.parse(`${today.date}T00:00:00Z`)) / DAY_MS)
+    if (daysAhead < 0 || (daysAhead === 0 && toMinutes(x.moved_start) <= today.minutes)) continue
+    const offset = daysAhead * 1440 + toMinutes(x.moved_start)
+    if (offset < bestOffset) {
+      bestOffset = offset
+      best = { session: s, daysAhead, label: label(daysAhead, x.moved_date, x.moved_start, true) }
     }
   }
   return best
@@ -287,16 +329,21 @@ export function officialPlannerEntries(
   attendance: AttendanceMap,
   start: Date,
   end: Date,
-  options: { onlyConfirmed?: boolean; lecturesStartOn?: Date | null } = {},
+  options: { onlyConfirmed?: boolean; lecturesStartOn?: Date | null; exceptions?: readonly LectureException[] } = {},
 ): PlannerEntry[] {
   const entries: PlannerEntry[] = []
   const firstDay = options.lecturesStartOn ? localDay(options.lecturesStartOn) : null
-  for (const date of dateRange(start, end)) {
+  const exceptions = options.exceptions ?? []
+  const changed = exceptionIndex(exceptions)
+  const days = dateRange(start, end)
+  for (const date of days) {
     // No official lecture is held before teaching begins.
     if (firstDay && date < firstDay) continue
     const dow = new Date(`${date}T00:00:00`).getDay()
     for (const s of sessions) {
       if (s.dayOfWeek !== dow || !mayAttend(s, attendance)) continue
+      // Cancelled or moved for this student this week.
+      if (changed.has(exceptionKey(s.id, date))) continue
       const confirmed = attendanceOf(attendance, s.id) === 'confirmed'
       if (options.onlyConfirmed && !confirmed) continue
       entries.push({
@@ -314,6 +361,29 @@ export function officialPlannerEntries(
         official: s,
       })
     }
+  }
+  const first = days[0] ?? ''
+  const last = days.at(-1) ?? ''
+  for (const x of exceptions) {
+    const s = sessions.find((session) => session.id === x.entry_id)
+    if (x.status !== 'moved' || !x.moved_date || !x.moved_start || !x.moved_end || !s || !mayAttend(s, attendance)) continue
+    if (x.moved_date < first || x.moved_date > last) continue
+    const confirmed = attendanceOf(attendance, s.id) === 'confirmed'
+    if (options.onlyConfirmed && !confirmed) continue
+    entries.push({
+      key: `official|${s.id}|${x.held_on}|moved`,
+      title: `${s.code} lecture (moved) · ${x.moved_venue || s.venue || 'venue not given'}`,
+      courseId: s.courseId,
+      kind: 'lecture',
+      start: at(x.moved_date, x.moved_start),
+      end: at(x.moved_date, x.moved_end),
+      date: x.moved_date,
+      event: null,
+      session: null,
+      status: 'planned',
+      isProvisional: !confirmed,
+      official: s,
+    })
   }
   return entries
 }

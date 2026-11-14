@@ -1,5 +1,6 @@
 import { format } from 'date-fns'
 import { ClipboardCheck } from 'lucide-react'
+import { LectureChanges } from '@/components/lectures/LectureChanges'
 import { CheckInHistory, CoursePaceCard, DueCheckInList } from '@/components/lectures/LectureParts'
 import { EmptyState, ErrorState, Skeleton } from '@/components/ui/feedback'
 import { PageHeader, Section } from '@/components/ui/page'
@@ -39,6 +40,10 @@ export default function LecturesPage() {
                 className="py-8"
               />
             )}
+          </Section>
+
+          <Section title="Changes to single lectures">
+            <LectureChanges />
           </Section>
 
           <Section title={lectures.begun ? 'Ahead or behind the lectures' : 'Your head start'}>

@@ -5,6 +5,17 @@
 export interface CalendarFeed {
   lecturesStartOn: string | null
   lectures: { id: string; code: string; title: string; day_of_week: number; start_time: string; end_time: string; venue: string }[]
+  /** One-off changes the student recorded: the normal date is left out, and a moved lecture is added on its new day. */
+  exceptions?: {
+    id: string
+    entry_id: string
+    held_on: string
+    status: 'cancelled' | 'moved'
+    moved_date: string | null
+    moved_start: string | null
+    moved_end: string | null
+    moved_venue: string
+  }[]
   events: {
     id: string
     title: string
@@ -88,8 +99,10 @@ export function buildCalendar(feed: CalendarFeed, now: Date = new Date()): strin
   ]
 
   const lecturesFrom = feed.lecturesStartOn ?? today
+  const exceptions = feed.exceptions ?? []
   for (const l of feed.lectures) {
     const first = firstOnOrAfter(lecturesFrom, l.day_of_week)
+    const changed = exceptions.filter((x) => x.entry_id === l.id)
     lines.push(
       ...event([
         ['UID', `lecture-${l.id}@gradpath`],
@@ -97,12 +110,28 @@ export function buildCalendar(feed: CalendarFeed, now: Date = new Date()): strin
         ['DTSTART', at(first, l.start_time)],
         ['DTEND', at(first, l.end_time)],
         ['RRULE', 'FREQ=WEEKLY'],
+        ['EXDATE', changed.map((x) => at(x.held_on, l.start_time)).join(',')],
         ['SUMMARY', escapeText(`${l.code} lecture`)],
         ['LOCATION', escapeText(l.venue)],
         ['DESCRIPTION', escapeText(`${l.title}. Official University timetable, Ghana time.`)],
         ['CATEGORIES', 'Lecture'],
       ]),
     )
+    for (const x of changed) {
+      if (x.status !== 'moved' || !x.moved_date || !x.moved_start || !x.moved_end) continue
+      lines.push(
+        ...event([
+          ['UID', `lecture-${l.id}-${x.held_on}@gradpath`],
+          ['DTSTAMP', stamp],
+          ['DTSTART', at(x.moved_date, x.moved_start)],
+          ['DTEND', at(x.moved_date, x.moved_end)],
+          ['SUMMARY', escapeText(`${l.code} lecture (moved)`)],
+          ['LOCATION', escapeText(x.moved_venue || l.venue)],
+          ['DESCRIPTION', escapeText(`${l.title}. Moved from ${x.held_on}, Ghana time.`)],
+          ['CATEGORIES', 'Lecture'],
+        ]),
+      )
+    }
   }
 
   for (const e of feed.events) {

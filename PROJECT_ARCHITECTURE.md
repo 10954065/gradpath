@@ -158,6 +158,13 @@ Every content item carries a `source` that the UI displays:
   completed lessons with the furthest lesson any check-in covered: ahead, level, behind (with the lessons to catch up
   on) or unknown until the first check-in; before lectures begin every completed lesson counts as a head start. Shown
   on `/lectures`, a dashboard card and each course page.
+* One-off changes (migration 21): private `lecture_exceptions`, one per student, session and normal date, either
+  cancelled or moved (new date, start, end, optional room); a trigger rejects a day the session is not held, a day
+  before lectures begin and an incomplete or inverted new time. `lecture_occurrences(day, user)` gives each
+  student's actual lectures for a day (weekly sessions less cancelled or moved ones, plus those moved to the day,
+  with `held_on` the normal date) and drives `lecture_reminder_core`; check-ins of a moved lecture stay keyed by
+  its normal date. In the app, `officialPlannerEntries`, `nextSession`, `dueCheckIns` and `buildCalendar` (EXDATE
+  plus a separate moved event) take the same changes; `useOfficialTimetable` loads them.
 * Reminders: `lecture_reminder_core` creates in-app notifications only for confirmed sessions (before the lecture,
   a check-in prompt in the three hours after it ends until the student checks in, plus a morning summary). It runs for the signed-in student from the app (`generate_lecture_notifications`) and for
   everyone every 15 minutes from `pg_cron`; devices that allow browser notifications receive them through the same

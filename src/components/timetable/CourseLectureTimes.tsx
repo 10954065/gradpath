@@ -12,7 +12,7 @@ export function CourseLectureTimes({ courseId }: { courseId: string }) {
   const { lecturesStartOn } = useSemesterCalendar()
   const sessions = tt.sessions.filter((s) => s.courseId === courseId)
   if (tt.isPending || !tt.source || !sessions.length) return null
-  const next = nextSession(sessions, tt.attendance, new Date(), lecturesStartOn)
+  const next = nextSession(sessions, tt.attendance, new Date(), lecturesStartOn, tt.exceptions)
   return (
     <Card>
       <CardHeader>

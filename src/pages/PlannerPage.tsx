@@ -75,9 +75,9 @@ export default function PlannerPage() {
     () =>
       [
         ...buildPlanner(events.data ?? [], sessions.data ?? [], anchor, weekEnd),
-        ...officialPlannerEntries(official.sessions, official.attendance, anchor, weekEnd, { lecturesStartOn: calendar.lecturesStartOn }),
+        ...officialPlannerEntries(official.sessions, official.attendance, anchor, weekEnd, { lecturesStartOn: calendar.lecturesStartOn, exceptions: official.exceptions }),
       ].sort((a, b) => a.start.getTime() - b.start.getTime()),
-    [events.data, sessions.data, anchor, weekEnd, official.sessions, official.attendance, calendar.lecturesStartOn],
+    [events.data, sessions.data, anchor, weekEnd, official.sessions, official.attendance, official.exceptions, calendar.lecturesStartOn],
   )
   const month = useMemo(() => buildPlanner(events.data ?? [], sessions.data ?? [], monthStart, monthEnd), [events.data, sessions.data, monthStart, monthEnd])
   const weekTotals = studyTotals(week)
