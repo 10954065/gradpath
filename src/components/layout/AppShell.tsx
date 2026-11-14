@@ -11,6 +11,7 @@ import { SidebarNav, Sidebar } from './Sidebar'
 import { TopBar } from './TopBar'
 import { UpdatePrompt } from '@/components/system/UpdatePrompt'
 import { useBackgroundSync } from '@/hooks/useBackgroundSync'
+import { useEnrolmentSync } from '@/hooks/useMyCourses'
 import { usePushSync } from '@/hooks/usePushSync'
 
 function MobileDrawer({ open, onOpenChange }: { open: boolean; onOpenChange: (open: boolean) => void }) {
@@ -67,6 +68,7 @@ export function AppShell() {
   const [menuOpen, setMenuOpen] = useState(false)
   useBackgroundSync()
   usePushSync()
+  useEnrolmentSync()
   return (
     <div className="min-h-dvh">
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:rounded-md focus:bg-primary focus:px-3 focus:py-2 focus:text-primary-foreground">

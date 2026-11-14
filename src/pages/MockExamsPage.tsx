@@ -7,13 +7,15 @@ import { Alert, ErrorState, Skeleton } from '@/components/ui/feedback'
 import { PageHeader } from '@/components/ui/page'
 import { toUserMessage } from '@/lib/errors'
 import { listMyAttempts, listQuizzes } from '@/services/assessments'
-import { listCourses } from '@/services/courses'
+import { useMyCourses } from '@/hooks/useMyCourses'
 
 export default function MockExamsPage() {
   const quizzes = useQuery({ queryKey: ['quizzes', 'mock'], queryFn: () => listQuizzes({ kind: 'mock_exam' }) })
   const attempts = useQuery({ queryKey: ['attempts'], queryFn: listMyAttempts })
-  const courses = useQuery({ queryKey: ['courses'], queryFn: listCourses })
-  const codeOf = (id: string | null) => courses.data?.find((c) => c.id === id)?.code
+  const my = useMyCourses()
+  const codeOf = (id: string | null) => my.all.find((c) => c.id === id)?.code
+  // Course papers for the courses the student takes, plus the mixed paper (which draws only on those courses).
+  const exams = (quizzes.data ?? []).filter((q) => !q.course_id || my.isTaking(q.course_id))
 
   return (
     <>
@@ -30,13 +32,13 @@ export default function MockExamsPage() {
         <Skeleton className="h-80" />
       ) : (
         <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {(quizzes.data ?? []).map((exam) => {
+          {exams.map((exam) => {
             const mine = (attempts.data ?? []).filter((a) => a.quiz_id === exam.id && a.status === 'submitted')
             const best = mine.reduce<number | null>((m, a) => (a.percent === null ? m : Math.max(m ?? 0, Number(a.percent))), null)
             return (
               <li key={exam.id} className="flex flex-col rounded-xl border bg-surface p-5 shadow-card">
                 <div className="flex items-center justify-between gap-2">
-                  <span className="text-xs font-semibold text-primary">{codeOf(exam.course_id) ?? 'All courses'}</span>
+                  <span className="text-xs font-semibold text-primary">{codeOf(exam.course_id) ?? 'All my courses'}</span>
                   {best !== null ? <Badge tone={mine.some((a) => a.passed) ? 'success' : 'neutral'}>Best {Math.round(best)}%</Badge> : null}
                 </div>
                 <h2 className="mt-1 font-semibold tracking-tight">{exam.title}</h2>

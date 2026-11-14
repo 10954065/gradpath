@@ -13,7 +13,9 @@ import { PageHeader } from '@/components/ui/page'
 import { useAuth } from '@/contexts/AuthContext'
 import { toUserMessage } from '@/lib/errors'
 import { safeExternalUrl } from '@/lib/utils'
-import { listCourses, listResources } from '@/services/courses'
+import { useMyCourses } from '@/hooks/useMyCourses'
+import { coursesForPicker } from '@/lib/curriculum'
+import { listResources } from '@/services/courses'
 import { addBookmark, listBookmarks, removeBookmark } from '@/services/progress'
 import { formatDate } from '@/utils/dates'
 
@@ -45,7 +47,7 @@ export default function ResourcesPage() {
   const category = params.get('category') ?? ''
   const saved = params.get('saved') === '1'
   const resources = useQuery({ queryKey: ['resources'], queryFn: listResources })
-  const courses = useQuery({ queryKey: ['courses'], queryFn: listCourses })
+  const my = useMyCourses()
   const bookmarks = useQuery({ queryKey: ['bookmarks'], queryFn: listBookmarks })
 
   const set = (key: string, value: string) => {
@@ -70,13 +72,13 @@ export default function ResourcesPage() {
     const marked = new Set((bookmarks.data ?? []).map((b) => b.resource_id))
     const needle = q.trim().toLowerCase()
     return (resources.data ?? []).filter((r) => {
-      if (course && r.course_id !== course) return false
+      if (course ? r.course_id !== course : !my.isTaking(r.course_id)) return false
       if (category && r.category !== category) return false
       if (saved && !marked.has(r.id)) return false
       if (!needle) return true
       return [r.title, r.description, r.provider].some((t) => t.toLowerCase().includes(needle))
     })
-  }, [resources.data, bookmarks.data, q, course, category, saved])
+  }, [resources.data, bookmarks.data, q, course, category, saved, my])
 
   return (
     <>
@@ -90,8 +92,8 @@ export default function ResourcesPage() {
           <Input aria-label="Search resources" placeholder="Search resources…" value={q} onChange={(e) => set('q', e.target.value)} className="pl-9" />
         </div>
         <Select aria-label="Course" value={course} onValueChange={(next) => set('course', next)}>
-          <SelectItem value="">All courses</SelectItem>
-          {(courses.data ?? []).map((c) => (
+          <SelectItem value="">All my courses</SelectItem>
+          {coursesForPicker(my.taking, my.all, course || null).map((c) => (
             <SelectItem key={c.id} value={c.id}>
               {c.code} {c.title}
             </SelectItem>

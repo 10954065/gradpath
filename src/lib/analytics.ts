@@ -66,3 +66,21 @@ export function bestScoreAverage<T extends { quiz_id: string; percent: number | 
   }
   return new Map([...sums.entries()].map(([g, s]) => [g, Math.round(s.total / s.n)]))
 }
+
+/** Attempt number of every attempt (1 = first try), counted per assessment in the order the attempts were started. */
+export function attemptNumbers(attempts: readonly { id: string; quiz_id: string; started_at: string }[]): Map<string, number> {
+  const byQuiz = new Map<string, { id: string; started_at: string }[]>()
+  for (const a of attempts) byQuiz.set(a.quiz_id, [...(byQuiz.get(a.quiz_id) ?? []), a])
+  const numbers = new Map<string, number>()
+  for (const list of byQuiz.values()) {
+    ;[...list].sort((x, y) => x.started_at.localeCompare(y.started_at)).forEach((a, i) => numbers.set(a.id, i + 1))
+  }
+  return numbers
+}
+
+/** Whole minutes between starting and submitting an attempt, or null while it is still open. */
+export function timeSpentMinutes(attempt: { started_at: string; submitted_at: string | null }): number | null {
+  if (!attempt.submitted_at) return null
+  const ms = new Date(attempt.submitted_at).getTime() - new Date(attempt.started_at).getTime()
+  return ms >= 0 ? Math.max(1, Math.round(ms / 60_000)) : null
+}

@@ -48,7 +48,7 @@ describe('recommendation engine', () => {
       base({
         progress: [progress('l1', 'in_progress', 10)],
         revision: [due],
-        assignments: [{ id: 'a1', user_id: 'u', course_id: null, title: 'Essay', description: '', due_at: '2026-11-10T09:00:00Z', priority: 'high', status: 'in_progress', notes: '', attachment_paths: [], submitted_at: null, completed_at: null, created_at: '', updated_at: '' }],
+        assignments: [{ id: 'a1', user_id: 'u', course_id: null, kind: 'assignment', title: 'Essay', description: '', due_at: '2026-11-10T09:00:00Z', priority: 'high', status: 'in_progress', notes: '', attachment_paths: [], submitted_at: null, completed_at: null, created_at: '', updated_at: '' }],
       }),
     )
     expect(recs[0]?.priority).toBe(1)

@@ -15,7 +15,7 @@ import { toUserMessage } from '@/lib/errors'
 import { completeEmailLink, requestPasswordReset, resendConfirmation, signIn, signUp, updatePassword } from '@/services/auth'
 
 const HIGHLIGHTS = [
-  'Seven structured courses with postgraduate-level lessons',
+  'All eight Semester 1 courses with postgraduate-level lessons',
   'Practice quizzes, module assessments and timed mock exams',
   'Spaced-repetition revision, flashcards and a study planner',
   'Works offline once lessons are saved to your device',

@@ -171,10 +171,12 @@ describe('student productivity functions', () => {
   it('seeds the provisional timetable once and enrols in courses', async () => {
     const { data: first } = await student.client.rpc('seed_default_timetable')
     const { data: second } = await student.client.rpc('seed_default_timetable')
-    expect(first).toBe(8)
+    // Eight course study blocks (including the CSIT 610 seminar block) plus the general revision block.
+    expect(first).toBe(9)
     expect(second).toBe(0)
+    // Every published course: seven compulsory courses enrolled and the CSIT 613 elective awaiting confirmation.
     const { data: enrolled } = await student.client.rpc('enrol_default_courses')
-    expect(enrolled).toBe(7)
+    expect(enrolled).toBe(8)
     const { data: elective } = await student.client
       .from('course_enrolments')
       .select('status, courses!inner(code)')

@@ -13,7 +13,9 @@ import { Select, SelectItem } from '@/components/ui/select'
 import { PageHeader } from '@/components/ui/page'
 import { useAuth } from '@/contexts/AuthContext'
 import { toUserMessage } from '@/lib/errors'
-import { listCourses } from '@/services/courses'
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { useMyCourses } from '@/hooks/useMyCourses'
+import { coursesForPicker } from '@/lib/curriculum'
 import { deleteEvent, deleteProvisionalEvents, eventSchema, listEvents, restoreProvisionalTimetable, saveEvent, type EventInput } from '@/services/study/planner'
 import type { TimetableEvent } from '@/types/database'
 
@@ -21,13 +23,28 @@ const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 
 const ORDER = [1, 2, 3, 4, 5, 6, 0]
 const KIND_LABEL = { study: 'Study', lecture: 'Lecture', revision: 'Revision', other: 'Other' } as const
 
-const EMPTY: EventInput = { title: '', course_id: null, kind: 'lecture', recurrence: 'weekly', day_of_week: 1, event_date: null, start_time: '09:00', end_time: '11:00', location: '', notes: '' }
+const EMPTY: EventInput = {
+  title: '',
+  course_id: null,
+  kind: 'study',
+  recurrence: 'weekly',
+  day_of_week: 1,
+  event_date: null,
+  start_time: '09:00',
+  end_time: '11:00',
+  location: '',
+  notes: '',
+  awaiting_confirmation: false,
+}
+type View = 'study' | 'university'
+const inView = (e: Pick<TimetableEvent, 'kind'>, view: View) => (view === 'university' ? e.kind === 'lecture' : e.kind !== 'lecture')
 
 export default function TimetablePage() {
   const { user } = useAuth()
   const queryClient = useQueryClient()
   const events = useQuery({ queryKey: ['timetable'], queryFn: listEvents })
-  const courses = useQuery({ queryKey: ['courses'], queryFn: listCourses })
+  const my = useMyCourses()
+  const [view, setView] = useState<View>('study')
   const [editing, setEditing] = useState<TimetableEvent | 'new' | null>(null)
   const [confirmReplace, setConfirmReplace] = useState(false)
   const form = useForm<EventInput>({ resolver: zodResolver(eventSchema), defaultValues: EMPTY })
@@ -39,10 +56,10 @@ export default function TimetablePage() {
   }
   const run = useMutation({ mutationFn: (fn: () => Promise<unknown>) => fn(), onSuccess: done, onError: (e) => toast.error(toUserMessage(e)) })
 
-  const open = (event: TimetableEvent | 'new') => {
+  const open = (event: TimetableEvent | 'new', preset?: Partial<EventInput>) => {
     form.reset(
       event === 'new'
-        ? EMPTY
+        ? { ...EMPTY, kind: view === 'university' ? 'lecture' : 'study', ...preset }
         : {
             title: event.title,
             course_id: event.course_id,
@@ -54,6 +71,7 @@ export default function TimetablePage() {
             end_time: event.end_time.slice(0, 5),
             location: event.location,
             notes: event.notes,
+            awaiting_confirmation: event.kind === 'lecture' && event.is_provisional,
           },
     )
     setEditing(event)
@@ -65,22 +83,36 @@ export default function TimetablePage() {
     setEditing(null)
   })
 
-  const list = events.data ?? []
-  const provisional = list.filter((e) => e.is_provisional)
-  const codeOf = (id: string | null) => courses.data?.find((c) => c.id === id)?.code
+  const all = events.data ?? []
+  const list = all.filter((e) => inView(e, view))
+  const provisional = all.filter((e) => e.is_provisional && e.kind !== 'lecture')
+  const codeOf = (id: string | null) => my.all.find((c) => c.id === id)?.code
+  // Courses the student takes that have no study or revision block yet (for example a newly added course).
+  const withoutStudyBlock = my.taking.filter((c) => !all.some((e) => e.course_id === c.id && e.kind !== 'lecture'))
 
   return (
     <>
       <PageHeader
         title="Timetable"
-        description="Your recurring weekly schedule and one-off events. The study planner builds each week from this timetable."
+        description="Your university lecture timetable and your personal study plan are kept separate. The study planner builds each week from both."
         actions={
           <Button onClick={() => open('new')}>
-            <Plus /> Add event
+            <Plus /> {view === 'university' ? 'Add lecture' : 'Add study block'}
           </Button>
         }
       />
-      {provisional.length ? (
+      <Tabs value={view} onValueChange={(v) => setView(v as View)} className="mb-5">
+        <TabsList>
+          <TabsTrigger value="study">My study plan</TabsTrigger>
+          <TabsTrigger value="university">University timetable</TabsTrigger>
+        </TabsList>
+      </Tabs>
+      {view === 'university' ? (
+        <Alert className="mb-5" title="Official lectures only">
+          Enter lectures from your official University of Ghana timetable. GradPath never adds lectures. When a class allocation is
+          not yet clear, tick “Awaiting confirmation” so it is shown as unconfirmed.
+        </Alert>
+      ) : provisional.length ? (
         <Alert className="mb-5" title="Provisional study schedule">
           The blocks marked “Provisional” are a suggested independent-study plan, not the official University of Ghana lecture timetable. Add your
           official lectures and adjust or remove these blocks.{' '}
@@ -97,11 +129,28 @@ export default function TimetablePage() {
           </button>
         </Alert>
       )}
+      {view === 'study' && withoutStudyBlock.length ? (
+        <Alert className="mb-5" tone="warning" title="Courses without a study block">
+          <span className="block">These courses you take have no time in your study plan yet:</span>
+          <span className="mt-2 flex flex-wrap gap-2">
+            {withoutStudyBlock.map((c) => (
+              <Button
+                key={c.id}
+                size="sm"
+                variant="secondary"
+                onClick={() => open('new', { course_id: c.id, title: `${c.code} ${c.title} (study)`, kind: 'study' })}
+              >
+                <Plus /> Add a {c.code} study block
+              </Button>
+            ))}
+          </span>
+        </Alert>
+      ) : null}
       {events.isError ? <ErrorState message={toUserMessage(events.error)} onRetry={() => void events.refetch()} /> : null}
       {events.isPending ? (
         <Skeleton className="h-96" />
       ) : list.length === 0 ? (
-        <EmptyState icon={CalendarDays} title="Your timetable is empty" description="Add your lectures and study blocks to plan your week." action={<Button onClick={() => open('new')}>Add event</Button>} />
+        <EmptyState icon={CalendarDays} title={view === 'university' ? 'No lectures entered yet' : 'Your study plan is empty'} description={view === 'university' ? 'Add your lectures from the official timetable when you have it.' : 'Add study blocks for your courses to plan your week.'} action={<Button onClick={() => open('new')}>Add event</Button>} />
       ) : (
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
           {ORDER.map((dow) => {
@@ -121,7 +170,11 @@ export default function TimetablePage() {
                         <span className="mt-1 flex flex-wrap gap-1">
                           <Badge tone={e.kind === 'lecture' ? 'primary' : 'neutral'}>{KIND_LABEL[e.kind]}</Badge>
                           {codeOf(e.course_id) ? <Badge>{codeOf(e.course_id)}</Badge> : null}
-                          {e.is_provisional ? <Badge tone="warning">Provisional</Badge> : null}
+                          {e.kind === 'lecture' ? (
+                            e.is_provisional ? <Badge tone="warning">Awaiting confirmation</Badge> : <Badge tone="success">Official</Badge>
+                          ) : e.is_provisional ? (
+                            <Badge tone="warning">Provisional</Badge>
+                          ) : null}
                           {e.location ? <Badge>{e.location}</Badge> : null}
                         </span>
                       </span>
@@ -182,7 +235,7 @@ export default function TimetablePage() {
               <Field label="Course" htmlFor="t-course">
                 <Select id="t-course" value={form.watch('course_id') ?? ''} onValueChange={(next) => form.setValue('course_id', next || null, { shouldDirty: true })}>
                   <SelectItem value="">None</SelectItem>
-                  {(courses.data ?? []).map((c) => (
+                  {coursesForPicker(my.taking, my.all, form.watch('course_id')).map((c) => (
                     <SelectItem key={c.id} value={c.id}>
                       {c.code}
                     </SelectItem>
@@ -217,6 +270,12 @@ export default function TimetablePage() {
                 <Input id="t-end" type="time" {...form.register('end_time')} />
               </Field>
             </div>
+            {form.watch('kind') === 'lecture' ? (
+              <label className="flex items-center gap-2 text-sm">
+                <input type="checkbox" className="size-4 accent-primary" {...form.register('awaiting_confirmation')} />
+                Awaiting confirmation (the official class allocation is not yet clear)
+              </label>
+            ) : null}
             <Field label="Location" htmlFor="t-location">
               <Input id="t-location" {...form.register('location')} />
             </Field>

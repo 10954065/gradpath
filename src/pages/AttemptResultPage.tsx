@@ -12,7 +12,8 @@ import { Alert, ErrorState, ProgressBar, Skeleton } from '@/components/ui/feedba
 import { Input } from '@/components/ui/form-controls'
 import { isObjective, masteryBand } from '@/lib/assessment'
 import { toUserMessage } from '@/lib/errors'
-import { getAttemptReview, recordSelfAssessment } from '@/services/assessments'
+import { attemptNumbers, timeSpentMinutes } from '@/lib/analytics'
+import { getAttemptReview, listMyAttempts, recordSelfAssessment } from '@/services/assessments'
 import { getCatalogue } from '@/services/courses'
 import type { AttemptQuestion } from '@/types/database'
 import { formatDateTime } from '@/utils/dates'
@@ -52,6 +53,7 @@ export default function AttemptResultPage() {
   const { attemptId = '' } = useParams()
   const review = useQuery({ queryKey: ['attempt', attemptId], queryFn: () => getAttemptReview(attemptId) })
   const catalogue = useQuery({ queryKey: ['catalogue'], queryFn: getCatalogue })
+  const attempts = useQuery({ queryKey: ['attempts'], queryFn: listMyAttempts })
 
   if (review.isError) return <ErrorState message={toUserMessage(review.error)} onRetry={() => void review.refetch()} />
   if (!review.data) return <Skeleton className="h-[70vh]" />
@@ -64,6 +66,8 @@ export default function AttemptResultPage() {
   for (const c of catalogue.data ?? []) for (const m of c.modules) for (const l of m.lessons) lessonLinks.set(l.id, `/courses/${c.slug}/lessons/${l.slug}`)
   const weak = attempt.lessonBreakdown.filter((l) => l.percent !== null && Number(l.percent) < quiz.passMark)
   const objectiveCount = questions.filter(isObjective).length
+  const attemptNumber = attemptNumbers(attempts.data ?? []).get(attempt.id)
+  const minutes = timeSpentMinutes({ started_at: attempt.startedAt, submitted_at: attempt.submittedAt })
 
   return (
     <div className="mx-auto max-w-4xl">
@@ -71,7 +75,10 @@ export default function AttemptResultPage() {
       <Card className="overflow-hidden">
         <div className={band === 'mastered' ? 'h-1 bg-success' : band === 'developing' ? 'h-1 bg-warning' : 'h-1 bg-danger'} aria-hidden />
         <CardHeader>
-          <p className="text-xs text-muted-foreground">Submitted {attempt.submittedAt ? formatDateTime(attempt.submittedAt) : ''}</p>
+          <p className="text-xs text-muted-foreground">
+            {attemptNumber ? `Attempt ${attemptNumber} · ` : ''}Submitted {attempt.submittedAt ? formatDateTime(attempt.submittedAt) : ''}
+            {minutes !== null ? ` · ${minutes} min spent` : ''}
+          </p>
           <CardTitle className="text-xl">{quiz.title}</CardTitle>
         </CardHeader>
         <CardContent className="grid grid-cols-1 gap-6 sm:grid-cols-[auto_1fr] sm:items-center">

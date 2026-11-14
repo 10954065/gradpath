@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/form-controls'
 import { PageHeader } from '@/components/ui/page'
 import { toUserMessage } from '@/lib/errors'
 import { plainText } from '@/lib/markdown'
+import { useMyCourses } from '@/hooks/useMyCourses'
 import { searchContent } from '@/services/study/overview'
 import type { SearchResult } from '@/types/database'
 
@@ -27,7 +28,11 @@ export default function SearchPage() {
   const q = params.get('q') ?? ''
   const [kind, setKind] = useState<SearchResult['kind'] | ''>('')
   const [text, setText] = useState(q)
-  const results = useQuery({ queryKey: ['search', q], queryFn: () => searchContent(q), enabled: q.trim().length >= 2 })
+  const raw = useQuery({ queryKey: ['search', q], queryFn: () => searchContent(q), enabled: q.trim().length >= 2 })
+  const my = useMyCourses()
+  // Course content from courses the student does not take is left out; their own notes and deadlines always show.
+  const notTaken = new Set(my.summary.notTaking.map((c) => c.code))
+  const results = { ...raw, data: raw.data?.filter((r) => !r.course_code || !notTaken.has(r.course_code)) }
 
   const onSubmit = (e: FormEvent) => {
     e.preventDefault()

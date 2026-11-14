@@ -13,7 +13,7 @@ import { useAdminAction, useAdminCatalogue } from './hooks'
 import { PublishSwitch } from './shared'
 
 const QUIZZES_KEY = ['admin', 'quizzes']
-const KIND_LABEL: Record<QuizKind, string> = { lesson_quiz: 'Lesson quizzes', module_assessment: 'Module assessments', mock_exam: 'Mock exams' }
+const KIND_LABEL: Record<QuizKind, string> = { lesson_quiz: 'Lesson quizzes', module_assessment: 'Module assessments', mock_exam: 'Mock exams', revision_test: 'Revision tests' }
 
 export function AssessmentAdmin() {
   const quizzes = useQuery({ queryKey: QUIZZES_KEY, queryFn: listAllQuizzes })

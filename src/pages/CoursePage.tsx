@@ -4,19 +4,22 @@ import { useState } from 'react'
 import { Link, useParams, useSearchParams } from 'react-router'
 import { toast } from 'sonner'
 import { CourseMaterials } from '@/components/courses/CourseMaterials'
-import { CourseStatusBadge, SourceBadge, VerificationBadge, accentClass } from '@/components/courses/badges'
+import { ClassificationBadge, SourceBadge, VerificationBadge, accentClass } from '@/components/courses/badges'
+import { SeminarTracker } from '@/components/courses/SeminarTracker'
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { ErrorState, ProgressBar, Skeleton } from '@/components/ui/feedback'
 import { Section } from '@/components/ui/page'
+import { useMyCourses } from '@/hooks/useMyCourses'
 import { toUserMessage } from '@/lib/errors'
 import { courseLessonIds, nextLesson, summariseProgress } from '@/lib/progress'
 import { cn, safeExternalUrl } from '@/lib/utils'
 import { listQuizzes } from '@/services/assessments'
 import { getCourse, listResources, saveCourseForOffline } from '@/services/courses'
 import { listMyProgress } from '@/services/progress'
+import { SEMINAR_COURSE_CODE } from '@/services/study/seminar'
 import type { LessonProgress } from '@/types/database'
 
 function LessonStatusIcon({ row }: { row: LessonProgress | undefined }) {
@@ -37,6 +40,7 @@ export default function CoursePage() {
     enabled: Boolean(course.data?.id),
   })
   const resources = useQuery({ queryKey: ['resources'], queryFn: listResources })
+  const my = useMyCourses()
   const [open, setOpen] = useState<Record<string, boolean>>({})
   const [downloaded, setDownloaded] = useState<string | null>(null)
   const offline = useMutation({
@@ -57,6 +61,7 @@ export default function CoursePage() {
   const courseResources = (resources.data ?? []).filter((r) => r.course_id === c.id)
   const moduleAssessments = (quizzes.data ?? []).filter((q) => q.kind === 'module_assessment')
   const mock = (quizzes.data ?? []).find((q) => q.kind === 'mock_exam')
+  const revisionTest = (quizzes.data ?? []).find((q) => q.kind === 'revision_test')
   const isOpen = (slug: string, index: number) => open[slug] ?? (focusModule ? focusModule === slug : index === 0)
 
   return (
@@ -66,7 +71,7 @@ export default function CoursePage() {
         <span aria-hidden className={`absolute inset-y-0 left-0 w-1.5 ${accentClass(c.accent)}`} />
         <div className="flex flex-wrap items-center gap-2">
           <span className="text-sm font-semibold text-primary">{c.code}</span>
-          <CourseStatusBadge course={c} />
+          <ClassificationBadge course={c} selection={my.statusOf(c)} />
           <SourceBadge source={c.source} />
         </div>
         <h1 className="mt-2 text-2xl font-semibold tracking-tight text-balance sm:text-3xl">{c.title}</h1>
@@ -102,6 +107,7 @@ export default function CoursePage() {
 
       <div className="grid grid-cols-1 gap-8 xl:grid-cols-[minmax(0,1fr)_20rem]">
         <div>
+          {c.code === SEMINAR_COURSE_CODE ? <SeminarTracker courseId={c.id} /> : null}
           <Section title={`Modules (${c.modules.length})`}>
             <ol className="flex flex-col gap-3">
               {c.modules.map((m, i) => {
@@ -191,16 +197,28 @@ export default function CoursePage() {
             </CardContent>
           </Card>
           <CourseMaterials courseId={c.id} />
-          {mock ? (
+          {mock || revisionTest ? (
             <Card>
               <CardHeader>
-                <CardTitle>Course mock examination</CardTitle>
+                <CardTitle>Practise across the course</CardTitle>
               </CardHeader>
-              <CardContent className="text-sm text-muted-foreground">
-                <p>{mock.description}</p>
-                <Button asChild className="mt-3 w-full" variant="secondary">
-                  <Link to={`/assessments/${mock.id}`}>View mock exam</Link>
-                </Button>
+              <CardContent className="flex flex-col gap-3 text-sm text-muted-foreground">
+                {revisionTest ? (
+                  <div>
+                    <p>{revisionTest.description}</p>
+                    <Button asChild className="mt-2 w-full" variant="secondary">
+                      <Link to={`/assessments/${revisionTest.id}`}>Mixed revision test</Link>
+                    </Button>
+                  </div>
+                ) : null}
+                {mock ? (
+                  <div>
+                    <p>{mock.description}</p>
+                    <Button asChild className="mt-2 w-full" variant="secondary">
+                      <Link to={`/assessments/${mock.id}`}>View mock exam</Link>
+                    </Button>
+                  </div>
+                ) : null}
               </CardContent>
             </Card>
           ) : null}

@@ -6,6 +6,9 @@ import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogFooter } from '@/components/ui/dialog'
 import { ErrorState, Skeleton } from '@/components/ui/feedback'
 import { Field, Input, Switch, Textarea } from '@/components/ui/form-controls'
+import { Select, SelectItem } from '@/components/ui/select'
+import { COURSE_CLASSIFICATIONS } from '@/lib/content/types'
+import { CLASSIFICATION_LABEL } from '@/lib/curriculum'
 import { toUserMessage } from '@/lib/errors'
 import { importLessonMarkdown, setPublished, updateRow, type AdminCourse } from '@/services/admin'
 import { CATALOGUE_KEY, useAdminAction, useAdminCatalogue } from './hooks'
@@ -115,10 +118,22 @@ function CourseDialog({ course, onClose }: { course: AdminCourse; onClose: () =>
   const [title, setTitle] = useState(course.title)
   const [description, setDescription] = useState(course.description)
   const [statusNote, setStatusNote] = useState(course.status_note)
-  const save = useAdminAction(() => updateRow('courses', course.id, { title: title.trim(), description: description.trim(), status_note: statusNote.trim() }), {
-    success: 'Course saved',
-    invalidate: INVALIDATE,
-  })
+  const [classification, setClassification] = useState(course.classification)
+  const [creditSlots, setCreditSlots] = useState(course.credit_slots)
+  const save = useAdminAction(
+    () =>
+      updateRow('courses', course.id, {
+        title: title.trim(),
+        description: description.trim(),
+        status_note: statusNote.trim(),
+        classification,
+        credit_slots: Math.min(12, Math.max(1, Math.round(creditSlots))),
+      }),
+    {
+      success: 'Course saved',
+      invalidate: INVALIDATE,
+    },
+  )
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
     if (!title.trim()) return
@@ -134,6 +149,20 @@ function CourseDialog({ course, onClose }: { course: AdminCourse; onClose: () =>
           <Field label="Description" htmlFor="course-description">
             <Textarea id="course-description" value={description} onChange={(e) => setDescription(e.target.value)} maxLength={4000} />
           </Field>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <Field label="Classification" htmlFor="course-classification" hint="Electives are chosen by each student; the others apply to everyone.">
+              <Select id="course-classification" value={classification} onValueChange={(next) => setClassification(next as typeof classification)}>
+                {COURSE_CLASSIFICATIONS.map((k) => (
+                  <SelectItem key={k} value={k}>
+                    {CLASSIFICATION_LABEL[k]}
+                  </SelectItem>
+                ))}
+              </Select>
+            </Field>
+            <Field label="Credit slots" htmlFor="course-slots">
+              <Input id="course-slots" type="number" min={1} max={12} value={creditSlots} onChange={(e) => setCreditSlots(Number(e.target.value))} />
+            </Field>
+          </div>
           <Field label="Status note" htmlFor="course-status" hint="Shown to students, e.g. that an elective is pending confirmation.">
             <Textarea id="course-status" value={statusNote} onChange={(e) => setStatusNote(e.target.value)} maxLength={1000} />
           </Field>

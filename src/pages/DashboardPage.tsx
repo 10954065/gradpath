@@ -4,6 +4,7 @@ import { useEffect, useMemo } from 'react'
 import { Link } from 'react-router'
 import { accentClass } from '@/components/courses/badges'
 import { RecommendationList } from '@/components/dashboard/Recommendations'
+import { SelectionSummary } from '@/components/dashboard/SelectionSummary'
 import { StreakFlame } from '@/components/dashboard/StreakFlame'
 import { CoursePerformanceChart, WeeklyStudyChart } from '@/components/dashboard/StudyCharts'
 import { TodayLessons } from '@/components/dashboard/TodayLessons'
@@ -18,7 +19,7 @@ import { bestScoreAverage, streakMessage } from '@/lib/analytics'
 import { toUserMessage } from '@/lib/errors'
 import { courseLessonIds, summariseProgress } from '@/lib/progress'
 import { generateDueNotifications } from '@/services/notifications'
-import { bucketOf } from '@/services/study/assignments'
+import { ASSIGNMENT_KIND_LABEL, bucketOf } from '@/services/study/assignments'
 import { formatDateTime, minutesToHours, relativeTime } from '@/utils/dates'
 
 function greeting(): string {
@@ -72,7 +73,7 @@ export default function DashboardPage() {
       ) : (
         <>
           <div className="mb-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            <StatTile label="Overall course progress" value={`${overall.percent}%`} hint={`${overall.completed} of ${overall.total} lessons completed`} icon={<GraduationCap className="size-4" aria-hidden />} />
+            <StatTile label="Overall course progress" value={`${overall.percent}%`} hint={`${overall.completed} of ${overall.total} lessons across your ${data.courses.length} courses`} icon={<GraduationCap className="size-4" aria-hidden />} />
             <StatTile label="Study this week" value={minutesToHours(data.current.completedMinutes)} hint={`Target ${targetHours} h · ${Math.min(100, Math.round((data.current.completedMinutes / (targetHours * 60)) * 100))}%`} icon={<Timer className="size-4" aria-hidden />} />
             <StatTile
               label="Study streak"
@@ -86,6 +87,8 @@ export default function DashboardPage() {
             />
             <StatTile label="Revision due" value={due.length} hint={due.length ? 'Open the Revision Centre' : 'Nothing due right now'} icon={<RefreshCcw className="size-4" aria-hidden />} />
           </div>
+
+          <SelectionSummary summary={data.selection} />
 
           {isNew ? (
             <Card className="mb-6 border-primary/30 bg-accent/40">
@@ -151,7 +154,7 @@ export default function DashboardPage() {
                 </Card>
                 <Card>
                   <CardHeader>
-                    <CardTitle>Course performance</CardTitle>
+                    <CardTitle>Course mastery</CardTitle>
                   </CardHeader>
                   <CardContent>
                     {perfData.length ? (
@@ -192,7 +195,7 @@ export default function DashboardPage() {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <ClipboardList className="size-4 text-primary" aria-hidden /> Upcoming assignments
+                    <ClipboardList className="size-4 text-primary" aria-hidden /> Upcoming assessments and deadlines
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -200,7 +203,10 @@ export default function DashboardPage() {
                     <ul className="flex flex-col gap-2 text-sm">
                       {upcomingAssignments.map((a) => (
                         <li key={a.id} className="flex items-start justify-between gap-2">
-                          <span className="min-w-0 truncate">{a.title}</span>
+                          <span className="min-w-0 truncate">
+                            {a.kind !== 'assignment' ? <span className="font-medium">{ASSIGNMENT_KIND_LABEL[a.kind]}: </span> : null}
+                            {a.title}
+                          </span>
                           <span className={bucketOf(a) === 'overdue' ? 'shrink-0 text-xs font-semibold text-danger' : 'shrink-0 text-xs text-muted-foreground'}>
                             {a.due_at ? (bucketOf(a) === 'overdue' ? 'Overdue' : relativeTime(a.due_at)) : 'No date'}
                           </span>
@@ -208,7 +214,7 @@ export default function DashboardPage() {
                       ))}
                     </ul>
                   ) : (
-                    <EmptyState icon={CheckCircle2} title="No upcoming deadlines" description="Add assignments to track them here." className="py-6" />
+                    <EmptyState icon={CheckCircle2} title="No upcoming deadlines" description="Add assignments, tests and examination dates from your official course information." className="py-6" />
                   )}
                 </CardContent>
               </Card>

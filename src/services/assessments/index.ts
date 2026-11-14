@@ -100,4 +100,5 @@ export const QUIZ_KIND_LABEL: Record<QuizKind, string> = {
   lesson_quiz: 'Lesson quiz',
   module_assessment: 'Module assessment',
   mock_exam: 'Mock examination',
+  revision_test: 'Mixed revision test',
 }

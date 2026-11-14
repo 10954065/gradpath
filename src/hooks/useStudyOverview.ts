@@ -3,6 +3,8 @@ import { addDays, endOfWeek, subWeeks } from 'date-fns'
 import { useMemo } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
 import { useLessonStreak } from '@/hooks/useLessonStreak'
+import { ENROLMENTS_KEY } from '@/hooks/useMyCourses'
+import { summariseSelection, takingCourses } from '@/lib/curriculum'
 import { planToday } from '@/lib/dailyPlan'
 import { recommend, type LessonRef } from '@/lib/recommendations'
 import { buildPlanner, studyTotals } from '@/lib/timetable'
@@ -36,13 +38,15 @@ export function useStudyOverview() {
     queryKey: ['sessions', isoDate(historyStart), isoDate(weekEnd)],
     queryFn: () => listSessions(historyStart.toISOString(), addDays(weekEnd, 1).toISOString()),
   })
-  const enrolments = useQuery({ queryKey: ['enrolments'], queryFn: listEnrolments })
+  const enrolments = useQuery({ queryKey: ENROLMENTS_KEY, queryFn: listEnrolments })
   const streak = useLessonStreak()
   const announcements = useQuery({ queryKey: ['announcements'], queryFn: listAnnouncements })
   const settings = useQuery({ queryKey: ['platform-settings'], queryFn: getPlatformSettings })
 
   const derived = useMemo(() => {
-    const courses = catalogue.data ?? []
+    // Only the courses the student takes: dashboard, progress, recommendations and today's plan all use this list.
+    const courses = takingCourses(catalogue.data ?? [], enrolments.data ?? [])
+    const selection = summariseSelection(catalogue.data ?? [], enrolments.data ?? [])
     const lessons: LessonRef[] = courses.flatMap((c) =>
       c.modules.flatMap((m) =>
         m.lessons.map((l) => ({ id: l.id, title: l.title, courseCode: c.code, moduleId: m.id, moduleTitle: m.title, href: `/courses/${c.slug}/lessons/${l.slug}` })),
@@ -82,10 +86,10 @@ export function useStudyOverview() {
       progress: progress.data ?? [],
       lessonIdsToday: streak.lessonIdsToday,
     })
-    return { courses, lessons, weeks, current, upcoming, threshold, recommendations, todayPlan }
+    return { courses, selection, lessons, weeks, current, upcoming, threshold, recommendations, todayPlan }
   }, [catalogue.data, events.data, sessions.data, progress.data, attempts.data, quizzes.data, revision.data, assignments.data, enrolments.data, streak.lessonIdsToday, settings.data, profile, historyStart, thisWeek])
 
-  const isLoading = catalogue.isPending || progress.isPending
+  const isLoading = catalogue.isPending || progress.isPending || enrolments.isPending
   return {
     isLoading,
     error: catalogue.error ?? progress.error ?? null,

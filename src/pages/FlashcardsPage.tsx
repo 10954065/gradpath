@@ -13,7 +13,8 @@ import { Select, SelectItem } from '@/components/ui/select'
 import { PageHeader } from '@/components/ui/page'
 import { useAuth } from '@/contexts/AuthContext'
 import { toUserMessage } from '@/lib/errors'
-import { listCourses } from '@/services/courses'
+import { useMyCourses } from '@/hooks/useMyCourses'
+import { coursesForPicker } from '@/lib/curriculum'
 import { addToQueue, deleteOwnFlashcard, flashcardSchema, listFlashcards, listRevisionItems, saveOwnFlashcard } from '@/services/study/revision'
 import type { Flashcard } from '@/types/database'
 
@@ -21,7 +22,7 @@ export default function FlashcardsPage() {
   const { user } = useAuth()
   const queryClient = useQueryClient()
   const cards = useQuery({ queryKey: ['flashcards'], queryFn: listFlashcards })
-  const courses = useQuery({ queryKey: ['courses'], queryFn: listCourses })
+  const my = useMyCourses()
   const queue = useQuery({ queryKey: ['revision-items'], queryFn: listRevisionItems })
   const [course, setCourse] = useState('')
   const [deck, setDeck] = useState<'all' | 'mine'>('all')
@@ -32,11 +33,17 @@ export default function FlashcardsPage() {
   const [draft, setDraft] = useState({ front: '', back: '', course_id: '' })
 
   const list = useMemo(() => {
-    const base = (cards.data ?? []).filter((c) => (!course || c.course_id === course) && (deck === 'all' || c.user_id === user?.id))
+    // Curriculum cards come from the courses the student takes; their own cards are always shown.
+    const base = (cards.data ?? []).filter(
+      (c) =>
+        (!course || c.course_id === course) &&
+        (deck === 'all' || c.user_id === user?.id) &&
+        (c.user_id === user?.id || my.isTaking(c.course_id)),
+    )
     if (!order) return base
     const byId = new Map(base.map((c) => [c.id, c]))
     return order.map((id) => byId.get(id)).filter((c): c is Flashcard => Boolean(c))
-  }, [cards.data, course, deck, order, user])
+  }, [cards.data, course, deck, order, user, my])
   const card = list[Math.min(index, Math.max(0, list.length - 1))]
   const queued = new Set((queue.data ?? []).map((q) => q.flashcard_id))
 
@@ -82,7 +89,7 @@ export default function FlashcardsPage() {
       <div className="mb-5 flex flex-wrap gap-2">
         <Select aria-label="Course" value={course} onValueChange={(next) => (setCourse(next), setIndex(0), setOrder(null))} className="w-full sm:w-72">
           <SelectItem value="">All courses</SelectItem>
-          {(courses.data ?? []).map((c) => (
+          {coursesForPicker(my.taking, my.all, course || null).map((c) => (
             <SelectItem key={c.id} value={c.id}>
               {c.code} {c.title}
             </SelectItem>
@@ -177,7 +184,7 @@ export default function FlashcardsPage() {
             <Field label="Course" htmlFor="f-course">
               <Select id="f-course" value={draft.course_id} onValueChange={(next) => setDraft({ ...draft, course_id: next })}>
                 <SelectItem value="">None</SelectItem>
-                {(courses.data ?? []).map((c) => (
+                {coursesForPicker(my.taking, my.all, draft.course_id || null).map((c) => (
                   <SelectItem key={c.id} value={c.id}>
                     {c.code} {c.title}
                   </SelectItem>

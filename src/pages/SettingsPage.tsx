@@ -19,7 +19,9 @@ import { useTheme, type ThemePreference } from '@/contexts/ThemeContext'
 import { useSyncStatus } from '@/hooks/useSyncStatus'
 import { toUserMessage } from '@/lib/errors'
 import { updatePassword } from '@/services/auth'
-import { listCourses, listEnrolments, setEnrolmentStatus } from '@/services/courses'
+import { ClassificationBadge } from '@/components/courses/badges'
+import { ENROLMENTS_KEY, useMyCourses } from '@/hooks/useMyCourses'
+import { setEnrolmentStatus } from '@/services/courses'
 import { conflictRemove, conflictsAll, outboxPut, type ConflictEntry } from '@/services/offline/db'
 import { disablePush, enablePush, pushSupported } from '@/services/notifications/push'
 import { flushOutbox } from '@/services/offline/sync'
@@ -273,41 +275,51 @@ function PreferencesTab() {
 
 function CoursesTab() {
   const queryClient = useQueryClient()
-  const courses = useQuery({ queryKey: ['courses'], queryFn: listCourses })
-  const enrolments = useQuery({ queryKey: ['enrolments'], queryFn: listEnrolments })
+  const my = useMyCourses()
   const update = useMutation({
     mutationFn: ({ courseId, status }: { courseId: string; status: CourseEnrolment['status'] }) => setEnrolmentStatus(courseId, status),
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['enrolments'] }),
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ENROLMENTS_KEY }),
     onError: (e) => toast.error(toUserMessage(e)),
   })
-  if (!courses.data || !enrolments.data) return <Skeleton className="h-64" />
+  if (my.isPending) return <Skeleton className="h-64" />
+  const { summary } = my
   return (
     <Card>
       <CardHeader>
         <CardTitle>My course registration</CardTitle>
         <CardDescription>
-          Record which courses you are officially registered for. This only affects your own dashboard and recommendations.
+          Core, required and special-topic courses are part of the programme; choose your elective here. This only affects your own
+          dashboard, planner, progress and assessments, never a classmate's.
         </CardDescription>
+        <p className="mt-2 text-sm font-semibold tabular-nums" data-testid="registration-total">
+          {summary.enrolled.length} enrolled course{summary.enrolled.length === 1 ? '' : 's'} · {summary.creditSlots} credit slots
+          {summary.pending.length ? (
+            <span className="font-normal text-muted-foreground"> · {summary.pendingCreditSlots} more awaiting your confirmation</span>
+          ) : null}
+        </p>
       </CardHeader>
       <CardContent className="divide-y">
-        {courses.data.map((c) => {
-          const status = enrolments.data.find((e) => e.course_id === c.id)?.status ?? 'pending_confirmation'
+        {my.all.map((c) => {
+          const status = my.statusOf(c)
+          const elective = c.classification === 'elective'
           return (
             <div key={c.id} className="flex flex-col gap-2 py-3 sm:flex-row sm:items-center sm:justify-between">
-              <div>
+              <div className="min-w-0">
                 <p className="text-sm font-medium">
                   {c.code} {c.title}
                 </p>
-                {c.status === 'recommended_elective' ? <Badge tone="warning">Recommended elective: confirm registration</Badge> : null}
+                <div className="mt-1">
+                  <ClassificationBadge course={c} selection={status} />
+                </div>
               </div>
               <Select
                 aria-label={`Registration status for ${c.code}`}
                 className="sm:w-56"
-                value={status}
+                value={status === 'not_selected' ? 'dropped' : status}
                 onValueChange={(next) => update.mutate({ courseId: c.id, status: next as CourseEnrolment['status'] })}
               >
-                <SelectItem value="enrolled">Registered</SelectItem>
-                <SelectItem value="pending_confirmation">Pending confirmation</SelectItem>
+                <SelectItem value="enrolled">{elective ? 'Selected (my elective)' : 'Registered'}</SelectItem>
+                <SelectItem value="pending_confirmation">To confirm</SelectItem>
                 <SelectItem value="dropped">Not taking</SelectItem>
               </Select>
             </div>

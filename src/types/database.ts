@@ -1,4 +1,7 @@
 /** Row types mirroring supabase/migrations. Keep in sync when the schema changes. */
+import type { CourseClassification } from '@/lib/content/types'
+
+export type { CourseClassification }
 
 export type ContentSource = 'lecturer' | 'institutional' | 'supplementary' | 'ai_practice' | 'student'
 export type CourseStatus = 'listed' | 'recommended_elective'
@@ -49,6 +52,8 @@ export interface Course {
   description: string
   status: CourseStatus
   status_note: string
+  classification: CourseClassification
+  credit_slots: number
   accent: string
   outcomes: string[]
   sort_order: number
@@ -222,10 +227,13 @@ export interface Bookmark {
 export type AssignmentStatus = 'not_started' | 'in_progress' | 'submitted' | 'completed'
 export type Priority = 'low' | 'medium' | 'high'
 
+export type AssignmentKind = 'assignment' | 'test' | 'examination' | 'presentation' | 'project' | 'other'
+
 export interface Assignment {
   id: string
   user_id: string
   course_id: string | null
+  kind: AssignmentKind
   title: string
   description: string
   due_at: string | null
@@ -346,7 +354,7 @@ export interface AppNotification {
   created_at: string
 }
 
-export type QuizKind = 'lesson_quiz' | 'module_assessment' | 'mock_exam'
+export type QuizKind = 'lesson_quiz' | 'module_assessment' | 'mock_exam' | 'revision_test'
 export type QuestionType = 'mcq' | 'true_false' | 'short_answer' | 'scenario' | 'matching' | 'essay' | 'case_analysis'
 
 export interface Quiz {
@@ -494,4 +502,21 @@ export interface SearchResult {
   course_code: string | null
   url: string
   rank: number
+}
+
+export type SeminarStatus = 'exploring' | 'researching' | 'drafting' | 'rehearsing' | 'presented'
+
+export interface SeminarPresentation {
+  id: string
+  user_id: string
+  course_id: string | null
+  topic: string
+  status: SeminarStatus
+  presentation_date: string | null
+  date_confirmed: boolean
+  checklist: string[]
+  feedback: string
+  notes: string
+  created_at: string
+  updated_at: string
 }

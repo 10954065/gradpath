@@ -49,7 +49,7 @@ npx supabase db push                     # applies supabase/migrations/* in orde
 
 ## 4. Load the curriculum (seed data)
 
-`supabase/seed.sql` is generated from `content/` by `npm run content:build`. It contains the seven courses, all
+`supabase/seed.sql` is generated from `content/` by `npm run content:build`. It contains the eight Semester 1 courses, all
 lessons, question banks (with answer keys in the server-only `question_keys` table), quizzes, flashcards and
 resources. It uses deterministic IDs and upserts, so loading it again updates content without duplicating it and
 without touching student data.

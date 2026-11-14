@@ -13,6 +13,8 @@ import { Select, SelectItem } from '@/components/ui/select'
 import { PageHeader } from '@/components/ui/page'
 import { useAuth } from '@/contexts/AuthContext'
 import { toUserMessage } from '@/lib/errors'
+import { useMyCourses } from '@/hooks/useMyCourses'
+import { coursesForPicker } from '@/lib/curriculum'
 import { getCatalogue } from '@/services/courses'
 import { deleteNote, filterNotes, listNotes, notesToMarkdown, saveNote, type NoteInput } from '@/services/notes'
 import type { StudentNote } from '@/types/database'
@@ -32,6 +34,7 @@ export default function NotesPage() {
   const [confirmDelete, setConfirmDelete] = useState<StudentNote | null>(null)
   const notes = useQuery({ queryKey: ['notes'], queryFn: listNotes })
   const catalogue = useQuery({ queryKey: ['catalogue'], queryFn: getCatalogue })
+  const my = useMyCourses()
 
   const lessonIndex = useMemo(() => {
     const map = new Map<string, { course: string; courseSlug: string; module: string; moduleId: string; lesson: string; slug: string; courseId: string }>()
@@ -136,7 +139,7 @@ export default function NotesPage() {
         </div>
         <Select aria-label="Filter by course" value={courseFilter} onValueChange={(next) => setCourseFilter(next)}>
           <SelectItem value="">All courses</SelectItem>
-          {(catalogue.data ?? []).map((c) => (
+          {coursesForPicker(my.taking, my.all, courseFilter || null).map((c) => (
             <SelectItem key={c.id} value={c.id}>
               {c.code} {c.title}
             </SelectItem>
@@ -223,7 +226,7 @@ export default function NotesPage() {
                   onValueChange={(next) => setDraft({ ...draft, course_id: next || null, module_id: null, lesson_id: null })}
                 >
                   <SelectItem value="">Not linked</SelectItem>
-                  {(catalogue.data ?? []).map((c) => (
+                  {coursesForPicker(my.taking, my.all, draft.course_id).map((c) => (
                     <SelectItem key={c.id} value={c.id}>
                       {c.code} {c.title}
                     </SelectItem>

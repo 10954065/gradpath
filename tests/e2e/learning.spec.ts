@@ -14,12 +14,18 @@ async function readToTheEnd(page: Page) {
   }
 }
 
-test('the course catalogue lists all seven courses and flags the elective', async ({ page }) => {
+test('My Courses lists the eight Semester 1 courses with CSIT 613 as the selected elective', async ({ page }) => {
   await page.goto('/courses')
-  for (const code of ['CSIT 601', 'CSIT 603', 'CSIT 605', 'CSIT 607', 'CSIT 613', 'CSIT 617', 'CSIT 621']) {
-    await expect(page.getByText(code, { exact: true }).first()).toBeVisible()
+  const mine = page.getByRole('list', { name: 'My courses' })
+  for (const code of ['CSIT 601', 'CSIT 603', 'CSIT 605', 'CSIT 607', 'CSIT 610', 'CSIT 613', 'CSIT 617', 'CSIT 621']) {
+    await expect(mine.getByText(code, { exact: true })).toBeVisible()
   }
-  await expect(page.getByText(/recommended elective/i).first()).toBeVisible()
+  await expect(mine.getByRole('listitem')).toHaveCount(8)
+  await expect(mine.getByText('Selected elective · 3 credit slots')).toBeVisible()
+  await expect(mine.getByText('Required · 1 credit slot')).toBeVisible()
+  await expect(mine.getByText('Special topic · 1 credit slot')).toBeVisible()
+  await expect(page.getByText(/^8 enrolled courses · 20 credit slots/)).toBeVisible()
+  await expect(page.getByText('CSIT 609')).toHaveCount(0)
 })
 
 test('a student reads a lesson, marks it complete and sees progress', async ({ page }) => {

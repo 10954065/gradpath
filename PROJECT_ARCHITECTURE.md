@@ -107,6 +107,20 @@ Every content item carries a `source` that the UI displays:
   requirement (and quiz requirement, if configured) is met; attempts are scored server-side; attempts
   past their time limit are flagged; study-session occurrences are unique per timetable event and date.
 
+## Courses and personal selection
+
+* `courses.classification` (core, required, special topic, elective) and `courses.credit_slots` describe the shared
+  programme. The Semester 1 listing is 8 courses and 20 credit slots.
+* `course_enrolments` is each student's own selection (enrolled, to confirm, not taking). `enrol_default_courses()`
+  adds every published compulsory course and offers each elective as "to confirm"; it runs at onboarding and on each
+  visit, and never changes a status the student has set.
+* `src/lib/curriculum.ts` (pure, unit-tested) and the `useMyCourses()` hook are the single source of "my courses"
+  for every screen. Pickers offer only the courses a student takes (plus an older item's course when editing).
+* CSIT 610 pages include a private seminar tracker (`seminar_presentations`): topic, stage, date with a "confirmed"
+  flag, an 8-step preparation checklist, notes and feedback. GradPath sets no topics or dates.
+* The timetable separates the university lecture timetable (entered by the student; `is_provisional` on a lecture
+  means awaiting confirmation) from the personal study plan (provisional blocks are suggestions).
+
 ## Assessment engine
 
 `start_attempt(quiz_id)` selects questions (fixed set or random sample from a bank scope), records them
@@ -114,7 +128,9 @@ on the attempt and returns them without keys. `submit_attempt(attempt_id, answer
 questions (MCQ/scenario by option, true/false, normalised short answers, matching with partial credit),
 stores per-question results, computes per-learning-objective performance, records mastery against the
 configurable threshold (default 80 %), queues weak lessons for revision, writes a notification and
-returns feedback with explanations. Essay and case-analysis questions are self-assessed against rubrics
+returns feedback with explanations. Mixed revision tests (`kind = 'revision_test'`) draw 15 objective
+questions from a whole course without a time limit; a mixed-course mock exam uses only the courses the student
+takes. Essay and case-analysis questions are self-assessed against rubrics
 and are never presented as official marks.
 
 ## Revision scheduling

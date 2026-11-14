@@ -15,9 +15,12 @@ import { useAuth } from '@/contexts/AuthContext'
 import { useOnlineStatus } from '@/hooks/useOnlineStatus'
 import { toUserMessage } from '@/lib/errors'
 import { cn } from '@/lib/utils'
-import { listCourses } from '@/services/courses'
+import { coursesForPicker } from '@/lib/curriculum'
+import { useMyCourses } from '@/hooks/useMyCourses'
 import {
   addAttachment,
+  ASSIGNMENT_KIND_LABEL,
+  ASSIGNMENT_KINDS,
   assignmentSchema,
   attachmentUrl,
   bucketOf,
@@ -32,14 +35,14 @@ import { daysUntil, formatDateTime } from '@/utils/dates'
 
 const PRIORITY_TONE = { high: 'danger', medium: 'warning', low: 'neutral' } as const
 const STATUS_LABEL = { not_started: 'Not started', in_progress: 'In progress', submitted: 'Submitted', completed: 'Completed' } as const
-const EMPTY: AssignmentInput = { title: '', description: '', course_id: null, due_at: null, priority: 'medium', status: 'not_started', notes: '' }
+const EMPTY: AssignmentInput = { title: '', kind: 'assignment', description: '', course_id: null, due_at: null, priority: 'medium', status: 'not_started', notes: '' }
 
 export default function AssignmentsPage() {
   const { user } = useAuth()
   const online = useOnlineStatus()
   const queryClient = useQueryClient()
   const assignments = useQuery({ queryKey: ['assignments'], queryFn: listAssignments })
-  const courses = useQuery({ queryKey: ['courses'], queryFn: listCourses })
+  const my = useMyCourses()
   const [view, setView] = useState<'upcoming' | 'overdue' | 'done' | 'all'>('upcoming')
   const [course, setCourse] = useState('')
   const [sort, setSort] = useState<'due' | 'priority' | 'created'>('due')
@@ -110,7 +113,7 @@ export default function AssignmentsPage() {
     setDraft(
       a === 'new'
         ? EMPTY
-        : { title: a.title, description: a.description, course_id: a.course_id, due_at: a.due_at, priority: a.priority, status: a.status, notes: a.notes },
+        : { title: a.title, kind: a.kind, description: a.description, course_id: a.course_id, due_at: a.due_at, priority: a.priority, status: a.status, notes: a.notes },
     )
     setEditing(a)
   }
@@ -122,7 +125,7 @@ export default function AssignmentsPage() {
     }
     save.mutate()
   }
-  const codeOf = (id: string | null) => courses.data?.find((c) => c.id === id)?.code
+  const codeOf = (id: string | null) => my.all.find((c) => c.id === id)?.code
 
   return (
     <>
@@ -146,8 +149,8 @@ export default function AssignmentsPage() {
         </Tabs>
         <div className="flex gap-2">
           <Select aria-label="Filter by course" value={course} onValueChange={(next) => setCourse(next)}>
-            <SelectItem value="">All courses</SelectItem>
-            {(courses.data ?? []).map((c) => (
+            <SelectItem value="">All my courses</SelectItem>
+            {my.taking.map((c) => (
               <SelectItem key={c.id} value={c.id}>
                 {c.code}
               </SelectItem>
@@ -182,6 +185,7 @@ export default function AssignmentsPage() {
                 <button type="button" className="min-w-0 flex-1 text-left" onClick={() => open(a)}>
                   <span className={cn('block font-medium', a.status === 'completed' && 'text-muted-foreground line-through')}>{a.title}</span>
                   <span className="mt-1 flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground">
+                    {a.kind !== 'assignment' ? <Badge tone="primary">{ASSIGNMENT_KIND_LABEL[a.kind]}</Badge> : null}
                     {codeOf(a.course_id) ? <Badge>{codeOf(a.course_id)}</Badge> : null}
                     <Badge tone={PRIORITY_TONE[a.priority]} className="capitalize">
                       {a.priority} priority
@@ -225,10 +229,19 @@ export default function AssignmentsPage() {
               <Input id="a-title" value={draft.title} maxLength={200} onChange={(e) => setDraft({ ...draft, title: e.target.value })} />
             </Field>
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <Field label="Type" htmlFor="a-kind" hint="Enter tests and examinations from official course information.">
+                <Select id="a-kind" value={draft.kind} onValueChange={(next) => setDraft({ ...draft, kind: next as AssignmentInput['kind'] })}>
+                  {ASSIGNMENT_KINDS.map((k) => (
+                    <SelectItem key={k} value={k}>
+                      {ASSIGNMENT_KIND_LABEL[k]}
+                    </SelectItem>
+                  ))}
+                </Select>
+              </Field>
               <Field label="Course" htmlFor="a-course">
                 <Select id="a-course" value={draft.course_id ?? ''} onValueChange={(next) => setDraft({ ...draft, course_id: next || null })}>
                   <SelectItem value="">None</SelectItem>
-                  {(courses.data ?? []).map((c) => (
+                  {coursesForPicker(my.taking, my.all, draft.course_id).map((c) => (
                     <SelectItem key={c.id} value={c.id}>
                       {c.code} {c.title}
                     </SelectItem>

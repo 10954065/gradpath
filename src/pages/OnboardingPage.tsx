@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Alert, Skeleton } from '@/components/ui/feedback'
 import { useAuth } from '@/contexts/AuthContext'
+import { CLASSIFICATION_LABEL, isCompulsory } from '@/lib/curriculum'
 import { toUserMessage } from '@/lib/errors'
 import { listCourses } from '@/services/courses'
 import { completeOnboarding } from '@/services/profile'
@@ -24,13 +25,23 @@ export default function OnboardingPage() {
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const courses = useQuery({ queryKey: ['courses'], queryFn: listCourses })
+  const [electiveChoice, setElectiveChoice] = useState('')
+  const compulsory = (courses.data ?? []).filter(isCompulsory)
+  const electives = (courses.data ?? []).filter((c) => !isCompulsory(c))
+  const chosenElective = electives.find((c) => c.id === electiveChoice)
+  const compulsorySlots = compulsory.reduce((sum, c) => sum + c.credit_slots, 0)
 
   const finish = async () => {
     if (!user) return
     setSaving(true)
     setError(null)
     try {
-      await completeOnboarding(user.id, { weeklyTarget: target, createTimetable })
+      await completeOnboarding(user.id, {
+        weeklyTarget: target,
+        createTimetable,
+        electiveIds: electives.map((c) => c.id),
+        chosenElectiveIds: chosenElective ? [chosenElective.id] : [],
+      })
       await refreshProfile()
       navigate('/dashboard', { replace: true })
     } catch (e) {
@@ -92,25 +103,64 @@ export default function OnboardingPage() {
             {step === 1 ? (
               <>
                 <h1 id="onboarding-title" className="text-xl font-semibold tracking-tight">
-                  Your seven courses
+                  Your Semester 1 courses
                 </h1>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  These courses make up GradPath's initial curriculum. Confirm each one against your official registration, as not every
-                  course is necessarily compulsory for you.
+                  Core, required and special-topic courses are part of every student's programme. Electives are your choice. Check
+                  both against your official registration; you can change them later in Settings.
                 </p>
-                <ul className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-2">
-                  {courses.isPending
-                    ? Array.from({ length: 6 }, (_, i) => <Skeleton key={i} className="h-16" />)
-                    : (courses.data ?? []).map((c) => (
+                {courses.isPending ? (
+                  <div className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-2">
+                    {Array.from({ length: 6 }, (_, i) => (
+                      <Skeleton key={i} className="h-16" />
+                    ))}
+                  </div>
+                ) : (
+                  <>
+                    <ul className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-2" aria-label="Compulsory courses">
+                      {compulsory.map((c) => (
                         <li key={c.id} className="rounded-lg border p-3">
                           <div className="flex items-center justify-between gap-2">
                             <span className="text-xs font-semibold text-primary">{c.code}</span>
-                            {c.status === 'recommended_elective' ? <Badge tone="warning">Recommended elective</Badge> : null}
+                            <Badge>
+                              {CLASSIFICATION_LABEL[c.classification]} · {c.credit_slots} slot{c.credit_slots === 1 ? '' : 's'}
+                            </Badge>
                           </div>
                           <p className="mt-1 text-sm font-medium">{c.title}</p>
                         </li>
                       ))}
-                </ul>
+                    </ul>
+                    {electives.length ? (
+                      <fieldset className="mt-5">
+                        <legend className="text-sm font-semibold">Your elective</legend>
+                        <div className="mt-2 grid gap-2">
+                          {[...electives.map((c) => ({ id: c.id, label: `${c.code} ${c.title}`, hint: `Elective · ${c.credit_slots} slots` })), { id: '', label: 'I have not confirmed my elective yet', hint: 'Electives stay "to confirm" until you choose in Settings' }].map((o) => (
+                            <label key={o.id || 'none'} className="flex cursor-pointer items-start gap-3 rounded-lg border p-3 has-[:checked]:border-primary has-[:checked]:bg-accent/40">
+                              <input
+                                type="radio"
+                                name="elective"
+                                value={o.id}
+                                checked={electiveChoice === o.id}
+                                onChange={() => setElectiveChoice(o.id)}
+                                className="mt-0.5 size-4 accent-primary"
+                              />
+                              <span>
+                                <span className="block text-sm font-medium">{o.label}</span>
+                                <span className="block text-xs text-muted-foreground">{o.hint}</span>
+                              </span>
+                            </label>
+                          ))}
+                        </div>
+                      </fieldset>
+                    ) : null}
+                    <p className="mt-4 text-sm" aria-live="polite">
+                      <span className="font-semibold">
+                        {compulsory.length + (chosenElective ? 1 : 0)} courses, {compulsorySlots + (chosenElective?.credit_slots ?? 0)} credit slots
+                      </span>
+                      {chosenElective ? null : <span className="text-muted-foreground"> (plus your elective once you choose it)</span>}
+                    </p>
+                  </>
+                )}
                 {courses.isError ? (
                   <Alert tone="danger" className="mt-4">
                     {toUserMessage(courses.error)}

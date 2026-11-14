@@ -13,9 +13,14 @@ import { Select, SelectItem } from '@/components/ui/select'
 import { PageHeader, StatTile } from '@/components/ui/page'
 import { useAuth } from '@/contexts/AuthContext'
 import { toUserMessage } from '@/lib/errors'
-import { buildPlanner, durationMinutes, studyTotals, type PlannerEntry } from '@/lib/timetable'
+import { buildPlanner, durationMinutes, isMissed, studyTotals, type PlannerEntry } from '@/lib/timetable'
 import { cn } from '@/lib/utils'
-import { listCourses } from '@/services/courses'
+import { RecommendationList } from '@/components/dashboard/Recommendations'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { useMyCourses } from '@/hooks/useMyCourses'
+import { useStudyOverview } from '@/hooks/useStudyOverview'
+import { coursesForPicker } from '@/lib/curriculum'
+import { ASSIGNMENT_KIND_LABEL, bucketOf } from '@/services/study/assignments'
 import { deleteSession, listEvents, listSessions, saveSession } from '@/services/study/planner'
 import { combineDateTime, isoDate, minutesToHours, weekDays, weekStart } from '@/utils/dates'
 
@@ -46,12 +51,16 @@ export default function PlannerPage() {
     queryKey: ['sessions', isoDate(rangeStart), isoDate(rangeEnd)],
     queryFn: () => listSessions(rangeStart.toISOString(), addDays(rangeEnd, 1).toISOString()),
   })
-  const courses = useQuery({ queryKey: ['courses'], queryFn: listCourses })
+  const my = useMyCourses()
+  const overview = useStudyOverview()
+  const deadlines = overview.assignments.filter((a) => bucketOf(a) === 'upcoming' || bucketOf(a) === 'overdue').slice(0, 6)
+  const revisionAdvice = overview.recommendations.filter((r) => r.kind === 'weak-topic' || r.kind === 'revision' || r.kind === 'assessment' || r.kind === 'mock-exam')
 
   const week = useMemo(() => buildPlanner(events.data ?? [], sessions.data ?? [], anchor, weekEnd), [events.data, sessions.data, anchor, weekEnd])
   const month = useMemo(() => buildPlanner(events.data ?? [], sessions.data ?? [], monthStart, monthEnd), [events.data, sessions.data, monthStart, monthEnd])
   const weekTotals = studyTotals(week)
   const monthTotals = studyTotals(month)
+  const missedThisWeek = week.filter((e) => isMissed(e)).length
   const targetMinutes = (profile?.weekly_study_target_hours ?? 15) * 60
 
   const invalidate = () => void queryClient.invalidateQueries({ queryKey: ['sessions'] })
@@ -122,7 +131,7 @@ export default function PlannerPage() {
     setEditor(null)
   }
 
-  const codeOf = (id: string | null) => courses.data?.find((c) => c.id === id)?.code
+  const codeOf = (id: string | null) => my.all.find((c) => c.id === id)?.code
 
   return (
     <>
@@ -137,7 +146,7 @@ export default function PlannerPage() {
       />
       <div className="mb-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <StatTile label="Studied this week" value={minutesToHours(weekTotals.completedMinutes)} hint={`Target ${profile?.weekly_study_target_hours ?? 15} h`} />
-        <StatTile label="Planned this week" value={minutesToHours(weekTotals.plannedMinutes)} hint={`${weekTotals.completedSessions} sessions completed`} />
+        <StatTile label="Planned this week" value={minutesToHours(weekTotals.plannedMinutes)} hint={`${weekTotals.completedSessions} completed · ${missedThisWeek} missed`} />
         <StatTile label={`Studied in ${format(anchor, 'MMMM')}`} value={minutesToHours(monthTotals.completedMinutes)} hint={`${monthTotals.completedSessions} sessions`} />
         <div className="rounded-xl border bg-surface p-4 shadow-card">
           <p className="text-xs font-medium text-muted-foreground">Weekly target progress</p>
@@ -198,8 +207,10 @@ export default function PlannerPage() {
                         <span className="mt-0.5 line-clamp-2 block">{e.title}</span>
                         <span className="mt-1 flex flex-wrap gap-1">
                           {codeOf(e.courseId) ? <Badge>{codeOf(e.courseId)}</Badge> : null}
-                          {e.isProvisional ? <Badge>Provisional</Badge> : null}
+                          {e.kind === 'lecture' ? <Badge tone="primary">Lecture</Badge> : null}
+                          {e.isProvisional ? <Badge tone="warning">{e.kind === 'lecture' ? 'Awaiting confirmation' : 'Provisional'}</Badge> : null}
                           {e.status !== 'planned' ? <Badge tone={e.status === 'completed' ? 'success' : 'neutral'} className="capitalize">{e.status}</Badge> : null}
+                          {isMissed(e) ? <Badge tone="danger">Missed</Badge> : null}
                         </span>
                       </button>
                       {e.status === 'planned' && e.kind !== 'lecture' ? (
@@ -223,6 +234,45 @@ export default function PlannerPage() {
           })}
         </ol>
       )}
+
+      <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <Card>
+          <CardHeader>
+            <CardTitle>Upcoming deadlines and examinations</CardTitle>
+          </CardHeader>
+          <CardContent>
+            {deadlines.length ? (
+              <ul className="flex flex-col gap-2 text-sm">
+                {deadlines.map((a) => (
+                  <li key={a.id} className="flex items-start justify-between gap-2">
+                    <span className="min-w-0">
+                      {a.kind !== 'assignment' ? <span className="font-medium">{ASSIGNMENT_KIND_LABEL[a.kind]}: </span> : null}
+                      {a.title}
+                    </span>
+                    <span className={cn('shrink-0 text-xs', bucketOf(a) === 'overdue' ? 'font-semibold text-danger' : 'text-muted-foreground')}>
+                      {a.due_at ? (bucketOf(a) === 'overdue' ? 'Overdue' : format(new Date(a.due_at), 'EEE d MMM, HH:mm')) : 'No date'}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-sm text-muted-foreground">No upcoming deadlines. Add assignments, tests and examination dates on the Assignments page.</p>
+            )}
+            <Button asChild variant="link" size="sm" className="mt-2 px-0">
+              <Link to="/assignments">Manage deadlines</Link>
+            </Button>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>What to revise next</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="mb-3 text-xs text-muted-foreground">Based on your own results: topics below the 80% mastery target and revision that is due.</p>
+            <RecommendationList items={revisionAdvice} limit={4} />
+          </CardContent>
+        </Card>
+      </div>
 
       <Dialog open={completing !== null} onOpenChange={(o) => !o && setCompleting(null)}>
         <DialogContent title="Record study time" description={completing?.entry.title} size="sm">
@@ -268,7 +318,7 @@ export default function PlannerPage() {
               <Field label="Course" htmlFor="s-course">
                 <Select id="s-course" value={editor.courseId} onValueChange={(next) => setEditor({ ...editor, courseId: next })}>
                   <SelectItem value="">General study</SelectItem>
-                  {(courses.data ?? []).map((c) => (
+                  {coursesForPicker(my.taking, my.all, editor.courseId || null).map((c) => (
                     <SelectItem key={c.id} value={c.id}>
                       {c.code} {c.title}
                     </SelectItem>

@@ -1,5 +1,6 @@
 import { BadgeCheck, CircleAlert, CircleDashed, FileText, GraduationCap, Landmark, Sparkles, UserRound } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
+import { CLASSIFICATION_LABEL, type SelectionStatus } from '@/lib/curriculum'
 import type { ContentSource, Course } from '@/types/database'
 
 const SOURCE_META: Record<ContentSource, { label: string; icon: typeof FileText; tone: 'primary' | 'success' | 'neutral' | 'warning' }> = {
@@ -24,9 +25,16 @@ export function SourceBadge({ source }: { source: ContentSource }) {
   )
 }
 
-export function CourseStatusBadge({ course }: { course: Pick<Course, 'status'> }) {
-  if (course.status !== 'recommended_elective') return null
-  return <Badge tone="warning">Recommended elective · confirm registration</Badge>
+/**
+ * How a course sits in the programme (core, required, special topic, elective) and its credit slots. For an
+ * elective, the student's own choice is shown: selected, to confirm, or not selected.
+ */
+export function ClassificationBadge({ course, selection }: { course: Pick<Course, 'classification' | 'credit_slots'>; selection?: SelectionStatus }) {
+  const slots = `${course.credit_slots} credit slot${course.credit_slots === 1 ? '' : 's'}`
+  if (course.classification !== 'elective') return <Badge>{CLASSIFICATION_LABEL[course.classification]} · {slots}</Badge>
+  if (selection === 'enrolled') return <Badge tone="success">Selected elective · {slots}</Badge>
+  if (selection === 'pending_confirmation') return <Badge tone="warning">Elective · confirm your choice</Badge>
+  return <Badge>Elective · not selected</Badge>
 }
 
 export function VerificationBadge({ status }: { status: 'verified' | 'unverified' | 'unreachable' | 'citation' | undefined }) {
@@ -58,6 +66,7 @@ const ACCENTS: Record<string, string> = {
   emerald: 'bg-emerald-500',
   amber: 'bg-amber-500',
   teal: 'bg-teal-500',
+  orange: 'bg-orange-500',
 }
 
 export function accentClass(accent: string): string {

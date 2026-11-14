@@ -4,10 +4,22 @@ import { supabase } from '@/lib/supabase'
 import { newId } from '@/lib/utils'
 import { withOfflineCache } from '@/services/offline/cache'
 import { writeOrQueue } from '@/services/offline/sync'
-import type { Assignment } from '@/types/database'
+import type { Assignment, AssignmentKind } from '@/types/database'
+
+/** What a dated item is. Students enter these from official course information; GradPath invents none. */
+export const ASSIGNMENT_KINDS = ['assignment', 'test', 'examination', 'presentation', 'project', 'other'] as const satisfies readonly AssignmentKind[]
+export const ASSIGNMENT_KIND_LABEL: Record<AssignmentKind, string> = {
+  assignment: 'Assignment',
+  test: 'Test',
+  examination: 'Examination',
+  presentation: 'Presentation',
+  project: 'Project',
+  other: 'Other',
+}
 
 export const assignmentSchema = z.object({
   title: z.string().trim().min(1, 'Enter a title').max(200),
+  kind: z.enum(ASSIGNMENT_KINDS),
   description: z.string().max(20000),
   course_id: z.string().uuid().nullable(),
   due_at: z.string().nullable(),

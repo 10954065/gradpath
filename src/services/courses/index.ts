@@ -98,9 +98,29 @@ export function listResources(): Promise<ResourceWithCourse[]> {
   })
 }
 
-export async function listEnrolments(): Promise<CourseEnrolment[]> {
-  const result = await supabase.from('course_enrolments').select('*')
-  return ensureOk(result) as CourseEnrolment[]
+export function listEnrolments(): Promise<CourseEnrolment[]> {
+  return withOfflineCache('enrolments', async () => {
+    const result = await supabase.from('course_enrolments').select('*')
+    return ensureOk(result, 'We could not load your course registration.') as CourseEnrolment[]
+  })
+}
+
+/** Add any published compulsory course (and any new elective, as "to confirm") the student is missing. Never changes a status they set. */
+export async function syncDefaultEnrolments(): Promise<number> {
+  const { data, error } = await supabase.rpc('enrol_default_courses')
+  ensureOk({ data, error }, 'We could not update your course list.')
+  return typeof data === 'number' ? data : 0
+}
+
+/**
+ * Record the student's elective choice: the chosen electives become enrolled and every other elective is marked
+ * "not taking". With no choice, electives stay "to confirm".
+ */
+export async function setElectiveChoice(electiveIds: readonly string[], chosenIds: readonly string[]): Promise<void> {
+  if (chosenIds.length === 0) return
+  for (const courseId of electiveIds) {
+    await setEnrolmentStatus(courseId, chosenIds.includes(courseId) ? 'enrolled' : 'dropped')
+  }
 }
 
 export async function setEnrolmentStatus(courseId: string, status: CourseEnrolment['status']): Promise<void> {

@@ -19,6 +19,8 @@ export const eventSchema = z
     end_time: z.string().regex(/^\d{2}:\d{2}/, 'Choose an end time'),
     location: z.string().max(200),
     notes: z.string().max(2000),
+    /** Lectures only: the class allocation is not confirmed yet. Stored as is_provisional on lecture rows. */
+    awaiting_confirmation: z.boolean(),
   })
   .refine((v) => v.end_time > v.start_time, { path: ['end_time'], message: 'End time must be after the start time' })
   .refine((v) => (v.recurrence === 'weekly' ? v.day_of_week !== null : Boolean(v.event_date)), {
@@ -35,7 +37,7 @@ export function listEvents(): Promise<TimetableEvent[]> {
 }
 
 export async function saveEvent(userId: string, input: EventInput, existing?: TimetableEvent): Promise<void> {
-  const parsed = eventSchema.parse(input)
+  const { awaiting_confirmation: awaitingConfirmation, ...parsed } = eventSchema.parse(input)
   await writeOrQueue(userId, {
     table: 'timetable_events',
     op: 'upsert',
@@ -45,8 +47,9 @@ export async function saveEvent(userId: string, input: EventInput, existing?: Ti
       day_of_week: parsed.recurrence === 'weekly' ? parsed.day_of_week : null,
       event_date: parsed.recurrence === 'once' ? parsed.event_date : null,
       user_id: userId,
-      // An event the student creates or edits is their own, not part of the provisional plan.
-      is_provisional: false,
+      // A study block the student creates or edits is their own, not part of the provisional plan. For a lecture the
+      // flag means "awaiting confirmation" of the official class allocation.
+      is_provisional: parsed.kind === 'lecture' ? awaitingConfirmation : false,
     },
     baseUpdatedAt: existing?.updated_at ?? null,
   })
@@ -56,9 +59,12 @@ export async function deleteEvent(userId: string, eventId: string): Promise<void
   await writeOrQueue(userId, { table: 'timetable_events', op: 'delete', match: { id: eventId } })
 }
 
-/** Remove the provisional study blocks (e.g. once the official lecture timetable is entered). */
+/** Remove the provisional study blocks. Lectures awaiting confirmation are the student's own entries and are kept. */
 export async function deleteProvisionalEvents(): Promise<void> {
-  ensureOk(await supabase.from('timetable_events').delete().eq('is_provisional', true), 'We could not remove the provisional timetable.')
+  ensureOk(
+    await supabase.from('timetable_events').delete().eq('is_provisional', true).neq('kind', 'lecture'),
+    'We could not remove the provisional study blocks.',
+  )
 }
 
 export async function restoreProvisionalTimetable(): Promise<number> {

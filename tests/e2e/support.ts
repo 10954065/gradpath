@@ -55,11 +55,16 @@ export async function deleteE2eAccounts(): Promise<number> {
   return ids.length
 }
 
-/** Walk every onboarding step with the default choices (including the provisional timetable), then finish. */
-export async function completeOnboarding(page: Page): Promise<void> {
+/**
+ * Walk every onboarding step with the default choices (including the provisional timetable), selecting CSIT 613 as
+ * the elective like the owner's Semester 1 selection, then finish.
+ */
+export async function completeOnboarding(page: Page, elective: RegExp = /^CSIT 613 /): Promise<void> {
   const next = page.getByRole('button', { name: /^(Continue|Finish and go to dashboard)$/ })
   for (let step = 0; step < 10; step += 1) {
     await expect(next).toHaveCount(1)
+    const choice = page.getByRole('radio', { name: elective })
+    if (await choice.count()) await choice.check()
     const label = (await next.innerText()).trim()
     await next.click()
     if (label.startsWith('Finish')) break

@@ -1,6 +1,7 @@
 import { z } from 'zod'
 import { AppError, ensureOk } from '@/lib/errors'
 import { supabase } from '@/lib/supabase'
+import { setElectiveChoice } from '@/services/courses'
 import { withOfflineCache } from '@/services/offline/cache'
 import type { Profile, StudentPreferences } from '@/types/database'
 
@@ -74,9 +75,16 @@ export async function updatePreferences(
   return ensureOk(result, 'We could not save your preferences.') as StudentPreferences
 }
 
-/** Onboarding side effects: enrol in published courses and (optionally) create the provisional timetable. */
-export async function completeOnboarding(userId: string, input: { weeklyTarget: number; createTimetable: boolean }): Promise<void> {
+/**
+ * Onboarding side effects: enrol in the compulsory courses, record the elective choice (if made), then optionally
+ * create the provisional study plan, which only includes courses the student takes.
+ */
+export async function completeOnboarding(
+  userId: string,
+  input: { weeklyTarget: number; createTimetable: boolean; electiveIds: readonly string[]; chosenElectiveIds: readonly string[] },
+): Promise<void> {
   ensureOk(await supabase.rpc('enrol_default_courses'), 'We could not set up your courses.')
+  await setElectiveChoice(input.electiveIds, input.chosenElectiveIds)
   if (input.createTimetable) ensureOk(await supabase.rpc('seed_default_timetable'), 'We could not create your study timetable.')
   await updateProfile(userId, {
     weekly_study_target_hours: input.weeklyTarget,

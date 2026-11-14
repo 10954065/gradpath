@@ -126,3 +126,8 @@ export function studyTotals(entries: PlannerEntry[]): StudyTotals {
   }
   return { plannedMinutes, completedMinutes, completedSessions }
 }
+
+/** A study or revision session whose time has passed while still only planned (never completed, skipped or cancelled). */
+export function isMissed(entry: Pick<PlannerEntry, 'status' | 'kind' | 'end'>, now: Date = new Date()): boolean {
+  return entry.status === 'planned' && entry.kind !== 'lecture' && entry.end.getTime() < now.getTime()
+}

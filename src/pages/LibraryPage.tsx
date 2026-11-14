@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/form-controls'
 import { Select, SelectItem } from '@/components/ui/select'
 import { PageHeader } from '@/components/ui/page'
 import { toUserMessage } from '@/lib/errors'
+import { useMyCourses } from '@/hooks/useMyCourses'
 import { getCatalogue } from '@/services/courses'
 import { listBookmarks, listMyProgress } from '@/services/progress'
 
@@ -18,6 +19,7 @@ export default function LibraryPage() {
   const difficulty = params.get('difficulty') ?? ''
   const status = params.get('status') ?? ''
   const catalogue = useQuery({ queryKey: ['catalogue'], queryFn: getCatalogue })
+  const my = useMyCourses()
   const progress = useQuery({ queryKey: ['progress'], queryFn: listMyProgress })
   const bookmarks = useQuery({ queryKey: ['bookmarks'], queryFn: listBookmarks })
 
@@ -32,7 +34,7 @@ export default function LibraryPage() {
     const rows = new Map((progress.data ?? []).map((p) => [p.lesson_id, p]))
     const marked = new Set((bookmarks.data ?? []).map((b) => b.lesson_id))
     const needle = q.trim().toLowerCase()
-    return (catalogue.data ?? []).flatMap((c) =>
+    return (catalogue.data ?? []).filter((c) => (course ? c.id === course : my.isTaking(c.id))).flatMap((c) =>
       c.modules.flatMap((m) =>
         m.lessons
           .map((l) => ({ ...l, course: c, module: m, progress: rows.get(l.id), bookmarked: marked.has(l.id) }))
@@ -46,11 +48,11 @@ export default function LibraryPage() {
           }),
       ),
     )
-  }, [catalogue.data, progress.data, bookmarks.data, q, course, difficulty, status])
+  }, [catalogue.data, progress.data, bookmarks.data, q, course, difficulty, status, my])
 
   return (
     <>
-      <PageHeader title="Learning Library" description="Every published lesson across all seven courses. Search by title, topic or module." />
+      <PageHeader title="Learning Library" description="Every published lesson in your courses. Search by title, topic or module." />
       <div className="mb-5 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-[minmax(0,2fr)_repeat(3,minmax(0,1fr))]">
         <div className="relative">
           <Search className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" aria-hidden />
@@ -58,7 +60,7 @@ export default function LibraryPage() {
         </div>
         <Select aria-label="Course" value={course} onValueChange={(next) => set('course', next)}>
           <SelectItem value="">All courses</SelectItem>
-          {(catalogue.data ?? []).map((c) => (
+          {(catalogue.data ?? []).filter((c) => my.isTaking(c.id) || c.id === course).map((c) => (
             <SelectItem key={c.id} value={c.id}>
               {c.code} {c.title}
             </SelectItem>
