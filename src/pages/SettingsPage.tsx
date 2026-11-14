@@ -21,6 +21,7 @@ import { toUserMessage } from '@/lib/errors'
 import { updatePassword } from '@/services/auth'
 import { listCourses, listEnrolments, setEnrolmentStatus } from '@/services/courses'
 import { conflictRemove, conflictsAll, outboxPut, type ConflictEntry } from '@/services/offline/db'
+import { disablePush, enablePush, pushSupported } from '@/services/notifications/push'
 import { flushOutbox } from '@/services/offline/sync'
 import { avatarUrl, getPreferences, profileSchema, updatePreferences, updateProfile, uploadAvatar, type ProfileInput } from '@/services/profile'
 import type { CourseEnrolment } from '@/types/database'
@@ -165,17 +166,21 @@ function PreferencesTab() {
     onSuccess: (data) => queryClient.setQueryData(['preferences', user?.id], data),
     onError: (e) => toast.error(toUserMessage(e)),
   })
-  const permission = typeof Notification === 'undefined' ? 'unsupported' : Notification.permission
+  const permission = pushSupported() ? Notification.permission : 'unsupported'
+  const [pushBusy, setPushBusy] = useState(false)
 
   const toggleBrowserNotifications = async (enabled: boolean) => {
-    if (enabled && typeof Notification !== 'undefined' && Notification.permission !== 'granted') {
-      const result = await Notification.requestPermission()
-      if (result !== 'granted') {
-        toast.error('Browser notifications were not allowed. You can still see every reminder inside GradPath.')
-        return
-      }
+    setPushBusy(true)
+    try {
+      if (enabled) await enablePush()
+      else await disablePush()
+      save.mutate({ browser_notifications: enabled })
+      if (enabled) toast.success('Notifications are on for this device.')
+    } catch (e) {
+      toast.error(toUserMessage(e))
+    } finally {
+      setPushBusy(false)
     }
-    save.mutate({ browser_notifications: enabled })
   }
 
   if (!prefs.data) return <Skeleton className="h-64" />
@@ -227,14 +232,16 @@ function PreferencesTab() {
                 Browser notifications
               </span>
               <span className="block text-muted-foreground">
-                Optional pop-up reminders while GradPath is open.{' '}
-                {permission === 'unsupported' ? 'Not supported in this browser.' : `Browser permission: ${permission}.`}
+                A reminder on this device in the evening when your streak flame is fading, even when GradPath is closed.{' '}
+                {permission === 'unsupported'
+                  ? 'Not supported in this browser. On an iPhone or iPad, add GradPath to your Home Screen first.'
+                  : `Browser permission: ${permission}.`}
               </span>
             </span>
             <Switch
               aria-labelledby="browser-notifications-label"
               checked={prefs.data.browser_notifications}
-              disabled={permission === 'unsupported'}
+              disabled={permission === 'unsupported' || pushBusy}
               onCheckedChange={(v) => void toggleBrowserNotifications(v)}
             />
           </div>

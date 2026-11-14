@@ -132,6 +132,32 @@ The role can only be granted from the database — never from the app.
 
 To remove the role: `select public.revoke_admin('admin@example.com');`
 
+### Streak reminders (push notifications)
+
+Every day at 18:00 Accra time (UTC) a `pg_cron` job runs `public.queue_streak_reminders()`. Students whose flame
+is fading (a lesson yesterday, none yet today) get an in-app notification; those who turned on **Settings →
+Preferences → Browser notifications** also get a push notification on each device, sent by the
+`streak-reminders` Edge Function. Migration `20261113000010` creates the job and a random shared secret in Vault.
+Then, once per project:
+
+1. Create a VAPID key pair and store it as function secrets, without printing the private key, for example from a
+   temporary env file you delete afterwards:
+   `npx supabase secrets set --env-file keys.env` with `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY` and `VAPID_SUBJECT`
+   (your site URL).
+2. Put the same public key in the app: `VITE_VAPID_PUBLIC_KEY` in Vercel, or the default in
+   `src/services/notifications/push.ts`. Changing keys later re-subscribes devices automatically.
+3. Deploy the function: `npx supabase functions deploy streak-reminders --use-api` (`verify_jwt` is off in
+   `supabase/config.toml`; the function checks the Vault secret instead).
+4. Tell the database where the function is:
+
+   ```sql
+   select vault.create_secret('https://<project-ref>.supabase.co/functions/v1/streak-reminders', 'streak_reminders_url');
+   ```
+
+Without step 4 the in-app reminders still work and no push is attempted. Push works in Chrome, Edge, Firefox and
+Android browsers; on iPhone and iPad (iOS 16.4+) only after the student adds GradPath to the Home Screen.
+Responses from the function are kept briefly in `net._http_response` if you need to check a run.
+
 ## 8. Check that security is working
 
 These checks take five minutes and confirm the database is protecting student data.

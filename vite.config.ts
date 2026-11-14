@@ -61,6 +61,8 @@ export default defineConfig({
             },
           },
         ],
+        // Shows Web Push notifications (streak reminders) and opens the app when one is tapped.
+        importScripts: ['/push-handler.js'],
         navigateFallback: '/index.html',
         navigateFallbackDenylist: [/^\/api\//],
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,

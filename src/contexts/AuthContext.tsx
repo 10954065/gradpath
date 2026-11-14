@@ -2,6 +2,7 @@ import { isAuthApiError, type Session, type User } from '@supabase/supabase-js'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
 import { supabase } from '@/lib/supabase'
+import { disablePush } from '@/services/notifications/push'
 import { clearUserOfflineData } from '@/services/offline/db'
 import { getProfile, isAdmin as fetchIsAdmin } from '@/services/profile'
 import type { Profile } from '@/types/database'
@@ -84,6 +85,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const signOut = useCallback(async () => {
     const id = userId
+    // Shared-device privacy: this browser stops receiving this student's reminders (needs the session, so first).
+    await disablePush().catch(() => undefined)
     await supabase.auth.signOut()
     // Shared-device privacy: remove this student's cached offline data on sign-out.
     if (id) await clearUserOfflineData(id).catch(() => undefined)
