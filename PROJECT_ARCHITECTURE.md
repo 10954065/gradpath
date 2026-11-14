@@ -149,8 +149,17 @@ Every content item carries a `source` that the UI displays:
     on the timetable pages) starts on that weekday and is numbered from it ("Study week N"); without it, weeks follow
     the day lectures begin, else Monday. Only the grouping of dates changes; progress, attempts, sessions and streaks
     keep their own dates.
+* After-lecture check-ins (migration 16, `/lectures`): private `lecture_logs`, one per student, session and Ghana
+  date, recording attendance (attended, missed, cancelled), the lessons the lecture covered, the covered lessons the
+  student wants to review (added to the revision queue) and a note. The `check_lecture_log` trigger takes the course
+  from the session and rejects a day the session is not held, a day before lectures begin, lessons from another course
+  and reviews of lessons not covered; a cancelled lecture keeps no lessons. `src/lib/lectureLog.ts` (pure,
+  unit-tested) lists ended lectures from the last two weeks still waiting for a check-in, and compares each course's
+  completed lessons with the furthest lesson any check-in covered: ahead, level, behind (with the lessons to catch up
+  on) or unknown until the first check-in; before lectures begin every completed lesson counts as a head start. Shown
+  on `/lectures`, a dashboard card and each course page.
 * Reminders: `lecture_reminder_core` creates in-app notifications only for confirmed sessions (before the lecture,
-  plus a morning summary). It runs for the signed-in student from the app (`generate_lecture_notifications`) and for
+  a check-in prompt in the three hours after it ends until the student checks in, plus a morning summary). It runs for the signed-in student from the app (`generate_lecture_notifications`) and for
   everyone every 15 minutes from `pg_cron`; devices that allow browser notifications receive them through the same
   push Edge Function as streak reminders.
 * `src/lib/officialTimetable.ts` (Ghana-time formatting independent of the device, next session, overlap layout,

@@ -11,6 +11,7 @@ import {
   Layers,
   LayoutDashboard,
   Library,
+  ListChecks,
   Megaphone,
   NotebookPen,
   RefreshCcw,
@@ -48,6 +49,7 @@ export const NAV_GROUPS: NavGroup[] = [
     items: [
       { to: '/planner', label: 'Study Planner', icon: CalendarClock },
       { to: '/timetable/official', label: 'Official Timetable', icon: School },
+      { to: '/lectures', label: 'Lecture Check-ins', icon: ListChecks },
       { to: '/timetable', label: 'My Study Plan', icon: CalendarDays, end: true },
       { to: '/assignments', label: 'Assignments', icon: ClipboardList },
     ],

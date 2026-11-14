@@ -1,5 +1,5 @@
 import { format } from 'date-fns'
-import { CalendarClock, CheckCircle2, ClipboardList, GraduationCap, Megaphone, RefreshCcw, Target, Timer } from 'lucide-react'
+import { CalendarClock, CheckCircle2, ClipboardList, GraduationCap, ListChecks, Megaphone, RefreshCcw, Target, Timer } from 'lucide-react'
 import { useEffect, useMemo } from 'react'
 import { Link } from 'react-router'
 import { accentClass } from '@/components/courses/badges'
@@ -8,6 +8,7 @@ import { SelectionSummary } from '@/components/dashboard/SelectionSummary'
 import { StreakFlame } from '@/components/dashboard/StreakFlame'
 import { CoursePerformanceChart, WeeklyStudyChart } from '@/components/dashboard/StudyCharts'
 import { TodayLessons } from '@/components/dashboard/TodayLessons'
+import { LectureSummary } from '@/components/lectures/LectureParts'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -173,6 +174,17 @@ export default function DashboardPage() {
             </div>
 
             <aside className="flex flex-col gap-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <ListChecks className="size-4 text-primary" aria-hidden /> Lectures
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <LectureSummary />
+                </CardContent>
+              </Card>
+
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
