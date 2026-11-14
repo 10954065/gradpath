@@ -193,6 +193,18 @@ Every content item carries a `source` that the UI displays:
   not avoided. `saveExamPlan` replaces an exam's sessions; time logged against old sessions is kept
   (`study_sessions.timetable_event_id` is set to null).
 
+## Calendar subscription
+
+* Migration 19: `calendar_feeds` (one random 64-hex token per student; readable only by its owner, written only by
+  `create_calendar_feed()`, which also replaces it, and `delete_calendar_feed()`). `calendar_feed(token)` (security
+  definer, callable with the anon key) returns the lectures from `lecture_attendees` for every weekday, the student's
+  `timetable_events` and upcoming examinations, or null for an unknown or malformed token.
+* `api/calendar.ts` (Vercel Function) serves `GET /api/calendar?token=…` as `text/calendar`, built by
+  `src/lib/ics.ts` (pure, unit-tested, no `@/` imports so the function can import it): UTC times (Ghana is GMT),
+  weekly RRULEs from the first matching day (lectures from the day teaching begins; weekly blocks until `ends_on`),
+  one-off blocks, examinations of three hours with a reminder the day before, RFC 5545 escaping and 75-octet line
+  folding, and a six-hour refresh hint. The integration tests call the handler against the local database.
+
 ## Focus timer
 
 * `src/lib/focusTimer.ts` (pure, unit-tested) keeps the timer as timestamps (phase, length, time run before the last

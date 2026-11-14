@@ -20,6 +20,7 @@ import { useSyncStatus } from '@/hooks/useSyncStatus'
 import { toUserMessage } from '@/lib/errors'
 import { updatePassword } from '@/services/auth'
 import { ClassificationBadge } from '@/components/courses/badges'
+import { CalendarFeedCard } from '@/components/timetable/CalendarFeedCard'
 import { TimetableReminderSettings } from '@/components/timetable/TimetableReminderSettings'
 import { ENROLMENTS_KEY, useMyCourses } from '@/hooks/useMyCourses'
 import { setEnrolmentStatus } from '@/services/courses'
@@ -280,6 +281,7 @@ function PreferencesTab() {
         </CardContent>
       </Card>
       <TimetableReminderSettings />
+      <CalendarFeedCard />
     </div>
   )
 }
