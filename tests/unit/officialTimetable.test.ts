@@ -5,6 +5,7 @@ import {
   allocationLabel,
   attendanceOf,
   coursePath,
+  effectiveAttendance,
   filterSessions,
   ghanaClock,
   ghanaNow,
@@ -126,6 +127,23 @@ describe('the published ITB Semester 1 timetable', () => {
       expect(allocationLabel(s)).toBe('Attendance allocation pending confirmation')
     }
     expect(Object.values(ALLOCATION_LABEL).some((l) => /compulsory/i.test(l))).toBe(false)
+  })
+
+  it('records the confirmed allocation and counts every session as confirmed unless the student says otherwise', () => {
+    expect(timetable.allocation).toBe('all_students')
+    expect(timetable.sourceNote).toMatch(/confirmed that all 20 sessions are correct/)
+    const confirmedForAll = sessions.map((s) => ({ ...s, allocation: timetable.allocation }))
+    expect(allocationLabel({ allocation: timetable.allocation })).toBe('Confirmed for all ITB students')
+    const effective = effectiveAttendance(confirmedForAll, new Map([['entry-1', 'not_assigned']]))
+    expect(attendanceOf(effective, 'entry-1')).toBe('not_assigned')
+    expect(confirmedForAll.slice(1).every((s) => attendanceOf(effective, s.id) === 'confirmed')).toBe(true)
+    expect(attendanceOf(effectiveAttendance(sessions, none), 'entry-2')).toBe('awaiting')
+  })
+
+  it('rejects an unknown allocation', () => {
+    const { timetable: bad, issues: problems } = parseTimetable(FILE, timetableYaml.replace('allocation: all_students', 'allocation: everyone'), new Set(MY_COURSES))
+    expect(bad).toBeNull()
+    expect(problems.map((i) => i.message)).toContain('allocation must be one of pending_confirmation, all_students, group_specific')
   })
 
   it('links every session to its course page', () => {

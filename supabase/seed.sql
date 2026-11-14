@@ -9488,67 +9488,67 @@ delete from public.flashcards where user_id is null and external_ref is not null
 
 -- Official timetable: 2026/2027 Semester 1 ITB Postgraduate Timetable
 insert into public.timetable_sources (id, slug, title, institution, department, programme, programme_code, academic_year, semester, time_zone, source_url, source_note, is_current, published_at, last_updated_at)
-  select 'da8de5af-1d1a-5975-8522-10da069872d3', 'itb-2026-2027-semester-1', '2026/2027 Semester 1 ITB Postgraduate Timetable', 'University of Ghana', 'Department of Computer Science', 'MSc IT for Business', 'ITB', '2026/2027', 'Semester 1', 'Africa/Accra', 'https://dcs.ug.edu.gh/post-grad-timetable/?programme=ITB', 'University of Ghana, Department of Computer Science, 2026/2027 Semester 1 ITB Postgraduate Timetable. Entries were transcribed from the published timetable and supplied to GradPath; they have not been independently compared with the original document. The timetable does not say whether repeated sessions are alternative groups, additional sessions or classes for different student groups, so attendance allocation is pending confirmation. No semester start, end, examination or holiday dates are published in this source.', not exists (select 1 from public.timetable_sources x where x.programme_code = 'ITB' and x.academic_year = '2026/2027' and x.semester = 'Semester 1' and x.is_current), '2026-11-14'::date, '2026-11-14'::date
+  select 'da8de5af-1d1a-5975-8522-10da069872d3', 'itb-2026-2027-semester-1', '2026/2027 Semester 1 ITB Postgraduate Timetable', 'University of Ghana', 'Department of Computer Science', 'MSc IT for Business', 'ITB', '2026/2027', 'Semester 1', 'Africa/Accra', 'https://dcs.ug.edu.gh/post-grad-timetable/?programme=ITB', 'University of Ghana, Department of Computer Science, 2026/2027 Semester 1 ITB Postgraduate Timetable. Entries were transcribed from the published timetable and supplied to GradPath. On 14 November 2026 the student confirmed that all 20 sessions are correct and that every session, weekday evening and weekend, applies to their class. No semester start, end, examination or holiday dates are published in this source.', not exists (select 1 from public.timetable_sources x where x.programme_code = 'ITB' and x.academic_year = '2026/2027' and x.semester = 'Semester 1' and x.is_current), '2026-11-14'::date, '2026-11-14'::date
   on conflict (id) do nothing;
-insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, sort_order)
-  select 'df7641c2-002b-5128-9a8d-2992816c96dc', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 1, '19:30', '21:30', 'Earth Science Room 1', 1 from public.courses c where c.code = 'CSIT 601'
+insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, allocation, allocation_note, sort_order)
+  select 'df7641c2-002b-5128-9a8d-2992816c96dc', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 1, '19:30', '21:30', 'Earth Science Room 1', 'all_students', 'Confirmed on 14 November 2026 that this session applies to the ITB class.', 1 from public.courses c where c.code = 'CSIT 601'
   on conflict (id) do nothing;
-insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, sort_order)
-  select 'f332ea8d-abf2-58c1-ad5e-6d29ce3a66b6', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 2, '19:30', '21:30', 'Earth Science Room 1', 2 from public.courses c where c.code = 'CSIT 617'
+insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, allocation, allocation_note, sort_order)
+  select 'f332ea8d-abf2-58c1-ad5e-6d29ce3a66b6', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 2, '19:30', '21:30', 'Earth Science Room 1', 'all_students', 'Confirmed on 14 November 2026 that this session applies to the ITB class.', 2 from public.courses c where c.code = 'CSIT 617'
   on conflict (id) do nothing;
-insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, sort_order)
-  select 'f16a51b6-9441-5fcf-a906-74773c24ec88', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 3, '17:30', '19:30', 'Earth Science Room 1', 3 from public.courses c where c.code = 'CSIT 607'
+insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, allocation, allocation_note, sort_order)
+  select 'f16a51b6-9441-5fcf-a906-74773c24ec88', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 3, '17:30', '19:30', 'Earth Science Room 1', 'all_students', 'Confirmed on 14 November 2026 that this session applies to the ITB class.', 3 from public.courses c where c.code = 'CSIT 607'
   on conflict (id) do nothing;
-insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, sort_order)
-  select 'fd85da24-5556-5871-a996-56b926a5f90d', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 3, '19:30', '21:30', 'Earth Science Room 2', 4 from public.courses c where c.code = 'CSIT 613'
+insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, allocation, allocation_note, sort_order)
+  select 'fd85da24-5556-5871-a996-56b926a5f90d', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 3, '19:30', '21:30', 'Earth Science Room 2', 'all_students', 'Confirmed on 14 November 2026 that this session applies to the ITB class.', 4 from public.courses c where c.code = 'CSIT 613'
   on conflict (id) do nothing;
-insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, sort_order)
-  select '214002c3-ceda-559d-9597-a649ef120f96', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 4, '17:30', '19:30', 'Earth Science Room 1', 5 from public.courses c where c.code = 'CSIT 603'
+insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, allocation, allocation_note, sort_order)
+  select '214002c3-ceda-559d-9597-a649ef120f96', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 4, '17:30', '19:30', 'Earth Science Room 1', 'all_students', 'Confirmed on 14 November 2026 that this session applies to the ITB class.', 5 from public.courses c where c.code = 'CSIT 603'
   on conflict (id) do nothing;
-insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, sort_order)
-  select 'e4c43076-3da8-584a-84b8-1df6dd535bf0', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 4, '19:30', '21:30', 'Earth Science Room 1', 6 from public.courses c where c.code = 'CSIT 605'
+insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, allocation, allocation_note, sort_order)
+  select 'e4c43076-3da8-584a-84b8-1df6dd535bf0', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 4, '19:30', '21:30', 'Earth Science Room 1', 'all_students', 'Confirmed on 14 November 2026 that this session applies to the ITB class.', 6 from public.courses c where c.code = 'CSIT 605'
   on conflict (id) do nothing;
-insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, sort_order)
-  select '418d20c2-993e-5b8b-bfbe-66f6895f7a8e', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 5, '17:30', '19:30', 'Earth Science Room 1', 7 from public.courses c where c.code = 'CSIT 621'
+insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, allocation, allocation_note, sort_order)
+  select '418d20c2-993e-5b8b-bfbe-66f6895f7a8e', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 5, '17:30', '19:30', 'Earth Science Room 1', 'all_students', 'Confirmed on 14 November 2026 that this session applies to the ITB class.', 7 from public.courses c where c.code = 'CSIT 621'
   on conflict (id) do nothing;
-insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, sort_order)
-  select '82ad744e-6059-5080-adc2-1a1284cc7c53', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 5, '19:30', '21:30', 'Earth Science Room 1', 8 from public.courses c where c.code = 'CSIT 610'
+insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, allocation, allocation_note, sort_order)
+  select '82ad744e-6059-5080-adc2-1a1284cc7c53', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 5, '19:30', '21:30', 'Earth Science Room 1', 'all_students', 'Confirmed on 14 November 2026 that this session applies to the ITB class.', 8 from public.courses c where c.code = 'CSIT 610'
   on conflict (id) do nothing;
-insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, sort_order)
-  select 'b3d1f664-6fd0-5f2f-a97e-4dc8499349b1', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 6, '07:30', '09:30', 'Earth Science Room 1', 9 from public.courses c where c.code = 'CSIT 607'
+insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, allocation, allocation_note, sort_order)
+  select 'b3d1f664-6fd0-5f2f-a97e-4dc8499349b1', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 6, '07:30', '09:30', 'Earth Science Room 1', 'all_students', 'Confirmed on 14 November 2026 that this session applies to the ITB class.', 9 from public.courses c where c.code = 'CSIT 607'
   on conflict (id) do nothing;
-insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, sort_order)
-  select 'c47cbfdd-a416-51c7-9374-6a97b169a637', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 6, '09:30', '11:30', 'Earth Science Room 1', 10 from public.courses c where c.code = 'CSIT 601'
+insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, allocation, allocation_note, sort_order)
+  select 'c47cbfdd-a416-51c7-9374-6a97b169a637', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 6, '09:30', '11:30', 'Earth Science Room 1', 'all_students', 'Confirmed on 14 November 2026 that this session applies to the ITB class.', 10 from public.courses c where c.code = 'CSIT 601'
   on conflict (id) do nothing;
-insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, sort_order)
-  select '376203ff-ce7b-519c-8a87-122d61468aa7', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 6, '11:30', '13:30', 'Earth Science Room 1', 11 from public.courses c where c.code = 'CSIT 617'
+insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, allocation, allocation_note, sort_order)
+  select '376203ff-ce7b-519c-8a87-122d61468aa7', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 6, '11:30', '13:30', 'Earth Science Room 1', 'all_students', 'Confirmed on 14 November 2026 that this session applies to the ITB class.', 11 from public.courses c where c.code = 'CSIT 617'
   on conflict (id) do nothing;
-insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, sort_order)
-  select 'eb2dc90a-fb58-526e-827c-6e57efda6ae8', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 6, '14:00', '16:00', 'Earth Science Room 1', 12 from public.courses c where c.code = 'CSIT 605'
+insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, allocation, allocation_note, sort_order)
+  select 'eb2dc90a-fb58-526e-827c-6e57efda6ae8', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 6, '14:00', '16:00', 'Earth Science Room 1', 'all_students', 'Confirmed on 14 November 2026 that this session applies to the ITB class.', 12 from public.courses c where c.code = 'CSIT 605'
   on conflict (id) do nothing;
-insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, sort_order)
-  select '2c4fb14d-dce6-5e42-8023-b0e45331cfdd', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 6, '16:00', '18:00', 'Earth Science Room 2', 13 from public.courses c where c.code = 'CSIT 613'
+insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, allocation, allocation_note, sort_order)
+  select '2c4fb14d-dce6-5e42-8023-b0e45331cfdd', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 6, '16:00', '18:00', 'Earth Science Room 2', 'all_students', 'Confirmed on 14 November 2026 that this session applies to the ITB class.', 13 from public.courses c where c.code = 'CSIT 613'
   on conflict (id) do nothing;
-insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, sort_order)
-  select '671a47e1-acc9-5e95-9f2c-f9df98c3ba58', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 6, '18:00', '20:00', 'Earth Science Room 1', 14 from public.courses c where c.code = 'CSIT 603'
+insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, allocation, allocation_note, sort_order)
+  select '671a47e1-acc9-5e95-9f2c-f9df98c3ba58', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 6, '18:00', '20:00', 'Earth Science Room 1', 'all_students', 'Confirmed on 14 November 2026 that this session applies to the ITB class.', 14 from public.courses c where c.code = 'CSIT 603'
   on conflict (id) do nothing;
-insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, sort_order)
-  select 'b0026d06-b434-5bcf-b84a-1724c46a54a9', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 0, '07:30', '09:30', 'Earth Science Room 1', 15 from public.courses c where c.code = 'CSIT 607'
+insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, allocation, allocation_note, sort_order)
+  select 'b0026d06-b434-5bcf-b84a-1724c46a54a9', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 0, '07:30', '09:30', 'Earth Science Room 1', 'all_students', 'Confirmed on 14 November 2026 that this session applies to the ITB class.', 15 from public.courses c where c.code = 'CSIT 607'
   on conflict (id) do nothing;
-insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, sort_order)
-  select '8d3a747e-82ff-56c1-ba5e-fbef440393ec', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 0, '09:30', '11:30', 'Earth Science Room 1', 16 from public.courses c where c.code = 'CSIT 601'
+insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, allocation, allocation_note, sort_order)
+  select '8d3a747e-82ff-56c1-ba5e-fbef440393ec', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 0, '09:30', '11:30', 'Earth Science Room 1', 'all_students', 'Confirmed on 14 November 2026 that this session applies to the ITB class.', 16 from public.courses c where c.code = 'CSIT 601'
   on conflict (id) do nothing;
-insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, sort_order)
-  select 'ffbd4241-6099-5132-aaff-071d978f7cd4', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 0, '11:30', '13:30', 'Earth Science Room 1', 17 from public.courses c where c.code = 'CSIT 603'
+insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, allocation, allocation_note, sort_order)
+  select 'ffbd4241-6099-5132-aaff-071d978f7cd4', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 0, '11:30', '13:30', 'Earth Science Room 1', 'all_students', 'Confirmed on 14 November 2026 that this session applies to the ITB class.', 17 from public.courses c where c.code = 'CSIT 603'
   on conflict (id) do nothing;
-insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, sort_order)
-  select '58439b79-4f20-5476-adf1-56c96bae5e20', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 0, '14:00', '16:00', 'Earth Science Room 1', 18 from public.courses c where c.code = 'CSIT 605'
+insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, allocation, allocation_note, sort_order)
+  select '58439b79-4f20-5476-adf1-56c96bae5e20', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 0, '14:00', '16:00', 'Earth Science Room 1', 'all_students', 'Confirmed on 14 November 2026 that this session applies to the ITB class.', 18 from public.courses c where c.code = 'CSIT 605'
   on conflict (id) do nothing;
-insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, sort_order)
-  select '7162c697-fcba-56f6-a18c-6bad53cd8685', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 0, '16:00', '18:00', 'Earth Science Room 2', 19 from public.courses c where c.code = 'CSIT 613'
+insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, allocation, allocation_note, sort_order)
+  select '7162c697-fcba-56f6-a18c-6bad53cd8685', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 0, '16:00', '18:00', 'Earth Science Room 2', 'all_students', 'Confirmed on 14 November 2026 that this session applies to the ITB class.', 19 from public.courses c where c.code = 'CSIT 613'
   on conflict (id) do nothing;
-insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, sort_order)
-  select '20eb8849-4e20-5293-8cf1-6c4ff9a0dad4', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 0, '18:00', '20:00', 'Earth Science Room 1', 20 from public.courses c where c.code = 'CSIT 617'
+insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, allocation, allocation_note, sort_order)
+  select '20eb8849-4e20-5293-8cf1-6c4ff9a0dad4', 'da8de5af-1d1a-5975-8522-10da069872d3', c.id, 0, '18:00', '20:00', 'Earth Science Room 1', 'all_students', 'Confirmed on 14 November 2026 that this session applies to the ITB class.', 20 from public.courses c where c.code = 'CSIT 617'
   on conflict (id) do nothing;
 
 commit;

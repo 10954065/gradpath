@@ -1,5 +1,5 @@
 import yaml from 'js-yaml'
-import { dayFromName, fromMinutes, toMinutes } from '../officialTimetable'
+import { dayFromName, fromMinutes, toMinutes, type Allocation } from '../officialTimetable'
 import type { ValidationIssue } from './types'
 
 /** An official timetable as authored in content/timetables/*.yaml. */
@@ -23,6 +23,9 @@ export interface ParsedTimetable {
   timeZone: 'Africa/Accra'
   sourceUrl: string | null
   sourceNote: string
+  /** Who attends the sessions, for the whole timetable; pending until the department confirms it. */
+  allocation: Allocation
+  allocationNote: string
   publishedAt: string
   sessions: ParsedTimetableSession[]
 }
@@ -31,6 +34,7 @@ type Obj = Record<string, unknown>
 const TIME = /^([01]\d|2[0-3]):[0-5]\d$/
 const CODE = /^[A-Z]{3,5} [0-9]{3}$/
 const str = (v: unknown): string => (typeof v === 'string' ? v.trim() : '')
+const ALLOCATIONS: readonly Allocation[] = ['pending_confirmation', 'all_students', 'group_specific']
 
 export function parseTimetable(file: string, text: string, knownCourseCodes?: ReadonlySet<string>): { timetable: ParsedTimetable | null; issues: ValidationIssue[] } {
   const issues: ValidationIssue[] = []
@@ -50,6 +54,9 @@ export function parseTimetable(file: string, text: string, knownCourseCodes?: Re
   if (str(doc.timeZone || 'Africa/Accra') !== 'Africa/Accra') error('timeZone must be Africa/Accra (all times are Ghana local time)')
   const sourceUrl = str(doc.sourceUrl) || null
   if (sourceUrl && !sourceUrl.startsWith('https://')) error('sourceUrl must start with https://')
+  const allocation = (str(doc.allocation) || 'pending_confirmation') as Allocation
+  if (!ALLOCATIONS.includes(allocation)) error(`allocation must be one of ${ALLOCATIONS.join(', ')}`)
+  if (str(doc.allocationNote).length > 500) error('allocationNote is longer than 500 characters')
   const publishedAt = doc.publishedAt instanceof Date ? doc.publishedAt.toISOString().slice(0, 10) : str(doc.publishedAt)
   if (publishedAt && !/^\d{4}-\d{2}-\d{2}$/.test(publishedAt)) error('publishedAt must be a date (yyyy-mm-dd)')
 
@@ -89,6 +96,8 @@ export function parseTimetable(file: string, text: string, knownCourseCodes?: Re
       timeZone: 'Africa/Accra',
       sourceUrl,
       sourceNote: str(doc.sourceNote),
+      allocation,
+      allocationNote: str(doc.allocationNote),
       publishedAt: publishedAt || new Date().toISOString().slice(0, 10),
       sessions,
     },

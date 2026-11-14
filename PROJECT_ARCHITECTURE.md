@@ -136,8 +136,10 @@ Every content item carries a `source` that the UI displays:
   Sessions are removed by status, never deleted.
 * Private: `timetable_attendance` (each student's choice per session: awaiting, confirmed for my class, not assigned,
   cancelled) and `timetable_preferences` (lecture reminders, lead time, morning summary, change alerts, "only confirmed"
-  view). The published document does not say whether repeated sessions are alternatives or extra classes, so nothing
-  is presented as compulsory; `allocation` stays `pending_confirmation` until an administrator records otherwise.
+  view). `allocation` says who attends: `pending_confirmation` (nothing presented as compulsory), `all_students` or
+  `group_specific`. A session confirmed for all students counts as confirmed for every student who takes the course
+  until the student records another choice (`effectiveAttendance` in the app, `lecture_attendees` in the database).
+  The 2026/2027 Semester 1 ITB sessions are `all_students` since the student confirmed them on 14 November 2026.
 * Reminders: `lecture_reminder_core` creates in-app notifications only for confirmed sessions (before the lecture,
   plus a morning summary). It runs for the signed-in student from the app (`generate_lecture_notifications`) and for
   everyone every 15 minutes from `pg_cron`; devices that allow browser notifications receive them through the same

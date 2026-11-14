@@ -55,12 +55,12 @@ describe('published timetable', () => {
     expect(entries.filter((e) => e.code === 'CSIT 613').map((e) => e.venue)).toEqual(['Earth Science Room 2', 'Earth Science Room 2', 'Earth Science Room 2'])
   })
 
-  it('records the source and the original import, and marks no allocation as confirmed', async () => {
+  it('records the source, the original import and the confirmed allocation', async () => {
     const { data: source } = await a.client.from('timetable_sources').select('time_zone, source_url, academic_year, semester').eq('id', sourceId).single()
     expect(source).toMatchObject({ time_zone: 'Africa/Accra', academic_year: '2026/2027', semester: 'Semester 1' })
     expect(source?.source_url).toBe('https://dcs.ug.edu.gh/post-grad-timetable/?programme=ITB')
     const { data: allocations } = await a.client.from('timetable_entries').select('allocation').eq('source_id', sourceId)
-    expect(new Set((allocations ?? []).map((r) => r.allocation))).toEqual(new Set(['pending_confirmation']))
+    expect(new Set((allocations ?? []).map((r) => r.allocation))).toEqual(new Set(['all_students']))
     const { count } = await a.client.from('timetable_entry_changes').select('id', { count: 'exact', head: true }).eq('change_type', 'imported').eq('source_id', sourceId)
     expect(count).toBe(20)
   })
@@ -97,7 +97,7 @@ describe('attendance choices', () => {
     expect(changeTheirs.data ?? []).toEqual([])
   })
 
-  it('drive lecture reminders only for confirmed sessions, once, with the venue in Ghana time', async () => {
+  it('drive lecture reminders for confirmed sessions, once, with the venue in Ghana time', async () => {
     // Monday 16 November 2026, 18:45 in Accra: 45 minutes before the CSIT 601 lecture.
     const first = await a.client.rpc('generate_lecture_notifications', { p_now: '2026-11-16T18:45:00Z' })
     expect(first.data).toBe(1)
@@ -107,7 +107,14 @@ describe('attendance choices', () => {
     expect(data).toEqual([
       { title: 'CSIT 601 lecture at 7:30 pm', body: expect.stringContaining('Earth Science Room 1 · 7:30 pm to 9:30 pm Ghana time.'), link: '/timetable/official' },
     ])
-    expect((await b.client.rpc('generate_lecture_notifications', { p_now: '2026-11-16T18:45:00Z' })).data).toBe(0)
+    // b has made no choice: the allocation is confirmed for all students, so b is reminded too.
+    expect((await b.client.rpc('generate_lecture_notifications', { p_now: '2026-11-16T18:45:00Z' })).data).toBe(1)
+  })
+
+  it('stop when the student marks a confirmed session as not assigned to their class', async () => {
+    const saved = await b.client.from('timetable_attendance').upsert({ user_id: b.id, entry_id: entry('CSIT 601', 1).id, status: 'not_assigned' })
+    expect(saved.error).toBeNull()
+    expect((await b.client.rpc('generate_lecture_notifications', { p_now: '2026-11-23T18:45:00Z' })).data).toBe(0)
   })
 
   it('send a morning summary and respect the student’s preferences', async () => {

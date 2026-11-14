@@ -461,8 +461,8 @@ function timetableSql(timetables: readonly ParsedTimetable[]): string[] {
     t.sessions.forEach((s, i) => {
       const id = uuidv5(`timetable:${t.slug}/${s.dayOfWeek}/${s.start}/${s.courseCode}`)
       out.push(
-        `insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, sort_order)\n` +
-          `  select ${q(id)}, ${q(sourceId)}, c.id, ${s.dayOfWeek}, ${q(s.start)}, ${q(s.end)}, ${q(s.venue)}, ${i + 1} from public.courses c where c.code = ${q(s.courseCode)}\n` +
+        `insert into public.timetable_entries (id, source_id, course_id, day_of_week, start_time, end_time, venue, allocation, allocation_note, sort_order)\n` +
+          `  select ${q(id)}, ${q(sourceId)}, c.id, ${s.dayOfWeek}, ${q(s.start)}, ${q(s.end)}, ${q(s.venue)}, ${q(t.allocation)}, ${q(t.allocationNote)}, ${i + 1} from public.courses c where c.code = ${q(s.courseCode)}\n` +
           `  on conflict (id) do nothing;`,
       )
     })

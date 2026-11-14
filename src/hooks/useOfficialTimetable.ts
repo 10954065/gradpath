@@ -3,7 +3,7 @@ import { toast } from 'sonner'
 import { useAuth } from '@/contexts/AuthContext'
 import { useMyCourses } from '@/hooks/useMyCourses'
 import { toUserMessage } from '@/lib/errors'
-import { sortWeek, type AttendanceStatus } from '@/lib/officialTimetable'
+import { effectiveAttendance, sortWeek, type AttendanceStatus } from '@/lib/officialTimetable'
 import { ATTENDANCE_KEY, getOfficialTimetable, listAttendance, OFFICIAL_TIMETABLE_KEY, setAttendance } from '@/services/timetable/official'
 
 const EMPTY_ATTENDANCE: ReadonlyMap<string, AttendanceStatus> = new Map()
@@ -39,6 +39,7 @@ export function useOfficialTimetable() {
 
   const all = timetable.data?.sessions ?? []
   const mine = sortWeek(all.filter((s) => my.isTaking(s.courseId)))
+  const choices = attendance.data ?? EMPTY_ATTENDANCE
   return {
     isPending: timetable.isPending || attendance.isPending || my.isPending,
     error: timetable.error ?? attendance.error ?? null,
@@ -50,7 +51,8 @@ export function useOfficialTimetable() {
     /** Sessions for the student's own courses, Monday first. */
     sessions: mine,
     hiddenCount: all.length - mine.length,
-    attendance: attendance.data ?? EMPTY_ATTENDANCE,
+    /** Each session's attendance: the student's choice, or confirmed when the allocation covers all students. */
+    attendance: effectiveAttendance(mine, choices),
     setAttendance: (ids: string[], status: AttendanceStatus) => update.mutate({ ids, status }),
     saving: update.isPending,
     taking: my.taking,

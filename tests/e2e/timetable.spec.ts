@@ -11,8 +11,9 @@ test('the official timetable shows its source and all twenty sessions for my eig
   await expect(facts.filter({ hasText: 'Semester 1' })).toBeVisible()
   await expect(facts.filter({ hasText: 'Africa/Accra' })).toBeVisible()
   await expect(facts.filter({ hasText: 'Department of Computer Science' })).toBeVisible()
-  await expect(page.getByTestId('attendance-status')).toHaveText('0 confirmed · 20 awaiting confirmation')
-  await expect(page.getByText('Attendance allocation pending confirmation').first()).toBeVisible()
+  await expect(page.getByTestId('attendance-status')).toHaveText('20 confirmed · 0 awaiting confirmation')
+  await expect(page.getByText('Attendance allocation pending confirmation')).toHaveCount(0)
+  await expect(page.getByText(/confirmed that all 20 sessions are correct/)).toBeVisible()
 
   const cards = page.getByTestId('course-timetable-card')
   await expect(cards).toHaveCount(8)
@@ -26,6 +27,7 @@ test('the list view filters by venue, day and course', async ({ page }) => {
   await page.getByRole('tab', { name: 'List' }).click()
   const rows = page.getByTestId('session-row')
   await expect(rows).toHaveCount(20)
+  await expect(rows.filter({ hasText: 'Confirmed for all ITB students' })).toHaveCount(20)
 
   await page.getByRole('combobox', { name: 'Filter by venue' }).click()
   await page.getByRole('option', { name: 'Earth Science Room 2' }).click()
@@ -53,20 +55,24 @@ test('a session links to its course page', async ({ page }) => {
   await expect(page.getByRole('list', { name: 'Published lecture sessions' }).getByRole('listitem')).toHaveCount(3)
 })
 
-test('confirmed sessions can be shown on their own and appear in the planner without counting as study', async ({ page }) => {
+test('a student can opt out of a confirmed session, and confirmed sessions appear in the planner without counting as study', async ({ page }) => {
   await page.goto('/timetable/official')
   await page.getByRole('tab', { name: 'List' }).click()
   await page.getByRole('combobox', { name: 'My attendance for CSIT 601 Monday 7:30 pm – 9:30 pm' }).click()
-  await page.getByRole('option', { name: 'Confirmed for my class' }).click()
-  await expect(page.getByTestId('attendance-status')).toHaveText('1 confirmed · 19 awaiting confirmation')
+  await page.getByRole('option', { name: 'Not assigned to my class' }).click()
+  await expect(page.getByTestId('attendance-status')).toHaveText('19 confirmed · 0 awaiting confirmation')
 
   await page.getByRole('switch', { name: 'Only my confirmed sessions' }).click()
   await page.getByRole('tab', { name: 'Week' }).click()
-  await expect(page.getByTestId('week-session')).toHaveCount(1)
+  await expect(page.getByTestId('week-session')).toHaveCount(19)
   await page.reload()
-  await expect(page.getByTestId('week-session')).toHaveCount(1)
+  await expect(page.getByTestId('week-session')).toHaveCount(19)
   await page.getByRole('switch', { name: 'Only my confirmed sessions' }).click()
   await expect(page.getByTestId('week-session')).toHaveCount(20)
+  await page.getByRole('tab', { name: 'List' }).click()
+  await page.getByRole('combobox', { name: 'My attendance for CSIT 601 Monday 7:30 pm – 9:30 pm' }).click()
+  await page.getByRole('option', { name: 'Confirmed for my class' }).click()
+  await expect(page.getByTestId('attendance-status')).toHaveText('20 confirmed · 0 awaiting confirmation')
 
   await page.goto('/planner')
   await expect(page.getByText('Official lecture').first()).toBeVisible()

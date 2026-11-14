@@ -61,6 +61,16 @@ export type AttendanceMap = ReadonlyMap<string, AttendanceStatus>
 
 export const attendanceOf = (map: AttendanceMap, entryId: string): AttendanceStatus => map.get(entryId) ?? 'awaiting'
 
+/**
+ * The student's choices with the confirmed allocation filled in: a session confirmed for all students counts as
+ * confirmed until the student records otherwise. Matches lecture_reminder_core on the server.
+ */
+export function effectiveAttendance(sessions: readonly Pick<OfficialSession, 'id' | 'allocation'>[], choices: AttendanceMap): AttendanceMap {
+  const merged = new Map(choices)
+  for (const s of sessions) if (s.allocation === 'all_students' && !merged.has(s.id)) merged.set(s.id, 'confirmed')
+  return merged
+}
+
 export function dayFromName(name: string): number | null {
   const index = DAY_NAMES.findIndex((d) => d.toLowerCase() === name.trim().toLowerCase())
   return index < 0 ? null : index

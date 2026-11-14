@@ -36,7 +36,9 @@ export function CourseLectureTimes({ courseId }: { courseId: string }) {
         </ul>
         <p className="mt-2 text-xs text-muted-foreground">
           {next ? `Next: ${next.label}, Ghana time. ` : ''}
-          {sessions.length > 1 ? 'Published more than once a week; attendance allocation is pending confirmation. ' : ''}
+          {sessions.length > 1 && sessions.some((s) => s.allocation === 'pending_confirmation')
+            ? 'Published more than once a week; attendance allocation is pending confirmation. '
+            : ''}
           <Link to="/timetable/official" className="font-medium text-primary hover:underline">
             Official timetable
           </Link>

@@ -74,6 +74,7 @@ export default function OfficialTimetablePage() {
   const repeats = sessionsPerCourse(tt.sessions)
   const confirmed = tt.sessions.filter((s) => attendanceOf(tt.attendance, s.id) === 'confirmed').length
   const awaiting = tt.sessions.filter((s) => attendanceOf(tt.attendance, s.id) === 'awaiting').length
+  const pending = tt.sessions.some((s) => s.allocation === 'pending_confirmation')
   const courseOf = (s: OfficialSession) => my.all.find((c) => c.id === s.courseId)
   const view: ViewProps = {
     sessions: visible,
@@ -135,11 +136,13 @@ export default function OfficialTimetablePage() {
         </CardContent>
       </Card>
 
-      <Alert tone="warning" className="mb-5" title="Attendance allocation pending confirmation">
-        Several courses appear more than once in the published week (weekday evening and weekend). The timetable does not say whether these are
-        alternative groups, extra sessions or classes for different students, so no session is marked compulsory. Mark the sessions you attend as
-        “Confirmed for my class” once the department confirms your allocation; reminders are only sent for confirmed sessions.
-      </Alert>
+      {pending ? (
+        <Alert tone="warning" className="mb-5" title="Attendance allocation pending confirmation">
+          Several courses appear more than once in the published week (weekday evening and weekend). The timetable does not say whether these are
+          alternative groups, extra sessions or classes for different students, so no session is marked compulsory. Mark the sessions you attend as
+          “Confirmed for my class” once the department confirms your allocation; reminders are only sent for confirmed sessions.
+        </Alert>
+      ) : null}
 
       <section aria-label="My courses on the timetable" className="mb-6 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
         {tt.taking.map((c) => {
@@ -199,7 +202,7 @@ export default function OfficialTimetablePage() {
 
       <p className="mt-3 text-xs text-muted-foreground">
         {tt.sessions.length} published sessions for your {tt.taking.length} courses · {minutesToHours(lectureMinutes(tt.sessions, tt.attendance))} of lectures a week
-        before you confirm your allocation. Lecture hours are never counted towards your independent study target.
+        {awaiting ? ' before you confirm your allocation' : ''}. Lecture hours are never counted towards your independent study target.
         {tt.hiddenCount > 0 ? ` ${tt.hiddenCount} published session${tt.hiddenCount === 1 ? '' : 's'} for courses you do not take ${tt.hiddenCount === 1 ? 'is' : 'are'} not shown.` : ''}
       </p>
 
