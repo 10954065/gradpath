@@ -4,6 +4,7 @@ import { useMemo } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
 import { useLessonStreak } from '@/hooks/useLessonStreak'
 import { ENROLMENTS_KEY } from '@/hooks/useMyCourses'
+import { useSemesterCalendar } from '@/hooks/useSemesterCalendar'
 import { summariseSelection, takingCourses } from '@/lib/curriculum'
 import { planToday } from '@/lib/dailyPlan'
 import { recommend, type LessonRef } from '@/lib/recommendations'
@@ -22,9 +23,11 @@ const WEEKS_OF_HISTORY = 8
 /** Everything the dashboard and progress centre need, computed only from the student's own records. */
 export function useStudyOverview() {
   const { profile } = useAuth()
-  const thisWeek = weekStart(new Date())
+  // Weeks run from the day teaching started (Friday to Thursday for 2026/2027 Semester 1).
+  const { weekStartsOn } = useSemesterCalendar()
+  const thisWeek = weekStart(new Date(), weekStartsOn)
   const historyStart = subWeeks(thisWeek, WEEKS_OF_HISTORY - 1)
-  const weekEnd = endOfWeek(thisWeek, { weekStartsOn: 1 })
+  const weekEnd = endOfWeek(thisWeek, { weekStartsOn })
 
   const catalogue = useQuery({ queryKey: ['catalogue'], queryFn: getCatalogue })
   const progress = useQuery({ queryKey: ['progress'], queryFn: listMyProgress })
@@ -73,6 +76,7 @@ export function useStudyOverview() {
       assignments: assignments.data ?? [],
       studiedMinutesThisWeek: current.completedMinutes,
       weeklyTargetHours: Number(profile?.weekly_study_target_hours ?? 15),
+      weekStartsOn,
     })
     const todayPlan = planToday({
       todayEntries: buildPlanner(events.data ?? [], sessions.data ?? [], new Date(), new Date()),
@@ -87,7 +91,7 @@ export function useStudyOverview() {
       lessonIdsToday: streak.lessonIdsToday,
     })
     return { courses, selection, lessons, weeks, current, upcoming, threshold, recommendations, todayPlan }
-  }, [catalogue.data, events.data, sessions.data, progress.data, attempts.data, quizzes.data, revision.data, assignments.data, enrolments.data, streak.lessonIdsToday, settings.data, profile, historyStart, thisWeek])
+  }, [catalogue.data, events.data, sessions.data, progress.data, attempts.data, quizzes.data, revision.data, assignments.data, enrolments.data, streak.lessonIdsToday, settings.data, profile, historyStart, thisWeek, weekStartsOn])
 
   const isLoading = catalogue.isPending || progress.isPending || enrolments.isPending
   return {

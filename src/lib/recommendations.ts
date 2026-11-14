@@ -33,6 +33,8 @@ export interface RecommendationInput {
   assignments: Assignment[]
   studiedMinutesThisWeek: number
   weeklyTargetHours: number
+  /** 0 = Sunday … 6 = Saturday; Monday when not given. */
+  weekStartsOn?: number
 }
 
 export function recommend(input: RecommendationInput): Recommendation[] {
@@ -161,7 +163,7 @@ export function recommend(input: RecommendationInput): Recommendation[] {
   }
 
   // 8. Weekly pace
-  const day = (now.getDay() + 6) % 7 // Monday = 0
+  const day = (now.getDay() - (input.weekStartsOn ?? 1) + 7) % 7 // first day of the study week = 0
   const expected = ((input.weeklyTargetHours * 60) / 7) * (day + 1)
   if (input.studiedMinutesThisWeek < expected * 0.5 && day >= 2) {
     out.push({

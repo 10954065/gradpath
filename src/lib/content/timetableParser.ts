@@ -27,6 +27,8 @@ export interface ParsedTimetable {
   allocation: Allocation
   allocationNote: string
   publishedAt: string
+  /** yyyy-mm-dd, or null when not known. Study weeks start on its weekday. */
+  teachingStartedOn: string | null
   sessions: ParsedTimetableSession[]
 }
 
@@ -60,6 +62,8 @@ export function parseTimetable(file: string, text: string, knownCourseCodes?: Re
   const publishedAt = doc.publishedAt instanceof Date ? doc.publishedAt.toISOString().slice(0, 10) : str(doc.publishedAt)
   if (publishedAt && !/^\d{4}-\d{2}-\d{2}$/.test(publishedAt)) error('publishedAt must be a date (yyyy-mm-dd)')
 
+  const teachingStartedOn = doc.teachingStartedOn instanceof Date ? doc.teachingStartedOn.toISOString().slice(0, 10) : str(doc.teachingStartedOn)
+  if (teachingStartedOn && !/^\d{4}-\d{2}-\d{2}$/.test(teachingStartedOn)) error('teachingStartedOn must be a date (yyyy-mm-dd)')
   const rawSessions = Array.isArray(doc.sessions) ? (doc.sessions as Obj[]) : []
   if (!rawSessions.length) error('sessions must list at least one session')
   const sessions: ParsedTimetableSession[] = []
@@ -99,6 +103,7 @@ export function parseTimetable(file: string, text: string, knownCourseCodes?: Re
       allocation,
       allocationNote: str(doc.allocationNote),
       publishedAt: publishedAt || new Date().toISOString().slice(0, 10),
+      teachingStartedOn: teachingStartedOn || null,
       sessions,
     },
     issues,

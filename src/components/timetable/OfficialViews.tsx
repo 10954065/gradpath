@@ -18,12 +18,12 @@ import {
   layoutDay,
   sessionLabel,
   toMinutes,
-  WEEK_ORDER,
   type AttendanceMap,
   type AttendanceStatus,
   type OfficialSession,
   type SessionFilters,
 } from '@/lib/officialTimetable'
+import { useSemesterCalendar } from '@/hooks/useSemesterCalendar'
 import { cn } from '@/lib/utils'
 import { AttendanceSelect, CourseDot, SessionCard } from './SessionParts'
 
@@ -38,9 +38,10 @@ export interface ViewProps {
 const HOUR_PX = 60
 
 // ---------------------------------------------------------------------------
-// Week: Monday to Sunday on a time axis; overlapping sessions sit side by side
+// Week: the study week (from the day teaching started) on a time axis; overlapping sessions sit side by side
 // ---------------------------------------------------------------------------
 export function WeekGrid({ sessions, attendance }: Pick<ViewProps, 'sessions' | 'attendance'>) {
+  const { order } = useSemesterCalendar()
   if (!sessions.length) return <NoSessions />
   const first = Math.floor(Math.min(...sessions.map((s) => toMinutes(s.start))) / 60)
   const last = Math.ceil(Math.max(...sessions.map((s) => toMinutes(s.end))) / 60)
@@ -51,7 +52,7 @@ export function WeekGrid({ sessions, attendance }: Pick<ViewProps, 'sessions' | 
     <div className="overflow-x-auto rounded-xl border bg-surface shadow-card">
       <section className="grid min-w-[56rem] grid-cols-[3.5rem_repeat(7,minmax(0,1fr))]" aria-label="Official weekly timetable">
         <div className="border-b" />
-        {WEEK_ORDER.map((d) => (
+        {order.map((d) => (
           <div key={d} aria-hidden className="border-b border-l px-2 py-2 text-center text-xs font-semibold">
             {DAY_NAMES[d]}
           </div>
@@ -63,7 +64,7 @@ export function WeekGrid({ sessions, attendance }: Pick<ViewProps, 'sessions' | 
             </span>
           ))}
         </div>
-        {WEEK_ORDER.map((d) => (
+        {order.map((d) => (
           <section key={d} aria-label={DAY_NAMES[d]} className="relative border-l" style={{ height }}>
             {hours.map((h) => (
               <div key={h} aria-hidden className="absolute inset-x-0 border-t border-dashed border-border/70" style={{ top: (h - first) * HOUR_PX }} />
@@ -109,9 +110,10 @@ export function WeekGrid({ sessions, attendance }: Pick<ViewProps, 'sessions' | 
 // Day: one day's sessions in order (also the phone layout of the week)
 // ---------------------------------------------------------------------------
 export function DayPicker({ value, onChange, sessions }: { value: number; onChange: (day: number) => void; sessions: readonly OfficialSession[] }) {
+  const { order } = useSemesterCalendar()
   return (
     <div role="tablist" aria-label="Day" className="mb-4 flex gap-1.5 overflow-x-auto pb-1">
-      {WEEK_ORDER.map((d) => {
+      {order.map((d) => {
         const count = sessions.filter((s) => s.dayOfWeek === d).length
         const active = d === value
         return (
@@ -165,6 +167,7 @@ interface ListProps extends ViewProps {
 }
 
 export function SessionTable({ filters, onFilters, courses, ...props }: ListProps) {
+  const { order } = useSemesterCalendar()
   const venues = [...new Set(props.sessions.map((s) => s.venue).filter(Boolean))].sort()
   const rows = filterSessions(props.sessions, filters, props.attendance)
   return (
@@ -184,7 +187,7 @@ export function SessionTable({ filters, onFilters, courses, ...props }: ListProp
           onValueChange={(v) => onFilters({ ...filters, dayOfWeek: v === '' ? undefined : Number(v) })}
         >
           <SelectItem value="">Every day</SelectItem>
-          {WEEK_ORDER.map((d) => (
+          {order.map((d) => (
             <SelectItem key={d} value={String(d)}>
               {DAY_NAMES[d]}
             </SelectItem>

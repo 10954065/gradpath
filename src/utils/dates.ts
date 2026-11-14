@@ -1,4 +1,4 @@
-import { addDays, differenceInCalendarDays, format, formatDistanceToNowStrict, startOfWeek } from 'date-fns'
+import { addDays, differenceInCalendarDays, format, formatDistanceToNowStrict, startOfWeek, type Day } from 'date-fns'
 
 /** All scheduling in GradPath uses Africa/Accra (UTC+0, no daylight saving) unless the student chooses otherwise. */
 export const DEFAULT_TIME_ZONE = 'Africa/Accra'
@@ -24,9 +24,9 @@ export function isoDate(date: Date): string {
   return format(date, 'yyyy-MM-dd')
 }
 
-/** Monday-based week start. */
-export function weekStart(date: Date): Date {
-  return startOfWeek(date, { weekStartsOn: 1 })
+/** Week start: Monday unless the student's week starts on another day (see lib/semesterCalendar). */
+export function weekStart(date: Date, weekStartsOn: Day = 1): Date {
+  return startOfWeek(date, { weekStartsOn })
 }
 
 export function weekDays(start: Date): Date[] {

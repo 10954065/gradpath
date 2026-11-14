@@ -2,6 +2,7 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { toast } from 'sonner'
 import { useAuth } from '@/contexts/AuthContext'
 import { useMyCourses } from '@/hooks/useMyCourses'
+import { useSemesterCalendar } from '@/hooks/useSemesterCalendar'
 import { toUserMessage } from '@/lib/errors'
 import { effectiveAttendance, sortWeek, type AttendanceStatus } from '@/lib/officialTimetable'
 import { ATTENDANCE_KEY, getOfficialTimetable, listAttendance, OFFICIAL_TIMETABLE_KEY, setAttendance } from '@/services/timetable/official'
@@ -17,6 +18,7 @@ export function useOfficialTimetable() {
   const { user } = useAuth()
   const queryClient = useQueryClient()
   const my = useMyCourses()
+  const { order } = useSemesterCalendar()
   const timetable = useQuery({ queryKey: OFFICIAL_TIMETABLE_KEY, queryFn: getOfficialTimetable })
   const attendance = useQuery({ queryKey: ATTENDANCE_KEY, queryFn: listAttendance })
 
@@ -38,7 +40,7 @@ export function useOfficialTimetable() {
   })
 
   const all = timetable.data?.sessions ?? []
-  const mine = sortWeek(all.filter((s) => my.isTaking(s.courseId)))
+  const mine = sortWeek(all.filter((s) => my.isTaking(s.courseId)), order)
   const choices = attendance.data ?? EMPTY_ATTENDANCE
   return {
     isPending: timetable.isPending || attendance.isPending || my.isPending,
@@ -48,7 +50,7 @@ export function useOfficialTimetable() {
       void attendance.refetch()
     },
     source: timetable.data?.source ?? null,
-    /** Sessions for the student's own courses, Monday first. */
+    /** Sessions for the student's own courses, in the order the study week runs. */
     sessions: mine,
     hiddenCount: all.length - mine.length,
     /** Each session's attendance: the student's choice, or confirmed when the allocation covers all students. */

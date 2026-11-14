@@ -455,8 +455,8 @@ function timetableSql(timetables: readonly ParsedTimetable[]): string[] {
     out.push(
       '',
       `-- Official timetable: ${t.title}`,
-      `insert into public.timetable_sources (id, slug, title, institution, department, programme, programme_code, academic_year, semester, time_zone, source_url, source_note, is_current, published_at, last_updated_at)\n` +
-        `  select ${meta.map(q).join(', ')}, ${noCurrent}, ${q(t.publishedAt)}::date, ${q(t.publishedAt)}::date\n  on conflict (id) do nothing;`,
+      `insert into public.timetable_sources (id, slug, title, institution, department, programme, programme_code, academic_year, semester, time_zone, source_url, source_note, is_current, published_at, last_updated_at, teaching_started_on)\n` +
+        `  select ${meta.map(q).join(', ')}, ${noCurrent}, ${q(t.publishedAt)}::date, ${q(t.publishedAt)}::date, ${t.teachingStartedOn ? `${q(t.teachingStartedOn)}::date` : 'null'}\n  on conflict (id) do nothing;`,
     )
     t.sessions.forEach((s, i) => {
       const id = uuidv5(`timetable:${t.slug}/${s.dayOfWeek}/${s.start}/${s.courseCode}`)

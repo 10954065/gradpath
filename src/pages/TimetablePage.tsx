@@ -17,12 +17,12 @@ import { toUserMessage } from '@/lib/errors'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { StudyStrategyCard } from '@/components/timetable/StudyStrategyCard'
 import { useMyCourses } from '@/hooks/useMyCourses'
+import { useSemesterCalendar } from '@/hooks/useSemesterCalendar'
 import { coursesForPicker } from '@/lib/curriculum'
 import { deleteEvent, deleteProvisionalEvents, eventSchema, listEvents, saveEvent, type EventInput } from '@/services/study/planner'
 import type { TimetableEvent } from '@/types/database'
 
 const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-const ORDER = [1, 2, 3, 4, 5, 6, 0]
 const KIND_LABEL = { study: 'Study', lecture: 'Lecture', revision: 'Revision', other: 'Other' } as const
 
 const EMPTY: EventInput = {
@@ -46,6 +46,7 @@ export default function TimetablePage() {
   const queryClient = useQueryClient()
   const events = useQuery({ queryKey: ['timetable'], queryFn: listEvents })
   const my = useMyCourses()
+  const { order } = useSemesterCalendar()
   const [view, setView] = useState<View>('study')
   const [editing, setEditing] = useState<TimetableEvent | 'new' | null>(null)
   const [confirmReplace, setConfirmReplace] = useState(false)
@@ -156,7 +157,7 @@ export default function TimetablePage() {
         <EmptyState icon={CalendarDays} title={view === 'university' ? 'No lectures entered yet' : 'Your study plan is empty'} description={view === 'university' ? 'Published lectures are on the Official Timetable page; add only extra lectures here.' : 'Add study blocks for your courses to plan your week.'} action={<Button onClick={() => open('new')}>Add event</Button>} />
       ) : (
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {ORDER.map((dow) => {
+          {order.map((dow) => {
             const day = list.filter((e) => e.recurrence === 'weekly' && e.day_of_week === dow)
             return (
               <section key={dow} className="rounded-xl border bg-surface p-4 shadow-card" aria-label={DAYS[dow]}>
@@ -254,7 +255,7 @@ export default function TimetablePage() {
               {recurrence === 'weekly' ? (
                 <Field label="Day" htmlFor="t-day">
                   <Select id="t-day" value={String(form.watch('day_of_week') ?? '')} onValueChange={(next) => form.setValue('day_of_week', Number(next), { shouldDirty: true })}>
-                    {ORDER.map((d) => (
+                    {order.map((d) => (
                       <SelectItem key={d} value={String(d)}>
                         {DAYS[d]}
                       </SelectItem>

@@ -10,8 +10,9 @@ import { Dialog, DialogContent, DialogFooter } from '@/components/ui/dialog'
 import { Alert } from '@/components/ui/feedback'
 import { useAuth } from '@/contexts/AuthContext'
 import { useOfficialTimetable } from '@/hooks/useOfficialTimetable'
+import { useSemesterCalendar } from '@/hooks/useSemesterCalendar'
 import { toUserMessage } from '@/lib/errors'
-import { attendanceOf, DAY_NAMES, ghanaRange, WEEK_ORDER } from '@/lib/officialTimetable'
+import { attendanceOf, DAY_NAMES, ghanaRange } from '@/lib/officialTimetable'
 import { buildStudyStrategy, lectureClashes, type StudyStrategy } from '@/lib/studyStrategy'
 import { replaceStudyPlan } from '@/services/timetable/official'
 import type { TimetableEvent } from '@/types/database'
@@ -29,6 +30,7 @@ const asBlock = (e: TimetableEvent) => ({ dayOfWeek: e.day_of_week as number, st
 export function StudyStrategyCard({ events, onApplied }: { events: readonly TimetableEvent[]; onApplied: () => void }) {
   const { user, profile } = useAuth()
   const tt = useOfficialTimetable()
+  const { order } = useSemesterCalendar()
   const [preview, setPreview] = useState<StudyStrategy | null>(null)
   const apply = useMutation({
     mutationFn: (plan: StudyStrategy) => replaceStudyPlan(user?.id as string, plan.blocks),
@@ -109,7 +111,7 @@ export function StudyStrategyCard({ events, onApplied }: { events: readonly Time
                 </Alert>
               ) : null}
               <ol className="flex flex-col gap-3" aria-label="Planned study blocks">
-                {WEEK_ORDER.map((d) => {
+                {order.map((d) => {
                   const blocks = preview.blocks.filter((b) => b.dayOfWeek === d)
                   if (!blocks.length) return null
                   return (

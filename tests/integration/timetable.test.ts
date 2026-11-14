@@ -56,8 +56,8 @@ describe('published timetable', () => {
   })
 
   it('records the source, the original import and the confirmed allocation', async () => {
-    const { data: source } = await a.client.from('timetable_sources').select('time_zone, source_url, academic_year, semester').eq('id', sourceId).single()
-    expect(source).toMatchObject({ time_zone: 'Africa/Accra', academic_year: '2026/2027', semester: 'Semester 1' })
+    const { data: source } = await a.client.from('timetable_sources').select('time_zone, source_url, academic_year, semester, teaching_started_on').eq('id', sourceId).single()
+    expect(source).toMatchObject({ time_zone: 'Africa/Accra', academic_year: '2026/2027', semester: 'Semester 1', teaching_started_on: '2026-11-13' })
     expect(source?.source_url).toBe('https://dcs.ug.edu.gh/post-grad-timetable/?programme=ITB')
     const { data: allocations } = await a.client.from('timetable_entries').select('allocation').eq('source_id', sourceId)
     expect(new Set((allocations ?? []).map((r) => r.allocation))).toEqual(new Set(['all_students']))
@@ -71,7 +71,7 @@ describe('published timetable', () => {
     expect(update.data ?? []).toEqual([])
     const insert = await a.client.from('timetable_entries').insert({ source_id: sourceId, course_id: target.course_id, day_of_week: 2, start_time: '08:00', end_time: '09:00', change_reason: 'x' })
     expect(insert.error).not.toBeNull()
-    const source = await a.client.from('timetable_sources').update({ title: 'Hacked' }).eq('id', sourceId).select('id')
+    const source = await a.client.from('timetable_sources').update({ title: 'Hacked', teaching_started_on: '2026-11-16' }).eq('id', sourceId).select('id')
     expect(source.data ?? []).toEqual([])
     const publish = await a.client.rpc('publish_timetable_changes', { p_source_id: sourceId, p_summary: 'nope' })
     expect(publish.error).not.toBeNull()

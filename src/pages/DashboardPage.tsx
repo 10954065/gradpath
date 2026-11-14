@@ -14,9 +14,11 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { EmptyState, ErrorState, ProgressBar, Skeleton } from '@/components/ui/feedback'
 import { StatTile } from '@/components/ui/page'
 import { useAuth } from '@/contexts/AuthContext'
+import { useSemesterCalendar } from '@/hooks/useSemesterCalendar'
 import { useStudyOverview } from '@/hooks/useStudyOverview'
 import { bestScoreAverage, streakMessage } from '@/lib/analytics'
 import { toUserMessage } from '@/lib/errors'
+import { semesterWeekLabel } from '@/lib/semesterCalendar'
 import { courseLessonIds, summariseProgress } from '@/lib/progress'
 import { generateDueNotifications } from '@/services/notifications'
 import { ASSIGNMENT_KIND_LABEL, bucketOf } from '@/services/study/assignments'
@@ -30,6 +32,7 @@ function greeting(): string {
 export default function DashboardPage() {
   const { profile } = useAuth()
   const data = useStudyOverview()
+  const calendar = useSemesterCalendar()
 
   useEffect(() => {
     void generateDueNotifications()
@@ -65,7 +68,9 @@ export default function DashboardPage() {
         <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">
           {greeting()}, {firstName}.
         </h1>
-        <p className="text-sm text-muted-foreground">{format(new Date(), 'EEEE d MMMM yyyy')}</p>
+        <p className="text-sm text-muted-foreground" data-testid="today">
+          {[format(new Date(), 'EEEE d MMMM yyyy'), semesterWeekLabel(calendar, new Date())].filter(Boolean).join(' · ')}
+        </p>
       </header>
 
       {data.isLoading ? (

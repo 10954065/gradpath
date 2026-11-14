@@ -17,6 +17,7 @@ export function TimetableImport({ source }: { source: TimetableSource | null }) 
   const [title, setTitle] = useState(source?.title ?? '')
   const [url, setUrl] = useState(source?.source_url ?? '')
   const [note, setNote] = useState(source?.source_note ?? '')
+  const [startedOn, setStartedOn] = useState(source?.teaching_started_on ?? '')
   const [csv, setCsv] = useState('')
   const [revisedTitle, setRevisedTitle] = useState(source ? `${source.title} (revised)` : '')
   const [academicYear, setAcademicYear] = useState(source?.academic_year ?? '')
@@ -24,7 +25,7 @@ export function TimetableImport({ source }: { source: TimetableSource | null }) 
   const [notify, setNotify] = useState(true)
   const parsed = csv.trim() ? parseTimetableCsv(csv) : null
 
-  const saveSource = useAdminAction(() => updateSource(source?.id as string, { title: title.trim(), source_url: url.trim() || null, source_note: note.trim() }), {
+  const saveSource = useAdminAction(() => updateSource(source?.id as string, { title: title.trim(), source_url: url.trim() || null, source_note: note.trim(), teaching_started_on: startedOn || null }), {
     success: 'Source details saved',
     invalidate: [[...OFFICIAL_TIMETABLE_KEY]],
   })
@@ -68,6 +69,9 @@ export function TimetableImport({ source }: { source: TimetableSource | null }) 
             </Field>
             <Field label="Official web page (https)" htmlFor="src-url">
               <Input id="src-url" type="url" value={url} onChange={(e) => setUrl(e.target.value)} />
+            </Field>
+            <Field label="Teaching started on" htmlFor="src-started" hint="Students' weeks start on this weekday and are numbered from it. Leave empty for Monday-to-Sunday weeks.">
+              <Input id="src-started" type="date" value={startedOn} onChange={(e) => setStartedOn(e.target.value)} />
             </Field>
             <Field label="Source note" htmlFor="src-note">
               <Textarea id="src-note" rows={4} maxLength={2000} value={note} onChange={(e) => setNote(e.target.value)} />

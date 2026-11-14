@@ -19,7 +19,9 @@ import { RecommendationList } from '@/components/dashboard/Recommendations'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { useMyCourses } from '@/hooks/useMyCourses'
 import { useOfficialTimetable } from '@/hooks/useOfficialTimetable'
+import { useSemesterCalendar } from '@/hooks/useSemesterCalendar'
 import { lectureMinutes, officialPlannerEntries } from '@/lib/officialTimetable'
+import { semesterWeekLabel } from '@/lib/semesterCalendar'
 import { useStudyOverview } from '@/hooks/useStudyOverview'
 import { coursesForPicker } from '@/lib/curriculum'
 import { ASSIGNMENT_KIND_LABEL, bucketOf } from '@/services/study/assignments'
@@ -39,13 +41,17 @@ interface EditorState {
 export default function PlannerPage() {
   const { user, profile } = useAuth()
   const queryClient = useQueryClient()
-  const [anchor, setAnchor] = useState(() => weekStart(new Date()))
+  // Weeks run from the day teaching started; the offset keeps the chosen week while that day is loading.
+  const calendar = useSemesterCalendar()
+  const [weekOffset, setWeekOffset] = useState(0)
+  const anchor = addDays(weekStart(new Date(), calendar.weekStartsOn), weekOffset * 7)
+  const semesterLabel = semesterWeekLabel(calendar, anchor)
   const [editor, setEditor] = useState<EditorState | null>(null)
   const [completing, setCompleting] = useState<{
     entry: PlannerEntry
     minutes: number
   } | null>(null)
-  const weekEnd = endOfWeek(anchor, { weekStartsOn: 1 })
+  const weekEnd = endOfWeek(anchor, { weekStartsOn: calendar.weekStartsOn })
   const monthStart = startOfMonth(anchor)
   const monthEnd = endOfMonth(anchor)
   const rangeStart = monthStart < anchor ? monthStart : anchor
@@ -185,18 +191,19 @@ export default function PlannerPage() {
 
       <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-1">
-          <Button variant="secondary" size="icon" aria-label="Previous week" onClick={() => setAnchor((d) => addDays(d, -7))}>
+          <Button variant="secondary" size="icon" aria-label="Previous week" onClick={() => setWeekOffset((w) => w - 1)}>
             <ChevronLeft />
           </Button>
-          <Button variant="secondary" size="icon" aria-label="Next week" onClick={() => setAnchor((d) => addDays(d, 7))}>
+          <Button variant="secondary" size="icon" aria-label="Next week" onClick={() => setWeekOffset((w) => w + 1)}>
             <ChevronRight />
           </Button>
-          <Button variant="ghost" size="sm" onClick={() => setAnchor(weekStart(new Date()))}>
+          <Button variant="ghost" size="sm" onClick={() => setWeekOffset(0)}>
             This week
           </Button>
         </div>
-        <h2 className="text-sm font-semibold">
-          {format(anchor, 'd MMM')} to {format(weekEnd, 'd MMM yyyy')}
+        <h2 className="text-sm font-semibold" data-testid="planner-week">
+          {semesterLabel ? `${semesterLabel} · ` : ''}
+          {format(anchor, 'EEE d MMM')} to {format(weekEnd, 'EEE d MMM yyyy')}
         </h2>
         <span className="flex gap-1">
           <Button asChild variant="link" size="sm">

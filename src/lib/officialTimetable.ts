@@ -138,9 +138,9 @@ export function mayAttend(s: OfficialSession, attendance: AttendanceMap): boolea
   return isActive(s) && mine !== 'not_assigned' && mine !== 'cancelled'
 }
 
-/** Sort Monday first, then by start time. */
-export function sortWeek<T extends Pick<OfficialSession, 'dayOfWeek' | 'start' | 'sortOrder'>>(sessions: readonly T[]): T[] {
-  const rank = (d: number) => WEEK_ORDER.indexOf(d as (typeof WEEK_ORDER)[number])
+/** Sort by day in the order given (Monday first by default), then by start time. */
+export function sortWeek<T extends Pick<OfficialSession, 'dayOfWeek' | 'start' | 'sortOrder'>>(sessions: readonly T[], order: readonly number[] = WEEK_ORDER): T[] {
+  const rank = (d: number) => order.indexOf(d)
   return [...sessions].sort((a, b) => rank(a.dayOfWeek) - rank(b.dayOfWeek) || a.start.localeCompare(b.start) || a.sortOrder - b.sortOrder)
 }
 

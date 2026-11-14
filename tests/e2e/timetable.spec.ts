@@ -92,6 +92,19 @@ test('the study plan is rebuilt around the lectures', async ({ page }) => {
   await expect(page.getByText(/clash with published lectures/)).toHaveCount(0)
 })
 
+test('weeks run Friday to Thursday from the day teaching started, everywhere', async ({ page }) => {
+  await page.goto('/')
+  await expect(page.getByTestId('today')).toContainText(/Semester week \d+/)
+  await page.goto('/planner')
+  await expect(page.getByTestId('planner-week')).toHaveText(/^Semester week \d+ · Fri \d+ \w+ to Thu \d+ \w+ \d{4}$/)
+  await page.getByRole('button', { name: 'Previous week' }).click()
+  await expect(page.getByTestId('planner-week')).toContainText(/ · Fri \d+ \w+ to Thu/)
+  await page.goto('/timetable/official')
+  await expect(page.getByRole('region', { name: 'Official weekly timetable' }).locator('div.border-b').nth(1)).toHaveText('Friday')
+  await page.goto('/timetable')
+  await expect(page.locator('section[aria-label]').first()).toHaveAttribute('aria-label', 'Friday')
+})
+
 test.describe('on a device set to another time zone', () => {
   test.use({ timezoneId: 'America/New_York' })
 

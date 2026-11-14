@@ -22,6 +22,8 @@ export interface TimetableSource {
   time_zone: string
   source_url: string | null
   source_note: string
+  /** yyyy-mm-dd: the day teaching started; study weeks start on its weekday. */
+  teaching_started_on: string | null
   version: number
   revision: number
   is_current: boolean
@@ -253,7 +255,7 @@ export async function importVersion(source: SourceInput, sessions: readonly CsvS
   return String(data)
 }
 
-export async function updateSource(id: string, patch: Pick<TimetableSource, 'source_url' | 'source_note' | 'title'>): Promise<void> {
+export async function updateSource(id: string, patch: Pick<TimetableSource, 'source_url' | 'source_note' | 'title' | 'teaching_started_on'>): Promise<void> {
   const result = await supabase.from('timetable_sources').update(patch).eq('id', id).select('id')
   const rows = ensureOk(result, 'We could not save the source details.') as { id: string }[]
   if (!rows.length) throw new Error('Only administrators can change the official timetable.')
