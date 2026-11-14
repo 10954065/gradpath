@@ -1,24 +1,32 @@
-// The student's study week. Weeks start on the weekday teaching started (recorded on the official timetable) and
-// are numbered from that week; without a recorded start they run Monday to Sunday. Only how dates are grouped into
-// weeks changes: completed lessons, quiz attempts, study sessions and streaks keep their own dates.
+// The student's study week and the start of official lectures, which can differ: a student may start studying before
+// teaching begins. Study weeks start on the weekday the student's studies started (or, without one, the day lectures
+// began; otherwise Monday) and are numbered from it. Official lectures are never shown or reminded before the day
+// teaching began. Only how dates are grouped into weeks changes: completed lessons, quiz attempts, study sessions
+// and streaks keep their own dates.
 import { differenceInCalendarDays, endOfWeek, startOfWeek, type Day } from 'date-fns'
 
 export const DEFAULT_WEEK_STARTS_ON: Day = 1
 
 export interface SemesterCalendar {
-  /** The day teaching started, local midnight; null when no start has been recorded. */
+  /** The day the student's study weeks are counted from, local midnight; null when neither date is known. */
   startedOn: Date | null
   /** 0 = Sunday … 6 = Saturday. */
   weekStartsOn: Day
+  /** The day official lectures begin, local midnight; null when not recorded. */
+  lecturesStartOn: Date | null
 }
 
-export function semesterCalendar(teachingStartedOn: string | null | undefined): SemesterCalendar {
-  if (!teachingStartedOn || !/^\d{4}-\d{2}-\d{2}$/.test(teachingStartedOn)) return { startedOn: null, weekStartsOn: DEFAULT_WEEK_STARTS_ON }
-  const startedOn = new Date(`${teachingStartedOn}T00:00:00`)
-  return { startedOn, weekStartsOn: startedOn.getDay() as Day }
+function parseDay(value: string | null | undefined): Date | null {
+  return value && /^\d{4}-\d{2}-\d{2}$/.test(value) ? new Date(`${value}T00:00:00`) : null
 }
 
-/** Days of the week (0 = Sunday … 6 = Saturday) in the order the student's week runs. */
+export function semesterCalendar(teachingStartedOn: string | null | undefined, studyStartedOn?: string | null): SemesterCalendar {
+  const lecturesStartOn = parseDay(teachingStartedOn)
+  const startedOn = parseDay(studyStartedOn) ?? lecturesStartOn
+  return { startedOn, weekStartsOn: startedOn ? (startedOn.getDay() as Day) : DEFAULT_WEEK_STARTS_ON, lecturesStartOn }
+}
+
+/** Days of the week (0 = Sunday … 6 = Saturday) in the order the study week runs. */
 export function weekOrder(weekStartsOn: Day): Day[] {
   return Array.from({ length: 7 }, (_, i) => ((weekStartsOn + i) % 7) as Day)
 }
@@ -36,14 +44,14 @@ export function dayOfStudyWeek(date: Date, weekStartsOn: Day): number {
   return ((date.getDay() - weekStartsOn + 7) % 7) + 1
 }
 
-/** 1 for the week teaching started, 0 or less before it; null when no start has been recorded. */
-export function semesterWeek(calendar: SemesterCalendar, date: Date): number | null {
+/** 1 for the week studies started, 0 or less before it; null when no start is known. */
+export function studyWeek(calendar: SemesterCalendar, date: Date): number | null {
   if (!calendar.startedOn) return null
   return Math.floor(differenceInCalendarDays(studyWeekStart(date, calendar.weekStartsOn), calendar.startedOn) / 7) + 1
 }
 
-export function semesterWeekLabel(calendar: SemesterCalendar, date: Date): string | null {
-  const week = semesterWeek(calendar, date)
+export function studyWeekLabel(calendar: SemesterCalendar, date: Date): string | null {
+  const week = studyWeek(calendar, date)
   if (week === null) return null
-  return week >= 1 ? `Semester week ${week}` : 'Before teaching started'
+  return week >= 1 ? `Study week ${week}` : 'Before your studies started'
 }

@@ -23,7 +23,7 @@ const WEEKS_OF_HISTORY = 8
 /** Everything the dashboard and progress centre need, computed only from the student's own records. */
 export function useStudyOverview() {
   const { profile } = useAuth()
-  // Weeks run from the day teaching started (Friday to Thursday for 2026/2027 Semester 1).
+  // Weeks run from the day the student's studies started (Settings), or else the day lectures began.
   const { weekStartsOn } = useSemesterCalendar()
   const thisWeek = weekStart(new Date(), weekStartsOn)
   const historyStart = subWeeks(thisWeek, WEEKS_OF_HISTORY - 1)

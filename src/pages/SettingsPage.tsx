@@ -49,6 +49,7 @@ function ProfileTab() {
       weekly_study_target_hours: profile.weekly_study_target_hours,
       preferred_study_times: profile.preferred_study_times,
       time_zone: profile.time_zone,
+      study_started_on: profile.study_started_on ?? '',
     })
     void avatarUrl(profile.avatar_path).then(setPhoto)
   }, [profile, reset])
@@ -119,6 +120,14 @@ function ProfileTab() {
             error={formState.errors.weekly_study_target_hours?.message}
           >
             <Input id="weekly_study_target_hours" type="number" min={1} max={80} step={0.5} {...register('weekly_study_target_hours')} />
+          </Field>
+          <Field
+            label="My studies started on"
+            htmlFor="study_started_on"
+            hint="Your study weeks start on this weekday and are numbered from it, even before lectures begin. Leave empty to follow the day lectures begin."
+            error={formState.errors.study_started_on?.message}
+          >
+            <Input id="study_started_on" type="date" {...register('study_started_on')} />
           </Field>
           <Field label="Time zone" htmlFor="time_zone">
             <Select id="time_zone" value={watch('time_zone') ?? ''} onValueChange={(next) => setValue('time_zone', next, { shouldDirty: true })}>

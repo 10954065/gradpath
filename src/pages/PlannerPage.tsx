@@ -21,7 +21,7 @@ import { useMyCourses } from '@/hooks/useMyCourses'
 import { useOfficialTimetable } from '@/hooks/useOfficialTimetable'
 import { useSemesterCalendar } from '@/hooks/useSemesterCalendar'
 import { lectureMinutes, officialPlannerEntries } from '@/lib/officialTimetable'
-import { semesterWeekLabel } from '@/lib/semesterCalendar'
+import { studyWeekLabel } from '@/lib/semesterCalendar'
 import { useStudyOverview } from '@/hooks/useStudyOverview'
 import { coursesForPicker } from '@/lib/curriculum'
 import { ASSIGNMENT_KIND_LABEL, bucketOf } from '@/services/study/assignments'
@@ -41,11 +41,11 @@ interface EditorState {
 export default function PlannerPage() {
   const { user, profile } = useAuth()
   const queryClient = useQueryClient()
-  // Weeks run from the day teaching started; the offset keeps the chosen week while that day is loading.
+  // Weeks run from the day the student's studies started; the offset keeps the chosen week while that day loads.
   const calendar = useSemesterCalendar()
   const [weekOffset, setWeekOffset] = useState(0)
   const anchor = addDays(weekStart(new Date(), calendar.weekStartsOn), weekOffset * 7)
-  const semesterLabel = semesterWeekLabel(calendar, anchor)
+  const weekLabel = studyWeekLabel(calendar, anchor)
   const [editor, setEditor] = useState<EditorState | null>(null)
   const [completing, setCompleting] = useState<{
     entry: PlannerEntry
@@ -75,9 +75,9 @@ export default function PlannerPage() {
     () =>
       [
         ...buildPlanner(events.data ?? [], sessions.data ?? [], anchor, weekEnd),
-        ...officialPlannerEntries(official.sessions, official.attendance, anchor, weekEnd),
+        ...officialPlannerEntries(official.sessions, official.attendance, anchor, weekEnd, { lecturesStartOn: calendar.lecturesStartOn }),
       ].sort((a, b) => a.start.getTime() - b.start.getTime()),
-    [events.data, sessions.data, anchor, weekEnd, official.sessions, official.attendance],
+    [events.data, sessions.data, anchor, weekEnd, official.sessions, official.attendance, calendar.lecturesStartOn],
   )
   const month = useMemo(() => buildPlanner(events.data ?? [], sessions.data ?? [], monthStart, monthEnd), [events.data, sessions.data, monthStart, monthEnd])
   const weekTotals = studyTotals(week)
@@ -202,7 +202,7 @@ export default function PlannerPage() {
           </Button>
         </div>
         <h2 className="text-sm font-semibold" data-testid="planner-week">
-          {semesterLabel ? `${semesterLabel} · ` : ''}
+          {weekLabel ? `${weekLabel} · ` : ''}
           {format(anchor, 'EEE d MMM')} to {format(weekEnd, 'EEE d MMM yyyy')}
         </h2>
         <span className="flex gap-1">

@@ -18,7 +18,7 @@ import { useSemesterCalendar } from '@/hooks/useSemesterCalendar'
 import { useStudyOverview } from '@/hooks/useStudyOverview'
 import { bestScoreAverage, streakMessage } from '@/lib/analytics'
 import { toUserMessage } from '@/lib/errors'
-import { semesterWeekLabel } from '@/lib/semesterCalendar'
+import { studyWeekLabel } from '@/lib/semesterCalendar'
 import { courseLessonIds, summariseProgress } from '@/lib/progress'
 import { generateDueNotifications } from '@/services/notifications'
 import { ASSIGNMENT_KIND_LABEL, bucketOf } from '@/services/study/assignments'
@@ -69,7 +69,7 @@ export default function DashboardPage() {
           {greeting()}, {firstName}.
         </h1>
         <p className="text-sm text-muted-foreground" data-testid="today">
-          {[format(new Date(), 'EEEE d MMMM yyyy'), semesterWeekLabel(calendar, new Date())].filter(Boolean).join(' · ')}
+          {[format(new Date(), 'EEEE d MMMM yyyy'), studyWeekLabel(calendar, new Date())].filter(Boolean).join(' · ')}
         </p>
       </header>
 

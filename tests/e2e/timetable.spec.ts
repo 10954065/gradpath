@@ -75,6 +75,8 @@ test('a student can opt out of a confirmed session, and confirmed sessions appea
   await expect(page.getByTestId('attendance-status')).toHaveText('20 confirmed · 0 awaiting confirmation')
 
   await page.goto('/planner')
+  // Lectures begin on Monday 16 November 2026: next week always has some, whatever today's date.
+  await page.getByRole('button', { name: 'Next week' }).click()
   await expect(page.getByText('Official lecture').first()).toBeVisible()
   await expect(page.getByText('Confirmed', { exact: true }).first()).toBeVisible()
   await expect(page.getByText(/of lectures not counted/)).toBeVisible()
@@ -92,11 +94,21 @@ test('the study plan is rebuilt around the lectures', async ({ page }) => {
   await expect(page.getByText(/clash with published lectures/)).toHaveCount(0)
 })
 
-test('weeks run Friday to Thursday from the day teaching started, everywhere', async ({ page }) => {
-  await page.goto('/')
-  await expect(page.getByTestId('today')).toContainText(/Semester week \d+/)
+test('lectures begin on Monday 16 November, and a student who started studying on Friday 13 November gets Friday-to-Thursday weeks everywhere', async ({ page }) => {
+  await page.goto('/timetable/official')
+  await expect(page.getByTestId('lectures-begin')).toHaveText('Monday 16 November 2026')
   await page.goto('/planner')
-  await expect(page.getByTestId('planner-week')).toHaveText(/^Semester week \d+ · Fri \d+ \w+ to Thu \d+ \w+ \d{4}$/)
+  await expect(page.getByTestId('planner-week')).toContainText(/ · Mon \d+ \w+ to Sun /)
+
+  await page.goto('/settings')
+  await page.getByLabel('My studies started on').fill('2026-11-13')
+  await page.getByRole('button', { name: 'Save profile' }).click()
+  await expect(page.getByText('Profile saved')).toBeVisible()
+
+  await page.goto('/')
+  await expect(page.getByTestId('today')).toContainText(/Study week \d+|Before your studies started/)
+  await page.goto('/planner')
+  await expect(page.getByTestId('planner-week')).toHaveText(/^(Study week \d+|Before your studies started) · Fri \d+ \w+ to Thu \d+ \w+ \d{4}$/)
   await page.getByRole('button', { name: 'Previous week' }).click()
   await expect(page.getByTestId('planner-week')).toContainText(/ · Fri \d+ \w+ to Thu/)
   await page.goto('/timetable/official')

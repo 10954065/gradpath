@@ -26,9 +26,9 @@ sourceNote: >-
 allocation: all_students
 allocationNote: Confirmed on 14 November 2026 that this session applies to the ITB class.
 publishedAt: 2026-11-14
-# Teaching started on Friday 13 November 2026 (confirmed by the student on 2026-11-14); study weeks run Friday to
-# Thursday from that day.
-teachingStartedOn: 2026-11-13
+# Official lectures begin on Monday 16 November 2026; the weekend sessions before it are not held (confirmed by the
+# student on 2026-11-14). A student's own study weeks can start earlier (Settings: "My studies started on").
+teachingStartedOn: 2026-11-16
 sessions:
   - { day: monday, start: '19:30', end: '21:30', course: CSIT 601, venue: Earth Science Room 1 }
   - { day: tuesday, start: '19:30', end: '21:30', course: CSIT 617, venue: Earth Science Room 1 }

@@ -19,6 +19,8 @@ export interface Profile {
   weekly_study_target_hours: number
   preferred_study_times: string[]
   time_zone: string
+  /** yyyy-mm-dd: the day the student's studies started; their study weeks start on its weekday. */
+  study_started_on: string | null
   onboarding_completed_at: string | null
   created_at: string
   updated_at: string

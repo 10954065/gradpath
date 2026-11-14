@@ -14,6 +14,8 @@ export const profileSchema = z.object({
   weekly_study_target_hours: z.coerce.number<number>().min(1, 'At least 1 hour').max(80, 'At most 80 hours'),
   preferred_study_times: z.array(z.string().max(40)).max(8),
   time_zone: z.string().trim().min(3).max(64),
+  /** yyyy-mm-dd, or empty to follow the day official lectures begin. */
+  study_started_on: z.string().regex(/^(\d{4}-\d{2}-\d{2})?$/, 'Enter a date').optional(),
 })
 export type ProfileInput = z.infer<typeof profileSchema>
 
@@ -29,7 +31,8 @@ export async function updateProfile(
   userId: string,
   input: Partial<ProfileInput> & { onboarding_completed_at?: string; avatar_path?: string | null },
 ): Promise<Profile> {
-  const result = await supabase.from('profiles').update(input).eq('id', userId).select('*').single()
+  const values = 'study_started_on' in input ? { ...input, study_started_on: input.study_started_on || null } : input
+  const result = await supabase.from('profiles').update(values).eq('id', userId).select('*').single()
   return ensureOk(result, 'We could not save your profile.') as Profile
 }
 

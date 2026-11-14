@@ -70,7 +70,7 @@ export function TimetableImport({ source }: { source: TimetableSource | null }) 
             <Field label="Official web page (https)" htmlFor="src-url">
               <Input id="src-url" type="url" value={url} onChange={(e) => setUrl(e.target.value)} />
             </Field>
-            <Field label="Teaching started on" htmlFor="src-started" hint="Students' weeks start on this weekday and are numbered from it. Leave empty for Monday-to-Sunday weeks.">
+            <Field label="Lectures begin on" htmlFor="src-started" hint="No official lecture is shown or reminded before this day. Students' study weeks follow it unless they set their own start in Settings.">
               <Input id="src-started" type="date" value={startedOn} onChange={(e) => setStartedOn(e.target.value)} />
             </Field>
             <Field label="Source note" htmlFor="src-note">

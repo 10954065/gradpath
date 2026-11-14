@@ -3,14 +3,16 @@ import { Link } from 'react-router'
 import { AttendanceBadge } from '@/components/timetable/SessionParts'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { useOfficialTimetable } from '@/hooks/useOfficialTimetable'
+import { useSemesterCalendar } from '@/hooks/useSemesterCalendar'
 import { attendanceOf, DAY_NAMES, ghanaRange, nextSession } from '@/lib/officialTimetable'
 
 /** The course's published lecture sessions, with the student's own attendance choice for each. */
 export function CourseLectureTimes({ courseId }: { courseId: string }) {
   const tt = useOfficialTimetable()
+  const { lecturesStartOn } = useSemesterCalendar()
   const sessions = tt.sessions.filter((s) => s.courseId === courseId)
   if (tt.isPending || !tt.source || !sessions.length) return null
-  const next = nextSession(sessions, tt.attendance)
+  const next = nextSession(sessions, tt.attendance, new Date(), lecturesStartOn)
   return (
     <Card>
       <CardHeader>

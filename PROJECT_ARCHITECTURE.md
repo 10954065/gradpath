@@ -140,12 +140,15 @@ Every content item carries a `source` that the UI displays:
   `group_specific`. A session confirmed for all students counts as confirmed for every student who takes the course
   until the student records another choice (`effectiveAttendance` in the app, `lecture_attendees` in the database).
   The 2026/2027 Semester 1 ITB sessions are `all_students` since the student confirmed them on 14 November 2026.
-* Study weeks: `timetable_sources.teaching_started_on` (migration 14) records the day teaching started; every study
-  week (planner, weekly totals and history, weekly pace, day order on the timetable pages) starts on that weekday and is
-  numbered from it ("Semester week N"), via `src/lib/semesterCalendar.ts` and `useSemesterCalendar`. Without a date,
-  weeks run Monday to Sunday. 2026/2027 Semester 1 started on Friday 13 November 2026, so weeks run Friday to
-  Thursday. Only the grouping of dates changes; progress, attempts, sessions and streaks keep their own dates. A revised
-  timetable version inherits the date (trigger `carry_teaching_start`).
+* Two start dates (`src/lib/semesterCalendar.ts`, `useSemesterCalendar`):
+  * `timetable_sources.teaching_started_on` (migrations 14, 15): the day official lectures begin. No lecture is shown in
+    the planner, named as the next session or reminded before it. 2026/2027 Semester 1: Monday 16 November 2026. A
+    revised timetable version inherits it (trigger `carry_teaching_start`).
+  * `profiles.study_started_on` (migration 15, Settings: "My studies started on"): the day the student's own studies
+    began, which may be earlier. Every study week (planner, weekly totals and history, weekly pace, dashboard, day order
+    on the timetable pages) starts on that weekday and is numbered from it ("Study week N"); without it, weeks follow
+    the day lectures begin, else Monday. Only the grouping of dates changes; progress, attempts, sessions and streaks
+    keep their own dates.
 * Reminders: `lecture_reminder_core` creates in-app notifications only for confirmed sessions (before the lecture,
   plus a morning summary). It runs for the signed-in student from the app (`generate_lecture_notifications`) and for
   everyone every 15 minutes from `pg_cron`; devices that allow browser notifications receive them through the same

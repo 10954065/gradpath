@@ -16,6 +16,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { useAuth } from '@/contexts/AuthContext'
 import { useMyCourses } from '@/hooks/useMyCourses'
 import { useOfficialTimetable } from '@/hooks/useOfficialTimetable'
+import { useSemesterCalendar } from '@/hooks/useSemesterCalendar'
 import { toUserMessage } from '@/lib/errors'
 import {
   attendanceOf,
@@ -43,6 +44,7 @@ export default function OfficialTimetablePage() {
   const queryClient = useQueryClient()
   const my = useMyCourses()
   const tt = useOfficialTimetable()
+  const calendar = useSemesterCalendar()
   const prefs = useQuery({ queryKey: PREFS_KEY, queryFn: getTimetablePreferences })
   const publications = useQuery({
     queryKey: ['timetable-publications', tt.source?.id],
@@ -116,6 +118,9 @@ export default function OfficialTimetablePage() {
               label="Last updated"
               value={`${format(new Date(source.last_updated_at), 'd MMM yyyy')}${source.revision ? ` · update ${source.revision}` : ''}${source.version > 1 ? ` · version ${source.version}` : ''}`}
             />
+            {calendar.lecturesStartOn ? (
+              <Fact label="Lectures begin" value={<span data-testid="lectures-begin">{format(calendar.lecturesStartOn, 'EEEE d MMMM yyyy')}</span>} />
+            ) : null}
             <Fact
               label="My attendance"
               value={<span data-testid="attendance-status">{`${confirmed} confirmed · ${awaiting} awaiting confirmation`}</span>}
@@ -147,7 +152,7 @@ export default function OfficialTimetablePage() {
       <section aria-label="My courses on the timetable" className="mb-6 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
         {tt.taking.map((c) => {
           const own = tt.sessions.filter((s) => s.courseId === c.id)
-          const next = nextSession(own, tt.attendance)
+          const next = nextSession(own, tt.attendance, new Date(), calendar.lecturesStartOn)
           return (
             <Link key={c.id} to={`/courses/${c.slug}`} className="rounded-xl border bg-surface p-3 shadow-card transition-shadow hover:shadow-raised" data-testid="course-timetable-card">
               <span className="flex items-center gap-2 text-sm font-semibold">

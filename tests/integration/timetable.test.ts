@@ -57,7 +57,7 @@ describe('published timetable', () => {
 
   it('records the source, the original import and the confirmed allocation', async () => {
     const { data: source } = await a.client.from('timetable_sources').select('time_zone, source_url, academic_year, semester, teaching_started_on').eq('id', sourceId).single()
-    expect(source).toMatchObject({ time_zone: 'Africa/Accra', academic_year: '2026/2027', semester: 'Semester 1', teaching_started_on: '2026-11-13' })
+    expect(source).toMatchObject({ time_zone: 'Africa/Accra', academic_year: '2026/2027', semester: 'Semester 1', teaching_started_on: '2026-11-16' })
     expect(source?.source_url).toBe('https://dcs.ug.edu.gh/post-grad-timetable/?programme=ITB')
     const { data: allocations } = await a.client.from('timetable_entries').select('allocation').eq('source_id', sourceId)
     expect(new Set((allocations ?? []).map((r) => r.allocation))).toEqual(new Set(['all_students']))
@@ -109,6 +109,12 @@ describe('attendance choices', () => {
     ])
     // b has made no choice: the allocation is confirmed for all students, so b is reminded too.
     expect((await b.client.rpc('generate_lecture_notifications', { p_now: '2026-11-16T18:45:00Z' })).data).toBe(1)
+  })
+
+  it('are not sent before official lectures begin on Monday 16 November 2026', async () => {
+    // Saturday 14 November, 7 am and 9 am: the weekend sessions before teaching begins are not held.
+    expect((await b.client.rpc('generate_lecture_notifications', { p_now: '2026-11-14T07:00:00Z' })).data).toBe(0)
+    expect((await b.client.rpc('generate_lecture_notifications', { p_now: '2026-11-14T09:00:00Z' })).data).toBe(0)
   })
 
   it('stop when the student marks a confirmed session as not assigned to their class', async () => {

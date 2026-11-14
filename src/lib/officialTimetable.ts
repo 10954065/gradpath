@@ -165,26 +165,48 @@ export interface NextSession {
   label: string
 }
 
+const DAY_MS = 86_400_000
+
+/** yyyy-mm-dd of a Date built from a local calendar day (as lib/semesterCalendar does). */
+export function localDay(date: Date): string {
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`
+}
+
 /**
- * The next session in Ghana time from the given sessions (only those the student may attend). Weekly repetition is
- * all the published source states, so this never names a calendar date.
+ * The next session in Ghana time from the given sessions (only those the student may attend), never before the day
+ * lectures begin. Within the coming week it is named by weekday; further ahead, by weekday and date.
  */
-export function nextSession(sessions: readonly OfficialSession[], attendance: AttendanceMap, now: Date = new Date()): NextSession | null {
+export function nextSession(
+  sessions: readonly OfficialSession[],
+  attendance: AttendanceMap,
+  now: Date = new Date(),
+  lecturesStartOn: Date | null = null,
+): NextSession | null {
   const { dayOfWeek, minutes } = ghanaNow(now)
+  const firstDay = lecturesStartOn ? localDay(lecturesStartOn) : null
   let best: NextSession | null = null
   let bestOffset = Infinity
   for (const s of sessions) {
     if (!mayAttend(s, attendance)) continue
     let daysAhead = (s.dayOfWeek - dayOfWeek + 7) % 7
     if (daysAhead === 0 && toMinutes(s.start) <= minutes) daysAhead = 7
+    if (firstDay) while (ghanaNow(new Date(now.getTime() + daysAhead * DAY_MS)).date < firstDay) daysAhead += 7
     const offset = daysAhead * 1440 + toMinutes(s.start)
     if (offset < bestOffset) {
       bestOffset = offset
-      const when = daysAhead === 0 ? 'Today' : daysAhead === 1 ? 'Tomorrow' : DAY_NAMES[s.dayOfWeek]
+      const date = ghanaNow(new Date(now.getTime() + daysAhead * DAY_MS)).date
+      const when =
+        daysAhead === 0 ? 'Today' : daysAhead === 1 ? 'Tomorrow' : daysAhead < 7 ? DAY_NAMES[s.dayOfWeek] : `${DAY_NAMES[s.dayOfWeek]} ${shortDate(date)}`
       best = { session: s, daysAhead, label: `${when}, ${ghanaClock(s.start)}` }
     }
   }
   return best
+}
+
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] as const
+/** "2026-11-23" -> "23 Nov". */
+function shortDate(date: string): string {
+  return `${Number(date.slice(8, 10))} ${MONTHS[Number(date.slice(5, 7)) - 1]}`
 }
 
 export interface LaidOutSession {
@@ -265,10 +287,13 @@ export function officialPlannerEntries(
   attendance: AttendanceMap,
   start: Date,
   end: Date,
-  options: { onlyConfirmed?: boolean } = {},
+  options: { onlyConfirmed?: boolean; lecturesStartOn?: Date | null } = {},
 ): PlannerEntry[] {
   const entries: PlannerEntry[] = []
+  const firstDay = options.lecturesStartOn ? localDay(options.lecturesStartOn) : null
   for (const date of dateRange(start, end)) {
+    // No official lecture is held before teaching begins.
+    if (firstDay && date < firstDay) continue
     const dow = new Date(`${date}T00:00:00`).getDay()
     for (const s of sessions) {
       if (s.dayOfWeek !== dow || !mayAttend(s, attendance)) continue

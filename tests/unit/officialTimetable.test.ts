@@ -181,6 +181,19 @@ describe('Ghana time', () => {
     expect(afterSunday?.label).toBe('Wednesday, 7:30 pm')
   })
 
+  it('never names a session before lectures begin on Monday 16 November 2026', () => {
+    const lecturesBegin = new Date(2026, 10, 16)
+    // Saturday 14 November, 8 am: this weekend's sessions are not held, so the next is Monday's CSIT 601.
+    const saturday = new Date('2026-11-14T08:00:00Z')
+    expect(nextSession(sessions, none, saturday)?.label).toBe('Today, 9:30 am')
+    const next = nextSession(sessions, none, saturday, lecturesBegin)
+    expect(next?.session.code).toBe('CSIT 601')
+    expect(next?.label).toBe('Monday, 7:30 pm')
+    // CSIT 613 first meets on Wednesday 18 November; its weekend sessions start the following Saturday.
+    const weekend613 = sessions.filter((s) => s.code === 'CSIT 613' && s.dayOfWeek !== WED)
+    expect(nextSession(weekend613, none, new Date('2026-11-13T12:00:00Z'), lecturesBegin)?.label).toBe('Saturday 21 Nov, 4:00 pm')
+  })
+
   it('skips sessions the student marked as not theirs', () => {
     const notMine = new Map<string, AttendanceStatus>(sessions.filter((s) => s.code === 'CSIT 601' && s.dayOfWeek === MON).map((s) => [s.id, 'not_assigned']))
     expect(nextSession(sessions.filter((s) => s.code === 'CSIT 601'), notMine, new Date('2026-11-16T18:00:00Z'))?.label).toBe('Saturday, 9:30 am')
@@ -232,6 +245,13 @@ describe('personal study kept separate from official lectures', () => {
     expect(lectures.every((e) => e.kind === 'lecture' && e.official && e.isProvisional)).toBe(true)
     expect(studyTotals(lectures)).toEqual({ plannedMinutes: 0, completedMinutes: 0, completedSessions: 0 })
     expect(lectureMinutes(sessions)).toBe(20 * 120)
+  })
+
+  it('shows no lecture before teaching begins, even in a study week that starts earlier', () => {
+    const studyWeek = officialPlannerEntries(sessions, none, new Date(2026, 10, 13), new Date(2026, 10, 19), { lecturesStartOn: new Date(2026, 10, 16) })
+    expect(studyWeek.every((e) => e.date >= '2026-11-16')).toBe(true)
+    // Friday 13, Saturday 14 and Sunday 15 November are left out: Monday to Thursday only.
+    expect(studyWeek.map((e) => e.official?.code)).toEqual(['CSIT 601', 'CSIT 617', 'CSIT 607', 'CSIT 613', 'CSIT 603', 'CSIT 605'])
   })
 
   it('leaves out sessions marked not assigned and can show confirmed ones only', () => {
