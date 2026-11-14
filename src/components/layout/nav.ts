@@ -20,6 +20,7 @@ import {
   School,
   Settings,
   ShieldCheck,
+  Timer,
   type LucideIcon,
 } from 'lucide-react'
 
@@ -50,6 +51,7 @@ export const NAV_GROUPS: NavGroup[] = [
     label: 'Plan',
     items: [
       { to: '/planner', label: 'Study Planner', icon: CalendarClock },
+      { to: '/focus', label: 'Focus Timer', icon: Timer },
       { to: '/timetable/official', label: 'Official Timetable', icon: School },
       { to: '/lectures', label: 'Lecture Check-ins', icon: ListChecks },
       { to: '/timetable', label: 'My Study Plan', icon: CalendarDays, end: true },

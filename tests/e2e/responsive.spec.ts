@@ -19,6 +19,7 @@ test('key screens fit a phone screen without sideways scrolling', async ({ page 
     '/lectures',
     '/grades',
     '/exams',
+    '/focus',
     '/assignments',
     '/assessments',
     '/notes',

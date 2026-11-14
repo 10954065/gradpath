@@ -11,6 +11,7 @@ import { SidebarNav, Sidebar } from './Sidebar'
 import { TopBar } from './TopBar'
 import { UpdatePrompt } from '@/components/system/UpdatePrompt'
 import { useBackgroundSync } from '@/hooks/useBackgroundSync'
+import { useFocusWatcher } from '@/hooks/useFocusTimer'
 import { useEnrolmentSync } from '@/hooks/useMyCourses'
 import { usePushSync } from '@/hooks/usePushSync'
 
@@ -69,6 +70,7 @@ export function AppShell() {
   useBackgroundSync()
   usePushSync()
   useEnrolmentSync()
+  useFocusWatcher()
   return (
     <div className="min-h-dvh">
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:rounded-md focus:bg-primary focus:px-3 focus:py-2 focus:text-primary-foreground">

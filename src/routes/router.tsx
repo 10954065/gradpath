@@ -49,6 +49,7 @@ const OfficialTimetablePage = lazy(() => import('@/pages/OfficialTimetablePage')
 const LecturesPage = lazy(() => import('@/pages/LecturesPage'))
 const GradesPage = lazy(() => import('@/pages/GradesPage'))
 const ExamsPage = lazy(() => import('@/pages/ExamsPage'))
+const FocusPage = lazy(() => import('@/pages/FocusPage'))
 const AssignmentsPage = lazy(() => import('@/pages/AssignmentsPage'))
 const RevisionPage = lazy(() => import('@/pages/RevisionPage'))
 const FlashcardsPage = lazy(() => import('@/pages/FlashcardsPage'))
@@ -82,6 +83,7 @@ const shellRoutes: { path: string; element: ReactNode }[] = [
   { path: 'lectures', element: <LecturesPage /> },
   { path: 'grades', element: <GradesPage /> },
   { path: 'exams', element: <ExamsPage /> },
+  { path: 'focus', element: <FocusPage /> },
   { path: 'assignments', element: <AssignmentsPage /> },
   { path: 'revision', element: <RevisionPage /> },
   { path: 'flashcards', element: <FlashcardsPage /> },

@@ -193,6 +193,16 @@ Every content item carries a `source` that the UI displays:
   not avoided. `saveExamPlan` replaces an exam's sessions; time logged against old sessions is kept
   (`study_sessions.timetable_event_id` is set to null).
 
+## Focus timer
+
+* `src/lib/focusTimer.ts` (pure, unit-tested) keeps the timer as timestamps (phase, length, time run before the last
+  resume, when it resumed), so it stays right while the app is closed or asleep. `useFocusTimer` stores it in
+  localStorage (`gradpath:focus-timer`, one timer per device, shared across tabs through the storage event) and
+  `useFocusWatcher` (mounted in `AppShell`) logs a finished focus phase and starts or ends the break on any page.
+* `logFocusMinutes` writes `study_sessions`: a one-off completed session from when the focus began, or, when the
+  student chose a block planned for today, that occurrence completed with the minutes added to any already logged.
+  No new table. Browser notifications are shown only if permission was already granted; the app never asks.
+
 ## Assessment engine
 
 `start_attempt(quiz_id)` selects questions (fixed set or random sample from a bank scope), records them

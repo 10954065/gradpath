@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { Bell, LogOut, Menu, Monitor, Moon, Search, Settings, Sun, UserRound, WifiOff } from 'lucide-react'
+import { Bell, LogOut, Menu, Monitor, Moon, Search, Settings, Sun, Timer, UserRound, WifiOff } from 'lucide-react'
 import { useState, type FormEvent } from 'react'
 import { Link, useNavigate } from 'react-router'
 import { StreakFlame } from '@/components/dashboard/StreakFlame'
@@ -7,10 +7,12 @@ import { Button } from '@/components/ui/button'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/menu'
 import { useAuth } from '@/contexts/AuthContext'
 import { useTheme } from '@/contexts/ThemeContext'
+import { useFocusTimer } from '@/hooks/useFocusTimer'
 import { useLessonStreak } from '@/hooks/useLessonStreak'
 import { useOnlineStatus } from '@/hooks/useOnlineStatus'
 import { useSyncStatus } from '@/hooks/useSyncStatus'
 import { streakMessage } from '@/lib/analytics'
+import { formatClock, isPaused, remainingMs } from '@/lib/focusTimer'
 import { initials } from '@/lib/utils'
 import { unreadCount } from '@/services/notifications'
 
@@ -27,6 +29,25 @@ function StreakPill() {
     >
       <StreakFlame state={streak.state} decorative className="size-4" />
       {streak.current}
+    </Link>
+  )
+}
+
+/** While a focus timer runs, its countdown links back to the Focus Timer from every page. */
+function FocusChip() {
+  const { timer, now } = useFocusTimer()
+  if (!timer) return null
+  const label = timer.phase === 'break' ? 'Break' : 'Focus'
+  const clock = formatClock(remainingMs(timer, now))
+  return (
+    <Link
+      to="/focus"
+      aria-label={`${label} timer: ${clock} left${isPaused(timer) ? ', paused' : ''}`}
+      className="inline-flex h-8 items-center gap-1 rounded-full border border-primary/30 bg-accent px-2.5 text-xs font-semibold text-accent-foreground tabular-nums hover:border-primary/60 focus-visible:outline-2 focus-visible:outline-ring"
+      data-testid="focus-chip"
+    >
+      <Timer className="size-3.5" aria-hidden />
+      {label} {clock}
     </Link>
   )
 }
@@ -109,6 +130,7 @@ export function TopBar({ onOpenMenu }: { onOpenMenu: () => void }) {
       </form>
       <div className="ml-auto flex items-center gap-1">
         <ConnectivityIndicator />
+        <FocusChip />
         <StreakPill />
         <ThemeMenu />
         <Button variant="ghost" size="icon" asChild>
